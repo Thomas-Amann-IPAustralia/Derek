@@ -29,6 +29,9 @@ import re
 import unicodedata
 
 __all__ = [
+    "COMPLIANT_EXAMPLE_HEADINGS",
+    "VIOLATING_EXAMPLE_HEADINGS",
+    "EXAMPLE_HEADINGS",
     "normalise_text",
     "repair_headings",
     "content_hash",
@@ -51,23 +54,46 @@ _TRAILING_WS = re.compile(r"[ \t]+$", re.M)
 _BLANK_RUN = re.compile(r"\n{3,}")
 
 # Headings that introduce an example block rather than state a rule.
-# Headings that introduce an example block rather than state a rule.
 # Derived by frequency analysis over every heading in the corpus, not
 # guessed: "correct"/"incorrect" (60 each) and "like this" (49) are as
 # common as the more obvious "write this"/"not this".
-EXAMPLE_HEADINGS = frozenset(
+#
+# The polarity split is load-bearing, not decorative. A heading with one of
+# each beneath it is one the Style Manual's own editors treated as a rule,
+# and that testimony is independent of anything Derek infers — which is why
+# ADR-011 makes these pairs the seed evaluation set, and why
+# ``derek.extract.candidates`` admits such a heading as a rule candidate
+# whatever grammatical form its wording takes.
+COMPLIANT_EXAMPLE_HEADINGS = frozenset(
+    {
+        "write this",
+        "do this",
+        "correct",
+        "like this",
+    }
+)
+
+VIOLATING_EXAMPLE_HEADINGS = frozenset(
+    {
+        "not this",
+        "don't do this",
+        "incorrect",
+    }
+)
+
+# The unlabelled remainder: an illustration with no polarity claimed.
+UNPOLARISED_EXAMPLE_HEADINGS = frozenset(
     {
         "example",
         "examples",
-        "write this",
-        "not this",
-        "do this",
-        "don't do this",
-        "correct",
-        "incorrect",
-        "like this",
         "more information",
     }
+)
+
+EXAMPLE_HEADINGS = (
+    COMPLIANT_EXAMPLE_HEADINGS
+    | VIOLATING_EXAMPLE_HEADINGS
+    | UNPOLARISED_EXAMPLE_HEADINGS
 )
 
 # Page chrome that ``trafilatura`` keeps. These are headings, but they are

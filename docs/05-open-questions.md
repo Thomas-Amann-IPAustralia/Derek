@@ -162,10 +162,10 @@ not, shrinkage becomes necessary.
 ## Q6 — Should prose-derived candidates be extracted at all?
 
 **Status:** open. The extractor currently reads rules from headings only
-([ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity)), yielding 661
+([ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity)), yielding 720
 candidates. Rules stated only in body prose are missed.
 
-**Recommendation:** defer. Finish triage and Tier 0 on the 661 first, then measure
+**Recommendation:** defer. Finish triage and Tier 0 on the 720 first, then measure
 recall against `reference/octavius-v1/` — the v1 rulebook is retained precisely as a
 recall checklist. If a material set of real rules exists only in prose, add the
 `imperative_sentence` derivation pass (it is already a declared `derivation.method`, so
@@ -225,8 +225,9 @@ reconciler now handles as a *rehoming* rather than 500 fictional upstream edits.
 
 **Costs, which are real:**
 
-- `derek/extract/` is currently stdlib-only, deliberately, so the snapshot workflow does
-  not need the pipeline dependencies. spaCy plus a model is ~50 MB and breaks that.
+- `derek/extract/` is stdlib-only, deliberately — the only third-party dependency the
+  core carries is an HTML parser, for conversion. spaCy plus a model is ~50 MB and
+  breaks that.
   Mitigation: run tagging in a separate authoring step that writes `statement_form` into
   the ledger, keeping the runtime dependency-free.
 - The tagger has its own false positives. On this corpus it wrongly flags 9 noun

@@ -1,3 +1,17 @@
-# Runtime + extraction. Deliberately minimal: derek/corpus/ and derek/extract/
-# are stdlib-only so the snapshot workflow can run without the pipeline deps.
-# Detection and interface dependencies are added as those layers land.
+# What CI and the tests need: the ledger core plus HTML->Markdown conversion.
+#
+# derek/corpus/to_markdown.py parses the source DOM to preserve heading levels
+# (ADR-020), so the conversion step needs an HTML parser. Everything else the
+# tests touch — derek/extract/, derek/ledger/ and the rest of derek/corpus/ —
+# is stdlib-only. The one other third-party consumer is derek/corpus/fetch.py,
+# whose transport deps live in requirements-pipeline.txt because only the
+# snapshot workflow runs it.
+#
+# CI installs THIS FILE plus requirements-dev.txt and nothing else, so anything
+# tests/ imports must be satisfiable from here. tests/test_dependency_tiers.py
+# asserts that, because a drift here aborts the whole suite at collection.
+#
+# Pinned: a converter change rewrites many content hashes at once and must be
+# a deliberate, reviewed event rather than a silent dependency bump (ADR-001).
+beautifulsoup4==4.12.3
+lxml==5.3.0

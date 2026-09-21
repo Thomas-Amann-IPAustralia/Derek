@@ -2,225 +2,1339 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Derek Review</title>
 <style>
-  :root{
-    --bg:#fbfaf8; --panel:#fff; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e3e0da;
-    --accept:#1f7a4d; --reject:#a33; --defer:#8a6d1f; --accent:#2b5c8a;
-    --ok-bg:#eef7f1; --bad-bg:#fdf0ef;
+/* ---------------------------------------------------------------------------
+   Tokens. Dark mode is the same palette re-pointed, never a second stylesheet.
+   --------------------------------------------------------------------------- */
+:root{
+  --bg:#f4f6fa; --panel:#fff; --panel-2:#f8fafc; --ink:#152033; --ink-2:#44536b;
+  --muted:#75839a; --line:#e2e7f0; --line-2:#cdd6e4;
+  --keep:#12a07e; --keep-bg:#e6f7f2; --bin:#e2526a; --bin-bg:#fdeef1;
+  --defer:#7a63e8; --defer-bg:#eeebfd; --gold:#d99a1e; --gold-bg:#fdf4e2;
+  --accent:#2f6bd0; --accent-bg:#e9f1fd; --navy:#111f36;
+  --shadow:0 10px 30px rgba(17,31,54,.10); --shadow-lg:0 22px 55px rgba(17,31,54,.18);
+  --radius:20px; --sp:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1319; --panel:#171c24; --panel-2:#1d232d; --ink:#e9ecf1; --ink-2:#b8c2d1;
+    --muted:#8b97a9; --line:#2a323e; --line-2:#3a4453;
+    --keep:#3ecfa8; --keep-bg:#102b25; --bin:#ff8195; --bin-bg:#2e1a20;
+    --defer:#a596ff; --defer-bg:#211d36; --gold:#f0bc55; --gold-bg:#2c2416;
+    --accent:#77adf5; --accent-bg:#16243a; --navy:#e9ecf1;
+    --shadow:0 10px 30px rgba(0,0,0,.4); --shadow-lg:0 22px 55px rgba(0,0,0,.55);
   }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#17181a; --panel:#1f2124; --ink:#e8e6e3; --muted:#9a9894; --line:#33363b;
-      --accept:#4caf7d; --reject:#e06c6c; --defer:#d4ad4a; --accent:#72a8d8;
-      --ok-bg:#1b2a22; --bad-bg:#2a1d1d;
-    }
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
-       font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-  header{position:sticky;top:0;z-index:10;background:var(--panel);
-         border-bottom:1px solid var(--line);padding:10px 16px;
-         display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-  h1{font-size:15px;margin:0;font-weight:650;letter-spacing:.2px}
-  .counts{display:flex;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
-  .counts b{color:var(--ink);font-variant-numeric:tabular-nums}
-  .bar{flex:1;min-width:120px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
-  .bar i{display:block;height:100%;background:var(--accept);transition:width .2s}
-  main{max-width:860px;margin:0 auto;padding:16px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-        padding:18px 20px;margin-bottom:14px}
-  .stmt{font-size:19px;font-weight:600;line-height:1.35;margin:0 0 6px}
-  .crumb{font-size:12px;color:var(--muted);margin-bottom:14px;word-break:break-word}
-  .crumb a{color:var(--accent)}
-  .body{white-space:pre-wrap;font-size:13.5px;color:var(--muted);
-        max-height:230px;overflow:auto;border-left:2px solid var(--line);
-        padding:2px 0 2px 12px;margin:12px 0}
-  .ex{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
-  @media (max-width:640px){.ex{grid-template-columns:1fr}}
-  .ex div{border-radius:8px;padding:10px 12px;font-size:13px}
-  .ex .ok{background:var(--ok-bg)} .ex .bad{background:var(--bad-bg)}
-  .ex h4{margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted)}
-  .ex ul{margin:0;padding-left:16px} .ex li{margin:3px 0}
-  .fields{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 4px;font-size:13px}
-  .fields label{display:flex;flex-direction:column;gap:3px}
-  .fields span{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
-  select{font:inherit;padding:5px 7px;border:1px solid var(--line);border-radius:6px;
-         background:var(--panel);color:var(--ink)}
-  .tags{display:flex;gap:7px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:4px}
-  .tag{border:1px solid var(--line);border-radius:20px;padding:2px 9px}
-  .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;
-           padding-top:14px;border-top:1px solid var(--line)}
-  button{font:inherit;font-size:13.5px;padding:8px 14px;border-radius:7px;
-         border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
-  button:hover{border-color:var(--accent)}
-  button kbd{font:inherit;font-size:11px;opacity:.6;margin-left:6px}
-  .accept{border-color:var(--accept);color:var(--accept)}
-  .reject{border-color:var(--reject);color:var(--reject)}
-  .defer{border-color:var(--defer);color:var(--defer)}
-  .hint{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
-  .done{text-align:center;padding:56px 20px}
-  .done h2{font-size:20px;margin:0 0 8px}
-  .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);
-         background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:20px;
-         font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
-  .toast.show{opacity:.94}
+}
+:root[data-theme="dark"]{
+  --bg:#0f1319; --panel:#171c24; --panel-2:#1d232d; --ink:#e9ecf1; --ink-2:#b8c2d1;
+  --muted:#8b97a9; --line:#2a323e; --line-2:#3a4453;
+  --keep:#3ecfa8; --keep-bg:#102b25; --bin:#ff8195; --bin-bg:#2e1a20;
+  --defer:#a596ff; --defer-bg:#211d36; --gold:#f0bc55; --gold-bg:#2c2416;
+  --accent:#77adf5; --accent-bg:#16243a; --navy:#e9ecf1;
+  --shadow:0 10px 30px rgba(0,0,0,.4); --shadow-lg:0 22px 55px rgba(0,0,0,.55);
+}
+
+*{box-sizing:border-box}
+html,body{overscroll-behavior-y:contain}
+body{
+  margin:0; background:var(--bg); color:var(--ink); -webkit-tap-highlight-color:transparent;
+  font:15.5px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+button,input,textarea,select{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.25;letter-spacing:-.015em}
+p{margin:0 0 10px}
+a{color:var(--accent)}
+.shell{max-width:560px;margin:0 auto;min-height:100dvh;display:flex;flex-direction:column;
+       background:var(--bg);position:relative}
+
+/* header ------------------------------------------------------------------ */
+header{position:sticky;top:0;z-index:30;padding:12px 16px 10px;
+       background:color-mix(in srgb,var(--panel) 88%,transparent);
+       backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:10px}
+.brand{font-weight:800;letter-spacing:-.4px;font-size:16px;margin-right:auto}
+.brand em{font-style:normal;color:var(--keep)}
+.chip-btn{border:1px solid var(--line);background:var(--panel-2);border-radius:999px;
+          padding:6px 11px;font-size:12.5px;font-weight:650;cursor:pointer;white-space:nowrap}
+.chip-btn:hover{border-color:var(--accent)}
+.bar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:10px}
+.bar i{display:block;height:100%;width:0;border-radius:99px;
+       background:linear-gradient(90deg,var(--keep),#5fd9bd);transition:width .45s cubic-bezier(.3,1.4,.5,1)}
+.hmeta{display:flex;gap:12px;font-size:11.5px;color:var(--muted);margin-top:7px;flex-wrap:wrap}
+.hmeta b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+main{flex:1;padding:16px 16px 96px}
+.view{display:none;animation:rise .28s cubic-bezier(.2,.9,.3,1.1)}
+.view.on{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* nav --------------------------------------------------------------------- */
+nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:560px;
+    display:grid;grid-template-columns:repeat(5,1fr);z-index:30;
+    background:color-mix(in srgb,var(--panel) 94%,transparent);backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);padding:8px 6px calc(8px + env(safe-area-inset-bottom))}
+nav button{border:0;background:none;color:var(--muted);font-size:10.5px;font-weight:700;
+           padding:6px 2px;cursor:pointer;border-radius:12px;transition:.18s}
+nav button .ic{display:block;font-size:17px;margin-bottom:3px}
+nav button.on{color:var(--keep)}
+nav button.on .ic{transform:translateY(-1px) scale(1.12)}
+
+/* cards ------------------------------------------------------------------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:18px;margin-bottom:14px}
+.card.flat{box-shadow:none;background:var(--panel-2)}
+.kicker{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero{background:linear-gradient(150deg,var(--navy),#22406b);border:0;color:#fff;position:relative;overflow:hidden}
+:root[data-theme="dark"] .hero,
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(150deg,#1b2740,#132b48)}}
+.hero h1{font-size:25px;margin:8px 0 8px;color:#fff}
+.hero p{color:#c3d2e6;margin:0}
+.hero .kicker{color:#7fe3c6}
+.hero .orb{position:absolute;width:150px;height:150px;border-radius:50%;right:-45px;top:-55px;
+           background:radial-gradient(circle,rgba(62,207,168,.35),transparent 68%)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:13px 14px}
+.stat b{display:block;font-size:23px;font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+.stat span{font-size:11.5px;color:var(--muted)}
+
+/* deck -------------------------------------------------------------------- */
+.deck{position:relative;min-height:230px;touch-action:pan-y}
+.rulecard{background:var(--panel);border:1px solid var(--line);border-radius:22px;
+          box-shadow:var(--shadow-lg);padding:18px;will-change:transform;position:relative}
+.rulecard.drag{transition:none}
+.rulecard.settle{transition:transform .28s cubic-bezier(.2,.9,.3,1.1)}
+.stamp{position:absolute;top:18px;font-size:19px;font-weight:900;letter-spacing:.06em;
+       padding:6px 12px;border-radius:10px;border:3px solid;opacity:0;pointer-events:none;
+       transition:opacity .1s;text-transform:uppercase}
+.stamp.keep{right:18px;color:var(--keep);border-color:var(--keep);transform:rotate(11deg)}
+.stamp.bin{left:18px;color:var(--bin);border-color:var(--bin);transform:rotate(-11deg)}
+.stamp.defer{left:50%;bottom:18px;top:auto;margin-left:-52px;color:var(--defer);border-color:var(--defer)}
+.stmt{font-size:20.5px;font-weight:680;line-height:1.32;margin:10px 0 10px;letter-spacing:-.02em}
+.crumb{font-size:11.5px;color:var(--muted);word-break:break-word;line-height:1.5}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
+     border-radius:999px;padding:4px 9px;border:1px solid var(--line);background:var(--panel-2);
+     color:var(--ink-2);cursor:pointer}
+.tag.gold{background:var(--gold-bg);border-color:transparent;color:var(--gold)}
+.tag.info{background:var(--accent-bg);border-color:transparent;color:var(--accent)}
+.tag:after{content:"ⓘ";opacity:.55;font-size:10px}
+.tag.plain:after{content:""}
+details.body{margin:10px 0 0;border-top:1px dashed var(--line);padding-top:10px}
+details.body summary{cursor:pointer;font-size:12px;color:var(--muted);font-weight:650}
+details.body .txt{white-space:pre-wrap;font-size:13px;color:var(--ink-2);max-height:220px;
+                  overflow:auto;margin-top:8px;border-left:2px solid var(--line);padding-left:11px}
+.ex{display:grid;gap:9px;margin-top:12px}
+@media(min-width:520px){.ex.two{grid-template-columns:1fr 1fr}}
+.exbox{border-radius:13px;padding:11px 12px}
+.exbox.ok{background:var(--keep-bg)} .exbox.bad{background:var(--bin-bg)}
+.exbox h4{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--ink-2)}
+.exbox ul{margin:0;padding-left:16px;font-size:13px} .exbox li{margin:3px 0}
+
+/* actions ----------------------------------------------------------------- */
+.actions{display:flex;justify-content:center;align-items:center;gap:16px;margin:18px 0 6px}
+.big{width:62px;height:62px;border-radius:50%;border:1px solid var(--line);background:var(--panel);
+     box-shadow:var(--shadow);font-size:25px;cursor:pointer;display:grid;place-items:center;
+     transition:transform .16s cubic-bezier(.3,1.5,.5,1),box-shadow .16s}
+.big:hover{transform:translateY(-3px) scale(1.07)}
+.big:active{transform:scale(.9)}
+.big.keep{color:var(--keep);border-color:var(--keep)}
+.big.bin{color:var(--bin);border-color:var(--bin)}
+.big.defer{color:var(--defer);border-color:var(--defer);width:52px;height:52px;font-size:20px}
+.minor{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:9px 13px;
+     font-size:13px;font-weight:650;cursor:pointer;transition:.16s}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--navy);color:var(--bg);border-color:transparent}
+:root[data-theme="dark"] .btn.primary{color:#0f1319}
+.btn.wide{width:100%;justify-content:center;text-align:center}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.hint{text-align:center;font-size:11.5px;color:var(--muted);margin-top:10px}
+kbd{font:inherit;font-size:10px;border:1px solid var(--line-2);border-bottom-width:2px;
+    border-radius:5px;padding:0 4px;color:var(--muted)}
+
+/* sheet ------------------------------------------------------------------- */
+.scrim{position:fixed;inset:0;background:rgba(9,14,22,.55);backdrop-filter:blur(3px);
+       z-index:60;opacity:0;pointer-events:none;transition:opacity .22s}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,100%);width:100%;max-width:560px;
+       background:var(--panel);border-radius:24px 24px 0 0;z-index:61;max-height:92dvh;overflow:auto;
+       transition:transform .3s cubic-bezier(.2,.9,.3,1.05);padding:8px 16px calc(20px + env(safe-area-inset-bottom))}
+.sheet.on{transform:translate(-50%,0)}
+.grab{width:40px;height:4px;border-radius:9px;background:var(--line-2);margin:8px auto 12px}
+.pinned{position:sticky;top:0;z-index:2;background:var(--panel);padding:2px 0 10px;
+        margin:0 0 6px;border-bottom:1px solid var(--line)}
+.field{margin:0 0 16px}
+.field .flabel{display:flex;align-items:baseline;gap:8px;margin-bottom:3px;flex-wrap:wrap}
+.field .flabel h4{flex:1 1 auto;min-width:0}
+.field h4{font-size:14.5px}
+.field .why{font-size:12px;color:var(--muted);margin:0 0 9px}
+.opts{display:flex;gap:7px;flex-wrap:wrap}
+.opt{border:1px solid var(--line);background:var(--panel-2);border-radius:11px;padding:8px 11px;
+     font-size:13px;font-weight:600;cursor:pointer;transition:.14s;text-align:left}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{background:var(--accent-bg);border-color:var(--accent);color:var(--accent);font-weight:750}
+.opt.warn.sel{background:var(--bin-bg);border-color:var(--bin);color:var(--bin)}
+.opt .sug{font-size:9.5px;opacity:.7;display:block;font-weight:700;letter-spacing:.06em}
+.ihelp{border:0;background:none;color:var(--muted);cursor:pointer;font-size:12px;padding:2px 4px}
+.ihelp:hover{color:var(--accent)}
+textarea{width:100%;min-height:78px;border:1px solid var(--line);border-radius:12px;padding:10px 11px;
+         background:var(--panel-2);resize:vertical}
+input.text{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:var(--panel-2)}
+.req{font-size:11.5px;color:var(--bin);font-weight:700}
+.callout{background:var(--accent-bg);border-radius:13px;padding:11px 13px;font-size:12.5px;
+         color:var(--ink-2);margin:0 0 14px}
+.callout.warn{background:var(--gold-bg)}
+
+/* glossary ---------------------------------------------------------------- */
+.gitem{border:1px solid var(--line);border-radius:14px;margin-bottom:9px;overflow:hidden;background:var(--panel)}
+.gitem summary{cursor:pointer;padding:12px 14px;font-weight:700;font-size:14px;list-style:none;
+               display:flex;align-items:center;gap:9px}
+.gitem summary::-webkit-details-marker{display:none}
+.gitem summary:after{content:"＋";margin-left:auto;color:var(--muted);font-weight:400}
+.gitem[open] summary:after{content:"−"}
+.gitem .gbody{padding:0 14px 14px;font-size:13.5px;color:var(--ink-2)}
+.gopt{border-top:1px solid var(--line);padding:11px 0 3px}
+.gopt b{color:var(--ink);font-size:13.5px}
+.gopt .lede{font-size:12px;color:var(--muted);margin:2px 0 6px}
+.gopt dl{margin:0;font-size:12.5px}
+.gopt dt{font-weight:750;color:var(--ink);margin-top:6px;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.gopt dd{margin:2px 0 0}
+.gopt .eg{font-style:italic;color:var(--ink-2);background:var(--panel-2);border-radius:9px;
+          padding:7px 9px;margin-top:6px;font-size:12.5px}
+.pill{font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+      border-radius:6px;padding:2px 6px;background:var(--bin-bg);color:var(--bin)}
+.pill.sys{background:var(--panel-2);color:var(--muted)}
+
+/* leaderboard ------------------------------------------------------------- */
+.lrow{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.lrow:last-child{border-bottom:0}
+.lrank{width:22px;text-align:center;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.lav{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;
+     font-size:13px;background:var(--defer-bg);color:var(--defer)}
+.lrow.me .lav{background:var(--keep);color:#fff}
+.lname{font-weight:700;font-size:14.5px}
+.lsub{font-size:11.5px;color:var(--muted)}
+.lscore{margin-left:auto;text-align:right}
+.lscore b{font-variant-numeric:tabular-nums}
+.seg{display:flex;gap:6px;margin-bottom:12px}
+.seg button{flex:1;border:1px solid var(--line);background:var(--panel);border-radius:10px;
+            padding:8px;font-size:12.5px;font-weight:650;cursor:pointer}
+.seg button.on{background:var(--navy);color:var(--bg);border-color:transparent}
+:root[data-theme="dark"] .seg button.on{color:#0f1319}
+
+/* teaser & misc ------------------------------------------------------------ */
+.teaser{text-align:center;padding:10px 0}
+.bulb{font-size:42px;margin:6px 0 4px;display:inline-block}
+.answers{display:grid;gap:9px;margin:16px 0 4px;text-align:left}
+.answers button{border:1px solid var(--line);background:var(--panel);padding:13px 14px;border-radius:13px;
+                cursor:pointer;font-size:14px;transition:.18s}
+.answers button.right{border-color:var(--keep);background:var(--keep-bg);color:var(--keep);font-weight:700}
+.answers button.wrong{border-color:var(--bin);background:var(--bin-bg);color:var(--bin)}
+.quote{background:var(--panel-2);border-left:3px solid var(--line-2);border-radius:0 11px 11px 0;
+       padding:12px 14px;font-size:15px;margin:12px 0}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;
+       background:var(--gold-bg);color:var(--gold);padding:5px 9px;border-radius:9px;margin:0 5px 5px 0}
+.toast{position:fixed;left:50%;bottom:108px;transform:translate(-50%,14px);z-index:70;
+       background:var(--navy);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13.5px;
+       font-weight:600;opacity:0;pointer-events:none;transition:.3s cubic-bezier(.2,1.4,.4,1);
+       box-shadow:var(--shadow-lg);max-width:88vw;text-align:center}
+:root[data-theme="dark"] .toast{color:#0f1319}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.float{position:fixed;z-index:80;font-weight:900;font-size:26px;pointer-events:none;
+       animation:floatUp .9s cubic-bezier(.2,.9,.3,1) forwards;text-shadow:0 3px 8px rgba(0,0,0,.16)}
+@keyframes floatUp{to{opacity:0;transform:translateY(-62px) scale(1.45)}}
+.done{text-align:center;padding:48px 18px}
+.done .big-emoji{font-size:46px;display:block;margin-bottom:10px}
+.empty{color:var(--muted);text-align:center;padding:26px 10px;font-size:14px}
+
+@media (prefers-reduced-motion: reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
 </style>
 </head>
 <body>
+<div class="shell">
+
 <header>
-  <h1>Derek Review</h1>
-  <div class="bar"><i id="prog" style="width:0"></i></div>
-  <div class="counts" id="counts"></div>
+  <div class="hrow">
+    <div class="brand">Derek <em>Review</em></div>
+    <button class="chip-btn" id="whoChip" onclick="openWho()">Reviewer —</button>
+    <button class="chip-btn" onclick="toggleTheme()" title="Light / dark" aria-label="Toggle theme">◐</button>
+  </div>
+  <div class="bar"><i id="prog"></i></div>
+  <div class="hmeta" id="hmeta"></div>
 </header>
-<main id="main"><div class="card">Loading…</div></main>
-<div class="toast" id="toast"></div>
+
+<main>
+
+<!-- ======================= HOME ======================= -->
+<section id="v-home" class="view on">
+  <div class="card hero">
+    <div class="orb"></div>
+    <div class="kicker">Round 1 · disqualification</div>
+    <h1>Which of these could a computer actually check?</h1>
+    <p id="heroSub">Short sittings. Every answer is saved the moment you give it.</p>
+  </div>
+
+  <div class="card" id="firstRun">
+    <div class="kicker">Start here</div>
+    <h2 style="font-size:19px;margin:7px 0 9px">What you're doing, in four sentences</h2>
+    <div id="orientation"></div>
+    <button class="btn wide primary" style="margin-top:6px" onclick="show('guide')">
+      Open the field guide — every option explained
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="kicker">Your queue</div>
+    <h2 style="font-size:21px;margin:7px 0 4px"><span id="qLeft">—</span> rules left</h2>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:12px" id="qBreak"></p>
+    <button class="btn wide primary" onclick="show('review')" id="startBtn">Start reviewing →</button>
+    <button class="btn wide" style="margin-top:8px" onclick="show('examples')">
+      Check example sentences instead →
+    </button>
+  </div>
+
+  <div class="grid2">
+    <div class="stat"><b id="sScore">0</b><span>session score</span></div>
+    <div class="stat"><b id="sStreak">0 🔥</b><span>focus streak</span></div>
+  </div>
+  <div id="badges" style="margin-top:12px"></div>
+</section>
+
+<!-- ======================= REVIEW ======================= -->
+<section id="v-review" class="view">
+  <div class="deck" id="deck"></div>
+  <div id="deckControls">
+    <div class="actions">
+      <button class="big bin"   onclick="verdict('rejected',event)" title="Bin (←)">✕</button>
+      <button class="big defer" onclick="verdict('deferred',event)" title="Not sure (↓)">?</button>
+      <button class="big keep"  onclick="verdict('accepted',event)" title="Keep (→)">✓</button>
+    </div>
+    <div class="minor">
+      <button class="btn" onclick="notText(event)">Not text at all <kbd>N</kbd></button>
+      <button class="btn" onclick="verdict('amended',event)">Keep, reworded <kbd>W</kbd></button>
+      <button class="btn" onclick="undo()">↶ Undo <kbd>U</kbd></button>
+    </div>
+    <div class="hint">
+      Drag the card, or: <kbd>←</kbd> bin · <kbd>↓</kbd> not sure · <kbd>→</kbd> keep · <kbd>?</kbd> help
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EXAMPLES ======================= -->
+<section id="v-examples" class="view">
+  <div class="card flat" id="exIntro"></div>
+  <div class="deck" id="exDeck"></div>
+  <div id="exControls">
+    <div class="actions">
+      <button class="big bin"   onclick="exVerdict('reject',event)" title="Bad example">✕</button>
+      <button class="big defer" onclick="exVerdict('unsure',event)" title="Not sure">?</button>
+      <button class="big keep"  onclick="exVerdict('accept',event)" title="Good example">✓</button>
+    </div>
+    <div class="hint">← bad example · ? not sure · → good example</div>
+  </div>
+</section>
+
+<!-- ======================= ATTENTION ======================= -->
+<section id="v-check" class="view">
+  <div class="card">
+    <div class="teaser">
+      <div class="kicker">Attention check</div>
+      <div class="bulb">💡</div>
+      <h2 id="chkPrompt" style="font-size:20px;margin:4px 0 8px"></h2>
+      <p style="font-size:13px;color:var(--muted)" id="chkNote"></p>
+    </div>
+    <div id="chkRule"></div>
+    <div class="answers" id="chkAnswers"></div>
+    <button class="btn wide" style="margin-top:8px" onclick="explainChecks()">
+      Why am I being asked this?
+    </button>
+  </div>
+</section>
+
+<!-- ======================= LEADERBOARD ======================= -->
+<section id="v-board" class="view">
+  <div class="kicker">Leaderboard</div>
+  <h1 style="font-size:24px;margin:8px 0 6px">Who's been reviewing</h1>
+  <p style="font-size:13px;color:var(--muted)">
+    Built from the decision record itself, not from a scoreboard — so it can't be
+    inflated, and clearing your browser doesn't erase your work.
+  </p>
+  <div class="seg" id="boardSeg">
+    <button class="on" onclick="loadBoard('day',event)">Today</button>
+    <button onclick="loadBoard('week',event)">This week</button>
+    <button onclick="loadBoard('all',event)">All time</button>
+  </div>
+  <div class="card" style="padding:0;overflow:hidden" id="boardList"></div>
+  <div class="card flat" id="agreeBox"></div>
+</section>
+
+<!-- ======================= PROGRESS ======================= -->
+<section id="v-progress" class="view">
+  <div class="kicker">Progress</div>
+  <h1 style="font-size:24px;margin:8px 0 12px">Where things stand</h1>
+  <div class="grid2" id="progStats"></div>
+  <div class="card">
+    <div class="kicker">The queue</div>
+    <div id="statusBreak" style="font-size:13.5px;margin-top:8px"></div>
+  </div>
+  <div class="card">
+    <div class="kicker">This session</div>
+    <div id="sessionBreak" style="font-size:13.5px;margin-top:8px"></div>
+  </div>
+  <div class="card">
+    <div class="kicker">Export</div>
+    <p style="font-size:13px;color:var(--muted);margin:8px 0 10px">
+      Your decisions already live in <code>ledger/rules.jsonl</code> — that's the real record,
+      and it's in version control. This is just a copy of this session for your own notes.
+    </p>
+    <button class="btn wide" onclick="exportSession()">Download session JSON</button>
+  </div>
+</section>
+
+<!-- ======================= FIELD GUIDE ======================= -->
+<section id="v-guide" class="view">
+  <div class="kicker">Field guide</div>
+  <h1 style="font-size:24px;margin:8px 0 6px">What every option means</h1>
+  <p style="font-size:13px;color:var(--muted)">
+    Nothing here assumes you've seen the code. Open it mid-decision any time —
+    it is not cheating, and the attention checks draw from it.
+  </p>
+  <div id="guideBody" style="margin-top:14px"></div>
+</section>
+
+</main>
+
+<nav>
+  <button id="n-home"     class="on" onclick="show('home')"><span class="ic">⌂</span>Home</button>
+  <button id="n-review"   onclick="show('review')"><span class="ic">✓</span>Rules</button>
+  <button id="n-examples" onclick="show('examples')"><span class="ic">❝</span>Examples</button>
+  <button id="n-board"    onclick="show('board')"><span class="ic">🏆</span>Board</button>
+  <button id="n-guide"    onclick="show('guide')"><span class="ic">？</span>Guide</button>
+</nav>
+</div>
+
+<div class="scrim" id="scrim" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"><div class="grab"></div><div id="sheetBody"></div></div>
+<div class="toast" id="toast" role="status"></div>
 
 <script>
-// Pass 1 triage: disqualification. One question per rule — is this
-// detectable in text at all? Keyboard-first, because 546 rules at ~20
-// seconds each only works if the hands never leave the keyboard.
-const UNITS = ["sentence","phrase","token","character","paragraph","block","section","document","artifact"];
-const CLARITY = ["unreviewed","unambiguous","ambiguous_resolvable","ambiguous_deferred","not_automatable"];
-const MODALITY = ["MUST","MUST_NOT","SHOULD","SHOULD_NOT","MAY","PREFER"];
-const DIRECTION = ["presence","absence"];
-const APPLIES = ["any","policy","web_page","form","report","email","social_post","easy_read","transcript"];
+"use strict";
+/* ===========================================================================
+   Derek Review — round 1 triage.
 
-let state = {rules: [], i: 0, counts: {}, total: 0};
+   Three things worth knowing before changing anything here:
+
+   1. The server owns the truth. Every decision is POSTed and the returned
+      counts replace local ones. Points and streaks are local decoration; the
+      leaderboard is recomputed server-side from the ledger, so nothing here
+      can inflate it.
+   2. Nothing is shown that isn't explained. Every option a reviewer can pick
+      is rendered from glossary.json, which the server refuses to start
+      without. If a button has no explanation, that is a bug, not a shortcut.
+      Requiring the reviewer to set scope is the point of this round; the
+      gamification exists to make that bearable, never to skip it.
+   3. Speed is deliberately not rewarded. A decision under the server's hasty
+      threshold scores zero and is marked in the ledger note.
+   =========================================================================== */
+
 const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-function toast(msg){
-  const t = $("toast"); t.textContent = msg; t.classList.add("show");
-  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("show"), 1400);
+const S = {
+  rules: [], queue: [], i: 0, counts: {}, total: 0,
+  glossary: null, options: {}, points: {}, hastyMs: 2500,
+  reviewer: localStorage.getItem("derek.reviewer") || "",
+  score: +(localStorage.getItem("derek.score") || 0),
+  streak: +(localStorage.getItem("derek.streak") || 0),
+  badges: JSON.parse(localStorage.getItem("derek.badges") || "[]"),
+  session: { accepted:0, amended:0, rejected:0, deferred:0, examples:0, checks:0, checksOk:0, hasty:0 },
+  log: [], lastUid: null, shownAt: 0,
+  examples: null, exIndex: 0, exShownAt: 0,
+  check: null, sinceCheck: 0, view: "home",
+};
+
+const save = () => {
+  localStorage.setItem("derek.score", S.score);
+  localStorage.setItem("derek.streak", S.streak);
+  localStorage.setItem("derek.badges", JSON.stringify(S.badges));
+};
+
+/* --- chrome -------------------------------------------------------------- */
+function toast(msg, ms = 1900){
+  const t = $("toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("on"), ms);
+}
+function toggleTheme(){
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if(next) document.documentElement.setAttribute("data-theme", next);
+  else document.documentElement.removeAttribute("data-theme");
+  localStorage.setItem("derek.theme", next);
+}
+if(localStorage.getItem("derek.theme")) {
+  document.documentElement.setAttribute("data-theme", localStorage.getItem("derek.theme"));
+}
+function floatPoints(ev, text, colour){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const el = document.createElement("div");
+  el.className = "float"; el.textContent = text; el.style.color = colour;
+  el.style.left = ((ev && ev.clientX) || innerWidth/2) - 18 + "px";
+  el.style.top  = ((ev && ev.clientY) || innerHeight/2) - 26 + "px";
+  document.body.appendChild(el); setTimeout(() => el.remove(), 950);
 }
 
-async function load(){
-  const r = await fetch("/api/rules");
+function show(id){
+  S.view = id;
+  document.querySelectorAll(".view").forEach(v => v.classList.remove("on"));
+  $("v-" + id).classList.add("on");
+  document.querySelectorAll("nav button").forEach(b => b.classList.remove("on"));
+  $("n-" + id)?.classList.add("on");
+  scrollTo({ top: 0, behavior: "instant" });
+  if(id === "review")   renderRule();
+  if(id === "examples") renderExample();
+  if(id === "board")    loadBoard(currentWindow);
+  if(id === "progress") renderProgress();
+  if(id === "guide")    renderGuide();
+  if(id === "home")     renderHome();
+}
+
+/* --- sheets -------------------------------------------------------------- */
+let sheetOnClose = null;
+function openSheet(html, onClose){
+  $("sheetBody").innerHTML = html;
+  $("sheet").classList.add("on"); $("scrim").classList.add("on");
+  sheetOnClose = onClose || null;
+}
+function closeSheet(){
+  $("sheet").classList.remove("on"); $("scrim").classList.remove("on");
+  const cb = sheetOnClose; sheetOnClose = null; if(cb) cb();
+}
+
+/* Explain one option, in the reviewer's language, wherever they are. */
+function explain(bucket, key){
+  const spec = S.glossary.buckets[bucket];
+  const o = spec.options[key];
+  if(!o) return;
+  openSheet(`
+    <div class="kicker">${esc(spec.title)}</div>
+    <h2 style="font-size:20px;margin:7px 0 4px">${esc(o.label)}</h2>
+    ${o.system_only ? '<span class="pill sys">set automatically — not your call</span>' : ""}
+    ${o.flags_disqualified ? '<span class="pill">disqualifies the rule</span>' : ""}
+    <dl class="gopt" style="border-top:0">
+      <dt>What it means</dt><dd>${esc(o.means)}</dd>
+      <dt>What it does</dt><dd>${esc(o.effect || "—")}</dd>
+      ${o.pick_when ? `<dt>Pick it when</dt><dd><ul style="margin:4px 0 0;padding-left:17px">
+        ${o.pick_when.map(x => `<li>${esc(x)}</li>`).join("")}</ul></dd>` : ""}
+    </dl>
+    ${o.example ? `<div class="eg gopt" style="border-top:0">${esc(o.example)}</div>` : ""}
+    <button class="btn wide" style="margin-top:14px" onclick="closeSheet()">Got it</button>
+  `);
+}
+function explainBucket(bucket){
+  const spec = S.glossary.buckets[bucket];
+  openSheet(`
+    <div class="kicker">Field guide</div>
+    <h2 style="font-size:20px;margin:7px 0 6px">${esc(spec.title)}</h2>
+    <p style="font-size:13.5px">${esc(spec.what_it_is)}</p>
+    <div class="callout">${esc(spec.why_it_matters || "")}</div>
+    ${spec.how_to_choose ? `<p style="font-size:13.5px"><b>How to choose.</b> ${esc(spec.how_to_choose)}</p>` : ""}
+    ${Object.entries(spec.options).map(([k, o]) => optionHtml(k, o)).join("")}
+    <button class="btn wide" style="margin-top:14px" onclick="closeSheet()">Close</button>
+  `);
+}
+function explainChecks(){
+  const a = S.glossary.attention_checks;
+  openSheet(`
+    <div class="kicker">${esc(a.title)}</div>
+    <p style="font-size:13.5px;margin-top:8px">${esc(a.what_it_is)}</p>
+    <div class="callout">${esc(a.why_it_matters)}</div>
+    <p style="font-size:13px;color:var(--muted)">${esc(a.scoring)}</p>
+    <button class="btn wide" style="margin-top:10px" onclick="closeSheet()">Close</button>
+  `);
+}
+function openWho(){
+  openSheet(`
+    <div class="kicker">Reviewer</div>
+    <h2 style="font-size:20px;margin:7px 0 8px">Who's deciding?</h2>
+    <p style="font-size:13.5px">Your initials go on every decision you make, with a timestamp,
+    in a file that's in version control. That's so a decision can be asked about later —
+    and so that when two people review the same rule we can tell whether they agreed.</p>
+    <input class="text" id="whoIn" maxlength="6" placeholder="e.g. TA" value="${esc(S.reviewer)}"
+           style="text-transform:uppercase;margin:10px 0 12px" autocomplete="off">
+    <button class="btn wide primary" onclick="setWho()">Save</button>
+  `);
+  setTimeout(() => $("whoIn")?.focus(), 250);
+}
+function setWho(){
+  const v = ($("whoIn").value || "").toUpperCase().replace(/[^A-Z0-9_-]/g, "").slice(0, 6);
+  if(!v){ toast("Initials, please — even just two letters"); return; }
+  S.reviewer = v; localStorage.setItem("derek.reviewer", v);
+  $("whoChip").textContent = "Reviewer " + v;
+  closeSheet(); toast("Signed in as " + v);
+}
+
+/* --- boot ---------------------------------------------------------------- */
+async function boot(){
+  const r = await fetch("/api/bootstrap");
   const d = await r.json();
-  state.rules = d.rules.filter(x => x.status === "proposed");
-  state.counts = d.counts; state.total = d.total; state.i = 0;
+  if(d.error){ document.body.innerHTML = "<pre style='padding:20px'>" + esc(d.error) + "</pre>"; return; }
+  S.glossary = d.glossary; S.options = d.options; S.points = d.points; S.hastyMs = d.hasty_ms;
+  if(!S.reviewer) S.reviewer = "";
+  ingest(d);
+  $("whoChip").textContent = S.reviewer ? "Reviewer " + S.reviewer : "Reviewer —";
+  renderHome();
+  if(!S.reviewer) setTimeout(openWho, 500);
+}
+
+function ingest(d){
+  S.rules = d.rules; S.counts = d.counts; S.total = d.total;
+  const pending = S.rules.filter(x => x.status === "proposed");
+  // Keep the reviewer's place across saves. If the rule they were looking at is
+  // still pending (a save that failed, or another tab), go back to it; if it has
+  // left the queue, hold the same index, which lands on the next one.
+  const wasUid = S.queue[S.i]?.uid, wasIdx = S.i;
+  S.queue = pending;
+  const found = wasUid ? S.queue.findIndex(x => x.uid === wasUid) : -1;
+  S.i = found >= 0 ? found : Math.min(wasIdx, Math.max(0, S.queue.length - 1));
+  renderChrome();
+}
+
+function renderChrome(){
+  const done = S.total - (S.counts.proposed || 0);
+  $("prog").style.width = (S.total ? 100 * done / S.total : 0) + "%";
+  $("hmeta").innerHTML =
+    `<span><b>${done}</b>/${S.total} decided</span>` +
+    ["accepted","amended","rejected","deferred"]
+      .filter(k => S.counts[k])
+      .map(k => `<span>${labelFor("review_status", k)} <b>${S.counts[k]}</b></span>`).join("") +
+    `<span>session <b>${S.score}</b></span>`;
+}
+const labelFor = (bucket, key) =>
+  S.glossary?.buckets?.[bucket]?.options?.[key]?.label || key;
+
+function renderHome(){
+  const o = S.glossary.orientation;
+  $("orientation").innerHTML = `
+    <p style="font-size:14px">${esc(o.what_am_i_doing)}</p>
+    <p style="font-size:13.5px;color:var(--ink-2)">${esc(o.why_a_human)}</p>
+    <p style="font-size:13.5px;color:var(--ink-2)">${esc(o.what_happens_to_my_answers)}</p>
+    <div class="callout" style="margin-top:10px"><b>Saying Keep doesn't switch anything on.</b>
+      ${esc(o.accepting_does_not_ship)}</div>
+    <details class="gitem" style="margin-top:4px"><summary>What happens after I decide?</summary>
+      <div class="gbody"><ol style="padding-left:18px;margin:4px 0">
+        ${o.what_happens_next.map(x => `<li style="margin:6px 0">${esc(x)}</li>`).join("")}
+      </ol></div></details>
+    <details class="gitem"><summary>How long will this take?</summary>
+      <div class="gbody"><p>${esc(o.how_long)}</p><p>${esc(o.if_unsure)}</p></div></details>`;
+  $("qLeft").textContent = S.counts.proposed || 0;
+  $("qBreak").textContent =
+    `${S.total} found in the Style Manual · ` +
+    `${S.rules.filter(r => r.has_gold_pair).length} come with the manual's own examples attached`;
+  $("sScore").textContent = S.score;
+  $("sStreak").innerHTML = S.streak + " 🔥";
+  $("badges").innerHTML = S.badges.map(b => `<span class="badge">${esc(b)}</span>`).join("");
+  $("heroSub").textContent =
+    (S.counts.proposed || 0) === 0
+      ? "Queue clear. Every rule has a decision on it."
+      : "Short sittings. Every answer is saved the moment you give it.";
+  renderChrome();
+}
+
+/* --- rule deck ----------------------------------------------------------- */
+function renderRule(){
+  const r = S.queue[S.i];
+  if(!r){
+    $("deck").innerHTML = `<div class="card done">
+      <span class="big-emoji">🎉</span>
+      <h2 style="font-size:21px">Queue clear</h2>
+      <p style="color:var(--muted)">Every candidate has a decision on it. Commit
+      <code>ledger/rules.jsonl</code> and move to round 2.</p>
+      <button class="btn primary" style="margin-top:12px" onclick="show('examples')">
+        Check example sentences →</button></div>`;
+    $("deckControls").style.display = "none";
+    return;
+  }
+  $("deckControls").style.display = "";
+  const gold = r.has_gold_pair;
+  const formSpec = S.glossary.buckets.statement_form.options[r.form];
+
+  $("deck").innerHTML = `
+    <div class="rulecard" id="card">
+      <div class="stamp keep">Keep</div>
+      <div class="stamp bin">Bin</div>
+      <div class="stamp defer">Not sure</div>
+      <div class="kicker">${S.queue.length} still to decide</div>
+      <div class="stmt">${esc(r.statement)}</div>
+      <div class="tagrow">
+        ${gold ? `<span class="tag gold" onclick="explain('statement_form','exemplified')">
+          ★ the manual gave this examples</span>` : ""}
+        <span class="tag info" onclick="explain('statement_form','${esc(r.form)}')">
+          ${esc(formSpec ? formSpec.label : r.form)}</span>
+        <span class="tag" onclick="explainBucket('modality')">${esc(r.modality)} suggested</span>
+      </div>
+      <div class="crumb">
+        ${esc(r.heading_path.join("  ›  "))}<br>
+        <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.page)}</a>
+      </div>
+      ${examplesHtml(r)}
+      ${r.body ? `<details class="body"><summary>Show the paragraph underneath</summary>
+        <div class="txt">${esc(r.body)}</div></details>` : ""}
+    </div>`;
+  S.shownAt = Date.now();
+  attachDrag($("card"), {
+    right: () => verdict("accepted"),
+    left:  () => verdict("rejected"),
+    down:  () => verdict("deferred"),
+  });
+}
+
+function examplesHtml(r){
+  if(!r.compliant.length && !r.violating.length) return "";
+  const li = xs => xs.map(e => `<li>${esc(e)}</li>`).join("") || "<li>—</li>";
+  return `<div class="ex ${r.compliant.length && r.violating.length ? "two" : ""}">
+    ${r.compliant.length ? `<div class="exbox ok"><h4>Write this</h4><ul>${li(r.compliant)}</ul></div>` : ""}
+    ${r.violating.length ? `<div class="exbox bad"><h4>Not this</h4><ul>${li(r.violating)}</ul></div>` : ""}
+  </div>`;
+}
+
+/* --- drag ---------------------------------------------------------------- */
+function attachDrag(el, on){
+  if(!el) return;
+  let x0 = 0, y0 = 0, dx = 0, dy = 0, active = false;
+  const TH = Math.min(120, innerWidth * 0.26);
+
+  el.addEventListener("pointerdown", e => {
+    if(e.target.closest("a,summary,.tag,details")) return;
+    active = true; x0 = e.clientX; y0 = e.clientY;
+    el.setPointerCapture(e.pointerId); el.classList.add("drag");
+  });
+  el.addEventListener("pointermove", e => {
+    if(!active) return;
+    dx = e.clientX - x0; dy = e.clientY - y0;
+    el.style.transform = `translate(${dx}px,${dy}px) rotate(${dx / 22}deg)`;
+    el.querySelector(".stamp.keep").style.opacity  = dx > 40 ? Math.min(1, dx / TH) : 0;
+    el.querySelector(".stamp.bin").style.opacity   = dx < -40 ? Math.min(1, -dx / TH) : 0;
+    el.querySelector(".stamp.defer").style.opacity =
+      (dy > 60 && Math.abs(dx) < 60) ? Math.min(1, dy / TH) : 0;
+  });
+  const release = () => {
+    if(!active) return;
+    active = false; el.classList.remove("drag"); el.classList.add("settle");
+    if(dy > TH && Math.abs(dx) < TH)      on.down();
+    else if(dx > TH)                      on.right();
+    else if(dx < -TH)                     on.left();
+    else { el.style.transform = ""; el.querySelectorAll(".stamp").forEach(s => s.style.opacity = 0); }
+    dx = dy = 0;
+  };
+  el.addEventListener("pointerup", release);
+  el.addEventListener("pointercancel", release);
+}
+function flingCard(sel, dir){
+  const el = $(sel); if(!el) return;
+  el.classList.add("settle");
+  const t = { right:"translate(130%,40px) rotate(24deg)", left:"translate(-130%,40px) rotate(-24deg)",
+              down:"translateY(110%) scale(.85)" }[dir];
+  el.style.transform = t; el.style.opacity = "0";
+}
+
+/* --- verdicts ------------------------------------------------------------ */
+function verdict(status, ev){
+  const r = S.queue[S.i]; if(!r) return;
+  if(!S.reviewer){ openWho(); return; }
+  if(status === "deferred"){ commit(r, { review_status: "deferred" }, ev, "down"); return; }
+  if(status === "rejected"){ rejectSheet(r, ev); return; }
+  scopeSheet(r, status, ev);
+}
+
+/* The scope sheet. This is the part the gamification must not eat: a rule
+   cannot be kept without someone saying what it applies to and how clear it
+   is. Everything is pre-filled from extraction except clarity, which starts
+   blank on purpose — the extractor deliberately makes no claim there, so a
+   default would be a judgement nobody made. */
+function scopeSheet(r, status, ev){
+  const draft = {
+    unit: r.unit, direction: r.direction, modality: r.modality,
+    applies_to: r.applies_to.slice(), clarity: r.clarity === "unreviewed" ? "" : r.clarity,
+    specification: r.specification || "", note: "",
+  };
+  const amend = status === "amended";
+  const render = () => {
+    openSheet(`
+      <div class="pinned"><div class="kicker">${amend ? "Keep, reworded" : "Keep this rule"}</div>
+      <h2 style="font-size:18px;margin:7px 0 10px">${esc(r.statement)}</h2></div>
+      <div class="callout">Describing the rule is the whole job of this round —
+        round 2 only looks at what you scope here. Suggested values are pre-filled;
+        change anything that looks wrong.</div>
+
+      ${amend ? `<div class="field">
+        <div class="flabel"><h4>Your wording</h4>
+          <button class="ihelp" onclick="explain('review_status','amended')">ⓘ</button></div>
+        <p class="why">The manual's original wording is kept alongside and never overwritten.</p>
+        <textarea id="f-spec" placeholder="State the rule as you'd want it implemented…">${esc(draft.specification)}</textarea>
+      </div>` : ""}
+
+      ${fieldHtml("unit", draft.unit, false, "unit")}
+      ${fieldHtml("clarity", draft.clarity, false, "clarity", true)}
+      ${fieldHtml("applies_to", draft.applies_to, true, "applies")}
+      ${fieldHtml("direction", draft.direction, false, "direction")}
+      ${fieldHtml("modality", draft.modality, false, "modality")}
+
+      <div class="field">
+        <div class="flabel"><h4>Note <span style="font-weight:400;color:var(--muted)">(optional)</span></h4></div>
+        <p class="why" id="noteWhy">Anything the next person would want to know.</p>
+        <textarea id="f-note" placeholder="e.g. assumed 'short' means under 25 words">${esc(draft.note)}</textarea>
+      </div>
+
+      <button class="btn wide primary" id="lockBtn" onclick="lockIn('${status}')">Lock it in</button>
+      <button class="btn wide" style="margin-top:8px" onclick="closeSheet()">Back to the card</button>
+    `);
+    syncScope();
+  };
+  S._draft = draft; S._draftRule = r; S._draftEv = ev;
   render();
 }
 
-function esc(s){ return String(s ?? "").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
-
-function renderCounts(){
-  const done = state.total - (state.counts.proposed || 0);
-  $("prog").style.width = (state.total ? 100*done/state.total : 0) + "%";
-  $("counts").innerHTML = Object.entries(state.counts)
-    .filter(([,v]) => v)
-    .map(([k,v]) => `${k} <b>${v}</b>`).join(" · ")
-    + ` · <b>${done}/${state.total}</b> triaged`;
+function fieldHtml(bucket, value, multi, idSuffix, required){
+  const spec = S.glossary.buckets[bucket];
+  const keys = S.options[bucket] || Object.keys(spec.options);
+  const sel = multi ? new Set(value) : null;
+  return `<div class="field" data-bucket="${bucket}">
+    <div class="flabel">
+      <h4>${esc(spec.title)}</h4>
+      ${required ? '<span class="req" id="req-' + bucket + '">needs an answer</span>' : ""}
+      <button class="ihelp" onclick="explainBucket('${bucket}')">ⓘ explain</button>
+    </div>
+    <p class="why">${esc(spec.one_liner)}</p>
+    <div class="opts">
+      ${keys.map(k => {
+        const o = spec.options[k];
+        const on = multi ? sel.has(k) : value === k;
+        const warn = o.flags_disqualified ? " warn" : "";
+        return `<button class="opt${on ? " sel" : ""}${warn}"
+          data-bucket="${bucket}" data-key="${k}" data-multi="${multi ? 1 : 0}"
+          onclick="pick(this)" oncontextmenu="event.preventDefault();explain('${bucket}','${k}')">
+          ${esc(o.label)}${o.flags_disqualified ? " ⛔" : ""}
+        </button>`;
+      }).join("")}
+    </div>
+  </div>`;
 }
 
-function select(id, opts, cur){
-  return `<select id="${id}">` +
-    opts.map(o => `<option value="${o}"${o===cur?" selected":""}>${o}</option>`).join("") +
-    `</select>`;
-}
-
-function render(){
-  renderCounts();
-  const r = state.rules[state.i];
-  if(!r){
-    $("main").innerHTML = `<div class="card done"><h2>Triage complete</h2>
-      <p class="hint">Every candidate has a decision. Commit <code>ledger/rules.jsonl</code>,
-      then move to Pass 2 — see <code>docs/04-roadmap.md</code>.</p></div>`;
-    return;
+function pick(el){
+  const { bucket, key, multi } = el.dataset;
+  if(multi === "1"){
+    const set = new Set(S._draft.applies_to);
+    set.has(key) ? set.delete(key) : set.add(key);
+    if(key === "any" && set.has("any")) { set.clear(); set.add("any"); }
+    else set.delete("any");
+    if(!set.size) set.add("any");
+    S._draft.applies_to = [...set];
+    el.closest(".opts").querySelectorAll(".opt").forEach(b =>
+      b.classList.toggle("sel", S._draft.applies_to.includes(b.dataset.key)));
+  } else {
+    // A second tap on the current choice opens its explanation rather than
+    // doing nothing — the fastest route from "which is this again?" to an answer.
+    if(S._draft[bucket] === key){ explain(bucket, key); return; }
+    S._draft[bucket] = key;
+    el.closest(".opts").querySelectorAll(".opt").forEach(b => b.classList.remove("sel"));
+    el.classList.add("sel");
   }
-  const exBlock = (r.compliant.length || r.violating.length) ? `
-    <div class="ex">
-      <div class="ok"><h4>Compliant — must never fire</h4>
-        <ul>${r.compliant.map(e=>`<li>${esc(e)}</li>`).join("") || "<li>—</li>"}</ul></div>
-      <div class="bad"><h4>Violating — must always fire</h4>
-        <ul>${r.violating.map(e=>`<li>${esc(e)}</li>`).join("") || "<li>—</li>"}</ul></div>
-    </div>` : "";
-
-  $("main").innerHTML = `
-    <div class="card">
-      <p class="stmt">${esc(r.statement)}</p>
-      <div class="crumb">
-        ${esc(r.heading_path.join(" › "))}<br>
-        <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.page)}</a>
-        · <span title="how this candidate was derived">${esc(r.form)}</span>
-        · <span title="${esc(r.modality_basis)}">${esc(r.modality)}</span>
-      </div>
-      ${r.body ? `<div class="body">${esc(r.body)}</div>` : ""}
-      ${exBlock}
-      <div class="fields">
-        <label><span>Unit</span>${select("f-unit", UNITS, r.unit)}</label>
-        <label><span>Applies to</span>${select("f-applies", APPLIES, r.applies_to[0] || "any")}</label>
-        <label><span>Direction</span>${select("f-direction", DIRECTION, r.direction)}</label>
-        <label><span>Clarity</span>${select("f-clarity", CLARITY, r.clarity)}</label>
-        <label><span>Modality</span>${select("f-modality", MODALITY, r.modality)}</label>
-      </div>
-      <div class="tags">
-        <span class="tag">${state.i+1} of ${state.rules.length} pending</span>
-        <span class="tag">uid ${esc(r.uid)}</span>
-      </div>
-      <div class="actions">
-        <button class="accept" onclick="decide('accepted')">Accept<kbd>A</kbd></button>
-        <button class="reject" onclick="decide('rejected')">Reject<kbd>R</kbd></button>
-        <button class="defer"  onclick="decide('deferred')">Defer<kbd>D</kbd></button>
-        <button onclick="artifact()">Not text → reject<kbd>N</kbd></button>
-        <button onclick="skip()">Skip<kbd>S</kbd></button>
-      </div>
-      <p class="hint">A accept · R reject · D defer · N not-text · S skip · ← back</p>
-    </div>`;
+  syncScope();
 }
 
-function read(){
-  return {
-    unit: $("f-unit").value,
-    applies_to: [$("f-applies").value],
-    direction: $("f-direction").value,
-    clarity: $("f-clarity").value,
-    modality: $("f-modality").value,
-  };
+function syncScope(){
+  const d = S._draft; if(!d) return;
+  const needsNote = d.clarity === "ambiguous_resolvable";
+  const req = $("req-clarity");
+  if(req) req.style.display = d.clarity ? "none" : "";
+  const why = $("noteWhy");
+  if(why) why.innerHTML = needsNote
+    ? '<b style="color:var(--bin)">Required.</b> You said the wording is fuzzy but you can pin it down — write down the interpretation you\'d build to, so the next person can argue with it rather than guess at it.'
+    : "Anything the next person would want to know.";
+  const btn = $("lockBtn");
+  if(btn) btn.disabled = !d.clarity;
+  const disq = d.unit === "artifact" || d.clarity === "not_automatable";
+  if(btn && disq) btn.textContent = "That combination disqualifies it — bin instead?";
+  else if(btn) btn.textContent = "Lock it in";
 }
 
-async function send(patch){
+async function lockIn(status){
+  const d = S._draft, r = S._draftRule, ev = S._draftEv;
+  if(!d.clarity){ toast("Say how clear the rule is first"); return; }
+  const note = ($("f-note")?.value || "").trim();
+  const spec = ($("f-spec")?.value || "").trim();
+  if(d.clarity === "ambiguous_resolvable" && !note && !spec){
+    toast("Write down the interpretation you made"); return;
+  }
+  if(d.unit === "artifact" || d.clarity === "not_automatable"){
+    closeSheet(); rejectSheet(r, ev,
+      d.unit === "artifact" ? "not_text" : "needs_human_judgement", d); return;
+  }
+  if(status === "amended" && !spec){ toast("Write your version of the rule"); return; }
+  closeSheet();
+  commit(r, {
+    review_status: status, unit: d.unit, clarity: d.clarity, direction: d.direction,
+    modality: d.modality, applies_to: d.applies_to, note,
+    ...(spec ? { specification: spec } : {}),
+  }, ev, "right");
+}
+
+function rejectSheet(r, ev, preset, scope){
+  const spec = S.glossary.buckets.reject_reasons;
+  const chosen = new Set(preset ? [preset] : []);
+  openSheet(`
+    <div class="pinned"><div class="kicker">Bin this rule</div>
+    <h2 style="font-size:18px;margin:7px 0 10px">${esc(r.statement)}</h2></div>
+    <div class="callout">Why you binned it is the most useful thing you'll produce today.
+      If forty rules get binned for the same reason, that reason becomes a fix to the extractor.</div>
+    <div class="field">
+      <div class="flabel"><h4>${esc(spec.title)}</h4>
+        <span class="req" id="req-reason">pick at least one</span>
+        <button class="ihelp" onclick="explainBucket('reject_reasons')">ⓘ</button></div>
+      <p class="why">${esc(spec.one_liner)}</p>
+      <div class="opts" id="reasonOpts">
+        ${Object.entries(spec.options).map(([k, o]) => `
+          <button class="opt${chosen.has(k) ? " sel" : ""}" data-key="${k}" onclick="pickReason(this)"
+            oncontextmenu="event.preventDefault();explain('reject_reasons','${k}')">
+            ${esc(o.label)}</button>`).join("")}
+      </div>
+    </div>
+    <div class="field">
+      <div class="flabel"><h4>Note <span style="font-weight:400;color:var(--muted)">(optional)</span></h4></div>
+      <textarea id="f-rnote" placeholder="e.g. duplicate of &quot;Use commas in numbers with 4 or more digits&quot;"></textarea>
+    </div>
+    <button class="btn wide primary" onclick="confirmReject()">Bin it</button>
+    <button class="btn wide" style="margin-top:8px" onclick="closeSheet()">Back to the card</button>
+  `);
+  S._reject = { rule: r, ev, reasons: chosen, scope: scope || null };
+  syncReject();
+}
+function pickReason(el){
+  const k = el.dataset.key, set = S._reject.reasons;
+  set.has(k) ? set.delete(k) : set.add(k);
+  el.classList.toggle("sel", set.has(k));
+  syncReject();
+}
+function syncReject(){
+  const req = $("req-reason");
+  if(req) req.style.display = S._reject.reasons.size ? "none" : "";
+}
+function confirmReject(){
+  const { rule, ev, reasons, scope } = S._reject;
+  if(!reasons.size){ toast("Pick at least one reason"); return; }
+  const patch = { review_status: "rejected", reasons: [...reasons],
+                  note: ($("f-rnote")?.value || "").trim() };
+  // Rejection reasons carry scope consequences. Recording them keeps the
+  // rejection auditable rather than leaving a bare "no".
+  if(scope){ Object.assign(patch, { unit: scope.unit, clarity: scope.clarity }); }
+  if(reasons.has("not_text"))               patch.unit = "artifact";
+  if(reasons.has("needs_human_judgement"))  patch.clarity = "not_automatable";
+  if(reasons.has("too_vague"))              patch.clarity ||= "ambiguous_deferred";
+  if(!patch.clarity || patch.clarity === "unreviewed") patch.clarity = "not_automatable";
+  closeSheet();
+  commit(rule, patch, ev, "left");
+}
+
+function notText(ev){
+  const r = S.queue[S.i]; if(!r) return;
+  if(!S.reviewer){ openWho(); return; }
+  // The single most common outcome of round 1, and every field it implies is
+  // determined — so it is one keystroke rather than a form (ADR-007).
+  commit(r, {
+    review_status: "rejected", unit: "artifact", clarity: "not_automatable",
+    reasons: ["not_text"], note: "not detectable in text — artifact-scoped",
+  }, ev, "left");
+}
+
+async function commit(rule, patch, ev, dir){
+  const elapsed = Date.now() - S.shownAt;
+  flingCard("card", dir || "right");
   const res = await fetch("/api/decide", {
-    method: "POST", headers: {"Content-Type": "application/json"},
-    body: JSON.stringify([patch]),
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ reviewer: S.reviewer, patches: [{ uid: rule.uid, ...patch, elapsed_ms: elapsed }] }),
   });
   const d = await res.json();
-  if(!res.ok){ toast("Error: " + d.error); return false; }
-  state.counts = d.counts;
-  return true;
+  if(!res.ok || d.error){ toast("Not saved: " + (d.error || res.status), 4000); renderRule(); return; }
+
+  const status = patch.review_status;
+  S.session[status] = (S.session[status] || 0) + 1;
+  S.log.push({ uid: rule.uid, statement: rule.statement, ...patch, elapsed_ms: elapsed, at: new Date().toISOString() });
+  S.lastUid = rule.uid;
+
+  if(elapsed < S.hastyMs){
+    S.session.hasty++;
+    toast("That was quick — no points for that one. Worth a second look?", 2600);
+  } else {
+    S.score += S.points.decision; S.streak++;
+    floatPoints(ev, "+" + S.points.decision, "var(--keep)");
+    if(S.streak % 10 === 0) celebrate();
+  }
+  checkBadges(); save(); ingest(d);
+
+  S.sinceCheck++;
+  // Roughly every 12–18 decisions, and never on the very first few.
+  if(S.sinceCheck >= 12 && Math.random() < 0.28 && S.session.accepted + S.session.rejected > 4){
+    S.sinceCheck = 0; loadCheck(); return;
+  }
+  renderRule();
 }
 
-async function decide(status, extra){
-  const r = state.rules[state.i];
-  if(!r) return;
-  const patch = Object.assign({uid: r.uid, review_status: status}, read(), extra || {});
-  if(await send(patch)){ toast(status); state.i++; render(); }
+async function undo(){
+  if(!S.lastUid){ toast("Nothing to undo"); return; }
+  const res = await fetch("/api/undo", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ reviewer: S.reviewer, uid: S.lastUid }),
+  });
+  const d = await res.json();
+  if(!res.ok || d.error){ toast("Could not undo: " + (d.error || res.status), 3000); return; }
+  const last = S.log.pop();
+  if(last && S.session[last.review_status] > 0) S.session[last.review_status]--;
+  S.score = Math.max(0, S.score - S.points.decision);
+  S.lastUid = null; save(); ingest(d);
+  // Put the undone rule back under the reviewer's nose rather than at the end.
+  const at = S.queue.findIndex(x => x.uid === (last && last.uid));
+  if(at >= 0) S.i = at;
+  renderRule(); toast("↶ Back to proposed — the undo is on the record too");
 }
 
-// The single most common triage outcome: the rule governs an image, a video,
-// a social post or page metadata, so no text linter can evaluate it (ADR-007).
-function artifact(){
-  decide("rejected", {unit: "artifact", clarity: "not_automatable",
-                      note: "not detectable in text — artifact-scoped"});
+function celebrate(){
+  toast("🔥 " + S.streak + " in a row — still reading properly?", 2400);
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  for(let i = 0; i < 12; i++) setTimeout(() => floatPoints(
+    { clientX: innerWidth/2 + (Math.random()*220 - 110), clientY: innerHeight/2 + (Math.random()*180 - 90) },
+    "🔥", "var(--gold)"), i * 45);
 }
-function skip(){ state.i++; render(); }
-function back(){ if(state.i > 0){ state.i--; render(); } }
+function checkBadges(){
+  const add = b => { if(!S.badges.includes(b)){ S.badges.push(b); setTimeout(() => toast("Badge: " + b, 2600), 900); } };
+  const decided = S.session.accepted + S.session.rejected + S.session.deferred + S.session.amended;
+  if(decided >= 25)  add("Quarter century 🎯");
+  if(decided >= 100) add("Century 💯");
+  if(S.streak >= 10) add("On a roll 🔥");
+  if(S.session.checksOk >= 5) add("Eyes open 👀");
+  if(S.session.amended >= 3)  add("Wordsmith ✍️");
+  if(S.session.deferred >= 5) add("Honest doubt 🤔");
+}
 
-document.addEventListener("keydown", e => {
-  if(e.target.tagName === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
+/* --- attention checks ---------------------------------------------------- */
+async function loadCheck(){
+  const d = await (await fetch("/api/attention")).json();
+  S.check = d;
+  $("chkPrompt").textContent = d.prompt;
+  $("chkNote").textContent = d.note || "";
+  $("chkRule").innerHTML = d.kind === "polarity"
+    ? `<div class="card flat" style="margin:0 0 4px"><div class="kicker">The rule</div>
+         <p style="margin:6px 0 0;font-weight:650">${esc(d.rule)}</p></div>
+       <div class="quote">${esc(d.subject)}</div>`
+    : `<div class="quote">${esc(d.rule)}</div>`;
+  $("chkAnswers").innerHTML = d.choices.map(c =>
+    `<button data-key="${esc(c.key)}" onclick="answerCheck(this,event)">${esc(c.label)}</button>`).join("");
+  show("check");
+}
+async function answerCheck(el, ev){
+  if($("chkAnswers").dataset.done) return;
+  $("chkAnswers").dataset.done = "1";
+  const res = await (await fetch("/api/attention", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ reviewer: S.reviewer, nonce: S.check.nonce, answer: el.dataset.key }),
+  })).json();
+  if(!res.ok){ toast(res.error || "check expired"); $("chkAnswers").dataset.done = ""; show("review"); return; }
+
+  S.session.checks++;
+  if(res.correct){
+    S.session.checksOk++; S.score += S.points.attention_pass; S.streak++;
+    el.classList.add("right"); floatPoints(ev, "+" + S.points.attention_pass, "var(--keep)");
+    toast("🧠 Correct — carry on");
+  } else {
+    el.classList.add("wrong"); S.streak = 0;
+    S.score = Math.max(0, S.score + S.points.attention_fail);
+    floatPoints(ev, S.points.attention_fail, "var(--bin)");
+    [...$("chkAnswers").children].forEach(b => {
+      if(b.dataset.key === res.expected) b.classList.add("right");
+    });
+    toast("Not quite — streak reset. A break is cheaper than a wrong batch.", 3200);
+  }
+  checkBadges(); save(); renderChrome();
+  setTimeout(() => { $("chkAnswers").dataset.done = ""; show(S.view === "check" ? "review" : S.view); }, 1500);
+}
+
+/* --- example checking ---------------------------------------------------- */
+async function loadExamples(){
+  S.examples = await (await fetch("/api/examples")).json();
+  S.exIndex = 0;
+}
+async function renderExample(){
+  if(!S.examples) await loadExamples();
+  const t = S.glossary.training_mode;
+  const q = S.examples;
+  const seen = localStorage.getItem("derek.exIntroSeen");
+  $("exIntro").innerHTML = `
+    <details class="gitem" style="margin:0;border:0;background:none"${seen ? "" : " open"}
+             ontoggle="localStorage.setItem('derek.exIntroSeen','1')">
+      <summary style="padding:2px 0">${esc(t.title)}
+        <span style="font-weight:400;color:var(--muted);font-size:12px">${esc(t.one_liner)}</span></summary>
+      <div class="gbody" style="padding:6px 0 0">
+        <p style="font-size:13.5px">${esc(t.what_it_is)}</p>
+        <div class="callout warn">${esc(t.why_it_matters)}</div>
+        <b style="font-size:12.5px">What am I looking for?</b>
+        <ul style="padding-left:17px;margin:5px 0 0">
+          ${t.what_to_check.map(x => `<li style="margin:5px 0">${esc(x)}</li>`).join("")}
+        </ul>
+      </div>
+    </details>
+    <p style="font-size:11.5px;color:var(--muted);margin:8px 0 0">
+      Source: <b>${q.origin === "synthetic" ? "machine-generated candidates" : "the Style Manual's own example blocks"}</b>
+      · ${q.done} of ${q.total} checked</p>`;
+
+  const item = q.items[S.exIndex];
+  if(!item){
+    $("exDeck").innerHTML = `<div class="card done"><span class="big-emoji">🏁</span>
+      <h2 style="font-size:20px">Nothing left to check</h2>
+      <p style="color:var(--muted)">Verdicts are in <code>ledger/example_reviews.jsonl</code>.</p></div>`;
+    $("exControls").style.display = "none"; return;
+  }
+  $("exControls").style.display = "";
+  const claimCompliant = item.claimed === "compliant";
+  $("exDeck").innerHTML = `
+    <div class="rulecard" id="exCard">
+      <div class="stamp keep">Good</div>
+      <div class="stamp bin">Bad</div>
+      <div class="stamp defer">Not sure</div>
+      <div class="kicker">${q.items.length} still to check</div>
+      <div class="tagrow" style="margin-top:8px">
+        <span class="tag plain ${claimCompliant ? "gold" : ""}"
+              style="${claimCompliant ? "" : "background:var(--bin-bg);color:var(--bin);border-color:transparent"}">
+          claimed: ${claimCompliant ? "follows the rule" : "breaks the rule"}</span>
+        <span class="tag plain">${item.origin === "synthetic" ? "machine-generated" : "from the Style Manual"}</span>
+      </div>
+      <div class="card flat" style="margin:4px 0 0;box-shadow:none">
+        <div class="kicker">The rule it belongs to</div>
+        <p style="margin:6px 0 0;font-weight:640;font-size:15px">${esc(item.rule)}</p>
+      </div>
+      <div class="quote">${esc(item.text)}</div>
+      <p style="font-size:12.5px;color:var(--muted);margin:0">
+        Does this sentence really ${claimCompliant ? "follow" : "break"} that rule — and is the text clean?
+      </p>
+    </div>`;
+  S.exShownAt = Date.now();
+  attachDrag($("exCard"), {
+    right: () => exVerdict("accept"), left: () => exVerdict("reject"), down: () => exVerdict("unsure"),
+  });
+}
+async function exVerdict(verdict, ev){
+  const item = S.examples?.items[S.exIndex]; if(!item) return;
+  if(!S.reviewer){ openWho(); return; }
+  if(verdict === "reject"){ exRejectSheet(item, ev); return; }
+  await sendExample(item, verdict, [], "", ev, verdict === "accept" ? "right" : "down");
+}
+function exRejectSheet(item, ev){
+  const chosen = new Set();
+  const opts = {
+    polarity: "Wrong way round — it's labelled backwards",
+    not_clean: "Corrupted text — leftover brackets, fragments, markup",
+    not_testing: "Doesn't test this rule",
+    not_realistic: "Not something anyone would write",
+    other: "Something else",
+  };
+  openSheet(`
+    <div class="kicker">Bad example</div>
+    <h2 style="font-size:17px;margin:7px 0 4px">What's wrong with it?</h2>
+    <div class="quote" style="font-size:14px">${esc(item.text)}</div>
+    <div class="field"><div class="opts" id="exReasons">
+      ${Object.entries(opts).map(([k, v]) =>
+        `<button class="opt" data-key="${k}" onclick="this.classList.toggle('sel')">${esc(v)}</button>`).join("")}
+    </div></div>
+    <textarea id="f-exnote" placeholder="Optional note"></textarea>
+    <button class="btn wide primary" style="margin-top:10px" onclick="confirmExReject()">Save</button>
+  `);
+  S._exItem = { item, ev, chosen };
+}
+async function confirmExReject(){
+  const { item, ev } = S._exItem;
+  const reasons = [...$("exReasons").querySelectorAll(".opt.sel")].map(b => b.dataset.key);
+  if(!reasons.length){ toast("Pick at least one reason"); return; }
+  const note = ($("f-exnote")?.value || "").trim();
+  closeSheet();
+  await sendExample(item, "reject", reasons, note, ev, "left");
+}
+async function sendExample(item, verdict, reasons, note, ev, dir){
+  flingCard("exCard", dir);
+  const res = await fetch("/api/example-verdict", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ reviewer: S.reviewer, id: item.id, rule_uid: item.rule_uid,
+                           origin: item.origin, claimed: item.claimed, verdict, reasons, note }),
+  });
+  const d = await res.json();
+  if(!res.ok || d.error){ toast("Not saved: " + (d.error || res.status), 3500); renderExample(); return; }
+  S.session.examples++; S.examples.done++;
+  if(Date.now() - S.exShownAt >= S.hastyMs){
+    S.score += S.points.example; floatPoints(ev, "+" + S.points.example, "var(--keep)");
+  }
+  save(); renderChrome();
+  S.exIndex++; renderExample();
+}
+
+/* --- leaderboard --------------------------------------------------------- */
+let currentWindow = "day";
+async function loadBoard(win, ev){
+  currentWindow = win || currentWindow;
+  if(ev){ [...$("boardSeg").children].forEach(b => b.classList.remove("on")); ev.target.classList.add("on"); }
+  const d = await (await fetch("/api/leaderboard?window=" + currentWindow)).json();
+  $("boardList").innerHTML = d.board.length ? d.board.map(u => `
+    <div class="lrow ${u.initials === S.reviewer ? "me" : ""}">
+      <div class="lrank">${u.rank}</div>
+      <div class="lav">${esc(u.initials.slice(0, 2))}</div>
+      <div>
+        <div class="lname">${esc(u.initials)}${u.initials === S.reviewer ? " (you)" : ""}</div>
+        <div class="lsub">${u.decisions} rule${u.decisions === 1 ? "" : "s"} · ${u.examples} example${u.examples === 1 ? "" : "s"}${
+          u.accuracy !== null ? ` · ${u.accuracy}% on checks` : ""}${
+          u.hasty ? ` · ${u.hasty} hasty` : ""}</div>
+      </div>
+      <div class="lscore"><b>${u.score}</b><div class="lsub">points</div></div>
+    </div>`).join("")
+    : `<div class="empty">Nothing recorded in this window yet.</div>`;
+  const a = d.agreement;
+  $("agreeBox").innerHTML = `
+    <div class="kicker">Agreement between reviewers</div>
+    <p style="font-size:13.5px;margin:8px 0 0">${
+      a.double_reviewed
+        ? `<b>${a.agreed} of ${a.double_reviewed}</b> rules that two people both decided got the same
+           verdict (<b>${a.rate}%</b>).`
+        : "No rule has been decided by two different people yet."
+    }</p>
+    <p style="font-size:12.5px;color:var(--muted);margin:6px 0 0">
+      This is the point of asking for initials. If agreement is low, the options aren't being read
+      the same way — which is a problem with the guide or the queue, not with either reviewer.</p>`;
+}
+
+/* --- progress ------------------------------------------------------------ */
+function renderProgress(){
+  const s = S.session;
+  const decided = s.accepted + s.amended + s.rejected + s.deferred;
+  $("progStats").innerHTML = [
+    [decided, "decided this session"], [S.score, "session score"],
+    [s.examples, "examples checked"],
+    [s.checks ? Math.round(100 * s.checksOk / s.checks) + "%" : "—", "attention accuracy"],
+  ].map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+  $("statusBreak").innerHTML = Object.entries(S.counts)
+    .filter(([, v]) => v)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `<div style="display:flex;justify-content:space-between;padding:5px 0;
+      border-bottom:1px solid var(--line)"><span>${esc(labelFor("review_status", k))}</span>
+      <b>${v}</b></div>`).join("");
+  $("sessionBreak").innerHTML = [
+    ["Kept", s.accepted], ["Kept, reworded", s.amended], ["Binned", s.rejected],
+    ["Not sure", s.deferred], ["Marked hasty", s.hasty],
+  ].map(([k, v]) => `<div style="display:flex;justify-content:space-between;padding:5px 0;
+     border-bottom:1px solid var(--line)"><span>${k}</span><b>${v}</b></div>`).join("") +
+   (s.hasty ? `<p style="font-size:12.5px;color:var(--gold);margin-top:10px">
+     ${s.hasty} decision${s.hasty > 1 ? "s were" : " was"} made in under
+     ${(S.hastyMs / 1000).toFixed(1)}s and marked in the ledger. Worth a second pass.</p>` : "");
+}
+function exportSession(){
+  const blob = new Blob([JSON.stringify({
+    reviewer: S.reviewer, exported: new Date().toISOString(),
+    session: S.session, score: S.score, badges: S.badges, decisions: S.log,
+    note: "The authoritative record is ledger/rules.jsonl in version control.",
+  }, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `derek-review-${S.reviewer || "session"}-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click(); URL.revokeObjectURL(a.href);
+}
+
+/* --- field guide --------------------------------------------------------- */
+function optionHtml(key, o){
+  return `<div class="gopt">
+    <b>${esc(o.label)}</b>
+    ${o.gesture ? `<span class="pill sys">${esc(o.gesture)}</span>` : ""}
+    ${o.system_only ? '<span class="pill sys">automatic</span>' : ""}
+    ${o.flags_disqualified ? '<span class="pill">disqualifies</span>' : ""}
+    ${o.requires_note ? '<span class="pill">note required</span>' : ""}
+    ${o.severity ? `<span class="pill sys">${esc(o.severity)}</span>` : ""}
+    <div class="lede">${esc(o.means)}</div>
+    <dl>
+      ${o.effect ? `<dt>What it does</dt><dd>${esc(o.effect)}</dd>` : ""}
+      ${o.pick_when ? `<dt>Pick it when</dt><dd><ul style="margin:3px 0;padding-left:16px">
+        ${o.pick_when.map(x => `<li>${esc(x)}</li>`).join("")}</ul></dd>` : ""}
+    </dl>
+    ${o.example ? `<div class="eg">${esc(o.example)}</div>` : ""}
+  </div>`;
+}
+function renderGuide(){
+  const g = S.glossary;
+  const bucket = (id, spec) => `
+    <details class="gitem"><summary>${esc(spec.title)}
+      <span style="font-weight:400;color:var(--muted);font-size:12px">${esc(spec.one_liner || "")}</span></summary>
+      <div class="gbody">
+        <p>${esc(spec.what_it_is)}</p>
+        ${spec.why_it_matters ? `<div class="callout">${esc(spec.why_it_matters)}</div>` : ""}
+        ${spec.how_to_choose ? `<p><b>How to choose.</b> ${esc(spec.how_to_choose)}</p>` : ""}
+        ${spec.note ? `<p style="color:var(--muted);font-size:12.5px">${esc(spec.note)}</p>` : ""}
+        ${Object.entries(spec.options).map(([k, o]) => optionHtml(k, o)).join("")}
+      </div></details>`;
+
+  $("guideBody").innerHTML =
+    `<details class="gitem" open><summary>The job, start to finish</summary>
+      <div class="gbody">
+        <p>${esc(g.orientation.what_am_i_doing)}</p>
+        <p>${esc(g.orientation.why_a_human)}</p>
+        <div class="callout">${esc(g.orientation.accepting_does_not_ship)}</div>
+        <ol style="padding-left:18px">${g.orientation.what_happens_next.map(x =>
+          `<li style="margin:6px 0">${esc(x)}</li>`).join("")}</ol>
+        <p style="color:var(--muted);font-size:12.5px">${esc(g.orientation.what_happens_to_my_answers)}</p>
+      </div></details>` +
+    Object.entries(g.buckets).map(([id, spec]) => bucket(id, spec)).join("") +
+    `<details class="gitem"><summary>${esc(g.training_mode.title)}
+        <span style="font-weight:400;color:var(--muted);font-size:12px">${esc(g.training_mode.one_liner)}</span></summary>
+      <div class="gbody"><p>${esc(g.training_mode.what_it_is)}</p>
+        <div class="callout warn">${esc(g.training_mode.why_it_matters)}</div>
+        <ul style="padding-left:17px">${g.training_mode.what_to_check.map(x =>
+          `<li style="margin:5px 0">${esc(x)}</li>`).join("")}</ul>
+        ${Object.entries(g.training_mode.options).map(([k, o]) => optionHtml(k, o)).join("")}
+      </div></details>` +
+    `<details class="gitem"><summary>${esc(g.attention_checks.title)}</summary>
+      <div class="gbody"><p>${esc(g.attention_checks.what_it_is)}</p>
+        <div class="callout">${esc(g.attention_checks.why_it_matters)}</div>
+        <p style="font-size:12.5px;color:var(--muted)">${esc(g.attention_checks.scoring)}</p>
+      </div></details>` +
+    `<details class="gitem"><summary>${esc(g.scoring.title)}</summary>
+      <div class="gbody"><ul style="padding-left:17px">${g.scoring.rules.map(x =>
+        `<li style="margin:6px 0">${esc(x)}</li>`).join("")}</ul></div></details>`;
+}
+
+/* --- keyboard ------------------------------------------------------------ */
+addEventListener("keydown", e => {
+  if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+  if($("sheet").classList.contains("on")){
+    if(e.key === "Escape") closeSheet();
+    return;
+  }
+  const inRules = S.view === "review", inEx = S.view === "examples";
   const k = e.key.toLowerCase();
-  if(k === "a") decide("accepted");
-  else if(k === "r") decide("rejected");
-  else if(k === "d") decide("deferred");
-  else if(k === "n") artifact();
-  else if(k === "s") skip();
-  else if(e.key === "ArrowLeft") back();
-  else return;
-  e.preventDefault();
+  if(inRules){
+    if(e.key === "ArrowRight" || k === "k") verdict("accepted");
+    else if(e.key === "ArrowLeft" || k === "b") verdict("rejected");
+    else if(e.key === "ArrowDown" || k === "d") verdict("deferred");
+    else if(k === "n") notText();
+    else if(k === "w") verdict("amended");
+    else if(k === "u") undo();
+    else if(k === "?" || k === "/") show("guide");
+    else return;
+    e.preventDefault();
+  } else if(inEx){
+    if(e.key === "ArrowRight") exVerdict("accept");
+    else if(e.key === "ArrowLeft") exVerdict("reject");
+    else if(e.key === "ArrowDown") exVerdict("unsure");
+    else return;
+    e.preventDefault();
+  }
 });
 
-load();
+boot();
 </script>
 </body>
 </html>

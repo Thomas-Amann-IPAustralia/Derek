@@ -22,13 +22,19 @@ import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from derek.corpus.normalise import BOILERPLATE_HEADINGS, EXAMPLE_HEADINGS
+from derek.corpus.normalise import (
+    BOILERPLATE_HEADINGS,
+    COMPLIANT_EXAMPLE_HEADINGS,
+    EXAMPLE_HEADINGS,
+    VIOLATING_EXAMPLE_HEADINGS,
+)
 from derek.extract.segment import Node, iter_nodes, parse_page
 
 __all__ = [
     "Candidate",
     "CandidateKind",
     "classify_heading",
+    "has_polarised_examples",
     "extract_candidates",
     "candidate_uid",
     "IMPERATIVE_VERBS",
@@ -93,7 +99,7 @@ class Candidate:
     page_path: str
     heading_path: tuple[str, ...]
     statement: str
-    statement_form: str          # imperative | negative_imperative | modal | descriptive
+    statement_form: str          # imperative | negative_imperative | modal | exemplified
     level: int
     body: str
     line_start: int
@@ -183,6 +189,34 @@ def clean_example(text: str) -> str:
     return out
 
 
+def has_polarised_examples(node: Node) -> bool:
+    """Did the Style Manual's editors attach a compliant AND a violating example?
+
+    This is testimony, not inference. When the manual puts a ``Write this``
+    beside a ``Not this`` under a heading, its editors have asserted that the
+    heading governs a right and a wrong way to write something — which is what
+    a rule is. ADR-011 already treats those pairs as ground truth for
+    evaluation; there is no coherent reading under which they are ground truth
+    for testing a rule but not for finding one.
+
+    It matters because ``classify_heading`` reads grammar, and the manual does
+    not state every rule as an instruction. The 2026-09-21 hand audit
+    (docs/07) found 58 headings carrying a full example pair that the
+    grammatical branches filed as sections — among them "Noun trains are hard
+    to understand", "'With' is not a conjunction" and "Style for Act titles is
+    title case, not always italics". Each is a real, detectable rule, and each
+    arrives with its gold examples already attached.
+
+    Deliberately strict: BOTH polarities are required. One ``Write this`` with
+    no counterpart is an illustration, and promoting on that alone would admit
+    the section labels that merely happen to contain an example.
+    """
+    labels = {normalise_statement(c.title).lower() for c in node.children}
+    return bool(labels & COMPLIANT_EXAMPLE_HEADINGS) and bool(
+        labels & VIOLATING_EXAMPLE_HEADINGS
+    )
+
+
 def _harvest_examples(node: Node) -> dict[str, list[str]]:
     """Collect labelled example blocks sitting directly under a rule node.
 
@@ -233,7 +267,14 @@ def extract_candidates(page_path: str, normalised_text: str) -> list[Candidate]:
             continue
         kind, form = classify_heading(node.title)
         if kind != CandidateKind.RULE:
-            continue
+            # A heading the grammatical branches declined, but which the
+            # manual itself furnished with a compliant/violating example
+            # pair, is a rule on the manual's own testimony. Only SECTION is
+            # eligible: an example block may nest a polarised pair of its own,
+            # and page chrome is never a rule however it is illustrated.
+            if kind != CandidateKind.SECTION or not has_polarised_examples(node):
+                continue
+            kind, form = CandidateKind.RULE, "exemplified"
         statement = normalise_statement(node.title)
         out.append(
             Candidate(

@@ -40,7 +40,8 @@
       "properties": {
         "method": { "enum": ["heading_structure", "imperative_sentence", "manual"] },
         "extractor_version": { "type": "string" },
-        "statement_form": { "enum": ["imperative", "negative_imperative", "modal", "descriptive", ""] },
+        "statement_form": { "enum": ["imperative", "negative_imperative", "modal",
+        "exemplified", "descriptive", ""] },
         "derived_at": { "type": "string" },
         "supersedes": {
           "type": ["string", "null"],

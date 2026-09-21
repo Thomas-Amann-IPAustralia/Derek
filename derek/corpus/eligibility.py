@@ -76,8 +76,8 @@ def load_eligibility(path: Path) -> Eligibility:
     """Parse ``corpus/eligibility.yaml``.
 
     Deliberately parsed with a small hand-written reader rather than PyYAML:
-    the corpus layer must stay dependency-free so it can run in the snapshot
-    workflow without installing the full pipeline requirements.
+    this module stays stdlib-only so eligibility can be consulted anywhere,
+    including from the extraction layer, without pulling in a parser.
     """
     rules: list[Rule] = []
     section: str | None = None

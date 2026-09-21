@@ -716,3 +716,95 @@ def test_rule_statements_carry_no_markdown_emphasis():
         s = rule.source.statement
         assert "**" not in s, rule.uid
         assert not s.startswith(("*", "_", "`")), rule.uid
+
+
+# ---------------------------------------------------------------------------
+# Example-pair admission (docs/07-extraction-hand-audit.md)
+# ---------------------------------------------------------------------------
+
+# The hand audit found 58 headings that the Style Manual furnished with BOTH a
+# compliant and a violating example, and which the grammatical branches still
+# filed as sections — so they never reached review at all. Whatever else
+# changes, a heading the manual's own editors bracketed with a right and a
+# wrong way to write something is a rule candidate (ADR-011).
+
+def test_headings_with_a_gold_example_pair_are_always_candidates():
+    from derek.eval.audit_headings import polarities, walk
+    from derek.extract.candidates import has_polarised_examples
+
+    missed = [
+        (rel, node.title)
+        for rel, node in walk()
+        if node.level > 1
+        and len(polarities(node)) == 2
+        and not has_polarised_examples(node)
+    ]
+    assert not missed, f"gold example pair not recognised: {missed[:5]}"
+
+
+EXEMPLIFIED = [
+    # Descriptive statements that are plainly rules.
+    "Noun trains are hard to understand",
+    "‘With’ is not a conjunction",
+    "Style for Act titles is title case, not always italics",
+    "Pronouns take different forms depending on their function",
+    # Imperatives whose verb is absent from the hand-curated lexicon. These
+    # are the Q8 failure mode (05-open-questions.md) caught structurally
+    # instead of by growing the verb list again.
+    "Construct positive, unambiguous sentences",
+    "Vary sentence structure",
+    "Compare measurements using the same units",
+    # An imperative behind a fronted adverb, which words[0] cannot see.
+    "Only use the contraction ‘no’ with numerals",
+]
+
+
+def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
+    cands, _ = collect_candidates()
+    found = {c.statement: c for c in cands}
+    missing = [s for s in EXEMPLIFIED if normalise_statement(s) not in found]
+    assert not missing, f"recall regression — no longer extracted: {missing}"
+    for statement in EXEMPLIFIED:
+        c = found[normalise_statement(statement)]
+        assert c.statement_form == "exemplified", (statement, c.statement_form)
+        assert c.examples, f"{statement} was admitted on examples but carries none"
+
+
+def test_example_pair_promotion_requires_both_polarities():
+    """One `Write this` is an illustration. A pair is an assertion."""
+    from derek.extract.candidates import has_polarised_examples
+    from derek.extract.segment import parse_page
+
+    one_sided = parse_page("## Former Australian currency units\n\n### Write this\n\n- 2 shillings\n")
+    assert not has_polarised_examples(one_sided.children[0])
+
+    paired = parse_page(
+        "## Former Australian currency units\n\n"
+        "### Write this\n\n- 2 shillings\n\n### Not this\n\n- 2/-\n"
+    )
+    assert has_polarised_examples(paired.children[0])
+
+
+def test_example_pair_never_promotes_page_chrome_or_an_example_block():
+    """Only a SECTION is eligible; boilerplate and example blocks are not."""
+    from derek.extract.candidates import extract_candidates
+
+    page = (
+        "# Page\n\n"
+        "## References\n\n### Write this\n\na\n\n### Not this\n\nb\n\n"
+        "## Example\n\n### Correct\n\nc\n\n### Incorrect\n\nd\n"
+    )
+    statements = {c.statement for c in extract_candidates("p.md", page)}
+    assert "References" not in statements
+    assert "Example" not in statements
+
+
+def test_exemplified_rules_do_not_invent_a_modality():
+    """Admitted on examples, not on wording — so no modal cue exists to read."""
+    for rule in load_ledger(LEDGER).values():
+        if rule.derivation.statement_form != "exemplified":
+            continue
+        assert rule.modality_basis, rule.uid
+        # A bare-imperative MUST would be a severity nobody asserted (D-12).
+        if "lexical cue" not in rule.modality_basis:
+            assert rule.modality == "SHOULD", (rule.uid, rule.modality)
