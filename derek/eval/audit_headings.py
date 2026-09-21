@@ -39,8 +39,8 @@ from derek.corpus.normalise import (
     BOILERPLATE_HEADINGS, EXAMPLE_HEADINGS, NormalisedPage,
 )
 from derek.extract.candidates import (
-    IMPERATIVE_VERBS, CandidateKind, classify_heading, has_polarised_examples,
-    normalise_statement,
+    IMPERATIVE_HEADINGS, IMPERATIVE_VERBS, CandidateKind, classify_heading,
+    has_polarised_examples, normalise_statement,
     _CONTACT_FRAGMENT, _MODAL, _NEGATIVE_OPENERS, _PERSON_AFFILIATION, _WORD,
 )
 from derek.extract.segment import Node, iter_nodes, parse_page
@@ -124,6 +124,8 @@ def explain(node: Node) -> tuple[str, str, str]:
         return CandidateKind.RULE, "negative_imperative", "negative-opener"
     if words[0].lower() in IMPERATIVE_VERBS:
         return CandidateKind.RULE, "imperative", f"imperative-verb:{words[0].lower()}"
+    if IMPERATIVE_HEADINGS.get(t):
+        return CandidateKind.RULE, "imperative", "imperative-tagged"
     if (m := _MODAL.search(t)) is not None:
         return CandidateKind.RULE, "modal", f"modal:{m.group(0).lower()}"
     # Grammar declined it; the manual's own example pair may still carry it.

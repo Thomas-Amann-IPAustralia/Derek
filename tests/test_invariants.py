@@ -750,12 +750,26 @@ EXEMPLIFIED = [
     "Pronouns take different forms depending on their function",
     # Imperatives whose verb is absent from the hand-curated lexicon. These
     # are the Q8 failure mode (05-open-questions.md) caught structurally
-    # instead of by growing the verb list again.
+    # instead of by growing the verb list again. The POS tagger does not
+    # rescue them either — it reads "Construct" and "Compare" as adjectives
+    # and "Vary" as a proper noun — so the manual's own example pair remains
+    # the only thing that carries them.
     "Construct positive, unambiguous sentences",
     "Vary sentence structure",
     "Compare measurements using the same units",
-    # An imperative behind a fronted adverb, which words[0] cannot see.
+]
+
+# Imperatives standing behind a fronted adverbial or a leading adverb, so
+# words[0] is not the verb and the lexicon cannot reach them however many
+# entries it grows. These arrive on their own wording via the pinned tagger's
+# verdict table; before it they were admitted, if at all, only because the
+# manual happened to attach an example pair (Q8, docs/07).
+TAGGER_RECOVERED = [
     "Only use the contraction ‘no’ with numerals",
+    "In civil cases, use sentence case and italics for ‘*Re*’ and ‘*Ex parte*’",
+    "After first mention, use the short title in roman type without the year",
+    "In body text, use lower case for the definite article in the names of organisations",
+    "Always capitalise the titles of current royals",
 ]
 
 
@@ -768,6 +782,84 @@ def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
         c = found[normalise_statement(statement)]
         assert c.statement_form == "exemplified", (statement, c.statement_form)
         assert c.examples, f"{statement} was admitted on examples but carries none"
+
+
+def test_tagger_recovers_imperatives_the_verb_list_cannot_reach():
+    cands, _ = collect_candidates()
+    found = {c.statement: c for c in cands}
+    missing = [s for s in TAGGER_RECOVERED if normalise_statement(s) not in found]
+    assert not missing, f"recall regression — no longer extracted: {missing}"
+    for statement in TAGGER_RECOVERED:
+        c = found[normalise_statement(statement)]
+        assert c.statement_form == "imperative", (statement, c.statement_form)
+
+
+def test_verdict_table_covers_every_heading_in_the_corpus():
+    """A stale table drops rules silently, which is the failure being fixed.
+
+    The tagger runs offline (tools/postag/tag_headings.py) and extraction reads
+    only its checked-in verdicts, so nothing at extraction time can notice that
+    the Style Manual has grown a heading the tagger never saw. That heading
+    would fall back to the verb list and, if its verb is unlisted or fronted,
+    vanish without appearing anywhere — exactly the invisible loss docs/07
+    measured. Recomputing the digest here turns that into a loud failure.
+
+    The digest is recomputed rather than imported: tools/ is outside the
+    package, and an independent second implementation is what makes this a
+    check rather than a restatement.
+    """
+    import hashlib
+
+    from derek.eval.audit_headings import walk
+    from derek.extract.candidates import TABLE_PATH
+
+    assert TABLE_PATH.is_file(), (
+        f"{TABLE_PATH.relative_to(REPO)} is missing — regenerate it with "
+        "`python tools/postag/tag_headings.py build` (needs requirements-pipeline.txt)"
+    )
+    table = json.loads(TABLE_PATH.read_text(encoding="utf-8"))
+
+    headings = sorted({t for _, node in walk() if (t := normalise_statement(node.title))})
+    uncovered = [h for h in headings if h not in table["verdicts"]]
+    assert not uncovered, (
+        f"{len(uncovered)} corpus headings have no tagger verdict, so any rule "
+        f"among them can only be found by the verb list: {uncovered[:5]}"
+    )
+
+    digest = hashlib.blake2s(digest_size=16)
+    for text in headings:
+        digest.update(text.encode("utf-8"))
+        digest.update(b"\x00")
+    assert digest.hexdigest() == table["_meta"]["headings_digest"], (
+        "the corpus has changed since the verdict table was generated — "
+        "rerun `python tools/postag/tag_headings.py build` and commit the diff"
+    )
+
+
+def test_tagger_verdicts_are_additive_and_never_veto_the_verb_list():
+    """The tagger may add a rule candidate; it may never remove one.
+
+    docs/07 measured why: en_core_web_sm rejects ~120 headings the verb list
+    correctly admits, because a heading gives a small model too little context
+    and because the model does not know the -ise spellings this corpus uses.
+    Q8 proposed swapping the list for the tagger. Honouring that literally
+    would have deleted real rules, so the branch is a union and this test is
+    what stops a later cleanup from quietly turning it back into a swap.
+    """
+    from derek.extract.candidates import (
+        IMPERATIVE_HEADINGS, IMPERATIVE_VERBS, _WORD,
+    )
+
+    vetoed = [
+        text for text, verdict in IMPERATIVE_HEADINGS.items()
+        if verdict is False
+        # Two words minimum, so the under-two-words branch is not mistaken for
+        # a veto: "End" is in the verb list and is still correctly a section.
+        and len(words := _WORD.findall(text)) >= 2
+        and words[0].lower() in IMPERATIVE_VERBS
+        and classify_heading(text)[0] != CandidateKind.RULE
+    ]
+    assert not vetoed, f"the tagger overruled the verb list on: {vetoed[:5]}"
 
 
 def test_example_pair_promotion_requires_both_polarities():

@@ -21,7 +21,7 @@ Style Manual change from model variance.
         ▼
   corpus/pages/**.md  +  corpus/snapshot.lock.json  +  corpus/changes/<date>.json
         │
-        │  Layer 1 — EXTRACTION          pure function of the corpus, no model
+        │  Layer 1 — EXTRACTION          pure function of the corpus, no model runs
         ▼
   Candidates  (stable uid, statement, heading path, gold examples)
         │
@@ -110,7 +110,7 @@ Current output over the 128 eligible pages:
 
 | | |
 |---|---|
-| Candidates | **720**, all with unique UIDs |
+| Candidates | **736**, all with unique UIDs |
 | Statement forms | imperative · negative imperative · modal |
 | With hand-authored gold examples | 427 (59%) |
 | With *paired* compliant + violating examples | 83 |
@@ -126,7 +126,7 @@ blocks are harvested but **not** assigned a polarity — guessing it is precisel
 mistake being guarded against. Octavius generated its own test strings instead and
 inverted them wholesale.
 
-720 is the number that matters. It is small enough for one person to review.
+736 is the number that matters. It is small enough for one person to review.
 
 These counts are checked against the published pages by
 `python -m derek.eval.audit_extraction` — see

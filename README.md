@@ -39,7 +39,7 @@ Foundations built; no rules reviewed yet — by design.
 |---|---|
 | Offline Style Manual snapshot | 186 pages |
 | Eligible rule-source pages | 128 |
-| Deterministic rule candidates | **720** |
+| Deterministic rule candidates | **736** |
 | With hand-authored gold examples | 427 (59%); 169 with a *paired* compliant + violating |
 | With *paired* compliant + violating examples | 83 |
 | Gold example sentences | 520 |
@@ -60,7 +60,7 @@ and **no rule has been triaged**. The first triage pass is the next task — see
 ```bash
 pip install -r requirements.txt
 
-# Rebuild the rule ledger from the corpus (deterministic, no model calls)
+# Rebuild the rule ledger from the corpus (deterministic, no model call at extraction time)
 python -m derek.extract.build
 
 # Prove reproducibility — fails if rebuilding would change the ledger
@@ -90,9 +90,9 @@ pytest tests/ -v
         │  Layer 0 — SNAPSHOT        content-addressed; add/alter/remove changesets
         ▼
   corpus/pages/**.md
-        │  Layer 1 — EXTRACTION      pure function of the corpus; no model
+        │  Layer 1 — EXTRACTION      pure function of the corpus; no model runs
         ▼
-  720 candidates (stable uid, statement, heading path, gold examples)
+  736 candidates (stable uid, statement, heading path, gold examples)
         │  Layer 2 — INTERPRETATION  model proposes, human decides
         ▼
   ledger/rules.jsonl
@@ -162,10 +162,10 @@ full review history. See [`docs/03-rule-ledger-schema.md`](docs/03-rule-ledger-s
 | [01 — Architecture](docs/01-architecture.md) | The layered design and what each layer guarantees |
 | [02 — Decision log](docs/02-decisions.md) | 19 ADRs: what was decided, why, what it costs |
 | [03 — Rule ledger](docs/03-rule-ledger-schema.md) | The data contract |
-| [04 — Roadmap](docs/04-roadmap.md) | Phases, and how to get from 720 candidates to working rules |
+| [04 — Roadmap](docs/04-roadmap.md) | Phases, and how to get from 736 candidates to working rules |
 | [05 — Open questions](docs/05-open-questions.md) | What is genuinely undecided, with recommendations |
 | [06 — Extraction audit](docs/06-extraction-audit.md) | Candidates checked against the pages they came from, and what that found |
-| [07 — Extraction hand-audit](docs/07-extraction-hand-audit.md) | A heading-by-heading read of a random page sample: precision, recall, and why 720 is not 801 |
+| [07 — Extraction hand-audit](docs/07-extraction-hand-audit.md) | A heading-by-heading read of a random page sample: precision, recall, and why the count is not 801 |
 
 ---
 

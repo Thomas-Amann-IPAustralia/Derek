@@ -202,6 +202,13 @@ Three further causes, each small and each deterministic:
 
 `audit_headings lexicon` and `audit_headings fronted` regenerate both lists.
 
+The second and third of those are now recovered by the pinned tagger
+([ADR-021](02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive)).
+The first mostly is not: `Construct`, `Vary` and `Compare` defeat the tagger for the
+same reason they defeat the lexicon — as the opening word of a heading they are
+genuinely ambiguous, and it reads them as an adjective, a proper noun and an adjective
+respectively. They remain in the ledger on the strength of their example pairs.
+
 ### The one recall figure that is not an opinion
 
 Everything above rests on the auditor's judgement about what counts as a rule. One
@@ -268,11 +275,23 @@ Recorded rather than patched, because each needs a decision rather than a fix.
    plural"* — both are present-tense statements about language. This is the strongest
    argument in the repository for [Q8](05-open-questions.md#q8--should-imperative-detection-use-a-pos-tagger),
    and the case is now quantified rather than anecdotal.
-2. **Imperatives behind a fronted clause (8 real rules).** A `^<clause>,\s+<verb>`
-   test would recover them at a cost of 2 noun false positives. Cheap, but it is a
-   deliberate loosening of a branch that has been kept strict on purpose, so it is
-   offered rather than taken.
+2. ~~**Imperatives behind a fronted clause (8 real rules).**~~ **Fixed** by
+   [ADR-021](02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive),
+   along with the leading-adverb case below. Not by the `^<clause>,\s+<verb>` regex
+   offered here — by a pinned POS tagger running offline and writing a checked-in
+   verdict table that extraction reads as data. A fronted adverbial gives a parser
+   enough context to commit to a verb reading, which is precisely where `words[0]`
+   is blind.
+
+   Worth recording what the same measurement said about the *rest* of that idea:
+   [Q8](05-open-questions.md#q8--should-imperative-detection-use-a-pos-tagger)
+   recommended replacing the verb lexicon with the tagger outright, and tagging the
+   whole corpus showed that would have dropped ~120 real rules — `en_core_web_sm` is
+   trained on American English and reads `Italicise`, `Capitalise` and `Organise` as
+   nouns. The tagger is therefore additive and never vetoes.
 3. **The modal branch's 14 exposition candidates.** Left in; see above.
+   Unaffected by ADR-021: the tagger reads them correctly as descriptions, which is
+   what they are — it just has no opinion on whether a description is normative.
 4. **The 18% "label, not statement" cost is unavoidable at heading granularity.**
    [ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity) makes the
    heading the rule's identity. Where the manual uses a noun-phrase label, the rule

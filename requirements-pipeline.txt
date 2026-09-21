@@ -13,3 +13,16 @@ requests==2.32.3
 selenium==4.25.0
 selenium-stealth==1.0.6
 webdriver-manager==4.0.2
+
+# POS tagging for imperative detection (ADR-021), used only by
+# tools/postag/tag_headings.py. It lives here rather than in requirements.txt
+# because extraction never runs it: the tagger writes a checked-in verdict
+# table and derek/extract/ reads that table with stdlib json. CI therefore
+# rebuilds the ledger byte-identically with none of this installed, which is
+# the property that let a statistical model near candidate identity at all.
+#
+# Both pins matter, and the model pin is enforced in code: a different model
+# produces different verdicts, which is a different rulebook, so an upgrade is
+# a deliberate regeneration with a reviewable diff attached (ADR-001).
+spacy==3.8.16
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

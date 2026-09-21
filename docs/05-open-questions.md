@@ -198,7 +198,9 @@ architecture keeps its options open and no more.
 
 ## Q8 — Should imperative detection use a POS tagger?
 
-**Status:** open, and the largest known source of missed rules.
+**Status:** **resolved** by [ADR-021](02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive)
+— but not in the direction this question recommended. The measurement asked for
+below was run, and it refuted the recommendation. See **Resolution** at the end.
 
 Rule candidates are identified by checking whether a heading opens with a verb from
 `derek/extract/data/imperative_verbs.txt`, a hand-curated list.
@@ -239,3 +241,46 @@ reconciler now handles as a *rehoming* rather than 500 fictional upstream edits.
 set against the lexicon's, and count real gains against false positives. The audit
 tooling already does most of this. Until then the lexicon stands, with its limitation
 recorded in the file itself.
+
+---
+
+### Resolution
+
+Everything above this line is the question as it stood. It was settled exactly as
+proposed — tag all 1,397 distinct headings with a pinned `en_core_web_sm` 3.8.0, diff,
+count — and the count came out the other way:
+
+| | |
+|---|---|
+| **lexicon says rule, tagger says no** | **130** |
+| tagger says rule, lexicon says no | 60 |
+
+Replacing the lexicon would have deleted around 120 real rules to fix about ten. The
+recommendation above was wrong on two counts, and both are worth keeping visible rather
+than editing away:
+
+1. **"The tagger has its own false positives … 9 noun headings" understated it by more
+   than an order of magnitude.** The 9 were found by eyeballing likely-looking cases;
+   the real figure only appeared when the whole corpus was tagged. That is the shape of
+   error the [postmortem](00-postmortem-octavius.md) is about — a plausible number
+   asserted from a sample that was never drawn properly.
+2. **`en_core_web_sm` is trained on American English.** `Italicise`, `Capitalise`,
+   `Organise` and `Minimise` are out of vocabulary and tag as nouns. Nobody predicted
+   that an Australian-English style manual would be the thing a general English tagger
+   is worst at, and it is obvious in hindsight.
+
+What survived is the *determinism* half of the argument, and more strongly than
+expected: precomputing the verdicts offline into a checked-in table means CI rebuilds
+the ledger byte-identically with no model installed, so D-7 is tightened rather than
+merely preserved. The lexicon stays as the primary signal and the tagger is additive —
+it contributes the one thing a word list cannot reach, an imperative standing behind a
+fronted clause or a leading adverb.
+
+Net: 720 → 736 candidates, strictly additive, 0 orphaned.
+
+**Still open, and not a tagger problem:** the noun/verb ambiguity that makes *"Place a
+comma after adverbs"* and *"Place of publication of a book"* look alike is genuinely
+resolved by the tagger — but acting on that resolution would mean letting it *remove*
+candidates, and [docs/07](07-extraction-hand-audit.md) established that the noun-phrase
+ones sit at the site of a real rule. So the 18% "label, not statement" triage cost
+stands, now by choice rather than by inability.
