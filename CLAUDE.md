@@ -30,7 +30,7 @@ Violating any of these reintroduces a known failure. Each links to its rationale
 | D-4 | Corpus eligibility is declared in `corpus/eligibility.yaml`, never inferred per rule | [ADR-005](docs/02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred) |
 | D-5 | A rule's examples are never drawn from the sentence that states the rule | [postmortem §4](docs/00-postmortem-octavius.md#4-what-is-worth-keeping) |
 | D-6 | `applies_to` and `unit` are mandatory; `unit: artifact` never loads | [ADR-007](docs/02-decisions.md#adr-007-scope-and-unit-are-mandatory) |
-| D-7 | Candidate identity is deterministic and structural — **no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002-deterministic-candidate-identity) |
+| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002-deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) |
 | D-8 | Change detection uses content hashes, not the site's `lastmod` | [ADR-001](docs/02-decisions.md#adr-001-snapshot-integrity-over-site-metadata) |
 | D-9 | Model calls are a content-addressed cache; re-running is a no-op | [ADR-003](docs/02-decisions.md#adr-003-model-calls-are-a-cache-not-a-step) |
 | D-10 | Only `accepted`/`amended` rules load. A human gates the runtime | [ADR-008](docs/02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue) |
@@ -56,6 +56,13 @@ python -m derek.eval.audit_headings gold-recall   # exits 1 if a gold-example ru
 
 python tools/review/server.py           # round-1 triage at localhost:8765
 
+# Imperative detection by POS tagger (ADR-021). Offline authoring step: writes a
+# checked-in verdict table that derek/extract/ reads as data, so extraction stays
+# stdlib-only and CI rebuilds the ledger with no model installed.
+# Needs requirements-pipeline.txt. Rerun after any corpus change, commit the diff.
+python tools/postag/tag_headings.py build
+python tools/postag/tag_headings.py diff    # lexicon vs tagger, with counts
+
 pytest tests/ -v
 ```
 
@@ -68,9 +75,9 @@ stylemanual.gov.au
   │ Layer 0  derek/corpus/    content-addressed snapshot; add/alter/remove changesets
   ▼
 corpus/pages/**.md
-  │ Layer 1  derek/extract/   pure function of the corpus; NO MODEL
+  │ Layer 1  derek/extract/   pure function of the corpus; NO MODEL RUNS HERE
   ▼
-720 candidates (stable uid, statement, heading path, gold examples)
+736 candidates (stable uid, statement, heading path, gold examples)
   │ Layer 2  derek/ledger/    model proposes, human decides
   ▼
 ledger/rules.jsonl
@@ -96,6 +103,9 @@ Each layer must be reproducible from the one below it. Full detail:
 | `corpus/eligibility.yaml` | The allowlist itself, with reasons |
 | `derek/extract/segment.py` | Markdown → heading tree |
 | `derek/extract/candidates.py` | Normativity classification, stable UIDs, gold-example harvesting |
+| `derek/extract/data/imperative_verbs.txt` | Hand-curated verb list; primary imperative signal |
+| `derek/extract/data/imperative_headings.json` | **Generated.** Pinned-tagger verdicts (ADR-021); never hand-edit |
+| `tools/postag/tag_headings.py` | Offline tagger; the only thing that writes that table |
 | `derek/extract/modality.py` | Deontic modality proposal |
 | `derek/extract/build.py` | Corpus → ledger, with reconciliation |
 | `derek/ledger/model.py` | `Rule` and its parts — the data contract in code |

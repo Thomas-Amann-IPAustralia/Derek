@@ -17,6 +17,7 @@ explicitly rather than guessed (see ``derek.ledger.reconcile``).
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 import unicodedata
 from dataclasses import dataclass, field
@@ -38,6 +39,8 @@ __all__ = [
     "extract_candidates",
     "candidate_uid",
     "IMPERATIVE_VERBS",
+    "IMPERATIVE_HEADINGS",
+    "TABLE_PATH",
 ]
 
 _DATA = Path(__file__).parent / "data"
@@ -46,6 +49,46 @@ IMPERATIVE_VERBS: frozenset[str] = frozenset(
     for line in (_DATA / "imperative_verbs.txt").read_text(encoding="utf-8").splitlines()
     if line.strip() and not line.startswith("#")
 )
+
+# Verdicts from the pinned POS tagger, precomputed offline by
+# tools/postag/tag_headings.py and checked in (ADR-021, resolving Q8).
+#
+# What it contributes is recall the verb list cannot reach at any length: an
+# imperative whose verb is not the first word, because a fronted adverbial or a
+# leading adverb stands in front of it. "In civil cases, use sentence case",
+# "Only use the contraction 'no' with numerals".
+#
+# It is consulted only *after* the verb list and only to admit, never to reject
+# — see classify_heading. The tagger can in principle also tell the "Place a
+# comma after adverbs" sense of a word from the "Place of publication of a book"
+# sense, which no word list can, but that ability is deliberately unused:
+# acting on it would mean removing candidates, and docs/07 established that
+# those noun-phrase headings sit at the site of a real rule.
+#
+# It is read as data, never run, for the reason this whole tier is stdlib-only:
+# extraction must be reproducible from the corpus alone, and a model that runs
+# at extraction time could change the rulebook without the Style Manual
+# changing a word (ADR-002, D-7). Reading a checked-in table instead makes the
+# tagger's contribution a reviewable diff and leaves CI able to rebuild the
+# ledger byte-identically with no model installed.
+TABLE_PATH = _DATA / "imperative_headings.json"
+
+
+def _load_imperative_headings() -> dict[str, bool]:
+    """The verdict table, or empty when it has not been generated yet.
+
+    Absent is a supported state: without it every branch falls back to the verb
+    list and extraction still runs, just with the recall docs/07 measured.
+    tests/test_invariants.py asserts the table is present and current, so a
+    stale or missing table fails loudly rather than quietly dropping rules.
+    """
+    if not TABLE_PATH.is_file():
+        return {}
+    table = json.loads(TABLE_PATH.read_text(encoding="utf-8"))
+    return table.get("verdicts", {})
+
+
+IMPERATIVE_HEADINGS: dict[str, bool] = _load_imperative_headings()
 
 # Negative imperatives; these open a MUST_NOT/SHOULD_NOT statement.
 _NEGATIVE_OPENERS = (
@@ -161,6 +204,23 @@ def classify_heading(title: str) -> tuple[str, str]:
     if low.startswith(_NEGATIVE_OPENERS):
         return CandidateKind.RULE, "negative_imperative"
     if words[0].lower() in IMPERATIVE_VERBS:
+        return CandidateKind.RULE, "imperative"
+    # The verb list is consulted first and the tagger can only add to it, never
+    # overrule it. That is not deference to the older mechanism; it is what the
+    # corpus-wide diff showed (docs/07). en_core_web_sm rejects ~120 headings
+    # the list correctly admits — "Italicise genus and species names", "Cite
+    # plays and poems correctly", "Number the questions" — because a heading
+    # supplies too little context for a small model to commit to a verb
+    # reading, and because a US-trained model does not know the -ise spellings
+    # this corpus is written in. Q8 proposed replacing the list; the
+    # measurement it asked for refutes that, so the tagger is additive.
+    #
+    # What it adds is what no word list can reach: an imperative standing
+    # behind a fronted adverbial or a leading adverb, where words[0] is not the
+    # verb at all. "In civil cases, use sentence case", "Only use the
+    # contraction 'no' with numerals", "After first mention, use the short
+    # title in roman type".
+    if IMPERATIVE_HEADINGS.get(t):
         return CandidateKind.RULE, "imperative"
     if _MODAL.search(t):
         return CandidateKind.RULE, "modal"

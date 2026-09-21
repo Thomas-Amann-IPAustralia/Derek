@@ -29,6 +29,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [018](#adr-018-derek-is-a-clean-repository-not-a-git-fork) | Derek is a clean repository, not a git fork | Accepted |
 | [019](#adr-019-training-inputs-carry-no-format-markup) | Training inputs carry no format markup | Accepted |
 | [020](#adr-020-heading-levels-come-from-the-dom) | Heading levels come from the DOM | Accepted |
+| [021](#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) | The POS tagger is an offline authoring step, and it is additive | Accepted |
 
 ---
 
@@ -749,3 +750,121 @@ signal that the converter has broken.
 retrieved from the Wayback Machine, because the live site's Akamai edge returns
 `403` to this environment's IP range. Archived HTML is the same document the
 scraper would fetch; the transport path itself remains unexercised from here.
+
+---
+
+## ADR-021 — The POS tagger is an offline authoring step, and it is additive
+
+**Decision.** Imperative detection keeps `imperative_verbs.txt` as its primary
+signal and adds a second: a pinned spaCy model's verdict on whether a heading
+is a command. The tagger **never runs during extraction**. It runs offline in
+`tools/postag/tag_headings.py`, which writes
+`derek/extract/data/imperative_headings.json`; `derek/extract/candidates.py`
+reads that table with stdlib `json`. The tagger may **add** a rule candidate.
+It may never remove one.
+
+**Reason.** [Q8](05-open-questions.md#q8--should-imperative-detection-use-a-pos-tagger)
+asked whether to replace the hand-curated verb list with a tagger, and
+[ADR-002](#adr-002-deterministic-candidate-identity) had rejected one on
+determinism grounds. Two separate things were decided here, and they resolved
+in opposite directions.
+
+**On determinism, the objection was weaker than it looked — and the fix makes
+it moot.** Pinning answers version drift, exactly as it does for the HTML
+parser ([ADR-020](#adr-020-heading-levels-come-from-the-dom)). But precomputing
+answers it completely: because the verdicts are checked in, CI rebuilds the
+ledger byte-identically with **no model installed at all**. Extraction stays
+stdlib-only (`tests/test_dependency_tiers.py`), D-7 holds unchanged, and a
+model upgrade becomes a regenerated table and a git diff someone has to read.
+That is a stronger guarantee than a live tagger could give, not a weaker one.
+
+**On replacing the verb list, the measurement Q8 asked for refuted the
+recommendation.** Tagging all 1,397 distinct corpus headings with
+`en_core_web_sm` 3.8.0 and diffing against the lexicon:
+
+| | |
+|---|---|
+| both agree: imperative | 463 |
+| both agree: not imperative | 744 |
+| **lexicon says rule, tagger says no** | **130** |
+| tagger says rule, lexicon says no | 60 |
+
+A swap would have **dropped ~120 real rules** — *"Italicise genus and species
+names"*, *"Cite plays and poems correctly"*, *"Punctuate lists according to
+style"*, *"Number the questions"* — to fix roughly ten. Two causes, both
+structural rather than incidental:
+
+1. **The model is trained on American English.** `Italicise`, `Capitalise`,
+   `Organise` and `Minimise` are out of vocabulary and tag as nouns. Respelling
+   them with `-ize` flips only 3 of 19 sampled cases, so this is not a
+   spelling bridge away from being fixed.
+2. **A heading is not a sentence.** With no subject and no terminal
+   punctuation, a small model defaults to a noun-compound reading:
+   *"Align tone to context"*, *"Group issues into volumes"*, *"Engage Easy Read
+   experts"*.
+
+The verb list is not a worse tagger. It is a record of which words the Style
+Manual's editors use as instructions in Australian English, which is knowledge
+`en_core_web_sm` does not have.
+
+**What the tagger is reliably good at** is the one thing no word list can ever
+do: reading a verb that is not the first word. A fronted adverbial or a leading
+adverb gives the parser enough context to commit, and `words[0]` cannot reach
+past either.
+
+> *In civil cases, use sentence case and italics for* Re *and* Ex parte ·
+> *After first mention, use the short title in roman type without the year* ·
+> *Only use the contraction 'no' with numerals* · *Always capitalise the titles
+> of current royals* · *For civil case titles, specify the first plaintiff and
+> defendant* · *Space out headings*
+
+**Cost.** 16 candidates added, 720 → 736, strictly additive: 0 reworded, 0
+rehomed, 0 orphaned, so no UID moved and no review decision could be
+invalidated. Of the 16, 11 are clean, 4 are the *"label, not statement"* shape
+[docs/07](07-extraction-hand-audit.md) already describes — a real rule whose
+heading is a noun phrase — and one is a plain false positive
+(*"Coordinating conjunctions join things of equal importance"*, where the
+parser missed the subject). Under
+[ADR-008](#adr-008-human-acceptance-is-a-gate-not-a-review-queue) that is the
+cheap direction to be wrong in: a bad candidate costs a reviewer twenty
+seconds, and a missed rule is invisible forever.
+
+**Why the tagger gets no veto.** It would have removed the noun-phrase labels —
+*"Order of reference symbols"*, *"Place of publication of a book"*,
+*"Address blocks"* — which look like precision wins and are not.
+[docs/07](07-extraction-hand-audit.md) established that those headings sit at
+the site of a real rule whose wording simply is not a statement. Dropping them
+would be a recall regression wearing a precision costume.
+`test_tagger_verdicts_are_additive_and_never_veto_the_verb_list` exists so a
+later tidy-up cannot quietly reintroduce the swap.
+
+**Does this break D-7?** It is the right question to ask, and the answer is no —
+but not because the line is untouched. A model's output now participates in
+deciding that a candidate exists, which is worth saying plainly rather than
+hiding behind "it's only a tagger". Three things keep it on the right side of
+[D-7](../CLAUDE.md), and all three have to hold:
+
+1. **It answers a grammatical question, not an editorial one.** The tagger is
+   asked "is this sentence in the imperative mood?" — a fact about English
+   syntax, checkable by any competent reader. It is never asked "is this a
+   rule?" That judgement is what Octavius delegated to a model, and it is still
+   made by structure plus a human gate.
+2. **Its answers are data before they are used, and are reviewed as data.**
+   The verdicts are computed once, checked in, and diffed like source. Nothing
+   at extraction time can produce a verdict, so no rebuild can invent one.
+3. **It cannot subtract.** A mechanism that can only widen what a human is
+   shown cannot quietly narrow the rulebook, which is the failure that makes
+   an invisible rule invisible.
+
+Remove any one of those and this becomes a model deciding the rulebook. The
+tests exist to stop that happening by degrees:
+`test_verdict_table_covers_every_heading_in_the_corpus` (a stale table must
+fail loudly, not silently drop rules) and
+`test_tagger_verdicts_are_additive_and_never_veto_the_verb_list`.
+
+**What this does not fix.** The ~60 descriptive-normative rules
+(*"Style for bill titles is roman type, title case"*) are untouched, and the
+tagger confirms why rather than helping: it parses them correctly, as
+descriptions. Telling a rule stated as a fact from a fact about English is a
+question about meaning, not grammar, and no tagger answers it. That remains
+open under [Q6](05-open-questions.md#q6--should-prose-derived-candidates-be-extracted-at-all).
