@@ -72,6 +72,11 @@ python -m derek.eval.dogfood
 # Triage rules — keyboard-first: A accept, R reject, D defer, N not-text
 python tools/review/server.py
 
+# The same app as files, for a machine that can't run any of the above:
+#   https://thomas-amann-ipaustralia.github.io/Derek/
+python tools/review/build_static.py                     # → site/
+python tools/review/apply_decisions.py export.jsonl     # decisions made there → ledger
+
 # Refresh the offline snapshot (needs requirements-pipeline.txt)
 python -m derek.corpus.snapshot --sweep-slice 0
 
@@ -101,7 +106,7 @@ pytest tests/ -v
   Tier 0 deterministic · Tier 1 classifier · Tier 2 generator (deferred)
         │  Layer 4 — INTERFACES
         ▼
-  HTTP · MCP · CLI · LLM middleware · review UI
+  HTTP · MCP · CLI · LLM middleware · review UI (local + published)
 ```
 
 Each layer is reproducible from the one below it. Full detail in
@@ -173,10 +178,10 @@ full review history. See [`docs/03-rule-ledger-schema.md`](docs/03-rule-ledger-s
 
 ```
 corpus/       offline Style Manual snapshot + eligibility + changesets
-ledger/       rules.jsonl — the rule ledger
+ledger/       rules.jsonl — the rule ledger; inbox/ + applied/ — decision exports
 derek/        corpus · extract · ledger · detect · eval · interfaces
 schema/       machine-checkable ledger contract
-tools/        review UI (triage + example checking)
+tools/        review UI (triage + example checking; local server or published site)
 docs/         the documentation set above
 reference/    curated markdown; Octavius v1 artifacts (NON-AUTHORITATIVE)
 tests/

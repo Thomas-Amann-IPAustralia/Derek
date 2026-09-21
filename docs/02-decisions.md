@@ -30,6 +30,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [019](#adr-019-training-inputs-carry-no-format-markup) | Training inputs carry no format markup | Accepted |
 | [020](#adr-020-heading-levels-come-from-the-dom) | Heading levels come from the DOM | Accepted |
 | [021](#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) | The POS tagger is an offline authoring step, and it is additive | Accepted |
+| [022](#adr-022--the-review-ui-is-published-the-gate-moves-to-the-apply-step) | The review UI is published; the gate moves to the apply step | Accepted |
 
 ---
 
@@ -868,3 +869,77 @@ tagger confirms why rather than helping: it parses them correctly, as
 descriptions. Telling a rule stated as a fact from a fact about English is a
 question about meaning, not grammar, and no tagger answers it. That remains
 open under [Q6](05-open-questions.md#q6--should-prose-derived-candidates-be-extracted-at-all).
+
+
+---
+
+## ADR-022 — The review UI is published; the gate moves to the apply step
+
+**Decision.** `tools/review/index.html` is served two ways from one file: by
+`tools/review/server.py`, which writes each decision to the ledger as it is
+made, and as a static site on GitHub Pages
+(<https://thomas-amann-ipaustralia.github.io/Derek/>), where there is no server
+at all. On the published copy a decision is appended to an op log in
+`localStorage`, downloaded as JSONL, and replayed into `ledger/rules.jsonl` by
+`tools/review/apply_decisions.py` — which calls the **same** `server._apply`.
+
+The browser never becomes an authority. It is a drafting surface with a queue.
+
+**Reason.** Round 1 is 736 decisions that one or two people have to make, and
+the machine those people use during the day cannot run Python, a container, or
+a local web server. [ADR-008](#adr-008-human-acceptance-is-a-gate-not-a-review-queue)
+put a human in front of the runtime; a human who can only reach the queue on
+evenings and weekends is how a review queue becomes a pile. Octavius's
+decisive failure was not a bad reviewer — it was 3,114 rows nobody could work
+through (postmortem F9). Making the queue reachable is the cheapest defence
+against repeating that.
+
+**Why the guard rails are re-run rather than trusted.** Everything a static
+page asserts about its own data is unverifiable: local storage can be edited,
+and a hand-written file can claim anything. So the browser's copies of the
+refusals — no keeping a rule without `clarity`, no `ambiguous_resolvable`
+without a written interpretation, no writing `uid` / `source` / `derivation` —
+are a courtesy that tells a reviewer while the card is still in front of them.
+The enforcement is in Python, at the moment the decision enters the record, and
+one refused op holds back the whole file rather than landing half a session.
+That is the same boundary the HTTP API already drew; only its position in time
+moved.
+
+**Costs, all of them real.**
+
+*Decisions are not saved when they are made.* Between the decision and the
+upload they exist only in one browser. The page therefore counts unexported
+decisions in the header, says so on the home screen, and never clears the queue
+by itself; every export carries everything, and every op carries an id that
+`ledger/review_ops.jsonl` records, so exporting twice is free and exporting
+early is the advice.
+
+*Attention checks are not served there.* They are generated and graded
+server-side precisely because the answer must not reach the browser — a check
+whose answer is in the page measures nothing. A static site can only ship the
+answer, so the published copy does not ask. Sustained-attention decay is
+therefore measured only in local sessions, and the field guide says so on the
+page rather than leaving a reviewer to notice the absence.
+
+*The leaderboard is a build-time snapshot.* It is computed from the ledger when
+the site is built, so it can show work that has been applied and cannot show
+work still sitting in someone's browser. It is labelled with the build time.
+
+*The ledger is published.* Everything in `ledger/rules.jsonl` is served as JSON
+to anyone with the URL. The repository is already public and the corpus is a
+public government publication, so this adds reach, not exposure — but it is a
+consequence of the decision rather than an accident of it.
+
+**Two operational traps this had to route around.** A push made with
+`GITHUB_TOKEN` does not trigger another workflow, so neither the daily corpus
+snapshot nor the decision replay can rely on its own commit to rebuild the
+site; both call `.github/workflows/pages.yml` directly as a reusable workflow.
+And a scheduled rebuild was deliberately **not** used as the safety net, because
+GitHub disables scheduled workflows after 60 days of repository inactivity —
+the same trap the corpus heartbeat exists to catch
+([ADR-001](#adr-001-snapshot-integrity-over-site-metadata)).
+
+**What this does not do.** It does not let anyone approve a rule without a
+human, or let the browser write to the ledger, or make the published site the
+record. `tests/test_review_offline.py` asserts each of those, including that a
+file with one bad op writes nothing at all.

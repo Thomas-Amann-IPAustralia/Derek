@@ -1,0 +1,111 @@
+name: Apply review decisions
+
+# The return leg. A reviewer working on the published dashboard downloads their
+# decisions as JSONL and drops the file into ledger/inbox/ — which a browser
+# can do through github.com, with no checkout and no Python.
+#
+# This replays it with tools/review/apply_decisions.py, which runs the same
+# `_apply` the local review server runs: a rule still cannot be kept without
+# `clarity`, an ambiguous reading still has to be written down, and `uid` /
+# `source` / `derivation` are still not writable from a reviewer's hands
+# (ADR-008). An op that would break one of those refuses the whole file rather
+# than landing half a session in the ledger.
+#
+# On a pull request it validates and writes nothing, so a decision file can be
+# reviewed before it touches the record.
+
+on:
+  push:
+    branches: [main]
+    paths: ['ledger/inbox/*.jsonl']
+  pull_request:
+    paths: ['ledger/inbox/*.jsonl']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Two reviewers uploading at once must not race each other into the ledger.
+concurrency:
+  group: apply-review
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    outputs:
+      applied: ${{ steps.apply.outputs.applied }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Anything in the inbox?
+        id: inbox
+        run: |
+          shopt -s nullglob
+          files=(ledger/inbox/*.jsonl)
+          echo "count=${#files[@]}" >> "$GITHUB_OUTPUT"
+          echo "Found ${#files[@]} export(s)."
+
+      - name: Validate only (pull request)
+        if: github.event_name == 'pull_request' && steps.inbox.outputs.count != '0'
+        run: python tools/review/apply_decisions.py ledger/inbox/*.jsonl --dry-run
+
+      - name: Replay into the ledger
+        id: apply
+        if: github.event_name != 'pull_request' && steps.inbox.outputs.count != '0'
+        run: |
+          python tools/review/apply_decisions.py ledger/inbox/*.jsonl | tee /tmp/apply.log
+          # The export stays in the repository, under the date it landed: the
+          # op log records what was applied, the file records what was sent.
+          mkdir -p ledger/applied
+          stamp=$(date -u +%Y%m%dT%H%M%SZ)
+          for f in ledger/inbox/*.jsonl; do
+            git mv "$f" "ledger/applied/${stamp}-$(basename "$f")"
+          done
+          git config user.name  "DerekBot"
+          git config user.email "derek-bot@users.noreply.github.com"
+          git add ledger/
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            echo "applied=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "review: apply decisions from ledger/inbox"
+            git push origin HEAD
+            echo "applied=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summarise
+        if: always() && steps.inbox.outputs.count != '0'
+        run: |
+          {
+            echo "### Review decisions"
+            echo '```'
+            cat /tmp/apply.log 2>/dev/null || echo "validated only — nothing written"
+            echo '```'
+            python - <<'PY'
+          from pathlib import Path
+          from derek.ledger.store import summarise
+          counts = summarise(Path("ledger/rules.jsonl"))
+          print("| Status | Count |\n|---|---|")
+          for k, v in sorted(counts.items()):
+              if v:
+                  print(f"| {k} | {v} |")
+          PY
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # A push made with GITHUB_TOKEN does not trigger another workflow, so the
+  # dashboard is rebuilt from here rather than left showing the ledger as it
+  # was before these decisions landed.
+  publish:
+    needs: apply
+    if: needs.apply.outputs.applied == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

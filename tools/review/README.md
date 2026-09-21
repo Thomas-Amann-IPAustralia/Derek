@@ -4,14 +4,64 @@ Round 1 of rule review: deciding which of the 720 extracted candidates a compute
 could realistically check in a piece of writing. See
 [docs/04-roadmap.md](../../docs/04-roadmap.md) for where this sits.
 
+Two ways to run it. Same app, same screens, same decisions.
+
 ```bash
 python tools/review/server.py          # http://localhost:8765
 DEREK_REVIEW_PORT=9000 python tools/review/server.py
 DEREK_REVIEWER=TA python tools/review/server.py    # or set initials in the app
 ```
 
+**<https://thomas-amann-ipaustralia.github.io/Derek/>** — the same app, published as
+files, for a machine that cannot run Python. Built by `build_static.py` and deployed by
+`.github/workflows/pages.yml` on every push that changes the ledger.
+
 Stdlib only. No build step, no npm, nothing to install. It opens a browser at a
 phone-shaped layout that works equally well on a desktop.
+
+---
+
+## The published copy
+
+A locked-down work machine has a browser and nothing else, and 736 decisions do not
+get made on a laptop the reviewer only has in the evenings. So the app is also
+published as a static site
+([ADR-022](../../docs/02-decisions.md#adr-022--the-review-ui-is-published-the-gate-moves-to-the-apply-step)).
+Nothing about deciding changes. Three things do.
+
+**Decisions queue in the browser and come back as a file.** There is no server to
+write to, so each decision is appended to an op log in `localStorage`, exported as
+JSONL, and replayed into the ledger by `apply_decisions.py`. The op log is the same
+shape as what the API would have received; the browser is a drafting surface, and
+`ledger/rules.jsonl` is still the record.
+
+```bash
+python tools/review/build_static.py --out site      # → site/, ~1.1 MB
+python tools/review/apply_decisions.py export.jsonl # → ledger/, as a git diff
+python tools/review/apply_decisions.py export.jsonl --dry-run
+```
+
+Or, with no checkout at all: upload the file to [`ledger/inbox/`](../../ledger/inbox)
+through github.com and `.github/workflows/apply-review.yml` does it for you, then moves
+the file to `ledger/applied/`.
+
+**The guard rails apply when the file lands, not when the button is pressed.**
+`apply_decisions.py` runs the same `_apply` the server runs, so a rule still cannot be
+kept without `clarity`, an `ambiguous_resolvable` reading still has to be written down,
+and `uid` / `source` / `derivation` are still refused. One bad op refuses the whole
+file rather than landing half a session. The page checks the same things while you
+work, so you hear about it with the card still in front of you — but it is a courtesy,
+not the gate. `tests/test_review_offline.py` asserts the distinction.
+
+Every op carries an id, and applied ids are recorded in `ledger/review_ops.jsonl`, so
+uploading the same export twice does nothing the second time. Export early and often:
+a decision that exists only in a browser's local storage is one cleared cache from gone.
+
+**Attention checks are not served there, and the leaderboard is a snapshot.** Checks
+are graded server-side because a check whose answer is in the page is decoration; a
+static site can only ship the answer, so it does not ask. The leaderboard is computed
+from the ledger at build time, so it shows work that has been applied rather than work
+still sitting in someone's browser. Both are said on the page rather than papered over.
 
 ---
 
@@ -26,6 +76,8 @@ database ([ADR-008](../../docs/02-decisions.md#adr-008-human-acceptance-is-a-gat
 | `rules.jsonl` | The decisions themselves. Status, scope, and the full `review.history` of every transition, including undos. |
 | `review_activity.jsonl` | Attention-check outcomes per reviewer. Created on first use. |
 | `example_reviews.jsonl` | Verdicts on individual example sentences. Created on first use. |
+| `review_ops.jsonl` | Every op replayed from a published-dashboard export, so a re-upload is a no-op. Created on first use. |
+| `inbox/` · `applied/` | Exports waiting to be applied, and the ones that have been, under the date they landed. |
 
 Nothing the pipeline owns (`uid`, `source`, `derivation`) can be written from the UI;
 the API rejects it. So a rebuild can never clobber a human decision, and a human can
