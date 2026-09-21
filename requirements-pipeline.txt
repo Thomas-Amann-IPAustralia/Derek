@@ -1,0 +1,15 @@
+# Scraping (Layer 0 transport and HTML->Markdown conversion).
+# Versions are PINNED: a converter change rewrites many content hashes at
+# once and must be a deliberate, reviewed event rather than a silent
+# dependency bump (ADR-001).
+#
+# trafilatura was removed in ADR-020. It is a generic article extractor and
+# flattened the Style Manual's heading levels, which is what forced 71% of
+# rule candidates to depend on a repair heuristic. derek/corpus/to_markdown.py
+# reads heading levels from the DOM instead.
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml==5.3.0
+selenium==4.25.0
+selenium-stealth==1.0.6
+webdriver-manager==4.0.2

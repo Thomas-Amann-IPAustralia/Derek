@@ -1,0 +1,93 @@
+name: Corpus snapshot
+
+# The requirement is that the offline snapshot tracks the live Style Manual
+# within 3 days. A DAILY schedule gives three independent attempts inside
+# that window, which absorbs GitHub's occasional dropping of scheduled runs.
+#
+# Octavius ran this monthly (`0 0 1 * *`) — worst-case staleness of 31 days
+# against a 3-day requirement (postmortem F7).
+#
+# `--sweep-slice` re-hashes 1/7th of the corpus each day regardless of what
+# the sitemap's `lastmod` claims, so every page is verified weekly. That is
+# the only thing that catches a silent upstream edit (ADR-001).
+
+on:
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Re-fetch and re-hash every page"
+        type: boolean
+        default: false
+  schedule:
+    - cron: '17 15 * * *'   # 01:17 AEST / 02:17 AEDT, daily
+
+permissions:
+  contents: write
+
+concurrency:
+  group: corpus-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements-pipeline.txt
+
+      - uses: browser-actions/setup-chrome@v1
+
+      - run: pip install -r requirements-pipeline.txt
+
+      - name: Pick today's sweep slice
+        id: slice
+        run: echo "n=$(( $(date -u +%j) % 7 ))" >> "$GITHUB_OUTPUT"
+
+      - name: Snapshot the Style Manual
+        env:
+          PROXY_HOST: ${{ secrets.PROXY_HOST }}
+          PROXY_PORT: ${{ secrets.PROXY_PORT }}
+          PROXY_USER: ${{ secrets.PROXY_USER }}
+          PROXY_PASS: ${{ secrets.PROXY_PASS }}
+        run: |
+          if [ "${{ inputs.full }}" = "true" ]; then
+            python -m derek.corpus.snapshot --full
+          else
+            python -m derek.corpus.snapshot --sweep-slice "${{ steps.slice.outputs.n }}"
+          fi
+
+      - name: Reconcile rules against the new corpus
+        run: python -m derek.extract.build
+
+      - name: Commit
+        run: |
+          git config user.name  "DerekBot"
+          git config user.email "derek-bot@users.noreply.github.com"
+          git add corpus/ ledger/
+          if git diff --cached --quiet; then
+            echo "No corpus change."
+          else
+            git commit -m "corpus: snapshot $(date -u +%Y-%m-%d)"
+            git push origin HEAD
+          fi
+
+      - name: Summarise
+        if: always()
+        run: |
+          {
+            echo "### Corpus snapshot"
+            latest=$(ls -1t corpus/changes/*.json 2>/dev/null | head -1)
+            if [ -n "$latest" ]; then
+              echo '```json'; cat "$latest" | head -40; echo '```'
+            else
+              echo "No changes this run."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

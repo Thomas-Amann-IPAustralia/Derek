@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derek Review</title>
+<style>
+  :root{
+    --bg:#fbfaf8; --panel:#fff; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e3e0da;
+    --accept:#1f7a4d; --reject:#a33; --defer:#8a6d1f; --accent:#2b5c8a;
+    --ok-bg:#eef7f1; --bad-bg:#fdf0ef;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17181a; --panel:#1f2124; --ink:#e8e6e3; --muted:#9a9894; --line:#33363b;
+      --accept:#4caf7d; --reject:#e06c6c; --defer:#d4ad4a; --accent:#72a8d8;
+      --ok-bg:#1b2a22; --bad-bg:#2a1d1d;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+  header{position:sticky;top:0;z-index:10;background:var(--panel);
+         border-bottom:1px solid var(--line);padding:10px 16px;
+         display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  h1{font-size:15px;margin:0;font-weight:650;letter-spacing:.2px}
+  .counts{display:flex;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .counts b{color:var(--ink);font-variant-numeric:tabular-nums}
+  .bar{flex:1;min-width:120px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--accept);transition:width .2s}
+  main{max-width:860px;margin:0 auto;padding:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+        padding:18px 20px;margin-bottom:14px}
+  .stmt{font-size:19px;font-weight:600;line-height:1.35;margin:0 0 6px}
+  .crumb{font-size:12px;color:var(--muted);margin-bottom:14px;word-break:break-word}
+  .crumb a{color:var(--accent)}
+  .body{white-space:pre-wrap;font-size:13.5px;color:var(--muted);
+        max-height:230px;overflow:auto;border-left:2px solid var(--line);
+        padding:2px 0 2px 12px;margin:12px 0}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+  @media (max-width:640px){.ex{grid-template-columns:1fr}}
+  .ex div{border-radius:8px;padding:10px 12px;font-size:13px}
+  .ex .ok{background:var(--ok-bg)} .ex .bad{background:var(--bad-bg)}
+  .ex h4{margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted)}
+  .ex ul{margin:0;padding-left:16px} .ex li{margin:3px 0}
+  .fields{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 4px;font-size:13px}
+  .fields label{display:flex;flex-direction:column;gap:3px}
+  .fields span{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+  select{font:inherit;padding:5px 7px;border:1px solid var(--line);border-radius:6px;
+         background:var(--panel);color:var(--ink)}
+  .tags{display:flex;gap:7px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:4px}
+  .tag{border:1px solid var(--line);border-radius:20px;padding:2px 9px}
+  .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;
+           padding-top:14px;border-top:1px solid var(--line)}
+  button{font:inherit;font-size:13.5px;padding:8px 14px;border-radius:7px;
+         border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button kbd{font:inherit;font-size:11px;opacity:.6;margin-left:6px}
+  .accept{border-color:var(--accept);color:var(--accept)}
+  .reject{border-color:var(--reject);color:var(--reject)}
+  .defer{border-color:var(--defer);color:var(--defer)}
+  .hint{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+  .done{text-align:center;padding:56px 20px}
+  .done h2{font-size:20px;margin:0 0 8px}
+  .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);
+         background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:20px;
+         font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.show{opacity:.94}
+</style>
+</head>
+<body>
+<header>
+  <h1>Derek Review</h1>
+  <div class="bar"><i id="prog" style="width:0"></i></div>
+  <div class="counts" id="counts"></div>
+</header>
+<main id="main"><div class="card">Loading…</div></main>
+<div class="toast" id="toast"></div>
+
+<script>
+// Pass 1 triage: disqualification. One question per rule — is this
+// detectable in text at all? Keyboard-first, because 546 rules at ~20
+// seconds each only works if the hands never leave the keyboard.
+const UNITS = ["sentence","phrase","token","character","paragraph","block","section","document","artifact"];
+const CLARITY = ["unreviewed","unambiguous","ambiguous_resolvable","ambiguous_deferred","not_automatable"];
+const MODALITY = ["MUST","MUST_NOT","SHOULD","SHOULD_NOT","MAY","PREFER"];
+const DIRECTION = ["presence","absence"];
+const APPLIES = ["any","policy","web_page","form","report","email","social_post","easy_read","transcript"];
+
+let state = {rules: [], i: 0, counts: {}, total: 0};
+const $ = id => document.getElementById(id);
+
+function toast(msg){
+  const t = $("toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("show"), 1400);
+}
+
+async function load(){
+  const r = await fetch("/api/rules");
+  const d = await r.json();
+  state.rules = d.rules.filter(x => x.status === "proposed");
+  state.counts = d.counts; state.total = d.total; state.i = 0;
+  render();
+}
+
+function esc(s){ return String(s ?? "").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+
+function renderCounts(){
+  const done = state.total - (state.counts.proposed || 0);
+  $("prog").style.width = (state.total ? 100*done/state.total : 0) + "%";
+  $("counts").innerHTML = Object.entries(state.counts)
+    .filter(([,v]) => v)
+    .map(([k,v]) => `${k} <b>${v}</b>`).join(" · ")
+    + ` · <b>${done}/${state.total}</b> triaged`;
+}
+
+function select(id, opts, cur){
+  return `<select id="${id}">` +
+    opts.map(o => `<option value="${o}"${o===cur?" selected":""}>${o}</option>`).join("") +
+    `</select>`;
+}
+
+function render(){
+  renderCounts();
+  const r = state.rules[state.i];
+  if(!r){
+    $("main").innerHTML = `<div class="card done"><h2>Triage complete</h2>
+      <p class="hint">Every candidate has a decision. Commit <code>ledger/rules.jsonl</code>,
+      then move to Pass 2 — see <code>docs/04-roadmap.md</code>.</p></div>`;
+    return;
+  }
+  const exBlock = (r.compliant.length || r.violating.length) ? `
+    <div class="ex">
+      <div class="ok"><h4>Compliant — must never fire</h4>
+        <ul>${r.compliant.map(e=>`<li>${esc(e)}</li>`).join("") || "<li>—</li>"}</ul></div>
+      <div class="bad"><h4>Violating — must always fire</h4>
+        <ul>${r.violating.map(e=>`<li>${esc(e)}</li>`).join("") || "<li>—</li>"}</ul></div>
+    </div>` : "";
+
+  $("main").innerHTML = `
+    <div class="card">
+      <p class="stmt">${esc(r.statement)}</p>
+      <div class="crumb">
+        ${esc(r.heading_path.join(" › "))}<br>
+        <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.page)}</a>
+        · <span title="how this candidate was derived">${esc(r.form)}</span>
+        · <span title="${esc(r.modality_basis)}">${esc(r.modality)}</span>
+      </div>
+      ${r.body ? `<div class="body">${esc(r.body)}</div>` : ""}
+      ${exBlock}
+      <div class="fields">
+        <label><span>Unit</span>${select("f-unit", UNITS, r.unit)}</label>
+        <label><span>Applies to</span>${select("f-applies", APPLIES, r.applies_to[0] || "any")}</label>
+        <label><span>Direction</span>${select("f-direction", DIRECTION, r.direction)}</label>
+        <label><span>Clarity</span>${select("f-clarity", CLARITY, r.clarity)}</label>
+        <label><span>Modality</span>${select("f-modality", MODALITY, r.modality)}</label>
+      </div>
+      <div class="tags">
+        <span class="tag">${state.i+1} of ${state.rules.length} pending</span>
+        <span class="tag">uid ${esc(r.uid)}</span>
+      </div>
+      <div class="actions">
+        <button class="accept" onclick="decide('accepted')">Accept<kbd>A</kbd></button>
+        <button class="reject" onclick="decide('rejected')">Reject<kbd>R</kbd></button>
+        <button class="defer"  onclick="decide('deferred')">Defer<kbd>D</kbd></button>
+        <button onclick="artifact()">Not text → reject<kbd>N</kbd></button>
+        <button onclick="skip()">Skip<kbd>S</kbd></button>
+      </div>
+      <p class="hint">A accept · R reject · D defer · N not-text · S skip · ← back</p>
+    </div>`;
+}
+
+function read(){
+  return {
+    unit: $("f-unit").value,
+    applies_to: [$("f-applies").value],
+    direction: $("f-direction").value,
+    clarity: $("f-clarity").value,
+    modality: $("f-modality").value,
+  };
+}
+
+async function send(patch){
+  const res = await fetch("/api/decide", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify([patch]),
+  });
+  const d = await res.json();
+  if(!res.ok){ toast("Error: " + d.error); return false; }
+  state.counts = d.counts;
+  return true;
+}
+
+async function decide(status, extra){
+  const r = state.rules[state.i];
+  if(!r) return;
+  const patch = Object.assign({uid: r.uid, review_status: status}, read(), extra || {});
+  if(await send(patch)){ toast(status); state.i++; render(); }
+}
+
+// The single most common triage outcome: the rule governs an image, a video,
+// a social post or page metadata, so no text linter can evaluate it (ADR-007).
+function artifact(){
+  decide("rejected", {unit: "artifact", clarity: "not_automatable",
+                      note: "not detectable in text — artifact-scoped"});
+}
+function skip(){ state.i++; render(); }
+function back(){ if(state.i > 0){ state.i--; render(); } }
+
+document.addEventListener("keydown", e => {
+  if(e.target.tagName === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  if(k === "a") decide("accepted");
+  else if(k === "r") decide("rejected");
+  else if(k === "d") decide("deferred");
+  else if(k === "n") artifact();
+  else if(k === "s") skip();
+  else if(e.key === "ArrowLeft") back();
+  else return;
+  e.preventDefault();
+});
+
+load();
+</script>
+</body>
+</html>

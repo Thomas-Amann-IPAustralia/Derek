@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Invariant tests
+        run: pytest tests/ -v
+
+      # The reproducibility requirement, asserted rather than assumed:
+      # two runs over the same corpus must extract exactly the same rules.
+      - name: Ledger is reproducible from the corpus (ADR-002)
+        run: python -m derek.extract.build --check
+
+      # Rule quality on RAW, un-suppressed output. Octavius scored 1,438
+      # findings per 1,000 words here and shipped anyway, because firing
+      # budgets made the output look merely noisy (postmortem Defect 6).
+      - name: Dogfood gate (ADR-011)
+        run: python -m derek.eval.dogfood
+
+      - name: Ledger status
+        if: always()
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          from pathlib import Path
+          from derek.ledger.store import summarise
+          counts = summarise(Path("ledger/rules.jsonl"))
+          print("### Rule ledger\n")
+          print("| Status | Count |\n|---|---|")
+          for k, v in sorted(counts.items()):
+              if v:
+                  print(f"| {k} | {v} |")
+          PY
+
+  freshness:
+    # Guards the trap that GitHub disables scheduled workflows after 60 days
+    # of repository inactivity: a silently stopped snapshot job would leave
+    # the corpus stale indefinitely (ADR-001).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Corpus heartbeat is under 72 hours old
+        run: |
+          if [ ! -f corpus/.heartbeat ]; then
+            echo "::warning::No corpus/.heartbeat yet — the snapshot workflow has not run."
+            exit 0
+          fi
+          age=$(( ($(date -u +%s) - $(date -u -d "$(cat corpus/.heartbeat)" +%s)) / 3600 ))
+          echo "Corpus heartbeat is ${age}h old."
+          if [ "$age" -gt 72 ]; then
+            echo "::error::Corpus is ${age}h stale; the 3-day freshness requirement is breached."
+            exit 1
+          fi

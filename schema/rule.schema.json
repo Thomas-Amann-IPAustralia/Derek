@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Thomas-Amann-IPAustralia/Derek/schema/rule.schema.json",
+  "title": "Derek rule ledger entry",
+  "description": "One rule. Carries the three provenance tags (derivation, detection, source) and every field that exists to prevent a documented Octavius failure. See docs/00-postmortem-octavius.md.",
+  "type": "object",
+  "required": ["uid", "schema_version", "source", "derivation", "modality", "clarity",
+               "applies_to", "unit", "direction", "detection", "validation", "review"],
+  "additionalProperties": false,
+  "properties": {
+    "uid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$",
+      "description": "blake2s(page_path || heading_path || normalised_statement). Deterministic (ADR-002)."
+    },
+    "schema_version": { "type": "integer", "minimum": 1 },
+
+    "source": {
+      "description": "Provenance tag 3 — the original Style Manual rule.",
+      "type": "object",
+      "required": ["page_path", "heading_path", "statement"],
+      "additionalProperties": false,
+      "properties": {
+        "page_path": { "type": "string" },
+        "heading_path": { "type": "array", "items": { "type": "string" } },
+        "statement": { "type": "string", "minLength": 1,
+          "description": "The manual's wording, verbatim. Never edited — interpretation goes in `specification` (ADR-017)." },
+        "url": { "type": "string" },
+        "body_excerpt": { "type": "string" },
+        "snapshot_sha256": { "type": "string" },
+        "line_start": { "type": "integer", "minimum": 0 }
+      }
+    },
+
+    "derivation": {
+      "description": "Provenance tag 1 — how we arrived at this rule.",
+      "type": "object",
+      "required": ["method", "extractor_version"],
+      "additionalProperties": false,
+      "properties": {
+        "method": { "enum": ["heading_structure", "imperative_sentence", "manual"] },
+        "extractor_version": { "type": "string" },
+        "statement_form": { "enum": ["imperative", "negative_imperative", "modal", "descriptive", ""] },
+        "derived_at": { "type": "string" },
+        "supersedes": {
+          "type": ["string", "null"],
+          "description": "UID of a rule this REPLACES because the Style Manual reworded it upstream (ADR-002)."
+        },
+        "uid_history": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+          "description": "Prior UIDs of THIS SAME rule, when a re-derivation changed the content-addressed identity without the source text changing — e.g. a converter upgrade that corrected the heading path (ADR-020). Distinct from `supersedes`."
+        },
+        "model_decisions": {
+          "type": "object",
+          "description": "field name -> '<prompt_version>/<model_id>'. A model-proposed value is never mistaken for a human one (ADR-003).",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+
+    "modality": { "enum": ["MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "MAY", "PREFER"] },
+    "modality_basis": { "type": "string" },
+
+    "clarity": { "enum": ["unreviewed", "unambiguous", "ambiguous_resolvable", "ambiguous_deferred", "not_automatable"] },
+    "specification": {
+      "type": "string",
+      "description": "Formal restatement of an ambiguous rule. Detectors implement this where present (ADR-017)."
+    },
+    "disambiguation_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["by", "at", "assumption"],
+        "properties": {
+          "by": { "type": "string" }, "at": { "type": "string" },
+          "assumption": { "type": "string" }, "basis": { "type": "string" }
+        }
+      }
+    },
+
+    "applies_to": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "unit": {
+      "enum": ["character", "token", "phrase", "sentence", "paragraph",
+               "block", "section", "document", "artifact"],
+      "description": "`artifact` rules are recorded but never loaded into the text runtime (ADR-007)."
+    },
+    "context_preconditions": { "type": "array", "items": { "type": "string" } },
+
+    "direction": {
+      "enum": ["presence", "absence"],
+      "description": "Does the rule detect something present, or something missing? (ADR-006)"
+    },
+    "violation_condition": {
+      "type": "string",
+      "description": "What makes text WRONG. Mandatory for detectable rules (ADR-004)."
+    },
+    "compliant_examples": {
+      "type": "array", "items": { "type": "string" },
+      "description": "Text that must NEVER fire."
+    },
+    "violating_examples": {
+      "type": "array", "items": { "type": "string" },
+      "description": "Text that must ALWAYS fire."
+    },
+
+    "detection": {
+      "description": "Provenance tag 2 — the method through which the rule is implemented.",
+      "type": "object",
+      "required": ["method", "detectable"],
+      "additionalProperties": false,
+      "properties": {
+        "tier": { "type": ["integer", "null"], "enum": [0, 1, 2, null] },
+        "method": { "enum": ["literal_set", "regex", "token_pattern", "length_constraint",
+                             "structural_predicate", "classifier", "none"] },
+        "matcher": {
+          "type": "object",
+          "description": "Declarative data only. The runtime never executes code from the ledger (ADR-009)."
+        },
+        "detectable": { "type": "boolean" },
+        "not_detectable_reason": { "type": "string" }
+      }
+    },
+
+    "validation": {
+      "description": "Test outcomes. Deliberately separate from review status (postmortem Defect 4).",
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["untested", "pass", "fail"] },
+        "examples_pass": { "type": ["boolean", "null"] },
+        "dogfood_density": { "type": ["number", "null"] },
+        "expected_density": { "type": "number", "minimum": 0 },
+        "last_run": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "confidence": {
+      "type": ["number", "null"], "minimum": 0, "maximum": 1,
+      "description": "Calibrated P(finding is a true violation). null = unvalidated; never an invented number (ADR-013)."
+    },
+    "confidence_basis": { "type": "string" },
+
+    "review": {
+      "description": "The human gate. Only accepted/amended reach the runtime (ADR-008).",
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["proposed", "accepted", "amended", "rejected", "deferred",
+                             "quarantined", "superseded", "orphaned"] },
+        "decided_by": { "type": "string" },
+        "decided_at": { "type": "string" },
+        "note": { "type": "string" },
+        "history": { "type": "array", "items": { "type": "object" } }
+      }
+    }
+  },
+
+  "allOf": [
+    {
+      "if": {
+        "properties": { "detection": { "properties": { "detectable": { "const": true } } } },
+        "required": ["detection"]
+      },
+      "then": {
+        "description": "A detectable rule must state its polarity and carry examples of BOTH kinds (ADR-004). This is the schema-level guard against the inversion that killed Octavius.",
+        "properties": {
+          "violation_condition": { "minLength": 1 },
+          "compliant_examples": { "minItems": 1 },
+          "violating_examples": { "minItems": 1 }
+        },
+        "required": ["violation_condition", "compliant_examples", "violating_examples"]
+      }
+    },
+    {
+      "if": { "properties": { "unit": { "const": "artifact" } }, "required": ["unit"] },
+      "then": {
+        "description": "Artifact-scoped rules are never detectable by the text runtime (ADR-007).",
+        "properties": { "detection": { "properties": { "detectable": { "const": false } } } }
+      }
+    },
+    {
+      "if": { "properties": { "clarity": { "const": "ambiguous_resolvable" } }, "required": ["clarity"] },
+      "then": {
+        "description": "A resolved ambiguity must record what was assumed (ADR-017).",
+        "properties": { "specification": { "minLength": 1 }, "disambiguation_log": { "minItems": 1 } }
+      }
+    }
+  ]
+}

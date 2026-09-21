@@ -1,0 +1,53 @@
+# Corpus eligibility (ADR-005).
+#
+# Declares, per path glob, whether a page is a source of content rules.
+# Extraction runs ONLY over eligible pages. A page matching no rule is
+# `unclassified` and is EXCLUDED until a human classifies it; CI reports
+# the backlog.
+#
+# This exists because 108 of Octavius's 801 shipped rules were extracted
+# from the changelog, the blog, the handbook and "how to cite the Style
+# Manual" — pages that contain no content rules at all (postmortem F3).
+# No per-rule heuristic separates "a rule about writing" from "a sentence
+# about the manual"; the distinction is a property of the page.
+
+version: 1
+
+eligible:
+  - glob: "grammar-punctuation-and-conventions/**"
+    reason: "Core normative content: punctuation, spelling, numbers, names, shortened forms."
+  - glob: "writing-and-designing-content/**"
+    reason: "Core normative content: plain language, structure, voice."
+  - glob: "structuring-content/**"
+    reason: "Core normative content: headings, lists, links, tables."
+  - glob: "accessible-and-inclusive-content/**"
+    reason: "Core normative content: inclusive language, accessibility of text."
+  - glob: "referencing-and-attribution/**"
+    reason: "Core normative content: citation and attribution formats."
+  - glob: "content-types/**"
+    reason: >-
+      Normative, but heavily artifact-scoped. Eligible with MANDATORY `unit`
+      review: many rules here govern images, video and social posts rather
+      than text, and applying them to prose is pure noise (postmortem F5).
+    requires_unit_review: true
+
+excluded:
+  - glob: "about-style-manual/**"
+    reason: >-
+      Meta. Changelog describes amendments to the manual; foreword and
+      acknowledgements are front matter; "how to cite the Style Manual"
+      governs bibliographies that reference the manual, not APS writing.
+      Source of 32 broken Octavius rules.
+  - glob: "style-manual-resources/**"
+    reason: >-
+      Handbook, blog and quick guides restate rules that appear on the
+      normative pages. Including them duplicates rules under new IDs
+      (postmortem F6). Retained as corroborating material a reviewer may
+      consult — the quick guides often state a rule more crisply than the
+      normative page — but never as a source of record.
+  - glob: "index.md"
+    reason: "Site index."
+  - glob: "*.md"
+    reason: >-
+      Top-level section landing pages are navigational summaries of the
+      sections beneath them; their headings are topic labels, not rules.
