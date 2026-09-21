@@ -105,11 +105,26 @@ orphans its rules, and a re-run with no upstream change produces an empty change
 ### Phase 2 — Review UI and triage *(tool built; the triage pass is the next work)*
 
 - [x] `tools/review/` — local stdlib-only app over `ledger/rules.jsonl`
-- [x] Keyboard-first triage: A accept · R reject · D defer · N not-text · S skip
+- [x] Swipe or keyboard: → keep · ← bin · ↓ not sure · N not-text · W keep-reworded · U undo
 - [x] Shows source statement, body excerpt, gold examples, and a link to the live page
 - [x] Writes git-tracked JSONL; every decision is a diff
 - [x] Pipeline-owned fields (`uid`, `source`, `derivation`) rejected by the API, so a
       rebuild can never clobber a decision and review can never corrupt provenance
+- [x] `tools/review/glossary.json` explains every option in plain language, and the
+      server refuses to start if it has drifted from the vocabularies in
+      `derek/ledger/model.py` — a reviewer is never shown an unlabelled button
+- [x] Scope is mandatory, not skippable: `clarity` starts blank because the extractor
+      deliberately makes no claim there, and a rule cannot be kept until it is set
+- [x] Rejections carry a reason from a closed list, so "we binned 300 rules" becomes
+      "we binned 80 because they govern images", which is a fix rather than a statistic
+- [x] Attention checks generated from the manual's own `Write this` / `Not this` pairs
+      and graded server-side, so sustained-attention decay shows up in the record
+- [x] Reviewer initials on every decision, inter-reviewer agreement reported, and a
+      leaderboard **derived from the ledger** rather than stored — it cannot be inflated
+- [x] Decisions faster than 2.5s score nothing and are marked `(hasty)` in the note,
+      so the gamification cannot buy speed at the cost of the thing it exists to produce
+- [x] Example-checking mode over the harvested gold set, on the same screens the
+      synthetic training data will use (`ledger/training_candidates.jsonl`)
 - [ ] Bulk operations by page, section and predicted scope
 - [ ] **Run Pass 1 over all 720** ← the actual next task
 

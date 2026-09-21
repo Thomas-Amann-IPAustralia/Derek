@@ -176,7 +176,7 @@ corpus/       offline Style Manual snapshot + eligibility + changesets
 ledger/       rules.jsonl — the rule ledger
 derek/        corpus · extract · ledger · detect · eval · interfaces
 schema/       machine-checkable ledger contract
-tools/        review UI
+tools/        review UI (triage + example checking)
 docs/         the documentation set above
 reference/    curated markdown; Octavius v1 artifacts (NON-AUTHORITATIVE)
 tests/

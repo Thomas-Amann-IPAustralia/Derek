@@ -1,0 +1,496 @@
+{
+  "_comment": [
+    "Plain-language explanation of every choice the review UI asks for.",
+    "Written for someone who has never seen this repository and has no stake in",
+    "what happens downstream. Every option says three things: what it MEANS,",
+    "what it DOES to the data, and when to PICK it.",
+    "",
+    "server.py asserts at startup that this file covers every value in the",
+    "vocabularies defined in derek/ledger/model.py. If someone adds a unit or a",
+    "clarity level and forgets to explain it, the review tool refuses to start",
+    "rather than showing a reviewer an unlabelled button."
+  ],
+
+  "orientation": {
+    "what_am_i_doing": "You are reading rules that were pulled out of the Australian Government Style Manual automatically, and deciding which ones a computer could realistically check in a piece of writing. Nothing you do here changes anyone's document. You are building the list of things Derek will later be allowed to look for.",
+    "why_a_human": "The previous attempt at this let a language model decide which rules existed and whether they were any good. It produced 801 rules that raised 1,438 complaints per 1,000 words when pointed at the Style Manual's own professionally-edited writing. Nothing reaches the checker now unless a person has looked at it and said yes.",
+    "what_happens_to_my_answers": "Each decision is written straight into a plain text file (ledger/rules.jsonl) that lives in version control. Your initials and a timestamp go with it. Nothing is hidden in a database, every decision shows up as a line in a diff, and any of them can be reversed later by anyone who disagrees.",
+    "what_happens_next": [
+      "Round 1 (this one) — you decide whether each rule is checkable in text at all, and describe its shape. Most of the work is throwing out rules that can never work.",
+      "Round 2 — the rules you kept get a precise definition and a matching pattern. That step is slower, so it only runs on survivors.",
+      "Round 3 — everything that survives is fired at the Style Manual's own pages. Any rule that complains about professionally-edited writing is pulled back out, no matter how good it looked.",
+      "Only then does a rule get used on real documents."
+    ],
+    "how_long": "About 20 seconds per rule once you find your rhythm. There are 720. You do not have to do them in one sitting — everything is saved the moment you decide it.",
+    "if_unsure": "Use Not sure. It is a real answer, it is recorded as 'deferred', and it costs nothing. A wrong confident answer is much more expensive than an honest 'come back to this'.",
+    "accepting_does_not_ship": "Saying Keep does not switch a rule on. A rule only ever runs if it is kept AND someone has written a working pattern for it AND that pattern survives being fired at the Style Manual. Keep just means 'this is worth the next person's time'."
+  },
+
+  "buckets": {
+
+    "review_status": {
+      "title": "Your verdict",
+      "one_liner": "Is this worth carrying forward?",
+      "what_it_is": "The single decision that decides whether this rule goes any further. Everything else on the card describes the rule; this one disposes of it.",
+      "why_it_matters": "Only rules marked Keep can ever be turned on. Everything else stops here — but nothing is deleted, so a rejection stays on the record and can be revisited.",
+      "options": {
+        "accepted": {
+          "label": "Keep",
+          "gesture": "swipe right",
+          "means": "This is a genuine rule about written text, and you can imagine a computer checking it.",
+          "effect": "Moves into round 2, where someone writes the actual pattern for it. Still cannot run until that pattern is written and tested.",
+          "pick_when": [
+            "The rule says something concrete about words, punctuation, capitals, numbers or sentence shape.",
+            "You could point at a sentence and say 'that breaks this'.",
+            "It has Write this / Not this examples attached — that is the manual telling you it is a real rule."
+          ],
+          "example": "“Use commas in numbers with 4 or more digits” — checkable, unambiguous, clearly about text."
+        },
+        "rejected": {
+          "label": "Bin",
+          "gesture": "swipe left",
+          "means": "This cannot work as an automated check, or it is not really a rule.",
+          "effect": "Stops here. You will be asked to tick why — that reason is the most useful thing you produce today, because it tells us which kinds of rules the extractor should stop proposing.",
+          "pick_when": [
+            "It is about an image, a video, a PDF's internal structure, or a page setting rather than words.",
+            "It is a fact about English rather than an instruction about writing.",
+            "It is advice about process ('consult your stakeholders') rather than about text.",
+            "Checking it would need judgement no computer has."
+          ],
+          "example": "“Nouns can be singular or plural” — true, but it is grammar teaching, not a rule anyone can break."
+        },
+        "deferred": {
+          "label": "Not sure",
+          "gesture": "swipe down",
+          "means": "You genuinely cannot tell, or it needs someone who knows the subject.",
+          "effect": "Parked. It comes back in a later pass and does not count against you. This is the honest answer and it is treated as one.",
+          "pick_when": [
+            "You would be guessing.",
+            "It looks checkable but you cannot picture the pattern.",
+            "It is about a specialist area — legal citation, First Nations terminology — where a wrong call does harm."
+          ],
+          "example": "“Style for First Australian languages needs to recognise continuing cultures” — clearly important, not obviously a text check."
+        },
+        "amended": {
+          "label": "Keep, reworded",
+          "gesture": "button",
+          "means": "A real rule, but the heading it came from does not say it properly, so you have written the rule out yourself.",
+          "effect": "Same as Keep, except your wording becomes what gets implemented. The manual's original wording is never overwritten — it stays alongside, so the rule can always be traced back to the page it came from.",
+          "pick_when": [
+            "The heading is a label rather than a sentence — ‘Reference list entries for films’, ‘Report that is part of a series’ — and the actual rule is in the paragraph underneath.",
+            "The heading states the rule backwards or too loosely to implement as written."
+          ],
+          "example": "Heading: “Place of publication of a book”. Reworded: “A book reference must name the place of publication after the publisher.”"
+        },
+        "proposed": {
+          "label": "Not yet decided",
+          "system_only": true,
+          "means": "The starting state. The extractor found it; nobody has looked at it.",
+          "effect": "Sits in your queue. Cannot run."
+        },
+        "quarantined": {
+          "label": "Failed the noise test",
+          "system_only": true,
+          "means": "It was kept and implemented, then fired at the Style Manual's own pages and complained too much about writing that is already correct.",
+          "effect": "Switched off automatically and sent back for rework. This is the safety net that the previous project did not have."
+        },
+        "superseded": {
+          "label": "Reworded upstream",
+          "system_only": true,
+          "means": "The Style Manual changed the wording of this rule on its website.",
+          "effect": "Replaced by a new entry carrying the new wording. Your decision on the old one is kept as history, so the trail is unbroken."
+        },
+        "orphaned": {
+          "label": "Source page gone",
+          "system_only": true,
+          "means": "The page this came from no longer exists on the Style Manual site.",
+          "effect": "Retired but never deleted — ‘we used to check this and stopped’ is information worth keeping."
+        }
+      }
+    },
+
+    "unit": {
+      "title": "How much text does it judge?",
+      "one_liner": "What is the smallest piece of writing you would have to read to tell whether this rule is broken?",
+      "what_it_is": "The size of the chunk the checker has to look at. Not how much text the rule is about — how much it has to see at once to make the call.",
+      "why_it_matters": "It decides how the finding is highlighted in the editor, and how expensive the rule is to run. It is also the single fastest way to throw out rules that can never work: anything marked 'not text at all' is disqualified on the spot.",
+      "how_to_choose": "Ask: if I covered everything except one ___, could I still tell? The smallest box you can answer 'yes' in is the right one.",
+      "options": {
+        "character": {
+          "label": "Character",
+          "means": "A single character decides it.",
+          "effect": "Cheapest possible check. Highlights one character.",
+          "example": "“Use an en dash (–), not a hyphen (-), for spans of numbers.”"
+        },
+        "token": {
+          "label": "Word",
+          "means": "One word decides it, with no need to look at its neighbours.",
+          "effect": "Usually becomes a word list. Highlights the word.",
+          "example": "“Write ‘email’, not ‘e-mail’.”"
+        },
+        "phrase": {
+          "label": "Phrase",
+          "means": "A run of two or more words together decides it.",
+          "effect": "Becomes a phrase pattern. Highlights the phrase.",
+          "example": "“Use ‘in order to’ sparingly — ‘to’ is usually enough.”"
+        },
+        "sentence": {
+          "label": "Sentence",
+          "means": "You need the whole sentence, because the answer depends on where things sit inside it.",
+          "effect": "The most common answer, and the default. Highlights the sentence.",
+          "example": "“Start lists with a colon.” You cannot judge the colon without seeing the sentence leading into the list."
+        },
+        "paragraph": {
+          "label": "Paragraph",
+          "means": "You need several sentences together.",
+          "effect": "Highlights the paragraph. Harder to make precise — expect more argument about these.",
+          "example": "“Limit each paragraph to one topic.”"
+        },
+        "block": {
+          "label": "Block",
+          "means": "A list, a table, a quote, a callout — a self-contained lump of formatted content.",
+          "effect": "Needs the checker to know where blocks start and end, so it only works on formats that mark them up.",
+          "example": "“Use a consistent pattern for list items.”"
+        },
+        "section": {
+          "label": "Section",
+          "means": "A heading plus everything under it.",
+          "effect": "Needs document structure. Works on web pages and Word files; not on plain text.",
+          "example": "“Use one level 1 heading.”"
+        },
+        "document": {
+          "label": "Whole document",
+          "means": "You have to read the whole thing.",
+          "effect": "Runs once per document rather than per sentence. Cannot point at a specific spot, so the finding is a summary.",
+          "example": "“Structure the body to help the user.”"
+        },
+        "artifact": {
+          "label": "Not text at all",
+          "flags_disqualified": true,
+          "means": "The rule is about an image, a video, a file format, a page setting, a URL, or how something is published — not about words.",
+          "effect": "HARD STOP. A rule marked this way can never be switched on, whatever else anyone does to it. Picking this is the single most useful thing you can do in this round, and it is the expected answer for a large share of the queue.",
+          "example": "“Set the video aspect and resolution for the user’s device.” Real rule, real importance — no text checker can see it."
+        }
+      }
+    },
+
+    "applies_to": {
+      "title": "Where does it apply?",
+      "one_liner": "Which kinds of documents should this rule be switched on for?",
+      "what_it_is": "A list of content types. A rule can apply to several — pick every one that fits.",
+      "why_it_matters": "A rule that is right everywhere is worth far more than one that is right in one place. Getting this wrong in the other direction is what makes a checker annoying: a rule meant for tweets firing on a cabinet submission is noise, and noise is what makes people turn the whole thing off.",
+      "how_to_choose": "Start by asking whether it is genuinely universal. If it is, pick Anything and move on. If you hesitate, it is not universal — name the places it belongs.",
+      "multi_select": true,
+      "options": {
+        "any": {
+          "label": "Anything written",
+          "means": "True of any APS writing regardless of format.",
+          "effect": "Always on. Most punctuation, spelling, capitalisation and number rules belong here.",
+          "example": "“Use numerals for 2 and above in text.”"
+        },
+        "policy": {
+          "label": "Policy & guidance",
+          "means": "Formal internal documents — policies, procedures, guidance notes.",
+          "effect": "On for those documents only.",
+          "example": "Rules about defined terms and consistent terminology."
+        },
+        "web_page": {
+          "label": "Web pages",
+          "means": "Content published on a website.",
+          "effect": "On for web content only.",
+          "example": "“Use keywords to start headings.”"
+        },
+        "form": {
+          "label": "Forms",
+          "means": "Anything someone fills in.",
+          "effect": "On for forms only.",
+          "example": "“Use <label> or <legend> for digital form headings.”"
+        },
+        "report": {
+          "label": "Reports",
+          "means": "Annual reports, review reports, formal published reports.",
+          "effect": "On for reports only.",
+          "example": "“Split large reports into volumes.”"
+        },
+        "email": {
+          "label": "Email & letters",
+          "means": "Correspondence.",
+          "effect": "On for correspondence only.",
+          "example": "“Use a salutation and sign-off to match the formality.”"
+        },
+        "social_post": {
+          "label": "Social posts",
+          "means": "Social media content.",
+          "effect": "On for social content only. Be strict here — social conventions break a lot of general rules on purpose.",
+          "example": "“Don’t add a full stop after hashtags, emojis or handles.”"
+        },
+        "easy_read": {
+          "label": "Easy Read",
+          "means": "Content written to the Easy Read standard for people with low literacy or cognitive disability.",
+          "effect": "On for Easy Read only. This format deliberately breaks normal style rules, so it needs its own list.",
+          "example": "Rules about very short sentences and one idea per line."
+        },
+        "transcript": {
+          "label": "Transcripts & captions",
+          "means": "Transcripts of video or audio, and caption text.",
+          "effect": "On for transcripts only.",
+          "example": "Rules about speaker labels and marking inaudible passages."
+        }
+      }
+    },
+
+    "direction": {
+      "title": "Is it about something there, or something missing?",
+      "one_liner": "Does the checker go looking for bad text, or for the absence of required text?",
+      "what_it_is": "Which way round the check works.",
+      "why_it_matters": "These are completely different jobs. Finding something bad means scanning for a pattern. Finding something missing means first working out where it was supposed to be — which means the rule also has to say where to look, or it will complain about every sentence in the document. Missing that is a classic way to build a checker that screams constantly.",
+      "options": {
+        "presence": {
+          "label": "Something is there that shouldn’t be",
+          "means": "The text contains something the rule forbids.",
+          "effect": "Straightforward. The checker scans for the pattern and flags each hit.",
+          "example": "“Don’t end web or email addresses with full stops.” Look for a full stop after a URL."
+        },
+        "absence": {
+          "label": "Something is missing that should be there",
+          "means": "The text is missing something the rule requires.",
+          "effect": "Needs extra care. Somebody must also define WHERE the missing thing was expected, or the rule fires on every sentence that happens not to contain it. If you pick this, expect a follow-up question in round 2.",
+          "example": "“Use a comma after phrases and clauses that change the whole sentence.” The comma is absent — but only certain sentences needed one."
+        }
+      }
+    },
+
+    "clarity": {
+      "title": "Is it clear enough to implement?",
+      "one_liner": "Could you hand this to someone and have them build it without asking you a question?",
+      "what_it_is": "How much interpretation the rule needs before anyone can code it. This is about the WORDING, not about whether the rule is a good idea.",
+      "why_it_matters": "A vague rule implemented anyway becomes a rule that fires on things nobody agreed it should. Marking something ambiguous is not a criticism of the Style Manual — the manual is written for humans, who fill gaps automatically. Code does not.",
+      "must_be_set": true,
+      "options": {
+        "unreviewed": {
+          "label": "Not looked at",
+          "system_only": true,
+          "means": "The starting value. The extractor deliberately makes no claim — asserting anything here would be a judgement nobody made.",
+          "effect": "You have to move off this before you can Keep a rule."
+        },
+        "unambiguous": {
+          "label": "Crystal clear",
+          "means": "One sensible reading. Two people would build the same thing from it.",
+          "effect": "Goes into round 2 ready to implement.",
+          "example": "“Use ‘0’ before a decimal point for values less than one.” There is nothing to argue about."
+        },
+        "ambiguous_resolvable": {
+          "label": "Fuzzy, but I can pin it down",
+          "requires_note": true,
+          "means": "The wording leaves room, but you can state the interpretation you would build to.",
+          "effect": "You MUST write your interpretation in the note. It gets stored as a decision with your name on it, so the next person knows an assumption was made, who made it, and can argue with it. An assumption nobody wrote down is how the last project got rules that did the opposite of what they claimed.",
+          "example": "“Keep sentences short.” How short? Write: ‘flag sentences over 25 words’. Now it is buildable and the threshold is visible."
+        },
+        "ambiguous_deferred": {
+          "label": "Fuzzy, and I can’t pin it down",
+          "means": "It needs interpretation and you are not the right person, or the call is too consequential to make on the fly.",
+          "effect": "Parked with the reason. Does not block anything else.",
+          "example": "“Use respectful terms when you write about age.” Real rule, and settling what it means is a conversation, not a keystroke."
+        },
+        "not_automatable": {
+          "label": "No computer could check this",
+          "flags_disqualified": true,
+          "means": "Even perfectly worded, judging it needs knowledge a checker does not have.",
+          "effect": "HARD STOP, same as 'not text at all'. This is a legitimate and common answer.",
+          "example": "“Use plain language and the right tone.” Nobody can code ‘the right tone’ and it would be dishonest to pretend otherwise."
+        }
+      }
+    },
+
+    "modality": {
+      "title": "How strongly does the manual mean it?",
+      "one_liner": "Is this a requirement, a recommendation, or a permission?",
+      "what_it_is": "The force of the rule. A suggestion is pre-filled from the wording; change it if the wording misled it.",
+      "why_it_matters": "This sets how loudly the checker complains — error, warning or quiet note — and how strictly it is judged later. A rule marked MUST that fires on the Style Manual's own prose is treated as a hard failure; a PREFER rule is allowed to fire sometimes. Marking everything MUST is the fastest way to build something people mute.",
+      "note": "Bare instructions are genuinely ambiguous. “Use active voice” could be MUST or SHOULD and the manual is not consistent. When in doubt, SHOULD.",
+      "options": {
+        "MUST": {
+          "label": "MUST",
+          "severity": "error",
+          "means": "A requirement. Breaking it is an error.",
+          "effect": "Flagged as an error. Judged hardest later — a MUST that complains about correct writing fails the whole rule.",
+          "example": "“Use numerals with the percentage sign.”"
+        },
+        "MUST_NOT": {
+          "label": "MUST NOT",
+          "severity": "error",
+          "means": "A prohibition.",
+          "effect": "Flagged as an error.",
+          "example": "“Don’t use percentages to describe change.”"
+        },
+        "SHOULD": {
+          "label": "SHOULD",
+          "severity": "warning",
+          "means": "A recommendation with room for good reasons not to.",
+          "effect": "Flagged as a warning. The safe default for a bare instruction.",
+          "example": "“Keep sentences short.”"
+        },
+        "SHOULD_NOT": {
+          "label": "SHOULD NOT",
+          "severity": "warning",
+          "means": "Discouraged, not forbidden.",
+          "effect": "Flagged as a warning.",
+          "example": "“Avoid using a multilevel list.”"
+        },
+        "MAY": {
+          "label": "MAY",
+          "severity": "info",
+          "means": "Explicitly allowed. It grants permission rather than demanding anything.",
+          "effect": "Quiet note at most. Be careful: a permission is often not a check at all — if nothing can break it, Bin it.",
+          "example": "“Numeric dates can have 2-digit elements.”"
+        },
+        "PREFER": {
+          "label": "PREFER",
+          "severity": "suggestion",
+          "means": "One option is better than another, but both are acceptable.",
+          "effect": "Shown as a gentle suggestion. Allowed to fire on the manual's own prose without failing.",
+          "example": "“Use a phrase instead of an en dash for most spans of numbers.”"
+        }
+      }
+    },
+
+    "statement_form": {
+      "title": "How was this found?",
+      "one_liner": "Shown on the card so you know how much to trust the wording in front of you.",
+      "what_it_is": "Rules are found by reading the Style Manual's headings. This says which test the heading passed. No language model is involved in finding rules — that is the point.",
+      "why_it_matters": "Different ways of finding a rule fail differently. Knowing which one caught this rule tells you what to double-check.",
+      "read_only": true,
+      "options": {
+        "imperative": {
+          "label": "Instruction",
+          "means": "The heading starts with an instruction verb — ‘Use…’, ‘Write…’, ‘Check…’.",
+          "effect": "The most reliable kind. Watch for one trap: a heading starting with a word that is also a noun (‘Report that is part of a series’, ‘Place of publication’) is a label, not an instruction. Those are worth rewording rather than keeping as-is."
+        },
+        "negative_imperative": {
+          "label": "Prohibition",
+          "means": "The heading starts with ‘Don’t’, ‘Never’ or ‘Avoid’.",
+          "effect": "Reliable. Usually MUST NOT or SHOULD NOT."
+        },
+        "modal": {
+          "label": "Modal wording",
+          "means": "The heading contains ‘must’, ‘should’, ‘can’ or ‘may’.",
+          "effect": "The least reliable kind, and the one to read carefully. ‘must’ and ‘should’ are nearly always real rules. ‘can’ and ‘may’ often catch grammar teaching instead — ‘Nouns can be countable or uncountable’ is a fact about English, not a rule. Roughly 14 of these are expected to be Bin."
+        },
+        "exemplified": {
+          "label": "Proved by example",
+          "means": "The wording did not look like a rule, but the Style Manual put a ‘Write this’ next to a ‘Not this’ underneath it.",
+          "effect": "The manual's own editors showed a right and a wrong way to write something, which is what a rule is. These are strong candidates and they arrive with real examples attached. The catch is the wording: the heading is often a topic label (‘Older people’, ‘Commonwealth’), so the actual rule is in the examples and the paragraph. Expect to use Keep, reworded on a lot of these."
+        }
+      }
+    },
+
+    "reject_reasons": {
+      "title": "Why bin it?",
+      "one_liner": "Tick everything that applies. This is the most valuable data you produce.",
+      "what_it_is": "A short label on each rejection. It is not paperwork — it is how the extractor gets better. If 40 rules are binned for the same reason, that reason becomes a fix.",
+      "why_it_matters": "Round 1 is expected to bin a lot. The count is not interesting; the pattern is.",
+      "multi_select": true,
+      "options": {
+        "not_text": {
+          "label": "Not about text",
+          "means": "It governs an image, a video, a file, a URL, a page setting, or how something is published.",
+          "effect": "Also sets 'not text at all', which disqualifies it permanently."
+        },
+        "needs_human_judgement": {
+          "label": "Needs human judgement",
+          "means": "Real rule, but no computer could check it — tone, respectfulness, appropriateness.",
+          "effect": "Also sets 'no computer could check this'."
+        },
+        "label_not_rule": {
+          "label": "A heading, not a rule",
+          "means": "The heading just names a topic. The rule, if any, is in the paragraph underneath.",
+          "effect": "Consider Keep, reworded instead if there IS a real rule in the body — that is usually the better outcome."
+        },
+        "grammar_fact": {
+          "label": "A fact, not an instruction",
+          "means": "It describes how English works rather than telling anyone to do anything. Nothing can break it.",
+          "effect": "Recorded. Lots of these come from the 'can' and 'may' wording; the pattern is being tracked."
+        },
+        "duplicate": {
+          "label": "Duplicate",
+          "means": "Another rule already covers this, word for word or in substance.",
+          "effect": "Recorded. If you can, put the other rule's wording in the note."
+        },
+        "too_vague": {
+          "label": "Too vague to act on",
+          "means": "You could not build it and could not write down an interpretation either.",
+          "effect": "Also sets 'fuzzy, and I can’t pin it down'."
+        },
+        "about_process": {
+          "label": "About process, not writing",
+          "means": "It tells you to do something — consult, research, check with someone — rather than saying anything about the words on the page.",
+          "effect": "Recorded."
+        },
+        "polarity_wrong": {
+          "label": "Examples contradict the rule",
+          "means": "The Write this / Not this examples do not match what the heading says, or they look the wrong way round.",
+          "effect": "Flagged loudly. This is the exact failure that sank the previous project — rules that fired on correct writing and stayed quiet on wrong writing. Always leave a note."
+        },
+        "out_of_scope": {
+          "label": "Out of scope",
+          "means": "Real rule, but not about writing APS content — citing the Style Manual itself, or how the manual is maintained.",
+          "effect": "Recorded, and feeds back into which pages get read at all."
+        },
+        "other": {
+          "label": "Something else",
+          "means": "None of the above.",
+          "effect": "Please use the note. An unexplained 'other' cannot be learned from."
+        }
+      }
+    }
+  },
+
+  "training_mode": {
+    "title": "Example check",
+    "one_liner": "Same idea, different object: you are checking example sentences rather than rules.",
+    "what_it_is": "Every rule can carry example sentences — some showing the right way, some showing the wrong way. Right now those examples come straight out of the Style Manual, lifted from its Write this / Not this and Correct / Incorrect blocks. Later the same screen will show machine-generated examples before they are used to train a model.",
+    "why_it_matters": "These examples are the measuring stick. They decide whether a rule is judged to work, and later they become the training data for the classifier. A wrong example does not just slip through — it teaches the model something false and then certifies it as correct. Everything downstream is standing on these sentences.",
+    "what_to_check": [
+      "Does the sentence actually show what it claims? A 'wrong' example must genuinely break the rule; a 'right' example must genuinely follow it.",
+      "Is it clean? No leftover bracketed notes, no half-sentences, no stray markdown or link text.",
+      "Is it a sentence a public servant might really write, rather than a fragment or a table cell?",
+      "Does it test THIS rule rather than some other one?"
+    ],
+    "options": {
+      "accept": {
+        "label": "Good example",
+        "means": "Correct polarity, clean text, genuinely tests this rule.",
+        "effect": "Kept in the measuring set and, later, in the training set."
+      },
+      "reject": {
+        "label": "Bad example",
+        "means": "Wrong way round, corrupted text, or it is not really testing this rule.",
+        "effect": "Dropped, with your reason. If polarity is the problem say so — a reversed example is worse than no example."
+      },
+      "unsure": {
+        "label": "Not sure",
+        "means": "You cannot tell.",
+        "effect": "Parked for a second opinion. No penalty."
+      }
+    }
+  },
+
+  "attention_checks": {
+    "title": "Attention checks",
+    "what_it_is": "Every so often you get a question with a known answer, drawn from real data rather than made up. Most are a Style Manual example with its label hidden: you say whether it follows the rule or breaks it, and the manual already knows.",
+    "why_it_matters": "Not a trick and not a test of you. Sustained classification work degrades after about twenty minutes and nobody notices it happening from the inside. If your accuracy drops, that is a signal to stop — and it tells us which batch of decisions might be worth a second look. Your score on these is recorded alongside your decisions for exactly that reason.",
+    "scoring": "Passing is worth more than several rule decisions. Failing costs points and resets your streak. Neither affects the rules you have already decided."
+  },
+
+  "scoring": {
+    "title": "How points work",
+    "rules": [
+      "Every rule you decide: 10 points. Keep, Bin, Not sure — all worth the same, deliberately. Nothing here rewards you for saying yes.",
+      "Every example you check: 5 points.",
+      "Passing an attention check: 25 points. Failing one: minus 15, and your streak resets.",
+      "A decision made in under 2.5 seconds scores nothing and is marked as hasty. There is no way to farm points by swiping.",
+      "Your streak counts consecutive decisions without failing an attention check. Every 10 is worth celebrating; it does not multiply anything.",
+      "The leaderboard is built from the decision record itself, not from a separate scoreboard — so it cannot be inflated, and deleting your local progress does not erase your work."
+    ]
+  }
+}

@@ -54,6 +54,8 @@ python -m derek.eval.dogfood --octavius reference/octavius-v1/rules_working_draf
 python -m derek.eval.audit_headings counts # classifier census; see docs/07
 python -m derek.eval.audit_headings gold-recall   # exits 1 if a gold-example rule is dropped
 
+python tools/review/server.py           # round-1 triage at localhost:8765
+
 pytest tests/ -v
 ```
 
@@ -103,6 +105,8 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/eval/audit_headings.py` | Hand-audit instrument for the classifier (docs/07) |
 | `schema/rule.schema.json` | Machine-checkable ledger contract |
 | `ledger/rules.jsonl` | The rule ledger |
+| `tools/review/server.py` | Round-1 triage app; writes decisions to the ledger |
+| `tools/review/glossary.json` | Plain-language meaning of every reviewer-facing option |
 | `reference/octavius-v1/` | **NON-AUTHORITATIVE.** Recall checklist and negative test set only |
 
 ---
