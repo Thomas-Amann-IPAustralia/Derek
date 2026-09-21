@@ -125,6 +125,15 @@ orphans its rules, and a re-run with no upstream change produces an empty change
       so the gamification cannot buy speed at the cost of the thing it exists to produce
 - [x] Example-checking mode over the harvested gold set, on the same screens the
       synthetic training data will use (`ledger/training_candidates.jsonl`)
+- [x] The same app published as a static site
+      (<https://thomas-amann-ipaustralia.github.io/Derek/>), so the triage pass can be
+      worked from a machine that cannot run Python. Decisions queue in the browser,
+      export as JSONL, and are replayed into the ledger by
+      `tools/review/apply_decisions.py` — through the same `_apply`, so the gate is
+      the gate wherever the decision was typed. Attention checks are not served there
+      (their answers would have to ship with the page) and the leaderboard is a
+      build-time snapshot; both say so on the page
+      ([ADR-022](02-decisions.md#adr-022--the-review-ui-is-published-the-gate-moves-to-the-apply-step))
 - [ ] Bulk operations by page, section and predicted scope
 - [ ] **Run Pass 1 over all 720** ← the actual next task
 

@@ -1,0 +1,80 @@
+name: Reviewer dashboard
+
+# Publishes tools/review/ as a static site to GitHub Pages:
+#   https://thomas-amann-ipaustralia.github.io/Derek/
+#
+# Round 1 is 736 decisions a human has to make, and the reviewer's machine may
+# not be able to run Python at all. A dashboard nobody can open is a review
+# queue nobody works, so the same app is published as files.
+#
+# Decisions made there are queued in the browser and come back as a JSONL
+# export, which apply-review.yml replays into the ledger. The browser is a
+# drafting surface; ledger/rules.jsonl is still the record (ADR-008, ADR-022).
+#
+# `workflow_call` is not decoration: a push made with GITHUB_TOKEN does not
+# trigger another workflow, so the daily corpus snapshot and the decision
+# replay each call this one directly rather than relying on their own commits
+# to do it. Without that the site would quietly serve a stale ledger, which is
+# the failure the corpus heartbeat exists to prevent one layer down (ADR-001).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time, and never cancel one half-done: a cancelled deploy
+# leaves the published site on an older build than the ledger.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # No `pip install`: build_static.py, server.py and everything they import
+      # from derek/ledger/ and derek/extract/ are stdlib-only by invariant
+      # (see CLAUDE.md, "Dependencies are tiered deliberately").
+      - name: Build the site
+        run: python tools/review/build_static.py --out site
+
+      - uses: actions/configure-pages@v5
+        with:
+          # Turns Pages on, and points it at this workflow, if the repository
+          # is still set to publish from a branch. If it fails, the fix is
+          # Settings → Pages → Source → GitHub Actions.
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Summarise
+        run: |
+          {
+            echo "### Reviewer dashboard"
+            echo '```json'
+            cat site/data/manifest.json | python -m json.tool
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

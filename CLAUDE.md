@@ -55,6 +55,9 @@ python -m derek.eval.audit_headings counts # classifier census; see docs/07
 python -m derek.eval.audit_headings gold-recall   # exits 1 if a gold-example rule is dropped
 
 python tools/review/server.py           # round-1 triage at localhost:8765
+python tools/review/build_static.py     # the same app as files → site/ (GitHub Pages)
+python tools/review/apply_decisions.py ledger/inbox/*.jsonl   # replay exports → ledger
+python tools/review/apply_decisions.py export.jsonl --dry-run # validate, write nothing
 
 # Imperative detection by POS tagger (ADR-021). Offline authoring step: writes a
 # checked-in verdict table that derek/extract/ reads as data, so extraction stays
@@ -116,6 +119,9 @@ Each layer must be reproducible from the one below it. Full detail:
 | `schema/rule.schema.json` | Machine-checkable ledger contract |
 | `ledger/rules.jsonl` | The rule ledger |
 | `tools/review/server.py` | Round-1 triage app; writes decisions to the ledger |
+| `tools/review/index.html` | The app itself. Works against the server or the published files; every path is relative |
+| `tools/review/build_static.py` | Same app + the API's payloads as files, for GitHub Pages |
+| `tools/review/apply_decisions.py` | Replays a published-dashboard export into the ledger, through `server._apply` |
 | `tools/review/glossary.json` | Plain-language meaning of every reviewer-facing option |
 | `reference/octavius-v1/` | **NON-AUTHORITATIVE.** Recall checklist and negative test set only |
 

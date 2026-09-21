@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
 <title>Derek Review</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111f36'/%3E%3Cpath d='M18 44V20h11c8 0 13 5 13 12s-5 12-13 12H18zm8-6h3c3.6 0 5.8-2.2 5.8-6s-2.2-6-5.8-6h-3v12z' fill='%233ecfa8'/%3E%3C/svg%3E">
+<!-- Which backend is behind this page. tools/review/build_static.py rewrites
+     this one line when it copies the file for GitHub Pages; the local server
+     serves it untouched. The boot probe covers anything else (opening the file
+     straight off disk, say), so this is a shortcut, never the only route. -->
+<script>window.DEREK_BACKEND = "server";</script>
 <style>
 /* ---------------------------------------------------------------------------
    Tokens. Dark mode is the same palette re-pointed, never a second stylesheet.
@@ -80,6 +87,17 @@ nav button{border:0;background:none;color:var(--muted);font-size:10.5px;font-wei
 nav button .ic{display:block;font-size:17px;margin-bottom:3px}
 nav button.on{color:var(--keep)}
 nav button.on .ic{transform:translateY(-1px) scale(1.12)}
+/* Six tabs only on the static site, where getting work back out of the
+   browser is a step the reviewer has to take deliberately. */
+nav.six{grid-template-columns:repeat(6,1fr)}
+.hmeta .unsaved{color:var(--gold);cursor:pointer}
+.hmeta .unsaved b{color:var(--gold)}
+.steps{counter-reset:s;padding:0;margin:10px 0 0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding:0 0 12px 30px;font-size:13.5px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:21px;height:21px;
+  border-radius:50%;background:var(--accent-bg);color:var(--accent);font-size:11.5px;
+  font-weight:800;display:grid;place-items:center}
+.steps code{word-break:break-all}
 
 /* cards ------------------------------------------------------------------- */
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
@@ -278,6 +296,8 @@ input.text{width:100%;border:1px solid var(--line);border-radius:12px;padding:11
     <p id="heroSub">Short sittings. Every answer is saved the moment you give it.</p>
   </div>
 
+  <div id="offlineNote"></div>
+
   <div class="card" id="firstRun">
     <div class="kicker">Start here</div>
     <h2 style="font-size:19px;margin:7px 0 9px">What you're doing, in four sentences</h2>
@@ -395,6 +415,13 @@ input.text{width:100%;border:1px solid var(--line);border-radius:12px;padding:11
   </div>
 </section>
 
+<!-- ======================= EXPORT (static site only) ======================= -->
+<section id="v-export" class="view">
+  <div class="kicker">Getting your work home</div>
+  <h1 style="font-size:24px;margin:8px 0 6px">Decisions on this device</h1>
+  <div id="exportBody"></div>
+</section>
+
 <!-- ======================= FIELD GUIDE ======================= -->
 <section id="v-guide" class="view">
   <div class="kicker">Field guide</div>
@@ -413,6 +440,7 @@ input.text{width:100%;border:1px solid var(--line);border-radius:12px;padding:11
   <button id="n-review"   onclick="show('review')"><span class="ic">✓</span>Rules</button>
   <button id="n-examples" onclick="show('examples')"><span class="ic">❝</span>Examples</button>
   <button id="n-board"    onclick="show('board')"><span class="ic">🏆</span>Board</button>
+  <button id="n-export" onclick="show('export')" hidden><span class="ic">⇩</span>Export</button>
   <button id="n-guide"    onclick="show('guide')"><span class="ic">？</span>Guide</button>
 </nav>
 </div>
@@ -426,12 +454,17 @@ input.text{width:100%;border:1px solid var(--line);border-radius:12px;padding:11
 /* ===========================================================================
    Derek Review — round 1 triage.
 
-   Three things worth knowing before changing anything here:
+   Four things worth knowing before changing anything here:
 
-   1. The server owns the truth. Every decision is POSTed and the returned
-      counts replace local ones. Points and streaks are local decoration; the
-      leaderboard is recomputed server-side from the ledger, so nothing here
-      can inflate it.
+   1. There are two backends and the page works out which at boot. With the
+      local server, every decision is POSTed and the returned counts replace
+      local ones: the ledger owns the truth and the browser holds nothing.
+      On GitHub Pages there is nothing to POST to, so decisions queue here as
+      an op log and are replayed into the ledger by apply_decisions.py, which
+      re-runs the same guard rails in Python. Either way the browser is a
+      drafting surface; the record is ledger/rules.jsonl in version control.
+      Points and streaks are local decoration; the leaderboard is computed
+      from the ledger, so nothing here can inflate it.
    2. Nothing is shown that isn't explained. Every option a reviewer can pick
       is rendered from glossary.json, which the server refuses to start
       without. If a button has no explanation, that is a bug, not a shortcut.
@@ -455,12 +488,202 @@ const S = {
   log: [], lastUid: null, shownAt: 0,
   examples: null, exIndex: 0, exShownAt: 0,
   check: null, sinceCheck: 0, view: "home",
+  byUid: new Map(),
 };
 
 const save = () => {
   localStorage.setItem("derek.score", S.score);
   localStorage.setItem("derek.streak", S.streak);
   localStorage.setItem("derek.badges", JSON.stringify(S.badges));
+};
+
+/* ===========================================================================
+   Transport. One UI, two backends.
+
+   Served by tools/review/server.py: every call is an API call and the ledger
+   is written before the next card appears.
+
+   Served as a static site (GitHub Pages, built by build_static.py): there is
+   nothing to write to. Decisions queue in this browser as an op log, get
+   exported as JSONL, and are replayed into the ledger by
+   tools/review/apply_decisions.py — which re-runs the same Python guard rails,
+   so the checks below are a courtesy to the reviewer rather than the gate.
+
+   Which backend is in play is worked out by asking, not by configuration, and
+   every path is relative so the site works from /Derek/ without knowing it.
+   The reasoning, and what it costs, is ADR-022 in docs/02-decisions.md.
+
+   Two things are missing offline, on purpose and visibly:
+     · attention checks — they are graded server-side because "a check whose
+       answer is in the page is decoration" (server.py). Static hosting can
+       only ship the answer, so they are not served rather than faked;
+     · the leaderboard is a build-time snapshot of the ledger, so it cannot
+       see work still sitting in a browser. The page says so.
+   =========================================================================== */
+const MODE = { offline: false, build: null };
+const nowIso = () => new Date().toISOString();
+const newOpId = () => (crypto.randomUUID ? crypto.randomUUID()
+  : Date.now().toString(36) + Math.random().toString(36).slice(2, 12));
+
+/* The offline queue. One op per line, exactly as it will appear in the file
+   that goes back to the repository — no browser-shaped intermediate form. */
+const OPS = {
+  key: "derek.ops.v1",
+  list: [],
+  load(){
+    try { OPS.list = JSON.parse(localStorage.getItem(OPS.key) || "[]"); }
+    catch(e){ OPS.list = []; }
+    return OPS.list;
+  },
+  save(){
+    try { localStorage.setItem(OPS.key, JSON.stringify(OPS.list)); }
+    catch(e){ toast("This browser would not save that — download your decisions now.", 6000); }
+  },
+  add(op){ OPS.list.push(op); OPS.save(); return op; },
+  unexported(){ return OPS.list.filter(o => !o.exported_at && o.op !== "meta").length; },
+  decisions(){ return OPS.list.filter(o => o.op === "decide" || o.op === "undo").length; },
+  exampleIds(){ return new Set(OPS.list.filter(o => o.op === "example").map(o => o.item.id)); },
+  markExported(at){ OPS.list.forEach(o => { o.exported_at = o.exported_at || at; }); OPS.save(); },
+  clear(){ OPS.list = []; OPS.save(); },
+};
+
+/* server.py's _apply, in the browser, for the fields this UI can set. It is a
+   mirror and not the definition: apply_decisions.py runs the real one when the
+   export lands. Keeping the refusals here as well means a reviewer hears "set
+   clarity first" while the card is still in front of them, rather than in a
+   command-line error days later. */
+const REVIEWER_STATUSES = ["accepted", "amended", "rejected", "deferred"];
+
+function applyLocally(op){
+  const r = S.byUid.get(op.uid);
+  if(!r) throw new Error("no rule " + op.uid + " in this snapshot");
+  const p = op.patch || {};
+  if(p.unit)                 r.unit = p.unit;
+  if(p.applies_to)           r.applies_to = p.applies_to.length ? p.applies_to.slice() : ["any"];
+  if(p.clarity)              r.clarity = p.clarity;
+  if(p.direction)            r.direction = p.direction;
+  if(p.modality)             r.modality = p.modality;
+  if(p.violation_condition)  r.violation_condition = p.violation_condition;
+  if(p.specification)        r.specification = p.specification;
+
+  const status = p.review_status;
+  if(!status) return;
+  if(!REVIEWER_STATUSES.includes(status)) throw new Error("status not settable here: " + status);
+  if((status === "accepted" || status === "amended") && r.clarity === "unreviewed")
+    throw new Error("set clarity before keeping a rule");
+
+  let note = p.note || "";
+  const reasons = (p.reasons || []).filter(Boolean);
+  if(reasons.length) note = ("[" + reasons.join(", ") + "] " + note).trim();
+  if(p.elapsed_ms != null && p.elapsed_ms < S.hastyMs) note = (note + " (hasty)").trim();
+  if(r.clarity === "ambiguous_resolvable" && !(note || r.specification || r.violation_condition))
+    throw new Error("an ambiguous_resolvable reading has to be written down");
+
+  r.history = (r.history || []).concat([{ from: r.status, to: status, by: op.by, at: op.at, note }]);
+  r.status = status; r.decided_by = op.by; r.decided_at = op.at; r.note = note;
+}
+
+function undoLocally(op){
+  const r = S.byUid.get(op.uid);
+  if(!r) throw new Error("no rule " + op.uid + " in this snapshot");
+  if(r.status === "proposed") throw new Error("nothing to undo on that rule");
+  const note = "undone by " + op.by;
+  r.history = (r.history || []).concat([{ from: r.status, to: "proposed", by: op.by, at: op.at, note }]);
+  r.status = "proposed"; r.decided_by = op.by; r.decided_at = op.at; r.note = note;
+}
+
+/* The shape /api/decide returns, rebuilt from what this browser knows. */
+function localPayload(){
+  const counts = {};
+  S.rules.forEach(r => { counts[r.status] = (counts[r.status] || 0) + 1; });
+  return { ok: true, counts, total: S.rules.length, rules: S.rules };
+}
+
+/* A reload starts from the published snapshot, so the queue is replayed over
+   it. An op that no longer lands — the ledger was rebuilt and the uid moved —
+   is counted and reported rather than silently dropped; it is still in the
+   export, where apply_decisions.py will say the same thing out loud. */
+function replayQueue(){
+  let lost = 0;
+  for(const op of OPS.load()){
+    try {
+      if(op.op === "decide") applyLocally(op);
+      else if(op.op === "undo") undoLocally(op);
+    } catch(e){ lost++; }
+  }
+  return lost;
+}
+
+async function getJSON(url){
+  const r = await fetch(url, { cache: "no-store" });
+  if(!r.ok) throw new Error(url + " → " + r.status);
+  return r.json();
+}
+async function postJSON(url, body){
+  const r = await fetch(url, {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const d = await r.json().catch(() => ({}));
+  if(!r.ok && !d.error) d.error = "server returned " + r.status;
+  return d;
+}
+
+const API = {
+  async bootstrap(){
+    if(window.DEREK_BACKEND !== "static"){
+      try {
+        const d = await getJSON("api/bootstrap");
+        MODE.offline = false;
+        return d;
+      } catch(e){ /* no server behind this page: it is the static build */ }
+    }
+    const d = await getJSON("data/bootstrap.json");
+    MODE.offline = true; MODE.build = d.build || null;
+    return d;
+  },
+  async decide(rule, patch){
+    if(!MODE.offline) return postJSON("api/decide", {
+      reviewer: S.reviewer, patches: [{ uid: rule.uid, ...patch }],
+    });
+    const op = { op: "decide", op_id: newOpId(), by: S.reviewer, at: nowIso(),
+                 uid: rule.uid, patch };
+    try { applyLocally(op); } catch(e){ return { error: e.message }; }
+    OPS.add(op);
+    return localPayload();
+  },
+  async undo(uid){
+    if(!MODE.offline) return postJSON("api/undo", { reviewer: S.reviewer, uid });
+    const op = { op: "undo", op_id: newOpId(), by: S.reviewer, at: nowIso(), uid };
+    try { undoLocally(op); } catch(e){ return { error: e.message }; }
+    OPS.add(op);
+    return localPayload();
+  },
+  async examples(){
+    if(!MODE.offline) return getJSON("api/examples");
+    const q = await getJSON("data/examples.json");
+    const done = OPS.exampleIds();
+    return { ...q, done: q.done + done.size, items: q.items.filter(it => !done.has(it.id)) };
+  },
+  async exampleVerdict(item, verdict, reasons, note){
+    const row = { id: item.id, rule_uid: item.rule_uid, origin: item.origin,
+                  claimed: item.claimed };
+    if(!MODE.offline) return postJSON("api/example-verdict", {
+      reviewer: S.reviewer, ...row, verdict, reasons, note,
+    });
+    OPS.add({ op: "example", op_id: newOpId(), by: S.reviewer, at: nowIso(),
+              item: row, verdict, reasons, note });
+    return { ok: true };
+  },
+  async leaderboard(win){
+    if(!MODE.offline) return getJSON("api/leaderboard?window=" + win);
+    const d = await getJSON("data/leaderboard.json");
+    return { ...(d[win] || d.day), build: d.build };
+  },
+  attention(){ return getJSON("api/attention"); },
+  answerCheck(nonce, answer){
+    return postJSON("api/attention", { reviewer: S.reviewer, nonce, answer });
+  },
 };
 
 /* --- chrome -------------------------------------------------------------- */
@@ -498,6 +721,7 @@ function show(id){
   if(id === "examples") renderExample();
   if(id === "board")    loadBoard(currentWindow);
   if(id === "progress") renderProgress();
+  if(id === "export")   renderExport();
   if(id === "guide")    renderGuide();
   if(id === "home")     renderHome();
 }
@@ -579,19 +803,37 @@ function setWho(){
 
 /* --- boot ---------------------------------------------------------------- */
 async function boot(){
-  const r = await fetch("/api/bootstrap");
-  const d = await r.json();
+  let d;
+  try { d = await API.bootstrap(); }
+  catch(e){
+    document.body.innerHTML = "<pre style='padding:20px'>Could not load the review data.\n\n"
+      + esc(e.message) + "</pre>";
+    return;
+  }
   if(d.error){ document.body.innerHTML = "<pre style='padding:20px'>" + esc(d.error) + "</pre>"; return; }
   S.glossary = d.glossary; S.options = d.options; S.points = d.points; S.hastyMs = d.hasty_ms;
   if(!S.reviewer) S.reviewer = "";
   ingest(d);
+
+  let lost = 0;
+  if(MODE.offline){
+    document.body.classList.add("offline");
+    $("n-export").hidden = false;
+    document.querySelector("nav").classList.add("six");
+    lost = replayQueue();
+    ingest(localPayload());
+  }
+
   $("whoChip").textContent = S.reviewer ? "Reviewer " + S.reviewer : "Reviewer —";
   renderHome();
+  if(lost) toast(lost + " queued decision" + (lost === 1 ? "" : "s") +
+                 " no longer match this snapshot — they are still in your export.", 6000);
   if(!S.reviewer) setTimeout(openWho, 500);
 }
 
 function ingest(d){
   S.rules = d.rules; S.counts = d.counts; S.total = d.total;
+  S.byUid = new Map(S.rules.map(r => [r.uid, r]));
   const pending = S.rules.filter(x => x.status === "proposed");
   // Keep the reviewer's place across saves. If the rule they were looking at is
   // still pending (a save that failed, or another tab), go back to it; if it has
@@ -611,7 +853,10 @@ function renderChrome(){
     ["accepted","amended","rejected","deferred"]
       .filter(k => S.counts[k])
       .map(k => `<span>${labelFor("review_status", k)} <b>${S.counts[k]}</b></span>`).join("") +
-    `<span>session <b>${S.score}</b></span>`;
+    `<span>session <b>${S.score}</b></span>` +
+    (MODE.offline && OPS.unexported()
+      ? `<span class="unsaved" onclick="show('export')"><b>${OPS.unexported()}</b> not yet in the ledger</span>`
+      : "");
 }
 const labelFor = (bucket, key) =>
   S.glossary?.buckets?.[bucket]?.options?.[key]?.label || key;
@@ -630,6 +875,18 @@ function renderHome(){
       </ol></div></details>
     <details class="gitem"><summary>How long will this take?</summary>
       <div class="gbody"><p>${esc(o.how_long)}</p><p>${esc(o.if_unsure)}</p></div></details>`;
+  $("offlineNote").innerHTML = MODE.offline ? `
+    <div class="card flat" style="border-color:var(--gold)">
+      <div class="kicker" style="color:var(--gold)">Published copy · no server</div>
+      <p style="font-size:13.5px;margin:8px 0 8px">Your decisions are saved <b>in this browser</b>
+      and are not in <code>ledger/rules.jsonl</code> until you download them and put the file back
+      in the repository. Everything works offline; nothing is sent anywhere.</p>
+      <p style="font-size:12.5px;color:var(--muted);margin:0 0 10px">
+        ${OPS.unexported() ? `<b>${OPS.unexported()}</b> decision${OPS.unexported() === 1 ? "" : "s"}
+          waiting to go back.` : "Everything here has been downloaded at least once."}
+        Snapshot ${esc(MODE.build?.generated_at || "unknown").slice(0, 16).replace("T", " ")} UTC.</p>
+      <button class="btn wide" onclick="show('export')">Download and send them back →</button>
+    </div>` : "";
   $("qLeft").textContent = S.counts.proposed || 0;
   $("qBreak").textContent =
     `${S.total} found in the Style Manual · ` +
@@ -651,8 +908,11 @@ function renderRule(){
     $("deck").innerHTML = `<div class="card done">
       <span class="big-emoji">🎉</span>
       <h2 style="font-size:21px">Queue clear</h2>
-      <p style="color:var(--muted)">Every candidate has a decision on it. Commit
-      <code>ledger/rules.jsonl</code> and move to round 2.</p>
+      <p style="color:var(--muted)">Every candidate has a decision on it. ${MODE.offline
+        ? "Download them and put the file back in the repository."
+        : "Commit <code>ledger/rules.jsonl</code> and move to round 2."}</p>
+      ${MODE.offline ? `<button class="btn primary" style="margin-top:12px"
+        onclick="show('export')">Download my decisions →</button>` : ""}
       <button class="btn primary" style="margin-top:12px" onclick="show('examples')">
         Check example sentences →</button></div>`;
     $("deckControls").style.display = "none";
@@ -953,12 +1213,8 @@ function notText(ev){
 async function commit(rule, patch, ev, dir){
   const elapsed = Date.now() - S.shownAt;
   flingCard("card", dir || "right");
-  const res = await fetch("/api/decide", {
-    method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ reviewer: S.reviewer, patches: [{ uid: rule.uid, ...patch, elapsed_ms: elapsed }] }),
-  });
-  const d = await res.json();
-  if(!res.ok || d.error){ toast("Not saved: " + (d.error || res.status), 4000); renderRule(); return; }
+  const d = await API.decide(rule, { ...patch, elapsed_ms: elapsed });
+  if(d.error){ toast("Not recorded: " + d.error, 4000); renderRule(); return; }
 
   const status = patch.review_status;
   S.session[status] = (S.session[status] || 0) + 1;
@@ -976,8 +1232,11 @@ async function commit(rule, patch, ev, dir){
   checkBadges(); save(); ingest(d);
 
   S.sinceCheck++;
-  // Roughly every 12–18 decisions, and never on the very first few.
-  if(S.sinceCheck >= 12 && Math.random() < 0.28 && S.session.accepted + S.session.rejected > 4){
+  // Roughly every 12–18 decisions, and never on the very first few. Offline
+  // there is no check to serve: grading it here would mean shipping the answer
+  // with the page, which measures nothing (see the transport note above).
+  if(!MODE.offline && S.sinceCheck >= 12 && Math.random() < 0.28 &&
+     S.session.accepted + S.session.rejected > 4){
     S.sinceCheck = 0; loadCheck(); return;
   }
   renderRule();
@@ -985,12 +1244,8 @@ async function commit(rule, patch, ev, dir){
 
 async function undo(){
   if(!S.lastUid){ toast("Nothing to undo"); return; }
-  const res = await fetch("/api/undo", {
-    method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ reviewer: S.reviewer, uid: S.lastUid }),
-  });
-  const d = await res.json();
-  if(!res.ok || d.error){ toast("Could not undo: " + (d.error || res.status), 3000); return; }
+  const d = await API.undo(S.lastUid);
+  if(d.error){ toast("Could not undo: " + d.error, 3000); return; }
   const last = S.log.pop();
   if(last && S.session[last.review_status] > 0) S.session[last.review_status]--;
   S.score = Math.max(0, S.score - S.points.decision);
@@ -1021,7 +1276,7 @@ function checkBadges(){
 
 /* --- attention checks ---------------------------------------------------- */
 async function loadCheck(){
-  const d = await (await fetch("/api/attention")).json();
+  const d = await API.attention();
   S.check = d;
   $("chkPrompt").textContent = d.prompt;
   $("chkNote").textContent = d.note || "";
@@ -1037,10 +1292,7 @@ async function loadCheck(){
 async function answerCheck(el, ev){
   if($("chkAnswers").dataset.done) return;
   $("chkAnswers").dataset.done = "1";
-  const res = await (await fetch("/api/attention", {
-    method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ reviewer: S.reviewer, nonce: S.check.nonce, answer: el.dataset.key }),
-  })).json();
+  const res = await API.answerCheck(S.check.nonce, el.dataset.key);
   if(!res.ok){ toast(res.error || "check expired"); $("chkAnswers").dataset.done = ""; show("review"); return; }
 
   S.session.checks++;
@@ -1063,7 +1315,7 @@ async function answerCheck(el, ev){
 
 /* --- example checking ---------------------------------------------------- */
 async function loadExamples(){
-  S.examples = await (await fetch("/api/examples")).json();
+  S.examples = await API.examples();
   S.exIndex = 0;
 }
 async function renderExample(){
@@ -1162,13 +1414,8 @@ async function confirmExReject(){
 }
 async function sendExample(item, verdict, reasons, note, ev, dir){
   flingCard("exCard", dir);
-  const res = await fetch("/api/example-verdict", {
-    method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ reviewer: S.reviewer, id: item.id, rule_uid: item.rule_uid,
-                           origin: item.origin, claimed: item.claimed, verdict, reasons, note }),
-  });
-  const d = await res.json();
-  if(!res.ok || d.error){ toast("Not saved: " + (d.error || res.status), 3500); renderExample(); return; }
+  const d = await API.exampleVerdict(item, verdict, reasons, note);
+  if(d.error){ toast("Not recorded: " + d.error, 3500); renderExample(); return; }
   S.session.examples++; S.examples.done++;
   if(Date.now() - S.exShownAt >= S.hastyMs){
     S.score += S.points.example; floatPoints(ev, "+" + S.points.example, "var(--keep)");
@@ -1182,7 +1429,7 @@ let currentWindow = "day";
 async function loadBoard(win, ev){
   currentWindow = win || currentWindow;
   if(ev){ [...$("boardSeg").children].forEach(b => b.classList.remove("on")); ev.target.classList.add("on"); }
-  const d = await (await fetch("/api/leaderboard?window=" + currentWindow)).json();
+  const d = await API.leaderboard(currentWindow);
   $("boardList").innerHTML = d.board.length ? d.board.map(u => `
     <div class="lrow ${u.initials === S.reviewer ? "me" : ""}">
       <div class="lrank">${u.rank}</div>
@@ -1207,7 +1454,11 @@ async function loadBoard(win, ev){
     }</p>
     <p style="font-size:12.5px;color:var(--muted);margin:6px 0 0">
       This is the point of asking for initials. If agreement is low, the options aren't being read
-      the same way — which is a problem with the guide or the queue, not with either reviewer.</p>`;
+      the same way — which is a problem with the guide or the queue, not with either reviewer.</p>
+    ${MODE.offline ? `<p style="font-size:12.5px;color:var(--gold);margin:8px 0 0">
+      Counted from the ledger as it stood at
+      ${esc(d.build?.generated_at || "the last build").replace("T", " ")}. Decisions still
+      queued in a browser are not in it — they count once the export is applied.</p>` : ""}`;
 }
 
 /* --- progress ------------------------------------------------------------ */
@@ -1234,6 +1485,107 @@ function renderProgress(){
      ${s.hasty} decision${s.hasty > 1 ? "s were" : " was"} made in under
      ${(S.hastyMs / 1000).toFixed(1)}s and marked in the ledger. Worth a second pass.</p>` : "");
 }
+/* --- export (static site) ------------------------------------------------
+   The only way work leaves this browser. One JSONL file, one op per line,
+   replayed into the ledger by tools/review/apply_decisions.py — which re-runs
+   every guard rail and de-duplicates by op_id, so exporting twice is safe and
+   exporting early is free. That matters more than tidiness: a decision that
+   exists only in a browser's local storage is one cleared cache from gone. */
+function renderExport(){
+  const ops = OPS.list;
+  const decisions = ops.filter(o => o.op === "decide").length;
+  const undos = ops.filter(o => o.op === "undo").length;
+  const examples = ops.filter(o => o.op === "example").length;
+  const waiting = OPS.unexported();
+  const repo = (MODE.build && MODE.build.repo) || "Thomas-Amann-IPAustralia/Derek";
+  const upload = `https://github.com/${repo}/upload/main/ledger/inbox`;
+
+  $("exportBody").innerHTML = `
+    <p style="font-size:13px;color:var(--muted)">
+      This copy of the dashboard has no server behind it, so nothing you decide reaches
+      <code>ledger/rules.jsonl</code> on its own. Download the file, put it back in the
+      repository, and the ledger updates itself — with every check the local tool applies.</p>
+
+    <div class="grid2" style="margin-top:12px">
+      <div class="stat"><b>${decisions}</b><span>rule decisions</span></div>
+      <div class="stat"><b>${examples}</b><span>example verdicts</span></div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <div class="kicker">${waiting ? "Not downloaded yet" : "All downloaded"}</div>
+      <h2 style="font-size:20px;margin:7px 0 4px">${waiting || "0"} waiting</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:12px">
+        ${undos ? undos + " undo" + (undos === 1 ? "" : "s") + " included. " : ""}
+        Downloading again always gives you everything, including what you have already
+        sent — duplicates are ignored when the file is applied.</p>
+      <button class="btn wide primary" onclick="exportOps()"
+        ${ops.length ? "" : "disabled"}>⇩ Download my decisions (.jsonl)</button>
+    </div>
+
+    <div class="card">
+      <div class="kicker">Putting it back</div>
+      <ol class="steps">
+        <li>Download the file above. It is a text file — one line per decision.</li>
+        <li>Open <a href="${esc(upload)}" target="_blank" rel="noopener">the repository's
+            <code>ledger/inbox/</code> folder</a> and drop the file in
+            <span style="color:var(--muted)">(Add file → Upload files, then Commit)</span>.</li>
+        <li>A workflow replays it into the ledger, records what it applied in
+            <code>ledger/review_ops.jsonl</code>, and moves your file to
+            <code>ledger/applied/</code>. If anything would break a guard rail it refuses
+            the file and says which line.</li>
+      </ol>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:10px">
+        Anyone with a checkout can do the same thing with
+        <code>python tools/review/apply_decisions.py &lt;file&gt;</code>.</p>
+    </div>
+
+    <div class="card flat">
+      <div class="kicker">This snapshot</div>
+      <p style="font-size:12.5px;color:var(--muted);margin:8px 0 0">
+        Built ${esc(MODE.build?.generated_at || "—").replace("T", " ")} from commit
+        <code>${esc(MODE.build?.commit || "—")}</code> · ${S.total} rules.
+        Rebuilt every time the ledger changes on <code>main</code>, so reloading picks up
+        other people's applied decisions — yours stay queued here until you download them.</p>
+      <button class="btn wide" style="margin-top:10px" onclick="show('progress')">
+        Session stats →</button>
+      <button class="btn wide" style="margin-top:8px" onclick="clearQueue()"
+        ${ops.length ? "" : "disabled"}>Clear this device's queue…</button>
+    </div>`;
+}
+
+function exportOps(){
+  const at = nowIso();
+  const rows = [{
+    op: "meta", op_id: newOpId(), by: S.reviewer || "ANON", at,
+    source: "static-dashboard", build: MODE.build || null, ops: OPS.list.length,
+    note: "Replay with: python tools/review/apply_decisions.py <this file>",
+  }].concat(OPS.list.map(({ exported_at, ...rest }) => rest));
+
+  const blob = new Blob([rows.map(r => JSON.stringify(r)).join("\n") + "\n"],
+                        { type: "application/x-ndjson" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `derek-review-${S.reviewer || "session"}-${at.slice(0, 19).replace(/[:T]/g, "")}.jsonl`;
+  a.click(); URL.revokeObjectURL(a.href);
+
+  OPS.markExported(at);
+  renderExport(); renderChrome();
+  toast("Downloaded. Upload it to ledger/inbox/ to put it in the ledger.", 4500);
+}
+
+function clearQueue(){
+  const waiting = OPS.unexported();
+  if(waiting && !confirm(
+      waiting + " decision(s) have never been downloaded. Clearing now loses them for good.\n\n" +
+      "Clear anyway?")) return;
+  if(!waiting && !confirm(
+      "Clear " + OPS.list.length + " downloaded decision(s) from this browser?\n\n" +
+      "Do this once they are in the ledger — they are already in the file you downloaded.")) return;
+  OPS.clear();
+  toast("Queue cleared. Reload to see the published ledger as it stands.", 4000);
+  renderExport(); renderChrome();
+}
+
 function exportSession(){
   const blob = new Blob([JSON.stringify({
     reviewer: S.reviewer, exported: new Date().toISOString(),
@@ -1303,7 +1655,22 @@ function renderGuide(){
       </div></details>` +
     `<details class="gitem"><summary>${esc(g.scoring.title)}</summary>
       <div class="gbody"><ul style="padding-left:17px">${g.scoring.rules.map(x =>
-        `<li style="margin:6px 0">${esc(x)}</li>`).join("")}</ul></div></details>`;
+        `<li style="margin:6px 0">${esc(x)}</li>`).join("")}</ul></div></details>` +
+    (MODE.offline ? `<details class="gitem"><summary>What's different on the published copy
+        <span style="font-weight:400;color:var(--muted);font-size:12px">no server behind this page</span></summary>
+      <div class="gbody">
+        <p>This dashboard is a static copy, so it can be opened on a machine that can't run the
+        tool. Everything about deciding is the same. Three things are not.</p>
+        <div class="callout"><b>Your decisions live in this browser until you send them back.</b>
+          They go into the ledger — with every check the local tool applies, run again in Python —
+          when the file you download is put back in the repository.</div>
+        <p><b>No attention checks.</b> They are marked right or wrong by the server, from an answer
+        that never reaches the page. With no server the answer would have to ship with the
+        question, and a check you can read the answer to measures nothing. So it isn't asked.</p>
+        <p><b>The leaderboard is a snapshot.</b> It is built from the ledger each time the site is
+        rebuilt, so it shows work that has been applied, not work still sitting in someone's
+        browser.</p>
+      </div></details>` : "");
 }
 
 /* --- keyboard ------------------------------------------------------------ */
