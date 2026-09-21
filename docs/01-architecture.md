@@ -110,9 +110,9 @@ Current output over the 128 eligible pages:
 
 | | |
 |---|---|
-| Candidates | **661**, all with unique UIDs |
+| Candidates | **720**, all with unique UIDs |
 | Statement forms | imperative · negative imperative · modal |
-| With hand-authored gold examples | 366 (55%) |
+| With hand-authored gold examples | 427 (59%) |
 | With *paired* compliant + violating examples | 83 |
 | Gold example sentences harvested | 520 |
 
@@ -126,7 +126,7 @@ blocks are harvested but **not** assigned a polarity — guessing it is precisel
 mistake being guarded against. Octavius generated its own test strings instead and
 inverted them wholesale.
 
-661 is the number that matters. It is small enough for one person to review.
+720 is the number that matters. It is small enough for one person to review.
 
 These counts are checked against the published pages by
 `python -m derek.eval.audit_extraction` — see

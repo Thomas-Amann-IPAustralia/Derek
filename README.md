@@ -23,7 +23,7 @@ lets the user keep the original or accept a change. It is the successor to **Oct
 | Heading fidelity | `trafilatura` flattened levels; structure was guessed back | Levels taken from the source DOM |
 | Reproducibility | Re-running produced a different rulebook | Byte-identical across runs; CI-enforced |
 | Polarity | No field for it; 62% of rules detected the compliant pattern | `violation_condition` + separate compliant/violating examples, guarded three ways |
-| Test data | Model-generated alongside the rule it tested | **489 gold sentences** harvested from the manual's own *Write this* / *Not this* blocks |
+| Test data | Model-generated alongside the rule it tested | **2,390 gold example lines** harvested from the manual's own *Write this* / *Not this* blocks |
 | Quality gate | None; product-level suppression hid the problem | Dogfood gate on raw output, in CI |
 | Human review | 3,114 rows, reviewed after the fact | Nothing loads until a human accepts it |
 | Rules | Model-generated Python, `exec()`d with full builtins | Declarative data from a closed matcher vocabulary |
@@ -39,8 +39,8 @@ Foundations built; no rules reviewed yet — by design.
 |---|---|
 | Offline Style Manual snapshot | 186 pages |
 | Eligible rule-source pages | 128 |
-| Deterministic rule candidates | **661** |
-| With hand-authored gold examples | 366 (55%) |
+| Deterministic rule candidates | **720** |
+| With hand-authored gold examples | 427 (59%); 169 with a *paired* compliant + violating |
 | With *paired* compliant + violating examples | 83 |
 | Gold example sentences | 520 |
 | Accepted into the runtime | **0** |
@@ -92,7 +92,7 @@ pytest tests/ -v
   corpus/pages/**.md
         │  Layer 1 — EXTRACTION      pure function of the corpus; no model
         ▼
-  661 candidates (stable uid, statement, heading path, gold examples)
+  720 candidates (stable uid, statement, heading path, gold examples)
         │  Layer 2 — INTERPRETATION  model proposes, human decides
         ▼
   ledger/rules.jsonl
@@ -162,9 +162,10 @@ full review history. See [`docs/03-rule-ledger-schema.md`](docs/03-rule-ledger-s
 | [01 — Architecture](docs/01-architecture.md) | The layered design and what each layer guarantees |
 | [02 — Decision log](docs/02-decisions.md) | 19 ADRs: what was decided, why, what it costs |
 | [03 — Rule ledger](docs/03-rule-ledger-schema.md) | The data contract |
-| [04 — Roadmap](docs/04-roadmap.md) | Phases, and how to get from 661 candidates to working rules |
+| [04 — Roadmap](docs/04-roadmap.md) | Phases, and how to get from 720 candidates to working rules |
 | [05 — Open questions](docs/05-open-questions.md) | What is genuinely undecided, with recommendations |
 | [06 — Extraction audit](docs/06-extraction-audit.md) | Candidates checked against the pages they came from, and what that found |
+| [07 — Extraction hand-audit](docs/07-extraction-hand-audit.md) | A heading-by-heading read of a random page sample: precision, recall, and why 720 is not 801 |
 
 ---
 

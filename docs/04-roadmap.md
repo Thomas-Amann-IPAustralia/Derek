@@ -14,34 +14,34 @@ accommodations for both are already made ([ADR-012](02-decisions.md#adr-012-form
 |---|---|
 | Offline snapshot | 186 pages carried over from Octavius, re-normalised |
 | Eligible rule-source pages | 128 (58 excluded, with reasons, per [ADR-005](02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred)) |
-| Deterministic candidates | **661**, unique UIDs, byte-identical across runs |
-| With gold examples | 366 (55%); 83 with *paired* compliant + violating |
+| Deterministic candidates | **720**, unique UIDs, byte-identical across runs |
+| With gold examples | 427 (59%); 169 with *paired* compliant + violating |
 | Reviewed | **0** — nothing loads until a human accepts it |
 
 ---
 
-## How to get from 661 candidates to working rules
+## How to get from 720 candidates to working rules
 
 This is the decision the last project got wrong, so it is worth being explicit. Three
 approaches are viable.
 
 ### Option A — Author every rule by hand
 
-You write the specification, polarity, scope and matcher for each of the 661.
+You write the specification, polarity, scope and matcher for each of the 720.
 
 - **For:** maximum fidelity. Every rule is one you understand completely.
-- **Against:** roughly 10 minutes per rule is **≈90 hours**. Realistically it stalls.
+- **Against:** roughly 10 minutes per rule is **≈120 hours**. Realistically it stalls.
 - **Verdict:** not reasonable as a whole-corpus strategy — but see the hybrid below,
   where it is exactly right for a small set.
 
 ### Option B — Model fills everything, you accept or correct
 
 The pipeline pre-fills `clarity`, `direction`, `unit`, `applies_to`,
-`violation_condition` and a proposed `matcher` for all 661. You work the review queue,
+`violation_condition` and a proposed `matcher` for all 720. You work the review queue,
 correcting rather than authoring.
 
 - **For:** matches the stated preference (correcting beats writing from scratch). All
-  661 get a first pass.
+  720 get a first pass.
 - **Against:** you pay for model proposals on rules you were always going to discard,
   and a plausible-looking wrong proposal is harder to spot than a blank field. This is
   the failure mode that produced Octavius's polarity inversions — the output *looked*
@@ -58,7 +58,7 @@ Two passes with different economies.
 N/A rules" UI, and it runs at roughly **15–30 seconds per rule** because it needs
 judgement, not authoring.
 
-> 661 candidates × ~20s ≈ **3.5–4.5 hours**, realistically two or three sittings.
+> 720 candidates × ~20s ≈ **4–5 hours**, realistically two or three sittings.
 
 Based on the Octavius corpus composition, expect **180–300 survivors**. Everything
 scoped to images, video, social posts or page metadata drops out here — the class that
@@ -66,7 +66,7 @@ generated Octavius's worst noise ([postmortem F5](00-postmortem-octavius.md#f5--
 
 **Pass 2 — fill and correct.** Model proposals run **only on survivors**, and only for
 the fields that survived triage. You correct. The `Write this` / `Not this` pairs are
-already attached to 77 of them, so their polarity is grounded in editorial fact rather
+already attached to 169 of them, so their polarity is grounded in editorial fact rather
 than a model's guess.
 
 > ~240 rules × ~4 min ≈ **16 hours**, and it is interruptible.
@@ -111,9 +111,9 @@ orphans its rules, and a re-run with no upstream change produces an empty change
 - [x] Pipeline-owned fields (`uid`, `source`, `derivation`) rejected by the API, so a
       rebuild can never clobber a decision and review can never corrupt provenance
 - [ ] Bulk operations by page, section and predicted scope
-- [ ] **Run Pass 1 over all 661** ← the actual next task
+- [ ] **Run Pass 1 over all 720** ← the actual next task
 
-**Done when:** the reviewed count is 661 and the survivor set is known.
+**Done when:** the reviewed count is 720 and the survivor set is known.
 
 ### Phase 3 — Tier 0 detection
 
@@ -135,7 +135,7 @@ confidence.
 ### Phase 5 — Tier 1 classifier
 
 - [ ] Context vocabulary finalised (must precede large-scale labelling)
-- [ ] Expand the 489 gold sentences into a labelled set; hold out a calibration split
+- [ ] Expand the 2,390 gold example lines into a labelled set; hold out a calibration split
 - [ ] Fine-tune ModernBERT multi-label; export int8 ONNX
 - [ ] Temperature-scale on held-out data; integrate behind the backend interface
 

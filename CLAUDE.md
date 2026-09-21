@@ -44,13 +44,15 @@ Violating any of these reintroduces a known failure. Each links to its rationale
 ## Commands
 
 ```bash
-pip install -r requirements.txt            # runtime + extraction
-pip install -r requirements-pipeline.txt   # + scraping (Selenium, trafilatura)
+pip install -r requirements.txt            # runtime, extraction, HTML->Markdown
+pip install -r requirements-pipeline.txt   # + scraping transport (Selenium, requests)
 
 python -m derek.extract.build              # corpus → ledger
 python -m derek.extract.build --check      # CI: fail if rebuilding would change it
 python -m derek.eval.dogfood               # gate accepted rules
 python -m derek.eval.dogfood --octavius reference/octavius-v1/rules_working_draft.v1.jsonl
+python -m derek.eval.audit_headings counts # classifier census; see docs/07
+python -m derek.eval.audit_headings gold-recall   # exits 1 if a gold-example rule is dropped
 
 pytest tests/ -v
 ```
@@ -66,7 +68,7 @@ stylemanual.gov.au
 corpus/pages/**.md
   │ Layer 1  derek/extract/   pure function of the corpus; NO MODEL
   ▼
-661 candidates (stable uid, statement, heading path, gold examples)
+720 candidates (stable uid, statement, heading path, gold examples)
   │ Layer 2  derek/ledger/    model proposes, human decides
   ▼
 ledger/rules.jsonl
@@ -98,6 +100,7 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/ledger/store.py` | Canonical JSONL read/write |
 | `derek/ledger/reconcile.py` | new / altered / reworded / orphaned |
 | `derek/eval/dogfood.py` | The quality gate |
+| `derek/eval/audit_headings.py` | Hand-audit instrument for the classifier (docs/07) |
 | `schema/rule.schema.json` | Machine-checkable ledger contract |
 | `ledger/rules.jsonl` | The rule ledger |
 | `reference/octavius-v1/` | **NON-AUTHORITATIVE.** Recall checklist and negative test set only |
@@ -130,9 +133,20 @@ passing dogfood gate.
 ## Code style
 
 **Python.** Type hints throughout (`from __future__ import annotations`). Dataclasses
-for data, plain functions for logic. Stdlib-only in `derek/corpus/` and `derek/extract/`
-so the snapshot workflow does not need the full pipeline requirements. No linter is
-configured; match surrounding code.
+for data, plain functions for logic. No linter is configured; match surrounding code.
+
+**Dependencies are tiered deliberately.** `derek/extract/`, `derek/ledger/` and most of
+`derek/corpus/` are stdlib-only. Two exceptions, both necessary:
+`derek/corpus/to_markdown.py` needs an HTML parser (`beautifulsoup4`, `lxml`) to read
+heading levels from the DOM (ADR-020), and `derek/corpus/fetch.py` needs `selenium`
+and `requests` for the transport. `requirements.txt` therefore carries the parser —
+CI installs only it plus `requirements-dev.txt`, and the tests import
+`derek.corpus.to_markdown`. Keep new dependencies out of `derek/extract/` and
+`derek/ledger/` entirely.
+
+`tests/test_dependency_tiers.py` asserts both halves of that statically, because
+they have broken before: a dependency CI cannot install aborts pytest at
+*collection*, which takes every invariant test down with it.
 
 **Determinism.** Layers 0 and 1 must be pure functions. No clock, no randomness, no set
 or dict iteration order leaking into output, no model calls. If you need to sort, sort

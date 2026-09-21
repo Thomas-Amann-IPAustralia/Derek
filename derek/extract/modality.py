@@ -65,6 +65,15 @@ def classify_modality(statement: str, statement_form: str) -> tuple[str, str]:
         return Modality.MUST_NOT, "bare negative imperative (ambiguous: MUST_NOT vs SHOULD_NOT)"
     if statement_form == "imperative":
         return Modality.MUST, "bare imperative (ambiguous: MUST vs SHOULD)"
+    if statement_form == "exemplified":
+        # Admitted on the manual's example pair rather than on its wording,
+        # so the wording carries no modal cue by construction. Guessing MUST
+        # here would invent a severity nobody asserted (D-12); the reviewer
+        # has the example pair in front of them and can decide in a keystroke.
+        return Modality.SHOULD, (
+            "no modal cue — admitted on a compliant/violating example pair; "
+            "set modality during review"
+        )
     return Modality.SHOULD, "no cue; defaulted"
 
 
