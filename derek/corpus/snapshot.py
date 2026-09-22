@@ -32,6 +32,7 @@ from derek.corpus.diff import (
     PageState, Snapshot, diff_snapshots, load_lock, write_changeset, write_lock,
 )
 from derek.corpus.eligibility import load_eligibility
+from derek.corpus.freeze import load_freeze
 from derek.corpus.normalise import NormalisedPage
 from derek.corpus.to_markdown import ExtractionError, extract_markdown
 
@@ -39,12 +40,21 @@ REPO = Path(__file__).resolve().parents[2]
 PAGES = REPO / "corpus" / "pages"
 LOCK = REPO / "corpus" / "snapshot.lock.json"
 CHANGES = REPO / "corpus" / "changes"
+DRIFT = REPO / "corpus" / "drift.json"
 HEARTBEAT = REPO / "corpus" / ".heartbeat"
 ELIGIBILITY = REPO / "corpus" / "eligibility.yaml"
 
 DEFAULT_SITEMAP_URL = "https://www.stylemanual.gov.au/sitemap.xml"
 SWEEP_SLICES = 7          # a full re-hash spread across a week
 EXTRACTOR_ID = "derek.to_markdown/1"
+
+
+def _display(path: Path) -> str:
+    """Repo-relative where possible, absolute otherwise (paths move under test)."""
+    try:
+        return str(path.relative_to(REPO))
+    except ValueError:
+        return str(path)
 
 
 def sweep_slice_of(path: str) -> int:
@@ -131,6 +141,94 @@ def _select_for_fetch(entries, lock: Snapshot, full: bool, sweep_slice: int | No
     return selected, reasons
 
 
+def _write_page(rel: str, text: str, frozen: bool) -> bool:
+    """Write one corpus page. A no-op while the corpus is frozen (ADR-024).
+
+    Named, rather than inline, so the freeze guard is a single thing a test can
+    watch. Golden-set span offsets are anchored to this text; rewriting it under
+    a recorded span is the one failure the freeze exists to prevent.
+    """
+    if frozen:
+        return False
+    target = PAGES / rel
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(text, encoding="utf-8")
+    return True
+
+
+def _remove_page(rel: str, frozen: bool) -> bool:
+    """Delete a page that left the sitemap. Also a no-op while frozen.
+
+    Deliberately included: a page vanishing upstream must not delete the local
+    file out from under an annotation session. It is reported in drift.json
+    instead, and acted on at unfreeze.
+    """
+    if frozen:
+        return False
+    target = PAGES / rel
+    if not target.exists():
+        return False
+    target.unlink()
+    return True
+
+
+def _write_drift(current: Snapshot, previous: Snapshot, checked: set[str],
+                 freeze) -> dict:
+    """Record how far the live site has moved from the frozen corpus.
+
+    Cumulative and timestamp-free, both on purpose. Cumulative because one run
+    only re-hashes the pages in today's sweep slice, so an overwritten
+    report would forget yesterday's finding; timestamp-free because an
+    unchanged report then produces a byte-identical file and no daily commit —
+    ``git log -- corpus/drift.json`` becomes the drift timeline, with no noise
+    between real entries.
+    """
+    import json
+
+    existing = {}
+    if DRIFT.exists():
+        for row in json.loads(DRIFT.read_text(encoding="utf-8")).get("drifted", []):
+            existing[row["path"]] = row
+
+    for rel in sorted(checked):
+        live = current.pages.get(rel)
+        frozen_state = previous.pages.get(rel)
+        if live is None:
+            continue
+        if frozen_state is None:
+            existing[rel] = {"path": rel, "url": live.url, "state": "added",
+                             "frozen_sha256": "", "live_sha256": live.sha256}
+        elif live.sha256 != frozen_state.sha256:
+            existing[rel] = {"path": rel, "url": live.url, "state": "altered",
+                             "frozen_sha256": frozen_state.sha256,
+                             "live_sha256": live.sha256}
+        else:
+            existing.pop(rel, None)          # drifted back, or never had
+
+    for rel in sorted(set(previous.pages) - set(current.pages)):
+        existing[rel] = {"path": rel, "url": previous.pages[rel].url,
+                         "state": "removed",
+                         "frozen_sha256": previous.pages[rel].sha256,
+                         "live_sha256": ""}
+
+    report = {
+        "_meta": {
+            "note": ("How far stylemanual.gov.au has moved from the frozen "
+                     "corpus. Cumulative across runs and carries no timestamp, "
+                     "so an unchanged report is a byte-identical file. See "
+                     "corpus/freeze.yaml and ADR-024."),
+            "frozen_at": freeze.frozen_at,
+            "lock_digest": freeze.lock_digest,
+        },
+        "drifted": [existing[k] for k in sorted(existing)],
+    }
+    DRIFT.write_text(
+        json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    return report
+
+
 def run(full: bool, sweep_slice: int | None, sitemap_url: str, dry_run: bool) -> int:
     # Imported lazily: the transport needs selenium, which the rest of the
     # corpus layer deliberately does not.
@@ -138,6 +236,8 @@ def run(full: bool, sweep_slice: int | None, sitemap_url: str, dry_run: bool) ->
 
     eligibility = load_eligibility(ELIGIBILITY)
     previous = load_lock(LOCK)
+    freeze = load_freeze()
+    print(freeze.banner())
 
     driver = transport.initialize_driver()
     if driver is None:
@@ -169,6 +269,10 @@ def run(full: bool, sweep_slice: int | None, sitemap_url: str, dry_run: bool) ->
 
         current = Snapshot(generated_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
         failed: list[str] = []
+        # Paths we tried and could not read. A failed fetch teaches us nothing,
+        # so it must not count as "checked and clean" and clear a drift entry
+        # recorded on an earlier run.
+        unread: set[str] = set()
 
         # Carry forward pages we did not re-fetch this run.
         sitemap_paths = {url_to_path(e["loc"]) for e in entries}
@@ -184,6 +288,7 @@ def run(full: bool, sweep_slice: int | None, sitemap_url: str, dry_run: bool) ->
             html = transport.fetch_with_retry(url, driver)
             if html is None:
                 failed.append(url)
+                unread.add(rel)
                 if (prev := previous.pages.get(rel)):
                     current.pages[rel] = prev      # never drop a page on a fetch failure
                 continue
@@ -197,14 +302,13 @@ def run(full: bool, sweep_slice: int | None, sitemap_url: str, dry_run: bool) ->
             except ExtractionError as exc:
                 print(f"    extraction failed: {exc}", file=sys.stderr)
                 failed.append(url)
+                unread.add(rel)
                 if (prev := previous.pages.get(rel)):
                     current.pages[rel] = prev
                 continue
 
             page = NormalisedPage(rel, markdown)
-            target = PAGES / rel
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_text(page.text, encoding="utf-8")
+            _write_page(rel, page.text, freeze.frozen)
 
             current.pages[rel] = PageState(
                 url=url, path=rel, sha256=page.sha256,
@@ -219,21 +323,38 @@ def run(full: bool, sweep_slice: int | None, sitemap_url: str, dry_run: bool) ->
 
     # Removals: a page in the lock but no longer in the sitemap is gone.
     for path in sorted(set(previous.pages) - set(current.pages)):
-        target = PAGES / path
-        if target.exists():
-            target.unlink()
+        if _remove_page(path, freeze.frozen):
             print(f"removed upstream: {path}")
+        elif freeze.frozen:
+            print(f"removed upstream (frozen, kept on disk): {path}")
 
-    changeset = diff_snapshots(previous, current)
-    write_lock(LOCK, current)
+    # The heartbeat is refreshed either way. The CI freshness gate asks whether
+    # the crawler is alive, not whether the corpus is current, and the 60-day
+    # scheduled-workflow-disable trap it guards does not care that we are frozen
+    # (ADR-001).
     HEARTBEAT.write_text(
         datetime.now(timezone.utc).isoformat(timespec="seconds") + "\n", encoding="utf-8"
     )
 
+    if freeze.frozen:
+        # Nothing is applied: the lock still describes the frozen corpus, and no
+        # changeset is written because nothing changed on disk to reconcile.
+        checked = set(reasons) - unread
+        report = _write_drift(current, previous, checked, freeze)
+        n = len(report["drifted"])
+        print(f"\nfrozen: read {len(checked)} of {len(reasons)} page(s); "
+              f"{n} page(s) now differ from the frozen corpus.")
+        if n:
+            print(f"see {_display(DRIFT)}; unfreezing is ADR-024's runbook.")
+        return 0
+
+    changeset = diff_snapshots(previous, current)
+    write_lock(LOCK, current)
+
     print("\nchangeset:", changeset.summary(), f"({changeset.kind})")
     if not changeset.empty:
         out = write_changeset(CHANGES, changeset)
-        print(f"wrote {out.relative_to(REPO)}")
+        print(f"wrote {_display(out)}")
 
     if changeset.removed or changeset.altered:
         print("\nRules derived from these pages need reconciliation:")
@@ -266,6 +387,11 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
 
     if args.rebuild_lock:
+        freeze = load_freeze()
+        if freeze.frozen:
+            # Safe while frozen: it re-derives the lock from a corpus nothing is
+            # rewriting, so it can only be a no-op or a repair.
+            print(freeze.banner())
         snap = scan_disk()
         cs = diff_snapshots(load_lock(LOCK), snap)
         write_lock(LOCK, snap)

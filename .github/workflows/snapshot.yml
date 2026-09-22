@@ -73,7 +73,22 @@ jobs:
             python -m derek.corpus.snapshot --sweep-slice "${{ steps.slice.outputs.n }}"
           fi
 
+      # While corpus/freeze.yaml declares a freeze, the snapshot above wrote no
+      # pages and no lock, so there is nothing for the reconciler to reconcile —
+      # and rebuilding would be worse than pointless: it would move rule UIDs
+      # under the spans the annotator is recording against them (ADR-024).
+      - name: Is the corpus frozen?
+        id: freeze
+        run: |
+          if python -c "import sys; from derek.corpus.freeze import load_freeze; sys.exit(0 if load_freeze() else 1)"; then
+            echo "frozen=true" >> "$GITHUB_OUTPUT"
+            python -c "from derek.corpus.freeze import load_freeze; print(load_freeze().banner())"
+          else
+            echo "frozen=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Reconcile rules against the new corpus
+        if: steps.freeze.outputs.frozen == 'false'
         run: python -m derek.extract.build
 
       - name: Commit
@@ -96,11 +111,20 @@ jobs:
         run: |
           {
             echo "### Corpus snapshot"
-            latest=$(ls -1t corpus/changes/*.json 2>/dev/null | head -1)
-            if [ -n "$latest" ]; then
-              echo '```json'; cat "$latest" | head -40; echo '```'
+            if [ "${{ steps.freeze.outputs.frozen }}" = "true" ]; then
+              python -c "from derek.corpus.freeze import load_freeze; print(load_freeze().banner())"
+              echo
+              echo "Drift from the frozen corpus:"
+              echo '```json'
+              head -40 corpus/drift.json 2>/dev/null || echo "{}"
+              echo '```'
             else
-              echo "No changes this run."
+              latest=$(ls -1t corpus/changes/*.json 2>/dev/null | head -1)
+              if [ -n "$latest" ]; then
+                echo '```json'; cat "$latest" | head -40; echo '```'
+              else
+                echo "No changes this run."
+              fi
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
