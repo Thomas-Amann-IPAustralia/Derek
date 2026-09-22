@@ -336,3 +336,84 @@ def test_the_committed_golden_set_resolves_against_the_corpus():
             assert not r.rebased, (
                 f"{page}: {span.span_id} had to be re-anchored — the corpus moved "
                 f"under a recorded span, which corpus/freeze.yaml exists to prevent")
+
+
+# ---------------------------------------------------------------------------
+# Measurement (derek/eval/span_recall.py)
+# ---------------------------------------------------------------------------
+
+def _sweep(tmp_path, blocks, marked, page=PAGE):
+    """A throwaway golden set: these spans, on a page declared swept."""
+    spans = tmp_path / "spans.jsonl"
+    pages = tmp_path / "pages.jsonl"
+    spans.write_text(
+        "\n".join(json.dumps(make_span(b, page=page).to_dict()) for b in marked) + "\n",
+        encoding="utf-8")
+    pages.write_text(
+        json.dumps({"page_path": page, "status": "complete", "by": "TA"}) + "\n",
+        encoding="utf-8")
+    return spans, pages
+
+
+def test_nothing_is_measured_until_a_page_is_swept(tmp_path, blocks):
+    """Precision over an unswept page would be fiction.
+
+    A heading with no span on it might be a rule nobody has reached yet. Only the
+    sweep marker turns that absence into a labelled negative, and without
+    negatives you can fit a heuristic but you cannot measure one.
+    """
+    from derek.eval import span_recall
+
+    spans = tmp_path / "spans.jsonl"
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    spans.write_text(json.dumps(make_span(prose).to_dict()) + "\n", encoding="utf-8")
+    (tmp_path / "pages.jsonl").write_text("", encoding="utf-8")
+
+    assert span_recall.measure(spans, tmp_path / "pages.jsonl") == []
+
+
+def test_the_report_separates_a_missed_heading_from_an_unreachable_rule(tmp_path, blocks):
+    """The distinction the whole exercise turns on.
+
+    A rule the branches missed on a heading is a heuristic that can be improved.
+    A rule that is not on a heading at all is one no heading heuristic reaches at
+    any threshold — the class docs/07 estimated at ~60 corpus-wide by hand, and
+    the number that says whether a prose pass is needed (docs/05 Q6).
+    """
+    from derek.eval import span_recall
+
+    text = page_text()
+    proposed = {c.statement for c in extract_candidates(PAGE, text)}
+    hit = next(b for b in blocks
+               if b.kind == "heading" and b.plain in proposed)
+    missed = next(b for b in blocks
+                  if b.kind == "heading" and b.level >= 2 and b.plain not in proposed)
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+
+    spans, pages = _sweep(tmp_path, blocks, [hit, missed, prose])
+    [result] = span_recall.measure(spans, pages)
+
+    assert result.hits == [hit.plain]
+    assert result.missed_heading == [missed.plain]
+    assert result.missed_prose == [prose.plain]
+    assert result.golden == 3
+    assert result.reachable == 2, "a prose rule is not reachable by a heading heuristic"
+    assert hit.plain not in result.spurious
+    assert result.spurious, "headings the human did not mark are the precision cost"
+
+
+def test_the_totals_are_arithmetic_not_assertion(tmp_path, blocks):
+    from derek.eval import span_recall
+
+    text = page_text()
+    proposed = {c.statement for c in extract_candidates(PAGE, text)}
+    hits = [b for b in blocks if b.kind == "heading" and b.plain in proposed][:3]
+    spans, pages = _sweep(tmp_path, blocks, hits)
+    results = span_recall.measure(spans, pages)
+    totals = span_recall._totals(results)
+
+    assert totals["hits"] == len(hits)
+    assert totals["golden_rules"] == sum(r.golden for r in results)
+    assert totals["precision"] == totals["hits"] / (totals["hits"] + totals["spurious"])
+    assert totals["recall_reachable"] >= totals["recall_overall"]
+    span_recall.report(results)        # must not raise on real numbers

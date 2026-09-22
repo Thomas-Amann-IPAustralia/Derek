@@ -111,10 +111,10 @@ Current output over the 128 eligible pages:
 | | |
 |---|---|
 | Candidates | **736**, all with unique UIDs |
-| Statement forms | imperative · negative imperative · modal |
-| With hand-authored gold examples | 427 (59%) |
-| With *paired* compliant + violating examples | 83 |
-| Gold example sentences harvested | 520 |
+| Statement forms | imperative · negative imperative · modal · exemplified · descriptive |
+| With at least one polarised gold example | 170 |
+| With *paired* compliant + violating examples | **169** |
+| Gold example sentences harvested | 812 |
 
 Two runs produce byte-identical output; `python -m derek.extract.build --check` fails
 CI if that ever stops being true.

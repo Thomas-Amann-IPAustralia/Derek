@@ -1,8 +1,17 @@
 # Review tool
 
-Round 1 of rule review: deciding which of the 720 extracted candidates a computer
-could realistically check in a piece of writing. See
-[docs/04-roadmap.md](../../docs/04-roadmap.md) for where this sits.
+Card-by-card triage: one rule, one verdict, one gesture. Deciding which extracted
+candidates a computer could realistically check in a piece of writing.
+
+> **Identifying rules has moved to [`tools/annotate/`](../annotate/)**
+> ([ADR-023](../../docs/02-decisions.md#adr-023--the-golden-span-set-is-a-declared-extraction-input)).
+> The heading walk this queue is built from misses roughly 60 rules the manual states as
+> description, and those never reach a card, so no number of passes over the queue finds
+> them. Marking spans on the manual itself does.
+>
+> This app is **retained, not superseded**. Its shape is exactly right for the thousands
+> of small independent judgements in Phase 5 — reviewing the synthetic training pairs —
+> and it remains the fastest way to work a queue of candidates that already exists.
 
 Two ways to run it. Same app, same screens, same decisions.
 
@@ -90,7 +99,7 @@ never corrupt a rule's provenance.
 **Clarity starts blank and a rule cannot be kept until it is set.** The extractor
 deliberately makes no claim about how clear a rule is — asserting one would be a
 judgement nobody made. Pre-filling a default would quietly manufacture that judgement
-720 times.
+once per candidate, at the scale of the whole ledger.
 
 **Rejections need a reason from a closed list.** "We binned 300 rules" is a statistic.
 "We binned 80 because they govern images rather than text" is a fix to the extractor.
