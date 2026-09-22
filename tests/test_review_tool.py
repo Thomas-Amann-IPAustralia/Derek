@@ -148,11 +148,47 @@ def test_an_interpretation_has_to_be_written_down():
     server._apply(rule, {
         "review_status": ReviewStatus.ACCEPTED,
         "clarity": Clarity.AMBIGUOUS_RESOLVABLE,
-        "note": "assumed 'short' means under 25 words",
+        "specification": "flag sentences over 25 words",
     }, "TA")
     assert rule.review.status == ReviewStatus.ACCEPTED
     assert rule.disambiguation_log, "the assumption must be logged, not just noted"
     assert rule.disambiguation_log[0]["by"] == "TA"
+    assert rule.disambiguation_log[0]["assumption"] == "flag sentences over 25 words"
+
+
+def test_an_interpretation_in_the_note_alone_is_refused():
+    """A note is commentary; `specification` is what detection implements.
+
+    `Rule.effective_statement` returns ``specification or source.statement``, so
+    an interpretation recorded only in the note leaves the detector matching the
+    ambiguous original wording — a rule that does not do what its record says,
+    which is the Octavius shape. The schema agrees: `ambiguous_resolvable`
+    requires `specification`. Four decisions landed through the older, laxer
+    check and made the ledger fail its own schema.
+    """
+    rule = a_rule()
+    with pytest.raises(ValueError, match="your interpretation"):
+        server._apply(rule, {
+            "review_status": ReviewStatus.ACCEPTED,
+            "clarity": Clarity.AMBIGUOUS_RESOLVABLE,
+            "note": "assumed 'short' means under 25 words",
+        }, "TA")
+    assert rule.review.status == ReviewStatus.PROPOSED
+    assert not rule.disambiguation_log
+
+
+def test_every_resolved_ambiguity_in_the_ledger_carries_its_specification():
+    """The schema's conditional, asserted against the real ledger.
+
+    `tests/test_invariants.py` checks this too, from the schema side. This one
+    names the gate that has to hold it: `server._apply`.
+    """
+    from derek.ledger.store import load_ledger
+    ledger = Path(__file__).resolve().parents[1] / "ledger" / "rules.jsonl"
+    for rule in load_ledger(ledger).values():
+        if rule.clarity == Clarity.AMBIGUOUS_RESOLVABLE:
+            assert rule.specification, rule.uid
+            assert rule.disambiguation_log, rule.uid
 
 
 def test_rejecting_needs_no_scope_but_records_the_reasons():

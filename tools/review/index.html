@@ -576,8 +576,8 @@ function applyLocally(op){
   const reasons = (p.reasons || []).filter(Boolean);
   if(reasons.length) note = ("[" + reasons.join(", ") + "] " + note).trim();
   if(p.elapsed_ms != null && p.elapsed_ms < S.hastyMs) note = (note + " (hasty)").trim();
-  if(r.clarity === "ambiguous_resolvable" && !(note || r.specification || r.violation_condition))
-    throw new Error("an ambiguous_resolvable reading has to be written down");
+  if(r.clarity === "ambiguous_resolvable" && !r.specification)
+    throw new Error("an ambiguous_resolvable reading has to be written down in 'your interpretation'");
 
   r.history = (r.history || []).concat([{ from: r.status, to: status, by: op.by, at: op.at, note }]);
   r.status = status; r.decided_by = op.by; r.decided_at = op.at; r.note = note;
@@ -1030,12 +1030,12 @@ function scopeSheet(r, status, ev){
         round 2 only looks at what you scope here. Suggested values are pre-filled;
         change anything that looks wrong.</div>
 
-      ${amend ? `<div class="field">
-        <div class="flabel"><h4>Your wording</h4>
+      <div class="field" id="fld-spec"${amend ? "" : ' style="display:none"'}>
+        <div class="flabel"><h4 id="specLabel">Your wording</h4>
           <button class="ihelp" onclick="explain('review_status','amended')">ⓘ</button></div>
-        <p class="why">The manual's original wording is kept alongside and never overwritten.</p>
+        <p class="why" id="specWhy">The manual's original wording is kept alongside and never overwritten.</p>
         <textarea id="f-spec" placeholder="State the rule as you'd want it implemented…">${esc(draft.specification)}</textarea>
-      </div>` : ""}
+      </div>
 
       ${fieldHtml("unit", draft.unit, false, "unit")}
       ${fieldHtml("clarity", draft.clarity, false, "clarity", true)}
@@ -1054,7 +1054,7 @@ function scopeSheet(r, status, ev){
     `);
     syncScope();
   };
-  S._draft = draft; S._draftRule = r; S._draftEv = ev;
+  S._draft = draft; S._draftRule = r; S._draftEv = ev; S._draftStatus = status;
   render();
 }
 
@@ -1108,13 +1108,21 @@ function pick(el){
 
 function syncScope(){
   const d = S._draft; if(!d) return;
-  const needsNote = d.clarity === "ambiguous_resolvable";
+  // An interpretation belongs in `specification`, not the note: detection
+  // implements `specification || statement`, so a reading left in a note is a
+  // reading nothing acts on. The note stays optional commentary.
+  const fuzzy = d.clarity === "ambiguous_resolvable";
+  const amend = S._draftStatus === "amended";
   const req = $("req-clarity");
   if(req) req.style.display = d.clarity ? "none" : "";
-  const why = $("noteWhy");
-  if(why) why.innerHTML = needsNote
-    ? '<b style="color:var(--bin)">Required.</b> You said the wording is fuzzy but you can pin it down — write down the interpretation you\'d build to, so the next person can argue with it rather than guess at it.'
-    : "Anything the next person would want to know.";
+  const fld = $("fld-spec");
+  if(fld) fld.style.display = (amend || fuzzy) ? "" : "none";
+  const lbl = $("specLabel");
+  if(lbl) lbl.textContent = amend ? "Your wording" : "Your interpretation";
+  const swhy = $("specWhy");
+  if(swhy) swhy.innerHTML = fuzzy && !amend
+    ? '<b style="color:var(--bin)">Required.</b> You said the wording is fuzzy but you can pin it down. Write the interpretation you\'d build to — this is the text detection implements, so an assumption left in the note would never be acted on.'
+    : "The manual's original wording is kept alongside and never overwritten.";
   const btn = $("lockBtn");
   if(btn) btn.disabled = !d.clarity;
   const disq = d.unit === "artifact" || d.clarity === "not_automatable";
@@ -1127,8 +1135,8 @@ async function lockIn(status){
   if(!d.clarity){ toast("Say how clear the rule is first"); return; }
   const note = ($("f-note")?.value || "").trim();
   const spec = ($("f-spec")?.value || "").trim();
-  if(d.clarity === "ambiguous_resolvable" && !note && !spec){
-    toast("Write down the interpretation you made"); return;
+  if(d.clarity === "ambiguous_resolvable" && !spec){
+    toast("Write the interpretation in 'your interpretation' — a note is not implemented"); return;
   }
   if(d.unit === "artifact" || d.clarity === "not_automatable"){
     closeSheet(); rejectSheet(r, ev,
