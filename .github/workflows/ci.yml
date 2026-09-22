@@ -24,6 +24,12 @@ jobs:
       - name: Ledger is reproducible from the corpus (ADR-002)
         run: python -m derek.extract.build --check
 
+      # Golden-set spans are anchored to the block projection, so a change to
+      # the renderer re-anchors every recorded span. Catch it here rather than
+      # discovering it as a span that resolved to the wrong sentence (ADR-023).
+      - name: Block projection matches its lock (ADR-023)
+        run: python -m derek.extract.blocks --check
+
       # Rule quality on RAW, un-suppressed output. Octavius scored 1,438
       # findings per 1,000 words here and shipped anyway, because firing
       # budgets made the output look merely noisy (postmortem Defect 6).

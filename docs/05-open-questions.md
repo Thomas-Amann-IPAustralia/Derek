@@ -38,7 +38,7 @@ triples per mutation class, then a head-to-head on exact-match plus a "did it ch
 anything it shouldn't have" span-fidelity metric. Do not choose before that data exists.
 
 **Structural note:** Tier 2 sits behind an interface
-([ADR-010](02-decisions.md#adr-010-detection-tiers-and-cheapest-viable-routing)), so this
+([ADR-010](02-decisions.md#adr-010--detection-tiers-and-cheapest-viable-routing)), so this
 choice is reversible. It is not a foundation decision — do not treat it as one.
 
 ---
@@ -46,7 +46,7 @@ choice is reversible. It is not a foundation decision — do not treat it as one
 ## Q2 — How does Word round-tripping actually work?
 
 **Status:** design settled, implementation open.
-[ADR-012](02-decisions.md#adr-012-format-independent-document-model) fixes the shape:
+[ADR-012](02-decisions.md#adr-012--format-independent-document-model) fixes the shape:
 an OOXML `Anchor` implementation, and nothing upstream changes.
 
 What remains genuinely open is **run-boundary reconciliation**.
@@ -80,7 +80,7 @@ fraction of candidate spans cross a run boundary and how many carry mixed format
 
 ## Q3 — What should be encoded in the classifier's training input?
 
-**Status:** partly decided. [ADR-019](02-decisions.md#adr-019-training-inputs-carry-no-format-markup)
+**Status:** partly decided. [ADR-019](02-decisions.md#adr-019--training-inputs-carry-no-format-markup)
 settles the load-bearing parts:
 
 - **Format markup: never.** It is what makes the Word deferral cheap.
@@ -111,7 +111,7 @@ only if a specific rule set demands it.
 ## Q4 — What is the context vocabulary, exactly?
 
 **Status:** open and **on the critical path**.
-[ADR-015](02-decisions.md#adr-015-context-variables-chosen-by-betweenness) fixes the
+[ADR-015](02-decisions.md#adr-015--context-variables-chosen-by-betweenness) fixes the
 *method* for choosing UI controls; it does not fix the vocabulary those controls draw on.
 
 This must be drafted **before Pass 2 of the review**
@@ -140,7 +140,7 @@ pass.
 
 ## Q5 — How are Tier-0 rules calibrated with thin evidence?
 
-**Status:** open. [ADR-013](02-decisions.md#adr-013-confidence-is-calibrated-not-raw)
+**Status:** open. [ADR-013](02-decisions.md#adr-013--confidence-is-calibrated-not-raw)
 requires calibrated confidence; it does not say what to do with a rule that has three
 gold examples.
 
@@ -162,7 +162,7 @@ not, shrinkage becomes necessary.
 ## Q6 — Should prose-derived candidates be extracted at all?
 
 **Status:** open. The extractor currently reads rules from headings only
-([ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity)), yielding 720
+([ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity)), yielding 720
 candidates. Rules stated only in body prose are missed.
 
 **Recommendation:** defer. Finish triage and Tier 0 on the 720 first, then measure
@@ -179,7 +179,7 @@ count past reviewability before anything has been reviewed.
 ## Q7 — What is the deployment target?
 
 **Status:** open. The constraint is stated — free-tier Google compute — which
-[ADR-014](02-decisions.md#adr-014-core-library-with-thin-adapters) treats as binding
+[ADR-014](02-decisions.md#adr-014--core-library-with-thin-adapters) treats as binding
 (stateless core, int8 ONNX, swappable backend).
 
 Undecided: Cloud Run vs Cloud Functions vs a Colab-hosted prototype; whether the MCP
@@ -204,7 +204,7 @@ below was run, and it refuted the recommendation. See **Resolution** at the end.
 
 Rule candidates are identified by checking whether a heading opens with a verb from
 `derek/extract/data/imperative_verbs.txt`, a hand-curated list.
-[ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity) chose a lexicon over
+[ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity) chose a lexicon over
 a POS tagger because tagger output varies across model versions and would make candidate
 identity unstable.
 
@@ -219,7 +219,7 @@ silently drop a rule, and only another audit will reveal it.
 **Recommendation: replace the lexicon with a version-pinned POS tagger.** The
 determinism objection is weaker than it looked. It is really an objection to
 *uncontrolled* variation, and pinning solves that here exactly as it solves it for the
-HTML converter ([ADR-020](02-decisions.md#adr-020-heading-levels-come-from-the-dom),
+HTML converter ([ADR-020](02-decisions.md#adr-020--heading-levels-come-from-the-dom),
 where `trafilatura`'s version was pinned for the same reason). A pinned spaCy model is a
 pure function: same version, same input, same tag. A model upgrade becomes a deliberate,
 reviewed event that produces an `extractor_upgrade`-style changeset — which the

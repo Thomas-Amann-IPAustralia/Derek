@@ -40,14 +40,17 @@ Foundations built; no rules reviewed yet — by design.
 | Offline Style Manual snapshot | 186 pages |
 | Eligible rule-source pages | 128 |
 | Deterministic rule candidates | **736** |
-| With hand-authored gold examples | 427 (59%); 169 with a *paired* compliant + violating |
-| With *paired* compliant + violating examples | 83 |
-| Gold example sentences | 520 |
+| With at least one polarised gold example | 170 |
+| With a *paired* compliant + violating example | **169** |
+| Gold example sentences | 812 |
 | Accepted into the runtime | **0** |
 
 Built and tested: the snapshot layer (content-addressed, with add/alter/remove
-changesets), deterministic extraction, the rule ledger, the dogfood gate, and the
-triage UI. 67 invariant tests pass.
+changesets), deterministic extraction, the rule ledger, the dogfood gate, the
+triage UI, and the span annotator that is now the main way rules are identified
+([ADR-023](docs/02-decisions.md#adr-023--the-golden-span-set-is-a-declared-extraction-input)).
+The corpus is frozen while the golden set is drawn
+([ADR-024](docs/02-decisions.md#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn)).
 
 Not yet done: the snapshot has not been run against the live site from this repository,
 and **no rule has been triaged**. The first triage pass is the next task — see
@@ -130,7 +133,7 @@ formalise a candidate; it may never decide that one exists. That is what makes
 This only works if the conversion preserves those levels. Octavius used `trafilatura`,
 which flattens them, so 71% of its structure had to be guessed back by a heuristic.
 Derek reads the levels from the DOM instead
-([ADR-020](docs/02-decisions.md#adr-020-heading-levels-come-from-the-dom)).
+([ADR-020](docs/02-decisions.md#adr-020--heading-levels-come-from-the-dom)).
 
 ### The manual ships its own test set
 

@@ -283,7 +283,7 @@
           "label": "Fuzzy, but I can pin it down",
           "requires_note": true,
           "means": "The wording leaves room, but you can state the interpretation you would build to.",
-          "effect": "You MUST write your interpretation in the note. It gets stored as a decision with your name on it, so the next person knows an assumption was made, who made it, and can argue with it. An assumption nobody wrote down is how the last project got rules that did the opposite of what they claimed.",
+          "effect": "You MUST write your interpretation in 'your interpretation'. That field is what detection implements \u2014 the manual's own wording is kept beside it and never overwritten (ADR-017), but an assumption left in the free-text note would never be acted on. It gets stored as a decision with your name on it, so the next person knows an assumption was made, who made it, and can argue with it. An assumption nobody wrote down is how the last project got rules that did the opposite of what they claimed.",
           "example": "“Keep sentences short.” How short? Write: ‘flag sentences over 25 words’. Now it is buildable and the threshold is visible."
         },
         "ambiguous_deferred": {

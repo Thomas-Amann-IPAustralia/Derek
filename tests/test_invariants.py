@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import collections
 import json
+import os
+import sys
 from pathlib import Path
 
 import pytest
@@ -110,8 +112,8 @@ def test_uid_ignores_unicode_and_whitespace_variation():
 
 def test_extraction_is_reproducible_over_the_whole_corpus():
     """D-7 / postmortem F8: two runs must extract exactly the same rules."""
-    first, _ = collect_candidates()
-    second, _ = collect_candidates()
+    first, _, _ = collect_candidates()
+    second, _, _ = collect_candidates()
     assert [c.uid for c in first] == [c.uid for c in second]
     assert [c.statement for c in first] == [c.statement for c in second]
     assert len({c.uid for c in first}) == len(first), "UID collision"
@@ -163,7 +165,7 @@ def test_unlabelled_example_blocks_are_not_given_a_polarity():
 
 
 def test_corpus_yields_paired_gold_examples():
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     paired = [
         c for c in cands
         if (c.examples.get("write this") or c.examples.get("correct"))
@@ -523,6 +525,49 @@ def test_url_to_path_roundtrip():
     assert url_to_path("https://www.stylemanual.gov.au/") == "index.md"
 
 
+def test_the_sweep_partition_is_the_same_in_every_process():
+    """ADR-001's weekly full re-hash depends on the slices being a partition.
+
+    ``hash()`` is randomised per process by ``PYTHONHASHSEED``, so using it here
+    made the slices a fresh random split every day: over a week the sweep saw
+    roughly two thirds of the corpus and missed a different third each time.
+    A subprocess with a hostile seed is the only way to catch that from inside
+    a test, because the parent process has one fixed seed of its own.
+    """
+    import subprocess
+
+    probe = (
+        "import sys; sys.path.insert(0, %r)\n"
+        "from derek.corpus.snapshot import sweep_slice_of\n"
+        "print(','.join(str(sweep_slice_of(p)) for p in "
+        "['a.md', 'b/c.md', 'grammar-punctuation-and-conventions/punctuation/commas.md']))"
+    ) % str(REPO)
+
+    seen = set()
+    for seed in ("0", "1", "12345"):
+        out = subprocess.run(
+            [sys.executable, "-c", probe],
+            capture_output=True, text=True, check=True,
+            env={**os.environ, "PYTHONHASHSEED": seed},
+        )
+        seen.add(out.stdout.strip())
+    assert len(seen) == 1, f"sweep slices differ across PYTHONHASHSEED: {seen}"
+
+
+def test_every_page_is_swept_exactly_once_a_week():
+    from derek.corpus.snapshot import SWEEP_SLICES, sweep_slice_of
+
+    root = REPO / "corpus" / "pages"
+    paths = [str(p.relative_to(root)) for p in root.rglob("*.md")]
+    covered = [
+        path
+        for day in range(SWEEP_SLICES)
+        for path in paths
+        if sweep_slice_of(path) == day
+    ]
+    assert sorted(covered) == sorted(paths)
+
+
 def test_ledger_rules_carry_their_source_url():
     for rule in load_ledger(LEDGER).values():
         assert rule.source.url.startswith("https://"), rule.uid
@@ -637,7 +682,7 @@ def test_corpus_headings_form_a_proper_hierarchy():
 def test_no_candidate_is_a_page_title():
     """A level-1 heading is the page's subject, not a rule."""
     from derek.extract.build import collect_candidates
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     assert all(c.level >= 2 for c in cands)
 
 
@@ -698,7 +743,7 @@ PREVIOUSLY_MISSED = [
 
 def test_previously_missed_rules_are_extracted():
     from derek.extract.build import collect_candidates
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     found = {c.statement for c in cands}
     missing = [s for s in PREVIOUSLY_MISSED if s not in found]
     assert not missing, f"recall regression — these rules are no longer extracted: {missing}"
@@ -774,7 +819,7 @@ TAGGER_RECOVERED = [
 
 
 def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     found = {c.statement: c for c in cands}
     missing = [s for s in EXEMPLIFIED if normalise_statement(s) not in found]
     assert not missing, f"recall regression — no longer extracted: {missing}"
@@ -785,7 +830,7 @@ def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
 
 
 def test_tagger_recovers_imperatives_the_verb_list_cannot_reach():
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     found = {c.statement: c for c in cands}
     missing = [s for s in TAGGER_RECOVERED if normalise_statement(s) not in found]
     assert not missing, f"recall regression — no longer extracted: {missing}"

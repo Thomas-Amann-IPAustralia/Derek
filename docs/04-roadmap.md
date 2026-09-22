@@ -3,8 +3,8 @@
 Derek's near-term goal is a **robust identification system**: find the text that breaks
 a rule, flag it, and let the user keep or accept. Suggested corrections come later.
 Word round-tripping and the MCP/middleware surfaces come later still, but the structural
-accommodations for both are already made ([ADR-012](02-decisions.md#adr-012-format-independent-document-model),
-[ADR-014](02-decisions.md#adr-014-core-library-with-thin-adapters)) so neither forces a rebuild.
+accommodations for both are already made ([ADR-012](02-decisions.md#adr-012--format-independent-document-model),
+[ADR-014](02-decisions.md#adr-014--core-library-with-thin-adapters)) so neither forces a rebuild.
 
 ---
 
@@ -13,17 +13,26 @@ accommodations for both are already made ([ADR-012](02-decisions.md#adr-012-form
 | | |
 |---|---|
 | Offline snapshot | 186 pages carried over from Octavius, re-normalised |
-| Eligible rule-source pages | 128 (58 excluded, with reasons, per [ADR-005](02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred)) |
-| Deterministic candidates | **720**, unique UIDs, byte-identical across runs |
-| With gold examples | 427 (59%); 169 with *paired* compliant + violating |
-| Reviewed | **0** — nothing loads until a human accepts it |
+| Eligible rule-source pages | 128 (58 excluded, with reasons, per [ADR-005](02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred)) |
+| Deterministic candidates | **736**, unique UIDs, byte-identical across runs |
+| With a *paired* compliant + violating example | **169** (170 with at least one) |
+| Reviewed | 21 — nothing loads until a human accepts it |
+| Corpus | **frozen** ([ADR-024](02-decisions.md#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn)); drift is reported, not applied |
 
 ---
 
-## How to get from 720 candidates to working rules
+## How to get from the candidates to working rules
 
-This is the decision the last project got wrong, so it is worth being explicit. Three
-approaches are viable.
+> **Option C was chosen and is now superseded by Option D.** The three options below are
+> kept because the reasoning is still the reasoning — what changed is a measurement, not
+> an opinion. Twenty-one decisions into Pass 1,
+> [docs/07](07-extraction-hand-audit.md) had already established that the queue being
+> triaged is 25% noise *and* missing roughly 60 real rules stated as description, which
+> never reach a card at all. Triage can improve precision; it cannot improve recall, and
+> the missing rules are the expensive half.
+
+This is the decision the last project got wrong, so it is worth being explicit. Four
+approaches, in the order they were considered.
 
 ### Option A — Author every rule by hand
 
@@ -48,9 +57,9 @@ correcting rather than authoring.
   right.
 - **Verdict:** right mechanism, wrong sequencing on its own.
 
-### Option C — Triage first, then fill only the survivors  ← **recommended**
+### Option C — Triage first, then fill only the survivors
 
-Two passes with different economies.
+**Chosen, then superseded — see Option D.** Two passes with different economies.
 
 **Pass 1 — disqualification.** No model. For each candidate you answer one question:
 *is this detectable in text at all?* Set `unit` (is it `artifact`?), `applies_to`, and
@@ -73,7 +82,7 @@ than a model's guess.
 
 **Pass 3 — hand-author the hard ones.** The 10–20 rules that matter most and resist
 formalisation (Option A, deliberately). The table-headings rule in
-[ADR-017](02-decisions.md#adr-017-ambiguity-is-classified-and-formalised) is the model
+[ADR-017](02-decisions.md#adr-017--ambiguity-is-classified-and-formalised) is the model
 for this: one unactionable sentence becomes four checkable assertions, with the
 assumptions logged.
 
@@ -82,6 +91,36 @@ error-prone. Doing the cheap pass first means you never pay to fill a rule you w
 going to reject, and — more importantly — you look at every candidate **with fresh
 judgement before a model has told you what to think**. That inversion is the single
 process change between Derek and Octavius.
+
+### Option D — Mark the rules on the manual  ← **current**
+
+Reconstruct the Style Manual from the frozen corpus and select the span of text that
+states each rule, wherever it sits ([ADR-023](02-decisions.md#adr-023--the-golden-span-set-is-a-declared-extraction-input),
+`tools/annotate/`). The 736 candidates are pre-seeded as confirmable highlights, so
+Option C's cheap pass is still there — confirming one is a keystroke — but three things
+it could not do become possible:
+
+- **A rule stated in prose is as reachable as one stated in a heading.** That is the
+  ~60 rules the heading walk cannot see, on the pages where it is worst:
+  `legal-material/bills-and-explanatory-material.md` has four real rule headings and
+  yields zero candidates, `treaties.md` nine and zero, `pronouns.md` seventeen and zero.
+- **A candidate can be corrected rather than only kept or binned.** The 18%
+  "label, not statement" class is a heading at the right *place* with the wrong *words*;
+  moving the span onto the sentence below it fixes the rule instead of discarding it.
+- **Marking a page swept makes every unmarked heading a labelled negative.** Without
+  that, "no rule here" and "not looked at yet" are the same thing, and a heuristic can
+  only ever be measured for recall. `derek/eval/span_recall.py` is the instrument that
+  reads it.
+
+**Why this ordering still holds.** Everything Option C said about looking with fresh
+judgement before a model tells you what to think is unchanged; what moved is the unit of
+work, from a card the extractor chose to a page the manual wrote. Cost per rule is
+higher and cost per page is much lower, and the rules it finds are the ones no number of
+passes over the queue would have surfaced.
+
+The golden set that results is also the labelled data a replacement heuristic is fitted
+against **and measured on**, which is what makes unfreezing the corpus a decision with a
+number behind it rather than a guess.
 
 ---
 
@@ -135,13 +174,43 @@ orphans its rules, and a re-run with no upstream change produces an empty change
       build-time snapshot; both say so on the page
       ([ADR-022](02-decisions.md#adr-022--the-review-ui-is-published-the-gate-moves-to-the-apply-step))
 - [ ] Bulk operations by page, section and predicted scope
-- [ ] **Run Pass 1 over all 720** ← the actual next task
 
-**Done when:** the reviewed count is 720 and the survivor set is known.
+The triage app is **retained, not superseded**. Its shape — one item, a verdict, a
+gesture — is exactly right for reviewing the synthetic training pairs in Phase 5, which
+is thousands of small independent judgements. It is the wrong shape for identifying
+rules, which is what Phase 2b is for.
+
+### Phase 2b — Mark the golden span set *(the current work)*
+
+- [x] `derek/extract/blocks.py` — one plain-text projection both the browser and Python
+      use, pinned by `derek/extract/data/blocks.lock.json` so a renderer change cannot
+      silently re-anchor a recorded span
+- [x] `corpus/freeze.yaml` — the corpus stops moving under the spans; drift is still
+      detected and reported to `corpus/drift.json`
+      ([ADR-024](02-decisions.md#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn))
+- [x] `tools/annotate/` — the manual, reconstructed and selectable, published at
+      <https://thomas-amann-ipaustralia.github.io/Derek/annotate/>. The 736 candidates
+      pre-seeded as confirmable highlights; create, adjust and delete a span; `F` marks a
+      page swept
+- [x] `golden/spans.jsonl` read as a declared extraction input, with UID continuity so
+      confirming a candidate keeps everything already decided about it
+      ([ADR-023](02-decisions.md#adr-023--the-golden-span-set-is-a-declared-extraction-input))
+- [x] `tools/annotate/apply_spans.py` + `apply-spans.yml` — the return leg, through the
+      same `server._apply` the triage app uses
+- [x] `derek/eval/span_recall.py` — the heading heuristic measured against what a human
+      actually marked, on swept pages only
+- [ ] **Annotate the 128 eligible pages** ← the actual next task. Start with ten
+      different-shaped ones (`commas.md`, `treaties.md`, `pronouns.md`, a table-heavy
+      page) before committing to the corpus, because the interaction model is the thing
+      most likely to be wrong.
+
+**Done when:** every eligible page is swept, so `span_recall` has a complete set to
+measure against and the ledger's inventory is one a human drew rather than one a
+heuristic guessed.
 
 ### Phase 3 — Tier 0 detection
 
-- [ ] `derek/detect/` — matcher primitives ([ADR-009](02-decisions.md#adr-009-no-generated-code-in-the-runtime))
+- [ ] `derek/detect/` — matcher primitives ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime))
 - [ ] `Document` + `Anchor` + plain-text and Markdown adapters, with property tests
 - [ ] Example harness: violating fire, compliant do not
 - [ ] Dogfood gate wired into CI
@@ -154,7 +223,7 @@ confidence.
 
 - [ ] Editor with inline highlighting, findings panel, keep-or-accept
 - [ ] Confidence slider over calibrated values
-- [ ] Context controls chosen by betweenness ([ADR-015](02-decisions.md#adr-015-context-variables-chosen-by-betweenness))
+- [ ] Context controls chosen by betweenness ([ADR-015](02-decisions.md#adr-015--context-variables-chosen-by-betweenness))
 
 ### Phase 5 — Tier 1 classifier
 
@@ -173,7 +242,7 @@ confidence.
 | Feature | Blocked on | Structural accommodation already made |
 |---|---|---|
 | Suggested corrections (Tier 2) | Identification being good enough to trust | Tier boundary in the ledger; `PREFER` modality separated for exactly this |
-| Word round-trip | Demand | `Anchor` indirection; format-free training inputs ([ADR-019](02-decisions.md#adr-019-training-inputs-carry-no-format-markup)) |
+| Word round-trip | Demand | `Anchor` indirection; format-free training inputs ([ADR-019](02-decisions.md#adr-019--training-inputs-carry-no-format-markup)) |
 | Live deployment | Phases 3–4 | Stateless core; int8 ONNX; swappable model backend |
 
 ---
@@ -183,7 +252,7 @@ confidence.
 Three things must happen **earlier than they feel necessary**, because retrofitting them
 is a re-review of every rule:
 
-1. **The context vocabulary** ([ADR-015](02-decisions.md#adr-015-context-variables-chosen-by-betweenness))
+1. **The context vocabulary** ([ADR-015](02-decisions.md#adr-015--context-variables-chosen-by-betweenness))
    must be drafted before Pass 2, so rules reference shared variables rather than
    inventing per-rule preconditions. The betweenness analysis runs later, but the
    vocabulary cannot.

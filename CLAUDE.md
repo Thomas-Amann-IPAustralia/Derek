@@ -24,20 +24,20 @@ Violating any of these reintroduces a known failure. Each links to its rationale
 
 | # | Invariant | ADR |
 |---|---|---|
-| D-1 | No rule is validated only against examples authored alongside it | [ADR-011](docs/02-decisions.md#adr-011-the-dogfood-gate) |
-| D-2 | Polarity is explicit: `violation_condition` + `compliant_examples` + `violating_examples` | [ADR-004](docs/02-decisions.md#adr-004-polarity-is-a-first-class-schema-field) |
-| D-3 | `presence` vs `absence` is classified before a detection method is chosen | [ADR-006](docs/02-decisions.md#adr-006-presence-vs-absence-and-the-scope-requirement) |
-| D-4 | Corpus eligibility is declared in `corpus/eligibility.yaml`, never inferred per rule | [ADR-005](docs/02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred) |
+| D-1 | No rule is validated only against examples authored alongside it | [ADR-011](docs/02-decisions.md#adr-011--the-dogfood-gate) |
+| D-2 | Polarity is explicit: `violation_condition` + `compliant_examples` + `violating_examples` | [ADR-004](docs/02-decisions.md#adr-004--polarity-is-a-first-class-schema-field) |
+| D-3 | `presence` vs `absence` is classified before a detection method is chosen | [ADR-006](docs/02-decisions.md#adr-006--presence-vs-absence-and-the-scope-requirement) |
+| D-4 | Corpus eligibility is declared in `corpus/eligibility.yaml`, never inferred per rule | [ADR-005](docs/02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred) |
 | D-5 | A rule's examples are never drawn from the sentence that states the rule | [postmortem §4](docs/00-postmortem-octavius.md#4-what-is-worth-keeping) |
-| D-6 | `applies_to` and `unit` are mandatory; `unit: artifact` never loads | [ADR-007](docs/02-decisions.md#adr-007-scope-and-unit-are-mandatory) |
-| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002-deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) |
-| D-8 | Change detection uses content hashes, not the site's `lastmod` | [ADR-001](docs/02-decisions.md#adr-001-snapshot-integrity-over-site-metadata) |
-| D-9 | Model calls are a content-addressed cache; re-running is a no-op | [ADR-003](docs/02-decisions.md#adr-003-model-calls-are-a-cache-not-a-step) |
-| D-10 | Only `accepted`/`amended` rules load. A human gates the runtime | [ADR-008](docs/02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue) |
-| D-11 | **Never `exec()` anything from the ledger.** Matchers are declarative data | [ADR-009](docs/02-decisions.md#adr-009-no-generated-code-in-the-runtime) |
-| D-12 | Confidence is calibrated; `null` when unvalidated, never an invented number | [ADR-013](docs/02-decisions.md#adr-013-confidence-is-calibrated-not-raw) |
-| D-13 | Training inputs carry **no format markup** — that is what keeps Word deferral cheap | [ADR-019](docs/02-decisions.md#adr-019-training-inputs-carry-no-format-markup) |
-| D-14 | Rule quality is measured on raw, un-suppressed output | [ADR-011](docs/02-decisions.md#adr-011-the-dogfood-gate) |
+| D-6 | `applies_to` and `unit` are mandatory; `unit: artifact` never loads | [ADR-007](docs/02-decisions.md#adr-007--scope-and-unit-are-mandatory) |
+| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002--deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) |
+| D-8 | Change detection uses content hashes, not the site's `lastmod` | [ADR-001](docs/02-decisions.md#adr-001--snapshot-integrity-over-site-metadata) |
+| D-9 | Model calls are a content-addressed cache; re-running is a no-op | [ADR-003](docs/02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step) |
+| D-10 | Only `accepted`/`amended` rules load. A human gates the runtime | [ADR-008](docs/02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue) |
+| D-11 | **Never `exec()` anything from the ledger.** Matchers are declarative data | [ADR-009](docs/02-decisions.md#adr-009--no-generated-code-in-the-runtime) |
+| D-12 | Confidence is calibrated; `null` when unvalidated, never an invented number | [ADR-013](docs/02-decisions.md#adr-013--confidence-is-calibrated-not-raw) |
+| D-13 | Training inputs carry **no format markup** — that is what keeps Word deferral cheap | [ADR-019](docs/02-decisions.md#adr-019--training-inputs-carry-no-format-markup) |
+| D-14 | Rule quality is measured on raw, un-suppressed output | [ADR-011](docs/02-decisions.md#adr-011--the-dogfood-gate) |
 
 ---
 
@@ -54,10 +54,21 @@ python -m derek.eval.dogfood --octavius reference/octavius-v1/rules_working_draf
 python -m derek.eval.audit_headings counts # classifier census; see docs/07
 python -m derek.eval.audit_headings gold-recall   # exits 1 if a gold-example rule is dropped
 
-python tools/review/server.py           # round-1 triage at localhost:8765
+python tools/review/server.py           # card-by-card triage at localhost:8765
 python tools/review/build_static.py     # the same app as files → site/ (GitHub Pages)
 python tools/review/apply_decisions.py ledger/inbox/*.jsonl   # replay exports → ledger
 python tools/review/apply_decisions.py export.jsonl --dry-run # validate, write nothing
+
+# The span annotator (ADR-023): the manual reconstructed and selectable, at
+# /annotate/. This is how rules are identified now; triage is retained for the
+# synthetic-pair review in Phase 5. Order matters — the triage build owns site/
+# and clears it, the annotator owns site/annotate/.
+python tools/review/build_static.py --out site
+python tools/annotate/build_static.py --out site/annotate
+python tools/annotate/apply_spans.py golden/inbox/*.jsonl              # spans → ledger
+python tools/annotate/apply_spans.py golden/inbox/*.jsonl --dry-run
+python -m derek.extract.blocks --check  # CI: the block projection matches its lock
+python -m derek.eval.span_recall        # the heuristic, measured on swept pages
 
 # Imperative detection by POS tagger (ADR-021). Offline authoring step: writes a
 # checked-in verdict table that derek/extract/ reads as data, so extraction stays
@@ -76,9 +87,19 @@ pytest tests/ -v
 ```
 stylemanual.gov.au
   │ Layer 0  derek/corpus/    content-addressed snapshot; add/alter/remove changesets
-  ▼
+  ▼                           FROZEN (ADR-024) — drift is reported, not applied
 corpus/pages/**.md
-  │ Layer 1  derek/extract/   pure function of the corpus; NO MODEL RUNS HERE
+  │
+  ├──► derek/extract/blocks.py ──► tools/annotate/   the manual, reconstructed
+  │      plain text + offsets,            │          and selectable: a human marks
+  │      pinned by blocks.lock.json       │          the span that states each rule
+  │                                       ▼
+  │                              golden/spans.jsonl  (ADR-023)
+  ▼                                       │
+Layer 1  derek/extract/  ◄────────────────┘
+  a pure function of the corpus AND its declared inputs
+  (eligibility.yaml · imperative_headings.json · golden/spans.jsonl).
+  NO MODEL RUNS HERE, and no model decides a rule exists — a human does.
   ▼
 736 candidates (stable uid, statement, heading path, gold examples)
   │ Layer 2  derek/ledger/    model proposes, human decides
@@ -104,7 +125,14 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/corpus/normalise.py` | Canonical form, heading repair, content hashing |
 | `derek/corpus/eligibility.py` | Which pages are rule sources |
 | `corpus/eligibility.yaml` | The allowlist itself, with reasons |
+| `corpus/freeze.yaml` | Declares the corpus frozen and pins what it froze (ADR-024) |
+| `derek/corpus/freeze.py` | Reads it; Layer 0 is the only layer that knows |
 | `derek/extract/segment.py` | Markdown → heading tree |
+| `derek/extract/blocks.py` | Heading tree → addressable plain-text blocks; what span offsets index |
+| `derek/extract/data/blocks.lock.json` | **Generated.** Pins that projection; CI fails if it moves |
+| `derek/extract/golden.py` | `golden/spans.jsonl` → candidates, with the D-4/D-5 refusals |
+| `golden/spans.jsonl` | The golden set: the spans a human marked as rules |
+| `golden/pages.jsonl` | Which pages a human swept — what turns absence into a negative |
 | `derek/extract/candidates.py` | Normativity classification, stable UIDs, gold-example harvesting |
 | `derek/extract/data/imperative_verbs.txt` | Hand-curated verb list; primary imperative signal |
 | `derek/extract/data/imperative_headings.json` | **Generated.** Pinned-tagger verdicts (ADR-021); never hand-edit |
@@ -122,7 +150,11 @@ Each layer must be reproducible from the one below it. Full detail:
 | `tools/review/index.html` | The app itself. Works against the server or the published files; every path is relative |
 | `tools/review/build_static.py` | Same app + the API's payloads as files, for GitHub Pages |
 | `tools/review/apply_decisions.py` | Replays a published-dashboard export into the ledger, through `server._apply` |
-| `tools/review/glossary.json` | Plain-language meaning of every reviewer-facing option |
+| `tools/review/glossary.json` | Plain-language meaning of every reviewer-facing option; **both** apps render from it |
+| `tools/annotate/index.html` | The span annotator — the manual, reconstructed and selectable |
+| `tools/annotate/build_static.py` | Ships the blocks, the seeded candidates and the golden set as files |
+| `tools/annotate/apply_spans.py` | The return leg: spans → `golden/` → ledger → `server._apply` |
+| `derek/eval/span_recall.py` | The heading heuristic measured against the golden set |
 | `reference/octavius-v1/` | **NON-AUTHORITATIVE.** Recall checklist and negative test set only |
 
 ---
@@ -136,9 +168,19 @@ Review decisions (`review`, `clarity`, `specification`, `direction`, `unit`,
 `applies_to`, `detection`, examples) are human-owned and preserved across rebuilds by
 the reconciler.
 
-Adding a rule the extractor missed: set `derivation.method: "manual"` and give it a
-`source` that points at real corpus text. It still needs `review.status: accepted` and a
-passing dogfood gate.
+**Adding a rule the extractor missed: mark it in the annotator**
+(<https://thomas-amann-ipaustralia.github.io/Derek/annotate/>, or
+`python tools/annotate/build_static.py` locally). Select the text that states it, export,
+and replay with `tools/annotate/apply_spans.py`. The rule lands with
+`derivation.method: "human_span"`, reproducible from `golden/spans.jsonl` on every
+rebuild (ADR-023).
+
+Do **not** hand-write a ledger entry with `derivation.method: "manual"`. That method
+exists, but it does not survive: `derek.ledger.reconcile` orphans every live rule whose
+uid no candidate reproduces, and nothing reproduces a hand edit — so the rule is orphaned
+on the very next build. The distinction the two methods draw is *reproducible from a
+declared input* versus *hand edit the pipeline cannot regenerate*, and only the first one
+works.
 
 **Before accepting any rule, confirm:**
 

@@ -255,12 +255,20 @@ def _apply(rule: Rule, patch: dict, reviewer: str) -> None:
 
     # ADR-017 again: an interpretation that was made has to be written down,
     # or the next person cannot tell an assumption from a reading.
-    if rule.clarity == Clarity.AMBIGUOUS_RESOLVABLE and not (
-        note or rule.specification or rule.violation_condition
-    ):
+    #
+    # It has to be written down in `specification`, not in the note. This check
+    # used to accept any of the three, and four decisions landed with the
+    # interpretation in `note` alone — which the schema rejects
+    # (`clarity: ambiguous_resolvable` requires `specification`), so CI went red,
+    # and which `Rule.effective_statement` would have silently ignored: detection
+    # implements `specification or source.statement`, so an interpretation in a
+    # note would have left the detector matching the ambiguous original. That is
+    # the Octavius shape — a rule that does not do what its record says.
+    if rule.clarity == Clarity.AMBIGUOUS_RESOLVABLE and not rule.specification:
         raise ValueError(
             "clarity 'ambiguous_resolvable' means an interpretation was made — "
-            "write it down before saving"
+            "write it down in 'your interpretation', not the note: that field "
+            "is what detection implements, and a note is not"
         )
     if status in (ReviewStatus.ACCEPTED, ReviewStatus.AMENDED):
         if rule.clarity == Clarity.UNREVIEWED:
@@ -272,7 +280,7 @@ def _apply(rule: Rule, patch: dict, reviewer: str) -> None:
         rule.disambiguation_log.append({
             "by": reviewer,
             "at": _now(),
-            "assumption": rule.specification or rule.violation_condition or note,
+            "assumption": rule.specification,
         })
 
 

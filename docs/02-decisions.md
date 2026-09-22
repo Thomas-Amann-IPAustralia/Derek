@@ -9,28 +9,30 @@ relevant — the **Octavius failure** it exists to prevent.
 
 | ADR | Decision | Status |
 |---|---|---|
-| [001](#adr-001-snapshot-integrity-over-site-metadata) | Snapshot integrity over site metadata | Accepted |
-| [002](#adr-002-deterministic-candidate-identity) | Deterministic candidate identity | Accepted |
-| [003](#adr-003-model-calls-are-a-cache-not-a-step) | Model calls are a cache, not a step | Accepted |
-| [004](#adr-004-polarity-is-a-first-class-schema-field) | Polarity is a first-class schema field | Accepted |
-| [005](#adr-005-corpus-eligibility-is-declared-not-inferred) | Corpus eligibility is declared, not inferred | Accepted |
-| [006](#adr-006-presence-vs-absence-and-the-scope-requirement) | Presence vs absence and the scope requirement | Accepted |
-| [007](#adr-007-scope-and-unit-are-mandatory) | Scope and unit are mandatory | Accepted |
-| [008](#adr-008-human-acceptance-is-a-gate-not-a-review-queue) | Human acceptance is a gate, not a review queue | Accepted |
-| [009](#adr-009-no-generated-code-in-the-runtime) | No generated code in the runtime | Accepted |
-| [010](#adr-010-detection-tiers-and-cheapest-viable-routing) | Detection tiers and cheapest-viable routing | Accepted |
-| [011](#adr-011-the-dogfood-gate) | The dogfood gate | Accepted |
-| [012](#adr-012-format-independent-document-model) | Format-independent document model | Accepted |
-| [013](#adr-013-confidence-is-calibrated-not-raw) | Confidence is calibrated, not raw | Accepted |
-| [014](#adr-014-core-library-with-thin-adapters) | Core library with thin adapters | Accepted |
-| [015](#adr-015-context-variables-chosen-by-betweenness) | Context variables chosen by betweenness | Accepted |
-| [016](#adr-016-deontic-modality-taxonomy) | Deontic modality taxonomy | Accepted |
-| [017](#adr-017-ambiguity-is-classified-and-formalised) | Ambiguity is classified and formalised | Accepted |
-| [018](#adr-018-derek-is-a-clean-repository-not-a-git-fork) | Derek is a clean repository, not a git fork | Accepted |
-| [019](#adr-019-training-inputs-carry-no-format-markup) | Training inputs carry no format markup | Accepted |
-| [020](#adr-020-heading-levels-come-from-the-dom) | Heading levels come from the DOM | Accepted |
+| [001](#adr-001--snapshot-integrity-over-site-metadata) | Snapshot integrity over site metadata | Accepted |
+| [002](#adr-002--deterministic-candidate-identity) | Deterministic candidate identity | Accepted |
+| [003](#adr-003--model-calls-are-a-cache-not-a-step) | Model calls are a cache, not a step | Accepted |
+| [004](#adr-004--polarity-is-a-first-class-schema-field) | Polarity is a first-class schema field | Accepted |
+| [005](#adr-005--corpus-eligibility-is-declared-not-inferred) | Corpus eligibility is declared, not inferred | Accepted |
+| [006](#adr-006--presence-vs-absence-and-the-scope-requirement) | Presence vs absence and the scope requirement | Accepted |
+| [007](#adr-007--scope-and-unit-are-mandatory) | Scope and unit are mandatory | Accepted |
+| [008](#adr-008--human-acceptance-is-a-gate-not-a-review-queue) | Human acceptance is a gate, not a review queue | Accepted |
+| [009](#adr-009--no-generated-code-in-the-runtime) | No generated code in the runtime | Accepted |
+| [010](#adr-010--detection-tiers-and-cheapest-viable-routing) | Detection tiers and cheapest-viable routing | Accepted |
+| [011](#adr-011--the-dogfood-gate) | The dogfood gate | Accepted |
+| [012](#adr-012--format-independent-document-model) | Format-independent document model | Accepted |
+| [013](#adr-013--confidence-is-calibrated-not-raw) | Confidence is calibrated, not raw | Accepted |
+| [014](#adr-014--core-library-with-thin-adapters) | Core library with thin adapters | Accepted |
+| [015](#adr-015--context-variables-chosen-by-betweenness) | Context variables chosen by betweenness | Accepted |
+| [016](#adr-016--deontic-modality-taxonomy) | Deontic modality taxonomy | Accepted |
+| [017](#adr-017--ambiguity-is-classified-and-formalised) | Ambiguity is classified and formalised | Accepted |
+| [018](#adr-018--derek-is-a-clean-repository-not-a-git-fork) | Derek is a clean repository, not a git fork | Accepted |
+| [019](#adr-019--training-inputs-carry-no-format-markup) | Training inputs carry no format markup | Accepted |
+| [020](#adr-020--heading-levels-come-from-the-dom) | Heading levels come from the DOM | Accepted |
 | [021](#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) | The POS tagger is an offline authoring step, and it is additive | Accepted |
 | [022](#adr-022--the-review-ui-is-published-the-gate-moves-to-the-apply-step) | The review UI is published; the gate moves to the apply step | Accepted |
+| [023](#adr-023--the-golden-span-set-is-a-declared-extraction-input) | The golden span set is a declared extraction input | Accepted |
+| [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
 
 ---
 
@@ -443,7 +445,7 @@ the structural accommodation is made now and costs almost nothing:
 - **The known hard part is recorded now:** Word splits a single logical span across
   multiple `w:r` runs for arbitrary formatting reasons, so a replacement crossing a run
   boundary must decide which run's formatting survives. That is an adapter-local
-  decision and does not reach the core. See [08-open-questions.md](08-open-questions.md).
+  decision and does not reach the core. See [05-open-questions.md](05-open-questions.md).
 
 **Do not** let format details leak into `text`. The moment a detector or a training
 example contains markup, the Word deferral becomes a rebuild. See ADR-019.
@@ -672,7 +674,7 @@ to be justified by an ablation, not a string concatenation.
 | Character offsets | No | `Anchor`, resolved after classification |
 | Format markup (HTML/OOXML) | **Never** | Adapter layer only |
 | Document-level context (`content_type`, `audience`) | Probably — as control tokens | Context vocabulary (ADR-015); requires an ablation before committing |
-| Surrounding sentences | Undecided — see [08-open-questions.md](08-open-questions.md) | Some rules (acronym-on-first-use) need it; costs sequence length |
+| Surrounding sentences | Undecided — see [05-open-questions.md](05-open-questions.md) | Some rules (acronym-on-first-use) need it; costs sequence length |
 
 ---
 
@@ -685,7 +687,7 @@ to be justified by an ablation, not a string concatenation.
 guard.
 
 **Reason.** Extraction reads the rule inventory off the heading tree
-([ADR-002](#adr-002-deterministic-candidate-identity)), so heading fidelity is
+([ADR-002](#adr-002--deterministic-candidate-identity)), so heading fidelity is
 not cosmetic — it decides which rules exist.
 
 `trafilatura` is a generic article extractor. It recovers prose well but does
@@ -736,10 +738,10 @@ signal that the converter has broken.
 
 - The corpus must be re-fetched in full, and every content hash changes. This is
   the `extractor_upgrade` changeset kind that
-  [ADR-001](#adr-001-snapshot-integrity-over-site-metadata) exists to label, so
+  [ADR-001](#adr-001--snapshot-integrity-over-site-metadata) exists to label, so
   it is not mistaken for 186 simultaneous editorial edits.
 - Rule UIDs derived from repaired headings change, because a UID is content-
-  addressed over the heading path ([ADR-002](#adr-002-deterministic-candidate-identity)).
+  addressed over the heading path ([ADR-002](#adr-002--deterministic-candidate-identity)).
   Reconciliation matches them by statement and records `supersedes`. Doing this
   **before** the first triage pass costs nothing; doing it after would have
   invalidated review decisions.
@@ -766,13 +768,13 @@ It may never remove one.
 
 **Reason.** [Q8](05-open-questions.md#q8--should-imperative-detection-use-a-pos-tagger)
 asked whether to replace the hand-curated verb list with a tagger, and
-[ADR-002](#adr-002-deterministic-candidate-identity) had rejected one on
+[ADR-002](#adr-002--deterministic-candidate-identity) had rejected one on
 determinism grounds. Two separate things were decided here, and they resolved
 in opposite directions.
 
 **On determinism, the objection was weaker than it looked — and the fix makes
 it moot.** Pinning answers version drift, exactly as it does for the HTML
-parser ([ADR-020](#adr-020-heading-levels-come-from-the-dom)). But precomputing
+parser ([ADR-020](#adr-020--heading-levels-come-from-the-dom)). But precomputing
 answers it completely: because the verdicts are checked in, CI rebuilds the
 ledger byte-identically with **no model installed at all**. Extraction stays
 stdlib-only (`tests/test_dependency_tiers.py`), D-7 holds unchanged, and a
@@ -826,7 +828,7 @@ invalidated. Of the 16, 11 are clean, 4 are the *"label, not statement"* shape
 heading is a noun phrase — and one is a plain false positive
 (*"Coordinating conjunctions join things of equal importance"*, where the
 parser missed the subject). Under
-[ADR-008](#adr-008-human-acceptance-is-a-gate-not-a-review-queue) that is the
+[ADR-008](#adr-008--human-acceptance-is-a-gate-not-a-review-queue) that is the
 cheap direction to be wrong in: a bad candidate costs a reviewer twenty
 seconds, and a missed rule is invisible forever.
 
@@ -887,7 +889,7 @@ The browser never becomes an authority. It is a drafting surface with a queue.
 
 **Reason.** Round 1 is 736 decisions that one or two people have to make, and
 the machine those people use during the day cannot run Python, a container, or
-a local web server. [ADR-008](#adr-008-human-acceptance-is-a-gate-not-a-review-queue)
+a local web server. [ADR-008](#adr-008--human-acceptance-is-a-gate-not-a-review-queue)
 put a human in front of the runtime; a human who can only reach the queue on
 evenings and weekends is how a review queue becomes a pile. Octavius's
 decisive failure was not a bad reviewer — it was 3,114 rows nobody could work
@@ -937,9 +939,209 @@ site; both call `.github/workflows/pages.yml` directly as a reusable workflow.
 And a scheduled rebuild was deliberately **not** used as the safety net, because
 GitHub disables scheduled workflows after 60 days of repository inactivity —
 the same trap the corpus heartbeat exists to catch
-([ADR-001](#adr-001-snapshot-integrity-over-site-metadata)).
+([ADR-001](#adr-001--snapshot-integrity-over-site-metadata)).
 
 **What this does not do.** It does not let anyone approve a rule without a
 human, or let the browser write to the ledger, or make the published site the
 record. `tests/test_review_offline.py` asserts each of those, including that a
 file with one bad op writes nothing at all.
+
+---
+
+## ADR-023 — The golden span set is a declared extraction input
+
+**Decision.** A human marks the spans of text that state each rule, directly on a
+reconstruction of the Style Manual (`tools/annotate/`). Those spans are recorded in
+`golden/spans.jsonl`, which `derek.extract.build` reads as a **declared input**,
+exactly as it reads `corpus/eligibility.yaml` and
+`derek/extract/data/imperative_headings.json`. Rules derived from a span carry
+`derivation.method: "human_span"`.
+
+`golden/pages.jsonl` records, per page, that a human swept it. On a swept page the
+golden set is authoritative: a heading candidate no span confirms is **not** a rule,
+and that absence is a labelled negative.
+
+**Reason.** The heading walk is measurably not good enough, and its failure is
+asymmetric. From [docs/07](07-extraction-hand-audit.md), over 121 hand-audited
+candidates:
+
+| | |
+|---|---|
+| Sound — the heading states a rule | 75% |
+| **Label, not statement** — real rule, unusable wording | 18% |
+| Not a rule at all | 7% |
+| Real rules stated as description, corpus-wide | **~60** |
+
+The first two are survivable. A wrong candidate costs a reviewer twenty seconds, which
+is the trade [ADR-021](#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive)
+already accepted. The ~60 are not survivable, because they never reach a card:
+`legal-material/bills-and-explanatory-material.md` has four real rule headings and
+yields zero candidates, `treaties.md` nine and zero, `pronouns.md` seventeen and zero.
+No amount of card-by-card triage over the extractor's output finds a rule the extractor
+never proposed. **Reviewing a queue can only ever improve precision; it cannot improve
+recall.** Reading the document can do both.
+
+**Why this does not violate D-7.** D-7 says no model runs at extraction time and no
+model decides a rule exists. Both still hold. `golden/spans.jsonl` is checked-in data
+read as data — the same shape as the POS tagger's verdict table (ADR-021) and the
+eligibility allowlist ([ADR-005](#adr-005--corpus-eligibility-is-declared-not-inferred)),
+both of which already make extraction a pure function of the corpus *plus declared
+inputs*. `python -m derek.extract.build --check` remains byte-reproducible. What decides
+a rule exists is a human, which is
+[ADR-008](#adr-008--human-acceptance-is-a-gate-not-a-review-queue)'s entire posture
+brought forward one layer: the gate used to sit after extraction, and now it also sits
+at it.
+
+**UID continuity is the mechanism that makes the first cut worth keeping.** A span that
+exactly covers a heading block takes that heading's title verbatim as its statement, so
+`candidate_uid` returns the **same uid** and the reconciler files it `unchanged` with
+every review decision intact. A span that covers different text mints a different uid,
+and the reconciler's positional-address branch links the lineage as `reworded` with
+`supersedes` set. So confirming a candidate is free, and adjusting one — the 18% case,
+where the heading is the right *place* and the wrong *words* — is handled by machinery
+that already existed. `candidate_uid` itself is unchanged.
+
+**The reviewer/pipeline boundary does not move.** A span record carries `tags`, but they
+are provenance and training data. They reach `ledger/rules.jsonl` by being replayed as
+ordinary `decide` ops through `server._apply` *after* the build has minted the uid — so
+`EDITABLE`, `REVIEWER_STATUSES` and every refusal in that function are unchanged, and
+`review.history` records who decided and when. The build never writes a review status.
+Examples and preconditions go the other way: they are seeded at build time alongside the
+manual's own harvested `Write this` / `Not this` blocks, because
+`compliant_examples` and `violating_examples` are not reviewer-editable and should not
+become so.
+
+**Anchoring.** Offsets index the plain text of one **block**, not the Markdown and not
+the page. `derek/extract/blocks.py` is the single projection: it emits `plain` plus
+inline `marks` as offsets into it, and the browser builds its DOM by slicing `plain` at
+mark boundaries, which makes `element.textContent == block.plain` true by construction
+rather than by assertion. Three consequences, all deliberate:
+
+* **Block-scoped, not page-scoped.** Editing paragraph 2 does not invalidate every span
+  in paragraph 40.
+* **Content-addressed.** `block_id` is a blake2s over (page, heading path, text,
+  occurrence) — `candidate_uid`'s own philosophy, one level down.
+* **Pinned.** `derek/extract/data/blocks.lock.json` is checked in and CI-asserted. A
+  change to the renderer re-anchors every recorded span, and the dangerous failure is not
+  a span that fails to resolve but one that resolves to the *wrong sentence*. A bump to
+  `RENDER_VERSION` is a deliberate event followed by a rebase pass.
+
+Each span also stores its `quote` and 32 characters either side. The offsets are the fast
+path; that is the recovery one.
+
+**Four refusals, each loud, each at the apply step.**
+
+| Refused | Why |
+|---|---|
+| An example span overlapping the rule span it illustrates | **D-5.** The one way a well-meaning reviewer could reintroduce the Octavius failure — a rule tested against the sentence that states it. |
+| A span on a page `corpus/eligibility.yaml` excludes | **D-4.** Eligibility is a property of the page, not a per-rule judgement. |
+| A rule span covering a page's `#` title | A page title is not a rule; the extractor already refuses this. |
+| Two rule spans resolving to one uid | `build.py` merges by uid and would silently drop one. A repeated statement is a real ambiguity, and the reviewer resolves it. |
+
+**Costs, all of them real.**
+
+*It is slower per rule and faster per page.* A card is twenty seconds; a page is minutes.
+The trade only pays because marking a page sweeps its whole heading inventory at once and
+finds the rules no card would have shown. If "mark swept" is not used, this is a worse
+queue rather than a better one.
+
+*The ledger gets bigger before it gets smaller.* Spans are additive: the 736 stay until a
+page is swept or a candidate is explicitly deleted.
+
+*Offsets depend on a frozen corpus.* Hence [ADR-024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn).
+The `page_sha256` on every span turns a moved page into a refusal rather than a silent
+re-anchoring, but the freeze is what stops it arising.
+
+*`derivation.method: "manual"` is not reused, and is now known to be broken.* CLAUDE.md
+tells you to add a missed rule by hand-writing a ledger entry with that method, but
+`reconcile` orphans every live rule whose uid no candidate reproduces — so such a rule is
+orphaned on the very next build. The distinction that matters is *reproducible from
+declared inputs* versus *hand-edit the pipeline cannot regenerate*, and conflating the two
+destroys the only way to tell, from the ledger alone, which rules survive a rebuild.
+
+**What this does not do.** It does not let the browser write to the ledger, or let a rule
+load without a human, or let anyone edit the manual's wording — a span *is* the wording,
+and a restatement goes in `specification`
+([ADR-017](#adr-017--ambiguity-is-classified-and-formalised)). It does not replace the
+triage app, which is the right shape for reviewing the synthetic training pairs in
+Phase 5. And it does not, by itself, produce a heuristic: it produces the labelled set
+one can be fitted against and, because of the sweep marker, honestly measured on.
+
+---
+
+## ADR-024 — The corpus is frozen while the golden set is drawn
+
+**Decision.** `corpus/freeze.yaml` declares the corpus frozen and pins the state it froze,
+with a digest over the sorted page hashes in `snapshot.lock.json`. While it is present the
+daily snapshot still fetches, converts, normalises and hashes every page it would have —
+and stops applying what it finds:
+
+* `corpus/pages/` is not rewritten, and a page that leaves the sitemap is not deleted;
+* `corpus/snapshot.lock.json` and `corpus/changes/` are not written;
+* `snapshot.yml` skips `python -m derek.extract.build`;
+* drift goes to `corpus/drift.json`;
+* `corpus/.heartbeat` is refreshed as normal.
+
+**A frozen corpus is not a frozen ledger.** Freezing means the *corpus* stops changing, so
+the only thing that can change `ledger/rules.jsonl` is a human decision. Freeze knowledge
+lives in Layer 0 only; `derek.extract.build` has no awareness of it and `--check` is
+untouched.
+
+**Reason.** A golden-set span is anchored to the text it was drawn on
+([ADR-023](#adr-023--the-golden-span-set-is-a-declared-extraction-input)). An upstream
+edit while the corpus is live moves every span on that page. The `page_sha256` check turns
+that into a refusal rather than corruption, but a refusal mid-session is still a session
+lost. And the deeper reason: there is no value in reconciling a rulebook against a moving
+corpus using heading heuristics that are being replaced. It spends review effort on rules
+that will not survive.
+
+**Why the crawl keeps running.** Three things would break if it stopped. The heartbeat
+would go stale and CI's 72-hour freshness gate would fail — a gate that exists to catch
+GitHub disabling a scheduled workflow after 60 days of repository inactivity
+([ADR-001](#adr-001--snapshot-integrity-over-site-metadata)), a trap that does not care
+whether we are frozen. The transport would go unexercised, and would be discovered broken
+at unfreeze rather than now. And we would be blind to how far the manual had moved, which
+is exactly the number that says when unfreezing is worth doing.
+
+**`corpus/drift.json` is cumulative and carries no timestamp.** Cumulative because one run
+only re-hashes today's sweep slice, so an overwritten report would forget yesterday's
+finding; a page that goes back to matching has its entry cleared, and a page that failed to
+fetch is not counted as checked, so a transient failure cannot clear a real finding.
+Timestamp-free because an unchanged report is then a byte-identical file and no commit —
+`git log -- corpus/drift.json` becomes the drift timeline with no daily noise between real
+entries. The alternatives are worse in both directions: a file per run accumulates 365
+near-identical files a year, and a single timestamped file diffs meaninglessly every day.
+
+**One bug this forced out.** `_select_for_fetch` chose today's slice with
+`hash(path) % SWEEP_SLICES`, and Python randomises string `hash()` per process. The slices
+were a fresh random split every day rather than a partition, so "every page is re-hashed
+weekly" was false — about two thirds of the corpus per week, missing a different third each
+time. Tolerable while the crawl was rewriting pages anyway; not tolerable once the sweep is
+the only drift detector. It is now a blake2s of the path, asserted deterministic across
+processes by a test that runs it under three PYTHONHASHSEED values.
+
+**Costs.**
+
+*The corpus goes stale, knowingly.* That is the point, but it means the published rulebook
+describes the manual as of the freeze date, and the drift report is the only thing saying
+how far that is from today.
+
+*Unfreezing is not just deleting the file.* Span offsets have to be rebased onto the new
+text. The runbook:
+
+```bash
+rm corpus/freeze.yaml
+python -m derek.corpus.snapshot --full     # one changeset covering everything that moved
+python -m derek.extract.blocks --lock      # the projection, re-pinned
+python tools/annotate/apply_spans.py --rebase   # re-anchor spans; report the rest
+python -m derek.extract.build
+```
+
+`--rebase` resolves each span by `block_id` first, then by its stored quote within the same
+heading, disambiguated by the 32 characters either side. Anything that does not resolve
+uniquely is reported for a human rather than guessed at — the same posture
+`derek/ledger/reconcile.py` takes on lineage, and for the same reason.
+
+**What this does not do.** It does not weaken content hashing, stop change detection, or
+pause the transport. It makes
+[D-8](../CLAUDE.md) truer than it was, by forcing the sweep partition to be a partition.

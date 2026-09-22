@@ -35,7 +35,7 @@ for them:
 | Octavius working draft | 3,114 |
 | — of which its own tests passed: the "801" | **801** |
 | — shipped, from a page path since renamed | 30 |
-| — shipped, from a page Derek declares non-normative ([ADR-005](02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred)) | 112 |
+| — shipped, from a page Derek declares non-normative ([ADR-005](02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred)) | 112 |
 | — **shipped, from a page Derek actually reads** | **659** |
 | Derek candidates, same pages | **662** (before this audit) |
 
@@ -47,7 +47,7 @@ F3](00-postmortem-octavius.md) measured rather than asserted.
 
 Also worth saying plainly: **801 was not Octavius's extraction count.** Octavius
 extracted 3,114 and shipped the 801 whose tests passed — tests written by the same
-model call that wrote the rules ([ADR-011](02-decisions.md#adr-011-the-dogfood-gate)).
+model call that wrote the rules ([ADR-011](02-decisions.md#adr-011--the-dogfood-gate)).
 The honest comparison of *extraction* is 3,114 against 662, and the 3,114 is the number
 the postmortem exists to explain.
 
@@ -59,14 +59,14 @@ places, and the pattern is systematic:
 
 | Page | Octavius | Derek | Why |
 |---|---|---|---|
-| `spelling/common-misspellings-and-word-confusion.md` | 22 | 3 | A lookup table. Octavius emitted one rule per confusable pair; Derek emits one rule whose matcher is a `literal_set` ([ADR-009](02-decisions.md#adr-009-no-generated-code-in-the-runtime)). |
+| `spelling/common-misspellings-and-word-confusion.md` | 22 | 3 | A lookup table. Octavius emitted one rule per confusable pair; Derek emits one rule whose matcher is a `literal_set` ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime)). |
 | `titles-honours/royalty-vice-royalty-and-nobility.md` | 17 | 3 | Same shape: a table of forms of address. |
 | `legal-material/bills-and-explanatory-material.md` | 12 | 0 | Every rule on the page is stated as a fact, not an instruction. See below. |
 | `content-types/forms.md` | 9 | 29 | Rules stated as imperative headings; Octavius read the prose and missed most of them. |
 | `content-types/emails-and-letters.md` | 0 | 14 | Same. |
 
 The first two are a **counting convention**, not a recall failure, and Derek's is the
-one that survives contact with [ADR-009](02-decisions.md#adr-009-no-generated-code-in-the-runtime):
+one that survives contact with [ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime):
 22 near-identical rules with one word each is 22 chances to get polarity wrong. The
 third is a real recall failure, and it is what most of this audit is about.
 
@@ -147,7 +147,7 @@ have 2-digit elements"*), 2 are borderline, and 14 are exposition.
 `needs to` would delete *"Verbs must 'agree' with the subject"* — one of the better
 rules in the ledger — unless the permissive cases were enumerated by hand, and that is
 a lexicon treadmill. Fourteen candidates is about four minutes of triage, and
-[ADR-008](02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue) puts a
+[ADR-008](02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue) puts a
 human there precisely so extraction can afford to be generous. Recorded so the reviewer
 recognises the shape on sight and rejects it without deliberating.
 
@@ -216,7 +216,7 @@ measurement does not.
 
 When the Style Manual puts a **`Write this`** beside a **`Not this`** under a heading,
 its own editors have asserted that the heading governs a right and a wrong way to write
-something. [ADR-011](02-decisions.md#adr-011-the-dogfood-gate) already treats those
+something. [ADR-011](02-decisions.md#adr-011--the-dogfood-gate) already treats those
 pairs as ground truth for *evaluating* rules. So:
 
 > **171 headings carry both polarities. The extractor recognised 113. It filed 58 as
@@ -293,10 +293,10 @@ Recorded rather than patched, because each needs a decision rather than a fix.
    Unaffected by ADR-021: the tagger reads them correctly as descriptions, which is
    what they are — it just has no opinion on whether a description is normative.
 4. **The 18% "label, not statement" cost is unavoidable at heading granularity.**
-   [ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity) makes the
+   [ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity) makes the
    heading the rule's identity. Where the manual uses a noun-phrase label, the rule
    text lives in the body and a human has to write `specification`. That is
-   [ADR-017](02-decisions.md#adr-017-ambiguity-is-classified-and-formalised) working as
+   [ADR-017](02-decisions.md#adr-017--ambiguity-is-classified-and-formalised) working as
    designed, but it is slower than the 20-seconds-per-rule the roadmap budgets.
 
 ---

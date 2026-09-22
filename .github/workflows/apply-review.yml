@@ -26,8 +26,15 @@ permissions:
   contents: write
 
 # Two reviewers uploading at once must not race each other into the ledger.
+# Everything that writes ledger/rules.jsonl shares one concurrency group.
+# snapshot.yml reconciles the ledger against a fresh corpus; apply-review.yml
+# replays reviewer decisions into it. They were in separate groups, so the two
+# could run at once, each checking out, rewriting the whole file and pushing —
+# and whichever pushed second would either be rejected or silently land a
+# ledger built without the other's changes. The group is named for the
+# resource, not the workflow, so anything added later joins it by saying so.
 concurrency:
-  group: apply-review
+  group: ledger-write
   cancel-in-progress: false
 
 jobs:

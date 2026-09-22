@@ -1,0 +1,32 @@
+# Corpus freeze (ADR-024).
+#
+# A frozen corpus is not a frozen ledger. While this file says `frozen: true`:
+#
+#   * the daily snapshot still fetches, converts, normalises and hashes every
+#     page it would have fetched anyway, and writes what moved to
+#     `corpus/drift.json`;
+#   * it does NOT rewrite `corpus/pages/`, does NOT rewrite
+#     `corpus/snapshot.lock.json`, and does NOT rebuild the ledger;
+#   * `corpus/.heartbeat` is refreshed as normal, because the CI freshness gate
+#     asks "is the crawler alive", not "is the corpus current".
+#
+# So the only thing that can change `ledger/rules.jsonl` is a human decision.
+#
+# Delete this file to unfreeze. The runbook is in ADR-024; it is not just a
+# deletion, because span offsets have to be rebased onto the new text.
+
+version: 1
+frozen: true
+frozen_at: "2026-09-22T00:00:00+00:00"
+
+reason: >-
+  The extraction method is being replaced. Rules are being re-identified by
+  hand as spans of text in the annotator (ADR-023), and those spans are
+  anchored to the page text they were drawn on. An upstream edit moves every
+  span on that page. Reconciling a rulebook against a moving corpus, using
+  heading heuristics that are being discarded, spends review effort on rules
+  that will not survive.
+
+# sha256 over the sorted (path, sha256) pairs in corpus/snapshot.lock.json.
+# This is the corpus the golden set is being drawn against.
+lock_digest: "5e6af4c7d0e11e86387ee4198a2da364058fe34691aacb5e28ec9b03833cfea1"

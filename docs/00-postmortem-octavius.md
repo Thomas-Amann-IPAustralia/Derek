@@ -51,7 +51,7 @@ python -m derek.eval.dogfood --octavius reference/octavius-v1/rules_working_draf
 ```
 
 The same gate now runs against Derek's own ledger in CI
-([ADR-011](02-decisions.md#adr-011-the-dogfood-gate)), so this measurement is a
+([ADR-011](02-decisions.md#adr-011--the-dogfood-gate)), so this measurement is a
 permanent standing check rather than a one-off autopsy.
 
 **The critical observation is not that the rules were bad. It is that every one of
@@ -62,7 +62,7 @@ with a false-positive rate of effectively 100%.
 
 > **Derek invariant D-1:** No rule may be validated only against examples authored
 > alongside it. Every rule is additionally gated against an independent corpus it
-> did not see. See [ADR-011](02-decisions.md#adr-011-the-dogfood-gate).
+> did not see. See [ADR-011](02-decisions.md#adr-011--the-dogfood-gate).
 
 ---
 
@@ -99,7 +99,7 @@ direction their detector actually implemented.
 > describing what makes text **wrong**, and separate `compliant_examples` (must never
 > fire) and `violating_examples` (must always fire). The field names make the
 > direction unmistakable, and the schema rejects a rule that has only one kind.
-> See [ADR-004](02-decisions.md#adr-004-polarity-is-a-first-class-schema-field).
+> See [ADR-004](02-decisions.md#adr-004--polarity-is-a-first-class-schema-field).
 
 ### F2 — Detecting an absence with a pattern matcher
 
@@ -116,7 +116,7 @@ the ones the Style Manual itself spells out correctly under its own exceptions.
 > rule is a **presence** rule (something wrong is in the text) or an **absence** rule
 > (something required is missing). Absence rules need a defined scope — the span
 > within which the requirement must be satisfied — or they are not detectable.
-> See [ADR-006](02-decisions.md#adr-006-presence-vs-absence-and-the-scope-requirement).
+> See [ADR-006](02-decisions.md#adr-006--presence-vs-absence-and-the-scope-requirement).
 
 ### F3 — Extraction from non-normative pages
 
@@ -137,7 +137,7 @@ the manual, not to APS writing generally.
 
 > **Derek invariant D-4:** Page eligibility is decided **before** extraction, by an
 > explicit, reviewable allowlist of corpus paths, not inferred per rule.
-> See [ADR-005](02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred).
+> See [ADR-005](02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred).
 
 ### F4 — Harvesting the manual's prose instead of the pattern it describes
 
@@ -180,7 +180,7 @@ a policy document they are pure noise.
 > `unit` (the span it evaluates: character, token, sentence, block, document,
 > or `artifact`). Rules with `unit: artifact` are recorded, marked
 > `detectable: false`, and never loaded into the text runtime.
-> See [ADR-007](02-decisions.md#adr-007-scope-and-unit-are-mandatory).
+> See [ADR-007](02-decisions.md#adr-007--scope-and-unit-are-mandatory).
 
 ### F6 — Over-extraction and duplication
 
@@ -197,7 +197,7 @@ times under different rule IDs.
 > **Derek invariant D-7:** The rule inventory is derived **deterministically from
 > document structure**, not proposed by a model. A model may classify and formalise a
 > candidate; it may not decide that a candidate exists.
-> See [ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity).
+> See [ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity).
 
 ### F7 — Change detection that could not detect change
 
@@ -235,7 +235,7 @@ from stopping altogether, silently.
 > **Derek invariant D-8:** The snapshot layer emits an explicit `added / altered /
 > removed` changeset per run, computed from content hashes rather than site-supplied
 > metadata, with a periodic full re-hash sweep that does not trust `lastmod`.
-> See [ADR-001](02-decisions.md#adr-001-snapshot-integrity-over-site-metadata).
+> See [ADR-001](02-decisions.md#adr-001--snapshot-integrity-over-site-metadata).
 
 ### F8 — Non-deterministic extraction
 
@@ -252,7 +252,7 @@ pipeline whose output nobody could diff.
 > **Derek invariant D-9:** Model outputs are content-addressed by
 > `(candidate_uid, prompt_version, model_id)` and committed. A cached decision is never
 > recomputed. Re-running over an unchanged corpus is a no-op by construction.
-> See [ADR-003](02-decisions.md#adr-003-model-calls-are-a-cache-not-a-step).
+> See [ADR-003](02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step).
 
 ### F9 — Premature delegation
 
@@ -268,7 +268,7 @@ an afterthought**, and to keep the reviewable unit small enough to actually revi
 > **Derek invariant D-10:** A rule is `proposed` until a human accepts or amends it.
 > Only `accepted` rules load into the runtime. The ledger records who decided, when,
 > and why, and the review UI is built before the rule volume grows.
-> See [ADR-008](02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue).
+> See [ADR-008](02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue).
 
 ---
 
@@ -278,7 +278,7 @@ These are real and would have bitten again.
 
 | # | Defect | Where | Consequence |
 |---|---|---|---|
-| 1 | Heading levels are flattened inconsistently by `trafilatura` | `src/scrape.py:html_to_markdown` | The corpus had 1,795 `###` but only 53 `##` and 2 `#`, with section headings demoted to plain paragraphs. Since structure-driven extraction reads rules off the heading tree, this silently changed which rules exist. **Fixed:** `derek/corpus/to_markdown.py` takes heading levels from the source DOM ([ADR-020](02-decisions.md#adr-020-heading-levels-come-from-the-dom)); `trafilatura` is removed from the pipeline. |
+| 1 | Heading levels are flattened inconsistently by `trafilatura` | `src/scrape.py:html_to_markdown` | The corpus had 1,795 `###` but only 53 `##` and 2 `#`, with section headings demoted to plain paragraphs. Since structure-driven extraction reads rules off the heading tree, this silently changed which rules exist. **Fixed:** `derek/corpus/to_markdown.py` takes heading levels from the source DOM ([ADR-020](02-decisions.md#adr-020--heading-levels-come-from-the-dom)); `trafilatura` is removed from the pipeline. |
 | 2 | `__builtins__` exposed to rule code | `logic/rulebook/adapters.py:_RULE_EXEC_GLOBALS` | `exec()` of model-generated code with full builtins. Acceptable when the code is reviewed; unacceptable when it is generated in batches of thousands and merged unread. |
 | 3 | Test-generation and rule-generation share a model call | `src/generate_code.py` | The root cause of the "801 pass" illusion (§1). |
 | 4 | `test_result` doubles as lifecycle state | schema | `pass`/`fail`/`skip`/`frozen` conflates "the tests passed" with "we decided not to ship this". Derek separates `validation` from `review_status`. |
@@ -332,18 +332,18 @@ already attached.
 Each is wired to a Derek invariant or ADR. Nothing here should be re-decided without
 reading the linked rationale.
 
-- [ ] D-1 Independent validation corpus, never model-authored tests alone — [ADR-011](02-decisions.md#adr-011-the-dogfood-gate)
-- [ ] D-2 Explicit polarity: `violation_condition`, `compliant_examples`, `violating_examples` — [ADR-004](02-decisions.md#adr-004-polarity-is-a-first-class-schema-field)
-- [ ] D-3 Presence vs absence classified before method selection — [ADR-006](02-decisions.md#adr-006-presence-vs-absence-and-the-scope-requirement)
-- [ ] D-4 Corpus eligibility declared, not inferred — [ADR-005](02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred)
+- [ ] D-1 Independent validation corpus, never model-authored tests alone — [ADR-011](02-decisions.md#adr-011--the-dogfood-gate)
+- [ ] D-2 Explicit polarity: `violation_condition`, `compliant_examples`, `violating_examples` — [ADR-004](02-decisions.md#adr-004--polarity-is-a-first-class-schema-field)
+- [ ] D-3 Presence vs absence classified before method selection — [ADR-006](02-decisions.md#adr-006--presence-vs-absence-and-the-scope-requirement)
+- [ ] D-4 Corpus eligibility declared, not inferred — [ADR-005](02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred)
 - [ ] D-5 Examples never drawn from the rule statement itself — [§4](#4-what-is-worth-keeping)
-- [ ] D-6 `applies_to` and `unit` mandatory; artifact rules never loaded — [ADR-007](02-decisions.md#adr-007-scope-and-unit-are-mandatory)
-- [ ] D-7 Candidate identity is deterministic and structural — [ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity)
-- [ ] D-8 Changesets from content hashes, with full re-hash sweeps — [ADR-001](02-decisions.md#adr-001-snapshot-integrity-over-site-metadata)
-- [ ] D-9 Model calls are a content-addressed cache — [ADR-003](02-decisions.md#adr-003-model-calls-are-a-cache-not-a-step)
-- [ ] D-10 Human acceptance gates the runtime — [ADR-008](02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue)
+- [ ] D-6 `applies_to` and `unit` mandatory; artifact rules never loaded — [ADR-007](02-decisions.md#adr-007--scope-and-unit-are-mandatory)
+- [ ] D-7 Candidate identity is deterministic and structural — [ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity)
+- [ ] D-8 Changesets from content hashes, with full re-hash sweeps — [ADR-001](02-decisions.md#adr-001--snapshot-integrity-over-site-metadata)
+- [ ] D-9 Model calls are a content-addressed cache — [ADR-003](02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step)
+- [ ] D-10 Human acceptance gates the runtime — [ADR-008](02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue)
 - [ ] Separate `validation` from `review_status` (Defect 4)
-- [ ] Calibrate confidence before exposing a slider (Defect 5) — [ADR-013](02-decisions.md#adr-013-confidence-is-calibrated-not-raw)
+- [ ] Calibrate confidence before exposing a slider (Defect 5) — [ADR-013](02-decisions.md#adr-013--confidence-is-calibrated-not-raw)
 - [ ] Measure rule quality on raw, un-suppressed output (Defect 6)
-- [x] Take heading levels from the DOM, not from a generic extractor (Defect 1) — [ADR-020](02-decisions.md#adr-020-heading-levels-come-from-the-dom)
-- [ ] Never `exec()` unreviewed generated code with full builtins (Defect 2) — [ADR-009](02-decisions.md#adr-009-no-generated-code-in-the-runtime)
+- [x] Take heading levels from the DOM, not from a generic extractor (Defect 1) — [ADR-020](02-decisions.md#adr-020--heading-levels-come-from-the-dom)
+- [ ] Never `exec()` unreviewed generated code with full builtins (Defect 2) — [ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime)

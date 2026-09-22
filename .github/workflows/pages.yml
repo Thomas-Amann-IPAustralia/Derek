@@ -1,7 +1,9 @@
 name: Reviewer dashboard
 
-# Publishes tools/review/ as a static site to GitHub Pages:
-#   https://thomas-amann-ipaustralia.github.io/Derek/
+# Publishes both reviewer apps as a static site to GitHub Pages:
+#
+#   /           tools/review/    — card-by-card triage of the extractor's output
+#   /annotate/  tools/annotate/  — mark the spans of text that state each rule
 #
 # Round 1 is 736 decisions a human has to make, and the reviewer's machine may
 # not be able to run Python at all. A dashboard nobody can open is a review
@@ -43,11 +45,19 @@ jobs:
         with:
           python-version: '3.11'
 
-      # No `pip install`: build_static.py, server.py and everything they import
-      # from derek/ledger/ and derek/extract/ are stdlib-only by invariant
-      # (see CLAUDE.md, "Dependencies are tiered deliberately").
-      - name: Build the site
+      # No `pip install`: both build_static.py files, server.py and everything
+      # they import from derek/ledger/ and derek/extract/ are stdlib-only by
+      # invariant (see CLAUDE.md, "Dependencies are tiered deliberately").
+      #
+      # Order matters. The triage build owns `site/` and clears it; the annotator
+      # owns `site/annotate/` and clears only that. Running them the other way
+      # round would delete the annotator, so the triage build goes first and
+      # `--no-clean` exists for anyone who needs the other order.
+      - name: Build the triage dashboard
         run: python tools/review/build_static.py --out site
+
+      - name: Build the span annotator
+        run: python tools/annotate/build_static.py --out site/annotate
 
       - uses: actions/configure-pages@v5
         with:
@@ -63,9 +73,13 @@ jobs:
       - name: Summarise
         run: |
           {
-            echo "### Reviewer dashboard"
+            echo "### Triage dashboard"
             echo '```json'
-            cat site/data/manifest.json | python -m json.tool
+            python -m json.tool < site/data/manifest.json
+            echo '```'
+            echo "### Span annotator"
+            echo '```json'
+            python -m json.tool < site/annotate/data/manifest.json
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 

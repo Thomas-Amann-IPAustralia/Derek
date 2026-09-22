@@ -123,6 +123,25 @@ class DetectionMethod:
     })
 
 
+# How much of a rule's surrounding text the ledger keeps. The excerpt exists so
+# a reviewer can read the rule in context without a checkout; it is not the
+# authority for anything (the corpus is), so it is bounded.
+BODY_EXCERPT_CHARS = 1200
+
+
+def body_excerpt(body: str) -> str:
+    """The stored excerpt for a body of text.
+
+    One function rather than a repeated slice, because the truncation has to be
+    applied on BOTH sides of every comparison. It was not, and the consequence
+    was that ``reconcile`` compared a truncated excerpt against a full body:
+    every rule with more than 1200 characters beneath it reported as
+    ``body_altered`` on every build, forever, whether or not the Style Manual
+    had changed. 23 of 736 rules, none of them actually altered.
+    """
+    return body[:BODY_EXCERPT_CHARS]
+
+
 @dataclass
 class Source:
     """Provenance tag 3 — the original Style Manual rule.
@@ -145,7 +164,14 @@ class Source:
 class Derivation:
     """Provenance tag 1 — how we arrived at this rule."""
 
-    method: str = "heading_structure"   # heading_structure | imperative_sentence | manual
+    # heading_structure — the deterministic heading walk (ADR-002)
+    # imperative_sentence — a prose pass, declared but not built
+    # human_span — a span a human marked in the annotator, recorded in
+    #   golden/spans.jsonl and read back as a declared input (ADR-023)
+    # manual — a hand-written ledger entry. Note this one does NOT survive a
+    #   rebuild: `reconcile` orphans any live rule whose uid no candidate
+    #   reproduces, and nothing reproduces a hand-edit. Use `human_span`.
+    method: str = "heading_structure"
     extractor_version: str = "1.0.0"
     statement_form: str = ""            # imperative | negative_imperative | modal | descriptive
     derived_at: str = ""

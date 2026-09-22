@@ -11,7 +11,7 @@ no Python.
 [`tools/review/apply_decisions.py`](../../tools/review/apply_decisions.py), which runs the
 same guard rails as the local review server — a rule still cannot be kept without
 `clarity`, and `uid` / `source` / `derivation` still cannot be written from a reviewer's
-hands ([ADR-008](../../docs/02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue)).
+hands ([ADR-008](../../docs/02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue)).
 If any line would break one of those, it refuses the whole file and says which line and
 why, rather than landing half a session in the ledger.
 
