@@ -130,7 +130,7 @@ formalise a candidate; it may never decide that one exists. That is what makes
 This only works if the conversion preserves those levels. Octavius used `trafilatura`,
 which flattens them, so 71% of its structure had to be guessed back by a heuristic.
 Derek reads the levels from the DOM instead
-([ADR-020](docs/02-decisions.md#adr-020-heading-levels-come-from-the-dom)).
+([ADR-020](docs/02-decisions.md#adr-020--heading-levels-come-from-the-dom)).
 
 ### The manual ships its own test set
 

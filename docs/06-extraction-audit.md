@@ -15,13 +15,13 @@ between the page as published and the candidates we ended up with?**
 ## Why this was run
 
 Extraction reads the rule inventory off the heading tree
-([ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity)), so heading
+([ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity)), so heading
 fidelity decides which rules exist. The previous corpus was converted with
 `trafilatura`, which flattens heading levels, and a repair heuristic guessed the
 structure back. That left **390 of 546 candidates (71%) depending on a heuristic** —
 too much weight for a guess to carry.
 
-[ADR-020](02-decisions.md#adr-020-heading-levels-come-from-the-dom) replaced the
+[ADR-020](02-decisions.md#adr-020--heading-levels-come-from-the-dom) replaced the
 converter with one that reads levels from the DOM. This audit checks whether that
 worked, and what else was wrong.
 
@@ -94,8 +94,8 @@ renderer concatenated them without a separator:
 ```
 
 Cosmetic in prose, but **example text feeds the gold evaluation set**
-([ADR-011](02-decisions.md#adr-011-the-dogfood-gate),
-[ADR-013](02-decisions.md#adr-013-confidence-is-calibrated-not-raw)), so corrupted
+([ADR-011](02-decisions.md#adr-011--the-dogfood-gate),
+[ADR-013](02-decisions.md#adr-013--confidence-is-calibrated-not-raw)), so corrupted
 example sentences would have propagated into calibration data.
 
 **Fixed.** A block-level child inside an inline context now gets a separator.

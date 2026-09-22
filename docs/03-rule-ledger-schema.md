@@ -6,7 +6,7 @@ no diff.
 
 It is **not a database**. Every decision is a reviewable diff, attributable, revertable,
 and it survives the review tool being rewritten
-([ADR-008](02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue)).
+([ADR-008](02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue)).
 
 Machine-checkable contract: [`schema/rule.schema.json`](../schema/rule.schema.json).
 Python model: `derek/ledger/model.py`.
@@ -24,7 +24,7 @@ These are the project's non-negotiable requirement. Every entry answers all thre
 | **3. The original rule it came from** | `source` | Page path, heading path, the manual's wording verbatim, URL, snapshot hash, line |
 
 `source.statement` is **never edited**. An interpretation goes in `specification`
-([ADR-017](02-decisions.md#adr-017-ambiguity-is-classified-and-formalised)), so the
+([ADR-017](02-decisions.md#adr-017--ambiguity-is-classified-and-formalised)), so the
 manual's wording stays citable and the interpretation stays reviewable as an
 interpretation.
 
@@ -36,7 +36,7 @@ interpretation.
 
 | Field | Type | Notes |
 |---|---|---|
-| `uid` | `string(16 hex)` | `blake2s(page_path ‖ heading_path ‖ normalised_statement)`. Deterministic ([ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity)). |
+| `uid` | `string(16 hex)` | `blake2s(page_path ‖ heading_path ‖ normalised_statement)`. Deterministic ([ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity)). |
 | `schema_version` | `int` | Currently `1`. |
 
 ### `source` — provenance tag 3
@@ -59,15 +59,15 @@ interpretation.
 | `extractor_version` | Bumped when extraction logic changes |
 | `statement_form` | `imperative` · `negative_imperative` · `modal` · `descriptive` |
 | `supersedes` | UID of the rule this replaces after an upstream rewording |
-| `model_decisions` | `field → "<prompt_version>/<model_id>"`. A model-proposed value is never mistaken for a human one, and a prompt bump invalidates exactly the right entries ([ADR-003](02-decisions.md#adr-003-model-calls-are-a-cache-not-a-step)) |
+| `model_decisions` | `field → "<prompt_version>/<model_id>"`. A model-proposed value is never mistaken for a human one, and a prompt bump invalidates exactly the right entries ([ADR-003](02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step)) |
 
 ### Interpretation
 
 | Field | Values | Notes |
 |---|---|---|
-| `modality` | `MUST` `MUST_NOT` `SHOULD` `SHOULD_NOT` `MAY` `PREFER` | Deontic force ([ADR-016](02-decisions.md#adr-016-deontic-modality-taxonomy)). Drives severity and the dogfood budget. |
+| `modality` | `MUST` `MUST_NOT` `SHOULD` `SHOULD_NOT` `MAY` `PREFER` | Deontic force ([ADR-016](02-decisions.md#adr-016--deontic-modality-taxonomy)). Drives severity and the dogfood budget. |
 | `modality_basis` | free text | Why — e.g. `lexical cue: 'avoid'`. Shown in review so it can be overruled in one keystroke. |
-| `clarity` | `unambiguous` `ambiguous_resolvable` `ambiguous_deferred` `not_automatable` | ([ADR-017](02-decisions.md#adr-017-ambiguity-is-classified-and-formalised)) |
+| `clarity` | `unambiguous` `ambiguous_resolvable` `ambiguous_deferred` `not_automatable` | ([ADR-017](02-decisions.md#adr-017--ambiguity-is-classified-and-formalised)) |
 | `specification` | free text | Formal restatement. **Detectors implement this where present.** |
 | `disambiguation_log` | `[{by, at, assumption, basis}]` | Mandatory when `clarity = ambiguous_resolvable`. Schema-enforced. |
 
@@ -77,7 +77,7 @@ interpretation.
 |---|---|
 | `applies_to` | Content types, or `["any"]` |
 | `unit` | `character` `token` `phrase` `sentence` `paragraph` `block` `section` `document` `artifact` |
-| `context_preconditions` | Drawn from the shared context vocabulary ([ADR-015](02-decisions.md#adr-015-context-variables-chosen-by-betweenness)) |
+| `context_preconditions` | Drawn from the shared context vocabulary ([ADR-015](02-decisions.md#adr-015--context-variables-chosen-by-betweenness)) |
 
 `unit: artifact` rules (image contrast, video captions, file naming) are recorded but
 **never loaded into the text runtime** — schema-enforced. Octavius applied them to prose
@@ -88,13 +88,13 @@ and they were among its worst noise sources
 
 | Field | Notes |
 |---|---|
-| `direction` | `presence` (something wrong is in the text) or `absence` (something required is missing) ([ADR-006](02-decisions.md#adr-006-presence-vs-absence-and-the-scope-requirement)) |
+| `direction` | `presence` (something wrong is in the text) or `absence` (something required is missing) ([ADR-006](02-decisions.md#adr-006--presence-vs-absence-and-the-scope-requirement)) |
 | `violation_condition` | **What makes text wrong.** Mandatory for detectable rules |
 | `compliant_examples` | Must **never** fire |
 | `violating_examples` | Must **always** fire |
 
 Three independent guards, because one was not enough last time
-([ADR-004](02-decisions.md#adr-004-polarity-is-a-first-class-schema-field)):
+([ADR-004](02-decisions.md#adr-004--polarity-is-a-first-class-schema-field)):
 
 1. **Schema** — a detectable rule must carry `violation_condition` and both example lists.
 2. **Test harness** — violating examples fire, compliant examples do not.
@@ -112,7 +112,7 @@ blocks are harvested but **not** assigned a polarity.
 |---|---|
 | `tier` | `0` deterministic · `1` classifier · `2` generative · `null` undecided |
 | `method` | `literal_set` `regex` `token_pattern` `length_constraint` `structural_predicate` `classifier` `none` |
-| `matcher` | **Declarative data only.** The runtime never executes code from the ledger ([ADR-009](02-decisions.md#adr-009-no-generated-code-in-the-runtime)) |
+| `matcher` | **Declarative data only.** The runtime never executes code from the ledger ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime)) |
 | `detectable` | Gates loading |
 | `not_detectable_reason` | Required when `detectable: false` |
 
@@ -133,7 +133,7 @@ loader ([postmortem Defect 4](00-postmortem-octavius.md#3-defects-that-were-not-
 
 | Field | Notes |
 |---|---|
-| `confidence` | Calibrated P(finding is a true violation), comparable across tiers. `null` = unvalidated, never an invented number ([ADR-013](02-decisions.md#adr-013-confidence-is-calibrated-not-raw)) |
+| `confidence` | Calibrated P(finding is a true violation), comparable across tiers. `null` = unvalidated, never an invented number ([ADR-013](02-decisions.md#adr-013--confidence-is-calibrated-not-raw)) |
 | `review.status` | `proposed` `accepted` `amended` `rejected` `deferred` `quarantined` `superseded` `orphaned` |
 | `review.history` | Every transition: from, to, by, at, note |
 

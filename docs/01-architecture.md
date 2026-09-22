@@ -59,7 +59,7 @@ changed since last time.
 | `derek/corpus/snapshot.py` | Fetch, write, update the lock file. |
 | `derek/corpus/diff.py` | Emit `added` / `altered` / `removed` changesets. |
 
-Three things Octavius got wrong and this layer fixes ([ADR-001](02-decisions.md#adr-001-snapshot-integrity-over-site-metadata)):
+Three things Octavius got wrong and this layer fixes ([ADR-001](02-decisions.md#adr-001--snapshot-integrity-over-site-metadata)):
 
 1. **Content hash is the authority**, not the sitemap's `lastmod`. A page edited without
    a `lastmod` bump was invisible to Octavius forever.
@@ -77,7 +77,7 @@ preserve heading hierarchy: its corpus carried 1,795 `###` against only 53 `##` 
 recovered them, but that left **71% of rule candidates depending on a guess**.
 
 `derek/corpus/to_markdown.py` reads heading levels from the source DOM instead
-([ADR-020](02-decisions.md#adr-020-heading-levels-come-from-the-dom)). The Style Manual
+([ADR-020](02-decisions.md#adr-020--heading-levels-come-from-the-dom)). The Style Manual
 publishes a clean outline — `h1` page title, `h2` sections, `h3` rules, `h4` example
 blocks — so the levels are simply taken as given. Site chrome is removed structurally,
 and `extract_markdown` raises rather than returning empty, so a blocked fetch can never
@@ -102,7 +102,7 @@ means the converter has broken.
 | `derek/extract/build.py` | Corpus → ledger, with reconciliation. |
 
 **No model runs here.** The Style Manual states its rules as headings, so the inventory
-is free and deterministic ([ADR-002](02-decisions.md#adr-002-deterministic-candidate-identity)).
+is free and deterministic ([ADR-002](02-decisions.md#adr-002--deterministic-candidate-identity)).
 Octavius asked an LLM to decide what a rule was and got 3,114 of them — roughly twice
 what the document contains — with no reproducibility.
 
@@ -148,18 +148,18 @@ The ledger entry ([03-rule-ledger-schema.md](03-rule-ledger-schema.md)) records:
 - **Three provenance tags** — `derivation` (how we got here), `detection` (how it is
   implemented), `source` (the original rule, verbatim, with URL and page hash).
 - **Polarity** — `direction`, `violation_condition`, `compliant_examples`,
-  `violating_examples` ([ADR-004](02-decisions.md#adr-004-polarity-is-a-first-class-schema-field)).
-- **Scope** — `applies_to`, `unit`, `context_preconditions` ([ADR-007](02-decisions.md#adr-007-scope-and-unit-are-mandatory)).
+  `violating_examples` ([ADR-004](02-decisions.md#adr-004--polarity-is-a-first-class-schema-field)).
+- **Scope** — `applies_to`, `unit`, `context_preconditions` ([ADR-007](02-decisions.md#adr-007--scope-and-unit-are-mandatory)).
 - **Clarity** — and, where an ambiguity was resolved, the `specification` plus a
-  `disambiguation_log` of what was assumed ([ADR-017](02-decisions.md#adr-017-ambiguity-is-classified-and-formalised)).
-- **Modality** — deontic force, driving severity and gate budgets ([ADR-016](02-decisions.md#adr-016-deontic-modality-taxonomy)).
+  `disambiguation_log` of what was assumed ([ADR-017](02-decisions.md#adr-017--ambiguity-is-classified-and-formalised)).
+- **Modality** — deontic force, driving severity and gate budgets ([ADR-016](02-decisions.md#adr-016--deontic-modality-taxonomy)).
 - **Review** — status, who decided, when, and the full transition history.
 
 **Model proposals are welcome; model decisions are not.** The pipeline pre-fills every
 field it can so that review is *correction* rather than authoring. Proposals are
 content-addressed by `(candidate_uid, prompt_version, model_id)` and committed, so
 re-running is a no-op and a prompt change has a visible blast radius
-([ADR-003](02-decisions.md#adr-003-model-calls-are-a-cache-not-a-step)).
+([ADR-003](02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step)).
 
 The review UI (`tools/review/`) is built **before** the rule volume grows. It writes
 git-tracked JSONL, so every decision is a reviewable diff. Bulk rejection is
@@ -179,24 +179,24 @@ disqualifying a hundred rules in a sitting must take minutes.
 | **2** | Small generative model, rule-conditioned rewrite | **Deferred.** Suggestion only, never identification |
 
 Routing is a recorded decision, not a runtime fallback
-([ADR-010](02-decisions.md#adr-010-detection-tiers-and-cheapest-viable-routing)). Tier 1
+([ADR-010](02-decisions.md#adr-010--detection-tiers-and-cheapest-viable-routing)). Tier 1
 is a single shared encoder emitting scores for all Tier-1 rules in one forward pass,
 which is what makes neural detection affordable.
 
 **Rules are data, not code.** A matcher is a declarative structure from a closed,
 versioned vocabulary, validated against `schema/rule.schema.json`. The runtime never
 `exec()`s anything from the ledger
-([ADR-009](02-decisions.md#adr-009-no-generated-code-in-the-runtime)). Octavius `exec()`'d
+([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime)). Octavius `exec()`'d
 model-generated Python with full `__builtins__` for thousands of unreviewed rules.
 
-**Confidence is calibrated** ([ADR-013](02-decisions.md#adr-013-confidence-is-calibrated-not-raw)).
+**Confidence is calibrated** ([ADR-013](02-decisions.md#adr-013--confidence-is-calibrated-not-raw)).
 `confidence` means the same thing at every tier: the estimated probability that this
 finding is a true violation. Tier 0 uses the rule's empirical precision with a Wilson
 lower bound; Tier 1 uses temperature-scaled probabilities. A rule without enough
 evaluation data gets `confidence: null` and shows as *unvalidated* — never an invented
 number. This is what makes the confidence slider meaningful rather than decorative.
 
-**The dogfood gate** ([ADR-011](02-decisions.md#adr-011-the-dogfood-gate)) fires every
+**The dogfood gate** ([ADR-011](02-decisions.md#adr-011--the-dogfood-gate)) fires every
 accepted rule at the manual's own prose, on raw un-suppressed output. Octavius scored
 **1,441 findings per 1,000 words** there and shipped anyway, because firing budgets and
 document-level gating made the output look merely noisy. Quality is measured before any
@@ -207,7 +207,7 @@ suppression, permanently.
 ## Layer 4 — Interfaces
 
 One core call, thin adapters
-([ADR-014](02-decisions.md#adr-014-core-library-with-thin-adapters)):
+([ADR-014](02-decisions.md#adr-014--core-library-with-thin-adapters)):
 
 ```python
 derek.core.check(document: Document, context: Context) -> list[Finding]
@@ -235,7 +235,7 @@ sentence and block rules need the whole block; the path has a latency budget and
 ## The document model, and why Word is cheap to add later
 
 Round-tripping with Word is deferred. The structural accommodation is made now, and
-costs almost nothing ([ADR-012](02-decisions.md#adr-012-format-independent-document-model)).
+costs almost nothing ([ADR-012](02-decisions.md#adr-012--format-independent-document-model)).
 
 ```
 Document
@@ -255,12 +255,12 @@ Adding Word means adding an `Anchor` implementation over OOXML and **nothing els
 retraining, no rule changes, no re-evaluation. That holds only if the model never sees
 format markup, which is why training input is plain text plus a block-type control token
 from a vocabulary shared by every adapter
-([ADR-019](02-decisions.md#adr-019-training-inputs-carry-no-format-markup)).
+([ADR-019](02-decisions.md#adr-019--training-inputs-carry-no-format-markup)).
 
 The known hard part is already written down: Word splits a logical span across multiple
 `w:r` runs, so a replacement crossing a run boundary must decide which run's formatting
 survives. That is adapter-local and never reaches the core. See
-[08-open-questions.md](08-open-questions.md).
+[05-open-questions.md](05-open-questions.md).
 
 ---
 

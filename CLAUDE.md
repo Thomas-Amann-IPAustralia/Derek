@@ -24,20 +24,20 @@ Violating any of these reintroduces a known failure. Each links to its rationale
 
 | # | Invariant | ADR |
 |---|---|---|
-| D-1 | No rule is validated only against examples authored alongside it | [ADR-011](docs/02-decisions.md#adr-011-the-dogfood-gate) |
-| D-2 | Polarity is explicit: `violation_condition` + `compliant_examples` + `violating_examples` | [ADR-004](docs/02-decisions.md#adr-004-polarity-is-a-first-class-schema-field) |
-| D-3 | `presence` vs `absence` is classified before a detection method is chosen | [ADR-006](docs/02-decisions.md#adr-006-presence-vs-absence-and-the-scope-requirement) |
-| D-4 | Corpus eligibility is declared in `corpus/eligibility.yaml`, never inferred per rule | [ADR-005](docs/02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred) |
+| D-1 | No rule is validated only against examples authored alongside it | [ADR-011](docs/02-decisions.md#adr-011--the-dogfood-gate) |
+| D-2 | Polarity is explicit: `violation_condition` + `compliant_examples` + `violating_examples` | [ADR-004](docs/02-decisions.md#adr-004--polarity-is-a-first-class-schema-field) |
+| D-3 | `presence` vs `absence` is classified before a detection method is chosen | [ADR-006](docs/02-decisions.md#adr-006--presence-vs-absence-and-the-scope-requirement) |
+| D-4 | Corpus eligibility is declared in `corpus/eligibility.yaml`, never inferred per rule | [ADR-005](docs/02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred) |
 | D-5 | A rule's examples are never drawn from the sentence that states the rule | [postmortem §4](docs/00-postmortem-octavius.md#4-what-is-worth-keeping) |
-| D-6 | `applies_to` and `unit` are mandatory; `unit: artifact` never loads | [ADR-007](docs/02-decisions.md#adr-007-scope-and-unit-are-mandatory) |
-| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002-deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) |
-| D-8 | Change detection uses content hashes, not the site's `lastmod` | [ADR-001](docs/02-decisions.md#adr-001-snapshot-integrity-over-site-metadata) |
-| D-9 | Model calls are a content-addressed cache; re-running is a no-op | [ADR-003](docs/02-decisions.md#adr-003-model-calls-are-a-cache-not-a-step) |
-| D-10 | Only `accepted`/`amended` rules load. A human gates the runtime | [ADR-008](docs/02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue) |
-| D-11 | **Never `exec()` anything from the ledger.** Matchers are declarative data | [ADR-009](docs/02-decisions.md#adr-009-no-generated-code-in-the-runtime) |
-| D-12 | Confidence is calibrated; `null` when unvalidated, never an invented number | [ADR-013](docs/02-decisions.md#adr-013-confidence-is-calibrated-not-raw) |
-| D-13 | Training inputs carry **no format markup** — that is what keeps Word deferral cheap | [ADR-019](docs/02-decisions.md#adr-019-training-inputs-carry-no-format-markup) |
-| D-14 | Rule quality is measured on raw, un-suppressed output | [ADR-011](docs/02-decisions.md#adr-011-the-dogfood-gate) |
+| D-6 | `applies_to` and `unit` are mandatory; `unit: artifact` never loads | [ADR-007](docs/02-decisions.md#adr-007--scope-and-unit-are-mandatory) |
+| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002--deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) |
+| D-8 | Change detection uses content hashes, not the site's `lastmod` | [ADR-001](docs/02-decisions.md#adr-001--snapshot-integrity-over-site-metadata) |
+| D-9 | Model calls are a content-addressed cache; re-running is a no-op | [ADR-003](docs/02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step) |
+| D-10 | Only `accepted`/`amended` rules load. A human gates the runtime | [ADR-008](docs/02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue) |
+| D-11 | **Never `exec()` anything from the ledger.** Matchers are declarative data | [ADR-009](docs/02-decisions.md#adr-009--no-generated-code-in-the-runtime) |
+| D-12 | Confidence is calibrated; `null` when unvalidated, never an invented number | [ADR-013](docs/02-decisions.md#adr-013--confidence-is-calibrated-not-raw) |
+| D-13 | Training inputs carry **no format markup** — that is what keeps Word deferral cheap | [ADR-019](docs/02-decisions.md#adr-019--training-inputs-carry-no-format-markup) |
+| D-14 | Rule quality is measured on raw, un-suppressed output | [ADR-011](docs/02-decisions.md#adr-011--the-dogfood-gate) |
 
 ---
 

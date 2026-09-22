@@ -69,7 +69,7 @@ still sitting in someone's browser. Both are said on the page rather than papere
 
 Everything lands in `ledger/`, in git, as plain JSONL — so every decision is a
 reviewable diff with a name and a timestamp on it, and nothing is trapped in a
-database ([ADR-008](../../docs/02-decisions.md#adr-008-human-acceptance-is-a-gate-not-a-review-queue)).
+database ([ADR-008](../../docs/02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue)).
 
 | File | What it holds |
 |---|---|
@@ -128,8 +128,8 @@ a silent unlabelled button.
 The second mode checks example *sentences* rather than rules. Today it serves the
 gold examples harvested from the manual's own `Write this` / `Not this` blocks —
 which the dogfood gate and confidence calibration will be measured against
-([ADR-011](../../docs/02-decisions.md#adr-011-the-dogfood-gate),
-[ADR-013](../../docs/02-decisions.md#adr-013-confidence-is-calibrated-not-raw))
+([ADR-011](../../docs/02-decisions.md#adr-011--the-dogfood-gate),
+[ADR-013](../../docs/02-decisions.md#adr-013--confidence-is-calibrated-not-raw))
 and which nobody has read end to end. Harvesting artefacts do exist in there; finding
 them is the point.
 

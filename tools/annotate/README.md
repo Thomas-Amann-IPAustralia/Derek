@@ -66,7 +66,7 @@ mirror of a Python function and documents its discomfort; a second one, a wrong
 hash producing ops that point at UIDs which do not exist, would be much worse.
 
 **It never edits the manual's wording.** A span *is* the wording
-([ADR-017](../../docs/02-decisions.md#adr-017-ambiguity-is-classified-and-formalised)).
+([ADR-017](../../docs/02-decisions.md#adr-017--ambiguity-is-classified-and-formalised)).
 A restatement goes in `specification`, beside it, which is what detection
 implements.
 

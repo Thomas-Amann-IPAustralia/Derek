@@ -3,8 +3,8 @@
 Derek's near-term goal is a **robust identification system**: find the text that breaks
 a rule, flag it, and let the user keep or accept. Suggested corrections come later.
 Word round-tripping and the MCP/middleware surfaces come later still, but the structural
-accommodations for both are already made ([ADR-012](02-decisions.md#adr-012-format-independent-document-model),
-[ADR-014](02-decisions.md#adr-014-core-library-with-thin-adapters)) so neither forces a rebuild.
+accommodations for both are already made ([ADR-012](02-decisions.md#adr-012--format-independent-document-model),
+[ADR-014](02-decisions.md#adr-014--core-library-with-thin-adapters)) so neither forces a rebuild.
 
 ---
 
@@ -13,7 +13,7 @@ accommodations for both are already made ([ADR-012](02-decisions.md#adr-012-form
 | | |
 |---|---|
 | Offline snapshot | 186 pages carried over from Octavius, re-normalised |
-| Eligible rule-source pages | 128 (58 excluded, with reasons, per [ADR-005](02-decisions.md#adr-005-corpus-eligibility-is-declared-not-inferred)) |
+| Eligible rule-source pages | 128 (58 excluded, with reasons, per [ADR-005](02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred)) |
 | Deterministic candidates | **720**, unique UIDs, byte-identical across runs |
 | With gold examples | 427 (59%); 169 with *paired* compliant + violating |
 | Reviewed | **0** — nothing loads until a human accepts it |
@@ -48,9 +48,9 @@ correcting rather than authoring.
   right.
 - **Verdict:** right mechanism, wrong sequencing on its own.
 
-### Option C — Triage first, then fill only the survivors  ← **recommended**
+### Option C — Triage first, then fill only the survivors
 
-Two passes with different economies.
+**Recommended.** Two passes with different economies.
 
 **Pass 1 — disqualification.** No model. For each candidate you answer one question:
 *is this detectable in text at all?* Set `unit` (is it `artifact`?), `applies_to`, and
@@ -73,7 +73,7 @@ than a model's guess.
 
 **Pass 3 — hand-author the hard ones.** The 10–20 rules that matter most and resist
 formalisation (Option A, deliberately). The table-headings rule in
-[ADR-017](02-decisions.md#adr-017-ambiguity-is-classified-and-formalised) is the model
+[ADR-017](02-decisions.md#adr-017--ambiguity-is-classified-and-formalised) is the model
 for this: one unactionable sentence becomes four checkable assertions, with the
 assumptions logged.
 
@@ -141,7 +141,7 @@ orphans its rules, and a re-run with no upstream change produces an empty change
 
 ### Phase 3 — Tier 0 detection
 
-- [ ] `derek/detect/` — matcher primitives ([ADR-009](02-decisions.md#adr-009-no-generated-code-in-the-runtime))
+- [ ] `derek/detect/` — matcher primitives ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime))
 - [ ] `Document` + `Anchor` + plain-text and Markdown adapters, with property tests
 - [ ] Example harness: violating fire, compliant do not
 - [ ] Dogfood gate wired into CI
@@ -154,7 +154,7 @@ confidence.
 
 - [ ] Editor with inline highlighting, findings panel, keep-or-accept
 - [ ] Confidence slider over calibrated values
-- [ ] Context controls chosen by betweenness ([ADR-015](02-decisions.md#adr-015-context-variables-chosen-by-betweenness))
+- [ ] Context controls chosen by betweenness ([ADR-015](02-decisions.md#adr-015--context-variables-chosen-by-betweenness))
 
 ### Phase 5 — Tier 1 classifier
 
@@ -173,7 +173,7 @@ confidence.
 | Feature | Blocked on | Structural accommodation already made |
 |---|---|---|
 | Suggested corrections (Tier 2) | Identification being good enough to trust | Tier boundary in the ledger; `PREFER` modality separated for exactly this |
-| Word round-trip | Demand | `Anchor` indirection; format-free training inputs ([ADR-019](02-decisions.md#adr-019-training-inputs-carry-no-format-markup)) |
+| Word round-trip | Demand | `Anchor` indirection; format-free training inputs ([ADR-019](02-decisions.md#adr-019--training-inputs-carry-no-format-markup)) |
 | Live deployment | Phases 3–4 | Stateless core; int8 ONNX; swappable model backend |
 
 ---
@@ -183,7 +183,7 @@ confidence.
 Three things must happen **earlier than they feel necessary**, because retrofitting them
 is a re-review of every rule:
 
-1. **The context vocabulary** ([ADR-015](02-decisions.md#adr-015-context-variables-chosen-by-betweenness))
+1. **The context vocabulary** ([ADR-015](02-decisions.md#adr-015--context-variables-chosen-by-betweenness))
    must be drafted before Pass 2, so rules reference shared variables rather than
    inventing per-rule preconditions. The betweenness analysis runs later, but the
    vocabulary cannot.
