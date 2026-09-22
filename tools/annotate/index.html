@@ -958,27 +958,61 @@ function markSwept() {
       <b>${loose.length}</b> heading candidate${loose.length === 1 ? "" : "s"} left untouched</div>
     </div>
     ${risky.length ? `<div class="card" style="border-color:var(--gold)">
-      <div class="k"><span>Worth a second look</span></div>
-      <p class="why">These carry the manual's own paired examples, or a decision
-        somebody already made. Sweeping the page drops them.</p>
-      ${risky.map((s) => `<div class="q">• ${esc(s.statement)}</div>`).join("")}
+      <div class="k"><span>Say why these go</span></div>
+      <p class="why">Each of these either carries the manual's own <em>Write this</em>
+        and <em>Not this</em> pair — its editors saying where the line is — or is a
+        decision somebody already made and said yes to. Sweeping the page drops them,
+        which is allowed, but not as a side effect. One line each.</p>
+      ${risky.map((s, i) => `<div class="field" style="margin-bottom:9px">
+        <div class="q" style="margin-bottom:3px">${esc(s.statement)}</div>
+        <input class="dropwhy" data-uid="${esc(s.uid)}" data-heading="${esc(s.statement)}"
+          placeholder="why is this not a rule?" style="width:100%;padding:6px 9px;
+          border-radius:8px;border:1px solid var(--line-2);background:var(--panel)"
+          oninput="syncSweep()">
+      </div>`).join("")}
     </div>` : ""}
     <div class="field">
       <div class="flabel"><h4>Note <span style="font-weight:400;color:var(--muted)">(optional)</span></h4></div>
       <textarea id="sweepNote" placeholder="Anything the next person should know about this page…"></textarea>
     </div>
-    <button class="btn wide primary" style="width:100%" onclick="confirmSweep()">
+    <button class="btn wide primary" style="width:100%" id="sweepBtn" onclick="confirmSweep()">
       ${done && done.status === "complete" ? "Re-confirm swept" : "Mark swept"}</button>
     <button class="btn" style="width:100%;margin-top:8px" onclick="closeSheet()">Not yet</button>
   `);
+  syncSweep();
+}
+
+function sweepReasons() {
+  return [...document.querySelectorAll(".dropwhy")].map((el) => ({
+    uid: el.dataset.uid, heading: el.dataset.heading, why: el.value.trim(),
+  }));
+}
+
+function syncSweep() {
+  const btn = $("sweepBtn");
+  if (!btn) return;
+  const missing = sweepReasons().filter((d) => !d.why).length;
+  btn.disabled = missing > 0;
+  btn.textContent = missing
+    ? `${missing} still to explain`
+    : (S.marks.get(S.page.path)?.status === "complete" ? "Re-confirm swept" : "Mark swept");
 }
 
 function confirmSweep() {
+  const dropped = sweepReasons();
+  if (dropped.some((d) => !d.why)) { toast("Say why each one goes"); return; }
+  // `dropped` is not a bypass, it is the record: `apply_spans.py` refuses a sweep
+  // that would discard a gold pair or an accepted rule without one, so the reason
+  // is written down at the moment the judgement is made rather than reconstructed
+  // later from an orphan note (ADR-023).
   OPS.add({ op: "page", page_path: S.page.path, page_sha256: S.page.sha256,
-            status: "complete", note: ($("sweepNote")?.value || "").trim() });
+            status: "complete", note: ($("sweepNote")?.value || "").trim(),
+            dropped });
   closeSheet();
   renderRail(); renderSide();
-  toast("Page marked swept");
+  toast(dropped.length
+    ? `Page swept; ${dropped.length} candidate(s) dropped with a reason`
+    : "Page marked swept");
 }
 
 /* --- the tag sheet --------------------------------------------------------

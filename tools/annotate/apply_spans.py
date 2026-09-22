@@ -261,18 +261,165 @@ def plan(ops, *, eligibility, already: set[str], skip_invalid: bool) -> dict:
         elif op.get("op") not in ("meta",):
             applied.append((op, f"{op.get('op')} (no change)"))
 
+    # Checked after every op is folded, not per op: a sweep is a statement about
+    # the page as a whole, and whether it destroys something depends on the spans
+    # in the same export.
+    if not errors or skip_invalid:
+        errors.extend(_check_sweeps(gs, read))
+        if errors and not skip_invalid:
+            applied = []
+
     return {"golden": gs, "applied": applied, "skipped": skipped,
             "errors": errors, "decides": decides}
 
 
+def _check_sweeps(gs, page_text) -> list[tuple[dict, str]]:
+    """Refuse a sweep that would quietly discard something load-bearing.
+
+    Marking a page swept makes every heading no span covers into a labelled
+    negative, and the reconciler orphans the candidates behind them. That is the
+    point — it is how absence becomes evidence (ADR-023) — but it is also the one
+    place authority mode can destroy a judgement nobody revisited.
+
+    Two classes are held back until the reviewer names them in `dropped`:
+
+    * A candidate carrying **both** a compliant and a violating example. That
+      pairing is the Style Manual's own editors saying "here is the right way and
+      here is the wrong way", which is independent of anything Derek inferred and
+      is the seed evaluation set ADR-011 rests on. Dropping one should cost a
+      sentence of explanation.
+    * A candidate already **accepted or amended**. Someone read it and said yes.
+      A sweep disagreeing with that is fine, but it should be deliberate.
+
+    A `rejected` or `deferred` candidate needs no listing: rejection agrees with
+    the sweep, and deferral is the absence of a judgement rather than one.
+    """
+    from derek.extract.golden import golden_rules
+    from derek.ledger.store import load_ledger
+
+    if not gs.authoritative or not LEDGER.exists():
+        return []
+
+    rules = load_ledger(LEDGER)
+    problems: list[tuple[dict, str]] = []
+
+    for page in sorted(gs.authoritative):
+        text = page_text(page)
+        if text is None:
+            continue
+        marker = gs.swept.get(page, {})
+        listed = {d.get("uid") for d in marker.get("dropped", []) if d.get("uid")}
+        kept = {cand.uid for _, cand in golden_rules(page, text, gs.spans.get(page, []))}
+
+        at_risk = []
+        for rule in rules.values():
+            if rule.source.page_path != page or rule.uid in kept or rule.uid in listed:
+                continue
+            if rule.review.status in ("accepted", "amended"):
+                at_risk.append((rule, f"already {rule.review.status}"))
+            elif rule.compliant_examples and rule.violating_examples:
+                at_risk.append((rule, "carries the manual's own paired examples"))
+
+        for rule, why in at_risk:
+            problems.append((
+                {"op": "page", "op_id": marker.get("op_id", ""),
+                 "_source": marker.get("_source", page)},
+                f"sweeping {page} would drop {rule.uid} ({why}): "
+                f"{rule.source.statement[:60]!r}. Mark it as a rule, or list it in "
+                f"the page's `dropped` with a reason for letting it go."))
+    return problems
+
+
+def rebase(dry_run: bool = False) -> int:
+    """Re-anchor every recorded span onto the corpus as it now stands.
+
+    ADR-024's unfreeze step. While the corpus is frozen every span resolves by
+    `block_id` and this does nothing; after an unfreeze the text has moved, and
+    each span is re-found by its quote within the same heading, disambiguated by
+    the 32 characters either side that were stored for exactly this.
+
+    Anything that does not resolve **uniquely** is reported for a human rather
+    than guessed at — the same posture `derek.ledger.reconcile` takes on lineage,
+    and for the same reason: a wrong re-anchoring silently moves somebody's
+    judgement onto text they never read, and it does not announce itself, because
+    a wrong offset still resolves to *some* text.
+    """
+    from dataclasses import replace
+
+    from derek.extract.golden import Span, resolve_span
+
+    eligibility = load_eligibility(ELIGIBILITY)
+    gs = load_golden(GOLDEN_SPANS, GOLDEN_PAGES, eligibility)
+    read = _page_reader()
+    moved, steady, lost = 0, 0, []
+
+    for page in sorted(gs.spans):
+        text = read(page)
+        if text is None:
+            lost.append((page, "", "the page is no longer in the corpus"))
+            continue
+        blocks = parse_blocks(page, text)
+        fresh: list[Span] = []
+        for span in gs.spans[page]:
+            try:
+                r = resolve_span(span, blocks)
+            except GoldenError as exc:
+                lost.append((page, span.span_id, str(exc)))
+                fresh.append(span)          # keep it; a human decides
+                continue
+            if r.rebased:
+                moved += 1
+                fresh.append(replace(
+                    r.span,
+                    span_id=span_id(page, r.span.block_id, r.span.start,
+                                    r.span.end, r.span.kind),
+                    page_sha256="",
+                    prefix=r.block.plain[max(0, r.span.start - 32):r.span.start],
+                    suffix=r.block.plain[r.span.end:r.span.end + 32],
+                ))
+            else:
+                steady += 1
+                fresh.append(span)
+        gs.spans[page] = fresh
+
+    print(f"{steady} span(s) still resolve by block id; {moved} re-anchored by quote.")
+    if lost:
+        print(f"\n{len(lost)} span(s) could not be placed:", file=sys.stderr)
+        for page, sid, why in lost:
+            print(f"  {page} {sid}: {why}", file=sys.stderr)
+        print("\nThey are left in golden/spans.jsonl unchanged. Open the page in the "
+              "annotator and re-mark them, or delete them.", file=sys.stderr)
+
+    if dry_run:
+        print("\n--dry-run: nothing written.")
+        return 1 if lost else 0
+    if moved:
+        # A re-anchored span changes its id, because the id is the tuple it sits
+        # at. Old ids in golden/span_ops.jsonl stay as history; they are an
+        # idempotency record of what was applied, not a reference to a live span.
+        spans, pages = write_golden(gs, GOLDEN_SPANS, GOLDEN_PAGES)
+        print(f"\nRewrote {spans} span(s). Rebuild with: python -m derek.extract.build")
+    return 1 if lost else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("files", nargs="+", type=Path)
+    ap.add_argument("files", nargs="*", type=Path)
     ap.add_argument("--dry-run", action="store_true",
                     help="validate and report; write nothing")
     ap.add_argument("--skip-invalid", action="store_true",
                     help="apply what is valid instead of refusing the whole file")
+    ap.add_argument("--rebase", action="store_true",
+                    help="re-anchor the recorded spans onto the current corpus "
+                         "(ADR-024's unfreeze step); takes no files")
     args = ap.parse_args(argv)
+
+    if args.rebase:
+        if args.files:
+            ap.error("--rebase re-anchors what is already recorded; it takes no files")
+        return rebase(dry_run=args.dry_run)
+    if not args.files:
+        ap.error("no export given (or use --rebase)")
 
     apply_decisions = _load("derek_apply_decisions", REVIEW / "apply_decisions.py")
     server = apply_decisions._load_server()

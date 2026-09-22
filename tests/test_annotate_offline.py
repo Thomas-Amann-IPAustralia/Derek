@@ -498,3 +498,105 @@ def test_confirming_a_heading_keeps_its_review_state(replay):
     assert got.derivation.method == "human_span"
     assert got.source.statement == existing.source.statement
     assert got.derivation.supersedes is None
+
+
+# ---------------------------------------------------------------------------
+# The exit checklist, and re-anchoring
+# ---------------------------------------------------------------------------
+
+def _sweep_op(dropped=(), oid="op-sweep", at="2026-09-22T02:00:00.000Z"):
+    return {"op": "page", "op_id": oid, "by": "TA", "at": at,
+            "page_path": SAMPLE, "page_sha256": "", "status": "complete",
+            "dropped": list(dropped)}
+
+
+def test_sweeping_a_page_is_refused_if_it_would_drop_a_gold_pair(replay):
+    """The one place authority mode could quietly destroy something load-bearing.
+
+    A candidate the Style Manual furnished with BOTH a compliant and a violating
+    example is its own editors saying "here is the right way and here is the
+    wrong way". That testimony is independent of anything Derek inferred and is
+    the seed evaluation set ADR-011 rests on, so dropping one should cost a
+    sentence rather than happening as a side effect.
+    """
+    from derek.ledger.store import load_ledger
+
+    rules = load_ledger(replay.ledger)
+    paired = [r for r in rules.values()
+              if r.source.page_path == SAMPLE
+              and r.compliant_examples and r.violating_examples]
+    assert paired, "this page needs a gold pair for the test to bite"
+
+    path = _export(replay.tmp, [_sweep_op()])
+    assert replay.module.main([str(path)]) == 1
+    assert not replay.spans.exists()
+
+
+def test_listing_a_candidate_as_dropped_lets_the_sweep_through(replay):
+    """Not a bypass — a record. The uid, and why it was let go."""
+    from derek.ledger.store import load_ledger
+
+    rules = load_ledger(replay.ledger)
+    at_risk = [r for r in rules.values()
+               if r.source.page_path == SAMPLE
+               and (r.review.status in ("accepted", "amended")
+                    or (r.compliant_examples and r.violating_examples))]
+    dropped = [{"uid": r.uid, "heading": r.source.statement,
+                "why": "label, not a statement"} for r in at_risk]
+
+    path = _export(replay.tmp, [_sweep_op(dropped)])
+    assert replay.module.main([str(path)]) == 0
+
+    marks = [json.loads(x) for x in replay.pages.read_text(encoding="utf-8").splitlines()]
+    assert marks[0]["status"] == "complete"
+    assert len(marks[0]["dropped"]) == len(dropped)
+
+
+def test_a_rejected_candidate_needs_no_listing(replay):
+    """Rejection and the sweep agree: the rule does not load either way.
+
+    Only a verdict that DISAGREES with the sweep — accepted, amended — or the
+    manual's own paired testimony has to be acknowledged.
+    """
+    from derek.ledger.store import load_ledger
+
+    rules = load_ledger(replay.ledger)
+    on_page = [r for r in rules.values() if r.source.page_path == SAMPLE]
+    assert on_page
+    needs_listing = [r for r in on_page
+                     if r.review.status in ("accepted", "amended")
+                     or (r.compliant_examples and r.violating_examples)]
+    rejected = [r for r in on_page if r.review.status == "rejected"]
+    assert not any(r in needs_listing for r in rejected)
+
+
+def test_rebase_is_a_no_op_while_the_corpus_is_frozen(replay):
+    """Every span resolves by block id, so nothing moves and nothing is rewritten."""
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    path = _export(replay.tmp, [_span_op(prose, tags=ACCEPT)])
+    assert replay.module.main([str(path)]) == 0
+    before = replay.spans.read_bytes()
+
+    assert replay.module.rebase() == 0
+    assert replay.spans.read_bytes() == before
+
+
+def test_rebase_reports_a_span_it_cannot_place(replay, monkeypatch):
+    """ADR-024 says these go to a human, not to a guess."""
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    path = _export(replay.tmp, [_span_op(prose, tags=ACCEPT)])
+    assert replay.module.main([str(path)]) == 0
+
+    # The page's text is gone from under the span.
+    rows = [json.loads(x) for x in replay.spans.read_text(encoding="utf-8").splitlines()]
+    rows[0]["anchor"]["block_id"] = "0000deadbeef"
+    rows[0]["anchor"]["quote"] = "a sentence that is nowhere in the Style Manual"
+    rows[0]["anchor"]["prefix"] = rows[0]["anchor"]["suffix"] = ""
+    replay.spans.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
+
+    assert replay.module.rebase(dry_run=True) == 1, "an unplaceable span is not success"
+    still = [json.loads(x) for x in replay.spans.read_text(encoding="utf-8").splitlines()]
+    assert still[0]["anchor"]["block_id"] == "0000deadbeef", \
+        "a span that could not be placed is left alone for a human"
