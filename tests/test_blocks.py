@@ -185,9 +185,15 @@ def test_a_nested_list_item_records_its_depth():
            [("outer item", 0), ("inner item", 1)]
 
 
-def test_an_ordered_list_drops_only_its_numbering():
+def test_an_ordered_list_drops_its_numbering_but_records_that_it_had_some():
+    """`plain` loses the ordinal, so the block has to say it was numbered.
+
+    Otherwise a page about sequencing content renders its steps as bullets.
+    """
     items = [x for x in blocks_of("# P\n\n## S\n\n1. first\n2. second\n") if x.kind == "li"]
-    assert [x.plain for x in items] == ["first", "second"]
+    assert [(x.plain, x.ordered) for x in items] == [("first", True), ("second", True)]
+    bullets = [x for x in blocks_of("# P\n\n## S\n\n- first\n") if x.kind == "li"]
+    assert bullets[0].ordered is False
 
 
 def test_a_table_becomes_one_block_per_cell():
@@ -271,4 +277,16 @@ def test_the_digest_notices_a_changed_mark():
     """A formatting-only change still moves offsets, so it must not be invisible."""
     a = page_digest(blocks_of("# P\n\n## S\n\nUse *en dashes* here.\n"))
     b = page_digest(blocks_of("# P\n\n## S\n\nUse en dashes here.\n"))
+    assert a != b
+
+
+def test_the_digest_notices_a_change_that_moves_no_offset():
+    """The lock covers what the reviewer sees, not only what moves an offset.
+
+    A bullet list becoming a numbered one leaves every `plain` identical, so it
+    would slip past a digest over text alone — and a reviewer marking a rule
+    about sequence would be reading the wrong document.
+    """
+    a = page_digest(blocks_of("# P\n\n## S\n\n- first\n- second\n"))
+    b = page_digest(blocks_of("# P\n\n## S\n\n1. first\n2. second\n"))
     assert a != b

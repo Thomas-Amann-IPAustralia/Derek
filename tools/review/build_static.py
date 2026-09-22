@@ -106,8 +106,13 @@ def _write_json(path: Path, obj) -> int:
     return len(body.encode("utf-8"))
 
 
-def build(out: Path, *, server=None) -> dict:
-    """Write the site to `out` and return its manifest."""
+def build(out: Path, *, server=None, clean: bool = True) -> dict:
+    """Write the site to `out` and return its manifest.
+
+    `clean=False` keeps whatever else is already in `out`. The annotator is
+    published alongside this app under `site/annotate/`, and a `shutil.rmtree`
+    that fires after it has been built would delete it.
+    """
     server = server or _load_server()
 
     if not server.LEDGER.exists():
@@ -148,9 +153,9 @@ def build(out: Path, *, server=None) -> dict:
         },
     }
 
-    if out.exists():
+    if clean and out.exists():
         shutil.rmtree(out)
-    out.mkdir(parents=True)
+    out.mkdir(parents=True, exist_ok=True)
 
     (out / "index.html").write_text(_page(), encoding="utf-8")
     # Pages runs Jekyll over an uploaded tree unless told not to; a `data/`
@@ -179,9 +184,14 @@ def main(argv: list[str] | None = None) -> int:
         "--out", type=Path, default=REPO / "site",
         help="directory to write the site into (default: site/)",
     )
+    ap.add_argument(
+        "--no-clean", action="store_true",
+        help="keep anything already in --out (the annotator lives at site/annotate/, "
+             "and a clean build run after it would delete it)",
+    )
     args = ap.parse_args(argv)
 
-    manifest = build(args.out.resolve())
+    manifest = build(args.out.resolve(), clean=not args.no_clean)
     total = sum(manifest["bytes"].values())
     print(f"Built {args.out} from {manifest['rules']} rules "
           f"({total / 1024:.0f} KB, commit {manifest['commit'] or 'unknown'})")

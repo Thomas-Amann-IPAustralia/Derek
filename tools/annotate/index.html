@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Derek Annotate</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111f36'/%3E%3Crect x='14' y='26' width='36' height='12' rx='3' fill='%23f0bc55'/%3E%3Cpath d='M18 44V20h11c8 0 13 5 13 12s-5 12-13 12H18z' fill='none'/%3E%3C/svg%3E">
+<!-- Which backend is behind this page. tools/annotate/build_static.py rewrites
+     this one line when it copies the file for GitHub Pages. There is no local
+     server for the annotator (ADR-023), so the static path is the only one —
+     but the marker is kept, and asserted, so the two apps stay symmetrical and
+     a future server build has the hook it needs. -->
+<script>window.DEREK_BACKEND = "server";</script>
+<style>
+/* ---------------------------------------------------------------------------
+   Tokens, shared with tools/review/index.html so the two apps read as one
+   system. Dark mode is the same palette re-pointed, never a second stylesheet.
+   --------------------------------------------------------------------------- */
+:root{
+  --bg:#f4f6fa; --panel:#fff; --panel-2:#f8fafc; --ink:#152033; --ink-2:#44536b;
+  --muted:#75839a; --line:#e2e7f0; --line-2:#cdd6e4;
+  --keep:#12a07e; --keep-bg:#e6f7f2; --bin:#e2526a; --bin-bg:#fdeef1;
+  --defer:#7a63e8; --defer-bg:#eeebfd; --gold:#d99a1e; --gold-bg:#fdf4e2;
+  --accent:#2f6bd0; --accent-bg:#e9f1fd; --navy:#111f36;
+  --shadow:0 10px 30px rgba(17,31,54,.10); --shadow-lg:0 22px 55px rgba(17,31,54,.18);
+  --radius:14px; --sp:16px; --rail:280px; --side:330px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1319; --panel:#171c24; --panel-2:#1d232d; --ink:#e9ecf1; --ink-2:#b8c2d1;
+    --muted:#8b97a9; --line:#2a323e; --line-2:#3a4453;
+    --keep:#3ecfa8; --keep-bg:#102b25; --bin:#ff8195; --bin-bg:#2e1a20;
+    --defer:#a596ff; --defer-bg:#211d36; --gold:#f0bc55; --gold-bg:#2c2416;
+    --accent:#77adf5; --accent-bg:#16243a; --navy:#e9ecf1;
+    --shadow:0 10px 30px rgba(0,0,0,.4); --shadow-lg:0 22px 55px rgba(0,0,0,.55);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1319; --panel:#171c24; --panel-2:#1d232d; --ink:#e9ecf1; --ink-2:#b8c2d1;
+  --muted:#8b97a9; --line:#2a323e; --line-2:#3a4453;
+  --keep:#3ecfa8; --keep-bg:#102b25; --bin:#ff8195; --bin-bg:#2e1a20;
+  --defer:#a596ff; --defer-bg:#211d36; --gold:#f0bc55; --gold-bg:#2c2416;
+  --accent:#77adf5; --accent-bg:#16243a; --navy:#e9ecf1;
+  --shadow:0 10px 30px rgba(0,0,0,.4); --shadow-lg:0 22px 55px rgba(0,0,0,.55);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+     font:15.5px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,textarea,select{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:-.015em}
+a{color:var(--accent)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}
+
+/* header ------------------------------------------------------------------ */
+header{position:sticky;top:0;z-index:40;background:var(--panel);
+       border-bottom:1px solid var(--line);padding:9px 14px;
+       display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+header .brand{font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+header .brand span{color:var(--gold)}
+header .spacer{flex:1}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;
+      background:var(--panel-2);border:1px solid var(--line);font-size:12.5px;color:var(--ink-2)}
+.chip b{color:var(--ink)}
+.chip.warn{background:var(--gold-bg);border-color:var(--gold);color:var(--ink)}
+.chip.live{background:var(--keep-bg);border-color:var(--keep)}
+.btn{padding:6px 12px;border-radius:9px;border:1px solid var(--line-2);background:var(--panel);
+     cursor:pointer;font-size:13.5px}
+.btn:hover{background:var(--panel-2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.danger{border-color:var(--bin);color:var(--bin)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:3px 9px;font-size:12.5px;border-radius:7px}
+#initials{width:74px;padding:5px 8px;border-radius:8px;border:1px solid var(--line-2);
+          background:var(--panel-2);text-transform:uppercase;letter-spacing:.06em}
+
+.freeze{padding:6px 14px;font-size:12.5px;background:var(--gold-bg);color:var(--ink);
+        border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:baseline}
+.freeze b{color:var(--ink)}
+.freeze.hidden{display:none}
+
+/* three columns ----------------------------------------------------------- */
+.cols{display:grid;grid-template-columns:var(--rail) minmax(0,1fr) var(--side);
+      height:calc(100dvh - 47px);align-items:stretch}
+body.frozen .cols{height:calc(100dvh - 76px)}
+nav,aside{overflow-y:auto;background:var(--panel);min-width:0}
+nav{border-right:1px solid var(--line)}
+aside{border-left:1px solid var(--line)}
+main{overflow-y:auto;min-width:0;padding:26px 0 60vh}
+
+/* page rail --------------------------------------------------------------- */
+.railhead{position:sticky;top:0;background:var(--panel);padding:10px 12px 8px;
+          border-bottom:1px solid var(--line);z-index:5}
+.railhead input,.railhead select{width:100%;padding:6px 9px;border-radius:8px;
+          border:1px solid var(--line-2);background:var(--panel-2);margin-bottom:6px}
+.sect{padding:9px 12px 3px;font-size:11px;font-weight:700;text-transform:uppercase;
+      letter-spacing:.09em;color:var(--muted)}
+.pg{display:block;width:100%;text-align:left;padding:6px 12px;border:0;background:none;
+    cursor:pointer;border-left:3px solid transparent;line-height:1.35}
+.pg:hover{background:var(--panel-2)}
+.pg.on{background:var(--accent-bg);border-left-color:var(--accent)}
+.pg .t{font-size:13.5px}
+.pg .m{font-size:11px;color:var(--muted);display:flex;gap:7px;margin-top:1px}
+.pg.ineligible .t{color:var(--muted);font-style:italic}
+.pg .done{color:var(--keep);font-weight:700}
+
+/* the reconstructed page -------------------------------------------------- */
+.doc{max-width:760px;margin:0 auto;padding:0 28px}
+.doc .crumb{font-size:12px;color:var(--muted);margin-bottom:4px}
+.doc .srcnote{font-size:12px;color:var(--muted);margin:18px 0 26px;padding-bottom:14px;
+              border-bottom:1px solid var(--line)}
+.blk{position:relative;margin:0 0 13px;white-space:pre-wrap}
+.blk.h1{font-size:30px;font-weight:700;margin:0 0 6px;letter-spacing:-.025em}
+.blk.h2{font-size:22px;font-weight:700;margin:32px 0 10px;letter-spacing:-.02em}
+.blk.h3{font-size:18px;font-weight:650;margin:24px 0 8px}
+.blk.h4,.blk.h5,.blk.h6{font-size:15.5px;font-weight:650;margin:19px 0 6px;color:var(--ink-2)}
+.blk.li{margin:0 0 5px;padding-left:22px}
+.blk.li::before{content:"•";position:absolute;left:6px;color:var(--muted)}
+.blk.li[data-ord="1"]::before{content:attr(data-n) ".";left:0;width:18px;text-align:right;
+                              font-variant-numeric:tabular-nums;font-size:13.5px}
+.blk.li[data-depth="1"]{padding-left:44px}
+.blk.li[data-depth="1"]::before{left:28px}
+.blk.quote{border-left:3px solid var(--line-2);padding-left:13px;color:var(--ink-2);font-style:italic}
+.blk.cell{display:inline-block;vertical-align:top;padding:6px 11px;margin:0;
+          border:1px solid var(--line);min-width:110px}
+.row{margin:0 0 -1px;display:flex;flex-wrap:wrap}
+.row+.row .blk.cell{border-top:0}
+.blk.focus{outline:2px dashed var(--accent);outline-offset:4px;border-radius:4px}
+
+/* inline marks ------------------------------------------------------------ */
+.m-link{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.m-em{font-style:italic}
+.m-strong{font-weight:700}
+.m-code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;
+        background:var(--panel-2);padding:1px 4px;border-radius:4px}
+
+/* spans ------------------------------------------------------------------- */
+.s-rule{background:var(--accent-bg);box-shadow:inset 3px 0 0 var(--accent),0 1px 0 var(--accent)}
+.s-compliant{background:var(--keep-bg);border-bottom:2px solid var(--keep)}
+.s-violating{background:var(--bin-bg);border-bottom:2px solid var(--bin)}
+.s-precondition{border-bottom:2px dotted var(--defer)}
+.s-sel{outline:2px solid var(--accent);outline-offset:1px;border-radius:3px}
+.seed{border-bottom:2px dashed var(--line-2);cursor:pointer}
+.seed.accepted{border-bottom-color:var(--keep)}
+.seed.deleted{opacity:.4;text-decoration:line-through}
+.badge{display:inline-block;margin-left:7px;padding:0 6px;border-radius:999px;font-size:10.5px;
+       font-weight:700;vertical-align:middle;background:var(--panel-2);color:var(--muted);
+       border:1px solid var(--line);white-space:nowrap;user-select:none}
+.badge.seed{border-style:dashed;border-bottom-width:1px}
+.badge.rule{background:var(--accent-bg);color:var(--accent);border-color:var(--accent)}
+.badge.gone{background:var(--bin-bg);color:var(--bin);border-color:var(--bin)}
+
+/* floating selection toolbar ---------------------------------------------- */
+#toolbar{position:absolute;z-index:60;display:none;gap:4px;padding:5px;background:var(--panel);
+         border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--shadow-lg)}
+#toolbar.on{display:flex}
+#toolbar button{padding:5px 10px;border-radius:7px;border:1px solid transparent;
+                background:var(--panel-2);cursor:pointer;font-size:12.5px;white-space:nowrap}
+#toolbar button:hover{border-color:var(--line-2)}
+#toolbar button kbd{opacity:.55;margin-left:5px}
+kbd{font:600 11px ui-monospace,Menlo,Consolas,monospace;background:var(--panel-2);
+    border:1px solid var(--line-2);border-bottom-width:2px;border-radius:4px;padding:1px 4px}
+
+/* inspector --------------------------------------------------------------- */
+.sidehead{position:sticky;top:0;background:var(--panel);padding:11px 14px 9px;
+          border-bottom:1px solid var(--line);font-weight:700;font-size:13px;z-index:5}
+.sidebody{padding:13px 14px 40px}
+.card{border:1px solid var(--line);border-radius:11px;padding:11px;margin-bottom:10px;
+      background:var(--panel-2)}
+.card.on{border-color:var(--accent);background:var(--accent-bg)}
+.card .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+         font-weight:700;display:flex;justify-content:space-between;gap:8px}
+.card .q{margin:5px 0 7px;font-size:13.5px}
+.card .tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{font-size:11px;padding:1px 7px;border-radius:999px;background:var(--panel);
+     border:1px solid var(--line);color:var(--ink-2)}
+.card .acts{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
+.empty{color:var(--muted);font-size:13px;padding:6px 0}
+
+/* sheet ------------------------------------------------------------------- */
+#scrim{position:fixed;inset:0;background:rgba(10,16,26,.45);z-index:70;display:none}
+#scrim.on{display:block}
+#sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:var(--panel);
+       z-index:80;box-shadow:var(--shadow-lg);overflow-y:auto;display:none;padding:18px 20px 40px}
+#sheet.on{display:block}
+.field{margin:0 0 15px}
+.flabel{display:flex;align-items:baseline;gap:7px;margin-bottom:3px}
+.flabel h4{font-size:13.5px}
+.why{font-size:12px;color:var(--muted);margin:0 0 6px}
+.why b{color:var(--bin)}
+.opts{display:flex;flex-wrap:wrap;gap:5px}
+.opt{padding:4px 10px;border-radius:999px;border:1px solid var(--line-2);background:var(--panel-2);
+     cursor:pointer;font-size:12.5px}
+.opt.on{background:var(--accent);border-color:var(--accent);color:#fff}
+textarea{width:100%;min-height:62px;padding:8px 10px;border-radius:9px;
+         border:1px solid var(--line-2);background:var(--panel-2);resize:vertical}
+.ihelp{border:0;background:none;color:var(--muted);cursor:pointer;padding:0 2px}
+.explain{font-size:12.5px;color:var(--ink-2);background:var(--panel-2);border:1px solid var(--line);
+         border-radius:9px;padding:9px 11px;margin:6px 0 0}
+.explain b{color:var(--ink)}
+
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(14px);
+       background:var(--navy);color:var(--bg);padding:9px 15px;border-radius:10px;font-size:13.5px;
+       opacity:0;pointer-events:none;transition:.16s;z-index:95;max-width:min(560px,92vw)}
+:root[data-theme="dark"] #toast,
+@media (prefers-color-scheme: dark){#toast{color:#0f1319}}
+#toast.on{opacity:1;transform:translateX(-50%)}
+
+@media (max-width:1100px){
+  :root{--rail:220px;--side:0px}
+  .cols{grid-template-columns:var(--rail) minmax(0,1fr)}
+  aside{position:fixed;right:0;top:0;bottom:0;width:320px;z-index:65;
+        box-shadow:var(--shadow-lg);transform:translateX(100%);transition:.18s}
+  body.side-open aside{transform:none}
+}
+@media (max-width:760px){
+  :root{--rail:0px}
+  .cols{grid-template-columns:minmax(0,1fr)}
+  nav{position:fixed;left:0;top:0;bottom:0;width:270px;z-index:66;
+      box-shadow:var(--shadow-lg);transform:translateX(-100%);transition:.18s}
+  body.rail-open nav{transform:none}
+  .doc{padding:0 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Derek <span>Annotate</span></div>
+  <button class="btn sm" id="railBtn" onclick="document.body.classList.toggle('rail-open')">Pages</button>
+  <span class="chip" id="cSpans">— spans</span>
+  <span class="chip" id="cQueue">— unexported</span>
+  <div class="spacer"></div>
+  <input id="initials" maxlength="6" placeholder="AB" title="Your initials, recorded on every span"
+         oninput="setReviewer(this.value)">
+  <button class="btn sm" onclick="exportOps()">Export</button>
+  <button class="btn sm" onclick="toggleTheme()" title="Light / dark">◐</button>
+  <button class="btn sm" onclick="help()" title="Keyboard shortcuts">?</button>
+  <a class="btn sm" href="../" title="The card-by-card triage app" style="text-decoration:none">Triage →</a>
+</header>
+
+<div class="freeze hidden" id="freeze"></div>
+
+<div class="cols">
+  <nav id="rail">
+    <div class="railhead">
+      <input id="filter" placeholder="Filter pages…" oninput="renderRail()">
+      <select id="sort" onchange="renderRail()">
+        <option value="corpus">Corpus order</option>
+        <option value="sparse">Fewest candidates first</option>
+        <option value="seeds">Most candidates first</option>
+        <option value="spans">Most spans marked</option>
+      </select>
+    </div>
+    <div id="railList"></div>
+  </nav>
+
+  <main id="main"><div class="doc" id="doc"></div></main>
+
+  <aside id="side">
+    <div class="sidehead" id="sideHead">This page</div>
+    <div class="sidebody" id="sideBody"></div>
+  </aside>
+</div>
+
+<div id="toolbar"></div>
+<div id="scrim" onclick="closeSheet()"></div>
+<div id="sheet"></div>
+<div id="toast"></div>
+
+<script>
+"use strict";
+/* ===========================================================================
+   Derek Annotate — mark the spans of text that state each rule.
+
+   The point of this app, and the reason it is not the triage deck: the heading
+   walk that produced the 736 candidates is 25% noise and misses roughly 60 real
+   rules that are stated as description rather than instruction
+   (docs/07-extraction-hand-audit.md). Those misses never reach a card, so no
+   amount of card-by-card triage finds them. Here the manual is the document and
+   the reviewer selects the text, so a rule stated in prose is as reachable as
+   one stated in a heading.
+
+   Three things this file deliberately does NOT do.
+
+   1. **It never computes a ledger value.** No UID, no hash, no modality
+      inference. A span is recorded as the tuple it was drawn at; Python mints
+      its id and fills the extractor's defaults. The triage app has one JS
+      mirror of a Python function and documents its discomfort; a second one —
+      a wrong blake2s producing ops that point at UIDs which do not exist —
+      would be much worse.
+   2. **It never edits the manual's wording.** A span IS the wording (ADR-017).
+      A restatement goes in `specification`, which is a field on the span.
+   3. **It is not the record.** Spans queue in localStorage and come back as a
+      JSONL export that `tools/annotate/apply_spans.py` replays through the same
+      gate the triage app uses (ADR-022).
+   =========================================================================== */
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g,
+  (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+/* localStorage is scoped to the ORIGIN, not the path. This app and the triage
+   app are served from the same github.io origin, so a shared key would have the
+   annotator's ops replayed as triage decisions and vice versa. The reviewer's
+   initials are shared on purpose; nothing else is. */
+const K_OPS = "derek.spans.v1";
+const K_WHO = "derek.reviewer";
+const K_THEME = "derek.theme";
+const K_PAGE = "derek.annotate.page";
+
+const KINDS = {
+  rule:         { key: "R", label: "Rule",      hint: "the text that states the rule" },
+  compliant:    { key: "C", label: "Write this", hint: "an example that complies" },
+  violating:    { key: "V", label: "Not this",   hint: "an example that violates" },
+  precondition: { key: "P", label: "When",       hint: "text that limits when the rule applies" },
+};
+
+const S = {
+  index: null,          // data/index.json
+  baseline: { spans: [], pages: [] },
+  page: null,           // the loaded page payload
+  cache: new Map(),     // slug -> payload
+  ops: [],              // the local op log, in export shape
+  spans: new Map(),     // page_path -> [span]
+  marks: new Map(),     // page_path -> {status, at, by}
+  seeds: new Map(),     // uid -> "accepted" | "deleted"
+  reviewer: "",
+  focusBlock: null,     // block id
+  currentRule: null,    // the span examples attach to
+  selected: null,       // the selected span key
+  sel: null,            // the live text selection, resolved
+};
+
+/* --- op log --------------------------------------------------------------- */
+
+const OPS = {
+  load() {
+    try { S.ops = JSON.parse(localStorage.getItem(K_OPS) || "[]"); }
+    catch (e) { S.ops = []; }
+    if (!Array.isArray(S.ops)) S.ops = [];
+  },
+  save() {
+    try { localStorage.setItem(K_OPS, JSON.stringify(S.ops)); }
+    catch (e) { toast("Browser storage is full — export now."); }
+  },
+  add(op) {
+    op.op_id = uuid();
+    op.by = S.reviewer || "ANON";
+    op.at = new Date().toISOString();
+    S.ops.push(op);
+    this.save();
+    replay();
+  },
+  unexported() { return S.ops.filter((o) => !o.exported_at).length; },
+};
+
+function uuid() {
+  if (crypto.randomUUID) return crypto.randomUUID();
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
+    const r = (Math.random() * 16) | 0;
+    return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+  });
+}
+
+/* A span's local identity is the tuple it was drawn at. `apply_spans.py` hashes
+   the same tuple into the `span_id` that goes on disk, so re-marking the same
+   extent is idempotent on both sides without the browser hashing anything. */
+const keyOf = (s) => `${s.anchor.block_id}|${s.anchor.start}|${s.anchor.end}|${s.kind}`;
+
+/* --- replay: baseline + local ops ----------------------------------------- */
+
+function replay() {
+  S.spans = new Map();
+  S.marks = new Map();
+  S.seeds = new Map();
+
+  for (const s of S.baseline.spans) addSpan(s);
+  for (const p of S.baseline.pages) S.marks.set(p.page_path, p);
+
+  const ordered = S.ops.slice().sort(
+    (a, b) => (a.at < b.at ? -1 : a.at > b.at ? 1 : a.op_id < b.op_id ? -1 : 1));
+
+  for (const op of ordered) {
+    if (op.op === "span") addSpan(op.span);
+    else if (op.op === "span_del") dropSpan(op.page_path, op.key);
+    else if (op.op === "page") S.marks.set(op.page_path, op);
+    else if (op.op === "decide") {
+      S.seeds.set(op.uid,
+        op.patch.review_status === "rejected" ? "deleted" : "accepted");
+    }
+  }
+  paintCounts();
+}
+
+function addSpan(span) {
+  const list = S.spans.get(span.page_path) || [];
+  const key = keyOf(span);
+  const at = list.findIndex((x) => keyOf(x) === key);
+  if (at >= 0) list[at] = span; else list.push(span);
+  S.spans.set(span.page_path, list);
+}
+
+function dropSpan(page, key) {
+  const list = (S.spans.get(page) || []).filter((x) => keyOf(x) !== key);
+  // A rule going away takes its examples with it: an orphaned example span has
+  // nothing to be an example OF, and `apply_spans.py` would refuse the file.
+  const gone = list.filter((x) => x.of && !list.some(
+    (r) => r.kind === "rule" && keyOf(r) === x.of));
+  S.spans.set(page, list.filter((x) => !gone.includes(x)));
+}
+
+const spansOn = (page) => S.spans.get(page) || [];
+const spansIn = (page, blockId) =>
+  spansOn(page).filter((s) => s.anchor.block_id === blockId);
+
+/* --- boot ----------------------------------------------------------------- */
+
+async function getJSON(path) {
+  const r = await fetch(path, { cache: "no-store" });
+  if (!r.ok) throw new Error(`${path}: ${r.status}`);
+  return r.json();
+}
+
+async function boot() {
+  const theme = localStorage.getItem(K_THEME);
+  if (theme) document.documentElement.dataset.theme = theme;
+
+  S.reviewer = (localStorage.getItem(K_WHO) || "").toUpperCase();
+  $("initials").value = S.reviewer;
+
+  try {
+    S.index = await getJSON("data/index.json");
+  } catch (e) {
+    $("doc").innerHTML = `<p class="empty">Could not load <code>data/index.json</code>
+      (${esc(e.message)}). Build the site first:
+      <code>python tools/annotate/build_static.py</code>.</p>`;
+    return;
+  }
+  try { S.baseline = await getJSON("data/spans.json"); } catch (e) { /* first run */ }
+
+  if (S.index.freeze && S.index.freeze.frozen) {
+    document.body.classList.add("frozen");
+    const f = $("freeze");
+    f.classList.remove("hidden");
+    f.innerHTML = `<b>Corpus frozen ${esc((S.index.freeze.frozen_at || "").slice(0, 10))}.</b>
+      <span>Spans are anchored to this text, so it does not move under them.
+      Upstream drift is still detected and reported.</span>`;
+  }
+
+  OPS.load();
+  replay();
+  renderRail();
+  const want = localStorage.getItem(K_PAGE);
+  const first = S.index.pages.find((p) => p.path === want)
+    || S.index.pages.find((p) => p.eligible);
+  if (first) openPage(first.path);
+  wireKeys();
+  wireSelection();
+}
+
+/* --- the page rail -------------------------------------------------------- */
+
+function renderRail() {
+  const q = ($("filter").value || "").toLowerCase().trim();
+  const sort = $("sort").value;
+  let pages = S.index.pages.filter(
+    (p) => !q || p.title.toLowerCase().includes(q) || p.path.toLowerCase().includes(q));
+
+  if (sort === "sparse") pages = pages.slice().sort((a, b) => a.seeds - b.seeds);
+  else if (sort === "seeds") pages = pages.slice().sort((a, b) => b.seeds - a.seeds);
+  else if (sort === "spans") {
+    pages = pages.slice().sort(
+      (a, b) => spansOn(b.path).length - spansOn(a.path).length);
+  }
+
+  // Rule sources first. Corpus order alphabetises `about-style-manual/` to the
+  // top, which is 58 pages of front matter the reviewer cannot mark anything on.
+  pages = [...pages.filter((p) => p.eligible), ...pages.filter((p) => !p.eligible)];
+
+  let html = "";
+  let section = null;
+  const grouped = sort === "corpus";
+  for (const p of pages) {
+    if (grouped && p.section !== section) {
+      section = p.section;
+      html += `<div class="sect">${esc(section.replace(/-/g, " "))}</div>`;
+    }
+    const n = spansOn(p.path).filter((s) => s.kind === "rule").length;
+    const mark = S.marks.get(p.path);
+    const done = mark && mark.status === "complete";
+    html += `<button class="pg${p.path === (S.page && S.page.path) ? " on" : ""}`
+      + `${p.eligible ? "" : " ineligible"}" onclick="openPage('${esc(p.path)}')">
+        <div class="t">${esc(p.title)}</div>
+        <div class="m">
+          ${n ? `<span><b>${n}</b> span${n === 1 ? "" : "s"}</span>` : ""}
+          ${p.seeds ? `<span>${p.seeds} seed${p.seeds === 1 ? "" : "s"}</span>` : ""}
+          ${p.eligible ? "" : "<span>not a rule source</span>"}
+          ${done ? '<span class="done">✓ swept</span>' : ""}
+        </div></button>`;
+  }
+  $("railList").innerHTML = html || '<div class="empty" style="padding:12px">No pages match.</div>';
+}
+
+async function openPage(path) {
+  const meta = S.index.pages.find((p) => p.path === path);
+  if (!meta) return;
+  if (!S.cache.has(meta.slug)) {
+    try { S.cache.set(meta.slug, await getJSON(`data/pages/${meta.slug}.json`)); }
+    catch (e) { toast(`Could not load ${path}`); return; }
+  }
+  S.page = S.cache.get(meta.slug);
+  S.focusBlock = null;
+  S.currentRule = null;
+  S.selected = null;
+  localStorage.setItem(K_PAGE, path);
+  document.body.classList.remove("rail-open");
+  renderRail();
+  renderDoc();
+  renderSide();
+  $("main").scrollTop = 0;
+}
+
+/* --- rendering the document ----------------------------------------------
+   The one structural rule: every text node is a slice of `block.plain`, so
+   `element.textContent === block.plain` and an offset in the DOM is an offset
+   in the data. Marks and spans are both drawn by cutting `plain` at every
+   boundary either of them introduces and styling the resulting segments, which
+   flattens nesting (a link inside a rule span inside emphasis) without ever
+   changing a character.
+   --------------------------------------------------------------------------- */
+
+function segments(block, spans) {
+  const cuts = new Set([0, block.plain.length]);
+  for (const m of block.marks || []) { cuts.add(m.start); cuts.add(m.end); }
+  for (const s of spans) { cuts.add(s.anchor.start); cuts.add(s.anchor.end); }
+  const bounds = [...cuts].filter((n) => n >= 0 && n <= block.plain.length)
+    .sort((a, b) => a - b);
+
+  const out = [];
+  for (let i = 0; i < bounds.length - 1; i++) {
+    const a = bounds[i], z = bounds[i + 1];
+    if (a >= z) continue;
+    const marks = (block.marks || []).filter((m) => m.start <= a && m.end >= z);
+    const covering = spans.filter((s) => s.anchor.start <= a && s.anchor.end >= z);
+    out.push({ a, z, text: block.plain.slice(a, z), marks, spans: covering });
+  }
+  return out;
+}
+
+function blockInner(block, spans) {
+  const segs = segments(block, spans);
+  if (segs.length === 1 && !segs[0].marks.length && !segs[0].spans.length) {
+    return esc(block.plain);
+  }
+  let html = "";
+  for (const s of segs) {
+    const cls = [
+      ...s.marks.map((m) => "m-" + m.kind),
+      ...s.spans.map((x) => "s-" + x.kind),
+      ...(s.spans.some((x) => keyOf(x) === S.selected) ? ["s-sel"] : []),
+    ];
+    const href = (s.marks.find((m) => m.kind === "link") || {}).href;
+    const title = href ? ` title="${esc(href)}"` : "";
+    const key = s.spans.length ? ` data-span="${esc(keyOf(s.spans[s.spans.length - 1]))}"` : "";
+    html += `<span class="${cls.join(" ")}"${title}${key}>${esc(s.text)}</span>`;
+  }
+  return html;
+}
+
+function renderDoc() {
+  const p = S.page;
+  const seedsByBlock = new Map();
+  for (const s of p.seeds) {
+    if (!s.block_id) continue;
+    seedsByBlock.set(s.block_id, s);
+  }
+
+  let html = `<div class="crumb">${esc(p.path)}</div>`;
+  let row = null;
+  let ordinal = 0;
+
+  const body = [];
+  for (const b of p.blocks) {
+    const spans = spansIn(p.path, b.id);
+    const inner = blockInner(b, spans);
+    const focus = b.id === S.focusBlock ? " focus" : "";
+
+    if (b.kind === "cell") {
+      if (!row || row.r !== (b.cell ? b.cell[0] : 0)) {
+        if (row) body.push("</div>");
+        row = { r: b.cell ? b.cell[0] : 0 };
+        body.push('<div class="row">');
+      }
+      body.push(`<div class="blk cell${focus}" data-bid="${b.id}">${inner}</div>`);
+      continue;
+    }
+    if (row) { body.push("</div>"); row = null; }
+
+    if (b.kind === "li") {
+      ordinal = b.ordered ? ordinal + 1 : 0;
+      body.push(`<div class="blk li${focus}" data-bid="${b.id}"`
+        + ` data-depth="${b.list_depth || 0}"`
+        + (b.ordered ? ` data-ord="1" data-n="${ordinal}"` : "")
+        + `>${inner}</div>`);
+      continue;
+    }
+    ordinal = 0;
+
+    if (b.kind === "heading") {
+      const seed = seedsByBlock.get(b.id);
+      body.push(`<div class="blk h${Math.min(b.level, 6)}${focus}" data-bid="${b.id}">`
+        + inner + (seed ? seedBadge(seed) : "") + "</div>");
+      continue;
+    }
+    body.push(`<div class="blk ${b.kind}${focus}" data-bid="${b.id}">${inner}</div>`);
+  }
+  if (row) body.push("</div>");
+
+  html += body.join("");
+  html += `<div class="srcnote" style="margin-top:34px;border:0;border-top:1px solid var(--line);padding-top:12px">
+    ${p.eligible
+      ? `Rule source. ${p.blocks.length} blocks, ${p.seeds.length} heading candidates.`
+      : `<b>Not a rule source.</b> <code>corpus/eligibility.yaml</code> excludes this page
+         (${esc(p.eligibility_reason)}), so spans here are refused (ADR-005). Read-only.`}
+    ${p.url ? ` · <a href="${esc(p.url)}" target="_blank" rel="noopener">live page ↗</a>` : ""}
+  </div>`;
+  $("doc").innerHTML = html;
+}
+
+function seedBadge(seed) {
+  const state = S.seeds.get(seed.uid);
+  const cls = state === "deleted" ? "gone" : state === "accepted" ? "rule" : "seed";
+  const text = state === "deleted" ? "deleted"
+    : state === "accepted" ? "rule"
+    : seed.status === "proposed" ? "seed" : seed.status;
+  return `<span class="badge ${cls}" title="${esc(seed.uid)} · from the heading walk`
+    + ` · ${esc(seed.form)}" onclick="event.stopPropagation();pickSeed('${esc(seed.uid)}')"`
+    + `>${esc(text)}</span>`;
+}
+
+/* --- selection ------------------------------------------------------------
+   Offsets are recovered by walking the block's text nodes in document order and
+   accumulating lengths. Exact, because every text node is a slice of `plain`.
+   --------------------------------------------------------------------------- */
+
+/* Walks only the text that IS the block. A heading carries a seed badge inside
+   it so the badge flows with the wrapped title, but the badge is chrome: counting
+   its characters would push every offset after it out of range, and a triple-click
+   on a badged heading would record a span longer than the text it covers. */
+function textWalker(blockEl) {
+  return document.createTreeWalker(blockEl, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) => (n.parentElement && n.parentElement.closest(".badge"))
+      ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+  });
+}
+
+function offsetIn(blockEl, node, nodeOffset) {
+  if (node === blockEl) {
+    // A selection anchored on the element itself (triple-click, select-all).
+    let n = 0;
+    const w = textWalker(blockEl);
+    for (let i = 0; i < nodeOffset && w.nextNode(); i++) n += w.currentNode.nodeValue.length;
+    return n;
+  }
+  if (node.parentElement && node.parentElement.closest(".badge")) {
+    // The selection ended inside the badge: treat it as the end of the text.
+    return null;
+  }
+  let n = 0;
+  const walker = textWalker(blockEl);
+  let t;
+  while ((t = walker.nextNode())) {
+    if (t === node) return n + nodeOffset;
+    n += t.nodeValue.length;
+  }
+  return null;
+}
+
+function blockElOf(node) {
+  const el = node.nodeType === 3 ? node.parentElement : node;
+  return el ? el.closest("[data-bid]") : null;
+}
+
+function plainOf(blockId) {
+  return (S.page.blocks.find((b) => b.id === blockId) || {}).plain || "";
+}
+
+function readSelection() {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || !sel.rangeCount) return null;
+  const r = sel.getRangeAt(0);
+  const startEl = blockElOf(r.startContainer);
+  const endEl = blockElOf(r.endContainer);
+  if (!startEl || !endEl) return null;
+
+  const all = [...document.querySelectorAll("#doc [data-bid]")];
+  const i0 = all.indexOf(startEl), i1 = all.indexOf(endEl);
+  if (i0 < 0 || i1 < 0) return null;
+
+  const parts = [];
+  for (let i = i0; i <= i1; i++) {
+    const el = all[i];
+    const id = el.dataset.bid;
+    const len = plainOf(id).length;
+    let a = i === i0 ? offsetIn(el, r.startContainer, r.startOffset) : 0;
+    let z = i === i1 ? offsetIn(el, r.endContainer, r.endOffset) : len;
+    if (a === null) a = 0;
+    if (z === null) z = len;
+    a = Math.max(0, Math.min(a, len));
+    z = Math.max(0, Math.min(z, len));
+    if (z <= a) continue;
+    // Trim whitespace at the edges: a double-click or a drag past the end of a
+    // line routinely picks up a trailing space, and `quote` has to match
+    // `plain[start:end]` exactly when Python re-reads it.
+    while (a < z && /\s/.test(plainOf(id)[a])) a++;
+    while (z > a && /\s/.test(plainOf(id)[z - 1])) z--;
+    if (z <= a) continue;
+    parts.push({ block_id: id, start: a, end: z, text: plainOf(id).slice(a, z) });
+  }
+  if (!parts.length) return null;
+  return { parts, rect: r.getBoundingClientRect() };
+}
+
+function wireSelection() {
+  document.addEventListener("selectionchange", () => {
+    clearTimeout(wireSelection._t);
+    wireSelection._t = setTimeout(showToolbar, 90);
+  });
+  $("main").addEventListener("scroll", () => $("toolbar").classList.remove("on"));
+  $("doc").addEventListener("click", (e) => {
+    const marked = e.target.closest("[data-span]");
+    if (marked) { selectSpan(marked.dataset.span); return; }
+    const blk = e.target.closest("[data-bid]");
+    if (blk) { S.focusBlock = blk.dataset.bid; renderDoc(); }
+  });
+}
+
+function showToolbar() {
+  const bar = $("toolbar");
+  const sel = readSelection();
+  S.sel = sel;
+  if (!sel) { bar.classList.remove("on"); return; }
+  if (!S.page.eligible) { bar.classList.remove("on"); return; }
+
+  const cross = sel.parts.length > 1;
+  bar.innerHTML = Object.entries(KINDS).map(([kind, k]) => {
+    const off = kind === "rule" && cross;
+    return `<button ${off ? "disabled" : ""} onclick="mark('${kind}')"
+      title="${esc(k.hint)}${off ? " — a rule span cannot cross blocks" : ""}"
+      >${esc(k.label)}<kbd>${k.key}</kbd></button>`;
+  }).join("");
+
+  const r = sel.rect;
+  bar.classList.add("on");
+  bar.style.left = `${Math.max(8, r.left + window.scrollX)}px`;
+  bar.style.top = `${r.top + window.scrollY - bar.offsetHeight - 8}px`;
+}
+
+/* --- making, adjusting and deleting spans ---------------------------------
+   All three are first-class, and deletion is the one that makes the heading
+   walk's first cut usable rather than a burden: text with no rule span on it is,
+   by definition, not a rule, so a wrong candidate is removed rather than argued
+   with. A golden span simply goes. A seeded candidate cannot "go" — the ledger
+   records, it does not delete — so it is rejected through the same gate and the
+   same reason vocabulary the triage app uses, with a name and a timestamp on it.
+   --------------------------------------------------------------------------- */
+
+const CONTEXT = 32;   // characters of prefix/suffix kept for re-anchoring
+
+function anchorFor(part) {
+  const plain = plainOf(part.block_id);
+  return {
+    block_id: part.block_id,
+    start: part.start,
+    end: part.end,
+    quote: part.text,
+    // Kept so a span can be re-found after the corpus unfreezes and the text
+    // around it moves. The offsets are the fast path; this is the recovery one.
+    prefix: plain.slice(Math.max(0, part.start - CONTEXT), part.start),
+    suffix: plain.slice(part.end, part.end + CONTEXT),
+  };
+}
+
+function mark(kind) {
+  const sel = S.sel || readSelection();
+  if (!sel) { toast("Select some text first"); return; }
+  if (!S.page.eligible) {
+    toast("This page is not a rule source — see corpus/eligibility.yaml");
+    return;
+  }
+  if (kind === "rule" && sel.parts.length > 1) {
+    toast("A rule span has to sit inside one block. Examples can span several.");
+    return;
+  }
+  if (kind !== "rule") {
+    const parent = S.currentRule && spansOn(S.page.path).find(
+      (x) => keyOf(x) === S.currentRule);
+    if (!parent) {
+      toast(`Mark the rule first, then its ${KINDS[kind].label.toLowerCase()}`);
+      return;
+    }
+    for (const part of sel.parts) {
+      // An example drawn from the sentence that states the rule is the Octavius
+      // failure (D-5). `apply_spans.py` refuses it; saying so here is cheaper.
+      if (part.block_id === parent.anchor.block_id
+          && part.start < parent.anchor.end && part.end > parent.anchor.start) {
+        toast("An example cannot overlap the rule it illustrates (D-5)");
+        return;
+      }
+    }
+    // A cross-block example list — the usual "Write this" list of 3-6 items —
+    // becomes one span per block, all pointing at the same rule.
+    for (const part of sel.parts) {
+      OPS.add({ op: "span", span: {
+        page_path: S.page.path, page_sha256: S.page.sha256, kind,
+        anchor: anchorFor(part), of: S.currentRule,
+      }});
+    }
+    window.getSelection().removeAllRanges();
+    $("toolbar").classList.remove("on");
+    renderDoc(); renderSide();
+    toast(`${KINDS[kind].label} recorded`);
+    return;
+  }
+
+  const span = {
+    page_path: S.page.path, page_sha256: S.page.sha256, kind: "rule",
+    anchor: anchorFor(sel.parts[0]), of: "",
+    tags: blankTags(), preconditions: [], seed_uid: seedAt(sel.parts[0]),
+  };
+  window.getSelection().removeAllRanges();
+  $("toolbar").classList.remove("on");
+  openTags(span, true);
+}
+
+/* If the span exactly covers a heading the extractor already proposed, say so:
+   `golden.py` will reuse that candidate's UID, which carries its review state
+   forward instead of minting a second rule for the same sentence. */
+function seedAt(part) {
+  const plain = plainOf(part.block_id);
+  if (part.start !== 0 || part.end !== plain.length) return "";
+  const seed = S.page.seeds.find((s) => s.block_id === part.block_id);
+  return seed ? seed.uid : "";
+}
+
+const blankTags = () => ({
+  unit: "", clarity: "", direction: "", modality: "", applies_to: [],
+  review_status: "accepted", specification: "", violation_condition: "", note: "",
+});
+
+function selectSpan(key) {
+  S.selected = key;
+  const span = spansOn(S.page.path).find((x) => keyOf(x) === key);
+  if (span && span.kind === "rule") S.currentRule = key;
+  renderDoc(); renderSide();
+}
+
+function editSpan(key) {
+  const span = spansOn(S.page.path).find((x) => keyOf(x) === key);
+  if (span) openTags(JSON.parse(JSON.stringify(span)), false);
+}
+
+function deleteSpan(key) {
+  const span = spansOn(S.page.path).find((x) => keyOf(x) === key);
+  if (!span) return;
+  OPS.add({ op: "span_del", page_path: S.page.path, key,
+            anchor: span.anchor, kind: span.kind });
+  if (S.currentRule === key) S.currentRule = null;
+  if (S.selected === key) S.selected = null;
+  renderDoc(); renderSide();
+  toast("Span removed");
+}
+
+/* --- seeds: the heading walk's first cut ---------------------------------- */
+
+function pickSeed(uid) {
+  const seed = S.page.seeds.find((s) => s.uid === uid);
+  if (!seed) return;
+  S.focusBlock = seed.block_id;
+  renderDoc(); renderSide();
+  openSeedSheet(seed);
+}
+
+function acceptSeed(uid) {
+  const seed = S.page.seeds.find((s) => s.uid === uid);
+  if (!seed || !seed.block_id) return;
+  const plain = plainOf(seed.block_id);
+  const span = {
+    page_path: S.page.path, page_sha256: S.page.sha256, kind: "rule",
+    anchor: anchorFor({ block_id: seed.block_id, start: 0, end: plain.length, text: plain }),
+    of: "", seed_uid: uid,
+    tags: {
+      ...blankTags(),
+      // The extractor's proposals, pre-filled because the reviewer is confirming
+      // a candidate rather than authoring one. `clarity` stays blank: the
+      // extractor deliberately makes no claim there and pre-filling it would
+      // manufacture a judgement nobody made.
+      unit: seed.unit || "", direction: seed.direction || "",
+      modality: seed.modality || "", applies_to: (seed.applies_to || []).slice(),
+      specification: seed.specification || "",
+    },
+    preconditions: [],
+  };
+  closeSheet();
+  openTags(span, true);
+}
+
+function deleteSeed(uid, reasons, note) {
+  // The ledger never deletes, it records. "Delete" here is a rejection with a
+  // reason, a name and a timestamp, replayed through `server._apply` like any
+  // other review decision (ADR-008).
+  OPS.add({ op: "decide", uid, patch: {
+    review_status: "rejected",
+    reasons: reasons && reasons.length ? reasons : ["label_not_rule"],
+    note: note || "no rule span covers this heading in the golden set",
+    clarity: "not_automatable",
+  }});
+  closeSheet();
+  renderDoc(); renderSide();
+  toast("Candidate rejected");
+}
+
+function undoSeed(uid) {
+  S.ops = S.ops.filter((o) => !(o.op === "decide" && o.uid === uid));
+  OPS.save(); replay();
+  renderDoc(); renderSide();
+}
+
+/* --- marking a page swept -------------------------------------------------
+   This is what turns absence into a label. "I read this page; these are all its
+   rules" makes every unmarked heading a negative example, which is what lets a
+   future heuristic be measured for precision rather than only recall — the whole
+   reason the golden set is worth building (ADR-023). Recorded from the start,
+   because a page annotated before the marker existed is indistinguishable from
+   one that was left half-done.
+   --------------------------------------------------------------------------- */
+
+function markSwept() {
+  if (!S.page.eligible) { toast("Not a rule source — nothing to sweep"); return; }
+  const rules = spansOn(S.page.path).filter((s) => s.kind === "rule");
+  const loose = S.page.seeds.filter((s) => !S.seeds.get(s.uid)
+    && !rules.some((r) => r.seed_uid === s.uid));
+  const risky = loose.filter(
+    (s) => (s.compliant.length && s.violating.length)
+        || ["accepted", "amended"].includes(s.status));
+
+  const done = S.marks.get(S.page.path);
+  openSheet(`
+    <h2 style="font-size:18px;margin-bottom:4px">Mark this page swept</h2>
+    <p class="why">Recording that you read the whole page is what makes the
+      headings you did <em>not</em> mark into evidence. Without it, "no span here"
+      and "not looked at yet" are the same thing.</p>
+    <div class="card"><div class="k"><span>On this page</span></div>
+      <div class="q"><b>${rules.length}</b> rule span${rules.length === 1 ? "" : "s"} ·
+      <b>${loose.length}</b> heading candidate${loose.length === 1 ? "" : "s"} left untouched</div>
+    </div>
+    ${risky.length ? `<div class="card" style="border-color:var(--gold)">
+      <div class="k"><span>Worth a second look</span></div>
+      <p class="why">These carry the manual's own paired examples, or a decision
+        somebody already made. Sweeping the page drops them.</p>
+      ${risky.map((s) => `<div class="q">• ${esc(s.statement)}</div>`).join("")}
+    </div>` : ""}
+    <div class="field">
+      <div class="flabel"><h4>Note <span style="font-weight:400;color:var(--muted)">(optional)</span></h4></div>
+      <textarea id="sweepNote" placeholder="Anything the next person should know about this page…"></textarea>
+    </div>
+    <button class="btn wide primary" style="width:100%" onclick="confirmSweep()">
+      ${done && done.status === "complete" ? "Re-confirm swept" : "Mark swept"}</button>
+    <button class="btn" style="width:100%;margin-top:8px" onclick="closeSheet()">Not yet</button>
+  `);
+}
+
+function confirmSweep() {
+  OPS.add({ op: "page", page_path: S.page.path, page_sha256: S.page.sha256,
+            status: "complete", note: ($("sweepNote")?.value || "").trim() });
+  closeSheet();
+  renderRail(); renderSide();
+  toast("Page marked swept");
+}
+
+/* --- the tag sheet --------------------------------------------------------
+   Rendered from the same `glossary.json` and the same `reviewer_options()` the
+   triage app uses, so the two cannot drift into two vocabularies for one
+   decision. The courtesy checks are copied too — they are a courtesy: the gate
+   is `server._apply`, at the moment the decision enters the record (ADR-022).
+   --------------------------------------------------------------------------- */
+
+function fieldHtml(bucket, value, multi, required) {
+  const spec = S.index.glossary.buckets[bucket];
+  const keys = S.index.options[bucket] || [];
+  const sel = multi ? (value || []) : [value];
+  return `<div class="field" id="fld-${bucket}">
+    <div class="flabel"><h4>${esc(spec.title)}</h4>
+      ${required ? '<span class="tag" id="req-' + bucket + '" style="color:var(--bin);border-color:var(--bin)">needed</span>' : ""}
+      <button class="ihelp" onclick="explain('${bucket}')" title="What does this mean?">ⓘ</button>
+    </div>
+    <p class="why">${esc(spec.one_liner || "")}</p>
+    <div class="opts">${keys.map((k) => `<button class="opt${sel.includes(k) ? " on" : ""}"
+      data-bucket="${bucket}" data-key="${esc(k)}"
+      onclick="pick('${bucket}','${esc(k)}',${multi})"
+      oncontextmenu="event.preventDefault();explain('${bucket}','${esc(k)}')"
+      >${esc(spec.options[k].label)}</button>`).join("")}</div>
+    <div id="exp-${bucket}"></div>
+  </div>`;
+}
+
+function explain(bucket, key) {
+  const spec = S.index.glossary.buckets[bucket];
+  const box = $("exp-" + bucket);
+  if (!box) return;
+  if (box.innerHTML) { box.innerHTML = ""; return; }
+  const o = key ? spec.options[key] : null;
+  box.innerHTML = o
+    ? `<div class="explain"><b>${esc(o.label)}</b> — ${esc(o.means)}<br><br>${esc(o.effect)}
+       ${o.example ? `<br><br><i>${esc(o.example)}</i>` : ""}</div>`
+    : `<div class="explain"><b>${esc(spec.title)}</b> — ${esc(spec.what_it_is || spec.one_liner)}
+       ${spec.why_it_matters ? `<br><br>${esc(spec.why_it_matters)}` : ""}</div>`;
+}
+
+function pick(bucket, key, multi) {
+  const d = S._draft.tags;
+  if (multi) {
+    const cur = new Set(d[bucket] || []);
+    if (cur.has(key)) cur.delete(key); else cur.add(key);
+    d[bucket] = [...cur];
+  } else {
+    if (d[bucket] === key) { explain(bucket, key); return; }
+    d[bucket] = key;
+  }
+  for (const el of document.querySelectorAll(`.opt[data-bucket="${bucket}"]`)) {
+    const on = multi ? (d[bucket] || []).includes(el.dataset.key)
+                     : d[bucket] === el.dataset.key;
+    el.classList.toggle("on", on);
+  }
+  syncTags();
+}
+
+function openTags(span, isNew) {
+  S._draft = span;
+  S._draftNew = isNew;
+  const seed = span.seed_uid
+    ? S.page.seeds.find((s) => s.uid === span.seed_uid) : null;
+
+  openSheet(`
+    <div class="k" style="margin-bottom:5px">
+      ${isNew ? "New rule span" : "Edit rule span"}
+      ${seed ? ` · confirms <span class="mono">${esc(seed.uid)}</span>` : ""}
+    </div>
+    <h2 style="font-size:17px;margin-bottom:10px">${esc(span.anchor.quote)}</h2>
+    ${seed ? `<p class="why">This span covers a heading the extractor already
+       proposed, so it keeps that candidate's identity and everything already
+       decided about it, rather than becoming a second rule for the same
+       sentence.</p>` : ""}
+
+    ${fieldHtml("unit", span.tags.unit, false)}
+    ${fieldHtml("clarity", span.tags.clarity, false, true)}
+    ${fieldHtml("applies_to", span.tags.applies_to, true)}
+    ${fieldHtml("direction", span.tags.direction, false)}
+    ${fieldHtml("modality", span.tags.modality, false)}
+
+    <div class="field" id="fld-spec">
+      <div class="flabel"><h4 id="specLabel">Your interpretation</h4></div>
+      <p class="why" id="specWhy">The manual's wording is kept alongside and never
+        overwritten (ADR-017). This is what detection implements.</p>
+      <textarea id="f-spec" placeholder="State the rule as you'd want it implemented…"
+        >${esc(span.tags.specification || "")}</textarea>
+    </div>
+
+    <div class="field">
+      <div class="flabel"><h4>When does it apply? <span style="font-weight:400;color:var(--muted)">(optional)</span></h4></div>
+      <p class="why">One per line. You can also mark these as spans with
+        <kbd>P</kbd> if the manual states them in the text.</p>
+      <textarea id="f-pre" placeholder="e.g. in legal citations"
+        >${esc((span.preconditions || []).join("\n"))}</textarea>
+    </div>
+
+    <div class="field">
+      <div class="flabel"><h4>Note <span style="font-weight:400;color:var(--muted)">(optional)</span></h4></div>
+      <textarea id="f-note" placeholder="Anything the next person would want to know."
+        >${esc(span.tags.note || "")}</textarea>
+    </div>
+
+    <button class="btn primary" style="width:100%" id="saveBtn" onclick="saveTags()">
+      ${isNew ? "Record this rule" : "Save changes"}</button>
+    ${isNew ? "" : `<button class="btn danger" style="width:100%;margin-top:8px"
+      onclick="deleteSpan('${esc(keyOf(span))}');closeSheet()">Delete this span</button>`}
+    <button class="btn" style="width:100%;margin-top:8px" onclick="closeSheet()">Cancel</button>
+  `);
+  syncTags();
+}
+
+function syncTags() {
+  const d = S._draft;
+  if (!d) return;
+  const fuzzy = d.tags.clarity === "ambiguous_resolvable";
+  const req = $("req-clarity");
+  if (req) req.style.display = d.tags.clarity ? "none" : "";
+  const why = $("specWhy");
+  if (why) {
+    why.innerHTML = fuzzy
+      ? '<b>Required.</b> You said the wording is fuzzy but you can pin it down. '
+        + 'Write the interpretation you\'d build to — this is the text detection '
+        + 'implements, so an assumption left in the note would never be acted on.'
+      : "The manual's wording is kept alongside and never overwritten (ADR-017). "
+        + "This is what detection implements.";
+  }
+  const btn = $("saveBtn");
+  if (btn) btn.disabled = !d.tags.clarity;
+}
+
+function saveTags() {
+  const d = S._draft;
+  if (!d.tags.clarity) { toast("Say how clear the rule is first"); return; }
+  const spec = ($("f-spec")?.value || "").trim();
+  if (d.tags.clarity === "ambiguous_resolvable" && !spec) {
+    toast("Write the interpretation in 'your interpretation' — a note is not implemented");
+    return;
+  }
+  d.tags.specification = spec;
+  d.tags.note = ($("f-note")?.value || "").trim();
+  d.preconditions = ($("f-pre")?.value || "").split("\n")
+    .map((s) => s.trim()).filter(Boolean);
+  if (d.tags.unit === "artifact" || d.tags.clarity === "not_automatable") {
+    // Both mean "the text runtime can never check this" (ADR-007). Recording it
+    // as a rule and then refusing to load it is worse than not recording it.
+    d.tags.review_status = "rejected";
+  }
+  OPS.add({ op: "span", span: d });
+  S.currentRule = keyOf(d);
+  S.selected = S.currentRule;
+  closeSheet();
+  renderDoc(); renderSide(); renderRail();
+  toast(S._draftNew ? "Rule recorded" : "Span updated");
+}
+
+function openSeedSheet(seed) {
+  const state = S.seeds.get(seed.uid);
+  const reasons = S.index.glossary.buckets.reject_reasons;
+  S._seed = seed;
+  S._reasons = new Set();
+  openSheet(`
+    <div class="k" style="margin-bottom:5px">Heading candidate ·
+      <span class="mono">${esc(seed.uid)}</span></div>
+    <h2 style="font-size:17px;margin-bottom:6px">${esc(seed.statement)}</h2>
+    <p class="why">Found by the heading walk, as <b>${esc(seed.form)}</b>.
+      ${state === "deleted" ? "You rejected it."
+        : state === "accepted" ? "You confirmed it."
+        : "Not yet decided."}</p>
+    ${(seed.compliant.length || seed.violating.length) ? `<div class="card">
+      <div class="k"><span>The manual's own examples</span></div>
+      ${seed.compliant.slice(0, 3).map((x) => `<div class="q">✓ ${esc(x)}</div>`).join("")}
+      ${seed.violating.slice(0, 3).map((x) => `<div class="q">✗ ${esc(x)}</div>`).join("")}
+    </div>` : ""}
+
+    ${state ? `<button class="btn" style="width:100%" onclick="undoSeed('${esc(seed.uid)}')"
+        >Undo — put it back to undecided</button>`
+      : `<button class="btn primary" style="width:100%" onclick="acceptSeed('${esc(seed.uid)}')">
+          Confirm as a rule, at this heading's extent</button>
+        <p class="why" style="margin-top:12px">Or select the text that actually states
+          the rule and press <kbd>R</kbd> — the heading is often the right
+          <em>place</em> with the wrong <em>words</em>.</p>
+        <div class="field" style="margin-top:14px">
+          <div class="flabel"><h4>Or delete it — why?</h4></div>
+          <p class="why">"We binned 300" is a statistic. "We binned 80 because they
+            govern images" is a fix to the extractor.</p>
+          <div class="opts">${S.index.options.reject_reasons.map((k) =>
+            `<button class="opt" data-reason="${esc(k)}" onclick="toggleReason(this,'${esc(k)}')"
+              title="${esc(reasons.options[k].means)}">${esc(reasons.options[k].label)}</button>`
+          ).join("")}</div>
+        </div>
+        <textarea id="seedNote" placeholder="Note (optional)"></textarea>
+        <button class="btn danger" style="width:100%;margin-top:8px" onclick="confirmDeleteSeed()"
+          >Delete this candidate</button>`}
+    <button class="btn" style="width:100%;margin-top:8px" onclick="closeSheet()">Close</button>
+  `);
+}
+
+function toggleReason(el, key) {
+  if (S._reasons.has(key)) S._reasons.delete(key); else S._reasons.add(key);
+  el.classList.toggle("on", S._reasons.has(key));
+}
+
+function confirmDeleteSeed() {
+  if (!S._reasons.size) { toast("Pick at least one reason"); return; }
+  deleteSeed(S._seed.uid, [...S._reasons], ($("seedNote")?.value || "").trim());
+}
+
+/* --- inspector ------------------------------------------------------------ */
+
+function renderSide() {
+  if (!S.page) return;
+  const rules = spansOn(S.page.path).filter((s) => s.kind === "rule");
+  const others = spansOn(S.page.path).filter((s) => s.kind !== "rule");
+  const mark = S.marks.get(S.page.path);
+  const loose = S.page.seeds.filter((s) => !S.seeds.get(s.uid)
+    && !rules.some((r) => r.seed_uid === s.uid));
+
+  $("sideHead").textContent = S.page.title;
+
+  let html = "";
+  if (mark && mark.status === "complete") {
+    html += `<div class="card" style="border-color:var(--keep);background:var(--keep-bg)">
+      <div class="k"><span>Swept</span><span>${esc((mark.at || "").slice(0, 10))}</span></div>
+      <div class="q">Every heading here that carries no rule span is recorded as
+        <em>not a rule</em>.</div></div>`;
+  }
+
+  html += `<div class="card"><div class="k"><span>Rules marked</span>
+      <span>${rules.length}</span></div>`;
+  if (!rules.length) {
+    html += `<p class="why" style="margin:6px 0 0">Select the text that states a rule
+      and press <kbd>R</kbd>. It does not have to be a heading — roughly 60 rules in
+      this corpus are stated as plain description and the extractor cannot see any
+      of them.</p>`;
+  }
+  html += "</div>";
+
+  for (const r of rules) {
+    const kids = others.filter((x) => x.of === keyOf(r));
+    const on = keyOf(r) === S.selected || keyOf(r) === S.currentRule;
+    html += `<div class="card${on ? " on" : ""}">
+      <div class="k"><span>Rule${r.seed_uid ? " · confirms a candidate" : ""}</span>
+        <span>${kids.length ? kids.length + " linked" : ""}</span></div>
+      <div class="q">${esc(r.anchor.quote)}</div>
+      <div class="tags">
+        ${["unit", "clarity", "direction", "modality"].filter((k) => r.tags[k])
+          .map((k) => `<span class="tag">${esc(r.tags[k])}</span>`).join("")}
+        ${(r.tags.applies_to || []).map((a) => `<span class="tag">${esc(a)}</span>`).join("")}
+        ${r.tags.review_status === "rejected"
+          ? '<span class="tag" style="color:var(--bin);border-color:var(--bin)">will not load</span>' : ""}
+      </div>
+      ${kids.length ? `<div style="margin-top:7px">${kids.map((k) =>
+        `<div class="q" style="font-size:12.5px;color:var(--ink-2)">
+          ${k.kind === "compliant" ? "✓" : k.kind === "violating" ? "✗" : "⟡"}
+          ${esc(k.anchor.quote.slice(0, 90))}</div>`).join("")}</div>` : ""}
+      <div class="acts">
+        <button class="btn sm" onclick="selectSpan('${esc(keyOf(r))}')">Attach examples</button>
+        <button class="btn sm" onclick="editSpan('${esc(keyOf(r))}')">Edit</button>
+        <button class="btn sm danger" onclick="deleteSpan('${esc(keyOf(r))}')">Delete</button>
+      </div></div>`;
+  }
+
+  const orphans = others.filter((x) => !rules.some((r) => keyOf(r) === x.of));
+  for (const o of orphans) {
+    html += `<div class="card" style="border-color:var(--bin)">
+      <div class="k"><span>${esc(o.kind)} with no rule</span></div>
+      <div class="q">${esc(o.anchor.quote)}</div>
+      <div class="acts"><button class="btn sm danger"
+        onclick="deleteSpan('${esc(keyOf(o))}')">Remove</button></div></div>`;
+  }
+
+  if (S.page.eligible) {
+    html += `<div class="card"><div class="k"><span>Heading candidates left</span>
+        <span>${loose.length} of ${S.page.seeds.length}</span></div>`;
+    if (loose.length) {
+      html += `<div style="margin-top:6px">${loose.slice(0, 12).map((s) =>
+        `<div class="q" style="font-size:12.5px">
+          <a href="#" onclick="event.preventDefault();pickSeed('${esc(s.uid)}')"
+            >${esc(s.statement)}</a></div>`).join("")}</div>`;
+      if (loose.length > 12) html += `<p class="why">…and ${loose.length - 12} more.</p>`;
+    } else {
+      html += `<p class="why" style="margin:6px 0 0">All accounted for.</p>`;
+    }
+    html += `<div class="acts"><button class="btn sm primary" onclick="markSwept()">
+      Mark page swept <kbd>F</kbd></button></div></div>`;
+  }
+
+  $("sideBody").innerHTML = html;
+}
+
+function paintCounts() {
+  let rules = 0;
+  for (const list of S.spans.values()) rules += list.filter((s) => s.kind === "rule").length;
+  const q = OPS.unexported();
+  $("cSpans").innerHTML = `<b>${rules}</b> rule span${rules === 1 ? "" : "s"}`;
+  const chip = $("cQueue");
+  chip.innerHTML = `<b>${q}</b> unexported`;
+  chip.className = "chip" + (q ? " warn" : "");
+}
+
+/* --- export ---------------------------------------------------------------
+   The browser is a drafting surface. Everything it holds lives in one browser
+   until it is exported, so the count is in the header, the queue is never
+   cleared automatically, and every export carries everything — exporting twice
+   is free, because `apply_spans.py` de-duplicates on `op_id` (ADR-022).
+   --------------------------------------------------------------------------- */
+
+function exportOps() {
+  if (!S.ops.length) { toast("Nothing to export yet"); return; }
+  if (!S.reviewer) { toast("Put your initials in the header first"); $("initials").focus(); return; }
+
+  const at = new Date().toISOString();
+  const meta = {
+    op: "meta", op_id: uuid(), by: S.reviewer, at,
+    app: "annotate",
+    build: S.index.build,
+    render_version: S.index.build.render_version,
+    ops: S.ops.length,
+    note: "Replay with: python tools/annotate/apply_spans.py <this file>",
+  };
+  const body = [meta, ...S.ops.map((o) => {
+    const { exported_at, ...rest } = o;
+    return rest;
+  })].map((o) => JSON.stringify(o)).join("\n") + "\n";
+
+  const stamp = at.replace(/[-:]/g, "").replace(/\..*/, "").replace("T", "");
+  const name = `derek-spans-${S.reviewer}-${stamp}.jsonl`;
+  const url = URL.createObjectURL(new Blob([body], { type: "application/x-ndjson" }));
+  const a = document.createElement("a");
+  a.href = url; a.download = name; a.click();
+  URL.revokeObjectURL(url);
+
+  for (const o of S.ops) o.exported_at = at;
+  OPS.save();
+  paintCounts();
+
+  const repo = (S.index.build && S.index.build.repo) || "Thomas-Amann-IPAustralia/Derek";
+  openSheet(`
+    <h2 style="font-size:18px;margin-bottom:6px">Exported ${S.ops.length} op${S.ops.length === 1 ? "" : "s"}</h2>
+    <p class="why"><code>${esc(name)}</code> is in your downloads.</p>
+    <div class="card"><div class="k"><span>Getting it into the repository</span></div>
+      <div class="q">1. Open <a href="https://github.com/${esc(repo)}/upload/main/golden/inbox"
+        target="_blank" rel="noopener">golden/inbox</a> on github.com.</div>
+      <div class="q">2. Drop the file in and commit.</div>
+      <div class="q">3. <code>apply-spans.yml</code> replays it, writes
+        <code>golden/spans.jsonl</code>, rebuilds the ledger and republishes this page.</div>
+    </div>
+    <p class="why">The queue is not cleared. Every export carries everything you have
+      marked, and re-uploading the same file does nothing the second time, so
+      exporting early and often costs nothing and losing a browser profile costs
+      a session.</p>
+    <button class="btn" style="width:100%" onclick="closeSheet()">Back to work</button>
+  `);
+}
+
+/* --- chrome --------------------------------------------------------------- */
+
+function openSheet(html) {
+  $("sheet").innerHTML = html;
+  $("sheet").classList.add("on");
+  $("scrim").classList.add("on");
+}
+function closeSheet() {
+  $("sheet").classList.remove("on");
+  $("scrim").classList.remove("on");
+  S._draft = null;
+}
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove("on"), 2600);
+}
+function setReviewer(v) {
+  S.reviewer = (v || "").toUpperCase().replace(/[^A-Z0-9_-]/g, "").slice(0, 6);
+  $("initials").value = S.reviewer;
+  localStorage.setItem(K_WHO, S.reviewer);
+}
+function toggleTheme() {
+  const now = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = now;
+  localStorage.setItem(K_THEME, now);
+}
+
+function step(delta) {
+  const pages = S.index.pages.filter((p) => p.eligible);
+  const i = pages.findIndex((p) => p.path === S.page.path);
+  const next = pages[(i + delta + pages.length) % pages.length];
+  if (next) openPage(next.path);
+}
+
+function stepBlock(delta) {
+  const ids = S.page.blocks.map((b) => b.id);
+  const i = S.focusBlock ? ids.indexOf(S.focusBlock) : -1;
+  const j = Math.max(0, Math.min(ids.length - 1, i + delta));
+  S.focusBlock = ids[j];
+  renderDoc();
+  const el = document.querySelector(`[data-bid="${S.focusBlock}"]`);
+  if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+function selectFocusedBlock() {
+  if (!S.focusBlock) { stepBlock(1); return; }
+  const el = document.querySelector(`[data-bid="${S.focusBlock}"]`);
+  if (!el) return;
+  const r = document.createRange();
+  r.selectNodeContents(el);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(r);
+  showToolbar();
+}
+
+function stepSpan(delta) {
+  const list = spansOn(S.page.path);
+  if (!list.length) { toast("No spans on this page yet"); return; }
+  const i = list.findIndex((s) => keyOf(s) === S.selected);
+  const next = list[(i + delta + list.length) % list.length];
+  selectSpan(keyOf(next));
+  const el = document.querySelector(`[data-bid="${next.anchor.block_id}"]`);
+  if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+function help() {
+  const row = (k, what) => `<div class="q"><kbd>${k}</kbd> &nbsp;${what}</div>`;
+  openSheet(`
+    <h2 style="font-size:18px;margin-bottom:8px">How this works</h2>
+    <p class="why">Select the text that states a rule and press <kbd>R</kbd>. It does not
+      have to be a heading. The dashed underlines are the extractor's first cut —
+      confirm one, adjust it by selecting different text, or delete it.</p>
+    <div class="card"><div class="k"><span>On a selection</span></div>
+      ${row("R", "mark it as the rule")}
+      ${row("C", "mark it as a <b>Write this</b> example of the current rule")}
+      ${row("V", "mark it as a <b>Not this</b> example")}
+      ${row("P", "mark it as a condition on when the rule applies")}
+    </div>
+    <div class="card"><div class="k"><span>Moving</span></div>
+      ${row("J / K", "next / previous block")}
+      ${row("Enter", "select the whole focused block")}
+      ${row("N / P", "next / previous span on this page")}
+      ${row("[ / ]", "previous / next eligible page")}
+    </div>
+    <div class="card"><div class="k"><span>Deciding</span></div>
+      ${row("A", "confirm the focused heading candidate as a rule")}
+      ${row("Backspace", "delete the selected span")}
+      ${row("F", "mark the page swept — every unmarked heading becomes evidence")}
+      ${row("E", "export")} ${row("T", "light / dark")} ${row("Esc", "clear")}
+    </div>
+    <p class="why">Nothing here writes to the ledger. Spans queue in this browser,
+      export as JSONL, and are replayed by <code>tools/annotate/apply_spans.py</code>
+      through the same gate the triage app uses. Export early.</p>
+    <button class="btn" style="width:100%" onclick="closeSheet()">Got it</button>
+  `);
+}
+
+function wireKeys() {
+  document.addEventListener("keydown", (e) => {
+    const tag = (e.target.tagName || "").toLowerCase();
+    if (tag === "input" || tag === "textarea" || e.metaKey || e.ctrlKey || e.altKey) return;
+    if ($("sheet").classList.contains("on")) {
+      if (e.key === "Escape") { closeSheet(); e.preventDefault(); }
+      return;
+    }
+    if (!S.page) return;
+    const k = e.key;
+
+    if (k === "Escape") { window.getSelection().removeAllRanges();
+                          $("toolbar").classList.remove("on"); S.selected = null;
+                          renderDoc(); renderSide(); return; }
+    if (k === "?" || k === "/") { help(); e.preventDefault(); return; }
+
+    const kind = Object.keys(KINDS).find((x) => KINDS[x].key === k.toUpperCase());
+    if (kind && readSelection()) { mark(kind); e.preventDefault(); return; }
+
+    switch (k.toLowerCase()) {
+      case "j": stepBlock(1); e.preventDefault(); break;
+      case "k": stepBlock(-1); e.preventDefault(); break;
+      case "n": stepSpan(1); e.preventDefault(); break;
+      case "[": step(-1); e.preventDefault(); break;
+      case "]": step(1); e.preventDefault(); break;
+      case "f": markSwept(); e.preventDefault(); break;
+      case "e": exportOps(); e.preventDefault(); break;
+      case "t": toggleTheme(); e.preventDefault(); break;
+      case "a": {
+        const seed = S.page.seeds.find((s) => s.block_id === S.focusBlock);
+        if (seed) { acceptSeed(seed.uid); e.preventDefault(); }
+        break;
+      }
+      case "enter": selectFocusedBlock(); e.preventDefault(); break;
+      case "backspace":
+      case "delete":
+        if (S.selected) { deleteSpan(S.selected); e.preventDefault(); }
+        break;
+    }
+    // `P` is a span kind on a selection and "previous span" without one.
+    if (k.toLowerCase() === "p" && !readSelection()) { stepSpan(-1); e.preventDefault(); }
+  });
+}
+
+boot();
+</script>
+</body>
+</html>

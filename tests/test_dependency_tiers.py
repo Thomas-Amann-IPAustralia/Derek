@@ -40,10 +40,15 @@ STDLIB_ONLY_TIERS = ("derek/extract", "derek/ledger")
 CI_REQUIREMENTS = ("requirements.txt", "requirements-dev.txt")
 
 # What CI actually executes, beyond the test suite itself (.github/workflows/ci.yml).
+# What CI actually executes, beyond the test suite itself. The two static
+# builders are here because pages.yml runs them with NO `pip install` step, so a
+# third-party import in either aborts the Pages deploy rather than failing a test.
 CI_ENTRY_POINTS = (
     "derek/extract/build.py",
     "derek/extract/blocks.py",
     "derek/eval/dogfood.py",
+    "tools/review/build_static.py",
+    "tools/annotate/build_static.py",
 )
 
 _PIN = re.compile(r"[=<>!~\[;]")

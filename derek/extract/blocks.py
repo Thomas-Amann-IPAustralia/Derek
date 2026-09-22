@@ -62,6 +62,7 @@ BLOCK_KINDS = frozenset({"heading", "para", "li", "cell", "quote"})
 MARK_KINDS = frozenset({"em", "strong", "code", "link"})
 
 _BULLET = re.compile(r"^(\s*)(?:[-*+]|\d+[.)])\s+(.*)$")
+_ORDERED = re.compile(r"^\s*\d+[.)]\s")
 _QUOTE = re.compile(r"^\s*>\s?(.*)$")
 _TABLE_RULE = re.compile(r"^\s*\|[\s:|-]+\|\s*$")
 
@@ -100,6 +101,7 @@ class Block:
     marks: tuple[Mark, ...]
     line: int                 # 0-based source line
     list_depth: int = 0
+    ordered: bool = False     # a numbered list item; the browser re-supplies the number
     cell: tuple[int, int] | None = None
 
     def to_dict(self) -> dict:
@@ -115,6 +117,8 @@ class Block:
             out["marks"] = [m.to_dict() for m in self.marks]
         if self.list_depth:
             out["list_depth"] = self.list_depth
+        if self.ordered:
+            out["ordered"] = True
         if self.cell is not None:
             out["cell"] = list(self.cell)
         return out
@@ -239,13 +243,13 @@ def _match_bracket(text: str, open_at: int) -> int:
 # Block structure
 # ---------------------------------------------------------------------------
 
-def _body_blocks(lines: list[tuple[int, str]]) -> list[tuple[str, str, int, int, tuple[int, int] | None]]:
-    """Split a node's body lines into (kind, raw_text, line, list_depth, cell).
+def _body_blocks(lines: list[tuple[int, str]]) -> list[tuple[str, str, int, int, bool, tuple[int, int] | None]]:
+    """Split a node's body lines into (kind, raw_text, line, list_depth, ordered, cell).
 
     Table rows become one block per cell, so a span is always inside one run of
     text. The ``| --- |`` alignment row carries no content and is dropped.
     """
-    out: list[tuple[str, str, int, int, tuple[int, int] | None]] = []
+    out: list[tuple[str, str, int, int, bool, tuple[int, int] | None]] = []
     para: list[str] = []
     para_line = 0
     quote: list[str] = []
@@ -255,13 +259,13 @@ def _body_blocks(lines: list[tuple[int, str]]) -> list[tuple[str, str, int, int,
     def flush_para() -> None:
         nonlocal para
         if para:
-            out.append(("para", " ".join(para), para_line, 0, None))
+            out.append(("para", " ".join(para), para_line, 0, False, None))
             para = []
 
     def flush_quote() -> None:
         nonlocal quote
         if quote:
-            out.append(("quote", " ".join(quote), quote_line, 0, None))
+            out.append(("quote", " ".join(quote), quote_line, 0, False, None))
             quote = []
 
     for lineno, raw in lines:
@@ -281,7 +285,7 @@ def _body_blocks(lines: list[tuple[int, str]]) -> list[tuple[str, str, int, int,
             cells = [c.strip() for c in stripped.strip("|").split("|")]
             for col, cell in enumerate(cells):
                 if cell:
-                    out.append(("cell", cell, lineno, 0, (row, col)))
+                    out.append(("cell", cell, lineno, 0, False, (row, col)))
             row += 1
             continue
 
@@ -298,9 +302,11 @@ def _body_blocks(lines: list[tuple[int, str]]) -> list[tuple[str, str, int, int,
             flush_para()
             flush_quote()
             # Two spaces per level is the corpus's convention; nesting never
-            # exceeds one level, so this does not need to be cleverer.
+            # exceeds one level, so this does not need to be cleverer. `ordered`
+            # is recorded because `plain` drops the ordinal — a numbered list on
+            # a page about sequencing content should still read as numbered.
             out.append(("li", bm.group(2).strip(), lineno,
-                        len(bm.group(1)) // 2, None))
+                        len(bm.group(1)) // 2, bool(_ORDERED.match(raw)), None))
             continue
 
         flush_para()  # a bullet or table ended; a new paragraph starts here
@@ -328,28 +334,28 @@ def parse_blocks(page_path: str, text: str) -> list[Block]:
         end = nodes[idx + 1].line_start if idx + 1 < len(nodes) else len(lines)
         bounds.append((node, node.line_start + 1, end))
 
-    # (kind, text, level, heading_path, line, list_depth, cell)
-    raw: list[tuple[str, str, int, tuple[str, ...], int, int, tuple[int, int] | None]] = []
+    # (kind, text, level, heading_path, line, list_depth, ordered, cell)
+    raw: list[tuple[str, str, int, tuple[str, ...], int, int, bool, tuple[int, int] | None]] = []
 
     # The preamble above the first heading. Zero characters long on every
     # eligible page, but a page that loses its `#` title during conversion
     # would put real prose here, and dropping it silently is how a rule
     # becomes unreachable.
-    for kind, body, line, depth, cell in _body_blocks(
+    for kind, body, line, depth, ordered, cell in _body_blocks(
         list(enumerate(lines[:preamble_end]))
     ):
-        raw.append((kind, body, 0, (), line, depth, cell))
+        raw.append((kind, body, 0, (), line, depth, ordered, cell))
 
     for node, start, end in bounds:
         raw.append(("heading", node.title, node.level, node.path,
-                    node.line_start, 0, None))
+                    node.line_start, 0, False, None))
         numbered = [(n, lines[n]) for n in range(start, min(end, len(lines)))]
-        for kind, body, line, depth, cell in _body_blocks(numbered):
-            raw.append((kind, body, node.level, node.path, line, depth, cell))
+        for kind, body, line, depth, ordered, cell in _body_blocks(numbered):
+            raw.append((kind, body, node.level, node.path, line, depth, ordered, cell))
 
     blocks: list[Block] = []
     seen: dict[tuple[str, str], int] = {}
-    for kind, body, level, heading_path, line, depth, cell in raw:
+    for kind, body, level, heading_path, line, depth, ordered, cell in raw:
         plain, marks = _inline(body)
         if not plain.strip():
             continue
@@ -365,6 +371,7 @@ def parse_blocks(page_path: str, text: str) -> list[Block]:
             marks=tuple(marks),
             line=line,
             list_depth=depth,
+            ordered=ordered,
             cell=cell,
         ))
     return blocks
@@ -378,7 +385,8 @@ def page_digest(blocks: list[Block]) -> str:
     """Digest over everything a span offset depends on."""
     h = hashlib.sha256()
     for b in blocks:
-        h.update(f"{b.id}\x1f{b.kind}\x1f{b.level}\x1f{b.line}\x1f{b.plain}".encode("utf-8"))
+        h.update((f"{b.id}\x1f{b.kind}\x1f{b.level}\x1f{b.line}\x1f{b.list_depth}"
+                  f"\x1f{int(b.ordered)}\x1f{b.cell}\x1f{b.plain}").encode("utf-8"))
         for m in b.marks:
             h.update(f"\x1e{m.start},{m.end},{m.kind},{m.href}".encode("utf-8"))
         h.update(b"\x00")
