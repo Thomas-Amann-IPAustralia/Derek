@@ -97,6 +97,18 @@ def reconcile(
                 result.unchanged.append(existing)
             continue
 
+        # A lineage the human stated. `Candidate.supersedes` is set when a
+        # reviewer moves a span off the heading the extractor proposed and onto
+        # the text that actually states the rule — the "label, not statement"
+        # case docs/07 measured at 18%. Taking their word for it is strictly
+        # better than the positional guess below, which is what this module
+        # exists to avoid wherever something more exact is available.
+        declared = live.get(cand.supersedes) if cand.supersedes else None
+        if declared is not None and declared.uid not in matched_uids:
+            result.reworded.append((declared, cand))
+            matched_uids.add(declared.uid)
+            continue
+
         # Identical statement, different UID. The Style Manual did not change
         # a word; our address for the rule changed, because the UID is
         # content-addressed over the heading path and a converter upgrade
@@ -126,7 +138,13 @@ def reconcile(
             continue
 
         # Same position, different wording → the rule was reworded in place.
-        siblings = [
+        #
+        # Only for candidates that occupy a heading slot. A rule a human marked
+        # in body prose never had one, so there is no "same position" for it to
+        # have been reworded within; running this branch would match it against
+        # every heading rule under the same parent and report a supersession
+        # that does not exist.
+        siblings = [] if not cand.positional else [
             r for r in by_address.get(_address(cand.page_path, cand.heading_path), [])
             if r.uid not in by_uid and r.uid not in matched_uids
         ]

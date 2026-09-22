@@ -112,8 +112,8 @@ def test_uid_ignores_unicode_and_whitespace_variation():
 
 def test_extraction_is_reproducible_over_the_whole_corpus():
     """D-7 / postmortem F8: two runs must extract exactly the same rules."""
-    first, _ = collect_candidates()
-    second, _ = collect_candidates()
+    first, _, _ = collect_candidates()
+    second, _, _ = collect_candidates()
     assert [c.uid for c in first] == [c.uid for c in second]
     assert [c.statement for c in first] == [c.statement for c in second]
     assert len({c.uid for c in first}) == len(first), "UID collision"
@@ -165,7 +165,7 @@ def test_unlabelled_example_blocks_are_not_given_a_polarity():
 
 
 def test_corpus_yields_paired_gold_examples():
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     paired = [
         c for c in cands
         if (c.examples.get("write this") or c.examples.get("correct"))
@@ -682,7 +682,7 @@ def test_corpus_headings_form_a_proper_hierarchy():
 def test_no_candidate_is_a_page_title():
     """A level-1 heading is the page's subject, not a rule."""
     from derek.extract.build import collect_candidates
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     assert all(c.level >= 2 for c in cands)
 
 
@@ -743,7 +743,7 @@ PREVIOUSLY_MISSED = [
 
 def test_previously_missed_rules_are_extracted():
     from derek.extract.build import collect_candidates
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     found = {c.statement for c in cands}
     missing = [s for s in PREVIOUSLY_MISSED if s not in found]
     assert not missing, f"recall regression — these rules are no longer extracted: {missing}"
@@ -819,7 +819,7 @@ TAGGER_RECOVERED = [
 
 
 def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     found = {c.statement: c for c in cands}
     missing = [s for s in EXEMPLIFIED if normalise_statement(s) not in found]
     assert not missing, f"recall regression — no longer extracted: {missing}"
@@ -830,7 +830,7 @@ def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
 
 
 def test_tagger_recovers_imperatives_the_verb_list_cannot_reach():
-    cands, _ = collect_candidates()
+    cands, _, _ = collect_candidates()
     found = {c.statement: c for c in cands}
     missing = [s for s in TAGGER_RECOVERED if normalise_statement(s) not in found]
     assert not missing, f"recall regression — no longer extracted: {missing}"

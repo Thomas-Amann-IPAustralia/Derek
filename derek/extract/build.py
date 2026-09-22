@@ -23,6 +23,9 @@ from derek.corpus.normalise import (
     COMPLIANT_EXAMPLE_HEADINGS, VIOLATING_EXAMPLE_HEADINGS, NormalisedPage,
 )
 from derek.extract.candidates import Candidate, extract_candidates
+from derek.extract.golden import (
+    GOLD_COMPLIANT, GOLD_VIOLATING, golden_candidates, load_golden,
+)
 from derek.extract.modality import classify_modality
 from derek.ledger.model import (
     Clarity, Derivation, Detection, Direction, ReviewStatus, Rule, Source, Unit,
@@ -37,6 +40,8 @@ REPO = Path(__file__).resolve().parents[2]
 PAGES = REPO / "corpus" / "pages"
 ELIGIBILITY = REPO / "corpus" / "eligibility.yaml"
 SNAPSHOT_LOCK = REPO / "corpus" / "snapshot.lock.json"
+GOLDEN_SPANS = REPO / "golden" / "spans.jsonl"
+GOLDEN_PAGES = REPO / "golden" / "pages.jsonl"
 DEFAULT_LEDGER = REPO / "ledger" / "rules.jsonl"
 
 def _display(path: Path) -> str:
@@ -64,9 +69,28 @@ def _url_index() -> dict[str, str]:
     return {p: v.get("url", "") for p, v in lock.get("pages", {}).items()}
 
 
-def collect_candidates() -> tuple[list[Candidate], dict[str, str]]:
-    """Extract every candidate from every eligible page, in a stable order."""
+def collect_candidates() -> tuple[list[Candidate], dict[str, str], set[str]]:
+    """Extract every candidate from every eligible page, in a stable order.
+
+    A pure function of the corpus and its two declared inputs:
+    ``corpus/eligibility.yaml``, which says which pages are rule sources
+    (ADR-005), and ``golden/spans.jsonl``, which says which text a human marked
+    as a rule (ADR-023). No model runs and no model decides a rule exists (D-7).
+
+    Two modes, per page:
+
+    * **Union** — the default. The heading walk's candidates plus the golden
+      spans, with a golden span winning any uid collision, because a span that
+      covers a heading exactly *is* that candidate, confirmed, and carries the
+      human's tags.
+    * **Authoritative** — once a human has swept the page. The golden set is the
+      whole inventory, and a heading candidate no span confirms is not a rule.
+      That absence is the negative evidence the golden set exists to produce; the
+      reconciler turns the dropped candidates into ``orphaned``, so nothing is
+      deleted and their review history survives.
+    """
     eligibility = load_eligibility(ELIGIBILITY)
+    golden = load_golden(GOLDEN_SPANS, GOLDEN_PAGES, eligibility)
     hashes: dict[str, str] = {}
     out: list[Candidate] = []
 
@@ -76,10 +100,17 @@ def collect_candidates() -> tuple[list[Candidate], dict[str, str]]:
             continue
         page = NormalisedPage(rel, md.read_text(encoding="utf-8", errors="replace"))
         hashes[rel] = page.sha256
-        out.extend(extract_candidates(rel, page.text))
+
+        gold = golden_candidates(rel, page.text, golden.spans.get(rel, []))
+        if rel in golden.authoritative:
+            out.extend(gold)
+            continue
+        merged = {c.uid: c for c in extract_candidates(rel, page.text)}
+        merged.update({c.uid: c for c in gold})
+        out.extend(merged.values())
 
     out.sort(key=lambda c: (c.page_path, c.line_start, c.uid))
-    return out, hashes
+    return out, hashes, golden.authoritative
 
 
 def _polarity_seed(cand: Candidate) -> tuple[list[str], list[str]]:
@@ -114,6 +145,12 @@ def _polarity_seed(cand: Candidate) -> tuple[list[str], list[str]]:
         for label in sorted(VIOLATING_EXAMPLE_HEADINGS)
         for line in cand.examples.get(label, [])
     ]
+    # Examples a human attached to a rule span (ADR-023). They arrive under keys
+    # that cannot collide with a heading label, so the manual's own testimony and
+    # a reviewer's stay distinguishable, and they are appended rather than
+    # merged in so the manual's comes first where a rule has both.
+    compliant += cand.examples.get(GOLD_COMPLIANT, [])
+    violating += cand.examples.get(GOLD_VIOLATING, [])
     return compliant, violating
 
 
@@ -147,7 +184,7 @@ def candidate_to_rule(
             line_start=cand.line_start,
         ),
         derivation=Derivation(
-            method="heading_structure",
+            method="human_span" if cand.origin == "golden" else "heading_structure",
             extractor_version=EXTRACTOR_VERSION,
             statement_form=cand.statement_form,
             derived_at=now,
@@ -164,6 +201,10 @@ def candidate_to_rule(
             else Direction.ABSENCE
         ),
         unit=Unit.SENTENCE,
+        # Preconditions ride with the candidate for the same reason the examples
+        # do: they come from the corpus (a span) or from the golden record, not
+        # from the review API, so a rebuild reproduces them.
+        context_preconditions=list(cand.preconditions),
         compliant_examples=compliant,
         violating_examples=violating,
         detection=Detection(detectable=False, not_detectable_reason="awaiting review"),
@@ -172,7 +213,7 @@ def candidate_to_rule(
 
 def build(ledger_path: Path, check: bool) -> int:
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    candidates, page_hashes = collect_candidates()
+    candidates, page_hashes, authoritative = collect_candidates()
     url_index = _url_index()
     existing = load_ledger(ledger_path)
 
@@ -193,9 +234,17 @@ def build(ledger_path: Path, check: bool) -> int:
     by_uid = {cand.uid: cand for cand in candidates}
 
     for rule in rec.unchanged:
-        # Nothing about the rule changed, but its gold examples are derived
-        # data and are refreshed from the corpus like any other derived field.
-        _refresh_gold(rule, by_uid[rule.uid])
+        # Nothing a human decided changed, but the derived fields are refreshed
+        # from the candidate like any other pipeline-owned data. `method` matters
+        # here beyond tidiness: a candidate the extractor proposed and a candidate
+        # a human confirmed by drawing a span over it have the same uid by design
+        # (ADR-023), and `derivation.method` is the only thing in the record that
+        # can tell them apart.
+        cand = by_uid[rule.uid]
+        _refresh_gold(rule, cand)
+        rule.derivation.method = (
+            "human_span" if cand.origin == "golden" else rule.derivation.method)
+        rule.context_preconditions = list(cand.preconditions) or rule.context_preconditions
         merged[rule.uid] = rule
     for old, cand in rec.body_altered:
         # Source text moved under a rule whose statement is unchanged. Keep
@@ -233,9 +282,25 @@ def build(ledger_path: Path, check: bool) -> int:
     for cand in rec.added:
         merged[cand.uid] = candidate_to_rule(cand, url_index, page_hashes, now)
     for rule in rec.orphaned:
-        if rule.review.status != "orphaned":
-            rule.review.transition("orphaned", "derek.extract.build", now,
-                                   "source heading no longer present in corpus")
+        swept = rule.source.page_path in authoritative
+        already_judged = swept and rule.review.status == ReviewStatus.REJECTED
+        if rule.review.status != ReviewStatus.ORPHANED and not already_judged:
+            # Two different things end up here and they must not claim to be the
+            # same. On a swept page the heading is still in the corpus; what
+            # happened is that a human read the page and did not mark it as a
+            # rule, which is a judgement and the whole output of ADR-023. Saying
+            # "no longer present" there would be false.
+            rule.review.transition(
+                "orphaned", "derek.extract.build", now,
+                "not marked as a rule in the golden set for this page"
+                if swept else "source heading no longer present in corpus")
+        # A reviewer who rejected this candidate and said why is left alone.
+        # Rejection and orphaning agree on the outcome — the rule does not load —
+        # and "we binned it because it labels a section rather than stating a
+        # rule" is the useful output of the round, where "not marked in the
+        # golden set" is a restatement of the input. Every other verdict
+        # (accepted, amended, deferred) DISAGREES with the sweep, so the sweep
+        # wins there and the disagreement stays visible in the history.
         merged[rule.uid] = rule
     for old, cand in rec.ambiguous:
         fresh = candidate_to_rule(cand, url_index, page_hashes, now)

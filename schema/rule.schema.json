@@ -38,7 +38,7 @@
       "required": ["method", "extractor_version"],
       "additionalProperties": false,
       "properties": {
-        "method": { "enum": ["heading_structure", "imperative_sentence", "manual"] },
+        "method": { "enum": ["heading_structure", "imperative_sentence", "human_span", "manual"] },
         "extractor_version": { "type": "string" },
         "statement_form": { "enum": ["imperative", "negative_imperative", "modal",
         "exemplified", "descriptive", ""] },

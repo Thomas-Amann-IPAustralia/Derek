@@ -164,7 +164,14 @@ class Source:
 class Derivation:
     """Provenance tag 1 — how we arrived at this rule."""
 
-    method: str = "heading_structure"   # heading_structure | imperative_sentence | manual
+    # heading_structure — the deterministic heading walk (ADR-002)
+    # imperative_sentence — a prose pass, declared but not built
+    # human_span — a span a human marked in the annotator, recorded in
+    #   golden/spans.jsonl and read back as a declared input (ADR-023)
+    # manual — a hand-written ledger entry. Note this one does NOT survive a
+    #   rebuild: `reconcile` orphans any live rule whose uid no candidate
+    #   reproduces, and nothing reproduces a hand-edit. Use `human_span`.
+    method: str = "heading_structure"
     extractor_version: str = "1.0.0"
     statement_form: str = ""            # imperative | negative_imperative | modal | descriptive
     derived_at: str = ""

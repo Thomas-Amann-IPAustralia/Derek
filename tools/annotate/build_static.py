@@ -130,11 +130,20 @@ def _seeds_for(rel: str, blocks, rules) -> list[dict]:
     A candidate is matched to its heading block by source line, which is exact:
     `Source.line_start` and `Block.line` are both the 0-based index of the
     heading line, and both come from `segment.parse_page`.
+
+    Rules derived from a golden span are NOT seeds. A seed is the extractor's
+    unconfirmed guess, and a span is the answer to it — the page already ships
+    those in `data/spans.json` and draws them as span highlights. Listing them
+    here too would show a reviewer their own work back as something still to do,
+    and a span drawn on body prose has no heading block to be listed against at
+    all, so it would arrive unplaceable.
     """
     by_line = {b.line: b for b in blocks if b.kind == "heading"}
     out = []
     for rule in rules.values():
         if rule.source.page_path != rel:
+            continue
+        if rule.derivation.method == "human_span":
             continue
         block = by_line.get(rule.source.line_start)
         out.append({
