@@ -232,3 +232,269 @@ def test_a_clean_build_does_not_delete_its_sibling(tmp_path, built):
     review.build(site, clean=False)
     assert (site / "annotate" / "index.html").exists(), \
         "a --no-clean rebuild of the triage app deleted the annotator"
+
+
+# ---------------------------------------------------------------------------
+# The return leg: export → golden set → ledger
+# ---------------------------------------------------------------------------
+
+SAMPLE = "grammar-punctuation-and-conventions/punctuation/commas.md"
+
+
+@pytest.fixture
+def replay(tmp_path, monkeypatch):
+    """`apply_spans.py` pointed at a throwaway golden set and ledger.
+
+    Every path it writes is redirected, including the ones `derek.extract.build`
+    reads for itself — the module-level `GOLDEN_SPANS` the rebuild consults has
+    to be the same file the replay just wrote, or the two stages would disagree
+    about what the golden set is.
+    """
+    import importlib.util
+    import shutil
+    import sys
+
+    def load(name: str, path: Path):
+        spec = importlib.util.spec_from_file_location(name, path)
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        spec.loader.exec_module(module)
+        return module
+
+    apply_spans = load("derek_apply_spans", REPO / "tools" / "annotate" / "apply_spans.py")
+    from derek.extract import build as build_mod
+
+    spans = tmp_path / "spans.jsonl"
+    pages = tmp_path / "pages.jsonl"
+    ops = tmp_path / "span_ops.jsonl"
+    ledger = tmp_path / "rules.jsonl"
+    shutil.copy(REPO / "ledger" / "rules.jsonl", ledger)
+
+    for target, name, value in (
+        (apply_spans, "GOLDEN_SPANS", spans), (apply_spans, "GOLDEN_PAGES", pages),
+        (apply_spans, "SPAN_OPS", ops), (apply_spans, "LEDGER", ledger),
+        (build_mod, "GOLDEN_SPANS", spans), (build_mod, "GOLDEN_PAGES", pages),
+    ):
+        monkeypatch.setattr(target, name, value)
+
+    server = apply_spans._load("derek_review_server",
+                               REPO / "tools" / "review" / "server.py")
+    monkeypatch.setattr(server, "LEDGER", ledger)
+    monkeypatch.setattr(apply_spans, "_load", lambda name, path: (
+        server if path.name == "server.py" else load(name, path)))
+
+    import types
+    return types.SimpleNamespace(
+        module=apply_spans, tmp=tmp_path, spans=spans, pages=pages,
+        ops=ops, ledger=ledger, server=server,
+    )
+
+
+def _blocks_of(rel: str = SAMPLE):
+    src = REPO / "corpus" / "pages" / rel
+    return parse_blocks(rel, NormalisedPage(rel, src.read_text(encoding="utf-8")).text)
+
+
+def _export(tmp_path, ops: list[dict], *, render_version: str | None = None,
+            name: str = "derek-spans-TA-1.jsonl") -> Path:
+    """An op log in exactly the shape the browser downloads."""
+    meta = {
+        "op": "meta", "op_id": "00000000-0000-4000-8000-00000000meta",
+        "by": "TA", "at": "2026-09-22T00:00:00.000Z", "app": "annotate",
+        "render_version": render_version or RENDER_VERSION,
+    }
+    path = tmp_path / name
+    path.write_text(
+        "\n".join(json.dumps(o) for o in [meta, *ops]) + "\n", encoding="utf-8")
+    return path
+
+
+def _span_op(block, start=None, end=None, *, kind="rule", of="", tags=None,
+             preconditions=(), seed_uid="", oid="op-1", at="2026-09-22T01:00:00.000Z"):
+    start = 0 if start is None else start
+    end = len(block.plain) if end is None else end
+    span = {
+        "kind": kind, "page_path": SAMPLE, "page_sha256": "",
+        "anchor": {
+            "block_id": block.id, "start": start, "end": end,
+            "quote": block.plain[start:end],
+            "prefix": block.plain[max(0, start - 32):start],
+            "suffix": block.plain[end:end + 32],
+        },
+        "of": of,
+    }
+    if kind == "rule":
+        span["tags"] = dict(tags or {})
+        span["preconditions"] = list(preconditions)
+        span["seed_uid"] = seed_uid
+    return {"op": "span", "op_id": oid, "by": "TA", "at": at, "span": span}
+
+
+ACCEPT = {
+    "review_status": "accepted", "unit": "sentence", "clarity": "unambiguous",
+    "direction": "absence", "modality": "MUST", "applies_to": ["any"],
+}
+
+
+def test_an_export_reaches_the_golden_set_and_the_ledger(replay):
+    """The whole loop, end to end.
+
+    A rule span on prose — the class the heading walk cannot reach at all — plus
+    an example attached to it, through export, golden set, rebuild and the
+    review gate.
+    """
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    item = next(b for b in blocks if b.kind == "li")
+
+    rule = _span_op(prose, tags=ACCEPT, preconditions=["in body prose"], oid="op-rule")
+    example = _span_op(
+        item, kind="violating",
+        of=f"{prose.id}|0|{len(prose.plain)}|rule", oid="op-ex")
+    path = _export(replay.tmp, [rule, example])
+
+    assert replay.module.main([str(path)]) == 0
+
+    spans = [json.loads(x) for x in replay.spans.read_text(encoding="utf-8").splitlines()]
+    assert {s["kind"] for s in spans} == {"rule", "violating"}
+    # The browser sends the parent as the tuple it was drawn at; Python mints the id.
+    parent = next(s for s in spans if s["kind"] == "rule")
+    child = next(s for s in spans if s["kind"] == "violating")
+    assert child["of"] == parent["span_id"]
+
+    from derek.ledger.store import load_ledger
+    rules = load_ledger(replay.ledger)
+    made = [r for r in rules.values() if r.derivation.method == "human_span"]
+    assert len(made) == 1, [r.source.statement for r in made]
+    got = made[0]
+    assert got.source.statement == prose.plain
+    assert got.source.page_path == SAMPLE
+    assert got.violating_examples == [item.plain]
+    assert got.context_preconditions == ["in body prose"]
+    assert got.review.status == "accepted"
+    assert got.unit == "sentence" and got.modality == "MUST"
+    # The decision is recorded at the reviewer's own time, not the upload's.
+    assert got.review.history[-1]["by"] == "TA"
+    assert got.review.history[-1]["at"].startswith("2026-09-22T01:00")
+
+
+def test_replaying_the_same_export_changes_nothing(replay):
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    path = _export(replay.tmp, [_span_op(prose, tags=ACCEPT)])
+
+    assert replay.module.main([str(path)]) == 0
+    after_first = (replay.spans.read_bytes(), replay.ledger.read_bytes())
+
+    assert replay.module.main([str(path)]) == 0
+    assert (replay.spans.read_bytes(), replay.ledger.read_bytes()) == after_first
+
+
+def test_one_bad_op_writes_nothing(replay):
+    """A session lands complete or not at all, as ADR-022 requires of the triage
+    export for the same reason: half a session in the record is worse than none."""
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    good = _span_op(prose, tags=ACCEPT, oid="op-good")
+    bad = _span_op(prose, tags=ACCEPT, oid="op-bad")
+    bad["span"]["anchor"]["quote"] = "text that is not in this block at all"
+    path = _export(replay.tmp, [good, bad])
+
+    before = replay.ledger.read_bytes()
+    assert replay.module.main([str(path)]) == 1
+    assert not replay.spans.exists()
+    assert replay.ledger.read_bytes() == before
+
+
+def test_skip_invalid_applies_the_rest(replay):
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    good = _span_op(prose, tags=ACCEPT, oid="op-good")
+    bad = _span_op(prose, tags=ACCEPT, oid="op-bad")
+    bad["span"]["anchor"]["block_id"] = "0000deadbeef"
+    path = _export(replay.tmp, [good, bad])
+
+    assert replay.module.main([str(path), "--skip-invalid"]) == 0
+    spans = [json.loads(x) for x in replay.spans.read_text(encoding="utf-8").splitlines()]
+    assert len(spans) == 1
+
+
+def test_a_dry_run_writes_nothing(replay):
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    path = _export(replay.tmp, [_span_op(prose, tags=ACCEPT)])
+    assert replay.module.main([str(path), "--dry-run"]) == 0
+    assert not replay.spans.exists()
+
+
+def test_an_export_from_a_different_renderer_is_refused(replay):
+    """A span's offsets mean nothing without the projection that produced them.
+
+    The triage export needs no equivalent check — a decision is about a uid, and
+    a uid is stable. A span is about a position (ADR-023).
+    """
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    path = _export(replay.tmp, [_span_op(prose, tags=ACCEPT)], render_version="0.9.0")
+    with pytest.raises(SystemExit, match="renderer"):
+        replay.module.main([str(path)])
+    assert not replay.spans.exists()
+
+
+def test_tags_land_through_the_review_gate_not_the_build(replay):
+    """`server._apply`'s refusals still apply to a decision typed in the annotator.
+
+    Keeping a rule without setting clarity is refused there; it has to be refused
+    here too, or the annotator would be a way around the gate (D-10).
+    """
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    tags = {**ACCEPT, "clarity": "unreviewed"}
+    path = _export(replay.tmp, [_span_op(prose, tags=tags)])
+    with pytest.raises(ValueError, match="set clarity"):
+        replay.module.main([str(path)])
+
+
+def test_an_interpretation_still_has_to_be_written_down(replay):
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    tags = {**ACCEPT, "clarity": "ambiguous_resolvable"}
+    path = _export(replay.tmp, [_span_op(prose, tags=tags)])
+    with pytest.raises(ValueError, match="your interpretation"):
+        replay.module.main([str(path)])
+
+
+def test_a_span_on_an_excluded_page_is_refused(replay):
+    """D-4 / ADR-005, enforced at the point the span enters the record."""
+    rel = "about-style-manual/changelog.md"
+    block = next(b for b in _blocks_of(rel) if b.kind == "para")
+    op = _span_op(block, tags=ACCEPT)
+    op["span"]["page_path"] = rel
+    op["span"]["anchor"]["block_id"] = block.id
+    path = _export(replay.tmp, [op])
+
+    assert replay.module.main([str(path)]) == 1
+    assert not replay.spans.exists()
+
+
+def test_confirming_a_heading_keeps_its_review_state(replay):
+    """The reason the extractor's 736 are worth keeping rather than discarding."""
+    from derek.ledger.store import load_ledger
+
+    before = load_ledger(replay.ledger)
+    blocks = _blocks_of()
+    heading, existing = next(
+        (b, r) for b in blocks if b.kind == "heading" and b.level >= 2
+        for r in before.values()
+        if r.source.page_path == SAMPLE and r.source.statement == b.plain
+    )
+    path = _export(replay.tmp, [
+        _span_op(heading, tags=ACCEPT, seed_uid=existing.uid)])
+
+    assert replay.module.main([str(path)]) == 0
+    after = load_ledger(replay.ledger)
+    assert len(after) == len(before), "confirming a candidate must not add a second rule"
+    got = after[existing.uid]
+    assert got.derivation.method == "human_span"
+    assert got.source.statement == existing.source.statement
+    assert got.derivation.supersedes is None

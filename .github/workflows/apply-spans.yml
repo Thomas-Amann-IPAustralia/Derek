@@ -1,0 +1,132 @@
+name: Apply golden spans
+
+# The return leg for the span annotator. A reviewer marking rules at
+# /annotate/ downloads their spans as JSONL and drops the file into
+# golden/inbox/ — which a browser can do through github.com, with no checkout
+# and no Python (ADR-022, ADR-023).
+#
+# `apply_spans.py` replays it in three stages, in this order and only this
+# order: write golden/spans.jsonl, rebuild the ledger (which is what mints each
+# rule's uid, because the browser never computes one), then replay the
+# reviewer's tags through the same `server._apply` the triage app uses. So the
+# gate is the gate wherever the decision was typed, and the build still never
+# writes a review status.
+#
+# On a pull request it validates and writes nothing, so a span file can be
+# reviewed before it touches the record.
+
+on:
+  push:
+    branches: [main]
+    paths: ['golden/inbox/*.jsonl']
+  pull_request:
+    paths: ['golden/inbox/*.jsonl']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Everything that writes ledger/rules.jsonl shares one concurrency group.
+# snapshot.yml reconciles against a fresh corpus, apply-review.yml replays
+# triage decisions, and this replays spans. Each checks out, rewrites the whole
+# file and pushes; run at once, the second push is either rejected or lands a
+# ledger built without the other's changes.
+concurrency:
+  group: ledger-write
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    outputs:
+      applied: ${{ steps.apply.outputs.applied }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # No `pip install`: apply_spans.py and everything it imports from
+      # derek/extract/ and derek/ledger/ are stdlib-only by invariant, and
+      # tests/test_dependency_tiers.py asserts it.
+      - name: Anything in the inbox?
+        id: inbox
+        run: |
+          shopt -s nullglob
+          files=(golden/inbox/*.jsonl)
+          echo "count=${#files[@]}" >> "$GITHUB_OUTPUT"
+          echo "Found ${#files[@]} span export(s)."
+
+      - name: Validate only (pull request)
+        if: github.event_name == 'pull_request' && steps.inbox.outputs.count != '0'
+        run: python tools/annotate/apply_spans.py golden/inbox/*.jsonl --dry-run
+
+      - name: Replay into the golden set and the ledger
+        id: apply
+        if: github.event_name != 'pull_request' && steps.inbox.outputs.count != '0'
+        run: |
+          python tools/annotate/apply_spans.py golden/inbox/*.jsonl | tee /tmp/spans.log
+          # The export stays in the repository, under the date it landed: the
+          # op log records what was applied, the file records what was sent.
+          mkdir -p golden/applied
+          stamp=$(date -u +%Y%m%dT%H%M%SZ)
+          for f in golden/inbox/*.jsonl; do
+            git mv "$f" "golden/applied/${stamp}-$(basename "$f")"
+          done
+          git config user.name  "DerekBot"
+          git config user.email "derek-bot@users.noreply.github.com"
+          git add golden/ ledger/
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            echo "applied=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "golden: apply spans from golden/inbox"
+            git push origin HEAD
+            echo "applied=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summarise
+        if: always() && steps.inbox.outputs.count != '0'
+        run: |
+          {
+            echo "### Golden spans"
+            echo '```'
+            cat /tmp/spans.log 2>/dev/null || echo "validated only — nothing written"
+            echo '```'
+            python - <<'PY'
+          from pathlib import Path
+          from derek.extract.golden import load_golden
+          from derek.ledger.store import summarise
+
+          gs = load_golden()
+          swept = len(gs.authoritative)
+          spans = gs.all_spans()
+          kinds = {}
+          for s in spans:
+              kinds[s.kind] = kinds.get(s.kind, 0) + 1
+          print(f"| Spans | {len(spans)} |\n|---|---|")
+          for kind in sorted(kinds):
+              print(f"| — {kind} | {kinds[kind]} |")
+          print(f"| Pages swept | {swept} of {len(gs.spans)} annotated |")
+          print()
+          print("| Rule status | Count |\n|---|---|")
+          for status, n in sorted(summarise(Path("ledger/rules.jsonl")).items()):
+              if n:
+                  print(f"| {status} | {n} |")
+          PY
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # A push made with GITHUB_TOKEN does not trigger another workflow, so the
+  # annotator is rebuilt from here rather than left serving the golden set as it
+  # was before these spans landed — which would show the reviewer their own
+  # marks missing.
+  publish:
+    needs: apply
+    if: needs.apply.outputs.applied == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
