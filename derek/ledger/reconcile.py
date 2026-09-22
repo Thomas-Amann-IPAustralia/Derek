@@ -15,7 +15,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from derek.extract.candidates import Candidate, normalise_statement
-from derek.ledger.model import Rule, ReviewStatus
+from derek.ledger.model import Rule, ReviewStatus, body_excerpt
 
 __all__ = ["Reconciliation", "reconcile"]
 
@@ -91,7 +91,7 @@ def reconcile(
         existing = live.get(cand.uid)
         if existing is not None:
             matched_uids.add(cand.uid)
-            if existing.source.body_excerpt.strip() != cand.body.strip():
+            if existing.source.body_excerpt.strip() != body_excerpt(cand.body).strip():
                 result.body_altered.append((existing, cand))
             else:
                 result.unchanged.append(existing)

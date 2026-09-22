@@ -19,11 +19,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from derek.corpus.eligibility import load_eligibility
-from derek.corpus.normalise import NormalisedPage
+from derek.corpus.normalise import (
+    COMPLIANT_EXAMPLE_HEADINGS, VIOLATING_EXAMPLE_HEADINGS, NormalisedPage,
+)
 from derek.extract.candidates import Candidate, extract_candidates
 from derek.extract.modality import classify_modality
 from derek.ledger.model import (
     Clarity, Derivation, Detection, Direction, ReviewStatus, Rule, Source, Unit,
+    body_excerpt,
 )
 from derek.ledger.reconcile import reconcile
 from derek.ledger.store import load_ledger, write_ledger
@@ -35,9 +38,6 @@ PAGES = REPO / "corpus" / "pages"
 ELIGIBILITY = REPO / "corpus" / "eligibility.yaml"
 SNAPSHOT_LOCK = REPO / "corpus" / "snapshot.lock.json"
 DEFAULT_LEDGER = REPO / "ledger" / "rules.jsonl"
-
-_BODY_EXCERPT_CHARS = 1200
-
 
 def _display(path: Path) -> str:
     """Repo-relative path where possible; absolute otherwise.
@@ -85,17 +85,48 @@ def collect_candidates() -> tuple[list[Candidate], dict[str, str]]:
 def _polarity_seed(cand: Candidate) -> tuple[list[str], list[str]]:
     """Seed compliant/violating examples from the manual's own example blocks.
 
-    ``Write this`` / ``Correct`` are compliant; ``Not this`` / ``Incorrect``
-    are violating. This is editorially authored, correctly polarised data
+    ``Write this`` / ``Do this`` / ``Correct`` / ``Like this`` are compliant;
+    ``Not this`` / ``Don't do this`` / ``Incorrect`` are violating. This is
+    editorially authored, correctly polarised data
     that Octavius ignored in favour of model-generated test strings — the
     root of its polarity inversions (postmortem F1, D-5).
 
     A bare ``Example`` block is NOT used: it is unlabelled, and guessing its
     polarity is exactly the mistake being guarded against.
+
+    The labels are read from the frozensets in ``derek.corpus.normalise`` rather
+    than restated here. They were restated once, and the two drifted: ``like
+    this`` counted toward admitting a rule as ``exemplified`` but was not read
+    back out, so 79 editorially-authored compliant sentences across 45 rules
+    were harvested and silently dropped. A hand-written list of a vocabulary
+    that lives somewhere else is that bug waiting to recur.
+
+    Sorted, because a frozenset has no order and Layer 1 output must not depend
+    on one (ADR-002).
     """
-    compliant = cand.examples.get("write this", []) + cand.examples.get("correct", [])
-    violating = cand.examples.get("not this", []) + cand.examples.get("incorrect", [])
+    compliant = [
+        line
+        for label in sorted(COMPLIANT_EXAMPLE_HEADINGS)
+        for line in cand.examples.get(label, [])
+    ]
+    violating = [
+        line
+        for label in sorted(VIOLATING_EXAMPLE_HEADINGS)
+        for line in cand.examples.get(label, [])
+    ]
     return compliant, violating
+
+
+def _refresh_gold(rule: Rule, cand: Candidate) -> None:
+    """Re-seed a rule's example lists from the corpus.
+
+    The example lists are pipeline-owned: they are not in the review API's
+    ``EDITABLE`` whitelist, so the corpus is their only source and a rebuild
+    should reproduce them exactly. Keeping a stale copy is how the ledger and
+    the manual drift apart silently, which is the class of failure ADR-002
+    exists to make impossible.
+    """
+    rule.compliant_examples, rule.violating_examples = _polarity_seed(cand)
 
 
 def candidate_to_rule(
@@ -111,7 +142,7 @@ def candidate_to_rule(
             heading_path=list(cand.heading_path),
             statement=cand.statement,
             url=url_index.get(cand.page_path, ""),
-            body_excerpt=cand.body[:_BODY_EXCERPT_CHARS],
+            body_excerpt=body_excerpt(cand.body),
             snapshot_sha256=page_hashes.get(cand.page_path, ""),
             line_start=cand.line_start,
         ),
@@ -159,14 +190,20 @@ def build(ledger_path: Path, check: bool) -> int:
         if rule.review.status in (ReviewStatus.ORPHANED, ReviewStatus.SUPERSEDED):
             merged[rule.uid] = rule
 
+    by_uid = {cand.uid: cand for cand in candidates}
+
     for rule in rec.unchanged:
+        # Nothing about the rule changed, but its gold examples are derived
+        # data and are refreshed from the corpus like any other derived field.
+        _refresh_gold(rule, by_uid[rule.uid])
         merged[rule.uid] = rule
     for old, cand in rec.body_altered:
         # Source text moved under a rule whose statement is unchanged. Keep
         # every human decision; refresh only the provenance.
-        old.source.body_excerpt = cand.body[:_BODY_EXCERPT_CHARS]
+        old.source.body_excerpt = body_excerpt(cand.body)
         old.source.snapshot_sha256 = page_hashes.get(cand.page_path, "")
         old.source.line_start = cand.line_start
+        _refresh_gold(old, cand)
         merged[old.uid] = old
     for old, cand in rec.rehomed:
         # Same rule, new address. Carry every human decision across, refresh
@@ -175,18 +212,15 @@ def build(ledger_path: Path, check: bool) -> int:
         migrated = Rule.from_dict({**old.to_dict(), "uid": cand.uid})
         migrated.source.heading_path = list(cand.heading_path)
         migrated.source.page_path = cand.page_path
-        migrated.source.body_excerpt = cand.body[:_BODY_EXCERPT_CHARS]
+        migrated.source.body_excerpt = body_excerpt(cand.body)
         migrated.source.snapshot_sha256 = page_hashes.get(cand.page_path, "")
         migrated.source.line_start = cand.line_start
         migrated.source.url = url_index.get(cand.page_path, migrated.source.url)
         migrated.derivation.uid_history = list(old.derivation.uid_history) + [old.uid]
         migrated.derivation.extractor_version = EXTRACTOR_VERSION
-        # Re-seed gold examples only where review has not supplied its own.
-        compliant, violating = _polarity_seed(cand)
-        if not old.compliant_examples:
-            migrated.compliant_examples = compliant
-        if not old.violating_examples:
-            migrated.violating_examples = violating
+        # Gold examples come from the new address's corpus text, not the old
+        # one's. They are derived data, so there is nothing here to preserve.
+        _refresh_gold(migrated, cand)
         merged[migrated.uid] = migrated
 
     for old, cand in rec.reworded:

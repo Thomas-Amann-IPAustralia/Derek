@@ -123,6 +123,25 @@ class DetectionMethod:
     })
 
 
+# How much of a rule's surrounding text the ledger keeps. The excerpt exists so
+# a reviewer can read the rule in context without a checkout; it is not the
+# authority for anything (the corpus is), so it is bounded.
+BODY_EXCERPT_CHARS = 1200
+
+
+def body_excerpt(body: str) -> str:
+    """The stored excerpt for a body of text.
+
+    One function rather than a repeated slice, because the truncation has to be
+    applied on BOTH sides of every comparison. It was not, and the consequence
+    was that ``reconcile`` compared a truncated excerpt against a full body:
+    every rule with more than 1200 characters beneath it reported as
+    ``body_altered`` on every build, forever, whether or not the Style Manual
+    had changed. 23 of 736 rules, none of them actually altered.
+    """
+    return body[:BODY_EXCERPT_CHARS]
+
+
 @dataclass
 class Source:
     """Provenance tag 3 — the original Style Manual rule.
