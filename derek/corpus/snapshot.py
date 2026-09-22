@@ -20,6 +20,7 @@ Three things Octavius got wrong, fixed here (postmortem F7):
 from __future__ import annotations
 
 import argparse
+import hashlib
 import random
 import sys
 import time
@@ -44,6 +45,23 @@ ELIGIBILITY = REPO / "corpus" / "eligibility.yaml"
 DEFAULT_SITEMAP_URL = "https://www.stylemanual.gov.au/sitemap.xml"
 SWEEP_SLICES = 7          # a full re-hash spread across a week
 EXTRACTOR_ID = "derek.to_markdown/1"
+
+
+def sweep_slice_of(path: str) -> int:
+    """Which of the ``SWEEP_SLICES`` daily slices a page belongs to.
+
+    ``hash()`` was used here, and it is randomised per process by
+    ``PYTHONHASHSEED``. The slices were therefore a different random partition
+    every day rather than a fixed one, so "every page is re-hashed weekly"
+    (ADR-001) was false: over a week the sweep covered roughly two thirds of
+    the corpus and which third it missed was never the same twice.
+
+    That is a nuisance while the corpus is being rewritten daily. It stops
+    being one the moment the corpus is frozen, because the sweep is then the
+    only thing looking for upstream drift at all.
+    """
+    digest = hashlib.blake2s(path.encode("utf-8"), digest_size=4).digest()
+    return int.from_bytes(digest, "big") % SWEEP_SLICES
 
 
 def url_to_path(url: str) -> str:
@@ -93,8 +111,9 @@ def _select_for_fetch(entries, lock: Snapshot, full: bool, sweep_slice: int | No
     """Decide which URLs to re-fetch this run.
 
     Incremental: anything new, plus anything whose ``lastmod`` advanced.
-    Sweep: additionally, a deterministic 1/7th of the corpus, so every page
-    is re-hashed weekly regardless of what the site claims (ADR-001).
+    Sweep: additionally, the 1/7th of the corpus in today's slice, so every
+    page is re-hashed weekly regardless of what the site claims (ADR-001).
+    The partition is fixed across processes — see ``sweep_slice_of``.
     """
     selected, reasons = [], {}
     for entry in entries:
@@ -107,7 +126,7 @@ def _select_for_fetch(entries, lock: Snapshot, full: bool, sweep_slice: int | No
             selected.append(entry); reasons[path] = "new"
         elif prev.lastmod != entry.get("lastmod"):
             selected.append(entry); reasons[path] = "lastmod"
-        elif sweep_slice is not None and hash(path) % SWEEP_SLICES == sweep_slice:
+        elif sweep_slice is not None and sweep_slice_of(path) == sweep_slice:
             selected.append(entry); reasons[path] = "sweep"
     return selected, reasons
 

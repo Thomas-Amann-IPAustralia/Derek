@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import collections
 import json
+import os
+import sys
 from pathlib import Path
 
 import pytest
@@ -521,6 +523,49 @@ def test_url_to_path_roundtrip():
     from derek.corpus.snapshot import url_to_path
     assert url_to_path("https://www.stylemanual.gov.au/a/b/c") == "a/b/c.md"
     assert url_to_path("https://www.stylemanual.gov.au/") == "index.md"
+
+
+def test_the_sweep_partition_is_the_same_in_every_process():
+    """ADR-001's weekly full re-hash depends on the slices being a partition.
+
+    ``hash()`` is randomised per process by ``PYTHONHASHSEED``, so using it here
+    made the slices a fresh random split every day: over a week the sweep saw
+    roughly two thirds of the corpus and missed a different third each time.
+    A subprocess with a hostile seed is the only way to catch that from inside
+    a test, because the parent process has one fixed seed of its own.
+    """
+    import subprocess
+
+    probe = (
+        "import sys; sys.path.insert(0, %r)\n"
+        "from derek.corpus.snapshot import sweep_slice_of\n"
+        "print(','.join(str(sweep_slice_of(p)) for p in "
+        "['a.md', 'b/c.md', 'grammar-punctuation-and-conventions/punctuation/commas.md']))"
+    ) % str(REPO)
+
+    seen = set()
+    for seed in ("0", "1", "12345"):
+        out = subprocess.run(
+            [sys.executable, "-c", probe],
+            capture_output=True, text=True, check=True,
+            env={**os.environ, "PYTHONHASHSEED": seed},
+        )
+        seen.add(out.stdout.strip())
+    assert len(seen) == 1, f"sweep slices differ across PYTHONHASHSEED: {seen}"
+
+
+def test_every_page_is_swept_exactly_once_a_week():
+    from derek.corpus.snapshot import SWEEP_SLICES, sweep_slice_of
+
+    root = REPO / "corpus" / "pages"
+    paths = [str(p.relative_to(root)) for p in root.rglob("*.md")]
+    covered = [
+        path
+        for day in range(SWEEP_SLICES)
+        for path in paths
+        if sweep_slice_of(path) == day
+    ]
+    assert sorted(covered) == sorted(paths)
 
 
 def test_ledger_rules_carry_their_source_url():
