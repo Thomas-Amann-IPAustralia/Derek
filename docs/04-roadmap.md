@@ -228,12 +228,23 @@ rules, which is what Phase 2b is for.
 measure against and the ledger's inventory is one a human drew rather than one a
 heuristic guessed.
 
-### Phase 3 — Tier 0 detection
+### Phase 3 — Tier 0 detection *(started)*
 
-- [ ] `derek/detect/` — matcher primitives ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime))
-- [ ] `Document` + `Anchor` + plain-text and Markdown adapters, with property tests
-- [ ] Example harness: violating fire, compliant do not
-- [ ] Dogfood gate wired into CI
+- [x] `derek/detect/matchers.py`: `regex` and `literal_set`, plus the scope keys `unless`,
+      `window` and `skip_quoted`, all data ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime),
+      [ADR-026](02-decisions.md#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human))
+- [x] `Document` with plain-text and Style Manual page adapters, with the slice
+      invariant tested. *Anchors back to a source format, and a Markdown adapter for
+      user documents, are still to do.*
+- [x] Example harness: violating fire, compliant do not, and at least one violating
+      example to fire on
+- [x] Dogfood gate wired into CI, now on plain text; `derek.detect` runs the same matchers
+- [x] Nine matchers proposed in `ledger/proposals/tier0.jsonl`: **four ready** (Latin
+      shortened forms, digit grouping, "and myself" as subject, opening with numbers and
+      dates), four blocked for want of a violating example, and one blocked by
+      [Q9](05-open-questions.md#q9--the-harvested-gold-examples-include-the-prose-that-follows-them).
+      **None adopted:** that is a named human's step (`adopt-matchers.yml`).
+- [ ] Violating examples for the blocked four, from a reviewed source
 - [ ] Calibration on the gold set; real `confidence` values
 
 **Done when:** Tier 0 rules run green through the dogfood gate and carry calibrated

@@ -284,3 +284,49 @@ resolved by the tagger — but acting on that resolution would mean letting it *
 candidates, and [docs/07](07-extraction-hand-audit.md) established that the noun-phrase
 ones sit at the site of a real rule. So the 18% "label, not statement" triage cost
 stands, now by choice rather than by inability.
+
+---
+
+## Q9 — The harvested gold examples include the prose that follows them
+
+**Status:** open. Found 2026-09-23 while writing the first Tier 0 detectors. Blocks
+nothing yet, because every detector so far draws its examples from human-marked spans,
+but it has to be settled before the example harness runs over heading-derived rules, and
+certainly before Phase 5 treats "the 2,390 gold example lines" as training data.
+
+`derek.extract.candidates._harvest_examples` takes **every line** of a *Write this* /
+*Not this* / *Correct* / *Incorrect* block's body. Markdown cannot close a heading, so
+that body runs to the next heading, and whatever prose follows the example is harvested
+with it. Across the eligible pages:
+
+| | |
+|---|---|
+| Labelled example lines harvested | 819 |
+| Lines that are not the example (after the list or first paragraph under the label) | **212** (26%) |
+| Label blocks affected | 104 |
+
+Some of them are harmless noise. Some invert polarity, the failure the gold set exists to
+prevent (postmortem F1):
+
+- `cultural-and-linguistic-diversity.md`: *"To refer to people who have recently arrived
+  in Australia, use the words: ‘migrants’, ‘immigrants’, ‘new arrivals’"* is harvested
+  under **Not this**, so the recommended words are recorded as *violating* examples of
+  an accepted rule.
+- `age-diversity.md`: *"Choose the term that best fits the context."* is a violating
+  example of *Older people*, an accepted rule. No checker can fire on it, so the example
+  harness would fail the rule for a reason that is not the rule's.
+- `disability-and-neurodiversity.md`: the recommended *"‘person without disability’ –
+  rather than ‘able-bodied’"* is filed under Not this.
+
+**Recommendation.** Harvest what `derek.detect.document.example_block_ids` calls an
+example: the list items directly under the label, or failing those its first paragraph.
+The golden-set lint, the dogfood gate and the detection harness already use that
+definition. Measured, it drops 212 lines, about half of which read as instructions or
+long prose. The rest need a look, because the first-paragraph rule also drops a genuine
+second example (*"Japanese Australians take part in the Summer Festival in Melbourne."*
+is the second paragraph under a Write this). A stricter version keeps consecutive
+paragraphs until one reads as an instruction or ends in a colon.
+
+**What would settle it.** The dropped lines, listed and read, and the rule changed in
+`candidates.py` with its own ledger diff. It changes Layer 1 output for up to 104 rules'
+examples, so it should be its own reviewed change, not a side effect of another.

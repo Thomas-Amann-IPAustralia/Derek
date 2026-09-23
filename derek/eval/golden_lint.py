@@ -35,6 +35,7 @@ from pathlib import Path
 
 from derek.corpus.eligibility import load_eligibility
 from derek.corpus.normalise import NormalisedPage
+from derek.detect.document import example_block_ids
 from derek.eval.directives import classify, directive_sentences, sentences
 from derek.extract.blocks import Block, parse_blocks
 from derek.extract.candidates import normalise_statement
@@ -93,32 +94,8 @@ def _label(block: Block) -> str:
 
 
 def _example_blocks(blocks: list[Block]) -> set[str]:
-    """Blocks the manual presents as examples, not as prose.
-
-    A label heading (Example, Correct, Not this, …) cannot be closed in Markdown,
-    so the prose that follows it sits under it too. Its examples are the list
-    items directly beneath it, or failing those its first paragraph, and nothing
-    after the first paragraph that follows either.
-    """
-    out: set[str] = set()
-    current: tuple[str, ...] | None = None
-    seen_li = seen_para = False
-    for b in blocks:
-        if b.kind == "heading":
-            current = b.heading_path if _label(b) in LABELS else None
-            seen_li = seen_para = False
-            continue
-        if current is None or b.heading_path != current:
-            continue
-        if b.kind == "li" and not seen_para:
-            out.add(b.id)
-            seen_li = True
-        elif b.kind in ("para", "quote") and not seen_li and not seen_para:
-            out.add(b.id)
-            seen_para = True
-        else:
-            current = None
-    return out
+    """Blocks the manual presents as examples; one implementation, in derek.detect."""
+    return example_block_ids(blocks, LABELS)
 
 
 def _words(text: str) -> frozenset[str]:

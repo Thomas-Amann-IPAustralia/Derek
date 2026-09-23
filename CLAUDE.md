@@ -80,6 +80,13 @@ python tools/draft/draft_spans.py --blind --dry-run   # what would run; free
 python tools/draft/draft_spans.py --next 5            # draft five new pages
 python -m derek.eval.draft_score        # drafts vs human marks: quality on blind pages only
 
+# Tier 0 detection (ADR-026). Matchers are proposed as data in ledger/proposals/
+# and adopted by a named human, only if the rule's own examples agree and the
+# manual's prose stays within budget. adopt-matchers.yml does the same from Actions.
+python -m derek.detect.proposals                     # ready or blocked, and why
+python -m derek.detect.proposals adopt UID --by TA   # write a ready matcher to the ledger
+python -m derek.detect FILE.txt                      # run adopted rules over a text file
+
 # Imperative detection by POS tagger (ADR-021). Offline authoring step: writes a
 # checked-in verdict table that derek/extract/ reads as data, so extraction stays
 # stdlib-only and CI rebuilds the ledger with no model installed.
@@ -150,6 +157,10 @@ Each layer must be reproducible from the one below it. Full detail:
 | `golden/drafts/` | **Cached model output.** Proposals, never an extraction input |
 | `golden/blind.json` | Pages whose drafts are never shown — the only pages a draft is measured on |
 | `derek/eval/draft_score.py` | Draft recall/precision on blind pages; acceptance on seeded pages, separately |
+| `derek/detect/matchers.py` | The Tier 0 matcher vocabulary: `regex`, `literal_set`, and their scope keys |
+| `derek/detect/document.py` | Plain-text `Document` (ADR-012); which blocks are the manual's wrong examples |
+| `derek/detect/engine.py` | Accepted rules → raw findings; the examples harness |
+| `ledger/proposals/` | Proposed matchers, as data. Only `derek.detect.proposals adopt` writes them into the ledger |
 | `derek/extract/candidates.py` | Normativity classification, stable UIDs, gold-example harvesting |
 | `derek/extract/data/imperative_verbs.txt` | Hand-curated verb list; primary imperative signal |
 | `derek/extract/data/imperative_headings.json` | **Generated.** Pinned-tagger verdicts (ADR-021); never hand-edit |

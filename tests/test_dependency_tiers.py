@@ -53,6 +53,9 @@ CI_ENTRY_POINTS = (
     # would not reach it: the annotator ships its drafts (ADR-025).
     "tools/draft/drafting.py",
     "derek/eval/golden_lint.py",
+    # adopt-matchers.yml runs these with no install step either.
+    "derek/detect/proposals.py",
+    "derek/detect/__main__.py",
 )
 
 _PIN = re.compile(r"[=<>!~\[;]")

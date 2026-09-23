@@ -1,0 +1,78 @@
+name: Adopt Tier 0 matchers
+
+# The human step for a proposed matcher (ledger/proposals/, derek.detect.proposals).
+# A proposal is declarative data anyone can draft, and a model drafted the first
+# ones. It reaches the ledger only when a named person adopts it (D-10), and
+# only if it is ready: its rule's own violating examples fire, no compliant
+# example does, and the Style Manual's own prose stays within budget (ADR-004,
+# ADR-011). A blocked proposal is refused however it is asked for.
+#
+# Started from the Actions tab, so it works from a browser. The job summary
+# shows the full proposals report, ready and blocked, before anything is written.
+
+on:
+  workflow_dispatch:
+    inputs:
+      uids:
+        description: Rule uids to adopt, separated by spaces (see the report in a dry run)
+        required: true
+      initials:
+        description: Your initials, recorded in each rule's review history
+        required: true
+      dry_run:
+        description: Only show the report; adopt nothing
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ledger-write
+  cancel-in-progress: false
+
+jobs:
+  adopt:
+    runs-on: ubuntu-latest
+    outputs:
+      adopted: ${{ steps.adopt.outputs.adopted }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # No pip install: derek/detect and derek/ledger are stdlib-only.
+      - name: Report
+        run: python -m derek.detect.proposals | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Adopt
+        id: adopt
+        if: ${{ !inputs.dry_run }}
+        env:
+          UIDS: ${{ inputs.uids }}
+          BY: ${{ inputs.initials }}
+        run: |
+          read -ra uids <<< "$UIDS"
+          python -m derek.detect.proposals adopt "${uids[@]}" --by "$BY"
+          # The gate the adopted rules now have to pass on every push.
+          python -m derek.eval.dogfood
+          python -m derek.extract.build --check
+          git config user.name  "DerekBot"
+          git config user.email "derek-bot@users.noreply.github.com"
+          git add ledger/rules.jsonl
+          if git diff --cached --quiet; then
+            echo "adopted=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "detect: adopt Tier 0 matcher(s) ${UIDS} (by ${BY}, via ${GITHUB_ACTOR})"
+            git push origin HEAD
+            echo "adopted=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish:
+    needs: adopt
+    if: needs.adopt.outputs.adopted == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

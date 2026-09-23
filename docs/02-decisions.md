@@ -34,6 +34,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [023](#adr-023--the-golden-span-set-is-a-declared-extraction-input) | The golden span set is a declared extraction input | Accepted |
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
 | [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
+| [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
 
 ---
 
@@ -1225,3 +1226,63 @@ score names any page where it differs.
 **What this does not do.** It does not let a model decide that a rule exists, write to the
 golden set or the ledger, run in CI, or run at extraction time. It does not make a draft a
 Layer 1 input. And it does not replace the sweep: a page is done when a human says so.
+
+---
+
+## ADR-026 — A matcher is proposed as data and adopted by a named human
+
+**Decision.** A Tier 0 matcher for an accepted rule is proposed in
+`ledger/proposals/*.jsonl`, by anyone, a model included, and says who drafted it. It
+reaches the ledger's `detection` field only through `python -m derek.detect.proposals
+adopt UID --by <initials>` (or `adopt-matchers.yml`, the same command from a browser),
+and only when all three of these hold:
+
+1. **The rule's own examples agree, and there is something to catch.** Every violating
+   example fires, no compliant one does, and there is at least one violating example.
+   The examples are the rule's, from the manual or from spans a human marked. A proposal
+   cannot bring its own (D-1).
+2. **The manual does not trip it.** Density on the Style Manual's prose, raw (D-14), is
+   within the proposal's budget, and any budget above zero is justified in writing
+   ([ADR-011](#adr-011--the-dogfood-gate)).
+3. **A named person adopts it.** The review status does not change; the rule's history
+   gains an entry saying who adopted which matcher from where (D-10).
+
+Three scope keys join the `regex` and `literal_set` vocabulary
+([ADR-009](#adr-009--no-generated-code-in-the-runtime)), all data: `unless` (patterns
+that veto a hit when they match the text around it), `window` (how much text that is),
+and `skip_quoted` (drop hits inside ‘single quotes’, the manual's mentions). And the
+dogfood gate now reads Derek's rules on **plain-text** `Document`s
+([ADR-012](#adr-012--format-independent-document-model)), with only the example blocks
+under *Not this* / *Incorrect* excluded, not the prose that follows them. The Octavius
+reproduction still reads Markdown, because that is what its figures were measured on.
+
+**Reason.** The first nine proposals showed what each piece is for.
+
+* *The vacuity rule blocked four of the nine.* The manual gives no wrong example for
+  "Use commas with the phrase ‘for example’", tag questions, large rounded numbers or
+  direct speech, so a harness would pass any matcher at all. Those rules need a
+  violating example from a reviewed source first: a span a human marks, or a reviewed
+  synthetic pair in Phase 5.
+* *The budget found the manual's own lapses.* "for example" without its comma appears
+  four times in the manual. That is a correct rule firing a handful of times, which is
+  what ADR-011 says a correct rule does.
+* *`skip_quoted` exists because of F4.* "Don't use the term ‘old people’" is the manual
+  stating a rule, and a term list without it flags that sentence.
+* *`unless` is ADR-006 without code.* "A 5-digit number" becomes "a 5-digit number that
+  is not a phone number or a standards code" as data a reviewer can read.
+* *Plain text, because detectors see no markup* (D-13). A pattern fired at Markdown sees
+  link URLs and emphasis that no user document contains.
+
+The ninth, *Older people*, is blocked because one of its harvested "violating examples"
+is the sentence "Choose the term that best fits the context." That is
+[Q9](05-open-questions.md#q9--the-harvested-gold-examples-include-the-prose-that-follows-them),
+and the harness is what surfaced it.
+
+**Costs.** Patterns lean on Python's regular-expression dialect (fixed-width lookbehind),
+which a JavaScript runtime also supports but which ties portability to that subset. Half
+of some rules is out of Tier 0's reach, and the proposals say which half in `limits`:
+telling a 4-digit count from a year or a postcode is meaning, not pattern.
+
+**What this does not do.** It does not let a proposal change a review verdict, run a
+rule that is not accepted, or execute anything from the ledger.
+
