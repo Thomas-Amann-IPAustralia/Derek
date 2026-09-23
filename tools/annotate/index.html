@@ -105,6 +105,7 @@ main{overflow-y:auto;min-width:0;padding:26px 0 60vh}
 .pg .m{font-size:11px;color:var(--muted);display:flex;gap:7px;margin-top:1px}
 .pg.ineligible .t{color:var(--muted);font-style:italic}
 .pg .done{color:var(--keep);font-weight:700}
+.pg .unswept{color:var(--gold);font-weight:700}
 
 /* the reconstructed page -------------------------------------------------- */
 .doc{max-width:760px;margin:0 auto;padding:0 28px}
@@ -498,7 +499,8 @@ function renderRail() {
           ${n ? `<span><b>${n}</b> span${n === 1 ? "" : "s"}</span>` : ""}
           ${p.seeds ? `<span>${p.seeds} seed${p.seeds === 1 ? "" : "s"}</span>` : ""}
           ${p.eligible ? "" : "<span>not a rule source</span>"}
-          ${done ? '<span class="done">✓ swept</span>' : ""}
+          ${done ? '<span class="done">✓ swept</span>'
+            : n ? '<span class="unswept" title="Rules marked, but the page is not marked swept (F)">not swept</span>' : ""}
         </div></button>`;
   }
   $("railList").innerHTML = html || '<div class="empty" style="padding:12px">No pages match.</div>';
@@ -751,7 +753,10 @@ function showToolbar() {
     return `<button ${off ? "disabled" : ""} onclick="mark('${kind}')"
       title="${esc(k.hint)}${off ? " — a rule span cannot cross blocks" : ""}"
       >${esc(k.label)}<kbd>${k.key}</kbd></button>`;
-  }).join("");
+  }).join("") + (cross ? ["compliant", "violating"].map((kind) =>
+    `<button onclick="mark('${kind}', true)"
+      title="${esc(KINDS[kind].hint)} — these ${sel.parts.length} lines as ONE example, e.g. a list's lead-in and its items"
+      >${esc(KINDS[kind].label)} ×1<kbd>⇧${KINDS[kind].key}</kbd></button>`).join("") : "");
 
   const r = sel.rect;
   bar.classList.add("on");
@@ -784,7 +789,7 @@ function anchorFor(part) {
   };
 }
 
-function mark(kind) {
+function mark(kind, join = false) {
   const sel = S.sel || readSelection();
   if (!sel) { toast("Select some text first"); return; }
   if (!S.page.eligible) {
@@ -812,17 +817,25 @@ function mark(kind) {
       }
     }
     // A cross-block example list — the usual "Write this" list of 3-6 items —
-    // becomes one span per block, all pointing at the same rule.
+    // becomes one span per block, all pointing at the same rule. Joined, the
+    // parts share a `group` named by the first part's tuple (the browser never
+    // mints an id), and `golden.py` builds them into ONE example.
+    const joined = join && kind !== "precondition" && sel.parts.length > 1;
+    const first = sel.parts[0];
+    const group = joined ? `${first.block_id}|${first.start}|${first.end}|${kind}` : "";
     for (const part of sel.parts) {
-      OPS.add({ op: "span", span: {
+      const span = {
         page_path: S.page.path, page_sha256: S.page.sha256, kind,
         anchor: anchorFor(part), of: S.currentRule,
-      }});
+      };
+      if (group) span.group = group;
+      OPS.add({ op: "span", span });
     }
     window.getSelection().removeAllRanges();
     $("toolbar").classList.remove("on");
     renderDoc(); renderSide();
-    toast(`${KINDS[kind].label} recorded`);
+    toast(joined ? `${KINDS[kind].label} recorded as one ${sel.parts.length}-line example`
+                 : `${KINDS[kind].label} recorded`);
     return;
   }
 
@@ -849,7 +862,20 @@ function seedAt(part) {
 const blankTags = () => ({
   unit: "", clarity: "", direction: "", modality: "", applies_to: [],
   review_status: "accepted", specification: "", violation_condition: "", note: "",
+  detection_hint: "",
 });
+
+/* D-2: a kept rule says what makes text WRONG. The first 44 rules accepted here
+   all had it blank, because the form never asked — and a restatement of the
+   right form ("Use commas between items") went into `specification` instead,
+   which is the opposite polarity. A permission (MAY) has nothing to violate, and
+   a rule that will not load needs none. */
+function needsViolation(tags) {
+  return tags.review_status === "accepted"
+    && tags.unit !== "artifact"
+    && tags.clarity !== "not_automatable"
+    && tags.modality !== "MAY";
+}
 
 function selectSpan(key) {
   S.selected = key;
@@ -901,6 +927,7 @@ function acceptSeed(uid) {
       unit: seed.unit || "", direction: seed.direction || "",
       modality: seed.modality || "", applies_to: (seed.applies_to || []).slice(),
       specification: seed.specification || "",
+      violation_condition: seed.violation_condition || "",
     },
     preconditions: [],
   };
@@ -1098,6 +1125,18 @@ function openTags(span, isNew) {
     ${fieldHtml("direction", span.tags.direction, false)}
     ${fieldHtml("modality", span.tags.modality, false)}
 
+    <div class="field" id="fld-vc">
+      <div class="flabel"><h4>What makes text wrong?</h4>
+        <span class="tag" id="req-vc" style="color:var(--bin);border-color:var(--bin)">needed</span></div>
+      <p class="why" id="vcWhy">Describe the text a checker should <b>flag</b>, not the
+        correct form. "A number of 4+ digits written without a comma" — not "Use commas
+        in numbers". This is the rule's polarity (D-2); the last project inverted it.</p>
+      <textarea id="f-vc" oninput="syncTags()"
+        placeholder="Text is wrong when…">${esc(span.tags.violation_condition || "")}</textarea>
+    </div>
+
+    ${fieldHtml("detection_hint", span.tags.detection_hint, false)}
+
     <div class="field" id="fld-spec">
       <div class="flabel"><h4 id="specLabel">Your interpretation</h4></div>
       <p class="why" id="specWhy">The manual's wording is kept alongside and never
@@ -1144,8 +1183,18 @@ function syncTags() {
       : "The manual's wording is kept alongside and never overwritten (ADR-017). "
         + "This is what detection implements.";
   }
+  const vc = ($("f-vc")?.value || "").trim();
+  const wantVc = needsViolation(d.tags);
+  const reqVc = $("req-vc");
+  if (reqVc) reqVc.style.display = wantVc && !vc ? "" : "none";
+  const vcWhy = $("vcWhy");
+  if (vcWhy && d.tags.modality === "MAY") {
+    vcWhy.innerHTML = "A permission has nothing to violate. If it relaxes a neighbouring "
+      + "rule, it is usually better recorded as that rule's exception (in "
+      + "<i>When does it apply?</i>) than as a rule of its own.";
+  }
   const btn = $("saveBtn");
-  if (btn) btn.disabled = !d.tags.clarity;
+  if (btn) btn.disabled = !d.tags.clarity || (wantVc && !vc);
 }
 
 function saveTags() {
@@ -1156,6 +1205,12 @@ function saveTags() {
     toast("Write the interpretation in 'your interpretation' — a note is not implemented");
     return;
   }
+  const vc = ($("f-vc")?.value || "").trim();
+  if (needsViolation(d.tags) && !vc) {
+    toast("Say what makes text wrong — that is the rule's polarity (D-2)");
+    return;
+  }
+  d.tags.violation_condition = vc;
   d.tags.specification = spec;
   d.tags.note = ($("f-note")?.value || "").trim();
   d.preconditions = ($("f-pre")?.value || "").split("\n")
@@ -1263,16 +1318,18 @@ function renderSide() {
         <span>${kids.length ? kids.length + " linked" : ""}</span></div>
       <div class="q">${esc(r.anchor.quote)}</div>
       <div class="tags">
-        ${["unit", "clarity", "direction", "modality"].filter((k) => r.tags[k])
+        ${["unit", "clarity", "direction", "modality", "detection_hint"].filter((k) => r.tags[k])
           .map((k) => `<span class="tag">${esc(r.tags[k])}</span>`).join("")}
+        ${needsViolation(r.tags) && !(r.tags.violation_condition || "").trim()
+          ? '<span class="tag" style="color:var(--gold);border-color:var(--gold)" title="D-2: say what makes text wrong">no violation condition</span>' : ""}
         ${(r.tags.applies_to || []).map((a) => `<span class="tag">${esc(a)}</span>`).join("")}
         ${r.tags.review_status === "rejected"
           ? '<span class="tag" style="color:var(--bin);border-color:var(--bin)">will not load</span>' : ""}
       </div>
-      ${kids.length ? `<div style="margin-top:7px">${kids.map((k) =>
+      ${kids.length ? `<div style="margin-top:7px">${exampleRows(kids).map((k) =>
         `<div class="q" style="font-size:12.5px;color:var(--ink-2)">
           ${k.kind === "compliant" ? "✓" : k.kind === "violating" ? "✗" : "⟡"}
-          ${esc(k.anchor.quote.slice(0, 90))}</div>`).join("")}</div>` : ""}
+          ${esc(k.text.slice(0, 90))}</div>`).join("")}</div>` : ""}
       <div class="acts">
         <button class="btn sm" onclick="selectSpan('${esc(keyOf(r))}')">Attach examples</button>
         <button class="btn sm" onclick="editSpan('${esc(keyOf(r))}')">Edit</button>
@@ -1306,6 +1363,44 @@ function renderSide() {
   }
 
   $("sideBody").innerHTML = html;
+}
+
+/* One row per example as golden.py will build it: a group's parts joined in
+   document order, not the order they were marked. Re-marking a list that was
+   recorded one item per example replaces those spans in place (same tuple), so
+   insertion order and page order routinely disagree. */
+function exampleRows(kids) {
+  const pos = new Map((S.page ? S.page.blocks : []).map((b, i) => [b.id, i]));
+  const at = (k) => [pos.get(k.anchor.block_id) ?? 0, k.anchor.start];
+  const rows = [];
+  const groups = new Map();
+  for (const k of kids) {
+    if (!k.group) { rows.push({ kind: k.kind, text: k.anchor.quote }); continue; }
+    if (!groups.has(k.group)) {
+      const row = { kind: k.kind, parts: [] };
+      groups.set(k.group, row);
+      rows.push(row);
+    }
+    groups.get(k.group).parts.push(k);
+  }
+  for (const row of groups.values()) {
+    row.parts.sort((a, b) => { const x = at(a), y = at(b); return x[0] - y[0] || x[1] - y[1]; });
+    row.text = row.parts.map((k) => k.anchor.quote).join(" / ");
+  }
+  return rows;
+}
+
+/* Pages carrying rule spans that nobody has marked swept. Until they are, an
+   unmarked heading there is "not reached", not "not a rule", and span_recall
+   cannot measure anything — which is where the first three pages were left. */
+function unsweptPages() {
+  const out = [];
+  for (const [page, list] of S.spans) {
+    if (!list.some((s) => s.kind === "rule")) continue;
+    const m = S.marks.get(page);
+    if (!m || m.status !== "complete") out.push(page);
+  }
+  return out.sort();
 }
 
 function paintCounts() {
@@ -1365,6 +1460,16 @@ function exportOps() {
       <div class="q">3. <code>apply-spans.yml</code> replays it, writes
         <code>golden/spans.jsonl</code>, rebuilds the ledger and republishes this page.</div>
     </div>
+    ${unsweptPages().length ? `<div class="card" style="border-color:var(--gold);background:var(--gold-bg)">
+      <div class="k"><span>Not marked swept</span><span>${unsweptPages().length}</span></div>
+      <p class="why" style="margin:4px 0 6px">These pages have rules marked but are not
+        swept. Until they are, a heading you skipped counts as "not looked at", not "not
+        a rule", and nothing can be measured on them. If you have finished one, open it,
+        press <kbd>F</kbd>, and export again.</p>
+      ${unsweptPages().map((p) => `<div class="q" style="font-size:12.5px">
+        <a href="#" onclick="event.preventDefault();closeSheet();openPage('${esc(p)}')"
+          >${esc(p)}</a></div>`).join("")}
+    </div>` : ""}
     <p class="why">The queue is not cleared. Every export carries everything you have
       marked, and re-uploading the same file does nothing the second time, so
       exporting early and often costs nothing and losing a browser profile costs
@@ -1454,6 +1559,7 @@ function help() {
       ${row("C", "mark it as a <b>Write this</b> example of the current rule")}
       ${row("V", "mark it as a <b>Not this</b> example")}
       ${row("P", "mark it as a condition on when the rule applies")}
+      ${row("⇧C / ⇧V", "across several lines: mark them as <b>one</b> example — a list's lead-in and its items")}
     </div>
     <div class="card"><div class="k"><span>Moving</span></div>
       ${row("J / K", "next / previous block")}
@@ -1491,7 +1597,7 @@ function wireKeys() {
     if (k === "?" || k === "/") { help(); e.preventDefault(); return; }
 
     const kind = Object.keys(KINDS).find((x) => KINDS[x].key === k.toUpperCase());
-    if (kind && readSelection()) { mark(kind); e.preventDefault(); return; }
+    if (kind && readSelection()) { mark(kind, e.shiftKey); e.preventDefault(); return; }
 
     switch (k.toLowerCase()) {
       case "j": stepBlock(1); e.preventDefault(); break;

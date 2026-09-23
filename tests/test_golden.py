@@ -215,6 +215,61 @@ def test_an_example_elsewhere_in_the_same_block_is_fine(blocks):
     assert got.examples[GOLD_COMPLIANT] == [prose.plain[40:70]]
 
 
+def _lead_in_list(blocks):
+    """commas.md's "…, for example:" and the single-word items under it."""
+    lead = next(b for b in blocks if b.plain.endswith("to distinguish, for example:"))
+    i = blocks.index(lead)
+    items = []
+    for b in blocks[i + 1:]:
+        if b.kind != "li":
+            break
+        items.append(b)
+    assert [b.plain for b in items] == ["red", "green", "orange", "brown", "blue", "purple."]
+    return lead, items
+
+
+def test_a_grouped_example_is_one_example_in_document_order(blocks):
+    """A list's lead-in and its items are one example, not four.
+
+    The block projection splits a list into one block per item, so before groups
+    the reviewer's only option was four "examples", three of them the single
+    words 'green', 'orange' and 'red', which illustrate nothing on their own.
+    (That is what the first annotation of commas.md recorded.)
+    """
+    text = page_text()
+    lead, items = _lead_in_list(blocks)
+    rule_block = next(b for b in blocks if b.plain.startswith("If you’re introducing a bullet list"))
+    rule = make_span(rule_block)
+    group = span_id(PAGE, lead.id, 0, len(lead.plain), "compliant")
+    parts = [make_span(b, kind="compliant", of=rule.span_id) for b in [lead, *items]]
+    parts = [Span(**{**p.__dict__, "group": group}) for p in parts]
+    # Handed over out of order: document order is golden.py's job, not the export's.
+    [got] = golden_candidates(PAGE, text, [rule, *reversed(parts)])
+    assert got.examples[GOLD_COMPLIANT] == [
+        "Some colours are difficult for people with colour blindness to distinguish, "
+        "for example:\nred\ngreen\norange\nbrown\nblue\npurple."]
+
+
+def test_a_group_cannot_both_comply_and_violate(blocks):
+    text = page_text()
+    lead, items = _lead_in_list(blocks)
+    rule_block = next(b for b in blocks if b.plain.startswith("If you’re introducing a bullet list"))
+    rule = make_span(rule_block)
+    a = Span(**{**make_span(lead, kind="compliant", of=rule.span_id).__dict__, "group": "g"})
+    b = Span(**{**make_span(items[0], kind="violating", of=rule.span_id).__dict__, "group": "g"})
+    with pytest.raises(GoldenError, match="comply and violate"):
+        golden_candidates(PAGE, text, [rule, a, b])
+
+
+def test_an_ungrouped_span_writes_no_group_key(blocks):
+    """So every span recorded before groups existed is byte-identical on disk."""
+    prose = next(b for b in blocks if b.kind == "para")
+    plain = make_span(prose, kind="compliant", of="x")
+    assert "group" not in plain.to_dict()
+    grouped = Span(**{**plain.__dict__, "group": "abc"})
+    assert Span.from_dict(grouped.to_dict()).group == "abc"
+
+
 def test_an_example_pointing_at_nothing_is_refused(blocks):
     text = page_text()
     prose = next(b for b in blocks if b.kind == "para")

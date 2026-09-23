@@ -159,6 +159,7 @@ def _seeds_for(rel: str, blocks, rules) -> list[dict]:
             "direction": rule.direction,
             "applies_to": list(rule.applies_to),
             "specification": rule.specification,
+            "violation_condition": rule.violation_condition,
             "note": rule.review.note,
             "compliant": list(rule.compliant_examples),
             "violating": list(rule.violating_examples),

@@ -35,6 +35,7 @@ __all__ = [
     "Direction",
     "Unit",
     "DetectionMethod",
+    "DetectionHint",
 ]
 
 
@@ -104,6 +105,34 @@ class Unit:
         CHARACTER, TOKEN, PHRASE, SENTENCE, PARAGRAPH,
         BLOCK, SECTION, DOCUMENT, ARTIFACT,
     })
+
+
+class DetectionHint:
+    """A reviewer's first read of how a rule could be checked (ADR-010).
+
+    Not a matcher and not a method: it is the routing judgement a reviewer makes
+    while the rule is in front of them, recorded as a closed choice instead of
+    the free-text note it used to be ("Likely enforceable through heuristics"
+    appeared on 30 of the first 33 golden rules, where nothing could read it).
+    ``_apply`` maps it onto ``detection.tier``, which ADR-010 already says is set
+    during review; the hint itself stays on the golden span as provenance, so
+    "pattern" and "lookup" — both Tier 0, built very differently — remain
+    distinguishable to whoever writes the matcher.
+    """
+
+    PATTERN = "pattern"           # regex, punctuation, token shapes
+    LOOKUP = "lookup"             # a list of known names, terms or forms
+    CLASSIFIER = "classifier"     # needs meaning; a trained model decides
+    HYBRID = "hybrid"             # a pattern finds candidates, a classifier decides
+    UNSURE = "unsure"
+
+    ALL = frozenset({PATTERN, LOOKUP, CLASSIFIER, HYBRID, UNSURE})
+
+    # A hybrid is Tier 1: ADR-010 routes a rule to the cheapest tier that can
+    # detect it *correctly*, and a pattern that cannot decide alone cannot.
+    TIER: dict[str, int | None] = {
+        PATTERN: 0, LOOKUP: 0, CLASSIFIER: 1, HYBRID: 1, UNSURE: None,
+    }
 
 
 class DetectionMethod:
