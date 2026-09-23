@@ -943,9 +943,12 @@ function markSwept() {
   const rules = spansOn(S.page.path).filter((s) => s.kind === "rule");
   const loose = S.page.seeds.filter((s) => !S.seeds.get(s.uid)
     && !rules.some((r) => r.seed_uid === s.uid));
+  // Mirrors `_check_sweeps`: a rejected or deferred candidate agrees with the
+  // sweep (or has no judgement to lose), so only the other two classes are asked.
   const risky = loose.filter(
-    (s) => (s.compliant.length && s.violating.length)
-        || ["accepted", "amended"].includes(s.status));
+    (s) => ["accepted", "amended"].includes(s.status)
+        || (!["rejected", "deferred"].includes(s.status)
+            && s.compliant.length && s.violating.length));
 
   const done = S.marks.get(S.page.path);
   openSheet(`

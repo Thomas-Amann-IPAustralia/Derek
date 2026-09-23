@@ -317,6 +317,12 @@ def _check_sweeps(gs, page_text) -> list[tuple[dict, str]]:
                 continue
             if rule.review.status in ("accepted", "amended"):
                 at_risk.append((rule, f"already {rule.review.status}"))
+            elif rule.review.status in ("rejected", "deferred"):
+                # The docstring's promise, which the code did not keep: a
+                # rejected candidate with the manual's pair was listed anyway,
+                # so the first sweep of commas.md would have been refused over
+                # two headings its reviewer had already binned.
+                continue
             elif rule.compliant_examples and rule.violating_examples:
                 at_risk.append((rule, "carries the manual's own paired examples"))
 

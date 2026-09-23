@@ -353,6 +353,11 @@ def test_an_export_reaches_the_golden_set_and_the_ledger(replay):
         of=f"{prose.id}|0|{len(prose.plain)}|rule", oid="op-ex")
     path = _export(replay.tmp, [rule, example])
 
+    from derek.ledger.store import load_ledger
+    # The fixture starts from the real ledger, which carries the real golden
+    # set's rules. Count what THIS export made, not every human span there is.
+    before = set(load_ledger(replay.ledger))
+
     assert replay.module.main([str(path)]) == 0
 
     spans = [json.loads(x) for x in replay.spans.read_text(encoding="utf-8").splitlines()]
@@ -362,9 +367,9 @@ def test_an_export_reaches_the_golden_set_and_the_ledger(replay):
     child = next(s for s in spans if s["kind"] == "violating")
     assert child["of"] == parent["span_id"]
 
-    from derek.ledger.store import load_ledger
     rules = load_ledger(replay.ledger)
-    made = [r for r in rules.values() if r.derivation.method == "human_span"]
+    made = [r for uid, r in rules.items()
+            if r.derivation.method == "human_span" and uid not in before]
     assert len(made) == 1, [r.source.statement for r in made]
     got = made[0]
     assert got.source.statement == prose.plain
@@ -556,18 +561,29 @@ def test_a_rejected_candidate_needs_no_listing(replay):
     """Rejection and the sweep agree: the rule does not load either way.
 
     Only a verdict that DISAGREES with the sweep — accepted, amended — or the
-    manual's own paired testimony has to be acknowledged.
+    manual's own paired testimony on a candidate nobody has judged has to be
+    acknowledged. This used to recompute that predicate over the ledger instead
+    of asking ``_check_sweeps``, so it passed vacuously until the first real
+    rejection carrying a ``Write this`` / ``Not this`` pair landed — and the code
+    it was meant to test had been listing exactly that candidate all along,
+    which would have refused the first sweep of ``commas.md``.
     """
-    from derek.ledger.store import load_ledger
+    from derek.ledger.store import load_ledger, write_ledger
 
     rules = load_ledger(replay.ledger)
-    on_page = [r for r in rules.values() if r.source.page_path == SAMPLE]
-    assert on_page
-    needs_listing = [r for r in on_page
-                     if r.review.status in ("accepted", "amended")
-                     or (r.compliant_examples and r.violating_examples)]
-    rejected = [r for r in on_page if r.review.status == "rejected"]
-    assert not any(r in needs_listing for r in rejected)
+    paired = next(r for r in rules.values()
+                  if r.source.page_path == SAMPLE and r.derivation.method != "human_span"
+                  and r.compliant_examples and r.violating_examples)
+    paired.review.status = "rejected"
+    write_ledger(replay.ledger, rules.values())
+
+    gs = replay.module.GoldenSet()
+    gs.swept[SAMPLE] = {"page_path": SAMPLE, "status": "complete", "by": "TA"}
+    read = lambda page: (REPO / "corpus" / "pages" / page).read_text(encoding="utf-8")
+    problems = replay.module._check_sweeps(gs, read)
+    assert not [m for _, m in problems if paired.uid in m], problems
+    # An accepted rule on the same page still has to be named.
+    assert any("already accepted" in m for _, m in problems), problems
 
 
 def test_rebase_is_a_no_op_while_the_corpus_is_frozen(replay):
