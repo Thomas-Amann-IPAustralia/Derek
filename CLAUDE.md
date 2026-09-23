@@ -79,6 +79,7 @@ python -m derek.eval.golden_lint        # the golden set vs the invariants and d
 python tools/draft/draft_spans.py --blind --dry-run   # what would run; free
 python tools/draft/draft_spans.py --next 5            # draft five new pages
 python -m derek.eval.draft_score        # drafts vs human marks: quality on blind pages only
+python -m derek.eval.annotation_pace    # words a minute per page, blind vs seeded
 
 # Tier 0 detection (ADR-026). Matchers are proposed as data in ledger/proposals/
 # and adopted by a named human, only if the rule's own examples agree and the
