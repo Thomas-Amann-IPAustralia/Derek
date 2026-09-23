@@ -246,6 +246,12 @@ def build(out: Path, *, server=None, clean: bool = True) -> dict:
 
     spans, page_marks = _read_golden()
 
+    # The golden-set lint, as of this build. Shipped so the reviewer sees each
+    # finding on the page where it is fixed, rather than in a report they would
+    # need Python to produce. It goes stale as they work, and says so.
+    from derek.eval.golden_lint import by_page, lint
+    findings = by_page(lint(server.LEDGER))
+
     index = {
         "static": True,
         "build": build_info,
@@ -279,6 +285,8 @@ def build(out: Path, *, server=None, clean: bool = True) -> dict:
         out / "data" / "spans.json",
         {"build": build_info, "spans": spans, "pages": page_marks},
     )
+    sizes["data/lint.json"] = _write_json(
+        out / "data" / "lint.json", {"build": build_info, "pages": findings})
 
     manifest = {
         **build_info,

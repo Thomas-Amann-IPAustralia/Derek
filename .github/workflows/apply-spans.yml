@@ -116,6 +116,12 @@ jobs:
               if n:
                   print(f"| {status} | {n} |")
           PY
+            # The worklist for what was just uploaded: every invariant or policy
+            # finding on the annotated pages, so the reviewer sees it without a
+            # checkout. The same findings ship with the annotator (data/lint.json).
+            echo
+            python -m derek.eval.golden_lint --level check --no-cross-page \
+              || echo "golden_lint failed — see the job log"
           } >> "$GITHUB_STEP_SUMMARY"
 
   # A push made with GITHUB_TOKEN does not trigger another workflow, so the

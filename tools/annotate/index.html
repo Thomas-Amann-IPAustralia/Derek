@@ -322,6 +322,7 @@ const KINDS = {
 const S = {
   index: null,          // data/index.json
   baseline: { spans: [], pages: [] },
+  lint: {},             // page_path -> findings, as of the last build
   page: null,           // the loaded page payload
   cache: new Map(),     // slug -> payload
   ops: [],              // the local op log, in export shape
@@ -441,6 +442,7 @@ async function boot() {
     return;
   }
   try { S.baseline = await getJSON("data/spans.json"); } catch (e) { /* first run */ }
+  try { S.lint = (await getJSON("data/lint.json")).pages || {}; } catch (e) { S.lint = {}; }
 
   if (S.index.freeze && S.index.freeze.frozen) {
     document.body.classList.add("frozen");
@@ -731,7 +733,10 @@ function wireSelection() {
     clearTimeout(wireSelection._t);
     wireSelection._t = setTimeout(showToolbar, 90);
   });
-  $("main").addEventListener("scroll", () => $("toolbar").classList.remove("on"));
+  $("main").addEventListener("scroll", () => {
+    $("toolbar").classList.remove("on");
+    if (S._toolbarAfterScroll) toolbarAfterScroll();
+  });
   $("doc").addEventListener("click", (e) => {
     const marked = e.target.closest("[data-span]");
     if (marked) { selectSpan(marked.dataset.span); return; }
@@ -1309,6 +1314,8 @@ function renderSide() {
       of them.</p>`;
   }
   html += "</div>";
+  // Above the rule cards: on a page with 20 rules, below them is off-screen.
+  html += lintCard();
 
   for (const r of rules) {
     const kids = others.filter((x) => x.of === keyOf(r));
@@ -1363,6 +1370,82 @@ function renderSide() {
   }
 
   $("sideBody").innerHTML = html;
+}
+
+/* --- the golden-set lint ---------------------------------------------------
+   `derek.eval.golden_lint`, run when the site was built. Stale by design: it
+   describes the committed golden set, not this browser's unexported work, and
+   the card says so rather than pretending otherwise.
+   --------------------------------------------------------------------------- */
+
+const LINT_LEVELS = {
+  fix: { color: "var(--bin)" },
+  check: { color: "var(--gold)" },
+  look: { color: "var(--muted)" },
+};
+
+function lintCard() {
+  const items = (S.lint[S.page.path] || []);
+  if (!items.length) return "";
+  S._lint = items;
+  const row = (f, i) => `<div class="q" style="font-size:12.5px;margin-top:7px">
+      <span class="tag" style="color:${LINT_LEVELS[f.level].color};border-color:${LINT_LEVELS[f.level].color}"
+        >${esc(f.ref)}</span>
+      ${f.statement ? `<b>${esc(f.statement.slice(0, 70))}</b><br>` : ""}
+      ${esc(f.message)}
+      ${f.quote ? `<div style="color:var(--ink-2);margin-top:3px">“${esc(f.quote.slice(0, 160))}”</div>` : ""}
+      ${f.span_key ? `<a href="#" onclick="event.preventDefault();goLint(${i})">show</a>` : ""}
+    </div>`;
+  const by = (lvl) => items.map((f, i) => [f, i]).filter(([f]) => f.level === lvl);
+  const counts = Object.keys(LINT_LEVELS).map((l) => `${by(l).length} ${l}`).join(" · ");
+  return `<div class="card"><div class="k"><span>Checks</span><span>${counts}</span></div>
+    <p class="why" style="margin:4px 0 0">From <code>derek.eval.golden_lint</code> at the last
+      build, against <a href="https://github.com/${esc((S.index.build || {}).repo || "")}/blob/main/docs/08-rule-grain.md"
+      target="_blank" rel="noopener">the grain policy</a>. <b>fix</b> breaks an invariant;
+      <b>check</b> is probably wrong, so make it a decision; <b>look</b> is text nothing
+      accounts for. Work you have not exported yet is not reflected.</p>
+    ${["fix", "check"].map((l) => by(l).map(([f, i]) => row(f, i)).join("")).join("")}
+    ${by("look").length ? `<details style="margin-top:7px"><summary class="why" style="cursor:pointer">
+      ${by("look").length} to look at</summary>${by("look").map(([f, i]) => row(f, i)).join("")}</details>` : ""}
+  </div>`;
+}
+
+/* A finding's key is a rule span (select it) or a sentence (select its text,
+   so pressing R marks it). */
+function goLint(i) {
+  const f = (S._lint || [])[i];
+  if (!f || !f.span_key) return;
+  const [bid, a, z, kind] = f.span_key.split("|");
+  if (kind === "rule") {
+    selectSpan(f.span_key);
+  } else {
+    S.focusBlock = bid;
+    renderDoc();
+  }
+  const blk = document.querySelector(`[data-bid="${bid}"]`);
+  if (!blk) return;
+  blk.scrollIntoView({ block: "center", behavior: "smooth" });
+  if (kind === "rule") return;
+  const w = textWalker(blk);
+  const r = document.createRange();
+  let n = 0, t, started = false;
+  while ((t = w.nextNode())) {
+    const len = t.nodeValue.length;
+    if (!started && +a <= n + len) { r.setStart(t, +a - n); started = true; }
+    if (started && +z <= n + len) { r.setEnd(t, +z - n); break; }
+    n += len;
+  }
+  const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  // Scrolling hides the toolbar (it would float over the wrong text), so it is
+  // shown once scrolling has stopped; see wireSelection. The selection itself is
+  // live at once, so R works immediately either way.
+  toolbarAfterScroll();
+}
+
+function toolbarAfterScroll() {
+  clearTimeout(toolbarAfterScroll._t);
+  toolbarAfterScroll._t = setTimeout(() => { S._toolbarAfterScroll = false; showToolbar(); }, 160);
+  S._toolbarAfterScroll = true;
 }
 
 /* One row per example as golden.py will build it: a group's parts joined in
