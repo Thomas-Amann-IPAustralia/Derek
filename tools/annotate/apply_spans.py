@@ -149,6 +149,16 @@ def _key(span: Span) -> str:
     return f"{span.block_id}|{span.start}|{span.end}|{span.kind}"
 
 
+def _resolve_key(page: str, key: str) -> str:
+    """A browser-side span key (``block|start|end|kind``) as its ``span_id``."""
+    if not key or "|" not in key:
+        return key
+    parts = key.split("|")
+    if len(parts) != 4:
+        raise SpanOpError(f"{page}: malformed span key {key!r}")
+    return span_id(page, parts[0], int(parts[1]), int(parts[2]), parts[3])
+
+
 def _span_from_op(raw: dict, page: str, by: str, at: str, text: str) -> Span:
     anchor = raw.get("anchor") or {}
     kind = raw.get("kind")
@@ -177,10 +187,10 @@ def _span_from_op(raw: dict, page: str, by: str, at: str, text: str) -> Span:
 
     # The browser references a parent rule by the tuple it was drawn at, because
     # it cannot mint a span_id. Resolve it here.
-    of = raw.get("of") or ""
-    if of and "|" in of:
-        parts = of.split("|")
-        of = span_id(page, parts[0], int(parts[1]), int(parts[2]), parts[3])
+    of = _resolve_key(page, raw.get("of") or "")
+    # An example group is named by the tuple of its first member, for the same
+    # reason: the browser never mints an id.
+    group = _resolve_key(page, raw.get("group") or "") if kind != RULE else ""
 
     return Span(
         span_id=span_id(page, block_id, start, end, kind),
@@ -189,6 +199,8 @@ def _span_from_op(raw: dict, page: str, by: str, at: str, text: str) -> Span:
         block_id=block_id, start=start, end=end, quote=quote,
         prefix=anchor.get("prefix", ""), suffix=anchor.get("suffix", ""),
         of=of,
+        group=group,
+        seed_draft=str(raw.get("seed_draft") or "")[:80],
         tags=dict(raw.get("tags") or {}),
         preconditions=tuple(raw.get("preconditions") or ()),
         disambiguator=raw.get("disambiguator", ""),
@@ -317,6 +329,12 @@ def _check_sweeps(gs, page_text) -> list[tuple[dict, str]]:
                 continue
             if rule.review.status in ("accepted", "amended"):
                 at_risk.append((rule, f"already {rule.review.status}"))
+            elif rule.review.status in ("rejected", "deferred"):
+                # The docstring's promise, which the code did not keep: a
+                # rejected candidate with the manual's pair was listed anyway,
+                # so the first sweep of commas.md would have been refused over
+                # two headings its reviewer had already binned.
+                continue
             elif rule.compliant_examples and rule.violating_examples:
                 at_risk.append((rule, "carries the manual's own paired examples"))
 

@@ -310,7 +310,8 @@ def _export(tmp_path, ops: list[dict], *, render_version: str | None = None,
 
 
 def _span_op(block, start=None, end=None, *, kind="rule", of="", tags=None,
-             preconditions=(), seed_uid="", oid="op-1", at="2026-09-22T01:00:00.000Z"):
+             preconditions=(), seed_uid="", oid="op-1", at="2026-09-22T01:00:00.000Z",
+             group=""):
     start = 0 if start is None else start
     end = len(block.plain) if end is None else end
     span = {
@@ -323,6 +324,8 @@ def _span_op(block, start=None, end=None, *, kind="rule", of="", tags=None,
         },
         "of": of,
     }
+    if group:
+        span["group"] = group
     if kind == "rule":
         span["tags"] = dict(tags or {})
         span["preconditions"] = list(preconditions)
@@ -353,6 +356,11 @@ def test_an_export_reaches_the_golden_set_and_the_ledger(replay):
         of=f"{prose.id}|0|{len(prose.plain)}|rule", oid="op-ex")
     path = _export(replay.tmp, [rule, example])
 
+    from derek.ledger.store import load_ledger
+    # The fixture starts from the real ledger, which carries the real golden
+    # set's rules. Count what THIS export made, not every human span there is.
+    before = set(load_ledger(replay.ledger))
+
     assert replay.module.main([str(path)]) == 0
 
     spans = [json.loads(x) for x in replay.spans.read_text(encoding="utf-8").splitlines()]
@@ -362,9 +370,9 @@ def test_an_export_reaches_the_golden_set_and_the_ledger(replay):
     child = next(s for s in spans if s["kind"] == "violating")
     assert child["of"] == parent["span_id"]
 
-    from derek.ledger.store import load_ledger
     rules = load_ledger(replay.ledger)
-    made = [r for r in rules.values() if r.derivation.method == "human_span"]
+    made = [r for uid, r in rules.items()
+            if r.derivation.method == "human_span" and uid not in before]
     assert len(made) == 1, [r.source.statement for r in made]
     got = made[0]
     assert got.source.statement == prose.plain
@@ -376,6 +384,53 @@ def test_an_export_reaches_the_golden_set_and_the_ledger(replay):
     # The decision is recorded at the reviewer's own time, not the upload's.
     assert got.review.history[-1]["by"] == "TA"
     assert got.review.history[-1]["at"].startswith("2026-09-22T01:00")
+
+
+def test_a_joined_example_and_a_detection_hint_reach_the_ledger(replay):
+    """The two fields the first three annotated pages showed were missing.
+
+    A list lead-in plus its items, marked as ONE example, arrives as one string;
+    the reviewer's "how would a checker find it?" lands as ``detection.tier``;
+    and the violation condition the form now asks for lands where D-2 wants it.
+    """
+    from derek.extract.candidates import normalise_statement
+    from derek.ledger.store import load_ledger
+
+    blocks = _blocks_of()
+    lead = next(b for b in blocks if b.plain.endswith("to distinguish, for example:"))
+    i = blocks.index(lead)
+    items = blocks[i + 1:i + 7]
+    assert all(b.kind == "li" for b in items)
+    rule_block = next(b for b in blocks if b.plain.startswith("If you’re introducing a bullet list"))
+    rule_key = f"{rule_block.id}|0|{len(rule_block.plain)}|rule"
+    group = f"{lead.id}|0|{len(lead.plain)}|compliant"
+
+    tags = {**ACCEPT, "direction": "presence", "detection_hint": "pattern",
+            "violation_condition": "a bullet list introduced by 'for example,' "
+                                   "ends its lead-in with a comma instead of a colon"}
+    ops = [_span_op(rule_block, tags=tags, oid="op-rule")]
+    for n, b in enumerate([lead, *items]):
+        ops.append(_span_op(b, kind="compliant", of=rule_key, group=group, oid=f"op-ex{n}"))
+    path = _export(replay.tmp, ops)
+
+    assert replay.module.main([str(path)]) == 0
+
+    rules = load_ledger(replay.ledger)
+    [got] = [r for r in rules.values()
+             if r.derivation.method == "human_span"
+             and r.source.statement == normalise_statement(rule_block.plain)]
+    assert got.compliant_examples == [
+        lead.plain + "\n" + "\n".join(b.plain for b in items)]
+    assert got.detection.tier == 0
+    assert got.violation_condition.startswith("a bullet list introduced")
+
+
+def test_an_unknown_detection_hint_is_refused(replay):
+    blocks = _blocks_of()
+    prose = next(b for b in blocks if b.kind == "para" and b.heading_path)
+    path = _export(replay.tmp, [_span_op(prose, tags={**ACCEPT, "detection_hint": "vibes"})])
+    with pytest.raises(ValueError, match="unknown detection hint"):
+        replay.module.main([str(path)])
 
 
 def test_replaying_the_same_export_changes_nothing(replay):
@@ -556,18 +611,29 @@ def test_a_rejected_candidate_needs_no_listing(replay):
     """Rejection and the sweep agree: the rule does not load either way.
 
     Only a verdict that DISAGREES with the sweep — accepted, amended — or the
-    manual's own paired testimony has to be acknowledged.
+    manual's own paired testimony on a candidate nobody has judged has to be
+    acknowledged. This used to recompute that predicate over the ledger instead
+    of asking ``_check_sweeps``, so it passed vacuously until the first real
+    rejection carrying a ``Write this`` / ``Not this`` pair landed — and the code
+    it was meant to test had been listing exactly that candidate all along,
+    which would have refused the first sweep of ``commas.md``.
     """
-    from derek.ledger.store import load_ledger
+    from derek.ledger.store import load_ledger, write_ledger
 
     rules = load_ledger(replay.ledger)
-    on_page = [r for r in rules.values() if r.source.page_path == SAMPLE]
-    assert on_page
-    needs_listing = [r for r in on_page
-                     if r.review.status in ("accepted", "amended")
-                     or (r.compliant_examples and r.violating_examples)]
-    rejected = [r for r in on_page if r.review.status == "rejected"]
-    assert not any(r in needs_listing for r in rejected)
+    paired = next(r for r in rules.values()
+                  if r.source.page_path == SAMPLE and r.derivation.method != "human_span"
+                  and r.compliant_examples and r.violating_examples)
+    paired.review.status = "rejected"
+    write_ledger(replay.ledger, rules.values())
+
+    gs = replay.module.GoldenSet()
+    gs.swept[SAMPLE] = {"page_path": SAMPLE, "status": "complete", "by": "TA"}
+    read = lambda page: (REPO / "corpus" / "pages" / page).read_text(encoding="utf-8")
+    problems = replay.module._check_sweeps(gs, read)
+    assert not [m for _, m in problems if paired.uid in m], problems
+    # An accepted rule on the same page still has to be named.
+    assert any("already accepted" in m for _, m in problems), problems
 
 
 def test_rebase_is_a_no_op_while_the_corpus_is_frozen(replay):

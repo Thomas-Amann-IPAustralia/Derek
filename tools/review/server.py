@@ -52,7 +52,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from derek.extract.modality import Modality  # noqa: E402
 from derek.ledger.model import (  # noqa: E402
-    Clarity, Direction, ReviewStatus, Rule, Unit,
+    Clarity, DetectionHint, Direction, ReviewStatus, Rule, Unit,
 )
 from derek.ledger.store import load_ledger, write_ledger  # noqa: E402
 
@@ -75,7 +75,7 @@ DEFAULT_REVIEWER = (
 EDITABLE = {
     "review_status", "unit", "applies_to", "clarity", "direction",
     "modality", "violation_condition", "specification", "note",
-    "reasons", "elapsed_ms",
+    "reasons", "elapsed_ms", "detection_hint",
 }
 
 # A decision this fast was not a decision. Scored as zero and marked, so the
@@ -126,6 +126,7 @@ def load_glossary() -> dict:
         "clarity": Clarity.ALL,
         "direction": Direction.ALL,
         "modality": frozenset(Modality.ALL),
+        "detection_hint": DetectionHint.ALL,
     }
     problems = []
     for bucket, vocabulary in expected.items():
@@ -233,6 +234,13 @@ def _apply(rule: Rule, patch: dict, reviewer: str) -> None:
             raise ValueError(f"unknown modality: {patch['modality']!r}")
         rule.modality = patch["modality"]
         rule.modality_basis = f"set by {reviewer} during review"
+    if "detection_hint" in patch:
+        # ADR-010: the tier is a routing decision recorded at review, not a
+        # runtime fallback. The hint is the reviewer's closed-vocabulary answer
+        # to "how would this be checked?"; only the tier reaches the ledger.
+        if patch["detection_hint"] not in DetectionHint.ALL:
+            raise ValueError(f"unknown detection hint: {patch['detection_hint']!r}")
+        rule.detection.tier = DetectionHint.TIER[patch["detection_hint"]]
     if "violation_condition" in patch:
         rule.violation_condition = patch["violation_condition"]
     if "specification" in patch:

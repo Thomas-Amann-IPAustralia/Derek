@@ -72,6 +72,15 @@ class Span:
     prefix: str = ""
     suffix: str = ""
     of: str = ""                       # the rule span this supports
+    # Example spans sharing a group are ONE example that crosses blocks — a
+    # list's lead-in and its items, which the block projection splits apart.
+    # Without it "for example:" + "green" + "orange" + "red" became four
+    # examples, three of them a single word that illustrates nothing.
+    group: str = ""
+    # "<prompt version>/<model>" when the span was accepted from a model draft
+    # (ADR-025). Provenance only: nothing in extraction reads it. It is what lets
+    # derek.eval.draft_score tell a rule the reviewer found from one they kept.
+    seed_draft: str = ""
     tags: dict = field(default_factory=dict)
     preconditions: tuple[str, ...] = ()
     disambiguator: str = ""
@@ -94,6 +103,10 @@ class Span:
             "by": self.by,
             "at": self.at,
         }
+        if self.group:
+            out["group"] = self.group
+        if self.seed_draft:
+            out["seed_draft"] = self.seed_draft
         if self.kind == RULE:
             out["tags"] = dict(self.tags)
             out["preconditions"] = list(self.preconditions)
@@ -121,6 +134,8 @@ class Span:
             prefix=anchor.get("prefix", ""),
             suffix=anchor.get("suffix", ""),
             of=raw.get("of", ""),
+            group=raw.get("group", ""),
+            seed_draft=raw.get("seed_draft", ""),
             tags=dict(raw.get("tags") or {}),
             preconditions=tuple(raw.get("preconditions") or ()),
             disambiguator=raw.get("disambiguator", ""),
@@ -332,6 +347,7 @@ def golden_rules(page_path: str, text: str,
     heading_block_ids = {b.id for b in blocks if b.kind == "heading"}
     node_by_line = {n.line_start: n for n in nodes}
 
+    position = {b.id: i for i, b in enumerate(blocks)}
     resolved = {s.span_id: resolve_span(s, blocks) for s in spans}
     rules = [r for r in resolved.values() if r.span.kind == RULE]
     kids = [r for r in resolved.values() if r.span.kind != RULE]
@@ -401,13 +417,7 @@ def golden_rules(page_path: str, text: str,
         # human's spans is the measurement ADR-023 exists to make possible.
         form = classify_heading(statement)[1] or "descriptive"
 
-        examples: dict[str, list[str]] = {}
-        for kid in kids:
-            if kid.span.of != span.span_id:
-                continue
-            key = {"compliant": GOLD_COMPLIANT, "violating": GOLD_VIOLATING}.get(kid.span.kind)
-            if key:
-                examples.setdefault(key, []).append(kid.text)
+        examples = _examples_of(page_path, span, kids, position)
 
         preconditions = list(span.preconditions) + [
             k.text for k in kids
@@ -438,6 +448,45 @@ def golden_rules(page_path: str, text: str,
 
     out.sort(key=lambda pair: (pair[1].line_start, pair[1].uid))
     return out
+
+
+def _examples_of(page_path: str, rule: Span, kids, position) -> dict[str, list[str]]:
+    """The example strings one rule span contributes, keyed by polarity.
+
+    Ungrouped examples keep the order they always had, so a golden set with no
+    groups builds the same ledger it did before groups existed. A group becomes
+    one string, its members joined by newlines in document order, emitted where
+    its first member would have been. Newline rather than any list marker: a
+    training input carries no format markup (D-13, ADR-019).
+    """
+    mine = [k for k in kids if k.span.of == rule.span_id]
+    groups: dict[str, list] = {}
+    for kid in mine:
+        if kid.span.group:
+            groups.setdefault(kid.span.group, []).append(kid)
+    for gid, members in groups.items():
+        kinds = {m.span.kind for m in members}
+        if len(kinds) > 1:
+            raise GoldenError(
+                f"{page_path}: example group {gid} mixes {sorted(kinds)} — one "
+                f"example cannot both comply and violate")
+
+    examples: dict[str, list[str]] = {}
+    emitted: set[str] = set()
+    for kid in mine:
+        key = {"compliant": GOLD_COMPLIANT, "violating": GOLD_VIOLATING}.get(kid.span.kind)
+        if not key:
+            continue
+        gid = kid.span.group
+        if not gid:
+            examples.setdefault(key, []).append(kid.text)
+            continue
+        if gid in emitted:
+            continue
+        emitted.add(gid)
+        members = sorted(groups[gid], key=lambda m: (position.get(m.block.id, 0), m.span.start))
+        examples.setdefault(key, []).append("\n".join(m.text for m in members))
+    return examples
 
 
 def _enclosing(nodes, block: Block):

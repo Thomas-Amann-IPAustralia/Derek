@@ -30,7 +30,7 @@ Violating any of these reintroduces a known failure. Each links to its rationale
 | D-4 | Corpus eligibility is declared in `corpus/eligibility.yaml`, never inferred per rule | [ADR-005](docs/02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred) |
 | D-5 | A rule's examples are never drawn from the sentence that states the rule | [postmortem §4](docs/00-postmortem-octavius.md#4-what-is-worth-keeping) |
 | D-6 | `applies_to` and `unit` are mandatory; `unit: artifact` never loads | [ADR-007](docs/02-decisions.md#adr-007--scope-and-unit-are-mandatory) |
-| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002--deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive) |
+| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002--deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive), [ADR-025](docs/02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them) |
 | D-8 | Change detection uses content hashes, not the site's `lastmod` | [ADR-001](docs/02-decisions.md#adr-001--snapshot-integrity-over-site-metadata) |
 | D-9 | Model calls are a content-addressed cache; re-running is a no-op | [ADR-003](docs/02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step) |
 | D-10 | Only `accepted`/`amended` rules load. A human gates the runtime | [ADR-008](docs/02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue) |
@@ -69,6 +69,24 @@ python tools/annotate/apply_spans.py golden/inbox/*.jsonl              # spans �
 python tools/annotate/apply_spans.py golden/inbox/*.jsonl --dry-run
 python -m derek.extract.blocks --check  # CI: the block projection matches its lock
 python -m derek.eval.span_recall        # the heuristic, measured on swept pages
+python -m derek.eval.golden_lint        # the golden set vs the invariants and docs/08
+                                        # (also shipped into the annotator as data/lint.json)
+
+# Model drafts (ADR-025). Offline authoring, like the tagger: a pinned model
+# proposes spans as pointers into the manual, cached under golden/drafts/; the
+# annotator shows them as seeds and a human accepts or dismisses each one.
+# Needs requirements-draft.txt and a key, or run draft-spans.yml from Actions.
+python tools/draft/draft_spans.py --blind --dry-run   # what would run; free
+python tools/draft/draft_spans.py --next 5            # draft five new pages
+python -m derek.eval.draft_score        # drafts vs human marks: quality on blind pages only
+python -m derek.eval.annotation_pace    # words a minute per page, blind vs seeded
+
+# Tier 0 detection (ADR-026). Matchers are proposed as data in ledger/proposals/
+# and adopted by a named human, only if the rule's own examples agree and the
+# manual's prose stays within budget. adopt-matchers.yml does the same from Actions.
+python -m derek.detect.proposals                     # ready or blocked, and why
+python -m derek.detect.proposals adopt UID --by TA   # write a ready matcher to the ledger
+python -m derek.detect FILE.txt                      # run adopted rules over a text file
 
 # Imperative detection by POS tagger (ADR-021). Offline authoring step: writes a
 # checked-in verdict table that derek/extract/ reads as data, so extraction stays
@@ -133,6 +151,17 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/extract/golden.py` | `golden/spans.jsonl` → candidates, with the D-4/D-5 refusals |
 | `golden/spans.jsonl` | The golden set: the spans a human marked as rules |
 | `golden/pages.jsonl` | Which pages a human swept — what turns absence into a negative |
+| `docs/08-rule-grain.md` | What counts as one rule. The lint checks it; the drafting prompt embeds it verbatim |
+| `derek/eval/golden_lint.py` | The golden set checked against D-2, ADR-006, E-1 and the grain policy |
+| `tools/draft/drafting.py` | Drafting prompt (hash-pinned), the pointer check, the draft cache (ADR-025) |
+| `tools/draft/draft_spans.py` | The only code that calls a model; imports the SDK lazily |
+| `golden/drafts/` | **Cached model output.** Proposals, never an extraction input |
+| `golden/blind.json` | Pages whose drafts are never shown — the only pages a draft is measured on |
+| `derek/eval/draft_score.py` | Draft recall/precision on blind pages; acceptance on seeded pages, separately |
+| `derek/detect/matchers.py` | The Tier 0 matcher vocabulary: `regex`, `literal_set`, and their scope keys |
+| `derek/detect/document.py` | Plain-text `Document` (ADR-012); which blocks are the manual's wrong examples |
+| `derek/detect/engine.py` | Accepted rules → raw findings; the examples harness |
+| `ledger/proposals/` | Proposed matchers, as data. Only `derek.detect.proposals adopt` writes them into the ledger |
 | `derek/extract/candidates.py` | Normativity classification, stable UIDs, gold-example harvesting |
 | `derek/extract/data/imperative_verbs.txt` | Hand-curated verb list; primary imperative signal |
 | `derek/extract/data/imperative_headings.json` | **Generated.** Pinned-tagger verdicts (ADR-021); never hand-edit |
@@ -181,6 +210,15 @@ uid no candidate reproduces, and nothing reproduces a hand edit — so the rule 
 on the very next build. The distinction the two methods draw is *reproducible from a
 declared input* versus *hand edit the pipeline cannot regenerate*, and only the first one
 works.
+
+**What counts as one rule** is `docs/08-rule-grain.md`: one rule is one thing a checker
+would flag and cite. The annotator's *Checks* card shows `golden_lint`'s findings per page.
+
+**Model drafts** (ADR-025) appear in the annotator as dashed violet text. A draft is a set
+of pointers into the manual, so its quotes are the manual's own words; its tags are a
+model's guesses. Never widen what a draft can do: it may not write to `golden/` or the
+ledger, it is not an extraction input, and it is never shown on a page in
+`golden/blind.json`.
 
 **Before accepting any rule, confirm:**
 

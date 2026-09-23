@@ -199,21 +199,52 @@ rules, which is what Phase 2b is for.
       same `server._apply` the triage app uses
 - [x] `derek/eval/span_recall.py` — the heading heuristic measured against what a human
       actually marked, on swept pages only
-- [ ] **Annotate the 128 eligible pages** ← the actual next task. Start with ten
-      different-shaped ones (`commas.md`, `treaties.md`, `pronouns.md`, a table-heavy
-      page) before committing to the corpus, because the interaction model is the thing
-      most likely to be wrong.
+- [x] First three pages annotated (`commas.md`, `pronouns.md`, `treaties.md`), at about
+      23 words a minute, or at least 116 hours for the whole manual at that pace
+      (`python -m derek.eval.annotation_pace`).
+      They surfaced the gaps below, and the annotator was changed to close them.
+- [x] The span form asks for `violation_condition` (D-2: all 44 rules accepted before it
+      had none) and records *how a checker would find it* as a closed choice that sets
+      `detection.tier` (ADR-010). A list's lead-in and its items can be one example
+      (<kbd>⇧C</kbd> / <kbd>⇧V</kbd>). Unswept pages with rules on them are named on export.
+- [x] [`docs/08-rule-grain.md`](08-rule-grain.md): what counts as one rule. **Proposed**,
+      pending agreement from whoever annotates.
+- [x] `derek/eval/golden_lint.py`: the golden set checked against the invariants and
+      that policy, shown on each page in the annotator and after each upload.
+- [x] Model drafts ([ADR-025](02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them),
+      proposed): `tools/draft/` and `draft-spans.yml`, a draft layer in the annotator,
+      `golden/blind.json` (10 pages never shown a draft), and `derek/eval/draft_score.py`.
+      **Built and tested; not yet run**, because it needs an API key.
+- [ ] **Finish and sweep the first three pages**, working through the annotator's
+      *Checks* card. They are blind, so they are the first measurement.
+- [ ] **Draft the blind pages and score them** (`draft-spans.yml` with `blind`). This
+      decides ADR-025: if drafts do not beat the sentence regex on recall, or they get
+      example polarity wrong more often than a human, drafting stops here.
+- [ ] If it passes: annotate 5 to 8 varied pages *with* drafts, and compare their pace
+      (`python -m derek.eval.annotation_pace`) with the blind pages.
+- [ ] Then the rest of the 128 eligible pages.
 
 **Done when:** every eligible page is swept, so `span_recall` has a complete set to
 measure against and the ledger's inventory is one a human drew rather than one a
 heuristic guessed.
 
-### Phase 3 — Tier 0 detection
+### Phase 3 — Tier 0 detection *(started)*
 
-- [ ] `derek/detect/` — matcher primitives ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime))
-- [ ] `Document` + `Anchor` + plain-text and Markdown adapters, with property tests
-- [ ] Example harness: violating fire, compliant do not
-- [ ] Dogfood gate wired into CI
+- [x] `derek/detect/matchers.py`: `regex` and `literal_set`, plus the scope keys `unless`,
+      `window` and `skip_quoted`, all data ([ADR-009](02-decisions.md#adr-009--no-generated-code-in-the-runtime),
+      [ADR-026](02-decisions.md#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human))
+- [x] `Document` with plain-text and Style Manual page adapters, with the slice
+      invariant tested. *Anchors back to a source format, and a Markdown adapter for
+      user documents, are still to do.*
+- [x] Example harness: violating fire, compliant do not, and at least one violating
+      example to fire on
+- [x] Dogfood gate wired into CI, now on plain text; `derek.detect` runs the same matchers
+- [x] Nine matchers proposed in `ledger/proposals/tier0.jsonl`: **four ready** (Latin
+      shortened forms, digit grouping, "and myself" as subject, opening with numbers and
+      dates), four blocked for want of a violating example, and one blocked by
+      [Q9](05-open-questions.md#q9--the-harvested-gold-examples-include-the-prose-that-follows-them).
+      **None adopted:** that is a named human's step (`adopt-matchers.yml`).
+- [ ] Violating examples for the blocked four, from a reviewed source
 - [ ] Calibration on the gold set; real `confidence` values
 
 **Done when:** Tier 0 rules run green through the dogfood gate and carry calibrated

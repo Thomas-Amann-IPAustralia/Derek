@@ -741,9 +741,8 @@ PREVIOUSLY_MISSED = [
 ]
 
 
-def test_previously_missed_rules_are_extracted():
-    from derek.extract.build import collect_candidates
-    cands, _, _ = collect_candidates()
+def test_previously_missed_rules_are_extracted(heading_walk):
+    cands, _, _ = heading_walk()
     found = {c.statement for c in cands}
     missing = [s for s in PREVIOUSLY_MISSED if s not in found]
     assert not missing, f"recall regression — these rules are no longer extracted: {missing}"
@@ -818,8 +817,24 @@ TAGGER_RECOVERED = [
 ]
 
 
-def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
-    cands, _, _ = collect_candidates()
+@pytest.fixture
+def heading_walk(monkeypatch, tmp_path):
+    """``collect_candidates`` with the golden set emptied.
+
+    The recall tests below are about what the *heading walk* reaches. A human
+    span on the same heading wins the uid collision (ADR-023) and carries its
+    own ``statement_form``, so once ``golden/spans.jsonl`` has data these tests
+    would be measuring the reviewer rather than the extractor. That is how they
+    went red the moment the first three pages were annotated.
+    """
+    from derek.extract import build as build_mod
+    monkeypatch.setattr(build_mod, "GOLDEN_SPANS", tmp_path / "spans.jsonl")
+    monkeypatch.setattr(build_mod, "GOLDEN_PAGES", tmp_path / "pages.jsonl")
+    return build_mod.collect_candidates
+
+
+def test_example_pair_recovers_rules_no_grammatical_branch_reaches(heading_walk):
+    cands, _, _ = heading_walk()
     found = {c.statement: c for c in cands}
     missing = [s for s in EXEMPLIFIED if normalise_statement(s) not in found]
     assert not missing, f"recall regression — no longer extracted: {missing}"
@@ -829,8 +844,8 @@ def test_example_pair_recovers_rules_no_grammatical_branch_reaches():
         assert c.examples, f"{statement} was admitted on examples but carries none"
 
 
-def test_tagger_recovers_imperatives_the_verb_list_cannot_reach():
-    cands, _, _ = collect_candidates()
+def test_tagger_recovers_imperatives_the_verb_list_cannot_reach(heading_walk):
+    cands, _, _ = heading_walk()
     found = {c.statement: c for c in cands}
     missing = [s for s in TAGGER_RECOVERED if normalise_statement(s) not in found]
     assert not missing, f"recall regression — no longer extracted: {missing}"

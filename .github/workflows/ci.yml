@@ -36,6 +36,12 @@ jobs:
       - name: Dogfood gate (ADR-011)
         run: python -m derek.eval.dogfood
 
+      # Which proposed matchers are ready for a human to adopt, and what blocks
+      # the rest (ADR-026). A report, not a gate: adopting is a person's step.
+      - name: Tier 0 proposals
+        if: always()
+        run: python -m derek.detect.proposals >> "$GITHUB_STEP_SUMMARY"
+
       - name: Ledger status
         if: always()
         run: |

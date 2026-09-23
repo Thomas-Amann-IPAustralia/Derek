@@ -1,0 +1,110 @@
+name: Draft rule spans
+
+# Runs a model over Style Manual pages and caches its drafts under
+# golden/drafts/ (ADR-025). The annotator shows each draft as a second layer of
+# seeds beside the heading walk's; nothing becomes a rule until a reviewer
+# accepts it there, and nothing in extraction reads a draft.
+#
+# Started by hand from the Actions tab, because every run costs money. It needs
+# a repository secret named ANTHROPIC_API_KEY (Settings → Secrets and
+# variables → Actions). A dry run needs no key and spends nothing.
+#
+# Pages already drafted under the current prompt version and model are skipped,
+# so running the same input twice costs nothing the second time (ADR-003).
+
+on:
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: >-
+          Which pages: "blind" (the holdout, for scoring), "next:N" (the next N
+          pages nobody has annotated or drafted, e.g. next:5), "all", or page
+          paths separated by spaces
+        required: true
+        default: blind
+      dry_run:
+        description: Only report what would be drafted; call nothing, spend nothing
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+# Shares the ledger writers' group: this pushes to main too, and two jobs
+# pushing at once means one of them is rejected.
+concurrency:
+  group: ledger-write
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    outputs:
+      drafted: ${{ steps.commit.outputs.drafted }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements-draft.txt
+
+      # Inputs reach the script through the environment, never pasted into it,
+      # so a page list cannot be read as shell.
+      - name: Draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PAGES_INPUT: ${{ inputs.pages }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -o pipefail
+          case "$PAGES_INPUT" in
+            blind)  args=(--blind) ;;
+            all)    args=(--all) ;;
+            next:*) args=(--next "${PAGES_INPUT#next:}") ;;
+            *)      read -ra args <<< "$PAGES_INPUT" ;;
+          esac
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          elif [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::No ANTHROPIC_API_KEY secret. Add one under Settings → Secrets and variables → Actions, or run with dry_run."
+            exit 1
+          fi
+          python tools/draft/draft_spans.py "${args[@]}" | tee /tmp/draft.log
+
+      - name: Commit the drafts
+        id: commit
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name  "DerekBot"
+          git config user.email "derek-bot@users.noreply.github.com"
+          git add golden/drafts/
+          if git diff --cached --quiet; then
+            echo "Nothing new."
+            echo "drafted=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "golden: model drafts ($(git diff --cached --name-only | wc -l) page(s))"
+            git push origin HEAD
+            echo "drafted=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summarise
+        if: always()
+        run: |
+          {
+            echo "### Drafts"
+            echo '```'
+            cat /tmp/draft.log 2>/dev/null || echo "no log"
+            echo '```'
+            python -m derek.eval.draft_score || echo "draft_score failed — see the job log"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # A push made with GITHUB_TOKEN does not trigger another workflow, so the
+  # annotator is rebuilt from here, or the new drafts would not appear in it.
+  publish:
+    needs: draft
+    if: needs.draft.outputs.drafted == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

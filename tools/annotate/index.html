@@ -105,6 +105,7 @@ main{overflow-y:auto;min-width:0;padding:26px 0 60vh}
 .pg .m{font-size:11px;color:var(--muted);display:flex;gap:7px;margin-top:1px}
 .pg.ineligible .t{color:var(--muted);font-style:italic}
 .pg .done{color:var(--keep);font-weight:700}
+.pg .unswept{color:var(--gold);font-weight:700}
 
 /* the reconstructed page -------------------------------------------------- */
 .doc{max-width:760px;margin:0 auto;padding:0 28px}
@@ -141,6 +142,8 @@ main{overflow-y:auto;min-width:0;padding:26px 0 60vh}
 .s-compliant{background:var(--keep-bg);border-bottom:2px solid var(--keep)}
 .s-violating{background:var(--bin-bg);border-bottom:2px solid var(--bin)}
 .s-precondition{border-bottom:2px dotted var(--defer)}
+/* A model's draft (ADR-025): a suggestion, drawn like no decision a human made. */
+.s-draft{background:var(--defer-bg);border-bottom:2px dashed var(--defer);cursor:pointer}
 .s-sel{outline:2px solid var(--accent);outline-offset:1px;border-radius:3px}
 .seed{border-bottom:2px dashed var(--line-2);cursor:pointer}
 .seed.accepted{border-bottom-color:var(--keep)}
@@ -310,6 +313,9 @@ const K_OPS = "derek.spans.v1";
 const K_WHO = "derek.reviewer";
 const K_THEME = "derek.theme";
 const K_PAGE = "derek.annotate.page";
+// Dismissed drafts stay in this browser: dismissing is not a judgement anyone
+// else needs, because on a swept page an unmarked draft rule is already "no".
+const K_DISMISS = "derek.annotate.drafts.dismissed";
 
 const KINDS = {
   rule:         { key: "R", label: "Rule",      hint: "the text that states the rule" },
@@ -321,6 +327,8 @@ const KINDS = {
 const S = {
   index: null,          // data/index.json
   baseline: { spans: [], pages: [] },
+  lint: {},             // page_path -> findings, as of the last build
+  dismissed: new Set(), // "page|anchor key" of drafts dismissed in this browser
   page: null,           // the loaded page payload
   cache: new Map(),     // slug -> payload
   ops: [],              // the local op log, in export shape
@@ -440,6 +448,7 @@ async function boot() {
     return;
   }
   try { S.baseline = await getJSON("data/spans.json"); } catch (e) { /* first run */ }
+  try { S.lint = (await getJSON("data/lint.json")).pages || {}; } catch (e) { S.lint = {}; }
 
   if (S.index.freeze && S.index.freeze.frozen) {
     document.body.classList.add("frozen");
@@ -450,6 +459,8 @@ async function boot() {
       Upstream drift is still detected and reported.</span>`;
   }
 
+  try { S.dismissed = new Set(JSON.parse(localStorage.getItem(K_DISMISS) || "[]")); }
+  catch (e) { S.dismissed = new Set(); }
   OPS.load();
   replay();
   renderRail();
@@ -497,8 +508,11 @@ function renderRail() {
         <div class="m">
           ${n ? `<span><b>${n}</b> span${n === 1 ? "" : "s"}</span>` : ""}
           ${p.seeds ? `<span>${p.seeds} seed${p.seeds === 1 ? "" : "s"}</span>` : ""}
+          ${p.drafted ? `<span style="color:var(--defer)">${p.drafted} drafted</span>` : ""}
+          ${p.blind ? '<span title="golden/blind.json: drafts hidden by design">blind</span>' : ""}
           ${p.eligible ? "" : "<span>not a rule source</span>"}
-          ${done ? '<span class="done">✓ swept</span>' : ""}
+          ${done ? '<span class="done">✓ swept</span>'
+            : n ? '<span class="unswept" title="Rules marked, but the page is not marked swept (F)">not swept</span>' : ""}
         </div></button>`;
   }
   $("railList").innerHTML = html || '<div class="empty" style="padding:12px">No pages match.</div>';
@@ -564,14 +578,37 @@ function blockInner(block, spans) {
     ];
     const href = (s.marks.find((m) => m.kind === "link") || {}).href;
     const title = href ? ` title="${esc(href)}"` : "";
-    const key = s.spans.length ? ` data-span="${esc(keyOf(s.spans[s.spans.length - 1]))}"` : "";
+    // A human's span wins the click over a draft under it.
+    const real = s.spans.filter((x) => x.kind !== "draft");
+    const top = real.length ? real[real.length - 1] : s.spans[s.spans.length - 1];
+    const key = top ? (top.kind === "draft" ? ` data-draft="${top.n}"`
+                                            : ` data-span="${esc(keyOf(top))}"`) : "";
     html += `<span class="${cls.join(" ")}"${title}${key}>${esc(s.text)}</span>`;
   }
   return html;
 }
 
+/* A draft rule the reviewer has not yet accepted or dismissed. Accepted means a
+   rule span now sits at exactly its anchor, from this browser or the golden set. */
+function pendingDrafts() {
+  const d = S.page && S.page.drafts;
+  if (!d) return [];
+  const have = new Set(spansOn(S.page.path).filter((x) => x.kind === "rule").map(keyOf));
+  return d.rules.filter((r) => {
+    const k = draftKey(r, "rule");
+    return !have.has(k) && !S.dismissed.has(`${S.page.path}|${k}`);
+  });
+}
+const draftKey = (r, kind) => `${r.anchor.block_id}|${r.anchor.start}|${r.anchor.end}|${kind}`;
+
 function renderDoc() {
   const p = S.page;
+  const drafted = new Map();
+  for (const r of pendingDrafts()) {
+    const list = drafted.get(r.anchor.block_id) || [];
+    list.push({ kind: "draft", anchor: r.anchor, n: r.n });
+    drafted.set(r.anchor.block_id, list);
+  }
   const seedsByBlock = new Map();
   for (const s of p.seeds) {
     if (!s.block_id) continue;
@@ -584,7 +621,7 @@ function renderDoc() {
 
   const body = [];
   for (const b of p.blocks) {
-    const spans = spansIn(p.path, b.id);
+    const spans = [...(drafted.get(b.id) || []), ...spansIn(p.path, b.id)];
     const inner = blockInner(b, spans);
     const focus = b.id === S.focusBlock ? " focus" : "";
 
@@ -729,10 +766,17 @@ function wireSelection() {
     clearTimeout(wireSelection._t);
     wireSelection._t = setTimeout(showToolbar, 90);
   });
-  $("main").addEventListener("scroll", () => $("toolbar").classList.remove("on"));
+  $("main").addEventListener("scroll", () => {
+    $("toolbar").classList.remove("on");
+    if (S._toolbarAfterScroll) toolbarAfterScroll();
+  });
   $("doc").addEventListener("click", (e) => {
     const marked = e.target.closest("[data-span]");
     if (marked) { selectSpan(marked.dataset.span); return; }
+    const drafted = e.target.closest("[data-draft]");
+    if (drafted && !window.getSelection().toString()) {
+      openDraft(+drafted.dataset.draft); return;
+    }
     const blk = e.target.closest("[data-bid]");
     if (blk) { S.focusBlock = blk.dataset.bid; renderDoc(); }
   });
@@ -751,7 +795,10 @@ function showToolbar() {
     return `<button ${off ? "disabled" : ""} onclick="mark('${kind}')"
       title="${esc(k.hint)}${off ? " — a rule span cannot cross blocks" : ""}"
       >${esc(k.label)}<kbd>${k.key}</kbd></button>`;
-  }).join("");
+  }).join("") + (cross ? ["compliant", "violating"].map((kind) =>
+    `<button onclick="mark('${kind}', true)"
+      title="${esc(KINDS[kind].hint)} — these ${sel.parts.length} lines as ONE example, e.g. a list's lead-in and its items"
+      >${esc(KINDS[kind].label)} ×1<kbd>⇧${KINDS[kind].key}</kbd></button>`).join("") : "");
 
   const r = sel.rect;
   bar.classList.add("on");
@@ -784,7 +831,7 @@ function anchorFor(part) {
   };
 }
 
-function mark(kind) {
+function mark(kind, join = false) {
   const sel = S.sel || readSelection();
   if (!sel) { toast("Select some text first"); return; }
   if (!S.page.eligible) {
@@ -812,17 +859,25 @@ function mark(kind) {
       }
     }
     // A cross-block example list — the usual "Write this" list of 3-6 items —
-    // becomes one span per block, all pointing at the same rule.
+    // becomes one span per block, all pointing at the same rule. Joined, the
+    // parts share a `group` named by the first part's tuple (the browser never
+    // mints an id), and `golden.py` builds them into ONE example.
+    const joined = join && kind !== "precondition" && sel.parts.length > 1;
+    const first = sel.parts[0];
+    const group = joined ? `${first.block_id}|${first.start}|${first.end}|${kind}` : "";
     for (const part of sel.parts) {
-      OPS.add({ op: "span", span: {
+      const span = {
         page_path: S.page.path, page_sha256: S.page.sha256, kind,
         anchor: anchorFor(part), of: S.currentRule,
-      }});
+      };
+      if (group) span.group = group;
+      OPS.add({ op: "span", span });
     }
     window.getSelection().removeAllRanges();
     $("toolbar").classList.remove("on");
     renderDoc(); renderSide();
-    toast(`${KINDS[kind].label} recorded`);
+    toast(joined ? `${KINDS[kind].label} recorded as one ${sel.parts.length}-line example`
+                 : `${KINDS[kind].label} recorded`);
     return;
   }
 
@@ -849,7 +904,20 @@ function seedAt(part) {
 const blankTags = () => ({
   unit: "", clarity: "", direction: "", modality: "", applies_to: [],
   review_status: "accepted", specification: "", violation_condition: "", note: "",
+  detection_hint: "",
 });
+
+/* D-2: a kept rule says what makes text WRONG. The first 44 rules accepted here
+   all had it blank, because the form never asked — and a restatement of the
+   right form ("Use commas between items") went into `specification` instead,
+   which is the opposite polarity. A permission (MAY) has nothing to violate, and
+   a rule that will not load needs none. */
+function needsViolation(tags) {
+  return tags.review_status === "accepted"
+    && tags.unit !== "artifact"
+    && tags.clarity !== "not_automatable"
+    && tags.modality !== "MAY";
+}
 
 function selectSpan(key) {
   S.selected = key;
@@ -901,6 +969,7 @@ function acceptSeed(uid) {
       unit: seed.unit || "", direction: seed.direction || "",
       modality: seed.modality || "", applies_to: (seed.applies_to || []).slice(),
       specification: seed.specification || "",
+      violation_condition: seed.violation_condition || "",
     },
     preconditions: [],
   };
@@ -929,6 +998,152 @@ function undoSeed(uid) {
   renderDoc(); renderSide();
 }
 
+/* --- drafts: a model's first cut (ADR-025) ---------------------------------
+   A second seed layer beside the heading walk's. Every quote in a draft was
+   checked against the manual when it was built, so it points at the page's own
+   text, but its tags are a model's guesses. Accepting one opens the ordinary tag
+   sheet pre-filled, with clarity left blank as it is for a heading seed: one
+   field nobody can accept without deciding it. A draft is never recorded as a
+   decision by itself.
+   --------------------------------------------------------------------------- */
+
+function draftByN(n) {
+  return ((S.page && S.page.drafts && S.page.drafts.rules) || []).find((r) => r.n === n);
+}
+
+function openDraft(n) {
+  const r = draftByN(n);
+  if (!r) return;
+  const d = S.page.drafts;
+  S.focusBlock = r.anchor.block_id;
+  renderDoc();
+  const ex = (r.examples || []).map((e) => `<div class="q" style="font-size:13px">
+      ${e.kind === "compliant" ? "✓" : "✗"} ${esc(e.parts.map((p) => p.quote).join(" / ").slice(0, 200))}
+      ${e.note ? `<span style="color:var(--muted)"> — ${esc(e.note)}</span>` : ""}</div>`).join("");
+  const tag = (k, v) => v ? `<span class="tag" title="${esc(k)}">${esc(v)}</span>` : "";
+  openSheet(`
+    <div class="k" style="margin-bottom:5px">Draft · ${esc(d.prompt_version)} · ${esc(d.served_model || d.model)}</div>
+    <h2 style="font-size:17px;margin-bottom:8px">${esc(r.anchor.quote)}</h2>
+    <div class="tags" style="margin-bottom:8px">
+      ${tag("unit", r.tags.unit)}${tag("direction", r.tags.direction)}${tag("modality", r.tags.modality)}
+      ${tag("detection", r.tags.detection_hint)}${(r.tags.applies_to || []).map((a) => tag("applies to", a)).join("")}
+      ${r.clarity_suggestion ? `<span class="tag" style="border-style:dashed">clarity? ${esc(r.clarity_suggestion)}</span>` : ""}
+    </div>
+    <div class="card"><div class="k"><span>What makes text wrong</span></div>
+      <div class="q">${esc(r.tags.violation_condition || "—")}</div></div>
+    ${r.tags.specification ? `<div class="card"><div class="k"><span>Interpretation</span></div>
+      <div class="q">${esc(r.tags.specification)}</div></div>` : ""}
+    ${(r.when || []).length ? `<div class="card"><div class="k"><span>When</span></div>
+      ${r.when.map((w) => `<div class="q" style="font-size:13px">${esc(w)}</div>`).join("")}</div>` : ""}
+    ${ex ? `<div class="card"><div class="k"><span>Examples it attaches</span>
+      <span>${r.examples.length}</span></div>${ex}</div>` : ""}
+    ${(r.covers || []).length ? `<div class="card"><div class="k"><span>Folded into this rule</span></div>
+      ${r.covers.map((c) => `<div class="q" style="font-size:12.5px;color:var(--ink-2)">${esc(c.quote.slice(0, 160))}</div>`).join("")}</div>` : ""}
+    ${r.why ? `<p class="why">${esc(r.why)}</p>` : ""}
+    <p class="why">Check the polarity of each example against the page before you accept:
+      a correct sentence marked ✗ teaches a checker to flag correct text (E-1).</p>
+    <button class="btn primary" style="width:100%" onclick="acceptDraft(${n})">Review &amp; accept</button>
+    <button class="btn" style="width:100%;margin-top:8px" onclick="dismissDraft(${n})">Not a rule — dismiss</button>
+    <button class="btn" style="width:100%;margin-top:8px" onclick="closeSheet()">Close</button>
+  `);
+}
+
+function acceptDraft(n) {
+  const r = draftByN(n);
+  if (!r) return;
+  const d = S.page.drafts;
+  const plain = plainOf(r.anchor.block_id);
+  const span = {
+    page_path: S.page.path, page_sha256: S.page.sha256, kind: "rule",
+    anchor: { ...r.anchor }, of: "",
+    seed_uid: seedAt({ block_id: r.anchor.block_id, start: r.anchor.start, end: r.anchor.end,
+                       text: plain.slice(r.anchor.start, r.anchor.end) }),
+    seed_draft: `${d.prompt_version}/${d.model}`,
+    tags: {
+      ...blankTags(),
+      unit: r.tags.unit || "", direction: r.tags.direction || "",
+      modality: r.tags.modality || "", applies_to: (r.tags.applies_to || []).slice(),
+      detection_hint: r.tags.detection_hint || "",
+      violation_condition: r.tags.violation_condition || "",
+      specification: r.tags.specification || "",
+    },
+    preconditions: (r.when || []).slice(),
+  };
+  S._acceptingKeep = true;
+  closeSheet();
+  S._acceptingKeep = false;
+  S._fromDraft = r;
+  openTags(span, true);
+}
+
+function dismissDraft(n) {
+  const r = draftByN(n);
+  if (!r) return;
+  S.dismissed.add(`${S.page.path}|${draftKey(r, "rule")}`);
+  try { localStorage.setItem(K_DISMISS, JSON.stringify([...S.dismissed])); } catch (e) { /* private window */ }
+  closeSheet();
+  renderDoc(); renderSide();
+  toast("Draft dismissed in this browser");
+}
+
+/* After the reviewer saves a rule accepted from a draft, its examples follow,
+   each part pointing at the rule, grouped when the draft joined several. */
+function addDraftExamples(rule, draft) {
+  let n = 0;
+  for (const ex of draft.examples || []) {
+    const first = ex.parts[0];
+    const group = ex.parts.length > 1
+      ? `${first.block_id}|${first.start}|${first.end}|${ex.kind}` : "";
+    for (const part of ex.parts) {
+      // D-5, checked again: the reviewer may have kept the rule at a new extent.
+      if (part.block_id === rule.anchor.block_id
+          && part.start < rule.anchor.end && part.end > rule.anchor.start) continue;
+      const span = { page_path: S.page.path, page_sha256: S.page.sha256, kind: ex.kind,
+                     anchor: { ...part }, of: keyOf(rule), seed_draft: rule.seed_draft || "" };
+      if (group) span.group = group;
+      OPS.add({ op: "span", span });
+      n++;
+    }
+  }
+  return n;
+}
+
+function nextDraft() {
+  const list = pendingDrafts();
+  if (!list.length) { toast(S.page.drafts ? "No drafts left on this page" : "No draft for this page"); return; }
+  const order = new Map(S.page.blocks.map((b, i) => [b.id, i]));
+  list.sort((a, b) => (order.get(a.anchor.block_id) - order.get(b.anchor.block_id)) || (a.anchor.start - b.anchor.start));
+  const el = document.querySelector(`[data-bid="${list[0].anchor.block_id}"]`);
+  if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+  openDraft(list[0].n);
+}
+
+function draftCard() {
+  const d = S.page.drafts;
+  if (S.page.blind) {
+    return `<div class="card"><div class="k"><span>Draft</span><span>blind page</span></div>
+      <p class="why" style="margin:4px 0 0">This page is in <code>golden/blind.json</code>, so
+        any model draft is hidden here by design. What you mark on it is what a draft
+        is measured against (<code>derek.eval.draft_score</code>).</p></div>`;
+  }
+  if (!d) return "";
+  const pend = pendingDrafts();
+  const notes = (d.not_rules || []).filter((x) => x.seed_uid && !S.seeds.get(x.seed_uid));
+  return `<div class="card" style="border-color:var(--defer)">
+    <div class="k"><span>Model draft · ${esc(d.prompt_version)}</span>
+      <span>${pend.length} of ${d.rules.length} to review</span></div>
+    <p class="why" style="margin:4px 0 0">Dashed violet text is a draft rule. Every quote
+      is the manual's own text; the tags are a model's guesses. <kbd>D</kbd> opens the next one.</p>
+    ${pend.slice(0, 10).map((r) => `<div class="q" style="font-size:12.5px;margin-top:5px">
+      <a href="#" onclick="event.preventDefault();openDraft(${r.n})">${esc(r.anchor.quote.slice(0, 90))}</a></div>`).join("")}
+    ${pend.length > 10 ? `<p class="why">…and ${pend.length - 10} more.</p>` : ""}
+    ${notes.length ? `<div class="k" style="margin-top:9px"><span>The draft says these candidates are not rules</span></div>
+      ${notes.map((x) => `<div class="q" style="font-size:12.5px;margin-top:4px">
+        <a href="#" onclick="event.preventDefault();pickSeed('${esc(x.seed_uid)}')">${esc(x.anchor.quote.slice(0, 80))}</a>
+        <span class="tag">${esc(x.reason)}</span>${x.note ? ` <span style="color:var(--muted)">${esc(x.note.slice(0, 120))}</span>` : ""}</div>`).join("")}` : ""}
+  </div>`;
+}
+
 /* --- marking a page swept -------------------------------------------------
    This is what turns absence into a label. "I read this page; these are all its
    rules" makes every unmarked heading a negative example, which is what lets a
@@ -943,9 +1158,12 @@ function markSwept() {
   const rules = spansOn(S.page.path).filter((s) => s.kind === "rule");
   const loose = S.page.seeds.filter((s) => !S.seeds.get(s.uid)
     && !rules.some((r) => r.seed_uid === s.uid));
+  // Mirrors `_check_sweeps`: a rejected or deferred candidate agrees with the
+  // sweep (or has no judgement to lose), so only the other two classes are asked.
   const risky = loose.filter(
-    (s) => (s.compliant.length && s.violating.length)
-        || ["accepted", "amended"].includes(s.status));
+    (s) => ["accepted", "amended"].includes(s.status)
+        || (!["rejected", "deferred"].includes(s.status)
+            && s.compliant.length && s.violating.length));
 
   const done = S.marks.get(S.page.path);
   openSheet(`
@@ -1084,6 +1302,10 @@ function openTags(span, isNew) {
       ${seed ? ` · confirms <span class="mono">${esc(seed.uid)}</span>` : ""}
     </div>
     <h2 style="font-size:17px;margin-bottom:10px">${esc(span.anchor.quote)}</h2>
+    ${S._fromDraft ? `<p class="why"><b>From the model draft.</b> Its tags are pre-filled;
+       check each one.${S._fromDraft.clarity_suggestion ? ` It suggested clarity
+       <i>${esc(S._fromDraft.clarity_suggestion)}</i>, which you have to set yourself.` : ""}
+       Its ${(S._fromDraft.examples || []).length} example(s) are added when you record the rule.</p>` : ""}
     ${seed ? `<p class="why">This span covers a heading the extractor already
        proposed, so it keeps that candidate's identity and everything already
        decided about it, rather than becoming a second rule for the same
@@ -1094,6 +1316,18 @@ function openTags(span, isNew) {
     ${fieldHtml("applies_to", span.tags.applies_to, true)}
     ${fieldHtml("direction", span.tags.direction, false)}
     ${fieldHtml("modality", span.tags.modality, false)}
+
+    <div class="field" id="fld-vc">
+      <div class="flabel"><h4>What makes text wrong?</h4>
+        <span class="tag" id="req-vc" style="color:var(--bin);border-color:var(--bin)">needed</span></div>
+      <p class="why" id="vcWhy">Describe the text a checker should <b>flag</b>, not the
+        correct form. "A number of 4+ digits written without a comma" — not "Use commas
+        in numbers". This is the rule's polarity (D-2); the last project inverted it.</p>
+      <textarea id="f-vc" oninput="syncTags()"
+        placeholder="Text is wrong when…">${esc(span.tags.violation_condition || "")}</textarea>
+    </div>
+
+    ${fieldHtml("detection_hint", span.tags.detection_hint, false)}
 
     <div class="field" id="fld-spec">
       <div class="flabel"><h4 id="specLabel">Your interpretation</h4></div>
@@ -1141,8 +1375,18 @@ function syncTags() {
       : "The manual's wording is kept alongside and never overwritten (ADR-017). "
         + "This is what detection implements.";
   }
+  const vc = ($("f-vc")?.value || "").trim();
+  const wantVc = needsViolation(d.tags);
+  const reqVc = $("req-vc");
+  if (reqVc) reqVc.style.display = wantVc && !vc ? "" : "none";
+  const vcWhy = $("vcWhy");
+  if (vcWhy && d.tags.modality === "MAY") {
+    vcWhy.innerHTML = "A permission has nothing to violate. If it relaxes a neighbouring "
+      + "rule, it is usually better recorded as that rule's exception (in "
+      + "<i>When does it apply?</i>) than as a rule of its own.";
+  }
   const btn = $("saveBtn");
-  if (btn) btn.disabled = !d.tags.clarity;
+  if (btn) btn.disabled = !d.tags.clarity || (wantVc && !vc);
 }
 
 function saveTags() {
@@ -1153,6 +1397,12 @@ function saveTags() {
     toast("Write the interpretation in 'your interpretation' — a note is not implemented");
     return;
   }
+  const vc = ($("f-vc")?.value || "").trim();
+  if (needsViolation(d.tags) && !vc) {
+    toast("Say what makes text wrong — that is the rule's polarity (D-2)");
+    return;
+  }
+  d.tags.violation_condition = vc;
   d.tags.specification = spec;
   d.tags.note = ($("f-note")?.value || "").trim();
   d.preconditions = ($("f-pre")?.value || "").split("\n")
@@ -1163,11 +1413,14 @@ function saveTags() {
     d.tags.review_status = "rejected";
   }
   OPS.add({ op: "span", span: d });
+  let carried = 0;
+  if (S._fromDraft) { carried = addDraftExamples(d, S._fromDraft); S._fromDraft = null; }
   S.currentRule = keyOf(d);
   S.selected = S.currentRule;
   closeSheet();
   renderDoc(); renderSide(); renderRail();
-  toast(S._draftNew ? "Rule recorded" : "Span updated");
+  toast(S._draftNew ? (carried ? `Rule recorded with ${carried} example span(s) from the draft`
+                               : "Rule recorded") : "Span updated");
 }
 
 function openSeedSheet(seed) {
@@ -1251,6 +1504,9 @@ function renderSide() {
       of them.</p>`;
   }
   html += "</div>";
+  // Above the rule cards: on a page with 20 rules, below them is off-screen.
+  html += draftCard();
+  html += lintCard();
 
   for (const r of rules) {
     const kids = others.filter((x) => x.of === keyOf(r));
@@ -1260,16 +1516,18 @@ function renderSide() {
         <span>${kids.length ? kids.length + " linked" : ""}</span></div>
       <div class="q">${esc(r.anchor.quote)}</div>
       <div class="tags">
-        ${["unit", "clarity", "direction", "modality"].filter((k) => r.tags[k])
+        ${["unit", "clarity", "direction", "modality", "detection_hint"].filter((k) => r.tags[k])
           .map((k) => `<span class="tag">${esc(r.tags[k])}</span>`).join("")}
+        ${needsViolation(r.tags) && !(r.tags.violation_condition || "").trim()
+          ? '<span class="tag" style="color:var(--gold);border-color:var(--gold)" title="D-2: say what makes text wrong">no violation condition</span>' : ""}
         ${(r.tags.applies_to || []).map((a) => `<span class="tag">${esc(a)}</span>`).join("")}
         ${r.tags.review_status === "rejected"
           ? '<span class="tag" style="color:var(--bin);border-color:var(--bin)">will not load</span>' : ""}
       </div>
-      ${kids.length ? `<div style="margin-top:7px">${kids.map((k) =>
+      ${kids.length ? `<div style="margin-top:7px">${exampleRows(kids).map((k) =>
         `<div class="q" style="font-size:12.5px;color:var(--ink-2)">
           ${k.kind === "compliant" ? "✓" : k.kind === "violating" ? "✗" : "⟡"}
-          ${esc(k.anchor.quote.slice(0, 90))}</div>`).join("")}</div>` : ""}
+          ${esc(k.text.slice(0, 90))}</div>`).join("")}</div>` : ""}
       <div class="acts">
         <button class="btn sm" onclick="selectSpan('${esc(keyOf(r))}')">Attach examples</button>
         <button class="btn sm" onclick="editSpan('${esc(keyOf(r))}')">Edit</button>
@@ -1303,6 +1561,120 @@ function renderSide() {
   }
 
   $("sideBody").innerHTML = html;
+}
+
+/* --- the golden-set lint ---------------------------------------------------
+   `derek.eval.golden_lint`, run when the site was built. Stale by design: it
+   describes the committed golden set, not this browser's unexported work, and
+   the card says so rather than pretending otherwise.
+   --------------------------------------------------------------------------- */
+
+const LINT_LEVELS = {
+  fix: { color: "var(--bin)" },
+  check: { color: "var(--gold)" },
+  look: { color: "var(--muted)" },
+};
+
+function lintCard() {
+  const items = (S.lint[S.page.path] || []);
+  if (!items.length) return "";
+  S._lint = items;
+  const row = (f, i) => `<div class="q" style="font-size:12.5px;margin-top:7px">
+      <span class="tag" style="color:${LINT_LEVELS[f.level].color};border-color:${LINT_LEVELS[f.level].color}"
+        >${esc(f.ref)}</span>
+      ${f.statement ? `<b>${esc(f.statement.slice(0, 70))}</b><br>` : ""}
+      ${esc(f.message)}
+      ${f.quote ? `<div style="color:var(--ink-2);margin-top:3px">“${esc(f.quote.slice(0, 160))}”</div>` : ""}
+      ${f.span_key ? `<a href="#" onclick="event.preventDefault();goLint(${i})">show</a>` : ""}
+    </div>`;
+  const by = (lvl) => items.map((f, i) => [f, i]).filter(([f]) => f.level === lvl);
+  const counts = Object.keys(LINT_LEVELS).map((l) => `${by(l).length} ${l}`).join(" · ");
+  return `<div class="card"><div class="k"><span>Checks</span><span>${counts}</span></div>
+    <p class="why" style="margin:4px 0 0">From <code>derek.eval.golden_lint</code> at the last
+      build, against <a href="https://github.com/${esc((S.index.build || {}).repo || "")}/blob/main/docs/08-rule-grain.md"
+      target="_blank" rel="noopener">the grain policy</a>. <b>fix</b> breaks an invariant;
+      <b>check</b> is probably wrong, so make it a decision; <b>look</b> is text nothing
+      accounts for. Work you have not exported yet is not reflected.</p>
+    ${["fix", "check"].map((l) => by(l).map(([f, i]) => row(f, i)).join("")).join("")}
+    ${by("look").length ? `<details style="margin-top:7px"><summary class="why" style="cursor:pointer">
+      ${by("look").length} to look at</summary>${by("look").map(([f, i]) => row(f, i)).join("")}</details>` : ""}
+  </div>`;
+}
+
+/* A finding's key is a rule span (select it) or a sentence (select its text,
+   so pressing R marks it). */
+function goLint(i) {
+  const f = (S._lint || [])[i];
+  if (!f || !f.span_key) return;
+  const [bid, a, z, kind] = f.span_key.split("|");
+  if (kind === "rule") {
+    selectSpan(f.span_key);
+  } else {
+    S.focusBlock = bid;
+    renderDoc();
+  }
+  const blk = document.querySelector(`[data-bid="${bid}"]`);
+  if (!blk) return;
+  blk.scrollIntoView({ block: "center", behavior: "smooth" });
+  if (kind === "rule") return;
+  const w = textWalker(blk);
+  const r = document.createRange();
+  let n = 0, t, started = false;
+  while ((t = w.nextNode())) {
+    const len = t.nodeValue.length;
+    if (!started && +a <= n + len) { r.setStart(t, +a - n); started = true; }
+    if (started && +z <= n + len) { r.setEnd(t, +z - n); break; }
+    n += len;
+  }
+  const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  // Scrolling hides the toolbar (it would float over the wrong text), so it is
+  // shown once scrolling has stopped; see wireSelection. The selection itself is
+  // live at once, so R works immediately either way.
+  toolbarAfterScroll();
+}
+
+function toolbarAfterScroll() {
+  clearTimeout(toolbarAfterScroll._t);
+  toolbarAfterScroll._t = setTimeout(() => { S._toolbarAfterScroll = false; showToolbar(); }, 160);
+  S._toolbarAfterScroll = true;
+}
+
+/* One row per example as golden.py will build it: a group's parts joined in
+   document order, not the order they were marked. Re-marking a list that was
+   recorded one item per example replaces those spans in place (same tuple), so
+   insertion order and page order routinely disagree. */
+function exampleRows(kids) {
+  const pos = new Map((S.page ? S.page.blocks : []).map((b, i) => [b.id, i]));
+  const at = (k) => [pos.get(k.anchor.block_id) ?? 0, k.anchor.start];
+  const rows = [];
+  const groups = new Map();
+  for (const k of kids) {
+    if (!k.group) { rows.push({ kind: k.kind, text: k.anchor.quote }); continue; }
+    if (!groups.has(k.group)) {
+      const row = { kind: k.kind, parts: [] };
+      groups.set(k.group, row);
+      rows.push(row);
+    }
+    groups.get(k.group).parts.push(k);
+  }
+  for (const row of groups.values()) {
+    row.parts.sort((a, b) => { const x = at(a), y = at(b); return x[0] - y[0] || x[1] - y[1]; });
+    row.text = row.parts.map((k) => k.anchor.quote).join(" / ");
+  }
+  return rows;
+}
+
+/* Pages carrying rule spans that nobody has marked swept. Until they are, an
+   unmarked heading there is "not reached", not "not a rule", and span_recall
+   cannot measure anything — which is where the first three pages were left. */
+function unsweptPages() {
+  const out = [];
+  for (const [page, list] of S.spans) {
+    if (!list.some((s) => s.kind === "rule")) continue;
+    const m = S.marks.get(page);
+    if (!m || m.status !== "complete") out.push(page);
+  }
+  return out.sort();
 }
 
 function paintCounts() {
@@ -1362,6 +1734,16 @@ function exportOps() {
       <div class="q">3. <code>apply-spans.yml</code> replays it, writes
         <code>golden/spans.jsonl</code>, rebuilds the ledger and republishes this page.</div>
     </div>
+    ${unsweptPages().length ? `<div class="card" style="border-color:var(--gold);background:var(--gold-bg)">
+      <div class="k"><span>Not marked swept</span><span>${unsweptPages().length}</span></div>
+      <p class="why" style="margin:4px 0 6px">These pages have rules marked but are not
+        swept. Until they are, a heading you skipped counts as "not looked at", not "not
+        a rule", and nothing can be measured on them. If you have finished one, open it,
+        press <kbd>F</kbd>, and export again.</p>
+      ${unsweptPages().map((p) => `<div class="q" style="font-size:12.5px">
+        <a href="#" onclick="event.preventDefault();closeSheet();openPage('${esc(p)}')"
+          >${esc(p)}</a></div>`).join("")}
+    </div>` : ""}
     <p class="why">The queue is not cleared. Every export carries everything you have
       marked, and re-uploading the same file does nothing the second time, so
       exporting early and often costs nothing and losing a browser profile costs
@@ -1381,6 +1763,8 @@ function closeSheet() {
   $("sheet").classList.remove("on");
   $("scrim").classList.remove("on");
   S._draft = null;
+  // A draft being accepted is abandoned if its tag sheet is closed unsaved.
+  if (!S._acceptingKeep) S._fromDraft = null;
 }
 function toast(msg) {
   const t = $("toast");
@@ -1451,6 +1835,7 @@ function help() {
       ${row("C", "mark it as a <b>Write this</b> example of the current rule")}
       ${row("V", "mark it as a <b>Not this</b> example")}
       ${row("P", "mark it as a condition on when the rule applies")}
+      ${row("⇧C / ⇧V", "across several lines: mark them as <b>one</b> example — a list's lead-in and its items")}
     </div>
     <div class="card"><div class="k"><span>Moving</span></div>
       ${row("J / K", "next / previous block")}
@@ -1460,6 +1845,7 @@ function help() {
     </div>
     <div class="card"><div class="k"><span>Deciding</span></div>
       ${row("A", "confirm the focused heading candidate as a rule")}
+      ${row("D", "open the next model draft on this page")}
       ${row("Backspace", "delete the selected span")}
       ${row("F", "mark the page swept — every unmarked heading becomes evidence")}
       ${row("E", "export")} ${row("T", "light / dark")} ${row("Esc", "clear")}
@@ -1488,7 +1874,7 @@ function wireKeys() {
     if (k === "?" || k === "/") { help(); e.preventDefault(); return; }
 
     const kind = Object.keys(KINDS).find((x) => KINDS[x].key === k.toUpperCase());
-    if (kind && readSelection()) { mark(kind); e.preventDefault(); return; }
+    if (kind && readSelection()) { mark(kind, e.shiftKey); e.preventDefault(); return; }
 
     switch (k.toLowerCase()) {
       case "j": stepBlock(1); e.preventDefault(); break;
@@ -1497,6 +1883,7 @@ function wireKeys() {
       case "[": step(-1); e.preventDefault(); break;
       case "]": step(1); e.preventDefault(); break;
       case "f": markSwept(); e.preventDefault(); break;
+      case "d": nextDraft(); e.preventDefault(); break;
       case "e": exportOps(); e.preventDefault(); break;
       case "t": toggleTheme(); e.preventDefault(); break;
       case "a": {

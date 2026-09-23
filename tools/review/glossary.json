@@ -354,6 +354,44 @@
       }
     },
 
+    "detection_hint": {
+      "title": "How would a checker find it?",
+      "one_liner": "Your first read of what it would take to check this automatically.",
+      "what_it_is": "A routing guess, not a design. It decides which kind of checker is built for the rule first.",
+      "why_it_matters": "The cheapest checker that can do the job correctly is the one that gets built (ADR-010). A pattern runs in microseconds and can be read line by line; a trained classifier needs labelled examples and is harder to trust. Recording this now means the rules that a pattern can handle are built first, and the ones that need meaning collect their examples in the meantime. It replaces the ‘likely enforceable through…’ note, which nothing could read.",
+      "options": {
+        "pattern": {
+          "label": "A pattern",
+          "means": "Punctuation, spacing, word shapes, or a fixed word next to another. Something you could describe to someone as ‘look for X followed by Y’.",
+          "effect": "Built first, as a declarative Tier 0 matcher.",
+          "example": "“Don’t use commas with Latin shortened forms.” Look for ‘e.g.,’ or ‘i.e.,’."
+        },
+        "lookup": {
+          "label": "A list lookup",
+          "means": "Checking text against a list of known names, titles or forms that someone would have to compile.",
+          "effect": "Tier 0, but it waits on the list. Say in the note where the list would come from.",
+          "example": "“Style for treaty titles is roman type, title case.” Needs to know which words are a treaty title."
+        },
+        "classifier": {
+          "label": "Needs to understand meaning",
+          "means": "No pattern gets it right; a reader has to understand the sentence.",
+          "effect": "Tier 1. The rule’s examples become its training data, so the examples you attach matter most here.",
+          "example": "“Mark out non-essential information within a sentence.” Whether a clause is essential is a question about meaning."
+        },
+        "hybrid": {
+          "label": "Pattern finds, meaning decides",
+          "means": "A pattern can find every place the rule might apply, but deciding whether each one is wrong needs understanding.",
+          "effect": "Tier 1, with the pattern as its trigger. This is the usual shape of an ‘absence’ rule.",
+          "example": "“Use commas in numbers with 4 or more digits.” Finding ‘6500’ is a pattern; telling a count from a postcode or a year is not."
+        },
+        "unsure": {
+          "label": "Not sure",
+          "means": "You can’t tell yet.",
+          "effect": "Nothing is routed. The rule still loads if you accept it.",
+          "example": ""
+        }
+      }
+    },
     "statement_form": {
       "title": "How was this found?",
       "one_liner": "Shown on the card so you know how much to trust the wording in front of you.",

@@ -108,30 +108,43 @@ def load_corpus() -> tuple[list[tuple[str, str]], int]:
 def _derek_matcher(rule: dict):
     """Build a callable from a declarative Derek matcher (ADR-009).
 
-    Never executes code from the ledger. Unsupported methods return None and
-    the rule is skipped with a recorded reason rather than silently passing.
+    The same ``derek.detect.matchers`` the runtime uses, so the gate measures
+    exactly what would ship: a second implementation here once disagreed with
+    it about the default case sensitivity. Never executes code from the ledger.
+    Unsupported methods return None and the rule is skipped with a recorded
+    reason rather than silently passing.
     """
+    from derek.detect.matchers import SUPPORTED, MatcherError, compile_matcher
+
     det = rule.get("detection") or {}
     method, spec = det.get("method"), det.get("matcher") or {}
+    if method not in SUPPORTED:
+        # token_pattern / length_constraint / structural_predicate / classifier
+        # are evaluated by the runtime, not here; they need more than text.
+        return None
+    try:
+        m = compile_matcher(method, spec)
+    except MatcherError:
+        return None
+    return lambda doc: sum(len(m.find(b.text)) for b in doc.blocks if b.lintable)
 
-    if method == "regex":
-        pattern = spec.get("pattern")
-        if not pattern:
-            return None
-        flags = re.IGNORECASE if spec.get("ignore_case", True) else 0
-        rx = re.compile(pattern, flags)
-        return lambda t: len(rx.findall(t))
 
-    if method == "literal_set":
-        terms = [re.escape(x) for x in spec.get("terms", []) if x]
-        if not terms:
-            return None
-        rx = re.compile(r"\b(?:" + "|".join(terms) + r")\b", re.IGNORECASE)
-        return lambda t: len(rx.findall(t))
+def load_documents():
+    """The corpus as the runtime sees it: plain-text Documents (ADR-012, D-13).
 
-    # token_pattern / length_constraint / structural_predicate / classifier
-    # are evaluated by the runtime, not here; they need a parsed Document.
-    return None
+    Derek's rules run on text with no Markdown in it, so the gate does too: a
+    regex fired at raw Markdown sees link URLs and emphasis markers no user
+    document contains. The manual's deliberately wrong examples are not lintable
+    (``Document.from_page``); the prose that follows them is.
+    """
+    from derek.detect.document import Document
+
+    docs = []
+    for md in sorted(PAGES.rglob("*.md")):
+        rel = str(md.relative_to(PAGES))
+        page = NormalisedPage(rel, md.read_text(encoding="utf-8", errors="replace"))
+        docs.append((rel, Document.from_page(rel, page.text)))
+    return docs, sum(d.words for _, d in docs)
 
 
 def _octavius_matcher(row: dict):
@@ -238,9 +251,10 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--top", type=int, default=15)
     args = ap.parse_args(argv)
 
-    docs, total_words = load_corpus()
-
     if args.octavius:
+        # The postmortem's figures were measured on the Markdown, so they are
+        # reproduced on the Markdown.
+        docs, total_words = load_corpus()
         rows = [json.loads(l) for l in args.octavius.read_text(encoding="utf-8").splitlines() if l.strip()]
         passing = [r for r in rows if r.get("test_result") == "pass"]
         rules = []
@@ -257,6 +271,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  {r.findings:>7,}  {r.rule_id}\n           \"{r.statement[:76]}\"")
         return code
 
+    docs, total_words = load_documents()
     rules = []
     skipped = 0
     for line in args.ledger.read_text(encoding="utf-8").splitlines():
