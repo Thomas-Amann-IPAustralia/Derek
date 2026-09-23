@@ -1,0 +1,12 @@
+# Model drafting of rule spans (ADR-025), used only by tools/draft/draft_spans.py
+# and .github/workflows/draft-spans.yml.
+#
+# Kept out of requirements.txt, which is what CI installs: the drafter is an
+# offline authoring step like the POS tagger (ADR-021). Its output is a
+# checked-in cache under golden/drafts/, and nothing in derek/ imports the SDK,
+# so CI and the tests run with no model SDK and no key.
+#
+# Pinned for the same reason every other authoring dependency is: a changed
+# client is a changed request, and a request is part of what a draft's cache
+# key describes (ADR-001, ADR-003).
+anthropic==1.8.0

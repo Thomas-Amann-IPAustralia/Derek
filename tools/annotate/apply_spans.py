@@ -200,6 +200,7 @@ def _span_from_op(raw: dict, page: str, by: str, at: str, text: str) -> Span:
         prefix=anchor.get("prefix", ""), suffix=anchor.get("suffix", ""),
         of=of,
         group=group,
+        seed_draft=str(raw.get("seed_draft") or "")[:80],
         tags=dict(raw.get("tags") or {}),
         preconditions=tuple(raw.get("preconditions") or ()),
         disambiguator=raw.get("disambiguator", ""),

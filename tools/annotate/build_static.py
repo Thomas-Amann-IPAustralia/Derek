@@ -55,6 +55,7 @@ from derek.extract.blocks import RENDER_VERSION, parse_blocks    # noqa: E402
 PAGES = REPO / "corpus" / "pages"
 ELIGIBILITY = REPO / "corpus" / "eligibility.yaml"
 LOCK = REPO / "corpus" / "snapshot.lock.json"
+DRAFT_TOOL = REPO / "tools" / "draft"
 GOLDEN_SPANS = REPO / "golden" / "spans.jsonl"
 GOLDEN_PAGES = REPO / "golden" / "pages.jsonl"
 
@@ -168,6 +169,32 @@ def _seeds_for(rel: str, blocks, rules) -> list[dict]:
     return out
 
 
+def _drafting():
+    """tools/draft/drafting.py, which is stdlib and not on a package path."""
+    spec = importlib.util.spec_from_file_location("derek_drafting", DRAFT_TOOL / "drafting.py")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def _draft_payload(rec: dict | None, blind: bool) -> dict | None:
+    """What the annotator shows of one page's model draft (ADR-025).
+
+    Nothing, on a blind page: a draft in view shapes what the reviewer marks,
+    and the blind pages are what drafts are measured against. The raw model
+    output stays in the repository; only the resolved pointers ship.
+    """
+    if rec is None or blind:
+        return None
+    return {
+        "prompt_version": rec["prompt_version"], "model": rec["model"],
+        "served_model": rec.get("served_model", ""),
+        "rules": rec.get("rules", []), "not_rules": rec.get("not_rules", []),
+        "refused": len(rec.get("refused", [])),
+    }
+
+
 def _read_golden() -> tuple[list[dict], list[dict]]:
     """The committed golden set, as the published baseline local ops replay over."""
     def rows(path: Path) -> list[dict]:
@@ -192,6 +219,9 @@ def build(out: Path, *, server=None, clean: bool = True) -> dict:
     eligibility = load_eligibility(ELIGIBILITY)
     freeze = load_freeze()
     urls = _url_index()
+    drafting = _drafting()
+    drafts = drafting.load_drafts()
+    blind = drafting.load_blind()
 
     build_info = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -216,6 +246,7 @@ def build(out: Path, *, server=None, clean: bool = True) -> dict:
         if not blocks:
             continue
         seeds = _seeds_for(rel, blocks, rules) if eligible else []
+        draft = _draft_payload(drafts.get(rel), rel in blind) if eligible else None
         title = next((b.plain for b in blocks if b.kind == "heading" and b.level == 1), rel)
         total_blocks += len(blocks)
 
@@ -228,6 +259,8 @@ def build(out: Path, *, server=None, clean: bool = True) -> dict:
             "eligibility_reason": reason,
             "blocks": [b.to_dict() for b in blocks],
             "seeds": seeds,
+            "drafts": draft,
+            "blind": rel in blind,
         }
         name = f"data/pages/{_slug(rel)}.json"
         sizes[name] = _write_json(out / name, payload)
@@ -241,6 +274,8 @@ def build(out: Path, *, server=None, clean: bool = True) -> dict:
             "eligibility_reason": reason,
             "blocks": len(blocks),
             "seeds": len(seeds),
+            "drafted": len(draft["rules"]) if draft else 0,
+            "blind": rel in blind,
             "sha256": page.sha256,
         })
 
@@ -271,6 +306,7 @@ def build(out: Path, *, server=None, clean: bool = True) -> dict:
             "blocks": total_blocks,
             "seeds": sum(p["seeds"] for p in index_pages),
             "spans": len(spans),
+            "drafted_pages": sum(1 for p in index_pages if p["drafted"]),
         },
     }
 

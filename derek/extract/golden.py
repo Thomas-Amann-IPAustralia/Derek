@@ -77,6 +77,10 @@ class Span:
     # Without it "for example:" + "green" + "orange" + "red" became four
     # examples, three of them a single word that illustrates nothing.
     group: str = ""
+    # "<prompt version>/<model>" when the span was accepted from a model draft
+    # (ADR-025). Provenance only: nothing in extraction reads it. It is what lets
+    # derek.eval.draft_score tell a rule the reviewer found from one they kept.
+    seed_draft: str = ""
     tags: dict = field(default_factory=dict)
     preconditions: tuple[str, ...] = ()
     disambiguator: str = ""
@@ -101,6 +105,8 @@ class Span:
         }
         if self.group:
             out["group"] = self.group
+        if self.seed_draft:
+            out["seed_draft"] = self.seed_draft
         if self.kind == RULE:
             out["tags"] = dict(self.tags)
             out["preconditions"] = list(self.preconditions)
@@ -129,6 +135,7 @@ class Span:
             suffix=anchor.get("suffix", ""),
             of=raw.get("of", ""),
             group=raw.get("group", ""),
+            seed_draft=raw.get("seed_draft", ""),
             tags=dict(raw.get("tags") or {}),
             preconditions=tuple(raw.get("preconditions") or ()),
             disambiguator=raw.get("disambiguator", ""),

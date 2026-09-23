@@ -33,6 +33,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [022](#adr-022--the-review-ui-is-published-the-gate-moves-to-the-apply-step) | The review UI is published; the gate moves to the apply step | Accepted |
 | [023](#adr-023--the-golden-span-set-is-a-declared-extraction-input) | The golden span set is a declared extraction input | Accepted |
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
+| [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
 
 ---
 
@@ -1145,3 +1146,81 @@ uniquely is reported for a human rather than guessed at — the same posture
 **What this does not do.** It does not weaken content hashing, stop change detection, or
 pause the transport. It makes
 [D-8](../CLAUDE.md) truer than it was, by forcing the sweep partition to be a partition.
+
+---
+
+## ADR-025 — A model may draft spans; a human marks them
+
+**Decision.** `tools/draft/` runs a pinned model over one page at a time and caches what
+it proposes under `golden/drafts/<prompt version>/<model>/`: the spans that state rules,
+the manual's examples for each, their tags, and the heading candidates it thinks are not
+rules. The annotator shows a draft as a second layer of seeds beside the heading walk's.
+Accepting one opens the ordinary tag sheet pre-filled, and it becomes a golden span,
+carrying `seed_draft` provenance, only when a human saves it. Nothing in `derek/extract/`
+reads a draft.
+
+**Reason.** The first three annotated pages ran at 13 to 32 words a minute, which over
+the 162,000 eligible words is roughly 85 to 210 hours. That is the "realistically it
+stalls" range the roadmap rejected for Option A. Most of that time went on work a careful
+reader is good at: finding the sentence that states a rule, attaching the examples that
+belong to it, deciding what folds into what. The pages also showed what a tired human
+gets wrong (one inverted example, two inverted directions, one missed rule on a
+seven-minute page), which is the case for a second reader however the first is chosen.
+
+**Does this break D-7?** It bends [ADR-021](#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive)'s
+argument, and it is better said plainly than argued around. ADR-021 accepted a tagger
+because it answers a grammatical question rather than an editorial one, because its
+answers are data before they are used, and because it cannot subtract. A drafter fails
+the first condition outright: "is this a rule?" is exactly what it is asked. The case for
+it therefore rests on four other things, and all four have to hold:
+
+1. **It only points.** Every rule and example it returns is a block id plus a quote, and
+   `tools/draft/drafting.py:resolve` turns the quote into offsets in the manual's own
+   text or refuses it. No statement and no example is ever text the model wrote. That is
+   the structural difference from Octavius, whose rules and tests came from the same
+   model call ([D-1](../CLAUDE.md), postmortem F4).
+2. **A human decides every rule.** A draft is not a declared extraction input; only a
+   saved span in `golden/spans.jsonl` is. Clarity is left blank on acceptance, as it is
+   for a heading seed, so no rule can be kept without one decision nobody pre-filled. A
+   draft's examples are added only when its rule is saved. There is no "accept all".
+3. **It cannot subtract.** Heading candidates stay where they are. A draft's "not a rule"
+   verdicts are advice that links to the existing delete-with-a-reason flow.
+4. **It is measured on pages it never touched.** `golden/blind.json` lists ten pages whose
+   drafts are never shown: the three annotated before drafts existed, and one in sixteen
+   of the rest by a stable hash. `derek.eval.draft_score` reports recall and precision
+   there, beside the heading walk and a sentence regex on the same pages. It reports
+   acceptance on seeded pages separately and never as quality, because there the draft
+   and the reviewer are measured together.
+
+And, as for every model output, the draft is a cache
+([ADR-003](#adr-003--model-calls-are-a-cache-not-a-step)): one call per page, prompt
+version and model, keyed on a hash of the exact input. `tests/test_drafting.py` pins the
+prompt's hash, and the prompt embeds [the grain policy](08-rule-grain.md), so editing
+either fails CI until the version is bumped and the change gets its own cache and its own
+score.
+
+**Costs, all of them real.**
+
+*Anchoring.* The roadmap already said it: a plausible wrong proposal is harder to spot
+than a blank field. The blank clarity field, the E-1 warning on every draft sheet, and a
+"left as drafted" rate reported per tag make rubber-stamping visible. None of them
+prevents it.
+
+*A yardstick with a model's fingerprints on it.* On seeded pages the golden set is partly
+shaped by drafts, and `span_recall` and every future heuristic are measured against it.
+`seed_draft` keeps the two separable, and the blind pages stay clean. Any number that
+matters should be read on the blind pages.
+
+*The blind pages are slow.* About 12,600 words marked at the unassisted pace, the price
+of a measurement that means something.
+
+*Money and a key.* Every run costs, so `draft-spans.yml` runs only by hand and defaults to
+a dry run; the key lives in the repository's secrets.
+
+*A fallback can change the author.* Refusal fallback is on, as the SDK guidance recommends,
+so a declined page is re-run on another model. Each record carries `served_model`, and the
+score names any page where it differs.
+
+**What this does not do.** It does not let a model decide that a rule exists, write to the
+golden set or the ledger, run in CI, or run at extraction time. It does not make a draft a
+Layer 1 input. And it does not replace the sweep: a page is done when a human says so.

@@ -1,0 +1,15 @@
+{
+  "_comment": "Pages whose model drafts are never shown in the annotator (ADR-025). A draft in view shapes what the reviewer marks, so only a page marked without one can measure how good drafts are. Drafts ARE generated for these pages, so derek.eval.draft_score can compare them with the human's marks once the page is swept. Remove a page only deliberately: once its draft has been seen it cannot be made blind again.",
+  "pages": {
+    "content-types/reports.md": "standing holdout: blake2s(path)[0] % 16 == 0",
+    "grammar-punctuation-and-conventions/italics.md": "standing holdout: blake2s(path)[0] % 16 == 0",
+    "grammar-punctuation-and-conventions/names-and-terms/commercial-terms.md": "standing holdout: blake2s(path)[0] % 16 == 0",
+    "grammar-punctuation-and-conventions/punctuation/commas.md": "annotated before drafts existed (2026-09-23)",
+    "grammar-punctuation-and-conventions/punctuation/punctuation-and-capitalisation.md": "standing holdout: blake2s(path)[0] % 16 == 0",
+    "grammar-punctuation-and-conventions/spelling/common-misspellings-and-word-confusion.md": "standing holdout: blake2s(path)[0] % 16 == 0",
+    "grammar-punctuation-and-conventions/types-words/prepositions.md": "standing holdout: blake2s(path)[0] % 16 == 0",
+    "grammar-punctuation-and-conventions/types-words/pronouns.md": "annotated before drafts existed (2026-09-23)",
+    "referencing-and-attribution/legal-material/treaties.md": "annotated before drafts existed (2026-09-23)",
+    "structuring-content/types-structure.md": "standing holdout: blake2s(path)[0] % 16 == 0"
+  }
+}

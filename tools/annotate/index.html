@@ -142,6 +142,8 @@ main{overflow-y:auto;min-width:0;padding:26px 0 60vh}
 .s-compliant{background:var(--keep-bg);border-bottom:2px solid var(--keep)}
 .s-violating{background:var(--bin-bg);border-bottom:2px solid var(--bin)}
 .s-precondition{border-bottom:2px dotted var(--defer)}
+/* A model's draft (ADR-025): a suggestion, drawn like no decision a human made. */
+.s-draft{background:var(--defer-bg);border-bottom:2px dashed var(--defer);cursor:pointer}
 .s-sel{outline:2px solid var(--accent);outline-offset:1px;border-radius:3px}
 .seed{border-bottom:2px dashed var(--line-2);cursor:pointer}
 .seed.accepted{border-bottom-color:var(--keep)}
@@ -311,6 +313,9 @@ const K_OPS = "derek.spans.v1";
 const K_WHO = "derek.reviewer";
 const K_THEME = "derek.theme";
 const K_PAGE = "derek.annotate.page";
+// Dismissed drafts stay in this browser: dismissing is not a judgement anyone
+// else needs, because on a swept page an unmarked draft rule is already "no".
+const K_DISMISS = "derek.annotate.drafts.dismissed";
 
 const KINDS = {
   rule:         { key: "R", label: "Rule",      hint: "the text that states the rule" },
@@ -323,6 +328,7 @@ const S = {
   index: null,          // data/index.json
   baseline: { spans: [], pages: [] },
   lint: {},             // page_path -> findings, as of the last build
+  dismissed: new Set(), // "page|anchor key" of drafts dismissed in this browser
   page: null,           // the loaded page payload
   cache: new Map(),     // slug -> payload
   ops: [],              // the local op log, in export shape
@@ -453,6 +459,8 @@ async function boot() {
       Upstream drift is still detected and reported.</span>`;
   }
 
+  try { S.dismissed = new Set(JSON.parse(localStorage.getItem(K_DISMISS) || "[]")); }
+  catch (e) { S.dismissed = new Set(); }
   OPS.load();
   replay();
   renderRail();
@@ -500,6 +508,8 @@ function renderRail() {
         <div class="m">
           ${n ? `<span><b>${n}</b> span${n === 1 ? "" : "s"}</span>` : ""}
           ${p.seeds ? `<span>${p.seeds} seed${p.seeds === 1 ? "" : "s"}</span>` : ""}
+          ${p.drafted ? `<span style="color:var(--defer)">${p.drafted} drafted</span>` : ""}
+          ${p.blind ? '<span title="golden/blind.json: drafts hidden by design">blind</span>' : ""}
           ${p.eligible ? "" : "<span>not a rule source</span>"}
           ${done ? '<span class="done">✓ swept</span>'
             : n ? '<span class="unswept" title="Rules marked, but the page is not marked swept (F)">not swept</span>' : ""}
@@ -568,14 +578,37 @@ function blockInner(block, spans) {
     ];
     const href = (s.marks.find((m) => m.kind === "link") || {}).href;
     const title = href ? ` title="${esc(href)}"` : "";
-    const key = s.spans.length ? ` data-span="${esc(keyOf(s.spans[s.spans.length - 1]))}"` : "";
+    // A human's span wins the click over a draft under it.
+    const real = s.spans.filter((x) => x.kind !== "draft");
+    const top = real.length ? real[real.length - 1] : s.spans[s.spans.length - 1];
+    const key = top ? (top.kind === "draft" ? ` data-draft="${top.n}"`
+                                            : ` data-span="${esc(keyOf(top))}"`) : "";
     html += `<span class="${cls.join(" ")}"${title}${key}>${esc(s.text)}</span>`;
   }
   return html;
 }
 
+/* A draft rule the reviewer has not yet accepted or dismissed. Accepted means a
+   rule span now sits at exactly its anchor, from this browser or the golden set. */
+function pendingDrafts() {
+  const d = S.page && S.page.drafts;
+  if (!d) return [];
+  const have = new Set(spansOn(S.page.path).filter((x) => x.kind === "rule").map(keyOf));
+  return d.rules.filter((r) => {
+    const k = draftKey(r, "rule");
+    return !have.has(k) && !S.dismissed.has(`${S.page.path}|${k}`);
+  });
+}
+const draftKey = (r, kind) => `${r.anchor.block_id}|${r.anchor.start}|${r.anchor.end}|${kind}`;
+
 function renderDoc() {
   const p = S.page;
+  const drafted = new Map();
+  for (const r of pendingDrafts()) {
+    const list = drafted.get(r.anchor.block_id) || [];
+    list.push({ kind: "draft", anchor: r.anchor, n: r.n });
+    drafted.set(r.anchor.block_id, list);
+  }
   const seedsByBlock = new Map();
   for (const s of p.seeds) {
     if (!s.block_id) continue;
@@ -588,7 +621,7 @@ function renderDoc() {
 
   const body = [];
   for (const b of p.blocks) {
-    const spans = spansIn(p.path, b.id);
+    const spans = [...(drafted.get(b.id) || []), ...spansIn(p.path, b.id)];
     const inner = blockInner(b, spans);
     const focus = b.id === S.focusBlock ? " focus" : "";
 
@@ -740,6 +773,10 @@ function wireSelection() {
   $("doc").addEventListener("click", (e) => {
     const marked = e.target.closest("[data-span]");
     if (marked) { selectSpan(marked.dataset.span); return; }
+    const drafted = e.target.closest("[data-draft]");
+    if (drafted && !window.getSelection().toString()) {
+      openDraft(+drafted.dataset.draft); return;
+    }
     const blk = e.target.closest("[data-bid]");
     if (blk) { S.focusBlock = blk.dataset.bid; renderDoc(); }
   });
@@ -961,6 +998,152 @@ function undoSeed(uid) {
   renderDoc(); renderSide();
 }
 
+/* --- drafts: a model's first cut (ADR-025) ---------------------------------
+   A second seed layer beside the heading walk's. Every quote in a draft was
+   checked against the manual when it was built, so it points at the page's own
+   text, but its tags are a model's guesses. Accepting one opens the ordinary tag
+   sheet pre-filled, with clarity left blank as it is for a heading seed: one
+   field nobody can accept without deciding it. A draft is never recorded as a
+   decision by itself.
+   --------------------------------------------------------------------------- */
+
+function draftByN(n) {
+  return ((S.page && S.page.drafts && S.page.drafts.rules) || []).find((r) => r.n === n);
+}
+
+function openDraft(n) {
+  const r = draftByN(n);
+  if (!r) return;
+  const d = S.page.drafts;
+  S.focusBlock = r.anchor.block_id;
+  renderDoc();
+  const ex = (r.examples || []).map((e) => `<div class="q" style="font-size:13px">
+      ${e.kind === "compliant" ? "✓" : "✗"} ${esc(e.parts.map((p) => p.quote).join(" / ").slice(0, 200))}
+      ${e.note ? `<span style="color:var(--muted)"> — ${esc(e.note)}</span>` : ""}</div>`).join("");
+  const tag = (k, v) => v ? `<span class="tag" title="${esc(k)}">${esc(v)}</span>` : "";
+  openSheet(`
+    <div class="k" style="margin-bottom:5px">Draft · ${esc(d.prompt_version)} · ${esc(d.served_model || d.model)}</div>
+    <h2 style="font-size:17px;margin-bottom:8px">${esc(r.anchor.quote)}</h2>
+    <div class="tags" style="margin-bottom:8px">
+      ${tag("unit", r.tags.unit)}${tag("direction", r.tags.direction)}${tag("modality", r.tags.modality)}
+      ${tag("detection", r.tags.detection_hint)}${(r.tags.applies_to || []).map((a) => tag("applies to", a)).join("")}
+      ${r.clarity_suggestion ? `<span class="tag" style="border-style:dashed">clarity? ${esc(r.clarity_suggestion)}</span>` : ""}
+    </div>
+    <div class="card"><div class="k"><span>What makes text wrong</span></div>
+      <div class="q">${esc(r.tags.violation_condition || "—")}</div></div>
+    ${r.tags.specification ? `<div class="card"><div class="k"><span>Interpretation</span></div>
+      <div class="q">${esc(r.tags.specification)}</div></div>` : ""}
+    ${(r.when || []).length ? `<div class="card"><div class="k"><span>When</span></div>
+      ${r.when.map((w) => `<div class="q" style="font-size:13px">${esc(w)}</div>`).join("")}</div>` : ""}
+    ${ex ? `<div class="card"><div class="k"><span>Examples it attaches</span>
+      <span>${r.examples.length}</span></div>${ex}</div>` : ""}
+    ${(r.covers || []).length ? `<div class="card"><div class="k"><span>Folded into this rule</span></div>
+      ${r.covers.map((c) => `<div class="q" style="font-size:12.5px;color:var(--ink-2)">${esc(c.quote.slice(0, 160))}</div>`).join("")}</div>` : ""}
+    ${r.why ? `<p class="why">${esc(r.why)}</p>` : ""}
+    <p class="why">Check the polarity of each example against the page before you accept:
+      a correct sentence marked ✗ teaches a checker to flag correct text (E-1).</p>
+    <button class="btn primary" style="width:100%" onclick="acceptDraft(${n})">Review &amp; accept</button>
+    <button class="btn" style="width:100%;margin-top:8px" onclick="dismissDraft(${n})">Not a rule — dismiss</button>
+    <button class="btn" style="width:100%;margin-top:8px" onclick="closeSheet()">Close</button>
+  `);
+}
+
+function acceptDraft(n) {
+  const r = draftByN(n);
+  if (!r) return;
+  const d = S.page.drafts;
+  const plain = plainOf(r.anchor.block_id);
+  const span = {
+    page_path: S.page.path, page_sha256: S.page.sha256, kind: "rule",
+    anchor: { ...r.anchor }, of: "",
+    seed_uid: seedAt({ block_id: r.anchor.block_id, start: r.anchor.start, end: r.anchor.end,
+                       text: plain.slice(r.anchor.start, r.anchor.end) }),
+    seed_draft: `${d.prompt_version}/${d.model}`,
+    tags: {
+      ...blankTags(),
+      unit: r.tags.unit || "", direction: r.tags.direction || "",
+      modality: r.tags.modality || "", applies_to: (r.tags.applies_to || []).slice(),
+      detection_hint: r.tags.detection_hint || "",
+      violation_condition: r.tags.violation_condition || "",
+      specification: r.tags.specification || "",
+    },
+    preconditions: (r.when || []).slice(),
+  };
+  S._acceptingKeep = true;
+  closeSheet();
+  S._acceptingKeep = false;
+  S._fromDraft = r;
+  openTags(span, true);
+}
+
+function dismissDraft(n) {
+  const r = draftByN(n);
+  if (!r) return;
+  S.dismissed.add(`${S.page.path}|${draftKey(r, "rule")}`);
+  try { localStorage.setItem(K_DISMISS, JSON.stringify([...S.dismissed])); } catch (e) { /* private window */ }
+  closeSheet();
+  renderDoc(); renderSide();
+  toast("Draft dismissed in this browser");
+}
+
+/* After the reviewer saves a rule accepted from a draft, its examples follow,
+   each part pointing at the rule, grouped when the draft joined several. */
+function addDraftExamples(rule, draft) {
+  let n = 0;
+  for (const ex of draft.examples || []) {
+    const first = ex.parts[0];
+    const group = ex.parts.length > 1
+      ? `${first.block_id}|${first.start}|${first.end}|${ex.kind}` : "";
+    for (const part of ex.parts) {
+      // D-5, checked again: the reviewer may have kept the rule at a new extent.
+      if (part.block_id === rule.anchor.block_id
+          && part.start < rule.anchor.end && part.end > rule.anchor.start) continue;
+      const span = { page_path: S.page.path, page_sha256: S.page.sha256, kind: ex.kind,
+                     anchor: { ...part }, of: keyOf(rule), seed_draft: rule.seed_draft || "" };
+      if (group) span.group = group;
+      OPS.add({ op: "span", span });
+      n++;
+    }
+  }
+  return n;
+}
+
+function nextDraft() {
+  const list = pendingDrafts();
+  if (!list.length) { toast(S.page.drafts ? "No drafts left on this page" : "No draft for this page"); return; }
+  const order = new Map(S.page.blocks.map((b, i) => [b.id, i]));
+  list.sort((a, b) => (order.get(a.anchor.block_id) - order.get(b.anchor.block_id)) || (a.anchor.start - b.anchor.start));
+  const el = document.querySelector(`[data-bid="${list[0].anchor.block_id}"]`);
+  if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+  openDraft(list[0].n);
+}
+
+function draftCard() {
+  const d = S.page.drafts;
+  if (S.page.blind) {
+    return `<div class="card"><div class="k"><span>Draft</span><span>blind page</span></div>
+      <p class="why" style="margin:4px 0 0">This page is in <code>golden/blind.json</code>, so
+        any model draft is hidden here by design. What you mark on it is what a draft
+        is measured against (<code>derek.eval.draft_score</code>).</p></div>`;
+  }
+  if (!d) return "";
+  const pend = pendingDrafts();
+  const notes = (d.not_rules || []).filter((x) => x.seed_uid && !S.seeds.get(x.seed_uid));
+  return `<div class="card" style="border-color:var(--defer)">
+    <div class="k"><span>Model draft · ${esc(d.prompt_version)}</span>
+      <span>${pend.length} of ${d.rules.length} to review</span></div>
+    <p class="why" style="margin:4px 0 0">Dashed violet text is a draft rule. Every quote
+      is the manual's own text; the tags are a model's guesses. <kbd>D</kbd> opens the next one.</p>
+    ${pend.slice(0, 10).map((r) => `<div class="q" style="font-size:12.5px;margin-top:5px">
+      <a href="#" onclick="event.preventDefault();openDraft(${r.n})">${esc(r.anchor.quote.slice(0, 90))}</a></div>`).join("")}
+    ${pend.length > 10 ? `<p class="why">…and ${pend.length - 10} more.</p>` : ""}
+    ${notes.length ? `<div class="k" style="margin-top:9px"><span>The draft says these candidates are not rules</span></div>
+      ${notes.map((x) => `<div class="q" style="font-size:12.5px;margin-top:4px">
+        <a href="#" onclick="event.preventDefault();pickSeed('${esc(x.seed_uid)}')">${esc(x.anchor.quote.slice(0, 80))}</a>
+        <span class="tag">${esc(x.reason)}</span>${x.note ? ` <span style="color:var(--muted)">${esc(x.note.slice(0, 120))}</span>` : ""}</div>`).join("")}` : ""}
+  </div>`;
+}
+
 /* --- marking a page swept -------------------------------------------------
    This is what turns absence into a label. "I read this page; these are all its
    rules" makes every unmarked heading a negative example, which is what lets a
@@ -1119,6 +1302,10 @@ function openTags(span, isNew) {
       ${seed ? ` · confirms <span class="mono">${esc(seed.uid)}</span>` : ""}
     </div>
     <h2 style="font-size:17px;margin-bottom:10px">${esc(span.anchor.quote)}</h2>
+    ${S._fromDraft ? `<p class="why"><b>From the model draft.</b> Its tags are pre-filled;
+       check each one.${S._fromDraft.clarity_suggestion ? ` It suggested clarity
+       <i>${esc(S._fromDraft.clarity_suggestion)}</i>, which you have to set yourself.` : ""}
+       Its ${(S._fromDraft.examples || []).length} example(s) are added when you record the rule.</p>` : ""}
     ${seed ? `<p class="why">This span covers a heading the extractor already
        proposed, so it keeps that candidate's identity and everything already
        decided about it, rather than becoming a second rule for the same
@@ -1226,11 +1413,14 @@ function saveTags() {
     d.tags.review_status = "rejected";
   }
   OPS.add({ op: "span", span: d });
+  let carried = 0;
+  if (S._fromDraft) { carried = addDraftExamples(d, S._fromDraft); S._fromDraft = null; }
   S.currentRule = keyOf(d);
   S.selected = S.currentRule;
   closeSheet();
   renderDoc(); renderSide(); renderRail();
-  toast(S._draftNew ? "Rule recorded" : "Span updated");
+  toast(S._draftNew ? (carried ? `Rule recorded with ${carried} example span(s) from the draft`
+                               : "Rule recorded") : "Span updated");
 }
 
 function openSeedSheet(seed) {
@@ -1315,6 +1505,7 @@ function renderSide() {
   }
   html += "</div>";
   // Above the rule cards: on a page with 20 rules, below them is off-screen.
+  html += draftCard();
   html += lintCard();
 
   for (const r of rules) {
@@ -1572,6 +1763,8 @@ function closeSheet() {
   $("sheet").classList.remove("on");
   $("scrim").classList.remove("on");
   S._draft = null;
+  // A draft being accepted is abandoned if its tag sheet is closed unsaved.
+  if (!S._acceptingKeep) S._fromDraft = null;
 }
 function toast(msg) {
   const t = $("toast");
@@ -1652,6 +1845,7 @@ function help() {
     </div>
     <div class="card"><div class="k"><span>Deciding</span></div>
       ${row("A", "confirm the focused heading candidate as a rule")}
+      ${row("D", "open the next model draft on this page")}
       ${row("Backspace", "delete the selected span")}
       ${row("F", "mark the page swept — every unmarked heading becomes evidence")}
       ${row("E", "export")} ${row("T", "light / dark")} ${row("Esc", "clear")}
@@ -1689,6 +1883,7 @@ function wireKeys() {
       case "[": step(-1); e.preventDefault(); break;
       case "]": step(1); e.preventDefault(); break;
       case "f": markSwept(); e.preventDefault(); break;
+      case "d": nextDraft(); e.preventDefault(); break;
       case "e": exportOps(); e.preventDefault(); break;
       case "t": toggleTheme(); e.preventDefault(); break;
       case "a": {

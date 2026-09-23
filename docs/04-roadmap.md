@@ -199,10 +199,29 @@ rules, which is what Phase 2b is for.
       same `server._apply` the triage app uses
 - [x] `derek/eval/span_recall.py` — the heading heuristic measured against what a human
       actually marked, on swept pages only
-- [ ] **Annotate the 128 eligible pages** ← the actual next task. Start with ten
-      different-shaped ones (`commas.md`, `treaties.md`, `pronouns.md`, a table-heavy
-      page) before committing to the corpus, because the interaction model is the thing
-      most likely to be wrong.
+- [x] First three pages annotated (`commas.md`, `pronouns.md`, `treaties.md`), at 13 to
+      32 words a minute, or roughly 85 to 210 hours for the whole manual at that pace.
+      They surfaced the gaps below, and the annotator was changed to close them.
+- [x] The span form asks for `violation_condition` (D-2: all 44 rules accepted before it
+      had none) and records *how a checker would find it* as a closed choice that sets
+      `detection.tier` (ADR-010). A list's lead-in and its items can be one example
+      (<kbd>⇧C</kbd> / <kbd>⇧V</kbd>). Unswept pages with rules on them are named on export.
+- [x] [`docs/08-rule-grain.md`](08-rule-grain.md): what counts as one rule. **Proposed**,
+      pending agreement from whoever annotates.
+- [x] `derek/eval/golden_lint.py`: the golden set checked against the invariants and
+      that policy, shown on each page in the annotator and after each upload.
+- [x] Model drafts ([ADR-025](02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them),
+      proposed): `tools/draft/` and `draft-spans.yml`, a draft layer in the annotator,
+      `golden/blind.json` (10 pages never shown a draft), and `derek/eval/draft_score.py`.
+      **Built and tested; not yet run**, because it needs an API key.
+- [ ] **Finish and sweep the first three pages**, working through the annotator's
+      *Checks* card. They are blind, so they are the first measurement.
+- [ ] **Draft the blind pages and score them** (`draft-spans.yml` with `blind`). This
+      decides ADR-025: if drafts do not beat the sentence regex on recall, or they get
+      example polarity wrong more often than a human, drafting stops here.
+- [ ] If it passes: annotate 5 to 8 varied pages *with* drafts, and compare their pace
+      (`python -m derek.eval.annotation_pace`) with the blind pages.
+- [ ] Then the rest of the 128 eligible pages.
 
 **Done when:** every eligible page is swept, so `span_recall` has a complete set to
 measure against and the ledger's inventory is one a human drew rather than one a
