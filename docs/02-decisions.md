@@ -1159,9 +1159,10 @@ Accepting one opens the ordinary tag sheet pre-filled, and it becomes a golden s
 carrying `seed_draft` provenance, only when a human saves it. Nothing in `derek/extract/`
 reads a draft.
 
-**Reason.** The first three annotated pages ran at 13 to 32 words a minute, which over
-the 162,000 eligible words is roughly 85 to 210 hours. That is the "realistically it
-stalls" range the roadmap rejected for Option A. Most of that time went on work a careful
+**Reason.** The first three annotated pages ran at about 23 words a minute (18 on
+`commas.md`, 35 on `treaties.md`; `derek.eval.annotation_pace`, which is a lower bound).
+Over the 162,000 eligible words that is at least 116 hours, the "realistically it stalls"
+range the roadmap rejected for Option A. Most of that time went on work a careful
 reader is good at: finding the sentence that states a rule, attaching the examples that
 belong to it, deciding what folds into what. The pages also showed what a tired human
 gets wrong (one inverted example, two inverted directions, one missed rule on a

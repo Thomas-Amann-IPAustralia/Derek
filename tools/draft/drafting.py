@@ -547,7 +547,7 @@ def load_blind(path: Path | None = None) -> dict[str, str]:
 
 
 # One page in sixteen. The trade: every blind page is annotated at the unassisted
-# pace (13-32 words a minute on the first three), so a large holdout costs the
+# pace (about 23 words a minute on the first three), so a large holdout costs the
 # reviewer the time drafts exist to save; too small and the measurement is noise.
 # Eight pages at roughly ten rules each is ~80 blind rules, enough to tell a
 # drafter that finds 90% of rules from one that finds 70%.

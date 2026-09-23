@@ -199,8 +199,9 @@ rules, which is what Phase 2b is for.
       same `server._apply` the triage app uses
 - [x] `derek/eval/span_recall.py` — the heading heuristic measured against what a human
       actually marked, on swept pages only
-- [x] First three pages annotated (`commas.md`, `pronouns.md`, `treaties.md`), at 13 to
-      32 words a minute, or roughly 85 to 210 hours for the whole manual at that pace.
+- [x] First three pages annotated (`commas.md`, `pronouns.md`, `treaties.md`), at about
+      23 words a minute, or at least 116 hours for the whole manual at that pace
+      (`python -m derek.eval.annotation_pace`).
       They surfaced the gaps below, and the annotator was changed to close them.
 - [x] The span form asks for `violation_condition` (D-2: all 44 rules accepted before it
       had none) and records *how a checker would find it* as a closed choice that sets
