@@ -6,8 +6,11 @@ name: Draft rule spans
 # accepts it there, and nothing in extraction reads a draft.
 #
 # Started by hand from the Actions tab, because every run costs money. It needs
-# a repository secret named ANTHROPIC_API_KEY (Settings → Secrets and
-# variables → Actions). A dry run needs no key and spends nothing.
+# the pinned model's key as a repository secret (Settings → Secrets and
+# variables → Actions): OPENAI_API_KEY for the current gpt-6.1-sol pin,
+# ANTHROPIC_API_KEY for a claude- model. A dry run needs no key and spends
+# nothing, and prints the estimate. A real run stops before going past
+# max_usd at list price.
 #
 # Pages already drafted under the current prompt version and model are skipped,
 # so running the same input twice costs nothing the second time (ADR-003).
@@ -26,6 +29,10 @@ on:
         description: Only report what would be drafted; call nothing, spend nothing
         type: boolean
         default: true
+      max_usd:
+        description: Stop before going past this many dollars at list price
+        required: true
+        default: "1.50"
 
 permissions:
   contents: write
@@ -53,8 +60,10 @@ jobs:
       - name: Draft
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PAGES_INPUT: ${{ inputs.pages }}
           DRY_RUN: ${{ inputs.dry_run }}
+          MAX_USD: ${{ inputs.max_usd }}
         run: |
           set -o pipefail
           case "$PAGES_INPUT" in
@@ -65,9 +74,9 @@ jobs:
           esac
           if [ "$DRY_RUN" = "true" ]; then
             args+=(--dry-run)
-          elif [ -z "$ANTHROPIC_API_KEY" ]; then
-            echo "::error::No ANTHROPIC_API_KEY secret. Add one under Settings → Secrets and variables → Actions, or run with dry_run."
-            exit 1
+          else
+            # draft_spans.py refuses to start without the pinned model's key.
+            args+=(--max-usd "$MAX_USD")
           fi
           python tools/draft/draft_spans.py "${args[@]}" | tee /tmp/draft.log
 

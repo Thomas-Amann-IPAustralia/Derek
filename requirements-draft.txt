@@ -9,4 +9,7 @@
 # Pinned for the same reason every other authoring dependency is: a changed
 # client is a changed request, and a request is part of what a draft's cache
 # key describes (ADR-001, ADR-003).
+#
+# One SDK per provider; draft_spans.py imports only the pinned model's.
 anthropic==1.8.0
+openai==3.28.0

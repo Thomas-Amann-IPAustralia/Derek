@@ -62,8 +62,13 @@ PROMPT_SHA256 = "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41c
 # Pinned for the same reason the tagger and the HTML parser are (ADR-001,
 # ADR-021): a different model is a different set of drafts, so a change is a
 # deliberate event with its own cache directory and its own score.
-MODEL = "claude-opus-5"
-EFFORT = "high"
+#
+# Was claude-opus-5 at high effort, which never ran for want of a key. The owner
+# chose OpenAI's gpt-6.1-sol at its default (medium) effort for the first runs
+# (ADR-027). draft_spans.py picks the adapter from the model's name, so moving
+# back is this line and nothing else.
+MODEL = "gpt-6.1-sol"
+EFFORT = "medium"
 MAX_TOKENS = 64000
 
 SCHEMA_VERSION = 1

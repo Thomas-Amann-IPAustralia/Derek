@@ -12,6 +12,7 @@ import importlib.util
 import json
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -196,6 +197,9 @@ def _load_cli():
 def cli(tmp_path, monkeypatch):
     module = _load_cli()
     monkeypatch.setattr(drafting, "DRAFTS", tmp_path / "drafts")
+    # The command refuses to start without the provider's key. Nothing is called.
+    monkeypatch.setenv("OPENAI_API_KEY", "not-a-key")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "not-a-key")
     calls = []
 
     def fake(system, user, schema):
@@ -242,7 +246,79 @@ def test_the_command_imports_no_sdk_at_module_level():
     top = [n for n in tree.body if isinstance(n, (ast.Import, ast.ImportFrom))]
     names = {a.name.split(".")[0] for n in top for a in n.names} | \
             {(n.module or "").split(".")[0] for n in top if isinstance(n, ast.ImportFrom)}
-    assert "anthropic" not in names
+    assert not names & {"anthropic", "openai"}
+
+
+# ---------------------------------------------------------------------------
+# The OpenAI adapter and the meter, with no SDK: a response is a plain object
+# with the fields the Responses API documents.
+# ---------------------------------------------------------------------------
+
+def _response(*, text="{}", status="completed", reason=None, refusal=None, model="gpt-6.1-sol",
+              usage=(1000, 200, 0, 500, 300)):
+    inp, cached, written, out, reasoning = usage
+    content = [SimpleNamespace(type="refusal", refusal=refusal)] if refusal else \
+              [SimpleNamespace(type="output_text", text=text)]
+    return SimpleNamespace(
+        output=[SimpleNamespace(type="message", content=content)],
+        output_text=text, status=status, model=model,
+        incomplete_details=SimpleNamespace(reason=reason) if reason else None,
+        usage=SimpleNamespace(
+            input_tokens=inp, output_tokens=out,
+            input_tokens_details=SimpleNamespace(cached_tokens=cached, cache_write_tokens=written),
+            output_tokens_details=SimpleNamespace(reasoning_tokens=reasoning)),
+    )
+
+
+def test_an_openai_response_is_parsed_with_its_usage():
+    mod = _load_cli()
+    parsed, served, usage, stop = mod.parse_openai(_response(text='{"rules": [], "not_rules": []}'))
+    assert parsed == {"rules": [], "not_rules": []} and served == "gpt-6.1-sol"
+    assert stop == "completed"
+    assert usage == {"input_tokens": 1000, "cached_tokens": 200, "cache_write_tokens": 0,
+                     "output_tokens": 500, "reasoning_tokens": 300}
+
+
+@pytest.mark.parametrize("kwargs, match", [
+    ({"status": "incomplete", "reason": "max_output_tokens"}, "ran out of output"),
+    ({"status": "incomplete", "reason": "content_filter"}, "did not complete"),
+    ({"refusal": "no"}, "declined"),
+    ({"text": "not json"}, "not the JSON"),
+])
+def test_an_openai_response_that_is_not_a_draft_fails_the_page(kwargs, match):
+    mod = _load_cli()
+    with pytest.raises(mod.DraftError, match=match):
+        mod.parse_openai(_response(**kwargs))
+
+
+def test_a_call_is_priced_by_bucket_with_no_bucket_counted_twice():
+    mod = _load_cli()
+    # 1,000 input of which 200 read from cache and 100 written to it; 500 output.
+    usage = {"input_tokens": 1000, "cached_tokens": 200, "cache_write_tokens": 100,
+             "output_tokens": 500, "reasoning_tokens": 300}
+    price = mod.PRICES["gpt-6.1-sol"]
+    want = (700 * price["input"] + 100 * price["cache_write"] + 200 * price["cached"]
+            + 500 * price["output"]) / 1e6
+    assert mod.cost_usd(usage, "gpt-6.1-sol") == pytest.approx(want)
+    assert mod.cost_usd(usage, "a-model-with-no-price") is None
+
+
+def test_the_budget_stops_the_run_before_the_page_that_would_break_it(cli, monkeypatch, capsys):
+    # Each page is estimated at, and then costs, 60 cents: the first fits a dollar,
+    # the second would not.
+    monkeypatch.setattr(cli, "estimate_usd", lambda system, user, model=None: 0.60)
+    monkeypatch.setattr(cli, "cost_usd", lambda usage, model=None: 0.60)
+    assert cli.main([FULL_STOPS, PRONOUNS, "--max-usd", "1.00"]) == 1
+    assert len(cli.calls) == 1, "the second page could cost more than is left, so it is not called"
+    assert "STOPPED before" in capsys.readouterr().err
+
+
+def test_a_model_with_no_price_needs_an_explicit_unmetered_run(cli, monkeypatch):
+    monkeypatch.setattr(cli, "PRICES", {})
+    with pytest.raises(SystemExit, match="no price"):
+        cli.main([FULL_STOPS])
+    assert cli.calls == []
+    assert cli.main([FULL_STOPS, "--max-usd", "0"]) == 0
 
 
 # ---------------------------------------------------------------------------

@@ -75,7 +75,7 @@ def world(tmp_path):
 
     seeded_page = drafting.load_page(FULL_STOPS)
     web = _find(seeded_page, "Don’t end web or email addresses")
-    kept = [_span(FULL_STOPS, web, seed_draft="p1/claude-opus-5"),
+    kept = [_span(FULL_STOPS, web, seed_draft=f"p1/{drafting.MODEL}"),
             _span(FULL_STOPS, _find(seeded_page, "Don’t use full stops with contractions"))]
 
     gs = GoldenSet(spans={PRONOUNS: human, FULL_STOPS: kept})
@@ -97,7 +97,7 @@ def world(tmp_path):
 
 
 def _run(world):
-    _, _, rows = score("p1", "claude-opus-5", drafts_root=world["drafts"],
+    _, _, rows = score("p1", drafting.MODEL, drafts_root=world["drafts"],
                        spans_path=world["spans"], pages_path=world["pages"])
     return {r.page_path: r for r in rows}
 
@@ -114,12 +114,12 @@ def test_a_blind_page_measures_recall_and_names_the_polarity_conflict(world):
 
 
 def test_precision_waits_for_the_sweep(world):
-    text = report("p1", "claude-opus-5", list(_run(world).values()))
+    text = report("p1", drafting.MODEL, list(_run(world).values()))
     assert "**Precision**" not in text, "an unswept page cannot say a draft rule is wrong"
 
     world["gs"].swept[PRONOUNS] = {"page_path": PRONOUNS, "status": "complete", "by": "TA"}
     write_golden(world["gs"], world["spans"], world["pages"])
-    text = report("p1", "claude-opus-5", list(_run(world).values()))
+    text = report("p1", drafting.MODEL, list(_run(world).values()))
     assert "**Precision**: draft rules the human also marked (swept pages) | **50% (1/2)**" in text
 
 
@@ -129,7 +129,7 @@ def test_a_seeded_page_reports_acceptance_and_never_quality(world):
     assert not seeded.blind
     assert (seeded.accepted_from_draft, seeded.human_added) == (1, 1)
 
-    text = report("p1", "claude-opus-5", list(rows.values()))
+    text = report("p1", drafting.MODEL, list(rows.values()))
     blind_part, seeded_part = text.split("## Seeded pages")
     assert "Recall" in blind_part and "Recall" not in seeded_part
     assert "accepted from the draft | 50% (1/2)" in seeded_part
