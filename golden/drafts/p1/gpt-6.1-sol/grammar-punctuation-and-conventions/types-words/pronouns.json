@@ -1,0 +1,979 @@
+{
+ "effort": "high",
+ "input_sha256": "2cd05cb5b4d8238817afc11775d78f5327f53a5ab44aa10c93ea8932358ac7a8",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "b2bb31bf4c26",
+    "end": 57,
+    "prefix": "",
+    "quote": "Pronouns take different forms depending on their function",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: this descriptive heading groups the case, agreement and reflexive-pronoun guidance; the actionable body rules are marked separately.",
+   "reason": "section",
+   "seed_uid": "97f73fd3d04e68a5"
+  },
+  {
+   "anchor": {
+    "block_id": "222703a37f2e",
+    "end": 158,
+    "prefix": "ect case when writing pronouns. ",
+    "quote": "Check whether the pronoun should be in the subjective or the objective case – whether it is the subject or object.",
+    "start": 44,
+    "suffix": ""
+   },
+   "note": "G-5: this is a diagnostic step for the writer. The text property is covered by the preceding correct-case rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "52182169c5a0",
+    "end": 86,
+    "prefix": "",
+    "quote": "Sentences can have reflexive pronouns when the subject is also the object of the verb.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: the allowed condition is recorded on the rule against reflexive objects referring to someone or something other than the subject.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b11346ec97d8",
+    "end": 108,
+    "prefix": "",
+    "quote": "Choosing between relative pronouns can be a matter of style in some situations, depending on voice and tone.",
+    "start": 0,
+    "suffix": " It is the use of punctuation wi"
+   },
+   "note": "G-3: this relaxes the preferred that/which distinction and is recorded as an exception, not a separate finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b11346ec97d8",
+    "end": 187,
+    "prefix": "s, depending on voice and tone. ",
+    "quote": "It is the use of punctuation with the relative pronoun that clarifies meaning.",
+    "start": 109,
+    "suffix": ""
+   },
+   "note": "G-4: this reinforces the preceding punctuation guidance rather than creating another check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/pronouns.md",
+ "page_sha256": "ecabf7a72c9d6ae09b4ecac876eb746107094063af9e31784a2fa068f49572dd",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "b2bb31bf4c26",
+    "note": "G-1: this descriptive heading groups the case, agreement and reflexive-pronoun guidance; the actionable body rules are marked separately.",
+    "quote": "Pronouns take different forms depending on their function",
+    "reason": "section"
+   },
+   {
+    "block_id": "222703a37f2e",
+    "note": "G-5: this is a diagnostic step for the writer. The text property is covered by the preceding correct-case rule.",
+    "quote": "Check whether the pronoun should be in the subjective or the objective case – whether it is the subject or object.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "52182169c5a0",
+    "note": "G-3: the allowed condition is recorded on the rule against reflexive objects referring to someone or something other than the subject.",
+    "quote": "Sentences can have reflexive pronouns when the subject is also the object of the verb.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b11346ec97d8",
+    "note": "G-3: this relaxes the preferred that/which distinction and is recorded as an exception, not a separate finding.",
+    "quote": "Choosing between relative pronouns can be a matter of style in some situations, depending on voice and tone.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b11346ec97d8",
+    "note": "G-4: this reinforces the preceding punctuation guidance rather than creating another check.",
+    "quote": "It is the use of punctuation with the relative pronoun that clarifies meaning.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d9f838e71ead",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "c9aa0fc32764",
+      "quote": "‘they’ instead of ‘he’ or ‘she’"
+     },
+     {
+      "block_id": "380a984dbcd1",
+      "quote": "‘them’ instead of ‘him’ or ‘her’"
+     },
+     {
+      "block_id": "9c562a995c2d",
+      "quote": "‘their’ instead of ‘his’ or ‘hers’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Singular pronouns have a gender-neutral form. Use the forms:",
+    "specification": "Interpret this as guidance for gender-neutral singular references, not a prohibition on all gendered pronouns. The listed substitutions are they for he or she, them for him or her, and their for his or hers.",
+    "unit": "sentence",
+    "violation_condition": "A gendered singular pronoun is used where a gender-neutral reference is intended, instead of the corresponding form ‘they’, ‘them’ or ‘their’.",
+    "when": [
+     "The singular reference is intended to be gender-neutral.",
+     "The replacement form depends on the pronoun’s grammatical function."
+    ],
+    "why": "G-2 combines the case-dependent substitutions into one gender-neutral-form check; the scope interpretation is explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bda0c23492c3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "When the singular ‘they’ is used in a sentence as a gender-neutral term, it takes the plural form of a verb.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Gender-neutral singular ‘they’ takes a singular verb form where the singular and plural forms differ.",
+    "when": [
+     "‘They’ refers to a singular person as a gender-neutral term.",
+     "The verb has distinct singular and plural forms."
+    ],
+    "why": "This states a checkable verb-agreement requirement distinct from pronoun case and pronoun selection."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "222703a37f2e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "63dc44ee00a5",
+      "quote": "A pronoun used as the subject in a sentence is in the subjective case (for example, ‘I’, ‘they’)."
+     },
+     {
+      "block_id": "fd13b1e6eccf",
+      "quote": "A pronoun used as the object in a sentence is in the objective case (for example, ‘me’, ‘them’)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Subjective ‘I’ and objective ‘them’.",
+      "parts": [
+       {
+        "block_id": "48d36f9f5b4a",
+        "quote": "I emailed them."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Subjective ‘They’ and objective ‘me’.",
+      "parts": [
+       {
+        "block_id": "17e4e9b73ea6",
+        "quote": "They emailed me."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The pronoun is part of the subject.",
+      "parts": [
+       {
+        "block_id": "b0e791b2d963",
+        "quote": "My colleague and I travelled with the delegation."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The pronoun is part of the object.",
+      "parts": [
+       {
+        "block_id": "8e225b530b4c",
+        "quote": "My manager sent their director and me an email."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Objective ‘me’ is used in the subject.",
+      "parts": [
+       {
+        "block_id": "9764c1ed07f6",
+        "quote": "My colleague and me travelled with the delegation."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Subjective ‘I’ is used in the object.",
+      "parts": [
+       {
+        "block_id": "bd24e1273708",
+        "quote": "My manager sent their director and I an email."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the correct case when writing pronouns.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-reflexive pronoun used as a verb’s subject has objective case, or one used as the verb’s object has subjective case.",
+    "when": [
+     "The pronoun functions as the subject or object of a verb.",
+     "The check also applies when the pronoun is coordinated with another subject or object.",
+     "Reflexive-pronoun misuse is covered by the separate reflexive-pronoun rules."
+    ],
+    "why": "G-2 keeps subject and object cases together; G-4 uses the actionable body instruction rather than the descriptive heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "feacb9cfb84f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "52182169c5a0",
+      "quote": "Sentences can have reflexive pronouns when the subject is also the object of the verb."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The reflexive object refers to the subject.",
+      "parts": [
+       {
+        "block_id": "29e1e5260577",
+        "quote": "The manager emailed themself."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The subject and object refer to the same person.",
+      "parts": [
+       {
+        "block_id": "532112694fcb",
+        "quote": "I emailed myself."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The reflexive object does not refer to the subject.",
+      "parts": [
+       {
+        "block_id": "defaac4eea14",
+        "quote": "The manager emailed myself."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a reflexive pronoun if the subject and the object are not the same person or thing.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A reflexive pronoun used as a verb’s object refers to a different person or thing from that verb’s subject.",
+    "when": [
+     "A reflexive pronoun functions as the object of a verb.",
+     "A reflexive object is permitted when it refers to the same person or thing as the subject."
+    ],
+    "why": "G-3 records the permission as the allowed condition, not as an additional rule; E-2 attaches the nearest examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8aa425ad4bf1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The subject uses a subjective personal pronoun.",
+      "parts": [
+       {
+        "block_id": "7a6f72fbb413",
+        "quote": "My colleague and I travelled with the delegation."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "A reflexive pronoun is part of the subject.",
+      "parts": [
+       {
+        "block_id": "1df2aa9247af",
+        "quote": "My colleague and myself travelled with the delegation."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use reflexive pronouns such as ‘yourself’ and ‘myself’ as the subject of the verb.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A reflexive pronoun functions as all or part of a verb’s subject.",
+    "when": [
+     "The reflexive pronoun functions as a subject, including within a coordinated subject."
+    ],
+    "why": "The subject-position violation is distinct from a reflexive object referring to the wrong person; E-2 keeps its contrast pair here."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "918a8e2a0228",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "a9e50e40b5bb",
+      "quote": "‘that’ for essential information"
+     },
+     {
+      "block_id": "939ecf403eee",
+      "quote": "‘which’, with punctuation, for non-essential information."
+     },
+     {
+      "block_id": "b11346ec97d8",
+      "quote": "Choosing between relative pronouns can be a matter of style in some situations, depending on voice and tone."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The relative clause supplies essential identifying information.",
+      "parts": [
+       {
+        "block_id": "dc865a3b0ad8",
+        "quote": "The farm that produces oats is for sale."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The relative clause supplies non-essential information.",
+      "parts": [
+       {
+        "block_id": "cf4f3fc96e51",
+        "quote": "The farm, which produces oats, is for sale."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "To make your writing clear, use:",
+    "specification": "Prefer ‘that’ for essential information and ‘which’ for non-essential information. The page allows other choices depending on voice and tone but does not define when those exceptions apply. Punctuation is checked separately.",
+    "unit": "sentence",
+    "violation_condition": "When choosing between ‘that’ and ‘which’ as relative pronouns, ‘which’ introduces essential information or ‘that’ introduces non-essential information, contrary to the preferred distinction and without an applicable voice or tone exception.",
+    "when": [
+     "The choice is between ‘that’ and ‘which’ as relative pronouns.",
+     "Pronoun choice can vary with voice and tone in some situations; the page leaves those situations unspecified."
+    ],
+    "why": "G-2 combines the two information-status cases; G-3 preserves the style exception; E-1 treats both contrasting examples as compliant."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "61fb90fa2717",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "939ecf403eee",
+      "quote": "‘which’, with punctuation, for non-essential information."
+     },
+     {
+      "block_id": "b11346ec97d8",
+      "quote": "It is the use of punctuation with the relative pronoun that clarifies meaning."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Commas separate the non-essential relative clause.",
+      "parts": [
+       {
+        "block_id": "cf4f3fc96e51",
+        "quote": "The farm, which produces oats, is for sale."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "It is important to show users whether information is essential or non-essential by using punctuation, for example commas.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-essential relative clause lacks punctuation separating it from the main clause.",
+    "when": [
+     "The relative clause supplies non-essential information.",
+     "Commas are an example of suitable punctuation, not the only permitted punctuation."
+    ],
+    "why": "Missing punctuation is a different finding from relative-pronoun choice; G-4 absorbs the repeated punctuation guidance."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "d9f838e71ead",
+    "end": 60,
+    "prefix": "",
+    "quote": "Singular pronouns have a gender-neutral form. Use the forms:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "c9aa0fc32764",
+     "end": 31,
+     "prefix": "",
+     "quote": "‘they’ instead of ‘he’ or ‘she’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "380a984dbcd1",
+     "end": 32,
+     "prefix": "",
+     "quote": "‘them’ instead of ‘him’ or ‘her’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9c562a995c2d",
+     "end": 35,
+     "prefix": "",
+     "quote": "‘their’ instead of ‘his’ or ‘hers’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret this as guidance for gender-neutral singular references, not a prohibition on all gendered pronouns. The listed substitutions are they for he or she, them for him or her, and their for his or hers.",
+    "unit": "sentence",
+    "violation_condition": "A gendered singular pronoun is used where a gender-neutral reference is intended, instead of the corresponding form ‘they’, ‘them’ or ‘their’."
+   },
+   "when": [
+    "The singular reference is intended to be gender-neutral.",
+    "The replacement form depends on the pronoun’s grammatical function."
+   ],
+   "why": "G-2 combines the case-dependent substitutions into one gender-neutral-form check; the scope interpretation is explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "bda0c23492c3",
+    "end": 108,
+    "prefix": "",
+    "quote": "When the singular ‘they’ is used in a sentence as a gender-neutral term, it takes the plural form of a verb.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Gender-neutral singular ‘they’ takes a singular verb form where the singular and plural forms differ."
+   },
+   "when": [
+    "‘They’ refers to a singular person as a gender-neutral term.",
+    "The verb has distinct singular and plural forms."
+   ],
+   "why": "This states a checkable verb-agreement requirement distinct from pronoun case and pronoun selection."
+  },
+  {
+   "anchor": {
+    "block_id": "222703a37f2e",
+    "end": 43,
+    "prefix": "",
+    "quote": "Use the correct case when writing pronouns.",
+    "start": 0,
+    "suffix": " Check whether the pronoun shoul"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "63dc44ee00a5",
+     "end": 97,
+     "prefix": "",
+     "quote": "A pronoun used as the subject in a sentence is in the subjective case (for example, ‘I’, ‘they’).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fd13b1e6eccf",
+     "end": 96,
+     "prefix": "",
+     "quote": "A pronoun used as the object in a sentence is in the objective case (for example, ‘me’, ‘them’).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Subjective ‘I’ and objective ‘them’.",
+     "parts": [
+      {
+       "block_id": "48d36f9f5b4a",
+       "end": 15,
+       "prefix": "",
+       "quote": "I emailed them.",
+       "start": 0,
+       "suffix": " [‘I’ is the subject and ‘them’ "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Subjective ‘They’ and objective ‘me’.",
+     "parts": [
+      {
+       "block_id": "17e4e9b73ea6",
+       "end": 16,
+       "prefix": "",
+       "quote": "They emailed me.",
+       "start": 0,
+       "suffix": " [‘They’ is the subject and ‘me’"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The pronoun is part of the subject.",
+     "parts": [
+      {
+       "block_id": "b0e791b2d963",
+       "end": 49,
+       "prefix": "",
+       "quote": "My colleague and I travelled with the delegation.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The pronoun is part of the object.",
+     "parts": [
+      {
+       "block_id": "8e225b530b4c",
+       "end": 47,
+       "prefix": "",
+       "quote": "My manager sent their director and me an email.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Objective ‘me’ is used in the subject.",
+     "parts": [
+      {
+       "block_id": "9764c1ed07f6",
+       "end": 50,
+       "prefix": "",
+       "quote": "My colleague and me travelled with the delegation.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Subjective ‘I’ is used in the object.",
+     "parts": [
+      {
+       "block_id": "bd24e1273708",
+       "end": 46,
+       "prefix": "",
+       "quote": "My manager sent their director and I an email.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-reflexive pronoun used as a verb’s subject has objective case, or one used as the verb’s object has subjective case."
+   },
+   "when": [
+    "The pronoun functions as the subject or object of a verb.",
+    "The check also applies when the pronoun is coordinated with another subject or object.",
+    "Reflexive-pronoun misuse is covered by the separate reflexive-pronoun rules."
+   ],
+   "why": "G-2 keeps subject and object cases together; G-4 uses the actionable body instruction rather than the descriptive heading."
+  },
+  {
+   "anchor": {
+    "block_id": "feacb9cfb84f",
+    "end": 93,
+    "prefix": "",
+    "quote": "Don’t use a reflexive pronoun if the subject and the object are not the same person or thing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "52182169c5a0",
+     "end": 86,
+     "prefix": "",
+     "quote": "Sentences can have reflexive pronouns when the subject is also the object of the verb.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The reflexive object refers to the subject.",
+     "parts": [
+      {
+       "block_id": "29e1e5260577",
+       "end": 29,
+       "prefix": "",
+       "quote": "The manager emailed themself.",
+       "start": 0,
+       "suffix": " [‘Themself’ is the object but r"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The subject and object refer to the same person.",
+     "parts": [
+      {
+       "block_id": "532112694fcb",
+       "end": 17,
+       "prefix": "",
+       "quote": "I emailed myself.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The reflexive object does not refer to the subject.",
+     "parts": [
+      {
+       "block_id": "defaac4eea14",
+       "end": 27,
+       "prefix": "",
+       "quote": "The manager emailed myself.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A reflexive pronoun used as a verb’s object refers to a different person or thing from that verb’s subject."
+   },
+   "when": [
+    "A reflexive pronoun functions as the object of a verb.",
+    "A reflexive object is permitted when it refers to the same person or thing as the subject."
+   ],
+   "why": "G-3 records the permission as the allowed condition, not as an additional rule; E-2 attaches the nearest examples."
+  },
+  {
+   "anchor": {
+    "block_id": "8aa425ad4bf1",
+    "end": 88,
+    "prefix": "",
+    "quote": "Don’t use reflexive pronouns such as ‘yourself’ and ‘myself’ as the subject of the verb.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The subject uses a subjective personal pronoun.",
+     "parts": [
+      {
+       "block_id": "7a6f72fbb413",
+       "end": 49,
+       "prefix": "",
+       "quote": "My colleague and I travelled with the delegation.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "A reflexive pronoun is part of the subject.",
+     "parts": [
+      {
+       "block_id": "1df2aa9247af",
+       "end": 54,
+       "prefix": "",
+       "quote": "My colleague and myself travelled with the delegation.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A reflexive pronoun functions as all or part of a verb’s subject."
+   },
+   "when": [
+    "The reflexive pronoun functions as a subject, including within a coordinated subject."
+   ],
+   "why": "The subject-position violation is distinct from a reflexive object referring to the wrong person; E-2 keeps its contrast pair here."
+  },
+  {
+   "anchor": {
+    "block_id": "918a8e2a0228",
+    "end": 32,
+    "prefix": "",
+    "quote": "To make your writing clear, use:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "a9e50e40b5bb",
+     "end": 32,
+     "prefix": "",
+     "quote": "‘that’ for essential information",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "939ecf403eee",
+     "end": 57,
+     "prefix": "",
+     "quote": "‘which’, with punctuation, for non-essential information.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b11346ec97d8",
+     "end": 108,
+     "prefix": "",
+     "quote": "Choosing between relative pronouns can be a matter of style in some situations, depending on voice and tone.",
+     "start": 0,
+     "suffix": " It is the use of punctuation wi"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The relative clause supplies essential identifying information.",
+     "parts": [
+      {
+       "block_id": "dc865a3b0ad8",
+       "end": 40,
+       "prefix": "",
+       "quote": "The farm that produces oats is for sale.",
+       "start": 0,
+       "suffix": " [The only farm that is for sale"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The relative clause supplies non-essential information.",
+     "parts": [
+      {
+       "block_id": "cf4f3fc96e51",
+       "end": 43,
+       "prefix": "",
+       "quote": "The farm, which produces oats, is for sale.",
+       "start": 0,
+       "suffix": " [The farm, which happens to pro"
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "Prefer ‘that’ for essential information and ‘which’ for non-essential information. The page allows other choices depending on voice and tone but does not define when those exceptions apply. Punctuation is checked separately.",
+    "unit": "sentence",
+    "violation_condition": "When choosing between ‘that’ and ‘which’ as relative pronouns, ‘which’ introduces essential information or ‘that’ introduces non-essential information, contrary to the preferred distinction and without an applicable voice or tone exception."
+   },
+   "when": [
+    "The choice is between ‘that’ and ‘which’ as relative pronouns.",
+    "Pronoun choice can vary with voice and tone in some situations; the page leaves those situations unspecified."
+   ],
+   "why": "G-2 combines the two information-status cases; G-3 preserves the style exception; E-1 treats both contrasting examples as compliant."
+  },
+  {
+   "anchor": {
+    "block_id": "61fb90fa2717",
+    "end": 121,
+    "prefix": "",
+    "quote": "It is important to show users whether information is essential or non-essential by using punctuation, for example commas.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "939ecf403eee",
+     "end": 57,
+     "prefix": "",
+     "quote": "‘which’, with punctuation, for non-essential information.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b11346ec97d8",
+     "end": 187,
+     "prefix": "s, depending on voice and tone. ",
+     "quote": "It is the use of punctuation with the relative pronoun that clarifies meaning.",
+     "start": 109,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Commas separate the non-essential relative clause.",
+     "parts": [
+      {
+       "block_id": "cf4f3fc96e51",
+       "end": 43,
+       "prefix": "",
+       "quote": "The farm, which produces oats, is for sale.",
+       "start": 0,
+       "suffix": " [The farm, which happens to pro"
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-essential relative clause lacks punctuation separating it from the main clause."
+   },
+   "when": [
+    "The relative clause supplies non-essential information.",
+    "Commas are an example of suitable punctuation, not the only permitted punctuation."
+   ],
+   "why": "Missing punctuation is a different finding from relative-pronoun choice; G-4 absorbs the repeated punctuation guidance."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "cache_write_tokens": 1955,
+  "cached_tokens": 3049,
+  "cost_usd": 0.090928,
+  "input_tokens": 5007,
+  "output_tokens": 8573,
+  "reasoning_tokens": 5178
+ }
+}
