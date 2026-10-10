@@ -114,20 +114,25 @@ def _call_openai(system: str, user: str, schema: dict) -> tuple[dict, str, dict,
     import openai      # lazily: CI and the tests never install the SDK
 
     client = openai.OpenAI(base_url=OPENAI_BASE_URL, max_retries=4, timeout=1800)
-    response = client.responses.create(
+    # Streamed, with reasoning summaries, so bytes keep flowing while the model
+    # thinks. A non-streamed request at high effort is silent for long enough
+    # that an intermediary drops it ("upstream request failed", every retry);
+    # the Anthropic adapter streams for the same family of reason.
+    with client.responses.stream(
         model=MODEL,
         # The instructions and the schema are identical for every page, so they
         # form the cached prefix and only the page is new input after the first.
         instructions=system,
         input=user,
-        reasoning={"effort": EFFORT},
+        reasoning={"effort": EFFORT, "summary": "auto"},
         text={"format": {"type": "json_schema", "name": "rule_draft", "schema": schema,
                          "strict": True}},
         max_output_tokens=MAX_TOKENS,
         # The provider keeps no copy of the request. It is the manual's public
         # text, but nothing here needs it stored, so nothing is.
         store=False,
-    )
+    ) as stream:
+        response = stream.get_final_response()
     return parse_openai(response)
 
 

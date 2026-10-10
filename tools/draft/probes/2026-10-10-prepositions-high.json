@@ -1,0 +1,118 @@
+{
+ "usage": {
+  "input_tokens": 3800,
+  "cached_tokens": 3797,
+  "cache_write_tokens": 0,
+  "output_tokens": 3504,
+  "reasoning_tokens": 2482
+ },
+ "cost": 0.0354257,
+ "raw": {
+  "rules": [
+   {
+    "block_id": "063b373b4099",
+    "quote": "Some words are always followed by particular prepositions.",
+    "violation_condition": "A word is paired with a preposition that is incompatible with that word in the intended relationship, such as 'different than' or 'discussion around the program'.",
+    "direction": "presence",
+    "modality": "MUST",
+    "unit": "phrase",
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "specification": "Interpret this as a restriction on preposition choice when a word takes a prepositional complement, not as requiring a preposition after every occurrence of the word. The page accepts 'different to' and 'different from', rejects 'different than', and contrasts accepted 'discussion about the program' with rejected 'discussion around the program'. Other combinations require a lexical reference.",
+    "when": [
+     "Apply when the preposition links the word to its complement.",
+     "Do not flag an occurrence merely because the word has no following preposition.",
+     "Distinguish the targeted combination from a preposition expressing a separate relationship, such as a literal location."
+    ],
+    "examples": [
+     {
+      "polarity": "compliant",
+      "parts": [
+       {
+        "block_id": "596d697cb661",
+        "quote": "This is different from that."
+       }
+      ],
+      "note": ""
+     },
+     {
+      "polarity": "compliant",
+      "parts": [
+       {
+        "block_id": "c92226cd783c",
+        "quote": "The discussion about the program is continuing."
+       }
+      ],
+      "note": ""
+     },
+     {
+      "polarity": "violating",
+      "parts": [
+       {
+        "block_id": "bfcadabc2a99",
+        "quote": "This is different than that."
+       }
+      ],
+      "note": ""
+     },
+     {
+      "polarity": "violating",
+      "parts": [
+       {
+        "block_id": "b08ef924e54a",
+        "quote": "The discussion around the program is continuing."
+       }
+      ],
+      "note": ""
+     }
+    ],
+    "covers": [
+     {
+      "block_id": "9c0ac856d8d6",
+      "quote": "Some words only work with specific prepositions"
+     },
+     {
+      "block_id": "063b373b4099",
+      "quote": "For example, 'different' is always followed by 'to' or 'from', but not by 'than'."
+     }
+    ],
+    "why": "G-2 keeps word-specific cases within one incompatible-preposition check; G-4 consolidates the heading and its explanation; E-2 attaches the Correct/Incorrect examples to this rule."
+   }
+  ],
+  "not_rules": [
+   {
+    "block_id": "49a23f5b79c2",
+    "quote": "Choose them deliberately to convey meaning to users.",
+    "reason": "advice",
+    "note": "G-5: deliberateness is a writing process, not an observable property of the finished text."
+   },
+   {
+    "block_id": "24aab33e312e",
+    "quote": "Use prepositions to give information about the time and place of an action or thing.",
+    "reason": "advice",
+    "note": "Explains a use for prepositions rather than specifying a text violation. It does not require every expression of time or place to contain a preposition."
+   },
+   {
+    "block_id": "808d7eb1b533",
+    "quote": "You can use some prepositions as a different type of word, depending on their function in the sentence.",
+    "reason": "permission",
+    "note": "G-3: permits other grammatical functions and does not impose a checkable restriction or relax the collocation rule."
+   },
+   {
+    "block_id": "9c0ac856d8d6",
+    "quote": "Some words only work with specific prepositions",
+    "reason": "restatement",
+    "note": "G-4: consolidated into the body statement about particular prepositions; not a second finding."
+   },
+   {
+    "block_id": "063b373b4099",
+    "quote": "Check a dictionary if you are not sure.",
+    "reason": "advice",
+    "note": "G-5: describes a reference-checking action, not a property that can be checked in the text."
+   }
+  ]
+ }
+}

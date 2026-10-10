@@ -64,11 +64,15 @@ PROMPT_SHA256 = "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41c
 # deliberate event with its own cache directory and its own score.
 #
 # Was claude-opus-5 at high effort, which never ran for want of a key. The owner
-# chose OpenAI's gpt-6.1-sol at its default (medium) effort for the first runs
-# (ADR-027). draft_spans.py picks the adapter from the model's name, so moving
-# back is this line and nothing else.
+# chose OpenAI's gpt-6.1-sol for the first runs and suggested medium effort,
+# leaving it to judgement (ADR-027). Medium was tried first and reasoned 437
+# tokens on prepositions.md, attaching one of the page's four labelled
+# examples; high reasoned 2,482 and attached all four with the right polarity.
+# Examples and their polarity are what ADR-025's gate measures, so high it is.
+# draft_spans.py picks the adapter from the model's name, so moving back to a
+# Claude model is the MODEL line and nothing else.
 MODEL = "gpt-6.1-sol"
-EFFORT = "medium"
+EFFORT = "high"
 MAX_TOKENS = 64000
 
 SCHEMA_VERSION = 1
