@@ -235,23 +235,44 @@ def _tag_rows(rows: list[PageScore], label: str) -> list[str]:
     return out
 
 
+def _sealed(r: PageScore) -> bool:
+    """A blind page nobody has swept yet: the draft's own content stays unread.
+
+    Its extra rules are suggestions of what else might be a rule, and its
+    polarity conflicts are suggestions to flip the human's tags. Printed before
+    the sweep, either would put the draft in front of the reviewer on exactly the
+    page that exists to be marked without it (ADR-025), and the measurement
+    would then be of the two together. Counts are safe; the text is not.
+    """
+    return r.blind and not r.swept
+
+
 def _details(rows: list[PageScore], *, blind: bool) -> list[str]:
     lines = []
-    conflicts = [c for r in rows for c in r.polarity_conflicts]
+    conflicts = [c for r in rows if not _sealed(r) for c in r.polarity_conflicts]
+    withheld = sum(len(r.polarity_conflicts) for r in rows if _sealed(r))
     if conflicts:
         lines += ["**Polarity conflicts.** The human and the model disagree on whether "
                   "the manual shows this text as right or wrong. Read each one: one "
                   "side is teaching a checker the opposite of the manual (E-1).", ""]
         lines += [f"- {c}" for c in conflicts] + [""]
+    if withheld:
+        lines += [f"**{withheld} polarity conflict(s) on blind pages not yet swept** are "
+                  f"withheld: reading them before the sweep would show the reviewer the "
+                  f"draft's view of their own examples. Sweep the page, then re-run.", ""]
     for r in rows:
         if not (r.missed or r.extra):
             continue
         lines.append(f"### `{r.page_path}`" + (" (swept)" if r.swept else " (not swept)"))
         miss = "missed by the draft" if blind else "added by the reviewer"
         lines += [f"- {miss}: {m}" for m in r.missed]
-        extra = ("draft only" + ("" if r.swept else ", which may be a rule the human has not reached yet")
-                 if blind else ("not kept" if r.swept else "not yet reviewed"))
-        lines += [f"- {extra}: {x}" for x in r.extra]
+        if _sealed(r):
+            if r.extra:
+                lines.append(f"- {len(r.extra)} rule(s) the draft proposed and the human has "
+                             f"not marked: withheld until the page is swept")
+        else:
+            extra = ("draft only" if blind else ("not kept" if r.swept else "not yet reviewed"))
+            lines += [f"- {extra}: {x}" for x in r.extra]
         lines.append("")
     return lines
 

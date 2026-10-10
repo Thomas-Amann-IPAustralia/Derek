@@ -141,3 +141,20 @@ def test_the_baselines_are_measured_on_the_same_pages(world):
     # and both start with a directive the regex does reach.
     assert r.heading_walk_hits == 0
     assert r.regex_hits == 2
+
+
+def test_a_blind_page_keeps_the_drafts_content_sealed_until_it_is_swept(world):
+    """Before the sweep the report may count the draft's extra rules and its
+    polarity conflicts, but not print them: on a blind page that would put the
+    draft in front of the reviewer it exists to be measured against (ADR-025)."""
+    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    blind_part = text.split("## Seeded pages")[0]
+    assert "Relative pronouns show" not in blind_part, "an extra draft rule leaked"
+    assert "The manager emailed myself." not in blind_part, "a polarity conflict leaked"
+    assert "1 polarity conflict(s) on blind pages not yet swept" in blind_part
+    assert "1 rule(s) the draft proposed and the human has not marked" in blind_part
+
+    world["gs"].swept[PRONOUNS] = {"page_path": PRONOUNS, "status": "complete", "by": "TA"}
+    write_golden(world["gs"], world["spans"], world["pages"])
+    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    assert "Relative pronouns show" in text and "The manager emailed myself." in text
