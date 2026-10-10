@@ -33,7 +33,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [022](#adr-022--the-review-ui-is-published-the-gate-moves-to-the-apply-step) | The review UI is published; the gate moves to the apply step | Accepted |
 | [023](#adr-023--the-golden-span-set-is-a-declared-extraction-input) | The golden span set is a declared extraction input | Accepted |
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
-| [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
+| [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: blind drafts made; the score waits on the grain policy and the sweep (ADR-027) |
 | [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
 | [027](#adr-027--the-first-paid-model-work-drafts-on-openai-and-a-second-family-checks-what-a-model-writes) | The first paid model work: drafts on OpenAI, and a second family checks what a model writes | Owner's direction; results recorded, adoption open |
 
@@ -1291,7 +1291,7 @@ rule that is not accepted, or execute anything from the ledger.
 
 ## ADR-027 — The first paid model work: drafts on OpenAI, and a second family checks what a model writes
 
-*2026-10-10. In progress: the runs below are still going, and this entry is completed in the commit that records their results.*
+*2026-10-10.*
 
 **Context.** The roadmap's next steps were waiting on a key: draft the blind pages and
 score them ([ADR-025](#adr-025--a-model-may-draft-spans-a-human-marks-them)), then draft
@@ -1313,18 +1313,18 @@ in the build).**
    *Medium, then high.* On the smoke page (`prepositions.md`) medium reasoned 437 tokens
    and attached one of the page's four labelled examples, noting "Intentionally omitted";
    high reasoned 2,482 and attached all four with the manual's polarity. That is one
-   page, but it is the dimension ADR-025's gate measures, and the difference was a
-   cent and a half. Both responses are kept in `tools/draft/probes/`.
+   page, but it is the dimension ADR-025's gate measures, and the difference was
+   about a cent. Both responses are kept in `tools/draft/probes/`.
 2. **The ten blind pages are drafted, and their score waits for the sweep.** Precision
    needs a swept page, and only three of the ten have human marks at all.
    `derek.eval.draft_score` now **seals** an unswept blind page: it counts the draft's
-   extra rules and its polarity conflicts but does not print them, because either one,
-   read before the sweep, puts the draft in front of the reviewer on the page that
-   exists to be marked without it.
-3. **Seeded drafts** (if the provisional gate holds): six pages, one per top-level
-   section of the manual, each the page nearest the median size (7,212 characters) that
-   is neither blind nor annotated. A rule picked them, not a reader, so they are varied
-   without being chosen.
+   extra rules, its polarity conflicts and the human rules it did not match, but prints
+   none of them, because any of the three, read before the sweep, puts the draft's view
+   in front of the reviewer on the page that exists to be marked without it.
+3. **No seeded drafts yet.** The plan was six pages, one per top-level section, each the
+   page nearest the median size, *if the gate held provisionally*. It does not (below),
+   and ADR-025 puts seeded drafts after the gate, so none were made. That left about
+   $0.80 unspent.
 4. **Test sentences for the nine proposed matchers, from two families.**
    `tools/synth/synth_examples.py` has OpenAI write eight violating and eight compliant
    sentences per rule (at least five of them near misses) from the rule's statement, its
@@ -1336,16 +1336,138 @@ in the build).**
 
 **Runs, disclosed in order.**
 
-*Pending the runs.*
+1. *Smoke test, medium effort,* `prepositions.md`: $0.022; one of four labelled examples
+   attached. Kept as `tools/draft/probes/2026-10-10-prepositions-medium.json`.
+2. *Two high-effort probes, not streamed:* both failed with "upstream request failed" on
+   every retry (the SDK makes up to five attempts). No usage was reported, so their cost
+   is unknown.
+3. *High effort, streamed:* the same page, $0.035, all four examples. The effort pin
+   moved to high on this one probe (`7f9637c`), and this response became the page's
+   cached draft rather than being paid for twice.
+4. *Blind run 1:* four pages, then the fifth page's stream ended without a
+   `response.completed` event and the SDK's error ended the run. Its usage was not
+   reported. The adapter now reads whichever terminal event arrives and fails that page
+   rather than the run (`842ba23`).
+5. *Blind run 2:* the remaining five pages, $0.554, including the page that had failed.
+6. *Test sentences:* one rule as a smoke test ($0.030), then the other eight. The run
+   started before its tool was committed (`9484ef1`); the tool did not change between.
+7. *After the first look at the blind numbers,* `draft_score` gained two lines (recall at
+   the same place, E-1 errors for both sides) and withholds more on unswept blind pages
+   (`0fa487c`). The strict recall line is unchanged.
+8. *A disclosure in chat.* While reading the result, Claude told the owner which kinds of
+   human marks on `commas.md`, `pronouns.md` and `treaties.md` the draft had declined,
+   with five examples. That is the draft's opinion of those pages before their sweep, so
+   the three pages are no longer fully blind. The examples are of the kind
+   `golden_lint` already raises there (G-1, G-3, G-4), which limits the damage, but the
+   clean measurement is now the seven blind pages nobody has annotated.
 
 **Results.**
 
-*Pending the runs.*
+*The blind drafts.* All ten pages drafted, 0 pointers refused on nine of them and 2 on
+the largest (both correctly: one example overlapping its own rule, D-5; one rule returned
+twice). Only three of the ten have human marks, none swept. On those three (33 human
+rules, 36 draft rules):
 
-**Spend.**
+| | Draft | Heading walk | Sentence regex |
+|---|---|---|---|
+| Recall, the instrument as built (overlap, or the same section with half the words) | 10/33 | 17/33 (20 candidates) | 11/33 (60 candidates) |
+| Recall at the same place (a heading and the prose directly beneath it count as one) | 22/33 | 17/33 | 28/33 |
 
-*Pending the runs.*
+| Polarity | Draft | Human |
+|---|---|---|
+| E-1 errors on the manual's labelled example blocks | 0 of 18 | 0 of 16 |
+| Conflicts with the other side on the same example | 0 | 0 |
 
-**Consequences, and what is open for the owner.**
+The draft also attached 26 of the human's 30 examples to the rules it matched.
 
-*Pending the runs.*
+*What the recall numbers are made of.* Claude read every one of the draft's eleven misses
+under the looser rule against the draft's own record. None is a rule it did not see. Each
+is a grain decision citing the policy embedded in its prompt
+([docs/08](08-rule-grain.md)): three section headings (G-1), two permissions or
+exceptions recorded under `when` (G-3), one piece of advice to the writer (G-5), one
+duplicate of a rule the policy places on another page (G-6), and four sentences folded
+into a neighbouring rule as a restatement or condition (G-2, G-4). The human marked all
+eleven as rules, on pages annotated before the policy existed. The strict number is low
+for a different reason: the human confirmed headings the heading walk had seeded, and the
+draft quoted the sentence beneath them, as its prompt asks when a heading is a label.
+That also flatters the heading walk, whose candidates were on screen when the marks were
+made.
+
+*The ADR-025 gate.* Its polarity half holds: no E-1 errors and no conflicts. Its recall
+half, as written, does not: the regex finds more of the human's marks, by either
+matching rule. But the marks it is measured against include eleven that the proposed
+grain policy says are not separate rules, and that policy is not yet agreed. **So the
+gate cannot be honestly decided yet.** It needs the policy settled, the three pages swept
+under it, and blind marks on some of the other seven pages; then
+`python -m derek.eval.draft_score` decides it, at no cost.
+
+*The test sentences.* 144 written, 139 agreed between the families, 0 dropped by the text
+checks. The five not agreed are all words in quotation marks that are not direct speech
+(a phrase mentioned, a button label, a defined term, a partial quotation), which Gemini
+called unclear and the writer called compliant.
+Claude read all 72 agreed violating sentences: 70 break the rule they were written for;
+two break a different one (a question ending in a full stop, a full stop outside a
+closing quote). Agreement between two families is evidence, not proof.
+
+| Proposed matcher | Violating caught | Compliant flagged (near misses) |
+|---|---|---|
+| Latin shortened forms *(ready)* | 8/8 | 0/8 (0/6) |
+| Digit grouping *(ready)* | 2/8 | 0/8 (0/6) |
+| "and myself" as subject *(ready)* | 4/8 | 0/8 (0/6) |
+| Opening with numbers and dates *(ready)* | 5/8 | 0/8 (0/6) |
+| ‘for example’ *(blocked)* | 8/8 | 0/6 (0/3) |
+| Tag questions *(blocked)* | 5/8 | 0/8 (0/5) |
+| Large rounded numbers *(blocked)* | 8/8 | 0/8 (0/6) |
+| Direct speech *(blocked)* | 1/8 | 0/5 (0/3) |
+| Older people *(blocked)* | 8/8 | 0/8 (0/6) |
+
+**No false alarm in 67 compliant sentences, 47 of them near misses.** (The checkpoint
+commit `057ada3` said 70; it is 67.) Most misses are where each proposal's `limits` says
+they will be: a bare four-digit count, a reflexive pronoun standing alone as subject,
+speech introduced by "wrote". Four of the digit-grouping misses are commas misused in a
+year, a postcode or a decimal, which that matcher does not look for. A few are not, and are
+worth a revision before or after adoption: `$27500` (the digit pattern excludes a
+preceding `$`), "Neither the coordinator nor myself" (`nor` is not in the alternation),
+an opening date with no comma before the next number ("On 8 September 2024 64
+residents"), and tag questions on `have`, `was` and `did`. The full list is
+`ledger/proposals/examples/REPORT.md`.
+
+**Spend.** At list price, from the usage each provider reported.
+
+| | OpenAI (`gpt-6.1-sol`) | Gemini (`gemini-3.1-pro-preview`) |
+|---|---|---|
+| Drafting: smoke test, probe, ten blind pages | $1.356 | — |
+| Test sentences: writing / checking | $0.105 | $0.233 |
+| Probe of the Gemini transport | — | $0.002 |
+| **Metered** | **$1.461** of $4.00 | **$0.235** of $1.50 |
+| Attempts that failed before reporting usage | up to about $0.50 if billed | — |
+
+The unreported attempts are the two non-streamed probes (up to five attempts each, at
+about $0.035) and the dropped stream (that page later cost $0.157). The provider's usage
+page will say whether they were billed.
+
+**Consequences.** Re-drafting under a new prompt or model is a new cache directory and a
+new score; the blind drafts here are the baseline any change is measured against. The
+synthetic sentences change nothing that loads: the four blocked matchers stay blocked.
+
+**For the owner.**
+
+1. **Agree or amend the grain policy** ([docs/08](08-rule-grain.md)). The recall half of
+   the gate turns on it: eleven of the 33 marks on the first pages are what it calls
+   sections, permissions, advice, duplicates or restatements.
+2. **Sweep the three annotated pages** under that policy (the annotator's Checks card
+   lists what the lint finds), and **mark some of the seven unannotated blind pages**,
+   without drafts, which they never show. Then `python -m derek.eval.draft_score` decides
+   the gate for free. Recommendation: at least three of the seven, so the decision does
+   not rest on the partly unblinded pages alone.
+3. **Whether a sentence two families agree on, confirmed by a named human, may stand in
+   for a missing manual example** in the adoption harness. ADR-026 already names "a
+   reviewed synthetic pair" as acceptable; the mechanism is not built. Recommendation:
+   yes, with the human confirmation in the triage app's example screen and the sentence's
+   provenance kept on the rule, because author (OpenAI), checker (Gemini), matcher
+   (Claude) and confirmer (a person) are then four different hands (D-1). Until then,
+   nothing here unblocks anything.
+4. **Adopting the four ready matchers** stays a named human's step
+   (`python -m derek.detect.proposals adopt UID --by TA`). The table above is the
+   evidence: the Latin-forms matcher is the clean case; the other three catch what their
+   limits say and miss the gaps listed.

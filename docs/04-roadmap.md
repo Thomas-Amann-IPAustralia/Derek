@@ -218,12 +218,19 @@ rules, which is what Phase 2b is for.
 - [x] Model drafts ([ADR-025](02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them),
       proposed): `tools/draft/` and `draft-spans.yml`, a draft layer in the annotator,
       `golden/blind.json` (10 pages never shown a draft), and `derek/eval/draft_score.py`.
-      **Built and tested; not yet run**, because it needs an API key.
-- [ ] **Finish and sweep the first three pages**, working through the annotator's
-      *Checks* card. They are blind, so they are the first measurement.
-- [ ] **Draft the blind pages and score them** (`draft-spans.yml` with `blind`). This
-      decides ADR-025: if drafts do not beat the sentence regex on recall, or they get
-      example polarity wrong more often than a human, drafting stops here.
+      First run 2026-10-10 on `gpt-6.1-sol` at high effort, metered and capped
+      ([ADR-027](02-decisions.md#adr-027--the-first-paid-model-work-drafts-on-openai-and-a-second-family-checks-what-a-model-writes)).
+- [ ] **Agree or amend [the grain policy](08-rule-grain.md).** Eleven of the 33 marks on
+      the first three pages are what it calls sections, permissions, advice, duplicates
+      or restatements, and the gate's recall half turns on which is right (ADR-027).
+- [ ] **Finish and sweep the first three pages** under it, working through the
+      annotator's *Checks* card. They are blind but no longer fully so (ADR-027).
+- [x] **Draft the blind pages**: all ten, $1.33 (ADR-027).
+- [ ] **Score them**, which decides ADR-025: if drafts do not beat the sentence regex on
+      recall, or they get example polarity wrong more often than a human, drafting stops
+      here. Provisionally, polarity holds (0 E-1 errors in 18 labelled parts) and recall
+      cannot be decided until the item above is. Needs the three pages swept and some of
+      the seven unannotated blind pages marked; then `python -m derek.eval.draft_score`.
 - [ ] If it passes: annotate 5 to 8 varied pages *with* drafts, and compare their pace
       (`python -m derek.eval.annotation_pace`) with the blind pages.
 - [ ] Then the rest of the 128 eligible pages.
@@ -248,7 +255,11 @@ heuristic guessed.
       dates), four blocked for want of a violating example, and one blocked by
       [Q9](05-open-questions.md#q9--the-harvested-gold-examples-include-the-prose-that-follows-them).
       **None adopted:** that is a named human's step (`adopt-matchers.yml`).
-- [ ] Violating examples for the blocked four, from a reviewed source
+- [ ] Violating examples for the blocked four, from a reviewed source. *Candidates exist:*
+      144 sentences for all nine proposals, written by OpenAI without sight of the
+      matchers and labelled blind by Gemini; 139 agreed, no false alarm in 67 compliant
+      ones (`ledger/proposals/examples/REPORT.md`). Whether a confirmed one may count is
+      the owner's decision (ADR-027).
 - [ ] Calibration on the gold set; real `confidence` values
 
 **Done when:** Tier 0 rules run green through the dogfood gate and carry calibrated
