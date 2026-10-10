@@ -71,6 +71,7 @@ def bench(tmp_path, monkeypatch):
     server.write_ledger(ledger, [a_rule("a" * 16), a_rule("b" * 16)])
     monkeypatch.setattr(server, "LEDGER", ledger)
     monkeypatch.setattr(server, "EXAMPLE_VERDICTS", tmp_path / "example_reviews.jsonl")
+    monkeypatch.setattr(server, "TEST_SENTENCES", tmp_path / "no-test-sentences")
     monkeypatch.setattr(apply_mod, "OPS_LOG", tmp_path / "review_ops.jsonl")
     return tmp_path
 

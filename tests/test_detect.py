@@ -164,8 +164,11 @@ def _one(rule, **proposal):
     base = {"uid": rule.uid, "method": "regex", "matcher": {"pattern": r"\b(?:e\.g|i\.e)\.,"},
             "expected_density": 0.0, "_source": "test"}
     base.update(proposal)
+    # No test sentences and no verdicts: these tests are about the rule's own
+    # examples, and must not move when a reviewer confirms a sentence.
     [c] = props.check([base], {rule.uid: rule}, docs=[("t", Document.from_text(
-        "Plain compliant prose, e.g. this sentence, with nothing wrong in it."))], words=1000)
+        "Plain compliant prose, e.g. this sentence, with nothing wrong in it."))], words=1000,
+        records={}, verdicts={})
     return c
 
 
@@ -201,7 +204,9 @@ def test_adoption_is_by_a_named_human_and_the_gate_then_runs_it(tmp_path):
     assert c.ready, c.blockers
     before = len(rule.review.history)
 
-    assert props.adopt([LATIN], "TA", ledger=ledger, checks=[c]) == 1
+    fp = props.fingerprint(props.card_body(c))[:12]
+    assert props.adopt([LATIN], "TA", ledger=ledger, checks=[c], cards={LATIN: fp},
+                       adoptions=tmp_path / "adoptions") == 1
     got = load_ledger(ledger)[LATIN]
     assert got.detection.detectable and got.detection.tier == 0 and got.detection.method == "regex"
     assert got.validation.examples_pass is True and got.validation.status == "pass"
@@ -220,5 +225,7 @@ def test_a_blocked_proposal_cannot_be_adopted(tmp_path):
     write_ledger(ledger, rules.values())
     rule.violating_examples = []
     c = _one(rule)
-    assert props.adopt([LATIN], "TA", ledger=ledger, checks=[c]) == 0
+    fp = props.fingerprint(props.card_body(c))[:12]
+    assert props.adopt([LATIN], "TA", ledger=ledger, checks=[c], cards={LATIN: fp},
+                       adoptions=tmp_path / "adoptions") == 0
     assert not load_ledger(ledger)[LATIN].detection.detectable

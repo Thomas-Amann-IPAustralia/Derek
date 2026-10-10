@@ -1346,7 +1346,9 @@ async function renderExample(){
       </div>
     </details>
     <p style="font-size:11.5px;color:var(--muted);margin:8px 0 0">
-      Source: <b>${q.origin === "synthetic" ? "machine-generated candidates" : "the Style Manual's own example blocks"}</b>
+      Source: <b>${q.origin === "synthetic" ? "machine-generated candidates"
+        : q.origin === "mixed" ? "test sentences for proposed matchers first, then the Style Manual's own example blocks"
+        : "the Style Manual's own example blocks"}</b>
       · ${q.done} of ${q.total} checked</p>`;
 
   const item = q.items[S.exIndex];

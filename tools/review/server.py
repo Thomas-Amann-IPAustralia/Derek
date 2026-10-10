@@ -507,18 +507,41 @@ def grade_attention_check(nonce: str, answer: str, reviewer: str) -> dict:
 # ---------------------------------------------------------------------------
 
 SYNTHETIC = REPO / "ledger" / "training_candidates.jsonl"
+# Test sentences for proposed matchers (ADR-028), written by tools/synth/.
+TEST_SENTENCES = REPO / "ledger" / "proposals" / "examples"
 
 
 def example_queue(rules: dict[str, Rule]) -> dict:
     """Items for the example-checking screen.
 
-    Today it serves the gold examples harvested from the manual's own
-    Write this / Not this blocks, because those are what the dogfood gate and
-    the confidence calibration will be measured against (ADR-011, ADR-013) and
-    nobody has read them end to end. The moment
-    `ledger/training_candidates.jsonl` exists, the same screen serves that
-    instead — identical shape, identical decisions, no second tool to learn.
+    First, the **test sentences** written for proposed matchers that both model
+    families labelled the same way (ADR-028). A person's "good" here is what
+    lets one count when a matcher is adopted, so they come first; their verdicts
+    land in the same `ledger/example_reviews.jsonl`, and `derek.detect.examples`
+    reads them back with the sentence's provenance.
+
+    Then the gold examples harvested from the manual's own Write this / Not this
+    blocks, because those are what the dogfood gate and the confidence
+    calibration will be measured against (ADR-011, ADR-013) and nobody has read
+    them end to end. The moment `ledger/training_candidates.jsonl` exists, it
+    replaces them — identical shape, identical decisions, no second tool to learn.
     """
+    from derek.detect import examples as test_sentences
+
+    tests = test_sentences.queue_items(test_sentences.load_test_sentences(TEST_SENTENCES), {})
+    rest = _example_items(rules)
+    done = {row["id"] for row in _read_jsonl(EXAMPLE_VERDICTS)}
+    items = tests + rest["items"]
+    origin = rest["origin"] if not tests else ("mixed" if rest["items"] else "synthetic")
+    return {
+        "origin": origin,
+        "total": len(items),
+        "done": sum(1 for it in items if it["id"] in done),
+        "items": [it for it in items if it["id"] not in done],
+    }
+
+
+def _example_items(rules: dict[str, Rule]) -> dict:
     if SYNTHETIC.exists():
         rows = _read_jsonl(SYNTHETIC)
         items = [
@@ -549,14 +572,7 @@ def example_queue(rules: dict[str, Rule]) -> dict:
                         "claimed": polarity,
                     })
         items.sort(key=lambda it: it["id"])
-
-    done = {row["id"] for row in _read_jsonl(EXAMPLE_VERDICTS)}
-    return {
-        "origin": "synthetic" if SYNTHETIC.exists() else "style_manual",
-        "total": len(items),
-        "done": len(done),
-        "items": [it for it in items if it["id"] not in done],
-    }
+    return {"origin": "synthetic" if SYNTHETIC.exists() else "style_manual", "items": items}
 
 
 # ---------------------------------------------------------------------------

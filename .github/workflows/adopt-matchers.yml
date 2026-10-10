@@ -7,14 +7,21 @@ name: Adopt Tier 0 matchers
 # example does, and the Style Manual's own prose stays within budget (ADR-004,
 # ADR-011). A blocked proposal is refused however it is asked for.
 #
-# Started from the Actions tab, so it works from a browser. The job summary
-# shows the full proposals report, ready and blocked, before anything is written.
+# Started from the Actions tab, so it works from a browser. Run it first as a dry
+# run with the rule uids: the job summary shows the proposals report and each
+# named rule's full card, ending in its fingerprint. Then run it for real with
+# UID:FINGERPRINT for each rule, so what is adopted is exactly what was read
+# (ADR-028). A changed result means a changed fingerprint, and adoption refuses
+# until the new card has been read. Each adoption writes its evidence to
+# ledger/adoptions/<uid>.json.
 
 on:
   workflow_dispatch:
     inputs:
       uids:
-        description: Rule uids to adopt, separated by spaces (see the report in a dry run)
+        description: >-
+          Dry run: rule uids whose cards to show, separated by spaces. Adopting:
+          UID:FINGERPRINT for each, the fingerprint from the foot of its card
         required: true
       initials:
         description: Your initials, recorded in each rule's review history
@@ -45,6 +52,16 @@ jobs:
       - name: Report
         run: python -m derek.detect.proposals | tee -a "$GITHUB_STEP_SUMMARY"
 
+      # The full card for every rule named, adopted or not, so the evidence is
+      # in the summary of the same run that writes it.
+      - name: Cards
+        env:
+          UIDS: ${{ inputs.uids }}
+        run: |
+          read -ra pairs <<< "$UIDS"
+          uids=("${pairs[@]%%:*}")
+          python -m derek.detect.proposals card "${uids[@]}" | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Adopt
         id: adopt
         if: ${{ !inputs.dry_run }}
@@ -52,14 +69,14 @@ jobs:
           UIDS: ${{ inputs.uids }}
           BY: ${{ inputs.initials }}
         run: |
-          read -ra uids <<< "$UIDS"
-          python -m derek.detect.proposals adopt "${uids[@]}" --by "$BY"
+          read -ra pairs <<< "$UIDS"
+          python -m derek.detect.proposals adopt "${pairs[@]}" --by "$BY"
           # The gate the adopted rules now have to pass on every push.
           python -m derek.eval.dogfood
           python -m derek.extract.build --check
           git config user.name  "DerekBot"
           git config user.email "derek-bot@users.noreply.github.com"
-          git add ledger/rules.jsonl
+          git add ledger/rules.jsonl ledger/adoptions/
           if git diff --cached --quiet; then
             echo "adopted=false" >> "$GITHUB_OUTPUT"
           else
