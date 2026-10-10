@@ -142,7 +142,14 @@ which the dogfood gate and confidence calibration will be measured against
 and which nobody has read end to end. Harvesting artefacts do exist in there; finding
 them is the point.
 
-When `ledger/training_candidates.jsonl` exists, the same screens serve that instead:
+**Test sentences come first** ([ADR-028](../../docs/02-decisions.md#adr-028--the-grain-policy-is-agreed-test-sentences-may-count-and-adoption-shows-its-evidence)).
+These are sentences written for a proposed matcher's rule by a model that never saw the
+matcher, and labelled the same way by a second model family. A **Good** here confirms
+the label, and a confirmed sentence is what a matcher is tested on at adoption, with
+your initials in its provenance. A sentence the two families disagreed on is never
+asked.
+
+When `ledger/training_candidates.jsonl` exists, it replaces the gold examples:
 
 ```json
 {"id": "syn-0001", "rule_uid": "f8f3ddac1581e5c6", "rule": "Use numerals with the percentage sign",

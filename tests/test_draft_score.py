@@ -75,7 +75,7 @@ def world(tmp_path):
 
     seeded_page = drafting.load_page(FULL_STOPS)
     web = _find(seeded_page, "Don’t end web or email addresses")
-    kept = [_span(FULL_STOPS, web, seed_draft=f"p1/{drafting.MODEL}"),
+    kept = [_span(FULL_STOPS, web, seed_draft=f"{drafting.PROMPT_VERSION}/{drafting.MODEL}"),
             _span(FULL_STOPS, _find(seeded_page, "Don’t use full stops with contractions"))]
 
     gs = GoldenSet(spans={PRONOUNS: human, FULL_STOPS: kept})
@@ -97,7 +97,7 @@ def world(tmp_path):
 
 
 def _run(world):
-    _, _, rows = score("p1", drafting.MODEL, drafts_root=world["drafts"],
+    _, _, rows = score(drafting.PROMPT_VERSION, drafting.MODEL, drafts_root=world["drafts"],
                        spans_path=world["spans"], pages_path=world["pages"])
     return {r.page_path: r for r in rows}
 
@@ -114,12 +114,12 @@ def test_a_blind_page_measures_recall_and_names_the_polarity_conflict(world):
 
 
 def test_precision_waits_for_the_sweep(world):
-    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    text = report(drafting.PROMPT_VERSION, drafting.MODEL, list(_run(world).values()))
     assert "**Precision**" not in text, "an unswept page cannot say a draft rule is wrong"
 
     world["gs"].swept[PRONOUNS] = {"page_path": PRONOUNS, "status": "complete", "by": "TA"}
     write_golden(world["gs"], world["spans"], world["pages"])
-    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    text = report(drafting.PROMPT_VERSION, drafting.MODEL, list(_run(world).values()))
     assert "**Precision**: draft rules the human also marked (swept pages) | **50% (1/2)**" in text
 
 
@@ -129,7 +129,7 @@ def test_a_seeded_page_reports_acceptance_and_never_quality(world):
     assert not seeded.blind
     assert (seeded.accepted_from_draft, seeded.human_added) == (1, 1)
 
-    text = report("p1", drafting.MODEL, list(rows.values()))
+    text = report(drafting.PROMPT_VERSION, drafting.MODEL, list(rows.values()))
     blind_part, seeded_part = text.split("## Seeded pages")
     assert "Recall" in blind_part and "Recall" not in seeded_part
     assert "accepted from the draft | 50% (1/2)" in seeded_part
@@ -147,7 +147,7 @@ def test_a_blind_page_keeps_the_drafts_content_sealed_until_it_is_swept(world):
     """Before the sweep the report may count the draft's extra rules and its
     polarity conflicts, but not print them: on a blind page that would put the
     draft in front of the reviewer it exists to be measured against (ADR-025)."""
-    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    text = report(drafting.PROMPT_VERSION, drafting.MODEL, list(_run(world).values()))
     blind_part = text.split("## Seeded pages")[0]
     assert "Relative pronouns show" not in blind_part, "an extra draft rule leaked"
     assert "The manager emailed myself." not in blind_part, "a polarity conflict leaked"
@@ -159,7 +159,7 @@ def test_a_blind_page_keeps_the_drafts_content_sealed_until_it_is_swept(world):
 
     world["gs"].swept[PRONOUNS] = {"page_path": PRONOUNS, "status": "complete", "by": "TA"}
     write_golden(world["gs"], world["spans"], world["pages"])
-    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    text = report(drafting.PROMPT_VERSION, drafting.MODEL, list(_run(world).values()))
     assert "Relative pronouns show" in text and "The manager emailed myself." in text
 
 
@@ -170,5 +170,5 @@ def test_recall_at_the_same_place_and_e1_are_reported_for_every_method(world):
     # The draft calls the manual's Incorrect sentence compliant: one E-1 error,
     # on the two labelled parts it attached. The human's two are both right.
     assert r.e1 == {"draft": [1, 2], "human": [0, 2]}
-    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    text = report(drafting.PROMPT_VERSION, drafting.MODEL, list(_run(world).values()))
     assert "Recall at the same place" in text and "1 of 2 / 0 of 2" in text

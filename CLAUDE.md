@@ -85,12 +85,13 @@ python -m derek.eval.annotation_pace    # words a minute per page, blind vs seed
 # and adopted by a named human, only if the rule's own examples agree and the
 # manual's prose stays within budget. adopt-matchers.yml does the same from Actions.
 python -m derek.detect.proposals                     # ready or blocked, and why
-python -m derek.detect.proposals adopt UID --by TA   # write a ready matcher to the ledger
+python -m derek.detect.proposals card UID            # one rule's full results, ending in a fingerprint
+python -m derek.detect.proposals adopt UID:FINGERPRINT --by TA   # adopt exactly the card that was read
 python -m derek.detect FILE.txt                      # run adopted rules over a text file
 
-# Independent test sentences for proposed matchers (ADR-027). OpenAI writes them
-# without seeing any matcher, Gemini labels them blind; only agreement counts.
-# Proposals only: nothing here writes to the ledger or unblocks an adoption.
+# Independent test sentences for proposed matchers (ADR-027, ADR-028). OpenAI writes
+# them without seeing any matcher, Gemini labels them blind, and a person confirms
+# them in the triage app's example screen. Only a confirmed one counts at adoption.
 python tools/synth/synth_examples.py --dry-run        # the estimate; free
 python tools/synth/synth_examples.py run              # write and check, capped per provider
 python tools/synth/synth_examples.py report           # each matcher vs the agreed sentences; free
@@ -158,7 +159,7 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/extract/golden.py` | `golden/spans.jsonl` → candidates, with the D-4/D-5 refusals |
 | `golden/spans.jsonl` | The golden set: the spans a human marked as rules |
 | `golden/pages.jsonl` | Which pages a human swept — what turns absence into a negative |
-| `docs/08-rule-grain.md` | What counts as one rule. The lint checks it; the drafting prompt embeds it verbatim |
+| `docs/08-rule-grain.md` | What counts as one rule. **Agreed** (ADR-028). The lint checks it; the drafting prompt embeds all but its status paragraph |
 | `derek/eval/golden_lint.py` | The golden set checked against D-2, ADR-006, E-1 and the grain policy |
 | `tools/draft/drafting.py` | Drafting prompt (hash-pinned), the pointer check, the draft cache (ADR-025) |
 | `tools/draft/draft_spans.py` | Calls the drafting model (OpenAI or Anthropic, by the pinned name); meters spend, imports the SDK lazily |
@@ -169,8 +170,10 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/detect/document.py` | Plain-text `Document` (ADR-012); which blocks are the manual's wrong examples |
 | `derek/detect/engine.py` | Accepted rules → raw findings; the examples harness |
 | `ledger/proposals/` | Proposed matchers, as data. Only `derek.detect.proposals adopt` writes them into the ledger |
+| `derek/detect/examples.py` | Every example that may test a matcher, with its provenance; which test sentences count (ADR-028) |
+| `ledger/adoptions/` | One record per adopted matcher: the card that was read, every example's provenance, every manual hit |
 | `tools/synth/synth_examples.py` | Test sentences for proposed matchers: OpenAI writes blind to the matcher, Gemini labels blind (ADR-027) |
-| `ledger/proposals/examples/` | **Cached model output.** Those sentences and both families' verdicts. Never read by the harness |
+| `ledger/proposals/examples/` | **Cached model output.** Those sentences and both families' labels. Counted only once a person confirms one |
 | `derek/extract/candidates.py` | Normativity classification, stable UIDs, gold-example harvesting |
 | `derek/extract/data/imperative_verbs.txt` | Hand-curated verb list; primary imperative signal |
 | `derek/extract/data/imperative_headings.json` | **Generated.** Pinned-tagger verdicts (ADR-021); never hand-edit |

@@ -1,11 +1,12 @@
 # Rule grain: what counts as one rule
 
-**Status: proposed.** Drafted from the first three annotated pages (`commas.md`,
-`pronouns.md`, `treaties.md`); it takes effect when a human who annotates agrees
-to it. Until then it is what `derek.eval.golden_lint` checks and what the
-drafting prompt ([ADR-025](02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them))
-is told. Changing it changes that prompt's version, so an edit here invalidates
-every cached draft that used the old wording, which is what should happen.
+**Status: agreed** by the owner on 2026-10-10 ([ADR-028](02-decisions.md#adr-028--the-grain-policy-is-agreed-test-sentences-may-count-and-adoption-shows-its-evidence)). It is what a sweep applies, what
+`derek.eval.golden_lint` checks, and what the drafting prompt
+([ADR-025](02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them))
+is told. The prompt embeds everything on this page except this paragraph, so a
+change to the policy changes the prompt's version and invalidates every cached draft
+made with the old wording, which is what should happen. A change to this paragraph
+alone does not.
 
 **Why this exists.** On `commas.md` the same situation, a parent heading with
 child headings under it, was handled three different ways:

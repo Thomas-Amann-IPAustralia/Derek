@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -54,10 +55,12 @@ DRAFTS = REPO / "golden" / "drafts"
 BLIND = REPO / "golden" / "blind.json"
 
 # Bump PROMPT_VERSION whenever the rendered prompt changes, including any edit to
-# docs/08-rule-grain.md, which it embeds. tests/test_drafting.py compares the
-# live prompt against PROMPT_SHA256 and fails until both are updated together.
-PROMPT_VERSION = "p1"
-PROMPT_SHA256 = "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd"
+# docs/08-rule-grain.md, which it embeds (all but its status paragraph).
+# tests/test_drafting.py compares the live prompt against PROMPT_SHA256 and fails
+# until both are updated together. p1 to p2 removed only that status paragraph
+# (ADR-028), so the blind drafts made under p1 are still the ones scored.
+PROMPT_VERSION = "p2"
+PROMPT_SHA256 = "24f18c9ed2f58053fc36b79d8554330aaab42d02cc9c9a040858a78111dd64ee"
 
 # Pinned for the same reason the tagger and the HTML parser are (ADR-001,
 # ADR-021): a different model is a different set of drafts, so a change is a
@@ -159,8 +162,20 @@ def _options(bucket: str, keys: list[str] | None = None) -> str:
     return "\n".join(out)
 
 
+def policy_text() -> str:
+    """docs/08 as the drafting model sees it: the whole policy, minus its status.
+
+    Whether the owner has agreed the policy is a fact about the document, not a
+    rule in it. While the status paragraph was embedded, agreeing the policy
+    would have re-keyed every cached draft without changing a word of what the
+    model is told to do (ADR-028). Everything else is embedded verbatim.
+    """
+    text = POLICY.read_text(encoding="utf-8")
+    return re.sub(r"\n\*\*Status:.*?\n\n", "\n", text, count=1, flags=re.S)
+
+
 def system_prompt() -> str:
-    policy = POLICY.read_text(encoding="utf-8")
+    policy = policy_text()
     return f"""\
 You are drafting the rule inventory for one page of the Australian Government \
 Style Manual. The draft is for Derek, a checker that flags text breaking a Style \

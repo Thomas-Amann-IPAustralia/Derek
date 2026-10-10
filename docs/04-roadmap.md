@@ -220,17 +220,18 @@ rules, which is what Phase 2b is for.
       `golden/blind.json` (10 pages never shown a draft), and `derek/eval/draft_score.py`.
       First run 2026-10-10 on `gpt-6.1-sol` at high effort, metered and capped
       ([ADR-027](02-decisions.md#adr-027--the-first-paid-model-work-drafts-on-openai-and-a-second-family-checks-what-a-model-writes)).
-- [ ] **Agree or amend [the grain policy](08-rule-grain.md).** Eleven of the 33 marks on
-      the first three pages are what it calls sections, permissions, advice, duplicates
-      or restatements, and the gate's recall half turns on which is right (ADR-027).
+- [x] **[The grain policy](08-rule-grain.md) agreed** by the owner, 2026-10-10
+      ([ADR-028](02-decisions.md#adr-028--the-grain-policy-is-agreed-test-sentences-may-count-and-adoption-shows-its-evidence)). Eleven of the 33 marks on the first three pages are what it
+      calls sections, permissions, advice, duplicates or restatements.
 - [ ] **Finish and sweep the first three pages** under it, working through the
       annotator's *Checks* card. They are blind but no longer fully so (ADR-027).
 - [x] **Draft the blind pages**: all ten, $1.33 (ADR-027).
 - [ ] **Score them**, which decides ADR-025: if drafts do not beat the sentence regex on
       recall, or they get example polarity wrong more often than a human, drafting stops
       here. Provisionally, polarity holds (0 E-1 errors in 18 labelled parts) and recall
-      cannot be decided until the item above is. Needs the three pages swept and some of
-      the seven unannotated blind pages marked; then `python -m derek.eval.draft_score`.
+      cannot be decided until the three pages are swept under the agreed policy and some
+      of the seven unannotated blind pages are marked; then
+      `python -m derek.eval.draft_score --prompt p1`.
 - [ ] If it passes: annotate 5 to 8 varied pages *with* drafts, and compare their pace
       (`python -m derek.eval.annotation_pace`) with the blind pages.
 - [ ] Then the rest of the 128 eligible pages.
@@ -258,8 +259,11 @@ heuristic guessed.
 - [ ] Violating examples for the blocked four, from a reviewed source. *Candidates exist:*
       144 sentences for all nine proposals, written by OpenAI without sight of the
       matchers and labelled blind by Gemini; 139 agreed, no false alarm in 67 compliant
-      ones (`ledger/proposals/examples/REPORT.md`). Whether a confirmed one may count is
-      the owner's decision (ADR-027).
+      ones (`ledger/proposals/examples/REPORT.md`). The owner agreed a confirmed one may
+      stand in ([ADR-028](02-decisions.md#adr-028--the-grain-policy-is-agreed-test-sentences-may-count-and-adoption-shows-its-evidence)); 139 now wait in the triage app's example screen.
+- [x] A full results card per proposal (`python -m derek.detect.proposals card UID`),
+      and adoption only with that card's fingerprint, writing every example's provenance
+      to `ledger/adoptions/<uid>.json` ([ADR-028](02-decisions.md#adr-028--the-grain-policy-is-agreed-test-sentences-may-count-and-adoption-shows-its-evidence))
 - [ ] Calibration on the gold set; real `confidence` values
 
 **Done when:** Tier 0 rules run green through the dogfood gate and carry calibrated

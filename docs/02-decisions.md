@@ -35,7 +35,8 @@ relevant — the **Octavius failure** it exists to prevent.
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
 | [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: blind drafts made; the score waits on the grain policy and the sweep (ADR-027) |
 | [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
-| [027](#adr-027--the-first-paid-model-work-drafts-on-openai-and-a-second-family-checks-what-a-model-writes) | The first paid model work: drafts on OpenAI, and a second family checks what a model writes | Owner's direction; results recorded, adoption open |
+| [027](#adr-027--the-first-paid-model-work-drafts-on-openai-and-a-second-family-checks-what-a-model-writes) | The first paid model work: drafts on OpenAI, and a second family checks what a model writes | Owner's direction; results recorded; questions answered in ADR-028 |
+| [028](#adr-028--the-grain-policy-is-agreed-test-sentences-may-count-and-adoption-shows-its-evidence) | The grain policy is agreed, test sentences may count, and adoption shows its evidence | Accepted (owner) |
 
 ---
 
@@ -1471,3 +1472,82 @@ synthetic sentences change nothing that loads: the four blocked matchers stay bl
    (`python -m derek.detect.proposals adopt UID --by TA`). The table above is the
    evidence: the Latin-forms matcher is the clean case; the other three catch what their
    limits say and miss the gaps listed.
+
+---
+
+## ADR-028 — The grain policy is agreed, test sentences may count, and adoption shows its evidence
+
+*2026-10-10. Decision (owner); the details below settled in the build.*
+
+**Context.** ADR-027 ended with four questions. The owner's answers, the same day:
+
+1. *"I agree to the rule-counting policy."* ([docs/08](08-rule-grain.md))
+2. *"Where am I to review and sweep the marked and blind pages?"* A question, answered
+   in the annotator; nothing to build.
+3. *"A test sentence can stand in for a missing manual example. I would like the
+   provenance of tests to be recorded in metadata for auditability's sake."*
+4. *"I'll want to see a rule's full performance results before approving it."*
+
+**Decision.**
+
+1. **The grain policy is agreed.** Its status paragraph says so. The drafting prompt
+   now embeds the policy *without* that paragraph (`tools/draft/drafting.py:policy_text`),
+   because whether the policy is agreed is a fact about the document, not a rule in it,
+   and agreeing it should not re-key every cached draft. That one change is the prompt's
+   move from `p1` to `p2`; what the model is told to do is identical. The ten blind
+   drafts stay under `p1` and are what the drafting gate is scored on
+   (`python -m derek.eval.draft_score --prompt p1`). Re-drafting them under `p2` would
+   cost about $1.33 and measure nothing new.
+
+2. **A test sentence may stand in for a missing manual example**, and only a test
+   sentence that meets all three of these
+   (`derek/detect/examples.py`):
+   - written by a model that never saw the matcher (`tools/synth/synth_examples.py`);
+   - labelled the same way by a second model family that never saw the first one's
+     labels;
+   - confirmed by a named person, as "good" in the triage app's example screen, which
+     now asks about these sentences first (139 of them), then the gold examples. The
+     latest verdict on a sentence wins; a sentence the families disagreed on is never
+     asked.
+
+   In the adoption harness (`derek.detect.proposals`), the rule's own examples are as
+   strict as before. Beside them:
+   - a confirmed violating sentence stands in where the manual gives none, and at least
+     one must fire;
+   - **a confirmed compliant sentence that fires blocks adoption**, because a false alarm
+     is the Octavius failure whatever its source;
+   - a confirmed violating sentence that the matcher misses is shown in the card and does
+     **not** block. A Tier 0 pattern often covers part of a rule and says which part in
+     its `limits`; the rest is Tier 1's. That coverage is for the person adopting to
+     weigh, which is what decision 4 asks for. *This is Claude's reading of "stand in";
+     the strict reading, every confirmed sentence must fire, is one line in `check`.*
+
+3. **Every example used carries its provenance into a record.** Three sources, each
+   traced: `style_manual` (page, heading path, URL, snapshot hash), `human_span` (span
+   ids, who marked them and when) and `test_sentence` (its cache file and input hash,
+   prompt version, writer model and effort, checker model and verdict with its reason,
+   whether it was a near miss, and who confirmed it when). Adoption writes all of it to
+   `ledger/adoptions/<uid>.json`, with the card, the matcher, every test sentence's
+   state and every hit on the manual. The rule's review history gains an entry naming
+   that file, its SHA-256 and the card's. History entries are free objects in the
+   schema, so the other 751 rules do not change.
+
+4. **No adoption without the full results.** `python -m derek.detect.proposals card UID`
+   prints one rule's card: the verdict and any blockers, the rule as the manual states
+   it and as interpreted, the matcher and its limits, every example with where it came
+   from and whether it fired, every test sentence and its state (with a preview of the
+   unconfirmed ones, never counted), and every hit on the manual in context. It ends in
+   a fingerprint, the first twelve characters of the card's SHA-256. `adopt` takes
+   `UID:FINGERPRINT` and refuses unless the fingerprint matches the card as it stands
+   now, so what is adopted is exactly what was read, and any change to the evidence (a
+   newly confirmed sentence, an edited matcher, a corpus change) means reading the new
+   card. `adopt-matchers.yml` shows the cards in a dry run and takes the pairs.
+
+**What this does not do.** A test sentence never becomes one of the rule's examples in
+the ledger, and never Phase 5 training data, which has its own file. It does not relax
+any other condition of [ADR-026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human).
+
+**Noticed, for the owner.** Every accepted rule has an empty `violation_condition`, which
+D-2 asks for and the cards now show. It is not made a blocker here, because whether
+adoption should require it is the owner's call. Recommendation: yes, and fill it in from
+the annotator's rule sheet during the sweep, where `golden_lint` already flags it.

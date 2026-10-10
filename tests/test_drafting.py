@@ -78,7 +78,24 @@ def test_the_prompt_is_pinned():
 
 def test_the_prompt_carries_the_grain_policy_verbatim():
     policy = (REPO / "docs" / "08-rule-grain.md").read_text(encoding="utf-8")
-    assert policy in drafting.system_prompt()
+    prompt = drafting.system_prompt()
+    assert drafting.policy_text() in prompt
+    # Everything but the status paragraph, line for line.
+    status = [ln for ln in policy.split("\n\n") if ln.startswith("**Status:")]
+    assert len(status) == 1 and status[0] not in prompt
+    for para in policy.split("\n\n"):
+        if not para.startswith("**Status:"):
+            assert para.strip() in prompt, para[:60]
+
+
+def test_agreeing_or_amending_the_policy_status_does_not_rekey_the_drafts(monkeypatch, tmp_path):
+    """ADR-028: the status is a fact about the document, not part of the policy."""
+    before = drafting.prompt_sha256()
+    text = (REPO / "docs" / "08-rule-grain.md").read_text(encoding="utf-8")
+    edited = tmp_path / "08.md"
+    edited.write_text(text.replace("**Status: agreed**", "**Status: under review**"), encoding="utf-8")
+    monkeypatch.setattr(drafting, "POLICY", edited)
+    assert drafting.prompt_sha256() == before
 
 
 def test_a_permission_is_not_offered_as_a_modality():
