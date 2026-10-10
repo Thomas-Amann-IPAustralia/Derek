@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.024944,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "The question is a standalone sentence rather than a tagged question at the end of a sentence.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s02",
+     "reason": "Missing a comma before the tagged question 'have you'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s03",
+     "reason": "The sentence does not contain a tagged question.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s04",
+     "reason": "Missing a comma before the tagged question 'aren't they'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s05",
+     "reason": "Missing a comma before the tagged question 'haven't you'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s06",
+     "reason": "Correctly uses a comma before the tagged question 'can't they'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s07",
+     "reason": "Missing a comma before the tagged question 'was it'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s08",
+     "reason": "Missing a comma before the tagged question 'can't we'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s09",
+     "reason": "Correctly uses a comma before the tagged question 'doesn't it'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s10",
+     "reason": "The question is a standalone sentence rather than a tagged question.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s11",
+     "reason": "Missing a comma before the tagged question 'doesn't it'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s12",
+     "reason": "Missing a comma before the tagged question 'did it'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s13",
+     "reason": "Correctly uses a comma before the tagged question 'did you'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s14",
+     "reason": "The sentence does not contain a tagged question.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s15",
+     "reason": "The sentence is a standalone question rather than a tagged question.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s16",
+     "reason": "Missing a comma before the tagged question 'isn't there'.",
+     "verdict": "violates"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 532,
+   "output_tokens": 726,
+   "thinking_tokens": 1264
+  }
+ },
+ "dropped": [],
+ "input_sha256": "e7a6415886be2a91d9de2ec90ea6b6bd57b2b3cd2a811fb1d101e54a72945a0e",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The question is a standalone sentence rather than a tagged question at the end of a sentence.",
+   "how": "Separate negative question is not a tag",
+   "id": "s01",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The service centre is open today. Isn't it usually closed on Mondays?"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'have you'.",
+   "how": "Missing comma before positive tag",
+   "id": "s02",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "You haven't received your payment have you?"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence does not contain a tagged question.",
+   "how": "Indirect question needs no tag comma",
+   "id": "s03",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Please tell us when you expect to complete the work."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'aren't they'.",
+   "how": "Missing comma in first sentence",
+   "id": "s04",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Your contact details are current aren't they? Please check them before submitting the form."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'haven't you'.",
+   "how": "Missing comma before perfect-tense tag",
+   "id": "s05",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "You have attached a copy of your identity document haven't you?"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "Correctly uses a comma before the tagged question 'can't they'.",
+   "how": "Comma separates modal tag",
+   "id": "s06",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "Applicants can save the form and return to it later, can't they?"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'was it'.",
+   "how": "Missing comma before past-tense tag",
+   "id": "s07",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The new online booking system was not available during the trial period was it?"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'can't we'.",
+   "how": "Missing comma before modal tag",
+   "id": "s08",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "We can publish the report on Friday can't we?"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "Correctly uses a comma before the tagged question 'doesn't it'.",
+   "how": "Comma separates negative tag",
+   "id": "s09",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The consultation closes next week, doesn't it?"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The question is a standalone sentence rather than a tagged question.",
+   "how": "Separate question is not a tag",
+   "id": "s10",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The letter includes the reference number. Does it also include the payment date?"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'doesn't it'.",
+   "how": "Missing comma before negative tag",
+   "id": "s11",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The revised policy applies to all staff doesn't it?"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'did it'.",
+   "how": "Missing comma after longer statement",
+   "id": "s12",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The department did not consult local residents before changing the eligibility criteria did it?"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "Correctly uses a comma before the tagged question 'did you'.",
+   "how": "Comma separates positive tag",
+   "id": "s13",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "You did not request an interpreter, did you?"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence does not contain a tagged question.",
+   "how": "Embedded question is not a tag",
+   "id": "s14",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The review will consider whether the current policy meets community needs."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence is a standalone question rather than a tagged question.",
+   "how": "Initial question is not a tag",
+   "id": "s15",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Haven't you already submitted your application?"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Missing a comma before the tagged question 'isn't there'.",
+   "how": "Missing comma before existential tag",
+   "id": "s16",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "There is a service centre near your home isn't there?"
+  }
+ ],
+ "statement": "Separate questions tagged onto a sentence",
+ "uid": "7c4f5c8be1bca65e",
+ "writer": {
+  "cost_usd": 0.009098,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "Comma separates negative tag",
+     "near_miss": false,
+     "text": "The consultation closes next week, doesn't it?"
+    },
+    {
+     "how": "Comma separates positive tag",
+     "near_miss": false,
+     "text": "You did not request an interpreter, did you?"
+    },
+    {
+     "how": "Comma separates modal tag",
+     "near_miss": false,
+     "text": "Applicants can save the form and return to it later, can't they?"
+    },
+    {
+     "how": "Separate question is not a tag",
+     "near_miss": true,
+     "text": "The letter includes the reference number. Does it also include the payment date?"
+    },
+    {
+     "how": "Separate negative question is not a tag",
+     "near_miss": true,
+     "text": "The service centre is open today. Isn't it usually closed on Mondays?"
+    },
+    {
+     "how": "Initial question is not a tag",
+     "near_miss": true,
+     "text": "Haven't you already submitted your application?"
+    },
+    {
+     "how": "Embedded question is not a tag",
+     "near_miss": true,
+     "text": "The review will consider whether the current policy meets community needs."
+    },
+    {
+     "how": "Indirect question needs no tag comma",
+     "near_miss": true,
+     "text": "Please tell us when you expect to complete the work."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Missing comma before negative tag",
+     "text": "The revised policy applies to all staff doesn't it?"
+    },
+    {
+     "how": "Missing comma before positive tag",
+     "text": "You haven't received your payment have you?"
+    },
+    {
+     "how": "Missing comma before modal tag",
+     "text": "We can publish the report on Friday can't we?"
+    },
+    {
+     "how": "Missing comma in first sentence",
+     "text": "Your contact details are current aren't they? Please check them before submitting the form."
+    },
+    {
+     "how": "Missing comma before existential tag",
+     "text": "There is a service centre near your home isn't there?"
+    },
+    {
+     "how": "Missing comma after longer statement",
+     "text": "The department did not consult local residents before changing the eligibility criteria did it?"
+    },
+    {
+     "how": "Missing comma before perfect-tense tag",
+     "text": "You have attached a copy of your identity document haven't you?"
+    },
+    {
+     "how": "Missing comma before past-tense tag",
+     "text": "The new online booking system was not available during the trial period was it?"
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 464,
+   "output_tokens": 817,
+   "reasoning_tokens": 206
+  }
+ }
+}

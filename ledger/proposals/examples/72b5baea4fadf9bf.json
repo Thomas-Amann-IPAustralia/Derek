@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.030616,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "When attribution comes after a quotation, a comma must be used at the end of the quotation before the quotation mark.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s02",
+     "reason": "The rule addresses directly quoted speech and whole sentences, not single quoted words like 'Save' without attribution.",
+     "verdict": "unclear"
+    },
+    {
+     "id": "s03",
+     "reason": "The rule does not address partial quotations integrated into the flow of the sentence without an introductory verb.",
+     "verdict": "unclear"
+    },
+    {
+     "id": "s04",
+     "reason": "The attribution comes after the quotation, and a comma is correctly used before the closing quotation mark.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s05",
+     "reason": "The directly quoted speech is correctly introduced with a comma and ends with the original punctuation inside the quotation marks.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s06",
+     "reason": "If the quotation ends the sentence, it must end with the original punctuation; here, a question mark is needed instead of a full stop.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s07",
+     "reason": "When a quotation is broken into two parts, the second part should follow a full stop, not a comma.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s08",
+     "reason": "The directly quoted speech is properly introduced with a comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s09",
+     "reason": "The rule covers directly quoted speech, not defining terms in quotation marks.",
+     "verdict": "unclear"
+    },
+    {
+     "id": "s10",
+     "reason": "When attribution follows a quotation, the comma must be placed before the quotation mark, not after it.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s11",
+     "reason": "Directly quoted speech must be introduced with a comma, which is missing here.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s12",
+     "reason": "The quotation is introduced with a comma and correctly ends with its original punctuation (a question mark).",
+     "verdict": "complies"
+    },
+    {
+     "id": "s13",
+     "reason": "The quotation is broken into two parts, and the second part correctly follows a full stop.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s14",
+     "reason": "There is no comma introducing the directly quoted speech.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s15",
+     "reason": "Directly quoted speech should be introduced with a comma, not a colon.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s16",
+     "reason": "If the quotation ends the sentence, it should end with the original punctuation (inside the quotation marks), rather than a full stop outside.",
+     "verdict": "violates"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 746,
+   "output_tokens": 828,
+   "thinking_tokens": 1599
+  }
+ },
+ "dropped": [],
+ "input_sha256": "f2cff091b965203083a17a121847c6f0fdc0f2c55fe4e89f76b9973dd2e6680c",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "When attribution comes after a quotation, a comma must be used at the end of the quotation before the quotation mark.",
+   "how": "Missing comma before a following attribution",
+   "id": "s01",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "‘The consultation closes on Friday’ the project coordinator said."
+  },
+  {
+   "agreed": false,
+   "checker": "unclear",
+   "checker_reason": "The rule addresses directly quoted speech and whole sentences, not single quoted words like 'Save' without attribution.",
+   "how": "Quoted interface label is not direct speech",
+   "id": "s02",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Select ‘Save’ to keep your changes."
+  },
+  {
+   "agreed": false,
+   "checker": "unclear",
+   "checker_reason": "The rule does not address partial quotations integrated into the flow of the sentence without an introductory verb.",
+   "how": "Integrated quoted phrase needs no introductory comma",
+   "id": "s03",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The review described the process as ‘clear and accessible’."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The attribution comes after the quotation, and a comma is correctly used before the closing quotation mark.",
+   "how": "Attribution comma belongs inside the quotation",
+   "id": "s04",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "‘The survey results are ready,’ the research officer said."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The directly quoted speech is correctly introduced with a comma and ends with the original punctuation inside the quotation marks.",
+   "how": "Comma introduces quoted material",
+   "id": "s05",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "In her letter, the case officer wrote, ‘We have approved your request for extra time.’"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "If the quotation ends the sentence, it must end with the original punctuation; here, a question mark is needed instead of a full stop.",
+   "how": "Final question lacks its question mark",
+   "id": "s06",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The adviser asked, ‘Would you like a printed copy.’"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "When a quotation is broken into two parts, the second part should follow a full stop, not a comma.",
+   "how": "Comma instead of full stop between quotation parts",
+   "id": "s07",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "‘The inspection is complete,’ the manager said, ‘We will publish the findings tomorrow.’"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The directly quoted speech is properly introduced with a comma.",
+   "how": "Comma introduces direct speech",
+   "id": "s08",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "At the briefing, the commissioner said, ‘The new policy takes effect in July.’"
+  },
+  {
+   "agreed": false,
+   "checker": "unclear",
+   "checker_reason": "The rule covers directly quoted speech, not defining terms in quotation marks.",
+   "how": "Quoted term needs no introductory comma",
+   "id": "s09",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The glossary defines ‘applicant’ as a person who applies for a grant."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "When attribution follows a quotation, the comma must be placed before the quotation mark, not after it.",
+   "how": "Attribution comma outside the quotation mark",
+   "id": "s10",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "‘We can arrange an interpreter’, the receptionist said."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Directly quoted speech must be introduced with a comma, which is missing here.",
+   "how": "Missing comma introducing direct speech",
+   "id": "s11",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The service officer said ‘Your replacement card will arrive next week.’"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The quotation is introduced with a comma and correctly ends with its original punctuation (a question mark).",
+   "how": "Final quotation retains its question mark",
+   "id": "s12",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The librarian asked, ‘Do you need help finding the report?’"
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The quotation is broken into two parts, and the second part correctly follows a full stop.",
+   "how": "Full stop separates the quotation parts",
+   "id": "s13",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "‘The grant round is open,’ the director said. ‘Applications close in September.’"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "There is no comma introducing the directly quoted speech.",
+   "how": "Missing comma introducing quoted material",
+   "id": "s14",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "In the annual report, the director wrote ‘We reduced processing times across all regions.’"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Directly quoted speech should be introduced with a comma, not a colon.",
+   "how": "Colon instead of comma introducing speech",
+   "id": "s15",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "At the policy briefing, the minister said: ‘The changes will protect casual workers.’"
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "If the quotation ends the sentence, it should end with the original punctuation (inside the quotation marks), rather than a full stop outside.",
+   "how": "Final full stop outside the quotation",
+   "id": "s16",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The website editor wrote, ‘You can track your application online’."
+  }
+ ],
+ "statement": "Show direct speech or quoted material using commas",
+ "uid": "72b5baea4fadf9bf",
+ "writer": {
+  "cost_usd": 0.01313,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "Comma introduces direct speech",
+     "near_miss": false,
+     "text": "At the briefing, the commissioner said, ‘The new policy takes effect in July.’"
+    },
+    {
+     "how": "Comma introduces quoted material",
+     "near_miss": false,
+     "text": "In her letter, the case officer wrote, ‘We have approved your request for extra time.’"
+    },
+    {
+     "how": "Attribution comma belongs inside the quotation",
+     "near_miss": true,
+     "text": "‘The survey results are ready,’ the research officer said."
+    },
+    {
+     "how": "Full stop separates the quotation parts",
+     "near_miss": true,
+     "text": "‘The grant round is open,’ the director said. ‘Applications close in September.’"
+    },
+    {
+     "how": "Final quotation retains its question mark",
+     "near_miss": true,
+     "text": "The librarian asked, ‘Do you need help finding the report?’"
+    },
+    {
+     "how": "Quoted interface label is not direct speech",
+     "near_miss": true,
+     "text": "Select ‘Save’ to keep your changes."
+    },
+    {
+     "how": "Quoted term needs no introductory comma",
+     "near_miss": true,
+     "text": "The glossary defines ‘applicant’ as a person who applies for a grant."
+    },
+    {
+     "how": "Integrated quoted phrase needs no introductory comma",
+     "near_miss": true,
+     "text": "The review described the process as ‘clear and accessible’."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Missing comma introducing direct speech",
+     "text": "The service officer said ‘Your replacement card will arrive next week.’"
+    },
+    {
+     "how": "Colon instead of comma introducing speech",
+     "text": "At the policy briefing, the minister said: ‘The changes will protect casual workers.’"
+    },
+    {
+     "how": "Missing comma introducing quoted material",
+     "text": "In the annual report, the director wrote ‘We reduced processing times across all regions.’"
+    },
+    {
+     "how": "Missing comma before a following attribution",
+     "text": "‘The consultation closes on Friday’ the project coordinator said."
+    },
+    {
+     "how": "Attribution comma outside the quotation mark",
+     "text": "‘We can arrange an interpreter’, the receptionist said."
+    },
+    {
+     "how": "Comma instead of full stop between quotation parts",
+     "text": "‘The inspection is complete,’ the manager said, ‘We will publish the findings tomorrow.’"
+    },
+    {
+     "how": "Final question lacks its question mark",
+     "text": "The adviser asked, ‘Would you like a printed copy.’"
+    },
+    {
+     "how": "Final full stop outside the quotation",
+     "text": "The website editor wrote, ‘You can track your application online’."
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 650,
+   "output_tokens": 1183,
+   "reasoning_tokens": 516
+  }
+ }
+}

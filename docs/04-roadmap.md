@@ -16,8 +16,12 @@ accommodations for both are already made ([ADR-012](02-decisions.md#adr-012--for
 | Eligible rule-source pages | 128 (58 excluded, with reasons, per [ADR-005](02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred)) |
 | Deterministic candidates | **736**, unique UIDs, byte-identical across runs |
 | With a *paired* compliant + violating example | **169** (170 with at least one) |
-| Reviewed | 21 — nothing loads until a human accepts it |
+| Ledger | 752 rules: 44 accepted or amended, 12 rejected, 1 deferred, 695 proposed — nothing loads until a human accepts it |
+| Golden set | 33 rules marked on 3 pages (`commas.md`, `pronouns.md`, `treaties.md`); **0 pages swept** |
+| Model drafts | 10 blind pages drafted with `gpt-6.1-sol` ([ADR-027](02-decisions.md#adr-027--the-first-paid-model-work-drafts-on-openai-and-a-second-family-checks-what-a-model-writes)); scored only once their pages are swept |
 | Corpus | **frozen** ([ADR-024](02-decisions.md#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn)); drift is reported, not applied |
+
+*Status as of 2026-10-10.*
 
 ---
 

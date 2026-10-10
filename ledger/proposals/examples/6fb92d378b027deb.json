@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.028452,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "The phrase 'for example' is in the middle of the sentence but lacks commas before and after.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s02",
+     "reason": "The sentence begins with 'For example' and is correctly followed by a comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s03",
+     "reason": "The phrase 'for example' is mentioned as a quoted string rather than used as a transitional phrase; the section does not settle this mention-versus-use case.",
+     "verdict": "unclear"
+    },
+    {
+     "id": "s04",
+     "reason": "The phrase 'for example' is missing commas before and after it.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s05",
+     "reason": "The phrase 'for example' has a comma both before and after it.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s06",
+     "reason": "The phrase 'for example' has a comma before it but is missing the required comma after it.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s07",
+     "reason": "The phrase 'for example' has a comma after it but is missing the required comma before it.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s08",
+     "reason": "The introductory phrase 'For example' is missing a comma after it.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s09",
+     "reason": "The sentence starts with 'For example' and is correctly followed by a comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s10",
+     "reason": "The introductory phrase 'For example' must be followed by a comma.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s11",
+     "reason": "The phrase 'for example' is correctly enclosed in commas.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s12",
+     "reason": "The phrase 'for example' is missing a comma before it.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s13",
+     "reason": "The phrase is mentioned in quotation marks rather than being used transitionally, which the manual section does not address.",
+     "verdict": "unclear"
+    },
+    {
+     "id": "s14",
+     "reason": "The introductory phrase 'For example' is properly followed by a comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s15",
+     "reason": "The phrase 'for example' correctly has a comma before and after it.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s16",
+     "reason": "The phrase 'for example' has a comma before it but is missing the comma after it.",
+     "verdict": "violates"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 636,
+   "output_tokens": 802,
+   "thinking_tokens": 1463
+  }
+ },
+ "dropped": [],
+ "input_sha256": "cee6495820a8bea506eee268f4650f25af338b6e5a70c7c7d6dc9c835138e22a",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The phrase 'for example' is in the middle of the sentence but lacks commas before and after.",
+   "how": "Omits both commas around the phrase.",
+   "id": "s01",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Some services for example offer appointments outside business hours."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence begins with 'For example' and is correctly followed by a comma.",
+   "how": "Sentence-initial phrase needs only a following comma.",
+   "id": "s02",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "For example, the council could provide shaded seating near the entrance."
+  },
+  {
+   "agreed": false,
+   "checker": "unclear",
+   "checker_reason": "The phrase 'for example' is mentioned as a quoted string rather than used as a transitional phrase; the section does not settle this mention-versus-use case.",
+   "how": "Quoted search text is not an explanatory phrase.",
+   "id": "s03",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The search field accepts the exact phrase ‘for example’."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The phrase 'for example' is missing commas before and after it.",
+   "how": "Omits both commas around an explanatory phrase.",
+   "id": "s04",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The review identified several barriers to access for example limited public transport in regional areas."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The phrase 'for example' has a comma both before and after it.",
+   "how": "Sets off the phrase introducing an example.",
+   "id": "s05",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The policy allows alternative evidence, for example, a statement from a registered health practitioner."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The phrase 'for example' has a comma before it but is missing the required comma after it.",
+   "how": "Omits the comma after the phrase.",
+   "id": "s06",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Your supporting documents may include evidence of income, for example a recent payslip."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The phrase 'for example' has a comma after it but is missing the required comma before it.",
+   "how": "Omits the comma before the phrase.",
+   "id": "s07",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "You can update your details online for example, by signing in to your account."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The introductory phrase 'For example' is missing a comma after it.",
+   "how": "Omits the comma after the introductory phrase.",
+   "id": "s08",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "For example you can ask us to send the letter in large print."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence starts with 'For example' and is correctly followed by a comma.",
+   "how": "Uses the phrase at the start of a second sentence.",
+   "id": "s09",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "We can provide information in several formats. For example, we can send you an audio recording."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The introductory phrase 'For example' must be followed by a comma.",
+   "how": "Omits the comma after the introductory phrase.",
+   "id": "s10",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "For example the department could publish quarterly progress reports."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The phrase 'for example' is correctly enclosed in commas.",
+   "how": "Sets off the phrase within a verb construction.",
+   "id": "s11",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "During the trial, staff could, for example, arrange a telephone appointment instead."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The phrase 'for example' is missing a comma before it.",
+   "how": "Omits the comma before the phrase.",
+   "id": "s12",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Applicants for example, may need to provide proof of residency."
+  },
+  {
+   "agreed": false,
+   "checker": "unclear",
+   "checker_reason": "The phrase is mentioned in quotation marks rather than being used transitionally, which the manual section does not address.",
+   "how": "Names the phrase rather than using it parenthetically.",
+   "id": "s13",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The phrase ‘for example’ contains two words."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The introductory phrase 'For example' is properly followed by a comma.",
+   "how": "Uses a comma after an introductory phrase.",
+   "id": "s14",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "For example, you may qualify for a concession if you hold an eligible card."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The phrase 'for example' correctly has a comma before and after it.",
+   "how": "Uses commas before and after the phrase.",
+   "id": "s15",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "Some grants, for example, cover the cost of essential equipment."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The phrase 'for example' has a comma before it but is missing the comma after it.",
+   "how": "Omits the comma after the phrase.",
+   "id": "s16",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Flexible working arrangements, for example can help staff manage caring responsibilities."
+  }
+ ],
+ "statement": "Use commas with the phrase 'for example'",
+ "uid": "6fb92d378b027deb",
+ "writer": {
+  "cost_usd": 0.01023,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "Uses commas before and after the phrase.",
+     "near_miss": false,
+     "text": "Some grants, for example, cover the cost of essential equipment."
+    },
+    {
+     "how": "Sets off the phrase introducing an example.",
+     "near_miss": false,
+     "text": "The policy allows alternative evidence, for example, a statement from a registered health practitioner."
+    },
+    {
+     "how": "Sets off the phrase within a verb construction.",
+     "near_miss": false,
+     "text": "During the trial, staff could, for example, arrange a telephone appointment instead."
+    },
+    {
+     "how": "Sentence-initial phrase needs only a following comma.",
+     "near_miss": true,
+     "text": "For example, the council could provide shaded seating near the entrance."
+    },
+    {
+     "how": "Uses a comma after an introductory phrase.",
+     "near_miss": true,
+     "text": "For example, you may qualify for a concession if you hold an eligible card."
+    },
+    {
+     "how": "Uses the phrase at the start of a second sentence.",
+     "near_miss": true,
+     "text": "We can provide information in several formats. For example, we can send you an audio recording."
+    },
+    {
+     "how": "Quoted search text is not an explanatory phrase.",
+     "near_miss": true,
+     "text": "The search field accepts the exact phrase ‘for example’."
+    },
+    {
+     "how": "Names the phrase rather than using it parenthetically.",
+     "near_miss": true,
+     "text": "The phrase ‘for example’ contains two words."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Omits both commas around the phrase.",
+     "text": "Some services for example offer appointments outside business hours."
+    },
+    {
+     "how": "Omits both commas around an explanatory phrase.",
+     "text": "The review identified several barriers to access for example limited public transport in regional areas."
+    },
+    {
+     "how": "Omits the comma before the phrase.",
+     "text": "Applicants for example, may need to provide proof of residency."
+    },
+    {
+     "how": "Omits the comma before the phrase.",
+     "text": "You can update your details online for example, by signing in to your account."
+    },
+    {
+     "how": "Omits the comma after the phrase.",
+     "text": "Flexible working arrangements, for example can help staff manage caring responsibilities."
+    },
+    {
+     "how": "Omits the comma after the phrase.",
+     "text": "Your supporting documents may include evidence of income, for example a recent payslip."
+    },
+    {
+     "how": "Omits the comma after the introductory phrase.",
+     "text": "For example the department could publish quarterly progress reports."
+    },
+    {
+     "how": "Omits the comma after the introductory phrase.",
+     "text": "For example you can ask us to send the letter in large print."
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 550,
+   "output_tokens": 913,
+   "reasoning_tokens": 233
+  }
+ }
+}

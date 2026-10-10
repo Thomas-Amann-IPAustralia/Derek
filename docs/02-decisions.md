@@ -35,6 +35,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
 | [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
 | [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
+| [027](#adr-027--the-first-paid-model-work-drafts-on-openai-and-a-second-family-checks-what-a-model-writes) | The first paid model work: drafts on OpenAI, and a second family checks what a model writes | Owner's direction; results recorded, adoption open |
 
 ---
 
@@ -1286,3 +1287,65 @@ telling a 4-digit count from a year or a postcode is meaning, not pattern.
 **What this does not do.** It does not let a proposal change a review verdict, run a
 rule that is not accepted, or execute anything from the ledger.
 
+---
+
+## ADR-027 — The first paid model work: drafts on OpenAI, and a second family checks what a model writes
+
+*2026-10-10. In progress: the runs below are still going, and this entry is completed in the commit that records their results.*
+
+**Context.** The roadmap's next steps were waiting on a key: draft the blind pages and
+score them ([ADR-025](#adr-025--a-model-may-draft-spans-a-human-marks-them)), then draft
+pages to annotate with, and find violating examples for the four matchers the vacuity
+rule blocks ([ADR-026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human)).
+The owner gave up to $4 of OpenAI for the work and up to $1.50 of Gemini to check it,
+and suggested `gpt-6.1-sol` at medium effort, leaving the effort to judgement.
+
+**Decision (owner: the providers, the model and the budgets; the details below settled
+in the build).**
+
+1. **The drafter runs on `gpt-6.1-sol`, at high effort.** `tools/draft/drafting.py` pins
+   it; `draft_spans.py` picks the adapter from the model's name, so a Claude model is one
+   line away. The OpenAI call streams with reasoning summaries, sends `store=false`, and
+   uses a fixed base URL so no ambient variable can redirect the manual's text. Every
+   call is priced from the reported usage by exclusive bucket (uncached, cache write,
+   cache read, output with reasoning) at the list prices in `PRICES`, and a run stops
+   before a page whose pessimistic estimate would pass `--max-usd`.
+   *Medium, then high.* On the smoke page (`prepositions.md`) medium reasoned 437 tokens
+   and attached one of the page's four labelled examples, noting "Intentionally omitted";
+   high reasoned 2,482 and attached all four with the manual's polarity. That is one
+   page, but it is the dimension ADR-025's gate measures, and the difference was a
+   cent and a half. Both responses are kept in `tools/draft/probes/`.
+2. **The ten blind pages are drafted, and their score waits for the sweep.** Precision
+   needs a swept page, and only three of the ten have human marks at all.
+   `derek.eval.draft_score` now **seals** an unswept blind page: it counts the draft's
+   extra rules and its polarity conflicts but does not print them, because either one,
+   read before the sweep, puts the draft in front of the reviewer on the page that
+   exists to be marked without it.
+3. **Seeded drafts** (if the provisional gate holds): six pages, one per top-level
+   section of the manual, each the page nearest the median size (7,212 characters) that
+   is neither blind nor annotated. A rule picked them, not a reader, so they are varied
+   without being chosen.
+4. **Test sentences for the nine proposed matchers, from two families.**
+   `tools/synth/synth_examples.py` has OpenAI write eight violating and eight compliant
+   sentences per rule (at least five of them near misses) from the rule's statement, its
+   specification and the manual's own section, **never** the matcher, its limits or the
+   proposal (D-1). Gemini (`gemini-3.1-pro-preview`) then labels them shuffled and
+   unlabelled. A sentence counts only where the two agree. They are kept under
+   `ledger/proposals/examples/`, which `derek.detect.proposals` does not read, so they
+   cannot unblock or adopt anything. `report` runs each matcher over them for free.
+
+**Runs, disclosed in order.**
+
+*Pending the runs.*
+
+**Results.**
+
+*Pending the runs.*
+
+**Spend.**
+
+*Pending the runs.*
+
+**Consequences, and what is open for the owner.**
+
+*Pending the runs.*

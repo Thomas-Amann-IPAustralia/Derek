@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.024358,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "The large, rounded number $1,200,000 should be written using numerals and words (e.g., $1.2 million).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s02",
+     "reason": "The large, rounded number is correctly written using a combination of numerals and words (1 million).",
+     "verdict": "complies"
+    },
+    {
+     "id": "s03",
+     "reason": "The large, rounded number 12,000,000 should be written using numerals and words (12 million).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s04",
+     "reason": "The large, rounded number 6,000,000 should be written using numerals and words (6 million).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s05",
+     "reason": "The large, rounded number 3,000,000 should be written using numerals and words (3 million).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s06",
+     "reason": "The large, rounded number 8,500,000 should be written using numerals and words (8.5 million).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s07",
+     "reason": "Numbers below a million are correctly written as numerals.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s08",
+     "reason": "The number 2,483,716 is large but not rounded, so it does not require a combination of numerals and words.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s09",
+     "reason": "The large, rounded number is correctly written using a decimal and words ($2.6 billion).",
+     "verdict": "complies"
+    },
+    {
+     "id": "s10",
+     "reason": "The manual allows the use of 'one' when writing a million, billion, and so on.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s11",
+     "reason": "The large, rounded number $40,000,000 should be written using numerals and words ($40 million).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s12",
+     "reason": "The manual allows the use of 'one' when writing a million.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s13",
+     "reason": "The large, rounded number $3,000,000,000,000 should be written using numerals and words (e.g., $3 trillion).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s14",
+     "reason": "The large, rounded number is correctly written using a decimal and words ($1.25 billion).",
+     "verdict": "complies"
+    },
+    {
+     "id": "s15",
+     "reason": "The large, rounded number is correctly written using numerals and words (5 million).",
+     "verdict": "complies"
+    },
+    {
+     "id": "s16",
+     "reason": "The large, rounded number $2,500,000,000 should be written using numerals and words ($2.5 billion).",
+     "verdict": "violates"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 755,
+   "output_tokens": 913,
+   "thinking_tokens": 991
+  }
+ },
+ "dropped": [],
+ "input_sha256": "977b72a72aa7f5e28fc8358f3e8816e64e002840ca86fa1ca052767c513ec974",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number $1,200,000 should be written using numerals and words (e.g., $1.2 million).",
+   "how": "Rounded annual saving needs a decimal and million.",
+   "id": "s01",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "We estimate that the changes will save your industry about $1,200,000 each year."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The large, rounded number is correctly written using a combination of numerals and words (1 million).",
+   "how": "The numeral 1 is permitted with million.",
+   "id": "s02",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Around 1 million passengers are expected to use the route each year."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number 12,000,000 should be written using numerals and words (12 million).",
+   "how": "Rounded traffic total uses only digits.",
+   "id": "s03",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "During the reporting period, the website received roughly 12,000,000 visits."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number 6,000,000 should be written using numerals and words (6 million).",
+   "how": "Rounded millions occur near the sentence opening.",
+   "id": "s04",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "With around 6,000,000 records to review, the department will introduce the system in stages."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number 3,000,000 should be written using numerals and words (3 million).",
+   "how": "Rounded millions written entirely as numerals.",
+   "id": "s05",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The program is expected to reach about 3,000,000 people."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number 8,500,000 should be written using numerals and words (8.5 million).",
+   "how": "Rounded passenger total needs decimal-point form and million.",
+   "id": "s06",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Demand is forecast to grow, with annual passenger numbers approaching 8,500,000 by 2030."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "Numbers below a million are correctly written as numerals.",
+   "how": "Rounded number below a million can remain a numeral.",
+   "id": "s07",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The department expects to process around 950,000 applications this year."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The number 2,483,716 is large but not rounded, so it does not require a combination of numerals and words.",
+   "how": "Exact large count is not a rounded number.",
+   "id": "s08",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The audit confirmed that exactly 2,483,716 records had been transferred."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The large, rounded number is correctly written using a decimal and words ($2.6 billion).",
+   "how": "Uses a decimal point and billion.",
+   "id": "s09",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The estimated cost of the project is $2.6 billion."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The manual allows the use of 'one' when writing a million, billion, and so on.",
+   "how": "One is permitted with billion.",
+   "id": "s10",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The fund now holds approximately one billion dollars."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number $40,000,000 should be written using numerals and words ($40 million).",
+   "how": "Rounded funding amount lacks numeral–word combination.",
+   "id": "s11",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "You can apply for a share of the new $40,000,000 fund through this page."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The manual allows the use of 'one' when writing a million.",
+   "how": "One is permitted with million.",
+   "id": "s12",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "More than one million residents have registered for the service."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number $3,000,000,000,000 should be written using numerals and words (e.g., $3 trillion).",
+   "how": "Rounded trillions written entirely as numerals.",
+   "id": "s13",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The report estimates the total value of these assets at approximately $3,000,000,000,000."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The large, rounded number is correctly written using a decimal and words ($1.25 billion).",
+   "how": "Large rounded amount correctly uses a decimal point.",
+   "id": "s14",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The proposed investment of $1.25 billion will support upgrades across the network."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The large, rounded number is correctly written using numerals and words (5 million).",
+   "how": "Combines a numeral with million.",
+   "id": "s15",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The policy is expected to benefit about 5 million households."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The large, rounded number $2,500,000,000 should be written using numerals and words ($2.5 billion).",
+   "how": "Rounded billions omit the word billion.",
+   "id": "s16",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Approximately $2,500,000,000 will be allocated to regional infrastructure."
+  }
+ ],
+ "statement": "Use numerals and words for large, rounded numbers",
+ "uid": "abd424c0990d7e28",
+ "writer": {
+  "cost_usd": 0.011226,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "Combines a numeral with million.",
+     "near_miss": false,
+     "text": "The policy is expected to benefit about 5 million households."
+    },
+    {
+     "how": "Uses a decimal point and billion.",
+     "near_miss": false,
+     "text": "The estimated cost of the project is $2.6 billion."
+    },
+    {
+     "how": "One is permitted with million.",
+     "near_miss": true,
+     "text": "More than one million residents have registered for the service."
+    },
+    {
+     "how": "One is permitted with billion.",
+     "near_miss": true,
+     "text": "The fund now holds approximately one billion dollars."
+    },
+    {
+     "how": "Rounded number below a million can remain a numeral.",
+     "near_miss": true,
+     "text": "The department expects to process around 950,000 applications this year."
+    },
+    {
+     "how": "Exact large count is not a rounded number.",
+     "near_miss": true,
+     "text": "The audit confirmed that exactly 2,483,716 records had been transferred."
+    },
+    {
+     "how": "The numeral 1 is permitted with million.",
+     "near_miss": true,
+     "text": "Around 1 million passengers are expected to use the route each year."
+    },
+    {
+     "how": "Large rounded amount correctly uses a decimal point.",
+     "near_miss": true,
+     "text": "The proposed investment of $1.25 billion will support upgrades across the network."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Rounded millions written entirely as numerals.",
+     "text": "The program is expected to reach about 3,000,000 people."
+    },
+    {
+     "how": "Rounded billions omit the word billion.",
+     "text": "Approximately $2,500,000,000 will be allocated to regional infrastructure."
+    },
+    {
+     "how": "Rounded traffic total uses only digits.",
+     "text": "During the reporting period, the website received roughly 12,000,000 visits."
+    },
+    {
+     "how": "Rounded funding amount lacks numeral–word combination.",
+     "text": "You can apply for a share of the new $40,000,000 fund through this page."
+    },
+    {
+     "how": "Rounded annual saving needs a decimal and million.",
+     "text": "We estimate that the changes will save your industry about $1,200,000 each year."
+    },
+    {
+     "how": "Rounded millions occur near the sentence opening.",
+     "text": "With around 6,000,000 records to review, the department will introduce the system in stages."
+    },
+    {
+     "how": "Rounded trillions written entirely as numerals.",
+     "text": "The report estimates the total value of these assets at approximately $3,000,000,000,000."
+    },
+    {
+     "how": "Rounded passenger total needs decimal-point form and million.",
+     "text": "Demand is forecast to grow, with annual passenger numbers approaching 8,500,000 by 2030."
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 593,
+   "output_tokens": 1004,
+   "reasoning_tokens": 300
+  }
+ }
+}

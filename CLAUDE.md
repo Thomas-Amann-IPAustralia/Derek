@@ -76,8 +76,8 @@ python -m derek.eval.golden_lint        # the golden set vs the invariants and d
 # proposes spans as pointers into the manual, cached under golden/drafts/; the
 # annotator shows them as seeds and a human accepts or dismisses each one.
 # Needs requirements-draft.txt and a key, or run draft-spans.yml from Actions.
-python tools/draft/draft_spans.py --blind --dry-run   # what would run; free
-python tools/draft/draft_spans.py --next 5            # draft five new pages
+python tools/draft/draft_spans.py --blind --dry-run   # what would run, and its price; free
+python tools/draft/draft_spans.py --next 5 --max-usd 1.00   # draft five new pages, capped
 python -m derek.eval.draft_score        # drafts vs human marks: quality on blind pages only
 python -m derek.eval.annotation_pace    # words a minute per page, blind vs seeded
 
@@ -87,6 +87,13 @@ python -m derek.eval.annotation_pace    # words a minute per page, blind vs seed
 python -m derek.detect.proposals                     # ready or blocked, and why
 python -m derek.detect.proposals adopt UID --by TA   # write a ready matcher to the ledger
 python -m derek.detect FILE.txt                      # run adopted rules over a text file
+
+# Independent test sentences for proposed matchers (ADR-027). OpenAI writes them
+# without seeing any matcher, Gemini labels them blind; only agreement counts.
+# Proposals only: nothing here writes to the ledger or unblocks an adoption.
+python tools/synth/synth_examples.py --dry-run        # the estimate; free
+python tools/synth/synth_examples.py run              # write and check, capped per provider
+python tools/synth/synth_examples.py report           # each matcher vs the agreed sentences; free
 
 # Imperative detection by POS tagger (ADR-021). Offline authoring step: writes a
 # checked-in verdict table that derek/extract/ reads as data, so extraction stays
@@ -154,7 +161,7 @@ Each layer must be reproducible from the one below it. Full detail:
 | `docs/08-rule-grain.md` | What counts as one rule. The lint checks it; the drafting prompt embeds it verbatim |
 | `derek/eval/golden_lint.py` | The golden set checked against D-2, ADR-006, E-1 and the grain policy |
 | `tools/draft/drafting.py` | Drafting prompt (hash-pinned), the pointer check, the draft cache (ADR-025) |
-| `tools/draft/draft_spans.py` | The only code that calls a model; imports the SDK lazily |
+| `tools/draft/draft_spans.py` | Calls the drafting model (OpenAI or Anthropic, by the pinned name); meters spend, imports the SDK lazily |
 | `golden/drafts/` | **Cached model output.** Proposals, never an extraction input |
 | `golden/blind.json` | Pages whose drafts are never shown — the only pages a draft is measured on |
 | `derek/eval/draft_score.py` | Draft recall/precision on blind pages; acceptance on seeded pages, separately |
@@ -162,6 +169,8 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/detect/document.py` | Plain-text `Document` (ADR-012); which blocks are the manual's wrong examples |
 | `derek/detect/engine.py` | Accepted rules → raw findings; the examples harness |
 | `ledger/proposals/` | Proposed matchers, as data. Only `derek.detect.proposals adopt` writes them into the ledger |
+| `tools/synth/synth_examples.py` | Test sentences for proposed matchers: OpenAI writes blind to the matcher, Gemini labels blind (ADR-027) |
+| `ledger/proposals/examples/` | **Cached model output.** Those sentences and both families' verdicts. Never read by the harness |
 | `derek/extract/candidates.py` | Normativity classification, stable UIDs, gold-example harvesting |
 | `derek/extract/data/imperative_verbs.txt` | Hand-curated verb list; primary imperative signal |
 | `derek/extract/data/imperative_headings.json` | **Generated.** Pinned-tagger verdicts (ADR-021); never hand-edit |

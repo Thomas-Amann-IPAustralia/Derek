@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.018822,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s02",
+     "reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s03",
+     "reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s04",
+     "reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s05",
+     "reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s06",
+     "reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s07",
+     "reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s08",
+     "reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s09",
+     "reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s10",
+     "reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s11",
+     "reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s12",
+     "reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s13",
+     "reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s14",
+     "reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s15",
+     "reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s16",
+     "reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+     "verdict": "violates"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 633,
+   "output_tokens": 789,
+   "thinking_tokens": 674
+  }
+ },
+ "dropped": [],
+ "input_sha256": "a356b19be4f85b45662cdd81362af427074cf7b5d2fbe37238709c0932bbb584",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+   "how": "Comma after i.e. in an explanation.",
+   "id": "s01",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The policy applies to permanent staff, i.e., employees engaged on an ongoing basis."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+   "how": "Comma follows the closing parenthesis.",
+   "id": "s02",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "If you need assistance (e.g. help completing the form), contact the service centre."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+   "how": "Commas surround the explanation, not i.e.",
+   "id": "s03",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The closing date, i.e. the last day for applications, is 30 June."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+   "how": "Comma immediately after e.g.",
+   "id": "s04",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Applicants must provide proof of identity (e.g., a passport or driver licence)."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+   "how": "Comma follows the explanation, not i.e.",
+   "id": "s05",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "After verification (i.e. confirmation of your identity), we will activate your account."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+   "how": "Comma precedes rather than follows e.g.",
+   "id": "s06",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Bring suitable identification, e.g. a passport."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+   "how": "Comma after e.g. within a sentence.",
+   "id": "s07",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Some services (e.g., interpreting and document translation) are available by appointment."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+   "how": "Comma after i.e. near the sentence end.",
+   "id": "s08",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Only complete applications will be assessed (i.e., applications with all required documents)."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+   "how": "Comma after e.g. before a list.",
+   "id": "s09",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The report covers essential infrastructure, e.g., roads, bridges and water supplies."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+   "how": "Comma precedes rather than follows i.e.",
+   "id": "s10",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The payment is made annually, i.e. once a year."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'i.e.' without a following comma.",
+   "how": "No comma follows i.e.",
+   "id": "s11",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The figures show net expenditure (i.e. expenditure after refunds have been deducted)."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'e.g.'.",
+   "how": "Comma after e.g. in service guidance.",
+   "id": "s12",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Before your visit, check whether you need supporting documents (e.g., evidence of your income)."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+   "how": "No comma follows e.g.",
+   "id": "s13",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The review examined regional facilities (e.g. libraries and community centres)."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+   "how": "Comma after i.e. in parentheses.",
+   "id": "s14",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Please enter your residential address (i.e., the address where you currently live) on the form."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The sentence uses the Latin shortened form 'e.g.' without a following comma.",
+   "how": "List commas follow examples, not e.g.",
+   "id": "s15",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "You can upload supporting documents (e.g. receipts, invoices and bank statements) through your account."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence includes a comma after the Latin shortened form 'i.e.'.",
+   "how": "Comma after i.e. in a parenthetical explanation.",
+   "id": "s16",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The commencement date, i.e., the date the agreement takes effect, appears on the first page."
+  }
+ ],
+ "statement": "Don't use commas with Latin shortened forms",
+ "uid": "c99b24f6e85c5c4a",
+ "writer": {
+  "cost_usd": 0.011116,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "List commas follow examples, not e.g.",
+     "near_miss": true,
+     "text": "You can upload supporting documents (e.g. receipts, invoices and bank statements) through your account."
+    },
+    {
+     "how": "Commas surround the explanation, not i.e.",
+     "near_miss": true,
+     "text": "The closing date, i.e. the last day for applications, is 30 June."
+    },
+    {
+     "how": "Comma precedes rather than follows e.g.",
+     "near_miss": true,
+     "text": "Bring suitable identification, e.g. a passport."
+    },
+    {
+     "how": "Comma precedes rather than follows i.e.",
+     "near_miss": true,
+     "text": "The payment is made annually, i.e. once a year."
+    },
+    {
+     "how": "Comma follows the closing parenthesis.",
+     "near_miss": true,
+     "text": "If you need assistance (e.g. help completing the form), contact the service centre."
+    },
+    {
+     "how": "Comma follows the explanation, not i.e.",
+     "near_miss": true,
+     "text": "After verification (i.e. confirmation of your identity), we will activate your account."
+    },
+    {
+     "how": "No comma follows e.g.",
+     "near_miss": false,
+     "text": "The review examined regional facilities (e.g. libraries and community centres)."
+    },
+    {
+     "how": "No comma follows i.e.",
+     "near_miss": false,
+     "text": "The figures show net expenditure (i.e. expenditure after refunds have been deducted)."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Comma immediately after e.g.",
+     "text": "Applicants must provide proof of identity (e.g., a passport or driver licence)."
+    },
+    {
+     "how": "Comma after i.e. in an explanation.",
+     "text": "The policy applies to permanent staff, i.e., employees engaged on an ongoing basis."
+    },
+    {
+     "how": "Comma after e.g. within a sentence.",
+     "text": "Some services (e.g., interpreting and document translation) are available by appointment."
+    },
+    {
+     "how": "Comma after i.e. in parentheses.",
+     "text": "Please enter your residential address (i.e., the address where you currently live) on the form."
+    },
+    {
+     "how": "Comma after e.g. before a list.",
+     "text": "The report covers essential infrastructure, e.g., roads, bridges and water supplies."
+    },
+    {
+     "how": "Comma after i.e. near the sentence end.",
+     "text": "Only complete applications will be assessed (i.e., applications with all required documents)."
+    },
+    {
+     "how": "Comma after e.g. in service guidance.",
+     "text": "Before your visit, check whether you need supporting documents (e.g., evidence of your income)."
+    },
+    {
+     "how": "Comma after i.e. in a parenthetical explanation.",
+     "text": "The commencement date, i.e., the date the agreement takes effect, appears on the first page."
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 488,
+   "output_tokens": 1014,
+   "reasoning_tokens": 290
+  }
+ }
+}

@@ -1,0 +1,4108 @@
+{
+ "effort": "high",
+ "input_sha256": "5b04df876e413b4a5b17fdc9f6484344a0430cc1b4aebc0c6d07dec01ae7f2f7",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "af73983adfba",
+    "end": 85,
+    "prefix": "",
+    "quote": "Create complete reports with a landing page, preliminary content, body and endmatter.",
+    "start": 0,
+    "suffix": " Include other parts if the repo"
+   },
+   "note": "Page-level introduction summarising the more specific component requirements; do not add an overlapping general completeness finding.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af73983adfba",
+    "end": 153,
+    "prefix": "ry content, body and endmatter. ",
+    "quote": "Include other parts if the report needs to be tabled in parliament.",
+    "start": 86,
+    "suffix": ""
+   },
+   "note": "Introduces the tabling considerations without identifying an additional textual component to check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "495eedd30e3e",
+    "end": 29,
+    "prefix": "",
+    "quote": "Order the parts of the report",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the report components and their more specific requirements.",
+   "reason": "section",
+   "seed_uid": "882d7dbc9e0583a4"
+  },
+  {
+   "anchor": {
+    "block_id": "2d8f5fda89a8",
+    "end": 26,
+    "prefix": "",
+    "quote": "Consider publishing format",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to consider a publishing decision, not a property of the words.",
+   "reason": "advice",
+   "seed_uid": "91fe98286fb00baf"
+  },
+  {
+   "anchor": {
+    "block_id": "79b70414b785",
+    "end": 156,
+    "prefix": " as HTML or downloadable files. ",
+    "quote": "Consider user needs and compliance requirements when deciding on format.",
+    "start": 84,
+    "suffix": ""
+   },
+   "note": "G-5: decision-making advice.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b872f3822569",
+    "end": 65,
+    "prefix": "",
+    "quote": "HTML should be the default format for all government information.",
+    "start": 0,
+    "suffix": " Some other formats have extra f"
+   },
+   "note": "Specifies the publication format, not a textual feature.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ba218d964c9d",
+    "end": 153,
+    "prefix": "ers can read on mobile devices. ",
+    "quote": "You can convert Microsoft Word files to EPUB format using the WordToEPUB tool.",
+    "start": 75,
+    "suffix": ""
+   },
+   "note": "G-3: an available conversion method, not a requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "be206b3d532b",
+    "end": 170,
+    "prefix": "ublish a PDF or printed report. ",
+    "quote": "You should also make sure the content is available in another format, such as HTML.",
+    "start": 87,
+    "suffix": ""
+   },
+   "note": "Requires another publication format, not different wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bb17435e7c47",
+    "end": 99,
+    "prefix": "",
+    "quote": "For a better understanding of user needs and accessibility, refer to the overview on accessibility.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to further guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d45a57c58914",
+    "end": 74,
+    "prefix": "",
+    "quote": "You must make all government content accessible to people with disability.",
+    "start": 0,
+    "suffix": " This is part of Australian law "
+   },
+   "note": "A general accessibility obligation with no particular textual violation specified on this page.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "55b8324a6a58",
+    "end": 35,
+    "prefix": "",
+    "quote": "Check the rules for tabling reports",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an instruction to consult external requirements.",
+   "reason": "advice",
+   "seed_uid": "8cbf89bb6f365eaa"
+  },
+  {
+   "anchor": {
+    "block_id": "6897a3b0bd21",
+    "end": 73,
+    "prefix": "",
+    "quote": "You must produce documents in line with parliamentary printing standards.",
+    "start": 0,
+    "suffix": " Electronic versions must be ide"
+   },
+   "note": "Refers to external printing standards rather than stating a check on words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6897a3b0bd21",
+    "end": 155,
+    "prefix": "entical to printed versions and ",
+    "quote": "must be accessible.",
+    "start": 136,
+    "suffix": ""
+   },
+   "note": "The accessibility limb states no specific textual check. The version-equivalence limb is covered by the cross-version rule.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "123c83cf1fec",
+    "end": 81,
+    "prefix": "",
+    "quote": "Australian Government annual reports must be tabled in the Australian Parliament.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A presentation/publication obligation, not a property of the report's text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0c72f35a4ad9",
+    "end": 80,
+    "prefix": "",
+    "quote": "Follow its guidance about requirements to make sure your annual report complies.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: refers the writer to Department of Finance guidance without stating its requirements.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "91fc0fe3fb90",
+    "end": 118,
+    "prefix": "",
+    "quote": "Australian Government departments and agencies must also publish their annual reports through the Transparency Portal.",
+    "start": 0,
+    "suffix": " Contact the Department of Finan"
+   },
+   "note": "Specifies a publication channel.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "91fc0fe3fb90",
+    "end": 179,
+    "prefix": "hrough the Transparency Portal. ",
+    "quote": "Contact the Department of Finance to get access to the tool.",
+    "start": 119,
+    "suffix": ""
+   },
+   "note": "G-5: an administrative action.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fe8956a3fd58",
+    "end": 99,
+    "prefix": "",
+    "quote": "You must use the Protective Security Policy Framework (PSPF) when preparing government information.",
+    "start": 0,
+    "suffix": " The PSPF covers how information"
+   },
+   "note": "G-5: requires use of external guidance but supplies no particular classification or marking rule to check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fe8956a3fd58",
+    "end": 310,
+    "prefix": " handling, access and disposal. ",
+    "quote": "Consult the PSPF webpages or consult your organisation’s protective security policy.",
+    "start": 226,
+    "suffix": ""
+   },
+   "note": "G-5: consultation instruction.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ae1dd8de4abb",
+    "end": 161,
+    "prefix": "nt under the Archives Act 1983. ",
+    "quote": "You must follow your organisation’s information management requirements.",
+    "start": 89,
+    "suffix": " Visit the National Archives of "
+   },
+   "note": "G-5: external organisational requirements are not stated here as text checks.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ae1dd8de4abb",
+    "end": 248,
+    "prefix": "mation management requirements. ",
+    "quote": "Visit the National Archives of Australia website for information management standards.",
+    "start": 162,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to an information source.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8b29c17c6515",
+    "end": 68,
+    "prefix": "",
+    "quote": "They may also show other details such as the date and the publisher.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: these landing-page or cover details are optional, unlike the identification fields.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4f469856649a",
+    "end": 107,
+    "prefix": "",
+    "quote": "the inside front and back covers are often blank – they can include information from the reverse title page",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: describes permitted cover content, not compulsory blankness or text.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fafd0b784da1",
+    "end": 82,
+    "prefix": "",
+    "quote": "the back cover may be blank or show details that aren’t on the reverse title page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: either treatment is permitted.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c954c6820f86",
+    "end": 37,
+    "prefix": "",
+    "quote": "The front shows the title and author.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the conventional parts of a dust jacket; it is not framed as an instruction to include a dust jacket or its contents.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e0dc35378367",
+    "end": 67,
+    "prefix": "",
+    "quote": "The back shows reviews, retail price if relevant, and ISBN or ISSN.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes conventional dust-jacket content, not an explicit mandatory-field list.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cb91c708b31c",
+    "end": 94,
+    "prefix": "",
+    "quote": "If more than about 5 millimetres wide, the spine shows the title, author and publisher’s logo.",
+    "start": 0,
+    "suffix": " The words always run across or "
+   },
+   "note": "Describes a print-production convention, including a logo; it is not presented as a textual instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cb91c708b31c",
+    "end": 141,
+    "prefix": "e, author and publisher’s logo. ",
+    "quote": "The words always run across or down the spine.",
+    "start": 95,
+    "suffix": ""
+   },
+   "note": "Concerns the physical orientation of spine text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "57cdb8522a36",
+    "end": 42,
+    "prefix": "",
+    "quote": "Include a title page and preliminary parts",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups title-page information and the individual preliminary-content conventions.",
+   "reason": "section",
+   "seed_uid": "b4a991c084c1c1c8"
+  },
+  {
+   "anchor": {
+    "block_id": "59fa53f1a2e4",
+    "end": 60,
+    "prefix": "",
+    "quote": "There are many items you can include in preliminary content.",
+    "start": 0,
+    "suffix": " Some are best suited to printed"
+   },
+   "note": "G-3: does not require every possible preliminary item.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "59fa53f1a2e4",
+    "end": 143,
+    "prefix": "suited to printed publications. ",
+    "quote": "Judge what you need for your report.",
+    "start": 107,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to exercise judgement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9271150d41f7",
+    "end": 103,
+    "prefix": "",
+    "quote": "It can also have additional details such as the name of a compiler, translator, reviser or illustrator.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: additional title-page contributor details are optional.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b22ca33c2f1c",
+    "end": 105,
+    "prefix": "",
+    "quote": "The reverse title page, or ‘imprint’ page, includes details that don’t appear on the title page, such as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces examples of imprint information, not an exhaustive list of mandatory fields.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "61260ab78af4",
+    "end": 70,
+    "prefix": "",
+    "quote": "Printed reports can also have half-title and reverse half-title pages.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: these pages are optional; conventions for a half-title page apply when one is present.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "52478f20bf67",
+    "end": 59,
+    "prefix": "half-title page is often blank. ",
+    "quote": "It can include:",
+    "start": 44,
+    "suffix": ""
+   },
+   "note": "G-3: the following reverse half-title content is optional.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cce3d7ac4a36",
+    "end": 41,
+    "prefix": "",
+    "quote": "Check the order of the preliminary pages.",
+    "start": 0,
+    "suffix": " Number them with lower case rom"
+   },
+   "note": "G-5: asks for checking but does not state an additional order to enforce.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7ee0c51556a4",
+    "end": 57,
+    "prefix": "",
+    "quote": "You must choose a licence to release copyright materials.",
+    "start": 0,
+    "suffix": " If you work in government, use "
+   },
+   "note": "G-5: requires a licensing decision, not a stated licence notice or other textual feature.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7ee0c51556a4",
+    "end": 155,
+    "prefix": "to release copyright materials. ",
+    "quote": "If you work in government, use an open access licence if you can (for example, Creative Commons).",
+    "start": 58,
+    "suffix": ""
+   },
+   "note": "Concerns choosing a legal licence; it does not specify wording that the report must contain.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fc8350760e26",
+    "end": 94,
+    "prefix": "",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: reading instruction.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0e71bfc6fd82",
+    "end": 174,
+    "prefix": "s under the Copyright Act 1968. ",
+    "quote": "Your agency is obliged to contribute published reports through legal deposit.",
+    "start": 97,
+    "suffix": " Find out more about legal depos"
+   },
+   "note": "A deposit obligation rather than a textual requirement.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0e71bfc6fd82",
+    "end": 241,
+    "prefix": " reports through legal deposit. ",
+    "quote": "Find out more about legal deposit on the National Library website.",
+    "start": 175,
+    "suffix": " This information covers online "
+   },
+   "note": "G-5: directs the writer to further information.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8691dac671cf",
+    "end": 232,
+    "prefix": "s, commissions and consultants. ",
+    "quote": "Sometimes it must be part of a report.",
+    "start": 194,
+    "suffix": ""
+   },
+   "note": "Mentions an external requirement for a letter of transmittal but does not identify the circumstances that trigger it.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7d506b23d7bb",
+    "end": 86,
+    "prefix": "",
+    "quote": "is usually written by someone other than the author and often includes their signature",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes typical foreword authorship and signature practice, not universal requirements.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4029508ea5b0",
+    "end": 57,
+    "prefix": "",
+    "quote": "explains the purpose of the report and why it’s important",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the function of a foreword rather than stating a separate instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "97c6b3f45865",
+    "end": 32,
+    "prefix": "",
+    "quote": "can replace a short introduction",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: a preface may serve this role.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "eb4cdc5b9688",
+    "end": 63,
+    "prefix": "",
+    "quote": "is written by the author and can include the author's signature",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes preface authorship and permits a signature; no additional signature requirement follows.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7c138782723e",
+    "end": 50,
+    "prefix": "",
+    "quote": "tells the user why and how the report was prepared",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the function of a preface.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "91a8017b6ede",
+    "end": 44,
+    "prefix": "",
+    "quote": "can include a short list of acknowledgements",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: optional preface content.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "073bf52e5ef2",
+    "end": 50,
+    "prefix": "",
+    "quote": "describes changes if it's a new version or update.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a preface's function in a revised report rather than giving an explicit instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "934036efaf3c",
+    "end": 68,
+    "prefix": "",
+    "quote": "can replace a preface to discuss why and how the report was prepared",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: an introduction may take this role.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "770901879133",
+    "end": 39,
+    "prefix": "",
+    "quote": "includes long lists of acknowledgements",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a possible function of the introduction; it does not require every introduction to contain acknowledgements.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "93bdf7ad9f20",
+    "end": 50,
+    "prefix": "",
+    "quote": "describes changes if it’s a new version or update.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a possible introduction function in a revised report.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "569f73e9c8b3",
+    "end": 135,
+    "prefix": "more than 3 levels of headings. ",
+    "quote": "Use design elements such as colour or typeface size for complex contents.",
+    "start": 62,
+    "suffix": " This can separate the levels of"
+   },
+   "note": "Concerns visual design, not words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "569f73e9c8b3",
+    "end": 255,
+    "prefix": "ow the structure of the report. ",
+    "quote": "Make sure design elements are accessible.",
+    "start": 214,
+    "suffix": ""
+   },
+   "note": "Concerns accessibility of visual design elements.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "271e86df0a41",
+    "end": 203,
+    "prefix": "n II with the arabic number 11. ",
+    "quote": "It is better to start chapters and parts on a right-hand page, particularly the first chapter and part.",
+    "start": 100,
+    "suffix": " Also follow this approach for P"
+   },
+   "note": "Concerns pagination and physical page placement.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "271e86df0a41",
+    "end": 246,
+    "prefix": "rly the first chapter and part. ",
+    "quote": "Also follow this approach for PDF reports.",
+    "start": 204,
+    "suffix": ""
+   },
+   "note": "Extends the right-hand-page layout recommendation to PDFs.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "28e6462bbf22",
+    "end": 57,
+    "prefix": "",
+    "quote": "Include the material that supports the report (endmatter)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the individual endmatter types and their checks; the following list says what endmatter can include.",
+   "reason": "section",
+   "seed_uid": "c4952e7a3017f05b"
+  },
+  {
+   "anchor": {
+    "block_id": "152119968242",
+    "end": 34,
+    "prefix": "",
+    "quote": "In reports, endmatter can include:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: does not require every listed endmatter component.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4544dd02194d",
+    "end": 23,
+    "prefix": "",
+    "quote": "List of shortened forms",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive candidate heading; the body supplies inclusion, ordering and placement requirements.",
+   "reason": "section",
+   "seed_uid": "90f09ea79f6a6e21"
+  },
+  {
+   "anchor": {
+    "block_id": "3fd7b5febb09",
+    "end": 66,
+    "prefix": "",
+    "quote": "Format the glossary to make it easy for the user to find the term.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns glossary formatting; alphabetical ordering is captured separately as a textual rule.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d30b16a9462f",
+    "end": 44,
+    "prefix": "",
+    "quote": "Reference lists, endnotes and bibliographies",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive candidate heading; the body states the bibliography-ordering rule.",
+   "reason": "section",
+   "seed_uid": "df5b7d915d3573d9"
+  },
+  {
+   "anchor": {
+    "block_id": "b1b5c82f1074",
+    "end": 73,
+    "prefix": "",
+    "quote": "An index can be useful for long or detailed reports, especially in print.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a possible benefit, not a requirement to include an index.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9e91c20ee23c",
+    "end": 111,
+    "prefix": "ts often link to this material. ",
+    "quote": "Other ways of separating this from the main body of the report are:",
+    "start": 44,
+    "suffix": ""
+   },
+   "note": "Introduces alternative presentation methods, not a compulsory separation method or ordering requirement.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b644941f13b3",
+    "end": 26,
+    "prefix": "",
+    "quote": "using coloured backgrounds",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An optional visual-design method.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "42f076dbc782",
+    "end": 74,
+    "prefix": "",
+    "quote": "putting lengthy material at the end of the report, before other endmatter.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "One alternative way of separating related material; not an unconditional ordering rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cae1fe54d446",
+    "end": 148,
+    "prefix": "f the other volumes in the set. ",
+    "quote": "The index can be in each volume or in the final volume only.",
+    "start": 88,
+    "suffix": ""
+   },
+   "note": "G-3: both index locations are permitted.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/reports.md",
+ "page_sha256": "0c8cd8e65be73f4d3c196faa5893bbb2dfcca19cecea4ddade1049cd81a9eb31",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "af73983adfba",
+    "note": "Page-level introduction summarising the more specific component requirements; do not add an overlapping general completeness finding.",
+    "quote": "Create complete reports with a landing page, preliminary content, body and endmatter.",
+    "reason": "section"
+   },
+   {
+    "block_id": "af73983adfba",
+    "note": "Introduces the tabling considerations without identifying an additional textual component to check.",
+    "quote": "Include other parts if the report needs to be tabled in parliament.",
+    "reason": "section"
+   },
+   {
+    "block_id": "495eedd30e3e",
+    "note": "G-1: groups the report components and their more specific requirements.",
+    "quote": "Order the parts of the report",
+    "reason": "section"
+   },
+   {
+    "block_id": "2d8f5fda89a8",
+    "note": "G-5: asks the writer to consider a publishing decision, not a property of the words.",
+    "quote": "Consider publishing format",
+    "reason": "advice"
+   },
+   {
+    "block_id": "79b70414b785",
+    "note": "G-5: decision-making advice.",
+    "quote": "Consider user needs and compliance requirements when deciding on format.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b872f3822569",
+    "note": "Specifies the publication format, not a textual feature.",
+    "quote": "HTML should be the default format for all government information.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ba218d964c9d",
+    "note": "G-3: an available conversion method, not a requirement.",
+    "quote": "You can convert Microsoft Word files to EPUB format using the WordToEPUB tool.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "be206b3d532b",
+    "note": "Requires another publication format, not different wording.",
+    "quote": "You should also make sure the content is available in another format, such as HTML.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "bb17435e7c47",
+    "note": "G-5: directs the writer to further guidance.",
+    "quote": "For a better understanding of user needs and accessibility, refer to the overview on accessibility.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d45a57c58914",
+    "note": "A general accessibility obligation with no particular textual violation specified on this page.",
+    "quote": "You must make all government content accessible to people with disability.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "55b8324a6a58",
+    "note": "G-5: an instruction to consult external requirements.",
+    "quote": "Check the rules for tabling reports",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6897a3b0bd21",
+    "note": "Refers to external printing standards rather than stating a check on words.",
+    "quote": "You must produce documents in line with parliamentary printing standards.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "6897a3b0bd21",
+    "note": "The accessibility limb states no specific textual check. The version-equivalence limb is covered by the cross-version rule.",
+    "quote": "must be accessible.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "123c83cf1fec",
+    "note": "A presentation/publication obligation, not a property of the report's text.",
+    "quote": "Australian Government annual reports must be tabled in the Australian Parliament.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0c72f35a4ad9",
+    "note": "G-5: refers the writer to Department of Finance guidance without stating its requirements.",
+    "quote": "Follow its guidance about requirements to make sure your annual report complies.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "91fc0fe3fb90",
+    "note": "Specifies a publication channel.",
+    "quote": "Australian Government departments and agencies must also publish their annual reports through the Transparency Portal.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "91fc0fe3fb90",
+    "note": "G-5: an administrative action.",
+    "quote": "Contact the Department of Finance to get access to the tool.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "fe8956a3fd58",
+    "note": "G-5: requires use of external guidance but supplies no particular classification or marking rule to check.",
+    "quote": "You must use the Protective Security Policy Framework (PSPF) when preparing government information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "fe8956a3fd58",
+    "note": "G-5: consultation instruction.",
+    "quote": "Consult the PSPF webpages or consult your organisation’s protective security policy.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ae1dd8de4abb",
+    "note": "G-5: external organisational requirements are not stated here as text checks.",
+    "quote": "You must follow your organisation’s information management requirements.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ae1dd8de4abb",
+    "note": "G-5: directs the writer to an information source.",
+    "quote": "Visit the National Archives of Australia website for information management standards.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8b29c17c6515",
+    "note": "G-3: these landing-page or cover details are optional, unlike the identification fields.",
+    "quote": "They may also show other details such as the date and the publisher.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "4f469856649a",
+    "note": "G-3: describes permitted cover content, not compulsory blankness or text.",
+    "quote": "the inside front and back covers are often blank – they can include information from the reverse title page",
+    "reason": "permission"
+   },
+   {
+    "block_id": "fafd0b784da1",
+    "note": "G-3: either treatment is permitted.",
+    "quote": "the back cover may be blank or show details that aren’t on the reverse title page.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "c954c6820f86",
+    "note": "Describes the conventional parts of a dust jacket; it is not framed as an instruction to include a dust jacket or its contents.",
+    "quote": "The front shows the title and author.",
+    "reason": "description"
+   },
+   {
+    "block_id": "e0dc35378367",
+    "note": "Describes conventional dust-jacket content, not an explicit mandatory-field list.",
+    "quote": "The back shows reviews, retail price if relevant, and ISBN or ISSN.",
+    "reason": "description"
+   },
+   {
+    "block_id": "cb91c708b31c",
+    "note": "Describes a print-production convention, including a logo; it is not presented as a textual instruction.",
+    "quote": "If more than about 5 millimetres wide, the spine shows the title, author and publisher’s logo.",
+    "reason": "description"
+   },
+   {
+    "block_id": "cb91c708b31c",
+    "note": "Concerns the physical orientation of spine text.",
+    "quote": "The words always run across or down the spine.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "57cdb8522a36",
+    "note": "G-1: groups title-page information and the individual preliminary-content conventions.",
+    "quote": "Include a title page and preliminary parts",
+    "reason": "section"
+   },
+   {
+    "block_id": "59fa53f1a2e4",
+    "note": "G-3: does not require every possible preliminary item.",
+    "quote": "There are many items you can include in preliminary content.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "59fa53f1a2e4",
+    "note": "G-5: asks the writer to exercise judgement.",
+    "quote": "Judge what you need for your report.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9271150d41f7",
+    "note": "G-3: additional title-page contributor details are optional.",
+    "quote": "It can also have additional details such as the name of a compiler, translator, reviser or illustrator.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b22ca33c2f1c",
+    "note": "Introduces examples of imprint information, not an exhaustive list of mandatory fields.",
+    "quote": "The reverse title page, or ‘imprint’ page, includes details that don’t appear on the title page, such as:",
+    "reason": "description"
+   },
+   {
+    "block_id": "61260ab78af4",
+    "note": "G-3: these pages are optional; conventions for a half-title page apply when one is present.",
+    "quote": "Printed reports can also have half-title and reverse half-title pages.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "52478f20bf67",
+    "note": "G-3: the following reverse half-title content is optional.",
+    "quote": "It can include:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "cce3d7ac4a36",
+    "note": "G-5: asks for checking but does not state an additional order to enforce.",
+    "quote": "Check the order of the preliminary pages.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7ee0c51556a4",
+    "note": "G-5: requires a licensing decision, not a stated licence notice or other textual feature.",
+    "quote": "You must choose a licence to release copyright materials.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7ee0c51556a4",
+    "note": "Concerns choosing a legal licence; it does not specify wording that the report must contain.",
+    "quote": "If you work in government, use an open access licence if you can (for example, Creative Commons).",
+    "reason": "advice"
+   },
+   {
+    "block_id": "fc8350760e26",
+    "note": "G-5: reading instruction.",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0e71bfc6fd82",
+    "note": "A deposit obligation rather than a textual requirement.",
+    "quote": "Your agency is obliged to contribute published reports through legal deposit.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0e71bfc6fd82",
+    "note": "G-5: directs the writer to further information.",
+    "quote": "Find out more about legal deposit on the National Library website.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8691dac671cf",
+    "note": "Mentions an external requirement for a letter of transmittal but does not identify the circumstances that trigger it.",
+    "quote": "Sometimes it must be part of a report.",
+    "reason": "description"
+   },
+   {
+    "block_id": "7d506b23d7bb",
+    "note": "Describes typical foreword authorship and signature practice, not universal requirements.",
+    "quote": "is usually written by someone other than the author and often includes their signature",
+    "reason": "description"
+   },
+   {
+    "block_id": "4029508ea5b0",
+    "note": "Explains the function of a foreword rather than stating a separate instruction.",
+    "quote": "explains the purpose of the report and why it’s important",
+    "reason": "description"
+   },
+   {
+    "block_id": "97c6b3f45865",
+    "note": "G-3: a preface may serve this role.",
+    "quote": "can replace a short introduction",
+    "reason": "permission"
+   },
+   {
+    "block_id": "eb4cdc5b9688",
+    "note": "Describes preface authorship and permits a signature; no additional signature requirement follows.",
+    "quote": "is written by the author and can include the author's signature",
+    "reason": "description"
+   },
+   {
+    "block_id": "7c138782723e",
+    "note": "Explains the function of a preface.",
+    "quote": "tells the user why and how the report was prepared",
+    "reason": "description"
+   },
+   {
+    "block_id": "91a8017b6ede",
+    "note": "G-3: optional preface content.",
+    "quote": "can include a short list of acknowledgements",
+    "reason": "permission"
+   },
+   {
+    "block_id": "073bf52e5ef2",
+    "note": "Describes a preface's function in a revised report rather than giving an explicit instruction.",
+    "quote": "describes changes if it's a new version or update.",
+    "reason": "description"
+   },
+   {
+    "block_id": "934036efaf3c",
+    "note": "G-3: an introduction may take this role.",
+    "quote": "can replace a preface to discuss why and how the report was prepared",
+    "reason": "permission"
+   },
+   {
+    "block_id": "770901879133",
+    "note": "Describes a possible function of the introduction; it does not require every introduction to contain acknowledgements.",
+    "quote": "includes long lists of acknowledgements",
+    "reason": "description"
+   },
+   {
+    "block_id": "93bdf7ad9f20",
+    "note": "Describes a possible introduction function in a revised report.",
+    "quote": "describes changes if it’s a new version or update.",
+    "reason": "description"
+   },
+   {
+    "block_id": "569f73e9c8b3",
+    "note": "Concerns visual design, not words.",
+    "quote": "Use design elements such as colour or typeface size for complex contents.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "569f73e9c8b3",
+    "note": "Concerns accessibility of visual design elements.",
+    "quote": "Make sure design elements are accessible.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "271e86df0a41",
+    "note": "Concerns pagination and physical page placement.",
+    "quote": "It is better to start chapters and parts on a right-hand page, particularly the first chapter and part.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "271e86df0a41",
+    "note": "Extends the right-hand-page layout recommendation to PDFs.",
+    "quote": "Also follow this approach for PDF reports.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "28e6462bbf22",
+    "note": "G-1: groups the individual endmatter types and their checks; the following list says what endmatter can include.",
+    "quote": "Include the material that supports the report (endmatter)",
+    "reason": "section"
+   },
+   {
+    "block_id": "152119968242",
+    "note": "G-3: does not require every listed endmatter component.",
+    "quote": "In reports, endmatter can include:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "4544dd02194d",
+    "note": "Descriptive candidate heading; the body supplies inclusion, ordering and placement requirements.",
+    "quote": "List of shortened forms",
+    "reason": "section"
+   },
+   {
+    "block_id": "3fd7b5febb09",
+    "note": "Concerns glossary formatting; alphabetical ordering is captured separately as a textual rule.",
+    "quote": "Format the glossary to make it easy for the user to find the term.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d30b16a9462f",
+    "note": "Descriptive candidate heading; the body states the bibliography-ordering rule.",
+    "quote": "Reference lists, endnotes and bibliographies",
+    "reason": "section"
+   },
+   {
+    "block_id": "b1b5c82f1074",
+    "note": "Describes a possible benefit, not a requirement to include an index.",
+    "quote": "An index can be useful for long or detailed reports, especially in print.",
+    "reason": "description"
+   },
+   {
+    "block_id": "9e91c20ee23c",
+    "note": "Introduces alternative presentation methods, not a compulsory separation method or ordering requirement.",
+    "quote": "Other ways of separating this from the main body of the report are:",
+    "reason": "description"
+   },
+   {
+    "block_id": "b644941f13b3",
+    "note": "An optional visual-design method.",
+    "quote": "using coloured backgrounds",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "42f076dbc782",
+    "note": "One alternative way of separating related material; not an unconditional ordering rule.",
+    "quote": "putting lengthy material at the end of the report, before other endmatter.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "cae1fe54d446",
+    "note": "G-3: both index locations are permitted.",
+    "quote": "The index can be in each volume or in the final volume only.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "d9a3174eafbb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "214ad56c1415",
+      "quote": "All reports have a landing page or cover (if printed)."
+     },
+     {
+      "block_id": "3b162e5a71e4",
+      "quote": "The landing page or cover also shows the:"
+     },
+     {
+      "block_id": "f3853f04ce50",
+      "quote": "title"
+     },
+     {
+      "block_id": "11a0c63ece2d",
+      "quote": "subtitle, if any"
+     },
+     {
+      "block_id": "485c75a6eba1",
+      "quote": "name of the author or editor."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the landing page or cover to identify the report",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A report lacks a landing page or printed cover identifying its title, applicable subtitle, and author or editor.",
+    "when": [
+     "Use a landing page for an online report and a cover for a printed report.",
+     "A subtitle is required only if the report has one.",
+     "The date and publisher are optional here."
+    ],
+    "why": "G-4: the body supplies the identification information meant by the heading; optional details are exceptions, not additional rules."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "214ad56c1415",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use these to give an overview of the report so people can decide if they want to download or read it.",
+    "specification": "Assess whether the landing page or cover conveys the report's subject and scope. This is distinct from merely displaying its identification details.",
+    "unit": "block",
+    "violation_condition": "The landing page or cover provides no overview sufficient to help a reader decide whether to download or read the report.",
+    "when": [
+     "Applies to an online report's landing page or a printed report's cover."
+    ],
+    "why": "G-4: the body states an overview requirement distinct from the identification-details check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "5397aaf8c596",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "6897a3b0bd21",
+      "quote": "Electronic versions must be identical to printed versions and must be accessible."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Australian Government reports published online should include the same information as a printed version.",
+    "specification": "Compare textual information across versions. General online reports should contain the same information; versions subject to the parliamentary requirement must have identical text. The separate accessibility requirement is not part of this check.",
+    "unit": "document",
+    "violation_condition": "An online report and its printed counterpart contain different information, or parliamentary electronic and printed versions have different text.",
+    "when": [
+     "A printed counterpart exists.",
+     "For parliamentary documents covered by the printing requirements, equivalence is mandatory and the versions must be identical."
+    ],
+    "why": "G-2: consolidate version-equivalence requirements while preserving the stronger parliamentary condition."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "0d3a5b483d8d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d93c9526f584",
+      "quote": "title"
+     },
+     {
+      "block_id": "d62023cdff68",
+      "quote": "subtitle, if any"
+     },
+     {
+      "block_id": "e34abff4635d",
+      "quote": "author’s name"
+     },
+     {
+      "block_id": "d66ee249999e",
+      "quote": "name of the sponsor, if applicable."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "A title page should include the following:",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A title page omits the report title, an existing subtitle, the author's name, or an applicable sponsor's name.",
+    "when": [
+     "A subtitle is required only if there is one.",
+     "A sponsor's name is required only if applicable.",
+     "Other contributor details are optional."
+    ],
+    "why": "G-2: the list defines one title-page completeness check, with conditional fields."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "ce5c0815bb11",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "7b42eecb4f59",
+      "quote": "You can put information prepared for the reverse title page somewhere else such as the inside front cover or back cover, if you’re not leaving those blank."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Wherever it features, people should be able to easily find copyright and other information about the report.",
+    "specification": "The page does not define an objective test for 'easily find' or an exhaustive set of 'other information'. Do not require a particular page location.",
+    "unit": "document",
+    "violation_condition": "Copyright and other report information is presented in a location or structure that makes it difficult to find.",
+    "when": [
+     "Imprint information may appear on an imprint page, splash screen, landing page or another permitted location."
+    ],
+    "why": "G-3: alternative locations are permissions; the check concerns findability rather than a compulsory imprint-page location."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "338105ce2ead",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Show the main title exactly as it appears on the cover.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The main title on a half-title page differs from the main title on the cover.",
+    "when": [
+     "The printed report has a half-title page.",
+     "A half-title page is optional."
+    ],
+    "why": "G-3: optional half-title pages have requirements when present; their optional existence is not a separate rule."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "14569a4df872",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not show any subtitles.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A half-title page includes a subtitle.",
+    "when": [
+     "The printed report has a half-title page."
+    ],
+    "why": "G-1: retain this specific half-title convention independently of the preliminary-content section."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "3378810df2d2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include a series title if the report is part of a series.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The half-title page of a report in a series omits the series title.",
+    "when": [
+     "The printed report has a half-title page.",
+     "The report belongs to a series."
+    ],
+    "why": "G-2: series membership is the condition for this inclusion check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "cce3d7ac4a36",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Examples of the required lower case roman numeral forms.",
+      "parts": [
+       {
+        "block_id": "cce3d7ac4a36",
+        "quote": "’i’, ’ii’, ’iii’ and ’iv’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Number them with lower case roman numerals such as ’i’, ’ii’, ’iii’ and ’iv’.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Printed preliminary pages are unnumbered or numbered using a form other than lower case roman numerals.",
+    "when": [
+     "Applies to preliminary pages in printed reports."
+    ],
+    "why": "G-4: use the specific numbering sentence, not the preceding instruction to check the order."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "b35a1e7aee5e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b35a1e7aee5e",
+      "quote": "It must have:"
+     },
+     {
+      "block_id": "0461dcb7ad4c",
+      "quote": "the signature of the person responsible for the report"
+     },
+     {
+      "block_id": "750e73a8b431",
+      "quote": "the day, month and year the report was submitted."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "The letter of transmittal must include the purpose of the report and who it is for.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A letter of transmittal omits the report's purpose, intended recipient, responsible person's signature, or submission date including day, month and year.",
+    "when": [
+     "The report includes a letter of transmittal.",
+     "This page does not specify all circumstances in which a letter must be included."
+    ],
+    "why": "G-2: consolidate the required elements into one letter-of-transmittal completeness check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "ed1bc1befdd0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "dbc764b32a7b",
+      "quote": "A foreword:"
+     },
+     {
+      "block_id": "a2fc4745a98b",
+      "quote": "A preface:"
+     },
+     {
+      "block_id": "ae27132d5643",
+      "quote": "is always in the preliminary content"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "is always in the preliminary content",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A foreword or preface is placed outside the report's preliminary content.",
+    "when": [
+     "The report has a foreword or preface.",
+     "The page does not require every report to have either."
+    ],
+    "why": "G-2: forewords and prefaces are two cases of the same placement check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "435e76248f6d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "77522dd00542",
+      "quote": "can be in the preliminary content or main part of the report"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "should be in the main part of the report if people will need the content to understand the report – for example, if the introduction includes terms of reference",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An introduction containing information needed to understand the report is placed in the preliminary content rather than the main body.",
+    "when": [
+     "The introduction contains information needed to understand the report.",
+     "Otherwise, an introduction may be in the preliminary content or main body."
+    ],
+    "why": "G-2 and G-3: essential content triggers the placement check; the general choice of location is a permission."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "a76ba02a65f6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "52380a8c3a39",
+      "quote": "An introduction:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "does not include a signature",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The report's introduction includes a signature.",
+    "when": [
+     "Applies to an introduction, not a foreword, preface or letter of transmittal."
+    ],
+    "why": "G-1: retain the explicit no-signature convention rather than turning the whole description of introductions into a rule."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "a73c92736594",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the heading ‘Contents’, not ‘Table of contents’ or ‘List of contents’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The contents list is headed ‘Table of contents’, ‘List of contents’ or another heading instead of ‘Contents’.",
+    "when": [
+     "The report has a contents list."
+    ],
+    "why": "G-4: the body states the actionable heading convention."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "569f73e9c8b3",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "There is rarely a need to use more than 3 levels of headings.",
+    "specification": "This is a qualified recommendation, not an absolute 3-level limit. The page does not define when additional levels are warranted.",
+    "unit": "block",
+    "violation_condition": "A contents list uses more than 3 heading levels without a need for the additional hierarchy.",
+    "when": [
+     "Applies to heading levels displayed in the contents list.",
+     "Additional levels may be warranted in exceptional cases."
+    ],
+    "why": "G-2: preserve the qualification rather than inventing an absolute prohibition."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "4c93e6fe1df1",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include a list of images and tables if it is helpful to the user.",
+    "specification": "The page supplies no objective threshold for when a list is helpful. Do not require one merely because any image or table is present.",
+    "unit": "document",
+    "violation_condition": "A report omits a list of images and tables despite readers needing such a list to locate them.",
+    "when": [
+     "A list would be helpful to the report's users.",
+     "Images may include photographs, figures and maps."
+    ],
+    "why": "G-2: usefulness limits the inclusion requirement."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "fb5e3cd4cb0e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "fb5e3cd4cb0e",
+      "quote": "In print, include even full-page images that don’t have a visible page number."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Give each image a page number in the list.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An image lacks a page-number reference in the report's image list, including a printed full-page image whose page number is not visible.",
+    "when": [
+     "The report has an image list and page numbering.",
+     "In print, full-page images must be included even when their page number is not visible."
+    ],
+    "why": "G-2: full-page images are an explicit case of the image-reference completeness check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "e0170a7177b6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1f86e82066f5",
+      "quote": "photographs (only in print)"
+     },
+     {
+      "block_id": "462a56223cec",
+      "quote": "figures"
+     },
+     {
+      "block_id": "13ba6dd6c52c",
+      "quote": "maps (if listed separately)"
+     },
+     {
+      "block_id": "ccb46f0ca7f9",
+      "quote": "tables."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "The order of lists is:",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Separate image and table lists occur in an order other than photographs, figures, separately listed maps, then tables, after omitting categories not present.",
+    "when": [
+     "The report has separate lists for these categories.",
+     "The photographs list applies only in print.",
+     "Maps need a separate position only if listed separately."
+    ],
+    "why": "G-2: the ordered items define one list-sequence check with conditional categories."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "b86f9ae72ccc",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For long reports, use a summary to present findings, recommendations and conclusions.",
+    "specification": "The page does not define 'long'. Do not invent a page-count or word-count threshold.",
+    "unit": "document",
+    "violation_condition": "A long report lacks a summary presenting its findings, recommendations and conclusions.",
+    "when": [
+     "The report is long.",
+     "The summary presents findings, recommendations and conclusions that the report contains."
+    ],
+    "why": "G-2 and E-4: retain the length condition without manufacturing a threshold."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "37e0a517d1c1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "An example summary heading.",
+      "parts": [
+       {
+        "block_id": "37e0a517d1c1",
+        "quote": "‘Recommendations’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "An example summary heading.",
+      "parts": [
+       {
+        "block_id": "37e0a517d1c1",
+        "quote": "‘Summary’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Name the summary to show its purpose.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A summary has a heading that does not communicate its purpose.",
+    "when": [
+     "The report has a summary."
+    ],
+    "why": "G-4: use the naming instruction rather than treating its example names as an exhaustive list."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "1a3df47b8847",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don't use ‘Executive summary’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A report summary is headed ‘Executive summary’.",
+    "when": [
+     "The phrase is used as the summary's heading, not mentioned in discussion."
+    ],
+    "why": "The grain test: this named-heading exclusion is distinct from whether a heading communicates its purpose."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "c213d3929a4b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "019bf7c1b563",
+      "quote": "To organise the text in the main body of the report use:"
+     },
+     {
+      "block_id": "c1a46a318607",
+      "quote": "chapters"
+     },
+     {
+      "block_id": "e046f40fe095",
+      "quote": "parts for long reports, with chapters in each part."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Organise the main body into chapters or parts",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The report's main body is not organised into chapters, or its parts do not contain chapters.",
+    "when": [
+     "Parts are an option for long reports; chapters are used within each part."
+    ],
+    "why": "G-4: the heading and body state one main-body organisation requirement, separate from title and numbering checks."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "235aebc161cf",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Both chapters and parts need short titles",
+    "specification": "The page gives no maximum title length. Do not substitute a numerical word limit.",
+    "unit": "phrase",
+    "violation_condition": "A chapter or part title is unnecessarily long.",
+    "when": [
+     "Applies to chapter and part titles."
+    ],
+    "why": "The grain test and E-4: concision is a separate title property, and 'short' has no supplied threshold."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "235aebc161cf",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Both chapters and parts need short titles that tell the user what is in the content.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A chapter or part lacks a title that conveys the content of that chapter or part.",
+    "when": [
+     "Applies to chapter and part titles."
+    ],
+    "why": "The grain test: descriptive accuracy is distinct from title length, although the manual states both in one sentence."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "880e8c43fafc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "880e8c43fafc",
+      "quote": "If the report contains parts, continue the chapter numbering into each part."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Illustrates chapter numbering continuing into a later part.",
+      "parts": [
+       {
+        "block_id": "880e8c43fafc",
+        "quote": "‘Part 2’ might start with ‘Chapter 5’."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use consecutive numbering for chapter titles through the report.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Chapter-title numbering skips or repeats numbers, or restarts when a new part begins.",
+    "when": [
+     "Chapter numbering continues across parts."
+    ],
+    "why": "G-2: a new part is a case of the same consecutive chapter-numbering check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "271e86df0a41",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "An alternative part-numbering form shown by the manual.",
+      "parts": [
+       {
+        "block_id": "2229efeea1cd",
+        "quote": "Part 1, Part 2"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "An alternative part-numbering form shown by the manual.",
+      "parts": [
+       {
+        "block_id": "899595fdac8f",
+        "quote": "Part A, Part B"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "An alternative part-numbering form shown by the manual.",
+      "parts": [
+       {
+        "block_id": "126081eaccca",
+        "quote": "Part One, Part Two."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don't use roman numerals to number parts.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A part in a printed report is numbered using roman numerals.",
+    "when": [
+     "Applies to printed reports under the Print considerations subsection.",
+     "Arabic numerals, letters and number words are shown as alternative part-numbering forms."
+    ],
+    "why": "G-3: alternative numbering forms are permitted examples, not additional obligations."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "25f228fd8703",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "384d02acfbfa",
+      "quote": "When the break is in the main body of the text, continue the numbering across volumes."
+     },
+     {
+      "block_id": "38d847ce7d14",
+      "quote": "When the break is for different material (for example, endmatter), number each volume in a separate way."
+     },
+     {
+      "block_id": "5a88f7b0ebc4",
+      "quote": "Page numbering for the endmatter continues from the main body of the report."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Number the pages according to the break in the volumes:",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Page numbering restarts across a volume break within the main body, fails to use separate numbering for a volume containing different material, or improperly restarts when printed endmatter follows the main body in the same volume.",
+    "when": [
+     "A volume break within the main body retains continuous numbering.",
+     "A volume break for different material, such as endmatter, uses separate numbering.",
+     "In print, endmatter within the same volume continues the main body's page numbering."
+    ],
+    "why": "G-2: consolidate continuity and restart conditions for the same page-number sequence check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "e7e1bc728901",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use an appendix for relevant material that is too detailed to put in the main part of the report.",
+    "specification": "The page gives no objective limit for 'too detailed'. Maps, technical information and externally branded material are possible appendix contents, not material that must always be moved to an appendix.",
+    "unit": "document",
+    "violation_condition": "Relevant supporting material too detailed for the main body is placed in the main body rather than an appendix.",
+    "when": [
+     "The material is relevant but too detailed for the main body."
+    ],
+    "why": "G-2: suitability limits this placement check; the following list illustrates possible material rather than compulsory appendix contents."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "cddbe5a8f20f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Illustrates different numbering forms for chapters and appendices.",
+      "parts": [
+       {
+        "block_id": "cddbe5a8f20f",
+        "quote": "if chapters have arabic numerals (‘Chapter 1’, ‘Chapter 2’) number appendices alphabetically (‘Appendix A’, ‘Appendix B’)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Number appendices differently from how chapters are numbered in the report.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Appendices use the same numbering form as chapters.",
+    "when": [
+     "The report has appendices and numbered chapters."
+    ],
+    "why": "G-4: the example illustrates the distinction; it does not require alphabetical appendices in every report."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "831bad76b650",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "831bad76b650",
+      "quote": "List the title of each appendix on the title page."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If there are several appendices, use a title page.",
+    "specification": "The page does not define 'several'. The title page's usual right-hand position is not a textual requirement.",
+    "unit": "document",
+    "violation_condition": "A printed report with several appendices lacks an appendix title page listing every appendix title.",
+    "when": [
+     "Applies to printed reports.",
+     "There are several appendices."
+    ],
+    "why": "G-2: the title page and its list form one appendix-title-page completeness check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "01fed93e574c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include an alphabetical list of shortened forms or abbreviations when these are useful for the user.",
+    "specification": "This check concerns list inclusion. The page does not define when a list becomes useful.",
+    "unit": "document",
+    "violation_condition": "A report omits a list of shortened forms or abbreviations even though such a list would be useful to its readers.",
+    "when": [
+     "A list of the report's shortened forms or abbreviations would be useful to users."
+    ],
+    "why": "G-4 and the grain test: select the body instruction and distinguish inclusion from alphabetical ordering."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "01fed93e574c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include an alphabetical list of shortened forms or abbreviations when these are useful for the user.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Entries in a list of shortened forms or abbreviations are not in alphabetical order.",
+    "when": [
+     "The report has a list of shortened forms or abbreviations."
+    ],
+    "why": "The grain test: a present but misordered list is a different finding from a missing useful list."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "a85d38490ad0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If the list is brief, include it in the preliminary content.",
+    "specification": "The page supplies no entry-count or length threshold for 'brief'.",
+    "unit": "document",
+    "violation_condition": "A brief list of shortened forms is placed outside the preliminary content.",
+    "when": [
+     "The report has a brief list of shortened forms."
+    ],
+    "why": "G-2 and E-4: list length is the placement condition, with no invented threshold."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "a85d38490ad0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not incorporate the list of shortened forms in the glossary.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The glossary incorporates the report's list of shortened forms.",
+    "when": [
+     "The report has a list of shortened forms."
+    ],
+    "why": "The grain test: glossary incorporation is distinct from the brief-list placement check."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "cab15550eca2",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "cab15550eca2",
+      "quote": "You can explain these in the main part of the report."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a glossary to explain specialist or unfamiliar terms.",
+    "specification": "The page does not define the boundary between a small number of terms and enough terms to warrant a glossary.",
+    "unit": "document",
+    "violation_condition": "A report containing more than a small number of specialist or unfamiliar terms lacks a glossary explaining them.",
+    "when": [
+     "The report contains specialist or unfamiliar terms.",
+     "A glossary is not required for a small number of terms; these can be explained in the main body."
+    ],
+    "why": "G-2 and G-3: inline explanation is the exception for a small number of terms, not a separate obligation."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "cab15550eca2",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a glossary if there is a small number of terms to explain.",
+    "specification": "The page supplies no numerical definition of 'a small number'.",
+    "unit": "document",
+    "violation_condition": "A report uses a glossary despite having only a small number of terms to explain.",
+    "when": [
+     "Only a small number of terms need explanation."
+    ],
+    "why": "The grain test: the explicit prohibition can flag an unnecessary glossary, unlike the omission check for a needed glossary."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "b148428c305a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "List glossary items in alphabetical order.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Glossary entries are not in alphabetical order.",
+    "when": [
+     "The report has a glossary."
+    ],
+    "why": "The grain test: glossary ordering is independent of whether a glossary is warranted."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "66704aef4fb0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always place a bibliography after a reference list or endnotes if the report has both.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A bibliography precedes a reference list or endnotes that are also included in the report.",
+    "when": [
+     "The report contains a bibliography and a reference list, endnotes, or both."
+    ],
+    "why": "G-2 and G-4: retain the body's conditional ordering requirement rather than the descriptive heading."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "43617358af86",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "3022fcd38eea",
+      "quote": "Digital and printed reports can work better in volumes if they are large."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Split large reports into volumes",
+    "specification": "The body explains a potential benefit rather than making this mandatory. 'Large' is not defined by a page-count or word-count threshold.",
+    "unit": "document",
+    "violation_condition": "A large report remains in a single volume rather than being divided into volumes.",
+    "when": [
+     "The report is large.",
+     "Applies to digital and printed reports."
+    ],
+    "why": "G-4 and E-4: retain the heading's structural recommendation without converting it into a hard size-based requirement."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "3022fcd38eea",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Create a volume at a suitable point in the text.",
+    "specification": "The page does not define a suitable break point. Assessing suitability requires an editorial criterion that the reviewer must settle.",
+    "unit": "document",
+    "violation_condition": "A volume break occurs at an unsuitable point in the report's text.",
+    "when": [
+     "The report is divided into volumes."
+    ],
+    "why": "The grain test: an unsuitable existing break differs from failing to divide a large report."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "cae1fe54d446",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Each volume should have a summary list of the contents of the other volumes in the set.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A volume in a multi-volume report lacks a summary list of the other volumes' contents.",
+    "when": [
+     "The report consists of multiple volumes."
+    ],
+    "why": "G-1: retain the specific per-volume content requirement independently of the volume-splitting recommendation."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "205e0b97f7b3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always number preliminary pages per volume.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Preliminary-page numbering continues from an earlier volume rather than starting separately for the current volume.",
+    "when": [
+     "Applies to printed multi-volume reports.",
+     "Each volume's preliminary pages have their own numbering."
+    ],
+    "why": "The grain test: per-volume preliminary numbering is separate from numeral case and main-body continuity."
+   },
+   {
+    "applies_to": [
+     "report"
+    ],
+    "block_id": "b72722748707",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b72722748707",
+      "quote": "Where the numbering continues across volumes, use just the page number for the reference."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Where numbering restarts for each volume, references should include both the volume and page number.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A page reference omits the volume number when page numbering restarts by volume, or includes a volume number when page numbering is continuous across volumes.",
+    "when": [
+     "Applies to references to pages in printed multi-volume reports.",
+     "Restarted numbering requires volume and page identifiers.",
+     "Continuous numbering requires only the page identifier."
+    ],
+    "why": "G-2: the numbering scheme changes the identifiers required by one page-reference check."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "’i’, ’ii’, ’iii’ and ’iv’",
+   "what": "example",
+   "why": "overlaps the rule it illustrates (D-5)"
+  },
+  {
+   "quote": "Include an alphabetical list of shortened forms or abbreviations when these are useful for the user.",
+   "what": "rule",
+   "why": "the same span was returned twice"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "d9a3174eafbb",
+    "end": 52,
+    "prefix": "",
+    "quote": "Use the landing page or cover to identify the report",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "214ad56c1415",
+     "end": 54,
+     "prefix": "",
+     "quote": "All reports have a landing page or cover (if printed).",
+     "start": 0,
+     "suffix": " Use these to give an overview o"
+    },
+    {
+     "block_id": "3b162e5a71e4",
+     "end": 41,
+     "prefix": "",
+     "quote": "The landing page or cover also shows the:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f3853f04ce50",
+     "end": 5,
+     "prefix": "",
+     "quote": "title",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "11a0c63ece2d",
+     "end": 16,
+     "prefix": "",
+     "quote": "subtitle, if any",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "485c75a6eba1",
+     "end": 29,
+     "prefix": "",
+     "quote": "name of the author or editor.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "9e48e1fd0a29c78e",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A report lacks a landing page or printed cover identifying its title, applicable subtitle, and author or editor."
+   },
+   "when": [
+    "Use a landing page for an online report and a cover for a printed report.",
+    "A subtitle is required only if the report has one.",
+    "The date and publisher are optional here."
+   ],
+   "why": "G-4: the body supplies the identification information meant by the heading; optional details are exceptions, not additional rules."
+  },
+  {
+   "anchor": {
+    "block_id": "214ad56c1415",
+    "end": 156,
+    "prefix": "ing page or cover (if printed). ",
+    "quote": "Use these to give an overview of the report so people can decide if they want to download or read it.",
+    "start": 55,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Assess whether the landing page or cover conveys the report's subject and scope. This is distinct from merely displaying its identification details.",
+    "unit": "block",
+    "violation_condition": "The landing page or cover provides no overview sufficient to help a reader decide whether to download or read the report."
+   },
+   "when": [
+    "Applies to an online report's landing page or a printed report's cover."
+   ],
+   "why": "G-4: the body states an overview requirement distinct from the identification-details check."
+  },
+  {
+   "anchor": {
+    "block_id": "5397aaf8c596",
+    "end": 104,
+    "prefix": "",
+    "quote": "Australian Government reports published online should include the same information as a printed version.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "6897a3b0bd21",
+     "end": 155,
+     "prefix": "rliamentary printing standards. ",
+     "quote": "Electronic versions must be identical to printed versions and must be accessible.",
+     "start": 74,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Compare textual information across versions. General online reports should contain the same information; versions subject to the parliamentary requirement must have identical text. The separate accessibility requirement is not part of this check.",
+    "unit": "document",
+    "violation_condition": "An online report and its printed counterpart contain different information, or parliamentary electronic and printed versions have different text."
+   },
+   "when": [
+    "A printed counterpart exists.",
+    "For parliamentary documents covered by the printing requirements, equivalence is mandatory and the versions must be identical."
+   ],
+   "why": "G-2: consolidate version-equivalence requirements while preserving the stronger parliamentary condition."
+  },
+  {
+   "anchor": {
+    "block_id": "0d3a5b483d8d",
+    "end": 42,
+    "prefix": "",
+    "quote": "A title page should include the following:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d93c9526f584",
+     "end": 5,
+     "prefix": "",
+     "quote": "title",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d62023cdff68",
+     "end": 16,
+     "prefix": "",
+     "quote": "subtitle, if any",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e34abff4635d",
+     "end": 13,
+     "prefix": "",
+     "quote": "author’s name",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d66ee249999e",
+     "end": 35,
+     "prefix": "",
+     "quote": "name of the sponsor, if applicable.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A title page omits the report title, an existing subtitle, the author's name, or an applicable sponsor's name."
+   },
+   "when": [
+    "A subtitle is required only if there is one.",
+    "A sponsor's name is required only if applicable.",
+    "Other contributor details are optional."
+   ],
+   "why": "G-2: the list defines one title-page completeness check, with conditional fields."
+  },
+  {
+   "anchor": {
+    "block_id": "ce5c0815bb11",
+    "end": 192,
+    "prefix": " splash screen or landing page. ",
+    "quote": "Wherever it features, people should be able to easily find copyright and other information about the report.",
+    "start": 84,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "7b42eecb4f59",
+     "end": 155,
+     "prefix": "",
+     "quote": "You can put information prepared for the reverse title page somewhere else such as the inside front cover or back cover, if you’re not leaving those blank.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define an objective test for 'easily find' or an exhaustive set of 'other information'. Do not require a particular page location.",
+    "unit": "document",
+    "violation_condition": "Copyright and other report information is presented in a location or structure that makes it difficult to find."
+   },
+   "when": [
+    "Imprint information may appear on an imprint page, splash screen, landing page or another permitted location."
+   ],
+   "why": "G-3: alternative locations are permissions; the check concerns findability rather than a compulsory imprint-page location."
+  },
+  {
+   "anchor": {
+    "block_id": "338105ce2ead",
+    "end": 55,
+    "prefix": "",
+    "quote": "Show the main title exactly as it appears on the cover.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The main title on a half-title page differs from the main title on the cover."
+   },
+   "when": [
+    "The printed report has a half-title page.",
+    "A half-title page is optional."
+   ],
+   "why": "G-3: optional half-title pages have requirements when present; their optional existence is not a separate rule."
+  },
+  {
+   "anchor": {
+    "block_id": "14569a4df872",
+    "end": 26,
+    "prefix": "",
+    "quote": "Do not show any subtitles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A half-title page includes a subtitle."
+   },
+   "when": [
+    "The printed report has a half-title page."
+   ],
+   "why": "G-1: retain this specific half-title convention independently of the preliminary-content section."
+  },
+  {
+   "anchor": {
+    "block_id": "3378810df2d2",
+    "end": 57,
+    "prefix": "",
+    "quote": "Include a series title if the report is part of a series.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The half-title page of a report in a series omits the series title."
+   },
+   "when": [
+    "The printed report has a half-title page.",
+    "The report belongs to a series."
+   ],
+   "why": "G-2: series membership is the condition for this inclusion check."
+  },
+  {
+   "anchor": {
+    "block_id": "cce3d7ac4a36",
+    "end": 119,
+    "prefix": "order of the preliminary pages. ",
+    "quote": "Number them with lower case roman numerals such as ’i’, ’ii’, ’iii’ and ’iv’.",
+    "start": 42,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Printed preliminary pages are unnumbered or numbered using a form other than lower case roman numerals."
+   },
+   "when": [
+    "Applies to preliminary pages in printed reports."
+   ],
+   "why": "G-4: use the specific numbering sentence, not the preceding instruction to check the order."
+  },
+  {
+   "anchor": {
+    "block_id": "b35a1e7aee5e",
+    "end": 83,
+    "prefix": "",
+    "quote": "The letter of transmittal must include the purpose of the report and who it is for.",
+    "start": 0,
+    "suffix": " It must have:"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b35a1e7aee5e",
+     "end": 97,
+     "prefix": "f the report and who it is for. ",
+     "quote": "It must have:",
+     "start": 84,
+     "suffix": ""
+    },
+    {
+     "block_id": "0461dcb7ad4c",
+     "end": 54,
+     "prefix": "",
+     "quote": "the signature of the person responsible for the report",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "750e73a8b431",
+     "end": 49,
+     "prefix": "",
+     "quote": "the day, month and year the report was submitted.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A letter of transmittal omits the report's purpose, intended recipient, responsible person's signature, or submission date including day, month and year."
+   },
+   "when": [
+    "The report includes a letter of transmittal.",
+    "This page does not specify all circumstances in which a letter must be included."
+   ],
+   "why": "G-2: consolidate the required elements into one letter-of-transmittal completeness check."
+  },
+  {
+   "anchor": {
+    "block_id": "ed1bc1befdd0",
+    "end": 36,
+    "prefix": "",
+    "quote": "is always in the preliminary content",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "dbc764b32a7b",
+     "end": 11,
+     "prefix": "",
+     "quote": "A foreword:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a2fc4745a98b",
+     "end": 10,
+     "prefix": "",
+     "quote": "A preface:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ae27132d5643",
+     "end": 36,
+     "prefix": "",
+     "quote": "is always in the preliminary content",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A foreword or preface is placed outside the report's preliminary content."
+   },
+   "when": [
+    "The report has a foreword or preface.",
+    "The page does not require every report to have either."
+   ],
+   "why": "G-2: forewords and prefaces are two cases of the same placement check."
+  },
+  {
+   "anchor": {
+    "block_id": "435e76248f6d",
+    "end": 160,
+    "prefix": "",
+    "quote": "should be in the main part of the report if people will need the content to understand the report – for example, if the introduction includes terms of reference",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "77522dd00542",
+     "end": 60,
+     "prefix": "",
+     "quote": "can be in the preliminary content or main part of the report",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An introduction containing information needed to understand the report is placed in the preliminary content rather than the main body."
+   },
+   "when": [
+    "The introduction contains information needed to understand the report.",
+    "Otherwise, an introduction may be in the preliminary content or main body."
+   ],
+   "why": "G-2 and G-3: essential content triggers the placement check; the general choice of location is a permission."
+  },
+  {
+   "anchor": {
+    "block_id": "a76ba02a65f6",
+    "end": 28,
+    "prefix": "",
+    "quote": "does not include a signature",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "52380a8c3a39",
+     "end": 16,
+     "prefix": "",
+     "quote": "An introduction:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The report's introduction includes a signature."
+   },
+   "when": [
+    "Applies to an introduction, not a foreword, preface or letter of transmittal."
+   ],
+   "why": "G-1: retain the explicit no-signature convention rather than turning the whole description of introductions into a rule."
+  },
+  {
+   "anchor": {
+    "block_id": "a73c92736594",
+    "end": 74,
+    "prefix": "",
+    "quote": "Use the heading ‘Contents’, not ‘Table of contents’ or ‘List of contents’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The contents list is headed ‘Table of contents’, ‘List of contents’ or another heading instead of ‘Contents’."
+   },
+   "when": [
+    "The report has a contents list."
+   ],
+   "why": "G-4: the body states the actionable heading convention."
+  },
+  {
+   "anchor": {
+    "block_id": "569f73e9c8b3",
+    "end": 61,
+    "prefix": "",
+    "quote": "There is rarely a need to use more than 3 levels of headings.",
+    "start": 0,
+    "suffix": " Use design elements such as col"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "This is a qualified recommendation, not an absolute 3-level limit. The page does not define when additional levels are warranted.",
+    "unit": "block",
+    "violation_condition": "A contents list uses more than 3 heading levels without a need for the additional hierarchy."
+   },
+   "when": [
+    "Applies to heading levels displayed in the contents list.",
+    "Additional levels may be warranted in exceptional cases."
+   ],
+   "why": "G-2: preserve the qualification rather than inventing an absolute prohibition."
+  },
+  {
+   "anchor": {
+    "block_id": "4c93e6fe1df1",
+    "end": 65,
+    "prefix": "",
+    "quote": "Include a list of images and tables if it is helpful to the user.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page supplies no objective threshold for when a list is helpful. Do not require one merely because any image or table is present.",
+    "unit": "document",
+    "violation_condition": "A report omits a list of images and tables despite readers needing such a list to locate them."
+   },
+   "when": [
+    "A list would be helpful to the report's users.",
+    "Images may include photographs, figures and maps."
+   ],
+   "why": "G-2: usefulness limits the inclusion requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "fb5e3cd4cb0e",
+    "end": 42,
+    "prefix": "",
+    "quote": "Give each image a page number in the list.",
+    "start": 0,
+    "suffix": " In print, include even full-pag"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "fb5e3cd4cb0e",
+     "end": 121,
+     "prefix": "mage a page number in the list. ",
+     "quote": "In print, include even full-page images that don’t have a visible page number.",
+     "start": 43,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An image lacks a page-number reference in the report's image list, including a printed full-page image whose page number is not visible."
+   },
+   "when": [
+    "The report has an image list and page numbering.",
+    "In print, full-page images must be included even when their page number is not visible."
+   ],
+   "why": "G-2: full-page images are an explicit case of the image-reference completeness check."
+  },
+  {
+   "anchor": {
+    "block_id": "e0170a7177b6",
+    "end": 22,
+    "prefix": "",
+    "quote": "The order of lists is:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1f86e82066f5",
+     "end": 27,
+     "prefix": "",
+     "quote": "photographs (only in print)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "462a56223cec",
+     "end": 7,
+     "prefix": "",
+     "quote": "figures",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "13ba6dd6c52c",
+     "end": 27,
+     "prefix": "",
+     "quote": "maps (if listed separately)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ccb46f0ca7f9",
+     "end": 7,
+     "prefix": "",
+     "quote": "tables.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Separate image and table lists occur in an order other than photographs, figures, separately listed maps, then tables, after omitting categories not present."
+   },
+   "when": [
+    "The report has separate lists for these categories.",
+    "The photographs list applies only in print.",
+    "Maps need a separate position only if listed separately."
+   ],
+   "why": "G-2: the ordered items define one list-sequence check with conditional categories."
+  },
+  {
+   "anchor": {
+    "block_id": "b86f9ae72ccc",
+    "end": 85,
+    "prefix": "",
+    "quote": "For long reports, use a summary to present findings, recommendations and conclusions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define 'long'. Do not invent a page-count or word-count threshold.",
+    "unit": "document",
+    "violation_condition": "A long report lacks a summary presenting its findings, recommendations and conclusions."
+   },
+   "when": [
+    "The report is long.",
+    "The summary presents findings, recommendations and conclusions that the report contains."
+   ],
+   "why": "G-2 and E-4: retain the length condition without manufacturing a threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "37e0a517d1c1",
+    "end": 37,
+    "prefix": "",
+    "quote": "Name the summary to show its purpose.",
+    "start": 0,
+    "suffix": " For example, you can use ‘Recom"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "An example summary heading.",
+     "parts": [
+      {
+       "block_id": "37e0a517d1c1",
+       "end": 80,
+       "prefix": "rpose. For example, you can use ",
+       "quote": "‘Recommendations’",
+       "start": 63,
+       "suffix": " or ‘Summary’."
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "An example summary heading.",
+     "parts": [
+      {
+       "block_id": "37e0a517d1c1",
+       "end": 93,
+       "prefix": "ou can use ‘Recommendations’ or ",
+       "quote": "‘Summary’",
+       "start": 84,
+       "suffix": "."
+      }
+     ]
+    }
+   ],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A summary has a heading that does not communicate its purpose."
+   },
+   "when": [
+    "The report has a summary."
+   ],
+   "why": "G-4: use the naming instruction rather than treating its example names as an exhaustive list."
+  },
+  {
+   "anchor": {
+    "block_id": "1a3df47b8847",
+    "end": 30,
+    "prefix": "",
+    "quote": "Don't use ‘Executive summary’.",
+    "start": 0,
+    "suffix": " Although this is common, it is "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A report summary is headed ‘Executive summary’."
+   },
+   "when": [
+    "The phrase is used as the summary's heading, not mentioned in discussion."
+   ],
+   "why": "The grain test: this named-heading exclusion is distinct from whether a heading communicates its purpose."
+  },
+  {
+   "anchor": {
+    "block_id": "c213d3929a4b",
+    "end": 45,
+    "prefix": "",
+    "quote": "Organise the main body into chapters or parts",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "019bf7c1b563",
+     "end": 56,
+     "prefix": "",
+     "quote": "To organise the text in the main body of the report use:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c1a46a318607",
+     "end": 8,
+     "prefix": "",
+     "quote": "chapters",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e046f40fe095",
+     "end": 51,
+     "prefix": "",
+     "quote": "parts for long reports, with chapters in each part.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "8dd9c8a9de89d8f7",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The report's main body is not organised into chapters, or its parts do not contain chapters."
+   },
+   "when": [
+    "Parts are an option for long reports; chapters are used within each part."
+   ],
+   "why": "G-4: the heading and body state one main-body organisation requirement, separate from title and numbering checks."
+  },
+  {
+   "anchor": {
+    "block_id": "235aebc161cf",
+    "end": 41,
+    "prefix": "",
+    "quote": "Both chapters and parts need short titles",
+    "start": 0,
+    "suffix": " that tell the user what is in t"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 22,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no maximum title length. Do not substitute a numerical word limit.",
+    "unit": "phrase",
+    "violation_condition": "A chapter or part title is unnecessarily long."
+   },
+   "when": [
+    "Applies to chapter and part titles."
+   ],
+   "why": "The grain test and E-4: concision is a separate title property, and 'short' has no supplied threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "235aebc161cf",
+    "end": 84,
+    "prefix": "",
+    "quote": "Both chapters and parts need short titles that tell the user what is in the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 23,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A chapter or part lacks a title that conveys the content of that chapter or part."
+   },
+   "when": [
+    "Applies to chapter and part titles."
+   ],
+   "why": "The grain test: descriptive accuracy is distinct from title length, although the manual states both in one sentence."
+  },
+  {
+   "anchor": {
+    "block_id": "880e8c43fafc",
+    "end": 64,
+    "prefix": "",
+    "quote": "Use consecutive numbering for chapter titles through the report.",
+    "start": 0,
+    "suffix": " If the report contains parts, c"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "880e8c43fafc",
+     "end": 141,
+     "prefix": "pter titles through the report. ",
+     "quote": "If the report contains parts, continue the chapter numbering into each part.",
+     "start": 65,
+     "suffix": " For example, ‘Part 2’ might sta"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Illustrates chapter numbering continuing into a later part.",
+     "parts": [
+      {
+       "block_id": "880e8c43fafc",
+       "end": 193,
+       "prefix": "ng into each part. For example, ",
+       "quote": "‘Part 2’ might start with ‘Chapter 5’.",
+       "start": 155,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 24,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Chapter-title numbering skips or repeats numbers, or restarts when a new part begins."
+   },
+   "when": [
+    "Chapter numbering continues across parts."
+   ],
+   "why": "G-2: a new part is a case of the same consecutive chapter-numbering check."
+  },
+  {
+   "anchor": {
+    "block_id": "271e86df0a41",
+    "end": 41,
+    "prefix": "",
+    "quote": "Don't use roman numerals to number parts.",
+    "start": 0,
+    "suffix": " Users can confuse the roman II "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "An alternative part-numbering form shown by the manual.",
+     "parts": [
+      {
+       "block_id": "2229efeea1cd",
+       "end": 14,
+       "prefix": "",
+       "quote": "Part 1, Part 2",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "An alternative part-numbering form shown by the manual.",
+     "parts": [
+      {
+       "block_id": "899595fdac8f",
+       "end": 14,
+       "prefix": "",
+       "quote": "Part A, Part B",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "An alternative part-numbering form shown by the manual.",
+     "parts": [
+      {
+       "block_id": "126081eaccca",
+       "end": 19,
+       "prefix": "",
+       "quote": "Part One, Part Two.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 25,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A part in a printed report is numbered using roman numerals."
+   },
+   "when": [
+    "Applies to printed reports under the Print considerations subsection.",
+    "Arabic numerals, letters and number words are shown as alternative part-numbering forms."
+   ],
+   "why": "G-3: alternative numbering forms are permitted examples, not additional obligations."
+  },
+  {
+   "anchor": {
+    "block_id": "25f228fd8703",
+    "end": 55,
+    "prefix": "",
+    "quote": "Number the pages according to the break in the volumes:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "384d02acfbfa",
+     "end": 86,
+     "prefix": "",
+     "quote": "When the break is in the main body of the text, continue the numbering across volumes.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "38d847ce7d14",
+     "end": 104,
+     "prefix": "",
+     "quote": "When the break is for different material (for example, endmatter), number each volume in a separate way.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5a88f7b0ebc4",
+     "end": 76,
+     "prefix": "",
+     "quote": "Page numbering for the endmatter continues from the main body of the report.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 26,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Page numbering restarts across a volume break within the main body, fails to use separate numbering for a volume containing different material, or improperly restarts when printed endmatter follows the main body in the same volume."
+   },
+   "when": [
+    "A volume break within the main body retains continuous numbering.",
+    "A volume break for different material, such as endmatter, uses separate numbering.",
+    "In print, endmatter within the same volume continues the main body's page numbering."
+   ],
+   "why": "G-2: consolidate continuity and restart conditions for the same page-number sequence check."
+  },
+  {
+   "anchor": {
+    "block_id": "e7e1bc728901",
+    "end": 97,
+    "prefix": "",
+    "quote": "Use an appendix for relevant material that is too detailed to put in the main part of the report.",
+    "start": 0,
+    "suffix": " This can include:"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 27,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no objective limit for 'too detailed'. Maps, technical information and externally branded material are possible appendix contents, not material that must always be moved to an appendix.",
+    "unit": "document",
+    "violation_condition": "Relevant supporting material too detailed for the main body is placed in the main body rather than an appendix."
+   },
+   "when": [
+    "The material is relevant but too detailed for the main body."
+   ],
+   "why": "G-2: suitability limits this placement check; the following list illustrates possible material rather than compulsory appendix contents."
+  },
+  {
+   "anchor": {
+    "block_id": "cddbe5a8f20f",
+    "end": 75,
+    "prefix": "",
+    "quote": "Number appendices differently from how chapters are numbered in the report.",
+    "start": 0,
+    "suffix": " For example, if chapters have a"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Illustrates different numbering forms for chapters and appendices.",
+     "parts": [
+      {
+       "block_id": "cddbe5a8f20f",
+       "end": 211,
+       "prefix": "red in the report. For example, ",
+       "quote": "if chapters have arabic numerals (‘Chapter 1’, ‘Chapter 2’) number appendices alphabetically (‘Appendix A’, ‘Appendix B’).",
+       "start": 89,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 28,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Appendices use the same numbering form as chapters."
+   },
+   "when": [
+    "The report has appendices and numbered chapters."
+   ],
+   "why": "G-4: the example illustrates the distinction; it does not require alphabetical appendices in every report."
+  },
+  {
+   "anchor": {
+    "block_id": "831bad76b650",
+    "end": 50,
+    "prefix": "",
+    "quote": "If there are several appendices, use a title page.",
+    "start": 0,
+    "suffix": " List the title of each appendix"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "831bad76b650",
+     "end": 101,
+     "prefix": "l appendices, use a title page. ",
+     "quote": "List the title of each appendix on the title page.",
+     "start": 51,
+     "suffix": " The title page is usually a rig"
+    }
+   ],
+   "examples": [],
+   "n": 29,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define 'several'. The title page's usual right-hand position is not a textual requirement.",
+    "unit": "document",
+    "violation_condition": "A printed report with several appendices lacks an appendix title page listing every appendix title."
+   },
+   "when": [
+    "Applies to printed reports.",
+    "There are several appendices."
+   ],
+   "why": "G-2: the title page and its list form one appendix-title-page completeness check."
+  },
+  {
+   "anchor": {
+    "block_id": "01fed93e574c",
+    "end": 100,
+    "prefix": "",
+    "quote": "Include an alphabetical list of shortened forms or abbreviations when these are useful for the user.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 30,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "This check concerns list inclusion. The page does not define when a list becomes useful.",
+    "unit": "document",
+    "violation_condition": "A report omits a list of shortened forms or abbreviations even though such a list would be useful to its readers."
+   },
+   "when": [
+    "A list of the report's shortened forms or abbreviations would be useful to users."
+   ],
+   "why": "G-4 and the grain test: select the body instruction and distinguish inclusion from alphabetical ordering."
+  },
+  {
+   "anchor": {
+    "block_id": "a85d38490ad0",
+    "end": 60,
+    "prefix": "",
+    "quote": "If the list is brief, include it in the preliminary content.",
+    "start": 0,
+    "suffix": " Do not incorporate the list of "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 32,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page supplies no entry-count or length threshold for 'brief'.",
+    "unit": "document",
+    "violation_condition": "A brief list of shortened forms is placed outside the preliminary content."
+   },
+   "when": [
+    "The report has a brief list of shortened forms."
+   ],
+   "why": "G-2 and E-4: list length is the placement condition, with no invented threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "a85d38490ad0",
+    "end": 124,
+    "prefix": " it in the preliminary content. ",
+    "quote": "Do not incorporate the list of shortened forms in the glossary.",
+    "start": 61,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 33,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The glossary incorporates the report's list of shortened forms."
+   },
+   "when": [
+    "The report has a list of shortened forms."
+   ],
+   "why": "The grain test: glossary incorporation is distinct from the brief-list placement check."
+  },
+  {
+   "anchor": {
+    "block_id": "cab15550eca2",
+    "end": 57,
+    "prefix": "",
+    "quote": "Use a glossary to explain specialist or unfamiliar terms.",
+    "start": 0,
+    "suffix": " Don’t use a glossary if there i"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "cab15550eca2",
+     "end": 180,
+     "prefix": "all number of terms to explain. ",
+     "quote": "You can explain these in the main part of the report.",
+     "start": 127,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 34,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define the boundary between a small number of terms and enough terms to warrant a glossary.",
+    "unit": "document",
+    "violation_condition": "A report containing more than a small number of specialist or unfamiliar terms lacks a glossary explaining them."
+   },
+   "when": [
+    "The report contains specialist or unfamiliar terms.",
+    "A glossary is not required for a small number of terms; these can be explained in the main body."
+   ],
+   "why": "G-2 and G-3: inline explanation is the exception for a small number of terms, not a separate obligation."
+  },
+  {
+   "anchor": {
+    "block_id": "cab15550eca2",
+    "end": 126,
+    "prefix": "specialist or unfamiliar terms. ",
+    "quote": "Don’t use a glossary if there is a small number of terms to explain.",
+    "start": 58,
+    "suffix": " You can explain these in the ma"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 35,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page supplies no numerical definition of 'a small number'.",
+    "unit": "document",
+    "violation_condition": "A report uses a glossary despite having only a small number of terms to explain."
+   },
+   "when": [
+    "Only a small number of terms need explanation."
+   ],
+   "why": "The grain test: the explicit prohibition can flag an unnecessary glossary, unlike the omission check for a needed glossary."
+  },
+  {
+   "anchor": {
+    "block_id": "b148428c305a",
+    "end": 42,
+    "prefix": "",
+    "quote": "List glossary items in alphabetical order.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 36,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Glossary entries are not in alphabetical order."
+   },
+   "when": [
+    "The report has a glossary."
+   ],
+   "why": "The grain test: glossary ordering is independent of whether a glossary is warranted."
+  },
+  {
+   "anchor": {
+    "block_id": "66704aef4fb0",
+    "end": 86,
+    "prefix": "",
+    "quote": "Always place a bibliography after a reference list or endnotes if the report has both.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 37,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A bibliography precedes a reference list or endnotes that are also included in the report."
+   },
+   "when": [
+    "The report contains a bibliography and a reference list, endnotes, or both."
+   ],
+   "why": "G-2 and G-4: retain the body's conditional ordering requirement rather than the descriptive heading."
+  },
+  {
+   "anchor": {
+    "block_id": "43617358af86",
+    "end": 32,
+    "prefix": "",
+    "quote": "Split large reports into volumes",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "3022fcd38eea",
+     "end": 73,
+     "prefix": "",
+     "quote": "Digital and printed reports can work better in volumes if they are large.",
+     "start": 0,
+     "suffix": " Create a volume at a suitable p"
+    }
+   ],
+   "examples": [],
+   "n": 38,
+   "seed_uid": "9fae4c21fe1ac3ef",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The body explains a potential benefit rather than making this mandatory. 'Large' is not defined by a page-count or word-count threshold.",
+    "unit": "document",
+    "violation_condition": "A large report remains in a single volume rather than being divided into volumes."
+   },
+   "when": [
+    "The report is large.",
+    "Applies to digital and printed reports."
+   ],
+   "why": "G-4 and E-4: retain the heading's structural recommendation without converting it into a hard size-based requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "3022fcd38eea",
+    "end": 122,
+    "prefix": "r in volumes if they are large. ",
+    "quote": "Create a volume at a suitable point in the text.",
+    "start": 74,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 39,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define a suitable break point. Assessing suitability requires an editorial criterion that the reviewer must settle.",
+    "unit": "document",
+    "violation_condition": "A volume break occurs at an unsuitable point in the report's text."
+   },
+   "when": [
+    "The report is divided into volumes."
+   ],
+   "why": "The grain test: an unsuitable existing break differs from failing to divide a large report."
+  },
+  {
+   "anchor": {
+    "block_id": "cae1fe54d446",
+    "end": 87,
+    "prefix": "",
+    "quote": "Each volume should have a summary list of the contents of the other volumes in the set.",
+    "start": 0,
+    "suffix": " The index can be in each volume"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 40,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A volume in a multi-volume report lacks a summary list of the other volumes' contents."
+   },
+   "when": [
+    "The report consists of multiple volumes."
+   ],
+   "why": "G-1: retain the specific per-volume content requirement independently of the volume-splitting recommendation."
+  },
+  {
+   "anchor": {
+    "block_id": "205e0b97f7b3",
+    "end": 43,
+    "prefix": "",
+    "quote": "Always number preliminary pages per volume.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 41,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Preliminary-page numbering continues from an earlier volume rather than starting separately for the current volume."
+   },
+   "when": [
+    "Applies to printed multi-volume reports.",
+    "Each volume's preliminary pages have their own numbering."
+   ],
+   "why": "The grain test: per-volume preliminary numbering is separate from numeral case and main-body continuity."
+  },
+  {
+   "anchor": {
+    "block_id": "b72722748707",
+    "end": 100,
+    "prefix": "",
+    "quote": "Where numbering restarts for each volume, references should include both the volume and page number.",
+    "start": 0,
+    "suffix": " Where the numbering continues a"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b72722748707",
+     "end": 190,
+     "prefix": "oth the volume and page number. ",
+     "quote": "Where the numbering continues across volumes, use just the page number for the reference.",
+     "start": 101,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 42,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A page reference omits the volume number when page numbering restarts by volume, or includes a volume number when page numbering is continuous across volumes."
+   },
+   "when": [
+    "Applies to references to pages in printed multi-volume reports.",
+    "Restarted numbering requires volume and page identifiers.",
+    "Continuous numbering requires only the page identifier."
+   ],
+   "why": "G-2: the numbering scheme changes the identifiers required by one page-reference check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "cache_write_tokens": 5323,
+  "cached_tokens": 3049,
+  "cost_usd": 0.220268,
+  "input_tokens": 8375,
+  "output_tokens": 20665,
+  "reasoning_tokens": 6571
+ }
+}

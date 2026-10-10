@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.025712,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "The reflexive pronoun 'himself' is incorrectly used as part of the subject of the verb 'present'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s02",
+     "reason": "The reflexive pronoun 'themselves' is correctly used as the object of the verb 'identify', not the subject.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s03",
+     "reason": "The reflexive pronoun 'yourself' is correctly used as the object of the verb 'ask'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s04",
+     "reason": "No reflexive pronoun is used as the subject; standard subject pronouns ('My colleague and I') are used.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s05",
+     "reason": "The reflexive pronoun 'herself' is correctly used as the object of the verb 'introduced'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s06",
+     "reason": "The reflexive pronoun 'ourselves' is incorrectly used as part of the subject of the verb 'agreed'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s07",
+     "reason": "The reflexive pronoun 'Yourself' is incorrectly used as the subject of the verb 'can track'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s08",
+     "reason": "The reflexive pronoun 'yourself' is correctly used as the object of the verb 'injure'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s09",
+     "reason": "The reflexive pronoun 'myself' is incorrectly used as part of the subject of the verb 'will review'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s10",
+     "reason": "The reflexive pronoun 'ourselves' is correctly used as the object of the verb 'prepared'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s11",
+     "reason": "The reflexive pronoun 'herself' is incorrectly used as part of the subject of the verb 'approved'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s12",
+     "reason": "The reflexive pronoun 'Ourselves' is incorrectly used as the subject of the verb 'will send'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s13",
+     "reason": "The reflexive pronoun 'yourself' is incorrectly used as the subject of the verb 'must check'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s14",
+     "reason": "The reflexive pronoun 'myself' is incorrectly used as part of the subject of the verb 'will attend'.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s15",
+     "reason": "The reflexive pronoun 'myself' is correctly used as the object of the verb 'sent'.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s16",
+     "reason": "There are no reflexive pronouns used as subjects in this sentence.",
+     "verdict": "complies"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 850,
+   "output_tokens": 843,
+   "thinking_tokens": 1158
+  }
+ },
+ "dropped": [],
+ "input_sha256": "83566d8ef34fb4da4813a2723d990bfcbd480e4141262d62830f0a37e1f21798",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'himself' is incorrectly used as part of the subject of the verb 'present'.",
+   "how": "Uses himself in a compound subject.",
+   "id": "s01",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "At the next meeting, Jordan and himself will present the findings."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The reflexive pronoun 'themselves' is correctly used as the object of the verb 'identify', not the subject.",
+   "how": "Themselves is an object referring to applicants.",
+   "id": "s02",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Applicants must identify themselves at the reception desk."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The reflexive pronoun 'yourself' is correctly used as the object of the verb 'ask'.",
+   "how": "Yourself refers to the understood subject you.",
+   "id": "s03",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Before the interview, ask yourself which examples best demonstrate your skills."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "No reflexive pronoun is used as the subject; standard subject pronouns ('My colleague and I') are used.",
+   "how": "Uses I in a compound subject.",
+   "id": "s04",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "My colleague and I will assess the funding applications."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The reflexive pronoun 'herself' is correctly used as the object of the verb 'introduced'.",
+   "how": "Herself is an object referring to the director.",
+   "id": "s05",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The director introduced herself at the community meeting."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'ourselves' is incorrectly used as part of the subject of the verb 'agreed'.",
+   "how": "Uses ourselves in an embedded compound subject.",
+   "id": "s06",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Your letter confirms that the advisers and ourselves agreed on the delivery schedule."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'Yourself' is incorrectly used as the subject of the verb 'can track'.",
+   "how": "Uses yourself as the sole subject.",
+   "id": "s07",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Yourself can track the application through the online portal."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The reflexive pronoun 'yourself' is correctly used as the object of the verb 'injure'.",
+   "how": "Yourself is an object within a conditional clause.",
+   "id": "s08",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "If you injure yourself during the inspection, notify your supervisor."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'myself' is incorrectly used as part of the subject of the verb 'will review'.",
+   "how": "Uses myself in a compound subject.",
+   "id": "s09",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "My director and myself will review the policy next week."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The reflexive pronoun 'ourselves' is correctly used as the object of the verb 'prepared'.",
+   "how": "Ourselves is an object referring to we.",
+   "id": "s10",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "We prepared ourselves for a longer consultation period."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'herself' is incorrectly used as part of the subject of the verb 'approved'.",
+   "how": "Uses herself in an embedded clause's subject.",
+   "id": "s11",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The report states that the chair and herself approved the revised budget."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'Ourselves' is incorrectly used as the subject of the verb 'will send'.",
+   "how": "Uses ourselves as the sole subject.",
+   "id": "s12",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Ourselves will send you a replacement card within 10 days."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'yourself' is incorrectly used as the subject of the verb 'must check'.",
+   "how": "Uses yourself as the subject after an introductory phrase.",
+   "id": "s13",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Before lodging the application, yourself must check that all required documents are attached."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The reflexive pronoun 'myself' is incorrectly used as part of the subject of the verb 'will attend'.",
+   "how": "Uses myself in a subject joined by nor.",
+   "id": "s14",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Neither the coordinator nor myself will attend the briefing."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The reflexive pronoun 'myself' is correctly used as the object of the verb 'sent'.",
+   "how": "Myself is an object referring to the subject I.",
+   "id": "s15",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "I sent myself a copy of the receipt."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "There are no reflexive pronouns used as subjects in this sentence.",
+   "how": "Uses you as the subject.",
+   "id": "s16",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "You can request a printed copy of the guide."
+  }
+ ],
+ "statement": "Don't use reflexive pronouns such as 'yourself' and 'myself' as the subject of the verb.",
+ "uid": "eecab3e2f72ea6b8",
+ "writer": {
+  "cost_usd": 0.013154,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "Myself is an object referring to the subject I.",
+     "near_miss": true,
+     "text": "I sent myself a copy of the receipt."
+    },
+    {
+     "how": "Yourself refers to the understood subject you.",
+     "near_miss": true,
+     "text": "Before the interview, ask yourself which examples best demonstrate your skills."
+    },
+    {
+     "how": "Themselves is an object referring to applicants.",
+     "near_miss": true,
+     "text": "Applicants must identify themselves at the reception desk."
+    },
+    {
+     "how": "Herself is an object referring to the director.",
+     "near_miss": true,
+     "text": "The director introduced herself at the community meeting."
+    },
+    {
+     "how": "Ourselves is an object referring to we.",
+     "near_miss": true,
+     "text": "We prepared ourselves for a longer consultation period."
+    },
+    {
+     "how": "Yourself is an object within a conditional clause.",
+     "near_miss": true,
+     "text": "If you injure yourself during the inspection, notify your supervisor."
+    },
+    {
+     "how": "Uses I in a compound subject.",
+     "near_miss": false,
+     "text": "My colleague and I will assess the funding applications."
+    },
+    {
+     "how": "Uses you as the subject.",
+     "near_miss": false,
+     "text": "You can request a printed copy of the guide."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Uses myself in a compound subject.",
+     "text": "My director and myself will review the policy next week."
+    },
+    {
+     "how": "Uses yourself as the sole subject.",
+     "text": "Yourself can track the application through the online portal."
+    },
+    {
+     "how": "Uses himself in a compound subject.",
+     "text": "At the next meeting, Jordan and himself will present the findings."
+    },
+    {
+     "how": "Uses ourselves as the sole subject.",
+     "text": "Ourselves will send you a replacement card within 10 days."
+    },
+    {
+     "how": "Uses herself in an embedded clause's subject.",
+     "text": "The report states that the chair and herself approved the revised budget."
+    },
+    {
+     "how": "Uses yourself as the subject after an introductory phrase.",
+     "text": "Before lodging the application, yourself must check that all required documents are attached."
+    },
+    {
+     "how": "Uses myself in a subject joined by nor.",
+     "text": "Neither the coordinator nor myself will attend the briefing."
+    },
+    {
+     "how": "Uses ourselves in an embedded compound subject.",
+     "text": "Your letter confirms that the advisers and ourselves agreed on the delivery schedule."
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 807,
+   "output_tokens": 1154,
+   "reasoning_tokens": 516
+  }
+ }
+}

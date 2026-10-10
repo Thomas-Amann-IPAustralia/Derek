@@ -1,0 +1,305 @@
+{
+ "effort": "high",
+ "input_sha256": "c58be1fd840ff16b749c72f730f8f895dd73d4650f58a62c4d2fc7ae0191b1b8",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "49a23f5b79c2",
+    "end": 163,
+    "prefix": "ork with specific prepositions. ",
+    "quote": "Choose them deliberately to convey meaning to users.",
+    "start": 111,
+    "suffix": ""
+   },
+   "note": "G-5: deliberateness is a writing process, not an observable property of the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "24aab33e312e",
+    "end": 141,
+    "prefix": "ionship between a noun or verb. ",
+    "quote": "Use prepositions to give information about the time and place of an action or thing.",
+    "start": 57,
+    "suffix": ""
+   },
+   "note": "Explains a use for prepositions rather than specifying a text violation. It does not require every expression of time or place to contain a preposition.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "808d7eb1b533",
+    "end": 103,
+    "prefix": "",
+    "quote": "You can use some prepositions as a different type of word, depending on their function in the sentence.",
+    "start": 0,
+    "suffix": " For example, 'down' can be a pr"
+   },
+   "note": "G-3: permits other grammatical functions and does not impose a checkable restriction or relax the collocation rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9c0ac856d8d6",
+    "end": 47,
+    "prefix": "",
+    "quote": "Some words only work with specific prepositions",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: consolidated into the body statement about particular prepositions; not a second finding.",
+   "reason": "restatement",
+   "seed_uid": "d58b1d278249eed8"
+  },
+  {
+   "anchor": {
+    "block_id": "063b373b4099",
+    "end": 232,
+    "prefix": "' or 'from', but not by 'than'. ",
+    "quote": "Check a dictionary if you are not sure.",
+    "start": 193,
+    "suffix": ""
+   },
+   "note": "G-5: describes a reference-checking action, not a property that can be checked in the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/prepositions.md",
+ "page_sha256": "e53c86f50d5e52b5ce5721aeb230c2475bd100b08a8b2c86ee5517ed9723166a",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "49a23f5b79c2",
+    "note": "G-5: deliberateness is a writing process, not an observable property of the finished text.",
+    "quote": "Choose them deliberately to convey meaning to users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "24aab33e312e",
+    "note": "Explains a use for prepositions rather than specifying a text violation. It does not require every expression of time or place to contain a preposition.",
+    "quote": "Use prepositions to give information about the time and place of an action or thing.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "808d7eb1b533",
+    "note": "G-3: permits other grammatical functions and does not impose a checkable restriction or relax the collocation rule.",
+    "quote": "You can use some prepositions as a different type of word, depending on their function in the sentence.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "9c0ac856d8d6",
+    "note": "G-4: consolidated into the body statement about particular prepositions; not a second finding.",
+    "quote": "Some words only work with specific prepositions",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "063b373b4099",
+    "note": "G-5: describes a reference-checking action, not a property that can be checked in the text.",
+    "quote": "Check a dictionary if you are not sure.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "063b373b4099",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "9c0ac856d8d6",
+      "quote": "Some words only work with specific prepositions"
+     },
+     {
+      "block_id": "063b373b4099",
+      "quote": "For example, 'different' is always followed by 'to' or 'from', but not by 'than'."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "596d697cb661",
+        "quote": "This is different from that."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c92226cd783c",
+        "quote": "The discussion about the program is continuing."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bfcadabc2a99",
+        "quote": "This is different than that."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b08ef924e54a",
+        "quote": "The discussion around the program is continuing."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Some words are always followed by particular prepositions.",
+    "specification": "Interpret this as a restriction on preposition choice when a word takes a prepositional complement, not as requiring a preposition after every occurrence of the word. The page accepts 'different to' and 'different from', rejects 'different than', and contrasts accepted 'discussion about the program' with rejected 'discussion around the program'. Other combinations require a lexical reference.",
+    "unit": "phrase",
+    "violation_condition": "A word is paired with a preposition that is incompatible with that word in the intended relationship, such as 'different than' or 'discussion around the program'.",
+    "when": [
+     "Apply when the preposition links the word to its complement.",
+     "Do not flag an occurrence merely because the word has no following preposition.",
+     "Distinguish the targeted combination from a preposition expressing a separate relationship, such as a literal location."
+    ],
+    "why": "G-2 keeps word-specific cases within one incompatible-preposition check; G-4 consolidates the heading and its explanation; E-2 attaches the Correct/Incorrect examples to this rule."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "063b373b4099",
+    "end": 110,
+    "prefix": " work for every word or phrase. ",
+    "quote": "Some words are always followed by particular prepositions.",
+    "start": 52,
+    "suffix": " For example, 'different' is alw"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "9c0ac856d8d6",
+     "end": 47,
+     "prefix": "",
+     "quote": "Some words only work with specific prepositions",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "063b373b4099",
+     "end": 192,
+     "prefix": "wed by particular prepositions. ",
+     "quote": "For example, 'different' is always followed by 'to' or 'from', but not by 'than'.",
+     "start": 111,
+     "suffix": " Check a dictionary if you are n"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "596d697cb661",
+       "end": 28,
+       "prefix": "",
+       "quote": "This is different from that.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c92226cd783c",
+       "end": 47,
+       "prefix": "",
+       "quote": "The discussion about the program is continuing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bfcadabc2a99",
+       "end": 28,
+       "prefix": "",
+       "quote": "This is different than that.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b08ef924e54a",
+       "end": 48,
+       "prefix": "",
+       "quote": "The discussion around the program is continuing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Interpret this as a restriction on preposition choice when a word takes a prepositional complement, not as requiring a preposition after every occurrence of the word. The page accepts 'different to' and 'different from', rejects 'different than', and contrasts accepted 'discussion about the program' with rejected 'discussion around the program'. Other combinations require a lexical reference.",
+    "unit": "phrase",
+    "violation_condition": "A word is paired with a preposition that is incompatible with that word in the intended relationship, such as 'different than' or 'discussion around the program'."
+   },
+   "when": [
+    "Apply when the preposition links the word to its complement.",
+    "Do not flag an occurrence merely because the word has no following preposition.",
+    "Distinguish the targeted combination from a preposition expressing a separate relationship, such as a literal location."
+   ],
+   "why": "G-2 keeps word-specific cases within one incompatible-preposition check; G-4 consolidates the heading and its explanation; E-2 attaches the Correct/Incorrect examples to this rule."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "cache_write_tokens": 0,
+  "cached_tokens": 3797,
+  "cost_usd": 0.035426,
+  "input_tokens": 3800,
+  "output_tokens": 3504,
+  "reasoning_tokens": 2482
+ }
+}

@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.02663,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "Commas are correctly omitted to the right of the decimal point.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s02",
+     "reason": "Commas should not be used in dates (the year 2027).",
+     "verdict": "violates"
+    },
+    {
+     "id": "s03",
+     "reason": "Numbers with fewer than 4 digits do not require a comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s04",
+     "reason": "Commas are correctly omitted in postcodes.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s05",
+     "reason": "The 4-digit number correctly uses a comma to separate groups of 3.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s06",
+     "reason": "The number 326,419 correctly uses a comma to separate groups of 3.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s07",
+     "reason": "The year in the date correctly omits a comma.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s08",
+     "reason": "The 6-digit number 163250 is missing a comma to separate the thousands.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s09",
+     "reason": "The number 12 600 uses a space instead of a comma, which is explicitly incorrect.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s10",
+     "reason": "The 4-digit number 4800 requires a comma.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s11",
+     "reason": "The 5-digit number 27500 requires a comma.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s12",
+     "reason": "The number correctly uses a comma to the left of the decimal point and omits them to the right.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s13",
+     "reason": "The comma in 48,00 does not separate the numerals into groups of 3 from right to left.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s14",
+     "reason": "Commas must not be used to the right of a decimal point.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s15",
+     "reason": "Commas should not be used in postcodes.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s16",
+     "reason": "The large rounded number is correctly expressed using a combination of numerals, a decimal point, and words.",
+     "verdict": "complies"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 979,
+   "output_tokens": 790,
+   "thinking_tokens": 1266
+  }
+ },
+ "dropped": [],
+ "input_sha256": "016922d9f8364dbb17b56fdfd79d8128bc008942d48cde8d247b01a005dd74cb",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "Commas are correctly omitted to the right of the decimal point.",
+   "how": "Digits after a decimal point need no commas.",
+   "id": "s01",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The laboratory recorded a coefficient of 0.12345."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Commas should not be used in dates (the year 2027).",
+   "how": "Comma incorrectly inserted in a year.",
+   "id": "s02",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The policy will take effect in 2,027."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "Numbers with fewer than 4 digits do not require a comma.",
+   "how": "Three-digit quantity needs no comma.",
+   "id": "s03",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The consultation received 950 submissions."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "Commas are correctly omitted in postcodes.",
+   "how": "Four-digit postcode correctly has no comma.",
+   "id": "s04",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "This delivery service is available in postcode 2600."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The 4-digit number correctly uses a comma to separate groups of 3.",
+   "how": "Four-digit quantity correctly uses a comma.",
+   "id": "s05",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "We have allocated 7,850 appointments for the next quarter."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The number 326,419 correctly uses a comma to separate groups of 3.",
+   "how": "Six-digit total correctly groups digits in threes.",
+   "id": "s06",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The register contains 326,419 entries."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The year in the date correctly omits a comma.",
+   "how": "Four-digit year in a date has no comma.",
+   "id": "s07",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "Applications close on 16 July 2027."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The 6-digit number 163250 is missing a comma to separate the thousands.",
+   "how": "Missing comma in a 6-digit total.",
+   "id": "s08",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The annual report records 163250 completed inspections."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The number 12 600 uses a space instead of a comma, which is explicitly incorrect.",
+   "how": "Space used instead of a comma.",
+   "id": "s09",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The service processed 12 600 applications in April."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The 4-digit number 4800 requires a comma.",
+   "how": "Missing comma in a 4-digit quantity.",
+   "id": "s10",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The grant will fund 4800 training places across regional Australia."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The 5-digit number 27500 requires a comma.",
+   "how": "Missing comma in a 5-digit dollar amount.",
+   "id": "s11",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Your approved payment is $27500."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The number correctly uses a comma to the left of the decimal point and omits them to the right.",
+   "how": "Comma groups the integer part only.",
+   "id": "s12",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The measured distance was 1,460.00375 metres."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The comma in 48,00 does not separate the numerals into groups of 3 from right to left.",
+   "how": "Digits not grouped in threes from the right.",
+   "id": "s13",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The dashboard shows 48,00 active accounts."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Commas must not be used to the right of a decimal point.",
+   "how": "Comma incorrectly placed after the decimal point.",
+   "id": "s14",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "The report gives the conversion factor as 0.123,45."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "Commas should not be used in postcodes.",
+   "how": "Comma incorrectly inserted in a postcode.",
+   "id": "s15",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Please send the completed form to our office in postcode 2,600."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The large rounded number is correctly expressed using a combination of numerals, a decimal point, and words.",
+   "how": "Large rounded number uses numerals and words.",
+   "id": "s16",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "The website attracted 2.4 million visits during the campaign."
+  }
+ ],
+ "statement": "Use commas in numbers with 4 or more digits",
+ "uid": "8d112f931549bb88",
+ "writer": {
+  "cost_usd": 0.013196,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "Digits after a decimal point need no commas.",
+     "near_miss": true,
+     "text": "The laboratory recorded a coefficient of 0.12345."
+    },
+    {
+     "how": "Comma groups the integer part only.",
+     "near_miss": true,
+     "text": "The measured distance was 1,460.00375 metres."
+    },
+    {
+     "how": "Four-digit postcode correctly has no comma.",
+     "near_miss": true,
+     "text": "This delivery service is available in postcode 2600."
+    },
+    {
+     "how": "Four-digit year in a date has no comma.",
+     "near_miss": true,
+     "text": "Applications close on 16 July 2027."
+    },
+    {
+     "how": "Three-digit quantity needs no comma.",
+     "near_miss": true,
+     "text": "The consultation received 950 submissions."
+    },
+    {
+     "how": "Large rounded number uses numerals and words.",
+     "near_miss": true,
+     "text": "The website attracted 2.4 million visits during the campaign."
+    },
+    {
+     "how": "Four-digit quantity correctly uses a comma.",
+     "near_miss": false,
+     "text": "We have allocated 7,850 appointments for the next quarter."
+    },
+    {
+     "how": "Six-digit total correctly groups digits in threes.",
+     "near_miss": false,
+     "text": "The register contains 326,419 entries."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Missing comma in a 4-digit quantity.",
+     "text": "The grant will fund 4800 training places across regional Australia."
+    },
+    {
+     "how": "Missing comma in a 5-digit dollar amount.",
+     "text": "Your approved payment is $27500."
+    },
+    {
+     "how": "Missing comma in a 6-digit total.",
+     "text": "The annual report records 163250 completed inspections."
+    },
+    {
+     "how": "Space used instead of a comma.",
+     "text": "The service processed 12 600 applications in April."
+    },
+    {
+     "how": "Digits not grouped in threes from the right.",
+     "text": "The dashboard shows 48,00 active accounts."
+    },
+    {
+     "how": "Comma incorrectly placed after the decimal point.",
+     "text": "The report gives the conversion factor as 0.123,45."
+    },
+    {
+     "how": "Comma incorrectly inserted in a postcode.",
+     "text": "Please send the completed form to our office in postcode 2,600."
+    },
+    {
+     "how": "Comma incorrectly inserted in a year.",
+     "text": "The policy will take effect in 2,027."
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 858,
+   "output_tokens": 1148,
+   "reasoning_tokens": 516
+  }
+ }
+}

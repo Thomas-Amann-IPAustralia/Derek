@@ -1,0 +1,354 @@
+{
+ "checker": {
+  "cost_usd": 0.037866,
+  "model": "gemini-3.1-pro-preview",
+  "raw": {
+   "verdicts": [
+    {
+     "id": "s01",
+     "reason": "The introductory phrase ends with a numeral but is followed by a word ('the'), avoiding a string of numbers.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s02",
+     "reason": "The sentence begins with an introductory phrase ending in a numeral ('2025') immediately followed by another numeral ('250').",
+     "verdict": "violates"
+    },
+    {
+     "id": "s03",
+     "reason": "The numeral at the end of the introductory phrase ('2025') is followed by a word ('staff'), avoiding a string of numbers.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s04",
+     "reason": "The numeral at the end of the introductory phrase ('2025') is followed by a word ('there'), not another numeral.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s05",
+     "reason": "The sentence begins with a date ending in a numeral ('2025') immediately followed by another numeral ('120').",
+     "verdict": "violates"
+    },
+    {
+     "id": "s06",
+     "reason": "The sentence strings a date ending in a numeral ('2025') immediately together with another numeral ('32') and is also missing the required comma.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s07",
+     "reason": "The sentence strings a date ending in a numeral ('2024') immediately together with another numeral ('75') and lacks a comma.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s08",
+     "reason": "The numbers in the sentence are separated by words ('attracted'), avoiding a string of numbers.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s09",
+     "reason": "The sentence begins with an introductory phrase ending in a numeral ('2025') immediately followed by another numeral ('240').",
+     "verdict": "violates"
+    },
+    {
+     "id": "s10",
+     "reason": "The numeral in the introductory phrase ('2') is followed by a word ('officers'), not another numeral.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s11",
+     "reason": "The introductory year ('2024') is followed by a word ('the'), avoiding a string of numbers.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s12",
+     "reason": "The sentence begins with a date/year ('2024') immediately followed by another numeral ('38').",
+     "verdict": "violates"
+    },
+    {
+     "id": "s13",
+     "reason": "The sentence strings a date ending in a numeral ('2024') immediately together with another numeral ('64') and lacks a comma.",
+     "verdict": "violates"
+    },
+    {
+     "id": "s14",
+     "reason": "The numerals in the sentence are separated by words, and it does not begin with an introductory phrase ending in a numeral.",
+     "verdict": "complies"
+    },
+    {
+     "id": "s15",
+     "reason": "The sentence begins with an introductory phrase ending in a numeral ('2023') immediately followed by another numeral ('19').",
+     "verdict": "violates"
+    },
+    {
+     "id": "s16",
+     "reason": "The introductory phrase does not end with a numeral, so there is no string of numbers.",
+     "verdict": "complies"
+    }
+   ]
+  },
+  "served_model": "gemini-3.1-pro-preview",
+  "usage": {
+   "input_tokens": 723,
+   "output_tokens": 933,
+   "thinking_tokens": 2102
+  }
+ },
+ "dropped": [],
+ "input_sha256": "e0b217a95ba1f28dbba9bf2e5a2a8a1c75d73fbe0e5ff709f20fe26b085ff572",
+ "prompt_version": "s1",
+ "sentences": [
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The introductory phrase ends with a numeral but is followed by a word ('the'), avoiding a string of numbers.",
+   "how": "A numerical deadline does not run directly into another numeral.",
+   "id": "s01",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "By 30 June 2025, the team had assessed all 120 applications."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence begins with an introductory phrase ending in a numeral ('2025') immediately followed by another numeral ('250').",
+   "how": "Start date immediately precedes a quantity despite the comma.",
+   "id": "s02",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "From 1 July 2025, 250 additional appointments will be available each week."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The numeral at the end of the introductory phrase ('2025') is followed by a word ('staff'), avoiding a string of numbers.",
+   "how": "Words separate the introductory date from the quantity.",
+   "id": "s03",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "On 14 March 2025, staff delivered emergency assistance to 240 households."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The numeral at the end of the introductory phrase ('2025') is followed by a word ('there'), not another numeral.",
+   "how": "Intervening words prevent a string of date and quantity numerals.",
+   "id": "s04",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "As at 1 February 2025, there were 32 requests awaiting a decision."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence begins with a date ending in a numeral ('2025') immediately followed by another numeral ('120').",
+   "how": "Introductory deadline creates a confusing string of numerals.",
+   "id": "s05",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "By 30 June 2025, 120 applications remained outstanding."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence strings a date ending in a numeral ('2025') immediately together with another numeral ('32') and is also missing the required comma.",
+   "how": "Missing comma leaves the date and quantity running together.",
+   "id": "s06",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "As at 1 February 2025 32 requests were awaiting a decision."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence strings a date ending in a numeral ('2024') immediately together with another numeral ('75') and lacks a comma.",
+   "how": "Introductory phrase ends with a numeral and lacks the required comma.",
+   "id": "s07",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "Before 31 December 2024 75 grant recipients submitted their final reports."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The numbers in the sentence are separated by words ('attracted'), avoiding a string of numbers.",
+   "how": "The date appears within the sentence rather than in a numerical opening.",
+   "id": "s08",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "The community meeting on 8 September 2024 attracted 64 residents."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence begins with an introductory phrase ending in a numeral ('2025') immediately followed by another numeral ('240').",
+   "how": "Date immediately precedes a quantity despite the comma.",
+   "id": "s09",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "On 14 March 2025, 240 households received emergency assistance."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The numeral in the introductory phrase ('2') is followed by a word ('officers'), not another numeral.",
+   "how": "An introductory stage number is followed by words, not a numeral.",
+   "id": "s10",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "After stage 2, officers reviewed 45 unresolved cases."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The introductory year ('2024') is followed by a word ('the'), avoiding a string of numbers.",
+   "how": "The numeral ending the introduction is followed by a word.",
+   "id": "s11",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "In 2024, the revised planning policy was adopted by 38 councils."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence begins with a date/year ('2024') immediately followed by another numeral ('38').",
+   "how": "Short introductory year leads directly into another numeral.",
+   "id": "s12",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "In 2024, 38 councils adopted the revised planning policy."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence strings a date ending in a numeral ('2024') immediately together with another numeral ('64') and lacks a comma.",
+   "how": "Missing comma between an introductory date and another numeral.",
+   "id": "s13",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "On 8 September 2024 64 residents attended the community meeting."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The numerals in the sentence are separated by words, and it does not begin with an introductory phrase ending in a numeral.",
+   "how": "The quantity and deadline are separated in a straightforward sentence.",
+   "id": "s14",
+   "near_miss": false,
+   "polarity": "compliant",
+   "text": "We received final reports from 75 grant recipients before 31 December 2024."
+  },
+  {
+   "agreed": true,
+   "checker": "violates",
+   "checker_reason": "The sentence begins with an introductory phrase ending in a numeral ('2023') immediately followed by another numeral ('19').",
+   "how": "Introductory year is followed immediately by a numerical subject.",
+   "id": "s15",
+   "near_miss": false,
+   "polarity": "violating",
+   "text": "During 2023, 19 regional offices trialled the new booking system."
+  },
+  {
+   "agreed": true,
+   "checker": "complies",
+   "checker_reason": "The introductory phrase does not end with a numeral, so there is no string of numbers.",
+   "how": "The introductory phrase before the numerical subject ends with a word.",
+   "id": "s16",
+   "near_miss": true,
+   "polarity": "compliant",
+   "text": "During the reporting period, 19 regional offices trialled the new booking system."
+  }
+ ],
+ "statement": "Avoid beginning a sentence with a string of numbers and dates",
+ "uid": "046a4193f3fe6331",
+ "writer": {
+  "cost_usd": 0.013766,
+  "effort": "medium",
+  "model": "gpt-6.1-sol",
+  "raw": {
+   "compliant": [
+    {
+     "how": "Words separate the introductory date from the quantity.",
+     "near_miss": true,
+     "text": "On 14 March 2025, staff delivered emergency assistance to 240 households."
+    },
+    {
+     "how": "The numeral ending the introduction is followed by a word.",
+     "near_miss": true,
+     "text": "In 2024, the revised planning policy was adopted by 38 councils."
+    },
+    {
+     "how": "A numerical deadline does not run directly into another numeral.",
+     "near_miss": true,
+     "text": "By 30 June 2025, the team had assessed all 120 applications."
+    },
+    {
+     "how": "An introductory stage number is followed by words, not a numeral.",
+     "near_miss": true,
+     "text": "After stage 2, officers reviewed 45 unresolved cases."
+    },
+    {
+     "how": "The introductory phrase before the numerical subject ends with a word.",
+     "near_miss": true,
+     "text": "During the reporting period, 19 regional offices trialled the new booking system."
+    },
+    {
+     "how": "Intervening words prevent a string of date and quantity numerals.",
+     "near_miss": true,
+     "text": "As at 1 February 2025, there were 32 requests awaiting a decision."
+    },
+    {
+     "how": "The date appears within the sentence rather than in a numerical opening.",
+     "near_miss": false,
+     "text": "The community meeting on 8 September 2024 attracted 64 residents."
+    },
+    {
+     "how": "The quantity and deadline are separated in a straightforward sentence.",
+     "near_miss": false,
+     "text": "We received final reports from 75 grant recipients before 31 December 2024."
+    }
+   ],
+   "violating": [
+    {
+     "how": "Date immediately precedes a quantity despite the comma.",
+     "text": "On 14 March 2025, 240 households received emergency assistance."
+    },
+    {
+     "how": "Short introductory year leads directly into another numeral.",
+     "text": "In 2024, 38 councils adopted the revised planning policy."
+    },
+    {
+     "how": "Introductory deadline creates a confusing string of numerals.",
+     "text": "By 30 June 2025, 120 applications remained outstanding."
+    },
+    {
+     "how": "Start date immediately precedes a quantity despite the comma.",
+     "text": "From 1 July 2025, 250 additional appointments will be available each week."
+    },
+    {
+     "how": "Introductory year is followed immediately by a numerical subject.",
+     "text": "During 2023, 19 regional offices trialled the new booking system."
+    },
+    {
+     "how": "Missing comma between an introductory date and another numeral.",
+     "text": "On 8 September 2024 64 residents attended the community meeting."
+    },
+    {
+     "how": "Introductory phrase ends with a numeral and lacks the required comma.",
+     "text": "Before 31 December 2024 75 grant recipients submitted their final reports."
+    },
+    {
+     "how": "Missing comma leaves the date and quantity running together.",
+     "text": "As at 1 February 2025 32 requests were awaiting a decision."
+    }
+   ]
+  },
+  "served_model": "gpt-6.1-sol",
+  "usage": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0,
+   "input_tokens": 548,
+   "output_tokens": 1267,
+   "reasoning_tokens": 516
+  }
+ }
+}
