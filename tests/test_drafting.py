@@ -291,6 +291,26 @@ def test_an_openai_response_that_is_not_a_draft_fails_the_page(kwargs, match):
         mod.parse_openai(_response(**kwargs))
 
 
+def test_a_stream_ending_incomplete_says_why_and_keeps_its_usage():
+    """The SDK's own helper reports only "no completed event"; this reads the end."""
+    mod = _load_cli()
+    events = [SimpleNamespace(type="response.created"),
+              SimpleNamespace(type="response.incomplete",
+                              response=_response(status="incomplete", reason="max_output_tokens"))]
+    with pytest.raises(mod.DraftError, match="ran out of output") as caught:
+        mod.parse_openai(mod.final_response(events))
+    assert caught.value.usage["output_tokens"] == 500, "a failed page's spend is still counted"
+
+
+def test_a_stream_that_simply_stops_is_a_page_failure_not_a_crash():
+    mod = _load_cli()
+    with pytest.raises(mod.DraftError, match="without a final response"):
+        mod.final_response([SimpleNamespace(type="response.created")])
+    failed = SimpleNamespace(type="response.failed", response=_response(status="failed"))
+    with pytest.raises(mod.DraftError, match="did not complete: failed"):
+        mod.parse_openai(mod.final_response([failed]))
+
+
 def test_a_call_is_priced_by_bucket_with_no_bucket_counted_twice():
     mod = _load_cli()
     # 1,000 input of which 200 read from cache and 100 written to it; 500 output.

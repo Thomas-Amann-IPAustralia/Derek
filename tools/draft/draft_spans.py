@@ -69,7 +69,16 @@ REASONING_ALLOWANCE = 6000
 
 
 class DraftError(RuntimeError):
-    """A page that could not be drafted. Names the page and why."""
+    """A page that could not be drafted. Names the page and why.
+
+    ``usage`` carries what the provider reported for a failed attempt, if it
+    reported anything, so a page that failed after generating is still counted
+    against the budget rather than silently free.
+    """
+
+    def __init__(self, message: str, usage: dict | None = None):
+        super().__init__(message)
+        self.usage = usage or {}
 
 
 def provider(model: str = MODEL) -> str:
@@ -113,27 +122,73 @@ def call_model(system: str, user: str, schema: dict) -> tuple[dict, str, dict, s
 def _call_openai(system: str, user: str, schema: dict) -> tuple[dict, str, dict, str]:
     import openai      # lazily: CI and the tests never install the SDK
 
+    import httpx       # the SDK's transport, installed with it
+
     client = openai.OpenAI(base_url=OPENAI_BASE_URL, max_retries=4, timeout=1800)
     # Streamed, with reasoning summaries, so bytes keep flowing while the model
     # thinks. A non-streamed request at high effort is silent for long enough
     # that an intermediary drops it ("upstream request failed", every retry);
     # the Anthropic adapter streams for the same family of reason.
-    with client.responses.stream(
-        model=MODEL,
-        # The instructions and the schema are identical for every page, so they
-        # form the cached prefix and only the page is new input after the first.
-        instructions=system,
-        input=user,
-        reasoning={"effort": EFFORT, "summary": "auto"},
-        text={"format": {"type": "json_schema", "name": "rule_draft", "schema": schema,
-                         "strict": True}},
-        max_output_tokens=MAX_TOKENS,
-        # The provider keeps no copy of the request. It is the manual's public
-        # text, but nothing here needs it stored, so nothing is.
-        store=False,
-    ) as stream:
-        response = stream.get_final_response()
+    try:
+        with client.responses.stream(
+            model=MODEL,
+            # The instructions and the schema are identical for every page, so they
+            # form the cached prefix and only the page is new input after the first.
+            instructions=system,
+            input=user,
+            reasoning={"effort": EFFORT, "summary": "auto"},
+            text={"format": {"type": "json_schema", "name": "rule_draft", "schema": schema,
+                             "strict": True}},
+            max_output_tokens=MAX_TOKENS,
+            # The provider keeps no copy of the request. It is the manual's public
+            # text, but nothing here needs it stored, so nothing is.
+            store=False,
+        ) as stream:
+            response = final_response(stream)
+    except (openai.APIError, httpx.HTTPError) as exc:
+        # One page's failure is that page's, not the run's: the rest still draft.
+        raise DraftError(f"transport: {type(exc).__name__}: {exc}") from exc
     return parse_openai(response)
+
+
+TERMINAL_EVENTS = ("response.completed", "response.incomplete", "response.failed")
+
+
+def final_response(events):
+    """The response from a stream's terminal event, whichever kind it is.
+
+    The SDK's ``get_final_response`` keeps only ``response.completed``, so an
+    incomplete or failed response surfaces as "Didn't receive a
+    `response.completed` event", with its reason and its usage thrown away. That
+    is how the first blind run lost a page without saying why. Reading the
+    terminal event here lets ``parse_openai`` say why, and count what it cost.
+    """
+    final, error = None, ""
+    for event in events:
+        kind = getattr(event, "type", "")
+        if kind in TERMINAL_EVENTS:
+            final = event.response
+        elif kind == "error":
+            error = getattr(event, "message", "") or getattr(event, "code", "") or "error event"
+    if final is None:
+        raise DraftError("the stream ended without a final response"
+                         + (f": {error}" if error else "; the connection was probably dropped"))
+    return final
+
+
+def _usage(response) -> dict:
+    u = getattr(response, "usage", None)
+    if u is None:
+        return {}
+    details_in = getattr(u, "input_tokens_details", None)
+    details_out = getattr(u, "output_tokens_details", None)
+    return {
+        "input_tokens": int(u.input_tokens or 0),
+        "cached_tokens": int(getattr(details_in, "cached_tokens", 0) or 0),
+        "cache_write_tokens": int(getattr(details_in, "cache_write_tokens", 0) or 0),
+        "output_tokens": int(u.output_tokens or 0),
+        "reasoning_tokens": int(getattr(details_out, "reasoning_tokens", 0) or 0),
+    }
 
 
 def parse_openai(response) -> tuple[dict, str, dict, str]:
@@ -141,31 +196,24 @@ def parse_openai(response) -> tuple[dict, str, dict, str]:
 
     Separate from the call so the tests can exercise it with no SDK installed.
     """
+    usage = _usage(response)
     for item in getattr(response, "output", None) or []:
         for part in getattr(item, "content", None) or []:
             if getattr(part, "type", "") == "refusal":
-                raise DraftError(f"declined: {getattr(part, 'refusal', '')}")
+                raise DraftError(f"declined: {getattr(part, 'refusal', '')}", usage)
     status = getattr(response, "status", "")
     if status != "completed":
         reason = getattr(getattr(response, "incomplete_details", None), "reason", "") or status
+        message = getattr(getattr(response, "error", None), "message", "")
         if reason == "max_output_tokens":
-            raise DraftError(f"ran out of output at {MAX_TOKENS} tokens; the draft is incomplete")
-        raise DraftError(f"the response did not complete: {reason}")
+            raise DraftError(f"ran out of output at {MAX_TOKENS} tokens; the draft is incomplete",
+                             usage)
+        raise DraftError(f"the response did not complete: {reason}"
+                         + (f" ({message})" if message else ""), usage)
     try:
         parsed = json.loads(response.output_text)
     except json.JSONDecodeError as exc:
-        raise DraftError(f"the model's output is not the JSON asked for: {exc}") from exc
-
-    u = response.usage
-    details_in = getattr(u, "input_tokens_details", None)
-    details_out = getattr(u, "output_tokens_details", None)
-    usage = {
-        "input_tokens": int(u.input_tokens or 0),
-        "cached_tokens": int(getattr(details_in, "cached_tokens", 0) or 0),
-        "cache_write_tokens": int(getattr(details_in, "cache_write_tokens", 0) or 0),
-        "output_tokens": int(u.output_tokens or 0),
-        "reasoning_tokens": int(getattr(details_out, "reasoning_tokens", 0) or 0),
-    }
+        raise DraftError(f"the model's output is not the JSON asked for: {exc}", usage) from exc
     return parsed, response.model, usage, status
 
 
@@ -309,8 +357,13 @@ def main(argv: list[str] | None = None) -> int:
         try:
             raw, served, usage, stop = call_model(system, user, schema)
         except DraftError as exc:
+            lost = cost_usd(exc.usage) if exc.usage else None
+            if lost:
+                spent += lost
             failed.append((rel, str(exc)))
-            print(f"  FAILED {rel}: {exc}", file=sys.stderr)
+            print(f"  FAILED {rel}: {exc}" + (f" (${lost:.3f} spent on it)" if lost else
+                                               " (any spend on it was not reported)"),
+                  file=sys.stderr)
             continue
         cost = cost_usd(usage)
         if cost is not None:
