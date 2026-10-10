@@ -36,7 +36,9 @@ from pathlib import Path
 
 from derek.corpus.eligibility import load_eligibility
 from derek.corpus.normalise import NormalisedPage
+from derek.detect.document import example_block_ids
 from derek.eval.directives import directive_sentences
+from derek.eval.golden_lint import LABELS, NEGATIVE_LABELS, POSITIVE_LABELS
 from derek.extract.blocks import parse_blocks
 from derek.extract.candidates import extract_candidates
 from derek.extract.golden import EXAMPLE_KINDS, RULE, GoldenError, load_golden, resolve_span
@@ -73,6 +75,10 @@ class PageScore:
     heading_walk_candidates: int = 0
     regex_hits: int = 0
     regex_candidates: int = 0
+    # The same three methods under one looser rule (see _place_found), and E-1
+    # polarity errors on the manual's labelled examples: [errors, labelled parts].
+    place_hits: dict = field(default_factory=dict)         # method -> human rules found
+    e1: dict = field(default_factory=dict)                 # "draft" | "human" -> [errors, n]
 
 
 def _latest(root: Path) -> tuple[str, str] | None:
@@ -103,6 +109,55 @@ def _overlap(a: tuple[str, int, int], b: tuple[str, int, int]) -> int:
     if a[0] != b[0]:
         return 0
     return max(0, min(a[2], b[2]) - max(a[1], b[1]))
+
+
+def _beneath(body, heading) -> bool:
+    """``body`` is prose whose nearest heading is ``heading``."""
+    return body.kind != "heading" and tuple(body.heading_path) == tuple(heading.heading_path)
+
+
+def _place_found(g, cand: tuple[str, int, int], by_id: dict) -> bool:
+    """Found at the same place: the spans overlap, or one is a heading and the
+    other is prose directly beneath it.
+
+    The word-overlap test in ``score_page`` misses the commonest disagreement on
+    the first blind pages: the reviewer confirmed the heading (the heading walk
+    had seeded it) and the draft quoted the sentence under it, as its prompt
+    asks when a heading is a label. The manual's body usually paraphrases its
+    heading, so the two share too few words. This rule credits position only,
+    and is applied to every method alike; it is reported beside the strict
+    number, never instead of it.
+    """
+    cb = by_id.get(cand[0])
+    if cb is None:
+        return False
+    if _overlap((g.block.id, g.span.start, g.span.end), cand):
+        return True
+    return ((g.block.kind == "heading" and _beneath(cb, g.block))
+            or (cb.kind == "heading" and _beneath(g.block, cb)))
+
+
+def _one_to_one(g_rules, cands: list[tuple[str, int, int]], by_id: dict) -> int:
+    free, hits = list(range(len(cands))), 0
+    for g in g_rules:
+        pick = next((i for i in free if _place_found(g, cands[i], by_id)), None)
+        if pick is not None:
+            free.remove(pick)
+            hits += 1
+    return hits
+
+
+def _e1(parts: list[tuple[str, str]], labelled: dict[str, str]) -> list[int]:
+    """[errors, n] over (block id, polarity) pairs sitting in a labelled example
+    block: a 'Correct' or 'Write this' text called violating, or the reverse."""
+    errors = n = 0
+    for block_id, kind in parts:
+        label = labelled.get(block_id)
+        if label is None:
+            continue
+        n += 1
+        errors += int((kind == "violating") == (label in POSITIVE_LABELS))
+    return [errors, n]
 
 
 def score_page(rel: str, draft: dict, golden, blind: bool) -> PageScore:
@@ -194,6 +249,24 @@ def score_page(rel: str, draft: dict, golden, blind: bool) -> PageScore:
     s.regex_hits = sum(1 for g in g_rules if any(
         _overlap((g.block.id, g.span.start, g.span.end), (d.block_id, d.start, d.end))
         for d in regex))
+
+    s.place_hits = {
+        "draft": _one_to_one(g_rules, [(r["anchor"]["block_id"], r["anchor"]["start"],
+                                        r["anchor"]["end"]) for r in d_rules], by_id),
+        "heading_walk": _one_to_one(g_rules, [(b, 0, len(by_id[b].plain))
+                                              for b in sorted(seed_blocks)], by_id),
+        "regex": _one_to_one(g_rules, [(d.block_id, d.start, d.end) for d in regex], by_id),
+    }
+    # Only blocks the manual presents as examples carry their label's polarity;
+    # prose that runs on under a label does not (Q9).
+    labelled = {b.id: b.heading_path[-1].strip().lower() for b in blocks
+                if b.id in example_block_ids(blocks, LABELS) and b.heading_path
+                and b.heading_path[-1].strip().lower() in POSITIVE_LABELS | NEGATIVE_LABELS}
+    s.e1 = {
+        "draft": _e1([(p["block_id"], ex["kind"]) for r in d_rules
+                      for ex in r.get("examples", []) for p in ex["parts"]], labelled),
+        "human": _e1([(k.block.id, k.span.kind) for k in kids], labelled),
+    }
     return s
 
 
@@ -265,16 +338,35 @@ def _details(rows: list[PageScore], *, blind: bool) -> list[str]:
             continue
         lines.append(f"### `{r.page_path}`" + (" (swept)" if r.swept else " (not swept)"))
         miss = "missed by the draft" if blind else "added by the reviewer"
-        lines += [f"- {miss}: {m}" for m in r.missed]
         if _sealed(r):
+            # Even the human's own marks are withheld here: "the draft missed X"
+            # is the draft's opinion of X, and it is the sweep that decides X.
+            if r.missed:
+                lines.append(f"- {len(r.missed)} of the human's rule(s) the draft did not "
+                             f"match: withheld until the page is swept")
             if r.extra:
                 lines.append(f"- {len(r.extra)} rule(s) the draft proposed and the human has "
                              f"not marked: withheld until the page is swept")
         else:
+            lines += [f"- {miss}: {m}" for m in r.missed]
             extra = ("draft only" if blind else ("not kept" if r.swept else "not yet reviewed"))
             lines += [f"- {extra}: {x}" for x in r.extra]
         lines.append("")
     return lines
+
+
+def _place_rows(rows: list[PageScore]) -> list[str]:
+    g = sum(r.golden for r in rows)
+    hit = lambda m: sum(r.place_hits.get(m, 0) for r in rows)  # noqa: E731
+    e1 = lambda who: [sum(r.e1.get(who, [0, 0])[i] for r in rows) for i in (0, 1)]  # noqa: E731
+    (de, dn), (he, hn) = e1("draft"), e1("human")
+    return [
+        f"| Recall at the same place (a heading and the prose directly beneath it "
+        f"count as one), draft / heading walk / regex | {_pct(hit('draft'), g)} / "
+        f"{_pct(hit('heading_walk'), g)} / {_pct(hit('regex'), g)} |",
+        f"| E-1 polarity errors on the manual's labelled examples, draft / human | "
+        f"{de} of {dn} / {he} of {hn} |",
+    ]
 
 
 def _quality(rows: list[PageScore]) -> list[str]:
@@ -300,6 +392,7 @@ def _quality(rows: list[PageScore]) -> list[str]:
               f"| Pointers refused (quote not in the manual) | {t('refused')} |",
               f"| *Baseline:* heading walk recall | {_pct(t('heading_walk_hits'), t('golden'))} from {t('heading_walk_candidates')} candidates |",
               f"| *Baseline:* sentence regex recall | {_pct(t('regex_hits'), t('golden'))} from {t('regex_candidates')} candidates |",
+              *_place_rows(rows),
               ""]
     return lines + _details(rows, blind=True)
 

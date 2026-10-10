@@ -153,8 +153,22 @@ def test_a_blind_page_keeps_the_drafts_content_sealed_until_it_is_swept(world):
     assert "The manager emailed myself." not in blind_part, "a polarity conflict leaked"
     assert "1 polarity conflict(s) on blind pages not yet swept" in blind_part
     assert "1 rule(s) the draft proposed and the human has not marked" in blind_part
+    assert "Use the correct case when writing pronouns." not in blind_part, \
+        "which human rule the draft missed is the draft's opinion of it, so it waits too"
+    assert "1 of the human's rule(s) the draft did not match" in blind_part
 
     world["gs"].swept[PRONOUNS] = {"page_path": PRONOUNS, "status": "complete", "by": "TA"}
     write_golden(world["gs"], world["spans"], world["pages"])
     text = report("p1", drafting.MODEL, list(_run(world).values()))
     assert "Relative pronouns show" in text and "The manager emailed myself." in text
+
+
+def test_recall_at_the_same_place_and_e1_are_reported_for_every_method(world):
+    r = _run(world)[PRONOUNS]
+    assert set(r.place_hits) == {"draft", "heading_walk", "regex"}
+    assert r.place_hits["draft"] >= r.matched, "the looser rule never finds fewer"
+    # The draft calls the manual's Incorrect sentence compliant: one E-1 error,
+    # on the two labelled parts it attached. The human's two are both right.
+    assert r.e1 == {"draft": [1, 2], "human": [0, 2]}
+    text = report("p1", drafting.MODEL, list(_run(world).values()))
+    assert "Recall at the same place" in text and "1 of 2 / 0 of 2" in text
