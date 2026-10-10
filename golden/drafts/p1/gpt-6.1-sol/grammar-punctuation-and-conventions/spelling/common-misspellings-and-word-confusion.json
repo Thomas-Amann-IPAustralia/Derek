@@ -1,0 +1,1314 @@
+{
+ "effort": "high",
+ "input_sha256": "2042b643911e25835f3bd0e2574a07832328ded406c005f4dedf896f97775629",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "942893718617",
+    "end": 141,
+    "prefix": "ple can confuse their spelling. ",
+    "quote": "If you’re not sure about the spelling of a word, check a dictionary.",
+    "start": 73,
+    "suffix": ""
+   },
+   "note": "G-5: recommends a writer action, not a detectable property of the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6aca88464dea",
+    "end": 52,
+    "prefix": "",
+    "quote": "Check for words that are easily confused or misspelt",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a checking instruction, not a specific text constraint.",
+   "reason": "advice",
+   "seed_uid": "0a28e92c2f41818a"
+  },
+  {
+   "anchor": {
+    "block_id": "89c1fc764bcc",
+    "end": 77,
+    "prefix": "",
+    "quote": "Follow one dictionary for consistency and use it to check variable spellings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: prescribes a reference and checking process without specifying which spellings the text must contain.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d9da90db7429",
+    "end": 44,
+    "prefix": "",
+    "quote": "Choose the right word and spell it correctly",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the word-confusion entries; their specific actionable requirements are inventoried separately.",
+   "reason": "section",
+   "seed_uid": "5cd3d412f55a57aa"
+  },
+  {
+   "anchor": {
+    "block_id": "992b598daed6",
+    "end": 159,
+    "prefix": "et wrong in government writing. ",
+    "quote": "Check your dictionary for the full set of meanings of each word.",
+    "start": 95,
+    "suffix": ""
+   },
+   "note": "G-5: a reference-checking action for the writer.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bfcfed2e50fc",
+    "end": 13,
+    "prefix": "",
+    "quote": "accept/except",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A topical heading followed by definitions and examples, not a separate instruction.",
+   "reason": "description",
+   "seed_uid": "5525dcadf08c3301"
+  },
+  {
+   "anchor": {
+    "block_id": "04c5e1c70441",
+    "end": 13,
+    "prefix": "",
+    "quote": "affect/effect",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A topical heading followed by descriptions of the words’ meanings, not a separate instruction.",
+   "reason": "description",
+   "seed_uid": "f72ac4ed8168c030"
+  },
+  {
+   "anchor": {
+    "block_id": "643e5eca9c3d",
+    "end": 10,
+    "prefix": "",
+    "quote": "lose/loose",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A topical heading followed by definitions and examples, not a separate instruction.",
+   "reason": "description",
+   "seed_uid": "918adcc907819866"
+  },
+  {
+   "anchor": {
+    "block_id": "b11f4c680656",
+    "end": 40,
+    "prefix": "",
+    "quote": "They should not be used interchangeably.",
+    "start": 0,
+    "suffix": " Your choice can alter the meani"
+   },
+   "note": "G-6: the distinction between ‘that’ and ‘which’ belongs to the pronouns guidance, which this entry references.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "51b267b2baf0",
+    "end": 32,
+    "prefix": "",
+    "quote": "To make your writing clear, use:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: lead-in to the essential/non-essential relative-pronoun guidance belonging to the pronouns page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "222f2ede0c5e",
+    "end": 32,
+    "prefix": "",
+    "quote": "‘that’ for essential information",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: duplicate of the essential-information relative-pronoun rule on the pronouns page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4a0cfe998b09",
+    "end": 57,
+    "prefix": "",
+    "quote": "‘which’, with punctuation, for non-essential information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: duplicate of the non-essential-information relative-pronoun guidance on the pronouns page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a1272574e880",
+    "end": 47,
+    "prefix": "",
+    "quote": "For examples, refer to guidance about pronouns.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the reader to another page rather than constraining text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "427bb77e6c4b",
+    "end": 19,
+    "prefix": "",
+    "quote": "would have/would of",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The topical heading is not the instruction; the actionable body sentence is marked as the rule.",
+   "reason": "description",
+   "seed_uid": "1cb1034165c4b11b"
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/spelling/common-misspellings-and-word-confusion.md",
+ "page_sha256": "23240da64ce2174ef1d66f44d4ea0ca871b7e6cb7bb3a237875f2b96c4708d22",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "942893718617",
+    "note": "G-5: recommends a writer action, not a detectable property of the finished text.",
+    "quote": "If you’re not sure about the spelling of a word, check a dictionary.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6aca88464dea",
+    "note": "G-5: a checking instruction, not a specific text constraint.",
+    "quote": "Check for words that are easily confused or misspelt",
+    "reason": "advice"
+   },
+   {
+    "block_id": "89c1fc764bcc",
+    "note": "G-5: prescribes a reference and checking process without specifying which spellings the text must contain.",
+    "quote": "Follow one dictionary for consistency and use it to check variable spellings.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d9da90db7429",
+    "note": "G-1: groups the word-confusion entries; their specific actionable requirements are inventoried separately.",
+    "quote": "Choose the right word and spell it correctly",
+    "reason": "section"
+   },
+   {
+    "block_id": "992b598daed6",
+    "note": "G-5: a reference-checking action for the writer.",
+    "quote": "Check your dictionary for the full set of meanings of each word.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bfcfed2e50fc",
+    "note": "A topical heading followed by definitions and examples, not a separate instruction.",
+    "quote": "accept/except",
+    "reason": "description"
+   },
+   {
+    "block_id": "04c5e1c70441",
+    "note": "A topical heading followed by descriptions of the words’ meanings, not a separate instruction.",
+    "quote": "affect/effect",
+    "reason": "description"
+   },
+   {
+    "block_id": "643e5eca9c3d",
+    "note": "A topical heading followed by definitions and examples, not a separate instruction.",
+    "quote": "lose/loose",
+    "reason": "description"
+   },
+   {
+    "block_id": "b11f4c680656",
+    "note": "G-6: the distinction between ‘that’ and ‘which’ belongs to the pronouns guidance, which this entry references.",
+    "quote": "They should not be used interchangeably.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "51b267b2baf0",
+    "note": "G-6: lead-in to the essential/non-essential relative-pronoun guidance belonging to the pronouns page.",
+    "quote": "To make your writing clear, use:",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "222f2ede0c5e",
+    "note": "G-6: duplicate of the essential-information relative-pronoun rule on the pronouns page.",
+    "quote": "‘that’ for essential information",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "4a0cfe998b09",
+    "note": "G-6: duplicate of the non-essential-information relative-pronoun guidance on the pronouns page.",
+    "quote": "‘which’, with punctuation, for non-essential information.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "a1272574e880",
+    "note": "G-5: directs the reader to another page rather than constraining text.",
+    "quote": "For examples, refer to guidance about pronouns.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "427bb77e6c4b",
+    "note": "The topical heading is not the instruction; the actionable body sentence is marked as the rule.",
+    "quote": "would have/would of",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "192637045471",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "458eaaa62df8",
+      "quote": "The word ‘disinterested’ means ‘impartial’ and ‘unbiased by personal interest’."
+     },
+     {
+      "block_id": "acea92ddccf7",
+      "quote": "The word ‘uninterested’ means ‘not interested’, ‘indifferent’ or ‘unconcerned’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fe62c4308707",
+        "quote": "The judge’s deliberation was disinterested and considered."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "68b7501dae76",
+        "quote": "The invitation to the concert was wasted on me because I’m uninterested in jazz music."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "‘Disinterested’ is often used to mean ‘uninterested’, but this use is not correct.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Disinterested’ is used to mean not interested, indifferent or unconcerned, rather than impartial or unbiased.",
+    "when": [
+     "Applies when ‘disinterested’ expresses a lack of interest.",
+     "Use meaning impartial or unbiased by personal interest is not a violation."
+    ],
+    "why": "G-4: the explicit prohibition supplies the rule; the definitions explain its scope rather than creating additional rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "84b66721a69d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "be3d32afc523",
+      "quote": "The word ‘dove’ is the past tense of ‘dive’ in American English."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f751bd2d3815",
+        "quote": "Bystanders dived into the creek to help the drowning swimmer."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "In Australian English, write ‘dived’ to use the past tense of the verb ‘to dive’.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The past tense of the verb ‘dive’ is written as ‘dove’ in Australian English.",
+    "when": [
+     "Applies to the past tense of the verb ‘dive’ in Australian English.",
+     "Does not apply to ‘dove’ as the name of a bird."
+    ],
+    "why": "G-4: use the body instruction, not the topical heading or the description of American English."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9f539b89ccd9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e689179d643d",
+      "quote": "for all intents and purposes/for all intensive purposes"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "05b0dcc1e17c",
+        "quote": "The paperwork may take a few weeks to come through but, for all intents and purposes, you are hired."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The correct expression is ‘for all intents and purposes’, meaning ‘in every practical sense’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The expression ‘for all intensive purposes’ is used instead of ‘for all intents and purposes’.",
+    "when": [
+     "Applies to the expression meaning ‘in every practical sense’."
+    ],
+    "why": "G-4: the body identifies the correct expression; the heading identifies the competing forms."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2ed2ff40b184",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "52a6a5b7886f",
+      "quote": "The exception is a court decision; write this as ‘judgment’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5205390d270f",
+        "quote": "You can speak to one of our counsellors without fearing judgement."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "43d75582a141",
+        "quote": "Please cite the High Court’s most recent judgment in the issues paper."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Write ‘judgement’ rather than ‘judgment’.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Judgment’ is used outside the court-decision sense, or ‘judgement’ is used for a court decision.",
+    "when": [
+     "The general spelling is ‘judgement’.",
+     "For a court decision, the spelling is ‘judgment’."
+    ],
+    "why": "G-2: the court-decision exception changes which spelling is appropriate, not the underlying spelling check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "999aecb93000",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "65eb296ff050",
+        "quote": "He completed his master degree last year."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "88ab9a2d0fdb",
+        "quote": "The university offered several master degrees to postgraduate students."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use ‘master degree’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A generic reference to a master degree is written as ‘masters degree’ or ‘master’s degree’.",
+    "when": [
+     "Applies to generic references to this level of degree, including plural ‘master degrees’.",
+     "Specific qualifications are covered by the separate ‘Master of [area of study]’ instruction."
+    ],
+    "why": "The grain test separates the generic spelling check from the check on the form of a specific qualification’s name."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "999aecb93000",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "68fd50c51a07",
+        "quote": "Having a Master of Arts helped her gain the promotion."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When referring to a specific qualification, use ‘Master of [area of study]’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A specific master qualification is named in a form other than ‘Master of’ followed by its area of study.",
+    "when": [
+     "Applies when naming a specific qualification, rather than referring generically to a master degree."
+    ],
+    "why": "The grain test keeps qualification naming separate from the generic ‘master degree’ spelling check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ed8c8dbae36f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "84e6471f1227",
+      "quote": "Use ‘program’ for the titles of new programs based on government policy."
+     },
+     {
+      "block_id": "84e6471f1227",
+      "quote": "Use ‘programme’ only when it is part of the formal name of an existing program."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0b75f6e1eb2b",
+        "quote": "One of the most challenging aspects of our work is designing programs that can be implemented quickly."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d5e398837be1",
+        "quote": "The Prescription Shopping Programme lets medical practitioners check their patients’ prescription histories."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Use ‘program’ rather than ‘programme’, including for computer programs.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Programme’ is used outside the formal name of an existing program, including in a newly created government-policy program title.",
+    "when": [
+     "Applies to ordinary uses, computer programs and titles of new programs based on government policy.",
+     "‘Programme’ is allowed when it is part of the formal name of an existing program."
+    ],
+    "why": "G-2 and G-4: ordinary uses, new titles and the existing-name exception belong to one spelling check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0080d8853bc9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ca4ab2557628",
+      "quote": "It is not accepted as standard Australian English."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "627cda167003",
+        "quote": "Our aim is for all staff to have access to this training, regardless of location."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3f6f8ee57513",
+        "quote": "The following instructions will work regardless of which mobile platform you use."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e980a5d26428",
+        "quote": "These are interesting times but we must carry on regardless."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use ‘regardless’.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "The non-standard word ‘irregardless’ is used.",
+    "when": [],
+    "why": "G-4: the instruction and the statement that ‘irregardless’ is non-standard support one check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f4b446638079",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "427bb77e6c4b",
+      "quote": "would have/would of"
+     },
+     {
+      "block_id": "f4b446638079",
+      "quote": "‘Would of’ is incorrect."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "be6a5c9f0892",
+        "quote": "If I had known we were over budget, I would have changed the scope of the contract."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3c207c1437f7",
+        "quote": "This would’ve spared us a lot of stress"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cf6acf9efca7",
+        "quote": "At the very least, we would of avoided the overspend."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always write ‘would have’ or the contracted form ‘would’ve’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Would of’ is used in place of the verb form ‘would have’ or ‘would’ve’.",
+    "when": [
+     "Both ‘would have’ and ‘would’ve’ are acceptable."
+    ],
+    "why": "G-2 and G-4: the full and contracted forms are alternatives within one check; the incorrectness statement is a restatement."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "192637045471",
+    "end": 82,
+    "prefix": "",
+    "quote": "‘Disinterested’ is often used to mean ‘uninterested’, but this use is not correct.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "458eaaa62df8",
+     "end": 79,
+     "prefix": "",
+     "quote": "The word ‘disinterested’ means ‘impartial’ and ‘unbiased by personal interest’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "acea92ddccf7",
+     "end": 79,
+     "prefix": "",
+     "quote": "The word ‘uninterested’ means ‘not interested’, ‘indifferent’ or ‘unconcerned’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fe62c4308707",
+       "end": 58,
+       "prefix": "",
+       "quote": "The judge’s deliberation was disinterested and considered.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "68b7501dae76",
+       "end": 86,
+       "prefix": "",
+       "quote": "The invitation to the concert was wasted on me because I’m uninterested in jazz music.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Disinterested’ is used to mean not interested, indifferent or unconcerned, rather than impartial or unbiased."
+   },
+   "when": [
+    "Applies when ‘disinterested’ expresses a lack of interest.",
+    "Use meaning impartial or unbiased by personal interest is not a violation."
+   ],
+   "why": "G-4: the explicit prohibition supplies the rule; the definitions explain its scope rather than creating additional rules."
+  },
+  {
+   "anchor": {
+    "block_id": "84b66721a69d",
+    "end": 81,
+    "prefix": "",
+    "quote": "In Australian English, write ‘dived’ to use the past tense of the verb ‘to dive’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "be3d32afc523",
+     "end": 64,
+     "prefix": "",
+     "quote": "The word ‘dove’ is the past tense of ‘dive’ in American English.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f751bd2d3815",
+       "end": 61,
+       "prefix": "",
+       "quote": "Bystanders dived into the creek to help the drowning swimmer.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The past tense of the verb ‘dive’ is written as ‘dove’ in Australian English."
+   },
+   "when": [
+    "Applies to the past tense of the verb ‘dive’ in Australian English.",
+    "Does not apply to ‘dove’ as the name of a bird."
+   ],
+   "why": "G-4: use the body instruction, not the topical heading or the description of American English."
+  },
+  {
+   "anchor": {
+    "block_id": "9f539b89ccd9",
+    "end": 93,
+    "prefix": "",
+    "quote": "The correct expression is ‘for all intents and purposes’, meaning ‘in every practical sense’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e689179d643d",
+     "end": 55,
+     "prefix": "",
+     "quote": "for all intents and purposes/for all intensive purposes",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "05b0dcc1e17c",
+       "end": 100,
+       "prefix": "",
+       "quote": "The paperwork may take a few weeks to come through but, for all intents and purposes, you are hired.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The expression ‘for all intensive purposes’ is used instead of ‘for all intents and purposes’."
+   },
+   "when": [
+    "Applies to the expression meaning ‘in every practical sense’."
+   ],
+   "why": "G-4: the body identifies the correct expression; the heading identifies the competing forms."
+  },
+  {
+   "anchor": {
+    "block_id": "2ed2ff40b184",
+    "end": 41,
+    "prefix": "",
+    "quote": "Write ‘judgement’ rather than ‘judgment’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "52a6a5b7886f",
+     "end": 60,
+     "prefix": "",
+     "quote": "The exception is a court decision; write this as ‘judgment’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5205390d270f",
+       "end": 66,
+       "prefix": "",
+       "quote": "You can speak to one of our counsellors without fearing judgement.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "43d75582a141",
+       "end": 70,
+       "prefix": "",
+       "quote": "Please cite the High Court’s most recent judgment in the issues paper.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Judgment’ is used outside the court-decision sense, or ‘judgement’ is used for a court decision."
+   },
+   "when": [
+    "The general spelling is ‘judgement’.",
+    "For a court decision, the spelling is ‘judgment’."
+   ],
+   "why": "G-2: the court-decision exception changes which spelling is appropriate, not the underlying spelling check."
+  },
+  {
+   "anchor": {
+    "block_id": "999aecb93000",
+    "end": 20,
+    "prefix": "",
+    "quote": "Use ‘master degree’.",
+    "start": 0,
+    "suffix": " When referring to a specific qu"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "65eb296ff050",
+       "end": 41,
+       "prefix": "",
+       "quote": "He completed his master degree last year.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "88ab9a2d0fdb",
+       "end": 71,
+       "prefix": "",
+       "quote": "The university offered several master degrees to postgraduate students.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A generic reference to a master degree is written as ‘masters degree’ or ‘master’s degree’."
+   },
+   "when": [
+    "Applies to generic references to this level of degree, including plural ‘master degrees’.",
+    "Specific qualifications are covered by the separate ‘Master of [area of study]’ instruction."
+   ],
+   "why": "The grain test separates the generic spelling check from the check on the form of a specific qualification’s name."
+  },
+  {
+   "anchor": {
+    "block_id": "999aecb93000",
+    "end": 97,
+    "prefix": "Use ‘master degree’. ",
+    "quote": "When referring to a specific qualification, use ‘Master of [area of study]’.",
+    "start": 21,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "68fd50c51a07",
+       "end": 54,
+       "prefix": "",
+       "quote": "Having a Master of Arts helped her gain the promotion.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A specific master qualification is named in a form other than ‘Master of’ followed by its area of study."
+   },
+   "when": [
+    "Applies when naming a specific qualification, rather than referring generically to a master degree."
+   ],
+   "why": "The grain test keeps qualification naming separate from the generic ‘master degree’ spelling check."
+  },
+  {
+   "anchor": {
+    "block_id": "ed8c8dbae36f",
+    "end": 71,
+    "prefix": "",
+    "quote": "Use ‘program’ rather than ‘programme’, including for computer programs.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "84e6471f1227",
+     "end": 72,
+     "prefix": "",
+     "quote": "Use ‘program’ for the titles of new programs based on government policy.",
+     "start": 0,
+     "suffix": " Use ‘programme’ only when it is"
+    },
+    {
+     "block_id": "84e6471f1227",
+     "end": 152,
+     "prefix": "ams based on government policy. ",
+     "quote": "Use ‘programme’ only when it is part of the formal name of an existing program.",
+     "start": 73,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0b75f6e1eb2b",
+       "end": 102,
+       "prefix": "",
+       "quote": "One of the most challenging aspects of our work is designing programs that can be implemented quickly.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d5e398837be1",
+       "end": 108,
+       "prefix": "",
+       "quote": "The Prescription Shopping Programme lets medical practitioners check their patients’ prescription histories.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Programme’ is used outside the formal name of an existing program, including in a newly created government-policy program title."
+   },
+   "when": [
+    "Applies to ordinary uses, computer programs and titles of new programs based on government policy.",
+    "‘Programme’ is allowed when it is part of the formal name of an existing program."
+   ],
+   "why": "G-2 and G-4: ordinary uses, new titles and the existing-name exception belong to one spelling check."
+  },
+  {
+   "anchor": {
+    "block_id": "0080d8853bc9",
+    "end": 24,
+    "prefix": "",
+    "quote": "Always use ‘regardless’.",
+    "start": 0,
+    "suffix": " It means ‘without regard’, ‘ind"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ca4ab2557628",
+     "end": 135,
+     "prefix": "irrespective’ and ‘regardless’. ",
+     "quote": "It is not accepted as standard Australian English.",
+     "start": 85,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "627cda167003",
+       "end": 81,
+       "prefix": "",
+       "quote": "Our aim is for all staff to have access to this training, regardless of location.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3f6f8ee57513",
+       "end": 81,
+       "prefix": "",
+       "quote": "The following instructions will work regardless of which mobile platform you use.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e980a5d26428",
+       "end": 60,
+       "prefix": "",
+       "quote": "These are interesting times but we must carry on regardless.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "The non-standard word ‘irregardless’ is used."
+   },
+   "when": [],
+   "why": "G-4: the instruction and the statement that ‘irregardless’ is non-standard support one check."
+  },
+  {
+   "anchor": {
+    "block_id": "f4b446638079",
+    "end": 127,
+    "prefix": "orm ‘would have’ as ‘would of’. ",
+    "quote": "Always write ‘would have’ or the contracted form ‘would’ve’.",
+    "start": 67,
+    "suffix": " ‘Would of’ is incorrect."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "427bb77e6c4b",
+     "end": 19,
+     "prefix": "",
+     "quote": "would have/would of",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f4b446638079",
+     "end": 152,
+     "prefix": "the contracted form ‘would’ve’. ",
+     "quote": "‘Would of’ is incorrect.",
+     "start": 128,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "be6a5c9f0892",
+       "end": 83,
+       "prefix": "",
+       "quote": "If I had known we were over budget, I would have changed the scope of the contract.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3c207c1437f7",
+       "end": 39,
+       "prefix": "",
+       "quote": "This would’ve spared us a lot of stress",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cf6acf9efca7",
+       "end": 53,
+       "prefix": "",
+       "quote": "At the very least, we would of avoided the overspend.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Would of’ is used in place of the verb form ‘would have’ or ‘would’ve’."
+   },
+   "when": [
+    "Both ‘would have’ and ‘would’ve’ are acceptable."
+   ],
+   "why": "G-2 and G-4: the full and contracted forms are alternatives within one check; the incorrectness statement is a restatement."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "cache_write_tokens": 5491,
+  "cached_tokens": 3049,
+  "cost_usd": 0.091678,
+  "input_tokens": 8543,
+  "output_tokens": 7764,
+  "reasoning_tokens": 3624
+ }
+}
