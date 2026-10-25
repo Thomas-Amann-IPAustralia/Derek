@@ -1455,3 +1455,34 @@ At the same time, `consensus._dropped_candidates` stopped raising an item for a 
 candidate that a rule both models agreed on restates, usually the sentence directly under
 it. Those go into the sweep's `dropped` with a G-4 reason. A single-model rule does not
 count as cover, because the adjudicator may yet drop it.
+
+**The full batch, and a second reading (owner's decision, 2026-10-25).** The pair drafted
+the manual: Flash 128 of 128 pages and 962 rules for $1.25, Sol 118 of 128 pages and
+1,680 rules for $11.10. Of Sol's cost, $3.57 was 10 pages that ran to the 64,000-token
+output limit and were billed in full for nothing. Two of those were sample pages already
+done. The other 8 were retried once with the cap at 32,000. On the three human pages
+the pair agreed on 21 of 33 human rules, found 26 between them, and inverted no example.
+
+Consensus left 1,283 items. 969 were rules only one model found, and in 626 of those
+Flash had said nothing at all: at low effort it read less of each page (962 rules to
+Sol's 1,680). That is not a second opinion, so the owner approved one, and approved
+letting it decide:
+
+* `tools/draft/verify.py` asks the other family, page by page, about each rule only one
+  model found. It sees the page, the rules both agreed on, and the candidates, and
+  answers `rule` or one of `docs/08`'s reasons it is not one.
+* **A `rule` verdict settles existence.** Two families then agree the rule exists, the
+  same standard as an agreed rule. Any other verdict leaves the item for the
+  adjudicator, with the verdict attached. A same-family verdict counts for nothing, so only
+  Sol's single-model rules are read (by `gemini-3.8-flash` at medium effort), and Flash's
+  go to the adjudicator.
+* **It never touches polarity.** A confirmed rule keeps an example only where the
+  manual's *Correct*/*Incorrect* label agrees with it. Any other example is an item.
+* **No cross-page verdicts.** Prompt v1 offered `duplicate` (G-6) and used it on five of
+  seven commas candidates, guessing at pages it could not see. v2 removed it, because
+  duplicates are found by comparing the finished pages.
+
+On the three human pages, v2 called 10 candidates rules. The adjudicator would keep all
+ten, three of them rules the human marked. Of the three it rejected, two rejections were
+right and one (the 25-word limit, called advice) is arguable, and that one still reaches
+the adjudicator. Cost on those pages: $0.15, live.

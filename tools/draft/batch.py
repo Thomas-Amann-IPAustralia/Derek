@@ -115,11 +115,12 @@ def _openai_upload(jsonl: bytes) -> str:
     raise DraftError(f"uploading the batch file failed: {last}")
 
 
-def submit_openai(model: str, effort: str, reqs: list[dict], system: str, schema: dict) -> str:
+def submit_openai(model: str, effort: str, reqs: list[dict], system: str, schema: dict,
+                  max_tokens: int) -> str:
     lines = []
     for r in reqs:
         body = openai_body(model, system, r["_user"], schema, effort=effort,
-                           max_tokens=PROVIDER_MAX_TOKENS["openai"])
+                           max_tokens=max_tokens)
         lines.append(json.dumps({"custom_id": r["id"], "method": "POST",
                                  "url": "/v1/responses", "body": body}, ensure_ascii=False))
     file_id = _openai_upload(("\n".join(lines) + "\n").encode("utf-8"))
@@ -131,10 +132,11 @@ def submit_openai(model: str, effort: str, reqs: list[dict], system: str, schema
     return out["id"]
 
 
-def submit_gemini(model: str, effort: str, reqs: list[dict], system: str, schema: dict) -> str:
+def submit_gemini(model: str, effort: str, reqs: list[dict], system: str, schema: dict,
+                  max_tokens: int) -> str:
     requests = [{
         "request": gemini_body(system, r["_user"], schema, effort=effort,
-                               max_tokens=PROVIDER_MAX_TOKENS["gemini"], stream=False),
+                               max_tokens=max_tokens, stream=False),
         "metadata": {"key": r["id"]},
     } for r in reqs]
     out = _post(f"{GEMINI}/models/{model}:batchGenerateContent", {
@@ -177,6 +179,10 @@ def submit(args) -> int:
                      "input_sha256": input_sha256(page, model, effort),
                      "_user": user_message(page)})
     send = submit_openai if provider == "openai" else submit_gemini
+    # A lower cap for a retry: a page that ran to the limit spent it all on
+    # reasoning and was billed for every token. A real draft of an ordinary
+    # page needs well under half the default.
+    max_tokens = args.max_tokens or PROVIDER_MAX_TOKENS[provider]
     # Chunks, because one file of every page is several megabytes and an upload
     # that size was refused with a 503. Each chunk is its own batch and its own
     # manifest, so a chunk that fails to submit costs nothing and leaves its
@@ -184,7 +190,7 @@ def submit(args) -> int:
     for start in range(0, len(reqs), args.chunk):
         chunk = reqs[start:start + args.chunk]
         try:
-            batch_id = send(model, effort, chunk, system, schema)
+            batch_id = send(model, effort, chunk, system, schema, max_tokens)
         except DraftError as exc:
             print(f"  chunk of {len(chunk)} not submitted: {exc}", file=sys.stderr)
             return 1
@@ -338,6 +344,8 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--limit", type=int, default=0)
     s.add_argument("--dry-run", action="store_true")
     s.add_argument("--chunk", type=int, default=30, help="pages per batch")
+    s.add_argument("--max-tokens", type=int, default=0,
+                   help="output cap per page (default: the provider's, as draft_spans uses)")
     sub.add_parser("collect")
     sub.add_parser("status")
     args = ap.parse_args(argv)

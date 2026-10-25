@@ -1,0 +1,35 @@
+{
+ "effort": "medium",
+ "input_sha256": "c20ff7a6737dd4657f18f4a208219ef3a4ee629883c730f10980ddba5954dbd9",
+ "model": "gemini-3.8-flash",
+ "page_path": "referencing-and-attribution/legal-material/treaties.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "cached_input_tokens": 0,
+  "input_tokens": 3600,
+  "output_tokens": 176,
+  "reasoning_tokens": 3041
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "Subset of agreed rule A1, which already requires roman type and title case (G-4).",
+   "restates": "A1",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C2",
+   "note": "Distinct check flagging subsequent mentions that repeat the full title instead of using the short title.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C3",
+   "note": "Distinct negative constraint flagging punctuation placed between detailed citation elements.",
+   "restates": "",
+   "verdict": "rule"
+  }
+ ],
+ "version": "v2"
+}

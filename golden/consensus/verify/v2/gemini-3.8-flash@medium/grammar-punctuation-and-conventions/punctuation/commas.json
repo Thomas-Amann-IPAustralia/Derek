@@ -1,0 +1,59 @@
+{
+ "effort": "medium",
+ "input_sha256": "9dd361ac48297114a1b71ea2ccb1bd4ecc36cdce6b7393cb64330e515081c80b",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/punctuation/commas.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "cached_input_tokens": 0,
+  "input_tokens": 9028,
+  "output_tokens": 409,
+  "reasoning_tokens": 6426
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "One check: flags missing colons after 'for example' when introducing bullet lists.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C2",
+   "note": "G-5: advice to the writer on sentence length when applying the conjunction rule.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C3",
+   "note": "One check: flags commas terminating bullet list items, distinct from in-line sentence lists in A11.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "G-4: restates the restriction against using a comma before the final list item in A11.",
+   "restates": "A11",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C5",
+   "note": "One check: prescribes the ordering of adjectives in strings, distinct from comma rules in A12.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C6",
+   "note": "One check: flags a comma rather than a full stop after an attribution splitting a quotation.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C7",
+   "note": "One check: flags sentence-final quotations that fail to retain their original punctuation.",
+   "restates": "",
+   "verdict": "rule"
+  }
+ ],
+ "version": "v2"
+}

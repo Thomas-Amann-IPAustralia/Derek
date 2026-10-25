@@ -91,6 +91,8 @@ python tools/draft/batch.py submit --model gemini-3.8-flash --effort low --all
 python tools/draft/batch.py collect            # poll open batches; write what finished
 python tools/draft/batch.py status
 python tools/draft/consensus.py compare PAGE   # every cached drafter vs a human page
+python tools/draft/verify.py submit --all      # second reading of single-model rules (batched)
+python tools/draft/verify.py collect           # a `rule` verdict from the other family settles it
 python tools/draft/consensus.py status --all   # agreed, single-model, undecided per page
 python tools/draft/consensus.py queue --all    # the items -> golden/consensus/queue.jsonl
 python tools/draft/consensus.py export --all   # decided pages -> golden/inbox/, then apply_spans.py
@@ -174,6 +176,7 @@ Each layer must be reproducible from the one below it. Full detail:
 | `tools/draft/providers.py` | OpenAI and Gemini transports (stdlib), the pinned `PAIR`, prices for reporting |
 | `tools/draft/batch.py` | The same requests through the batch APIs; manifests in `golden/drafts/batches/` |
 | `tools/draft/consensus.py` | Two drafts → agreed rules + adjudication items → annotator ops (ADR-027) |
+| `tools/draft/verify.py` | The other family's second reading of single-model rules; prompt hash-pinned |
 | `golden/consensus/` | The item queue and the adjudicator's decisions, each with a reason |
 | `golden/drafts/` | **Cached model output.** Proposals, never an extraction input |
 | `golden/blind.json` | Pages whose drafts are never shown — the only pages a draft is measured on |

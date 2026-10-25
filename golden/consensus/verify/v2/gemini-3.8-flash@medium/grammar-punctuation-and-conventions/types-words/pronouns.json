@@ -1,0 +1,35 @@
+{
+ "effort": "medium",
+ "input_sha256": "8cecd8748d46c33f4c9e67ab3c7c36e0ae779affa86fdf7433ac0ce0aa99a712",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/types-words/pronouns.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "cached_input_tokens": 0,
+  "input_tokens": 4240,
+  "output_tokens": 193,
+  "reasoning_tokens": 1410
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "Direct instruction on text to use gender-neutral singular pronouns ('they', 'them', 'their').",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C2",
+   "note": "Direct instruction on text to use 'that' for essential relative clauses (and 'which' for non-essential).",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C3",
+   "note": "G-4: Restates the requirement in C2 to set off non-essential relative clauses with punctuation.",
+   "restates": "C2",
+   "verdict": "restatement"
+  }
+ ],
+ "version": "v2"
+}

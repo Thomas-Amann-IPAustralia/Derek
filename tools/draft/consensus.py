@@ -295,10 +295,62 @@ def page_plan(rel: str, drafts: dict[str, dict]) -> dict:
                 "single": True,
             })
 
+    items = _apply_second_reading(page, rel, rules, items)
     dropped_items, restated = _dropped_candidates(page, rel, rules, drafts)
     items.extend(dropped_items)
     return {"page_path": rel, "page_sha256": page.sha256, "rules": rules, "items": items,
             "restated": restated}
+
+
+def _apply_second_reading(page, rel: str, rules: list[dict], items: list[dict]) -> list[dict]:
+    """Settle single-model rules a second family has read (verify.py; ADR-027).
+
+    A rule the second reading calls a rule is taken: two families now agree it
+    exists. Its examples are still one model's polarity, so each is kept only
+    where the manual's own label agrees, and otherwise becomes an example item,
+    as for an agreed rule (polarity is never settled by one model). Any other
+    verdict leaves the rule's item in place, with the verdict on it.
+    """
+    import verify
+
+    verdicts = {}
+    for finder in PAIR:
+        verdicts.update(verify.load_verdicts(rel, {"rules": rules}, finder))
+    if not verdicts:
+        return items
+    by_rid = {r["rid"]: r for r in rules}
+    out = []
+    for it in items:
+        v = verdicts.get(it.get("rid")) if it["kind"] == "single" else None
+        if v is None:
+            out.append(it)
+            continue
+        if v["verdict"] != "rule":
+            out.append(it | {"second_reading": v})
+            continue
+        rule = by_rid[it["rid"]]
+        rule["verified"] = {"by": v["by"], "note": v.get("note", "")}
+        kept, ex_items = [], []
+        for ex in rule["examples"]:
+            label = {_label_polarity(page, p["block_id"]) for p in ex["parts"]} - {""}
+            if label == {ex["kind"]}:
+                kept.append(ex | {"source": ex["source"] + "+label"})
+                continue
+            keys = [_key(p) for p in ex["parts"]]
+            iid = item_id(rel, "example", it["rid"], *keys)
+            ex_items.append({
+                "item_id": iid, "page_path": rel, "kind": "example", "rid": it["rid"],
+                "statement": rule["anchor"]["quote"],
+                "example": [p["quote"] for p in ex["parts"]],
+                "proposed": ex["kind"], "proposed_by": rule["found_by"][0],
+                "votes": [], "label": sorted(label),
+                "ask": "A rule two families agree exists; one model attached this "
+                       "example. Compliant, violating, or drop?",
+            })
+            kept.append(ex | {"item_id": iid})
+        rule["examples"] = kept
+        out.extend(ex_items)
+    return out
 
 
 def _heading_path(page, block_id: str) -> tuple[str, ...]:
@@ -410,7 +462,8 @@ def _dropped_candidates(page, rel: str, rules: list[dict],
                if r["anchor"]["start"] == 0 and r.get("seed_uid")}
     seeds_by_uid = {uid: bid for bid, uid in page.seeds.items()}
     by_id = {b.id: b for b in page.blocks}
-    agreed = [r for r in rules if not r.get("single")]
+    # A rule a second family confirmed is as kept as an agreed one.
+    agreed = [r for r in rules if not r.get("single") or r.get("verified")]
     items, restated = [], []
     for rule in sorted(load_ledger(LEDGER).values(), key=lambda r: r.uid):
         if rule.source.page_path != rel or rule.review.status in ("rejected", "deferred"):
@@ -583,7 +636,10 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
         tags = dict(rule["tags"])
         vc, spec, when = rule["violation_condition"], rule["specification"], rule["when"]
         note = "two-model consensus: " + " + ".join(PAIR)
-        if rule.get("single"):
+        if rule.get("verified"):
+            note = (f"found by {rule['found_by'][0]}; confirmed on a second reading by "
+                    f"{rule['verified']['by']}: {rule['verified']['note']}")
+        elif rule.get("single"):
             d = single_dec.get(rule["rid"], {}).get("decision", {})
             if not d.get("keep"):
                 continue
@@ -594,7 +650,8 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
             by = BY_ADJUDICATOR
             note += f"; tags adjudicated: {tag_dec[rule['rid']].get('reason', '')}"
         else:
-            d = single_dec.get(rule["rid"], {}).get("decision", {}) if rule.get("single") else {}
+            d = single_dec.get(rule["rid"], {}).get("decision", {}) \
+                if rule.get("single") and not rule.get("verified") else {}
         tags.update(d.get("tags", {}))
         vc = d.get("violation_condition", vc)
         spec = d.get("specification", spec)
