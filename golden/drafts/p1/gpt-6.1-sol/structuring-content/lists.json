@@ -1,0 +1,5167 @@
+{
+ "effort": "high",
+ "input_sha256": "550849455b711774c0e20fd9a14225625a7f273202c76636f66998ba0e58d3fd",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "de58c941cd72",
+    "end": 119,
+    "prefix": "d understand a series of items. ",
+    "quote": "Structure and style lists with the user in mind.",
+    "start": 71,
+    "suffix": " Set up grammatical structure fo"
+   },
+   "note": "G-5: a general instruction about the writer's approach, without a separately testable text property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "de58c941cd72",
+    "end": 179,
+    "prefix": "le lists with the user in mind. ",
+    "quote": "Set up grammatical structure for list items with a lead-in.",
+    "start": 120,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the more explicit lead-in-or-heading requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1a2ca30235b8",
+    "end": 37,
+    "prefix": "",
+    "quote": "Structure items in a series as a list",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the uses and structure of lists and the more specific constraints below; it is not a blanket ban on series in prose.",
+   "reason": "section",
+   "seed_uid": "16579ab3620b83f7"
+  },
+  {
+   "anchor": {
+    "block_id": "08d80003a40d",
+    "end": 13,
+    "prefix": "",
+    "quote": "Use lists to:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: introduces purposes for using lists, rather than a requirement to convert every instance of related information into a list.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "421b3d16a140",
+    "end": 98,
+    "prefix": "",
+    "quote": "Fundamental requirement: use lists to make it easier for users to skim content and navigate pages.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "States an accessibility purpose but supplies no additional text-level trigger beyond the specific list rules.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c5dd53243dc8",
+    "end": 50,
+    "prefix": "",
+    "quote": "Move long lists to a separate page or an appendix.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: retained as the long-list remedy under ‘Make short lists’, not a second finding on the same long list.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "122cad9fbcad",
+    "end": 58,
+    "prefix": "",
+    "quote": "Write items in a list so they follow a consistent pattern.",
+    "start": 0,
+    "suffix": " The pattern is made up by the n"
+   },
+   "note": "G-4: repeats the consistent-pattern heading; length and grammatical aspects are accounted for in the inventory.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7e5c77f19586",
+    "end": 65,
+    "prefix": "",
+    "quote": "Write all list items so they have the same grammatical structure.",
+    "start": 0,
+    "suffix": " This is called ‘parallel struct"
+   },
+   "note": "G-4: repeats the parallel-structure rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff245b20946f",
+    "end": 43,
+    "prefix": "",
+    "quote": "To make a parallel structure, use the same:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: introduces cases of the parallel-structure check, not another rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0f5f74d11905",
+    "end": 55,
+    "prefix": "",
+    "quote": "word type to start each item (such as a noun or a verb)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A grammatical case covered by the parallel-structure rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "df3af07dc3d1",
+    "end": 45,
+    "prefix": "",
+    "quote": "tense for each item (past, present or future)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A grammatical case covered by the parallel-structure rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0f7ee19a3617",
+    "end": 59,
+    "prefix": "",
+    "quote": "sentence type (such as a question, direction or statement).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A grammatical case covered by the parallel-structure rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a314af294508",
+    "end": 34,
+    "prefix": "",
+    "quote": "Punctuate lists according to style",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific punctuation rules.",
+   "reason": "section",
+   "seed_uid": "76601151cff820e4"
+  },
+  {
+   "anchor": {
+    "block_id": "e9be852031ac",
+    "end": 44,
+    "prefix": "",
+    "quote": "Punctuate lead-ins and headings consistently",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups phrase lead-in, sentence lead-in and heading-ending checks.",
+   "reason": "section",
+   "seed_uid": "b1c6404397f07ff3"
+  },
+  {
+   "anchor": {
+    "block_id": "3bbb317ce1e8",
+    "end": 52,
+    "prefix": "",
+    "quote": "Sentence lead-ins can end in a colon or a full stop.",
+    "start": 0,
+    "suffix": " Choose one punctuation mark and"
+   },
+   "note": "G-3: the permitted alternatives are conditions on the sentence-lead-in consistency rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3bbb317ce1e8",
+    "end": 190,
+    "prefix": "ence lead-ins in your document. ",
+    "quote": "If in doubt, choose a colon; it is used more commonly.",
+    "start": 136,
+    "suffix": ""
+   },
+   "note": "G-5: the writer's uncertainty is not an observable property of the text; a consistently used full stop remains allowed.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "baa31f1c975f",
+    "end": 37,
+    "prefix": "",
+    "quote": "Use minimal punctuation for all lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups distinct prohibitions and lead-in requirements rather than defining an additional punctuation threshold.",
+   "reason": "section",
+   "seed_uid": "73cbde022cbd1d06"
+  },
+  {
+   "anchor": {
+    "block_id": "02f87f2ef0c9",
+    "end": 40,
+    "prefix": "",
+    "quote": "In a bullet or numbered list, don’t use:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces two distinct checks: terminal commas or semicolons, and appended conjunctions.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "76bb0e67ec98",
+    "end": 138,
+    "prefix": "",
+    "quote": "Only include ‘and’ or ‘or’ after the second-last list item if it is critical to meaning – for example, you are writing in a legal context.",
+    "start": 0,
+    "suffix": " Make sure the lead-in is a clea"
+   },
+   "note": "G-3: limits the exception to the appended-conjunction prohibition.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "76bb0e67ec98",
+    "end": 226,
+    "prefix": "are writing in a legal context. ",
+    "quote": "Make sure the lead-in is a clear guide for how this kind of list should be interpreted.",
+    "start": 139,
+    "suffix": ""
+   },
+   "note": "G-2: included in the rule requiring lead-ins to explain list interpretation and selection variables.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "58835d6395f7",
+    "end": 79,
+    "prefix": "",
+    "quote": "Lead-ins for incomplete lists can use ‘for example’, ‘including’ or ‘includes’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: an allowed alternative to ending an incomplete list with ‘etc.’, not mandatory wording.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e3aaf123e642",
+    "end": 77,
+    "prefix": "",
+    "quote": "Finish each item in a sentence list with a full stop, including the last one.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the sentence-list case of the consolidated full-stop placement rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2adcf653e15e",
+    "end": 64,
+    "prefix": "",
+    "quote": "Finish fragment lists with a full stop only after the last item.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the fragment-list case of the consolidated full-stop placement rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dc056bed75cc",
+    "end": 87,
+    "prefix": "e list is a third type of list. ",
+    "quote": "Stand-alone lists don’t end in a full stop.",
+    "start": 44,
+    "suffix": ""
+   },
+   "note": "G-2: the stand-alone-list case of the consolidated full-stop placement rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f2a01bc7d1ae",
+    "end": 21,
+    "prefix": "",
+    "quote": "Choose a type of list",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the three list types and their specific requirements.",
+   "reason": "section",
+   "seed_uid": "26c44cbaeec9b2a8"
+  },
+  {
+   "anchor": {
+    "block_id": "60109277de96",
+    "end": 53,
+    "prefix": "",
+    "quote": "Use sentence lists for a series of complete sentences",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the sentence-list type and its independent structure, case, punctuation and alignment checks. The body does not require every related paragraph to become a list.",
+   "reason": "section",
+   "seed_uid": "b861d29c24576198"
+  },
+  {
+   "anchor": {
+    "block_id": "4c012804d51c",
+    "end": 110,
+    "prefix": "",
+    "quote": "If you have a paragraph with a series of related sentences, you can consider breaking it into a sentence list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: suggests considering a presentation option; leaving such a paragraph intact is not stated to be wrong.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c17e4b3d8205",
+    "end": 20,
+    "prefix": "",
+    "quote": "The list can have a:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: introduces the allowed introductory forms for a sentence list.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "32f7d183f756",
+    "end": 38,
+    "prefix": "",
+    "quote": "heading (without a colon or full stop)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Allowed introductory form; its punctuation condition is covered by the heading-ending rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "579841c04152",
+    "end": 49,
+    "prefix": "",
+    "quote": "sentence lead-in (ending in a colon or full stop)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Allowed introductory form; its punctuation alternatives are covered by the sentence-lead-in rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c8eed720e8bf",
+    "end": 35,
+    "prefix": "",
+    "quote": "phrase lead-in (ending in a colon).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Allowed introductory form; its punctuation condition is covered by the colon rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "39734be0f13f",
+    "end": 71,
+    "prefix": " item with a capital letter and ",
+    "quote": "end it with a full stop.",
+    "start": 47,
+    "suffix": ""
+   },
+   "note": "G-4: this part of the item repeats the sentence-list full-stop requirement; the initial-capital part is separately inventoried.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "82e4f1693ae9",
+    "end": 134,
+    "prefix": "n each bullet or numbered item. ",
+    "quote": "If you include more than one sentence per list item, consider whether:",
+    "start": 64,
+    "suffix": ""
+   },
+   "note": "G-5: the act of considering is not a text check; the stated considerations qualify the multiple-sentence discouragement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d0fd688cc68a",
+    "end": 43,
+    "prefix": "",
+    "quote": "all list items conform to a similar pattern",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A consideration retained with the multiple-sentence rule, not another pattern finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7a09375ebd42",
+    "end": 39,
+    "prefix": "",
+    "quote": "the list builds rhythm for readability.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A qualitative consideration for the multiple-sentence exception, not an independently specified test.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "309c015afc18",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use fragment lists for a series of incomplete sentences",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the fragment-list type and its more specific requirements.",
+   "reason": "section",
+   "seed_uid": "f4ea1bdc9f6755ab"
+  },
+  {
+   "anchor": {
+    "block_id": "a1b7063d3ef9",
+    "end": 97,
+    "prefix": "",
+    "quote": "If you list more than 3 items in a sentence, consider breaking the sentence into a fragment list.",
+    "start": 0,
+    "suffix": " This will aid readability."
+   },
+   "note": "G-5: requires consideration, not conversion; it does not establish a ban on sentences listing more than 3 items.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5e078ece8f9a",
+    "end": 46,
+    "prefix": "",
+    "quote": "lead-in phrase or sentence followed by a colon",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the fragment-list condition of the lead-in colon rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e3c4708724af",
+    "end": 43,
+    "prefix": "",
+    "quote": "list of fragments, each marked by a bullet.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the usual fragment-list form, not an exclusive bullet-only instruction; the page also presents a correct numbered fragment list.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "eb52ede4538d",
+    "end": 72,
+    "prefix": "",
+    "quote": "Use fragment list items when the lead-in states the grammatical subject.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the complementary subject-sharing case of the sentence-versus-fragment treatment rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0372c1fbd5f0",
+    "end": 80,
+    "prefix": "",
+    "quote": "Use lower case for the first letter of each fragment, unless it’s a proper noun.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the fragment-list case and exception of the initial-case check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1c34dff9ea75",
+    "end": 43,
+    "prefix": "",
+    "quote": "Add a full stop to the last list item only.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats fragment-list full-stop placement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "392f5053efa2",
+    "end": 58,
+    "prefix": "",
+    "quote": "Use a grammatically parallel structure for each list item.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the parallel-structure rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3bd92a9d682d",
+    "end": 74,
+    "prefix": "",
+    "quote": "If list items run-on from a phrase lead-in, the list should be very short.",
+    "start": 0,
+    "suffix": " The full sentence should be 25 "
+   },
+   "note": "G-4: the next sentence supplies the actionable 25-word wording for this case.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b240bb0caa7b",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use stand-alone lists for items under a heading",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the stand-alone type and its specific structure and formatting rules.",
+   "reason": "section",
+   "seed_uid": "20e37daacf498ed8"
+  },
+  {
+   "anchor": {
+    "block_id": "de3520539070",
+    "end": 82,
+    "prefix": "",
+    "quote": "If you are not breaking up a paragraph or a sentence, consider a stand-alone list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: suggests a presentation choice without making other presentations violations.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "df88a0567045",
+    "end": 49,
+    "prefix": "",
+    "quote": "Stand-alone lists have a heading without a colon.",
+    "start": 0,
+    "suffix": " Brochures and technical documen"
+   },
+   "note": "The heading requirement and absence of terminal punctuation are already covered by their respective checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "54be70c0d903",
+    "end": 56,
+    "prefix": "",
+    "quote": "Items in stand-alone lists can be nouns or noun phrases.",
+    "start": 0,
+    "suffix": " They can also be sentence fragm"
+   },
+   "note": "G-3: an allowed form under the stand-alone full-sentence prohibition.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "54be70c0d903",
+    "end": 93,
+    "prefix": "s can be nouns or noun phrases. ",
+    "quote": "They can also be sentence fragments.",
+    "start": 57,
+    "suffix": " Items cannot be full sentences."
+   },
+   "note": "G-3: another allowed form under the same prohibition.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d58d35ea0332",
+    "end": 29,
+    "prefix": "",
+    "quote": "Use a heading, not a lead-in.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the stand-alone case of the list-introduction requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e4e64379607f",
+    "end": 43,
+    "prefix": "",
+    "quote": "Start each list item with a capital letter.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the stand-alone case of the initial-case check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "37c0b3e2712e",
+    "end": 78,
+    "prefix": "",
+    "quote": "Don’t add full stops to the end of any of the list items (even the last item).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the stand-alone case of the full-stop placement check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5a8be359fb78",
+    "end": 58,
+    "prefix": "",
+    "quote": "Indent each list item if it helps people scan the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: retained as the stand-alone condition in the indentation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "69941529c516",
+    "end": 39,
+    "prefix": "",
+    "quote": "Use consistent formatting for all lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups indentation and cross-list consistency requirements; it does not require different list types to share one format.",
+   "reason": "section",
+   "seed_uid": "77f211819af80537"
+  },
+  {
+   "anchor": {
+    "block_id": "379c2b6e184c",
+    "end": 68,
+    "prefix": "",
+    "quote": "Use the right punctuation and capital letters for each type of list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: refers back to the already specified punctuation and initial-case checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9a175e1f7580",
+    "end": 66,
+    "prefix": "",
+    "quote": "Follow your organisation’s templates to format lists consistently.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to an external source of formatting rather than specifying another property on this page.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "23f904ef7478",
+    "end": 45,
+    "prefix": "",
+    "quote": "Indent most types of lists after the lead-in.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the indentation heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e2be16a7b85d",
+    "end": 60,
+    "prefix": "",
+    "quote": "Indent stand-alone lists if it helps the user scan the list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: repeats the stand-alone condition of the indentation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d97b7d2272c7",
+    "end": 45,
+    "prefix": "",
+    "quote": "Aim to write lists that conform to their type",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body sentence about lists of the same type following the same format is the more actionable wording.",
+   "reason": "restatement",
+   "seed_uid": "2131d1fda1124ac4"
+  },
+  {
+   "anchor": {
+    "block_id": "76f9fa7010ef",
+    "end": 207,
+    "prefix": "ns this is not always possible. ",
+    "quote": "For example, the logical flow of text can mean that some sentence lists work best with a sentence lead-in and others with a fragment lead-in.",
+    "start": 66,
+    "suffix": ""
+   },
+   "note": "G-3: a content-flow exception to cross-list uniformity, not an additional requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "53fbe68ed3df",
+    "end": 28,
+    "prefix": "",
+    "quote": "Do your best to standardise.",
+    "start": 0,
+    "suffix": " But if you can’t, do these thin"
+   },
+   "note": "G-5: a writer-directed exhortation; the surrounding concrete consistency checks are inventoried.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "53fbe68ed3df",
+    "end": 79,
+    "prefix": "Do your best to standardise. ",
+    "quote": "But if you can’t, do these things for consistency:",
+    "start": 29,
+    "suffix": ""
+   },
+   "note": "Introduces the following specific checks rather than adding an independent one.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c97bb9808cea",
+    "end": 105,
+    "prefix": "",
+    "quote": "For sentence lists, choose one type of punctuation to end any sentence lead-ins – a colon or a full stop.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats document-wide sentence-lead-in punctuation consistency.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "04338cdb1ce6",
+    "end": 113,
+    "prefix": "",
+    "quote": "For stand-alone lists, follow the same format for all list items – with indent/bullets or without indent/bullets.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: a specific case of the cross-list formatting-consistency check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c04b534a3215",
+    "end": 51,
+    "prefix": "",
+    "quote": "Don’t mix different types of lists in the one list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: included in within-list grammatical and item-type parallelism.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "198f5ee81f2b",
+    "end": 46,
+    "prefix": "",
+    "quote": "Follow all other rules for lists on this page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a general cross-reference, not an additional text property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c6b67786f80c",
+    "end": 61,
+    "prefix": "",
+    "quote": "Then check that your lists display properly on all platforms.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns cross-platform rendering and testing, not another rule about the words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "75a3dd52b654",
+    "end": 90,
+    "prefix": "",
+    "quote": "Use a numbered (ordered) list when the order is important, such as a list of instructions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the order-critical numbered-list heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4a1f6a1952a8",
+    "end": 140,
+    "prefix": " numbered list in the document. ",
+    "quote": "You must choose whether to continue or reset the numbering across the lists.",
+    "start": 64,
+    "suffix": ""
+   },
+   "note": "G-5: requires a writer's choice but allows either resulting numbering approach; it does not specify a distinct invalid textual outcome.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0d5de557592f",
+    "end": 77,
+    "prefix": "",
+    "quote": "Break up text into a numbered list instead of using an in-line numbered list.",
+    "start": 0,
+    "suffix": " This will aid readability."
+   },
+   "note": "G-4: the remedy for the in-line-numbered-list prohibition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "436b5c48b22a",
+    "end": 87,
+    "prefix": "ent, don’t use ordinal numbers. ",
+    "quote": "Instead, you can either:",
+    "start": 63,
+    "suffix": ""
+   },
+   "note": "G-3: introduces allowed alternatives to ordinal sequencing.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f2dc7e9b7690",
+    "end": 19,
+    "prefix": "",
+    "quote": "use a numbered list",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: one permitted alternative to ordinal sequencing.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "82ee2e855e37",
+    "end": 58,
+    "prefix": "",
+    "quote": "rephrase the sentences to link them in the same paragraph.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: another permitted alternative to ordinal sequencing.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a8ac1831218e",
+    "end": 80,
+    "prefix": "",
+    "quote": "Use an unordered list if the order is not critical to understanding the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the complementary non-critical-order case of the numbered-versus-unordered choice.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b7003ac523ae",
+    "end": 68,
+    "prefix": "",
+    "quote": "List items in the order that will make sense to the user reading it.",
+    "start": 0,
+    "suffix": " It’s common to write lists in a"
+   },
+   "note": "G-4: repeats the helpful-sequence heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "31f1b62eacea",
+    "end": 87,
+    "prefix": "",
+    "quote": "Some types of content need multilevel lists, but they can be hard for people to follow.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: acknowledges the exception to avoiding multilevel lists.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff9483263ba2",
+    "end": 36,
+    "prefix": "",
+    "quote": "If you have to use multilevel lists:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the depth and marker requirements for the permitted case.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a58ea9bfbae9",
+    "end": 70,
+    "prefix": "",
+    "quote": "Use the same symbol, number or letter for the same level in each list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the multilevel-marker case of cross-list formatting consistency.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/lists.md",
+ "page_sha256": "bce3182f597f81310ca401829ab538f3c45d1257f730b632c48a73b585403ce0",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "de58c941cd72",
+    "note": "G-5: a general instruction about the writer's approach, without a separately testable text property.",
+    "quote": "Structure and style lists with the user in mind.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "de58c941cd72",
+    "note": "G-4: absorbed into the more explicit lead-in-or-heading requirement.",
+    "quote": "Set up grammatical structure for list items with a lead-in.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1a2ca30235b8",
+    "note": "G-1: introduces the uses and structure of lists and the more specific constraints below; it is not a blanket ban on series in prose.",
+    "quote": "Structure items in a series as a list",
+    "reason": "section"
+   },
+   {
+    "block_id": "08d80003a40d",
+    "note": "G-5: introduces purposes for using lists, rather than a requirement to convert every instance of related information into a list.",
+    "quote": "Use lists to:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "421b3d16a140",
+    "note": "States an accessibility purpose but supplies no additional text-level trigger beyond the specific list rules.",
+    "quote": "Fundamental requirement: use lists to make it easier for users to skim content and navigate pages.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c5dd53243dc8",
+    "note": "G-2: retained as the long-list remedy under ‘Make short lists’, not a second finding on the same long list.",
+    "quote": "Move long lists to a separate page or an appendix.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "122cad9fbcad",
+    "note": "G-4: repeats the consistent-pattern heading; length and grammatical aspects are accounted for in the inventory.",
+    "quote": "Write items in a list so they follow a consistent pattern.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7e5c77f19586",
+    "note": "G-4: repeats the parallel-structure rule.",
+    "quote": "Write all list items so they have the same grammatical structure.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ff245b20946f",
+    "note": "G-2: introduces cases of the parallel-structure check, not another rule.",
+    "quote": "To make a parallel structure, use the same:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0f5f74d11905",
+    "note": "A grammatical case covered by the parallel-structure rule.",
+    "quote": "word type to start each item (such as a noun or a verb)",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "df3af07dc3d1",
+    "note": "A grammatical case covered by the parallel-structure rule.",
+    "quote": "tense for each item (past, present or future)",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0f7ee19a3617",
+    "note": "A grammatical case covered by the parallel-structure rule.",
+    "quote": "sentence type (such as a question, direction or statement).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a314af294508",
+    "note": "G-1: groups the specific punctuation rules.",
+    "quote": "Punctuate lists according to style",
+    "reason": "section"
+   },
+   {
+    "block_id": "e9be852031ac",
+    "note": "G-1: groups phrase lead-in, sentence lead-in and heading-ending checks.",
+    "quote": "Punctuate lead-ins and headings consistently",
+    "reason": "section"
+   },
+   {
+    "block_id": "3bbb317ce1e8",
+    "note": "G-3: the permitted alternatives are conditions on the sentence-lead-in consistency rule.",
+    "quote": "Sentence lead-ins can end in a colon or a full stop.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "3bbb317ce1e8",
+    "note": "G-5: the writer's uncertainty is not an observable property of the text; a consistently used full stop remains allowed.",
+    "quote": "If in doubt, choose a colon; it is used more commonly.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "baa31f1c975f",
+    "note": "G-1: groups distinct prohibitions and lead-in requirements rather than defining an additional punctuation threshold.",
+    "quote": "Use minimal punctuation for all lists",
+    "reason": "section"
+   },
+   {
+    "block_id": "02f87f2ef0c9",
+    "note": "Introduces two distinct checks: terminal commas or semicolons, and appended conjunctions.",
+    "quote": "In a bullet or numbered list, don’t use:",
+    "reason": "section"
+   },
+   {
+    "block_id": "76bb0e67ec98",
+    "note": "G-3: limits the exception to the appended-conjunction prohibition.",
+    "quote": "Only include ‘and’ or ‘or’ after the second-last list item if it is critical to meaning – for example, you are writing in a legal context.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "76bb0e67ec98",
+    "note": "G-2: included in the rule requiring lead-ins to explain list interpretation and selection variables.",
+    "quote": "Make sure the lead-in is a clear guide for how this kind of list should be interpreted.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "58835d6395f7",
+    "note": "G-3: an allowed alternative to ending an incomplete list with ‘etc.’, not mandatory wording.",
+    "quote": "Lead-ins for incomplete lists can use ‘for example’, ‘including’ or ‘includes’.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "e3aaf123e642",
+    "note": "G-2: the sentence-list case of the consolidated full-stop placement rule.",
+    "quote": "Finish each item in a sentence list with a full stop, including the last one.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2adcf653e15e",
+    "note": "G-2: the fragment-list case of the consolidated full-stop placement rule.",
+    "quote": "Finish fragment lists with a full stop only after the last item.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "dc056bed75cc",
+    "note": "G-2: the stand-alone-list case of the consolidated full-stop placement rule.",
+    "quote": "Stand-alone lists don’t end in a full stop.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f2a01bc7d1ae",
+    "note": "G-1: groups the three list types and their specific requirements.",
+    "quote": "Choose a type of list",
+    "reason": "section"
+   },
+   {
+    "block_id": "60109277de96",
+    "note": "G-1: introduces the sentence-list type and its independent structure, case, punctuation and alignment checks. The body does not require every related paragraph to become a list.",
+    "quote": "Use sentence lists for a series of complete sentences",
+    "reason": "section"
+   },
+   {
+    "block_id": "4c012804d51c",
+    "note": "G-5: suggests considering a presentation option; leaving such a paragraph intact is not stated to be wrong.",
+    "quote": "If you have a paragraph with a series of related sentences, you can consider breaking it into a sentence list.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c17e4b3d8205",
+    "note": "G-3: introduces the allowed introductory forms for a sentence list.",
+    "quote": "The list can have a:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "32f7d183f756",
+    "note": "Allowed introductory form; its punctuation condition is covered by the heading-ending rule.",
+    "quote": "heading (without a colon or full stop)",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "579841c04152",
+    "note": "Allowed introductory form; its punctuation alternatives are covered by the sentence-lead-in rule.",
+    "quote": "sentence lead-in (ending in a colon or full stop)",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c8eed720e8bf",
+    "note": "Allowed introductory form; its punctuation condition is covered by the colon rule.",
+    "quote": "phrase lead-in (ending in a colon).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "39734be0f13f",
+    "note": "G-4: this part of the item repeats the sentence-list full-stop requirement; the initial-capital part is separately inventoried.",
+    "quote": "end it with a full stop.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "82e4f1693ae9",
+    "note": "G-5: the act of considering is not a text check; the stated considerations qualify the multiple-sentence discouragement.",
+    "quote": "If you include more than one sentence per list item, consider whether:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d0fd688cc68a",
+    "note": "A consideration retained with the multiple-sentence rule, not another pattern finding.",
+    "quote": "all list items conform to a similar pattern",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7a09375ebd42",
+    "note": "A qualitative consideration for the multiple-sentence exception, not an independently specified test.",
+    "quote": "the list builds rhythm for readability.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "309c015afc18",
+    "note": "G-1: introduces the fragment-list type and its more specific requirements.",
+    "quote": "Use fragment lists for a series of incomplete sentences",
+    "reason": "section"
+   },
+   {
+    "block_id": "a1b7063d3ef9",
+    "note": "G-5: requires consideration, not conversion; it does not establish a ban on sentences listing more than 3 items.",
+    "quote": "If you list more than 3 items in a sentence, consider breaking the sentence into a fragment list.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5e078ece8f9a",
+    "note": "G-2: the fragment-list condition of the lead-in colon rule.",
+    "quote": "lead-in phrase or sentence followed by a colon",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e3c4708724af",
+    "note": "Describes the usual fragment-list form, not an exclusive bullet-only instruction; the page also presents a correct numbered fragment list.",
+    "quote": "list of fragments, each marked by a bullet.",
+    "reason": "description"
+   },
+   {
+    "block_id": "eb52ede4538d",
+    "note": "G-2: the complementary subject-sharing case of the sentence-versus-fragment treatment rule.",
+    "quote": "Use fragment list items when the lead-in states the grammatical subject.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0372c1fbd5f0",
+    "note": "G-2: the fragment-list case and exception of the initial-case check.",
+    "quote": "Use lower case for the first letter of each fragment, unless it’s a proper noun.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1c34dff9ea75",
+    "note": "G-4: repeats fragment-list full-stop placement.",
+    "quote": "Add a full stop to the last list item only.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "392f5053efa2",
+    "note": "G-4: repeats the parallel-structure rule.",
+    "quote": "Use a grammatically parallel structure for each list item.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3bd92a9d682d",
+    "note": "G-4: the next sentence supplies the actionable 25-word wording for this case.",
+    "quote": "If list items run-on from a phrase lead-in, the list should be very short.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b240bb0caa7b",
+    "note": "G-1: introduces the stand-alone type and its specific structure and formatting rules.",
+    "quote": "Use stand-alone lists for items under a heading",
+    "reason": "section"
+   },
+   {
+    "block_id": "de3520539070",
+    "note": "G-5: suggests a presentation choice without making other presentations violations.",
+    "quote": "If you are not breaking up a paragraph or a sentence, consider a stand-alone list.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "df88a0567045",
+    "note": "The heading requirement and absence of terminal punctuation are already covered by their respective checks.",
+    "quote": "Stand-alone lists have a heading without a colon.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "54be70c0d903",
+    "note": "G-3: an allowed form under the stand-alone full-sentence prohibition.",
+    "quote": "Items in stand-alone lists can be nouns or noun phrases.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "54be70c0d903",
+    "note": "G-3: another allowed form under the same prohibition.",
+    "quote": "They can also be sentence fragments.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "d58d35ea0332",
+    "note": "G-2: the stand-alone case of the list-introduction requirement.",
+    "quote": "Use a heading, not a lead-in.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e4e64379607f",
+    "note": "G-2: the stand-alone case of the initial-case check.",
+    "quote": "Start each list item with a capital letter.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "37c0b3e2712e",
+    "note": "G-2: the stand-alone case of the full-stop placement check.",
+    "quote": "Don’t add full stops to the end of any of the list items (even the last item).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5a8be359fb78",
+    "note": "G-2: retained as the stand-alone condition in the indentation rule.",
+    "quote": "Indent each list item if it helps people scan the content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "69941529c516",
+    "note": "G-1: groups indentation and cross-list consistency requirements; it does not require different list types to share one format.",
+    "quote": "Use consistent formatting for all lists",
+    "reason": "section"
+   },
+   {
+    "block_id": "379c2b6e184c",
+    "note": "G-4: refers back to the already specified punctuation and initial-case checks.",
+    "quote": "Use the right punctuation and capital letters for each type of list.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9a175e1f7580",
+    "note": "G-5: directs the writer to an external source of formatting rather than specifying another property on this page.",
+    "quote": "Follow your organisation’s templates to format lists consistently.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "23f904ef7478",
+    "note": "G-4: repeats the indentation heading.",
+    "quote": "Indent most types of lists after the lead-in.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e2be16a7b85d",
+    "note": "G-2: repeats the stand-alone condition of the indentation rule.",
+    "quote": "Indent stand-alone lists if it helps the user scan the list.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d97b7d2272c7",
+    "note": "G-4: the body sentence about lists of the same type following the same format is the more actionable wording.",
+    "quote": "Aim to write lists that conform to their type",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "76f9fa7010ef",
+    "note": "G-3: a content-flow exception to cross-list uniformity, not an additional requirement.",
+    "quote": "For example, the logical flow of text can mean that some sentence lists work best with a sentence lead-in and others with a fragment lead-in.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "53fbe68ed3df",
+    "note": "G-5: a writer-directed exhortation; the surrounding concrete consistency checks are inventoried.",
+    "quote": "Do your best to standardise.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "53fbe68ed3df",
+    "note": "Introduces the following specific checks rather than adding an independent one.",
+    "quote": "But if you can’t, do these things for consistency:",
+    "reason": "section"
+   },
+   {
+    "block_id": "c97bb9808cea",
+    "note": "G-4: repeats document-wide sentence-lead-in punctuation consistency.",
+    "quote": "For sentence lists, choose one type of punctuation to end any sentence lead-ins – a colon or a full stop.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "04338cdb1ce6",
+    "note": "G-2: a specific case of the cross-list formatting-consistency check.",
+    "quote": "For stand-alone lists, follow the same format for all list items – with indent/bullets or without indent/bullets.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c04b534a3215",
+    "note": "G-2: included in within-list grammatical and item-type parallelism.",
+    "quote": "Don’t mix different types of lists in the one list.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "198f5ee81f2b",
+    "note": "G-5: a general cross-reference, not an additional text property.",
+    "quote": "Follow all other rules for lists on this page.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c6b67786f80c",
+    "note": "Concerns cross-platform rendering and testing, not another rule about the words.",
+    "quote": "Then check that your lists display properly on all platforms.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "75a3dd52b654",
+    "note": "G-4: repeats the order-critical numbered-list heading.",
+    "quote": "Use a numbered (ordered) list when the order is important, such as a list of instructions.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4a1f6a1952a8",
+    "note": "G-5: requires a writer's choice but allows either resulting numbering approach; it does not specify a distinct invalid textual outcome.",
+    "quote": "You must choose whether to continue or reset the numbering across the lists.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0d5de557592f",
+    "note": "G-4: the remedy for the in-line-numbered-list prohibition.",
+    "quote": "Break up text into a numbered list instead of using an in-line numbered list.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "436b5c48b22a",
+    "note": "G-3: introduces allowed alternatives to ordinal sequencing.",
+    "quote": "Instead, you can either:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "f2dc7e9b7690",
+    "note": "G-3: one permitted alternative to ordinal sequencing.",
+    "quote": "use a numbered list",
+    "reason": "permission"
+   },
+   {
+    "block_id": "82ee2e855e37",
+    "note": "G-3: another permitted alternative to ordinal sequencing.",
+    "quote": "rephrase the sentences to link them in the same paragraph.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a8ac1831218e",
+    "note": "G-2: the complementary non-critical-order case of the numbered-versus-unordered choice.",
+    "quote": "Use an unordered list if the order is not critical to understanding the content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b7003ac523ae",
+    "note": "G-4: repeats the helpful-sequence heading.",
+    "quote": "List items in the order that will make sense to the user reading it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "31f1b62eacea",
+    "note": "G-3: acknowledges the exception to avoiding multilevel lists.",
+    "quote": "Some types of content need multilevel lists, but they can be hard for people to follow.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "ff9483263ba2",
+    "note": "Introduces the depth and marker requirements for the permitted case.",
+    "quote": "If you have to use multilevel lists:",
+    "reason": "section"
+   },
+   {
+    "block_id": "a58ea9bfbae9",
+    "note": "G-2: the multilevel-marker case of cross-list formatting consistency.",
+    "quote": "Use the same symbol, number or letter for the same level in each list.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ae383bf31f21",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "de58c941cd72",
+      "quote": "Set up grammatical structure for list items with a lead-in."
+     },
+     {
+      "block_id": "d58d35ea0332",
+      "quote": "Use a heading, not a lead-in."
+     },
+     {
+      "block_id": "8626ad390355",
+      "quote": "A stand-alone list has no lead-in, only a heading."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "All lists have a 'lead-in' (a phrase or sentence) or heading to introduce the list.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A displayed list has neither a lead-in nor a heading, or a stand-alone list uses a lead-in instead of a heading.",
+    "when": [
+     "A sentence list may have a heading, sentence lead-in or phrase lead-in.",
+     "A fragment list has a phrase or sentence lead-in.",
+     "A stand-alone list requires a heading rather than a lead-in."
+    ],
+    "why": "G-2 combines the introductory structure requirements and the stand-alone exception; G-4 absorbs the restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3ed1d7e9d86d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3ed1d7e9d86d",
+      "quote": "Lists are only for a series of items."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a list if you have only one item.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A list contains only one item.",
+    "when": [],
+    "why": "G-4 treats the following explanation as a restatement of the single-item prohibition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9db75496ccb0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "c5dd53243dc8",
+      "quote": "Move long lists to a separate page or an appendix."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Make short lists",
+    "specification": "The page does not define a long list or give an item-count threshold. The relocation instruction is treated as the remedy for a long list, not a second finding.",
+    "unit": "document",
+    "violation_condition": "A long list remains in the main content rather than being kept short or moved to a separate page or appendix.",
+    "when": [
+     "Long lists may be placed on a separate page or in an appendix.",
+     "The page gives a separate, explicit 25-word limit for lists running on from a phrase lead-in."
+    ],
+    "why": "G-2 keeps the long-list remedy with the length rule; E-4 prevents inventing a numerical threshold."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "aacd95821342",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "be45b1dbd4d2",
+      "quote": "Content with too many lists is hard to follow. The content should flow so people can read it easily."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Limit the number of lists",
+    "specification": "No maximum count or density of lists is specified. The explanation makes readability and flow the basis for judging excess.",
+    "unit": "document",
+    "violation_condition": "A document contains so many lists that its flow is difficult to follow.",
+    "when": [],
+    "why": "The heading states a document-level constraint; E-4 prevents substituting an invented list-count limit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fd68c2966a67",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "122cad9fbcad",
+      "quote": "Write items in a list so they follow a consistent pattern."
+     },
+     {
+      "block_id": "122cad9fbcad",
+      "quote": "The pattern is made up by the number of words you use and grammatical structure."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a consistent pattern for list items",
+    "specification": "This item captures the paragraph's word-count aspect of a consistent pattern. Grammatical parallelism is inventoried separately. The manual gives no permitted variation in item length and does not require identical word counts.",
+    "unit": "block",
+    "violation_condition": "List items have inconsistent lengths that break the list's consistent pattern.",
+    "when": [],
+    "why": "G-4 absorbs the repeated instruction; the grain test separates length consistency from the independently stated grammatical check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4d78818dccf2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7e5c77f19586",
+      "quote": "Write all list items so they have the same grammatical structure."
+     },
+     {
+      "block_id": "ff245b20946f",
+      "quote": "To make a parallel structure, use the same:"
+     },
+     {
+      "block_id": "0f5f74d11905",
+      "quote": "word type to start each item (such as a noun or a verb)"
+     },
+     {
+      "block_id": "df3af07dc3d1",
+      "quote": "tense for each item (past, present or future)"
+     },
+     {
+      "block_id": "0f7ee19a3617",
+      "quote": "sentence type (such as a question, direction or statement)."
+     },
+     {
+      "block_id": "392f5053efa2",
+      "quote": "Use a grammatically parallel structure for each list item."
+     },
+     {
+      "block_id": "c04b534a3215",
+      "quote": "Don’t mix different types of lists in the one list."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The items have parallel verb structures.",
+      "parts": [
+       {
+        "block_id": "cafebe7f146f",
+        "quote": "I will:"
+       },
+       {
+        "block_id": "66903e2999cb",
+        "quote": "read more emails"
+       },
+       {
+        "block_id": "bebae3c8d8dd",
+        "quote": "go to meetings"
+       },
+       {
+        "block_id": "bcc3b235881d",
+        "quote": "be punctual."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual identifies the final adjective as inconsistent with the preceding verb forms.",
+      "parts": [
+       {
+        "block_id": "36341c5fb159",
+        "quote": "I will be:"
+       },
+       {
+        "block_id": "629b3d1fbfc2",
+        "quote": "reading more emails"
+       },
+       {
+        "block_id": "d86e8837b104",
+        "quote": "going to meetings"
+       },
+       {
+        "block_id": "f75cb50fe92a",
+        "quote": "punctual."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write list items so they have parallel structure",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Items in one list use non-parallel grammatical structures, such as inconsistent starting word types, tenses or sentence types, or a mixture of list types.",
+    "when": [
+     "Use the same starting word type, tense and sentence type across the items.",
+     "Do not mix sentence, fragment and stand-alone item types within one list."
+    ],
+    "why": "G-2 keeps the grammatical cases together; G-4 absorbs repeated parallelism requirements. E-3 keeps each example's lead-in and items together."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "631399916ca1",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Move any words repeated in the list items to the lead-in.",
+    "specification": "Interpret repeated words as shared wording that can be factored into the lead-in while preserving meaning and grammatical structure, not incidental occurrences of the same word.",
+    "unit": "block",
+    "violation_condition": "Words repeated across list items remain in the items even though they can be shared in the lead-in.",
+    "when": [
+     "The repeated wording can be moved into the lead-in without changing the intended meaning."
+    ],
+    "why": "The grain test keeps repeated wording separate from grammatical parallelism; the neighbouring example explicitly tests parallelism instead."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1e98b25b5c35",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c8eed720e8bf",
+      "quote": "phrase lead-in (ending in a colon)."
+     },
+     {
+      "block_id": "5e078ece8f9a",
+      "quote": "lead-in phrase or sentence followed by a colon"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Phrase lead-ins always end in a colon (:).",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A phrase lead-in, or a fragment-list lead-in, lacks a terminal colon or ends with a different mark.",
+    "when": [
+     "Applies to phrase lead-ins for lists.",
+     "Fragment lists require a colon after either a phrase or sentence lead-in."
+    ],
+    "why": "G-2 combines the cases requiring a colon; G-4 absorbs the later descriptions. 'Always' makes the requirement explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3bbb317ce1e8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3bbb317ce1e8",
+      "quote": "Sentence lead-ins can end in a colon or a full stop."
+     },
+     {
+      "block_id": "579841c04152",
+      "quote": "sentence lead-in (ending in a colon or full stop)"
+     },
+     {
+      "block_id": "c97bb9808cea",
+      "quote": "For sentence lists, choose one type of punctuation to end any sentence lead-ins – a colon or a full stop."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Choose one punctuation mark and use it for all sentence lead-ins in your document.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Sentence lead-ins use an ending other than a colon or full stop, or inconsistently alternate between those endings within the document.",
+    "when": [
+     "Sentence lead-ins may end in a colon or full stop.",
+     "Choose one of those endings consistently throughout the document.",
+     "A fragment-list lead-in must end in a colon."
+    ],
+    "why": "G-2 records the permitted endings and fragment-list restriction as conditions; G-4 absorbs the repeated consistency instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bf3b5adabc07",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "32f7d183f756",
+      "quote": "heading (without a colon or full stop)"
+     },
+     {
+      "block_id": "df88a0567045",
+      "quote": "Stand-alone lists have a heading without a colon."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Headings do not have punctuation marks.",
+    "specification": "In this list context, interpret the prohibition as terminal heading punctuation, not punctuation intrinsic to wording such as an apostrophe or hyphen.",
+    "unit": "block",
+    "violation_condition": "A list heading has a punctuation mark used as a terminal lead-in mark, such as a colon or full stop.",
+    "when": [
+     "Applies when a heading introduces a list."
+    ],
+    "why": "G-4 consolidates repeated heading-ending requirements; the interpretation avoids treating every internal punctuation character as prohibited."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "11f85a32b0a7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "02f87f2ef0c9",
+      "quote": "In a bullet or numbered list, don’t use:"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "semicolons (;) or commas (,) at the end of list items",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An item in a bullet or numbered list ends with a semicolon or comma.",
+    "when": [
+     "Applies to bullet and numbered lists."
+    ],
+    "why": "The list item and its lead-in state one prohibition; commas and semicolons are alternatives in the same end-punctuation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "638ec6015355",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "76bb0e67ec98",
+      "quote": "Only include ‘and’ or ‘or’ after the second-last list item if it is critical to meaning – for example, you are writing in a legal context."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "‘and’ or ‘or’ after list items.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A bullet or numbered list appends ‘and’ or ‘or’ to an item when it is not critical to meaning, or appends it somewhere other than after the second-last item.",
+    "when": [
+     "Applies to bullet and numbered lists.",
+     "‘And’ or ‘or’ is allowed after the second-last item only when critical to meaning, for example in a legal context."
+    ],
+    "why": "G-3 makes the critical-to-meaning allowance an exception to the prohibition, not a separate rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2aece538a9dc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "76bb0e67ec98",
+      "quote": "Make sure the lead-in is a clear guide for how this kind of list should be interpreted."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The page supplies this as a lead-in example without accompanying list items.",
+      "parts": [
+       {
+        "block_id": "e4cb7b555b10",
+        "quote": "Select your preference from one of these options:"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The required number of selections is explicit.",
+      "parts": [
+       {
+        "block_id": "8248b5f7c97c",
+        "quote": "Please write your response to any 3 of the following questions:"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual presents this as a lead-in for a choice between 2 options.",
+      "parts": [
+       {
+        "block_id": "fb835979a8cd",
+        "quote": "Applicants need to choose between either:"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When listing items that may be additional or optional, write a lead-in to explain any variables.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A list with optional or additional items, selection requirements, or meaning-critical ‘and’ or ‘or’ has a lead-in that does not explain how the items are to be interpreted or selected.",
+    "when": [
+     "The list contains additional or optional items or requires a particular number or combination of choices.",
+     "Also applies when ‘and’ or ‘or’ after a list item is critical to meaning."
+    ],
+    "why": "G-2 combines the situations requiring interpretive guidance in the lead-in; example glosses are excluded from the quoted examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4c64164d48f5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "58835d6395f7",
+      "quote": "Lead-ins for incomplete lists can use ‘for example’, ‘including’ or ‘includes’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t write ‘etc.’ at the end of the list to show the list is incomplete.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A list ends with ‘etc.’ to indicate that further items have been omitted.",
+    "when": [
+     "An incomplete list may instead be introduced with ‘for example’, ‘including’ or ‘includes’."
+    ],
+    "why": "G-3 records the permitted lead-in wording as an alternative, not a separate requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "03170fb27cad",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e3aaf123e642",
+      "quote": "Finish each item in a sentence list with a full stop, including the last one."
+     },
+     {
+      "block_id": "2adcf653e15e",
+      "quote": "Finish fragment lists with a full stop only after the last item."
+     },
+     {
+      "block_id": "dc056bed75cc",
+      "quote": "Stand-alone lists don’t end in a full stop."
+     },
+     {
+      "block_id": "39734be0f13f",
+      "quote": "end it with a full stop."
+     },
+     {
+      "block_id": "1c34dff9ea75",
+      "quote": "Add a full stop to the last list item only."
+     },
+     {
+      "block_id": "37c0b3e2712e",
+      "quote": "Don’t add full stops to the end of any of the list items (even the last item)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use full stops to complete sentences and fragment lists",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A sentence-list item lacks a final full stop, a fragment list lacks a full stop after its last item or has one after an earlier item, or a stand-alone list item ends in a full stop.",
+    "when": [
+     "Every item in a sentence list ends with a full stop.",
+     "Only the last item in a fragment list ends with a full stop.",
+     "No item in a stand-alone list ends with a full stop."
+    ],
+    "why": "G-2 treats list type as the condition controlling one end-full-stop check; G-4 absorbs its later repetitions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "37bdd73743c4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c09183817082",
+      "quote": "Sentence lists have a list of sentences, each marked by bullets or numbers."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Follow normal sentence structure in each list item.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An item presented as part of a sentence list is not a grammatically complete sentence.",
+    "when": [
+     "Applies to sentence lists.",
+     "Imperative sentences may have an understood rather than explicitly stated subject."
+    ],
+    "why": "The body states an actionable item-completeness requirement; the surrounding type heading also groups several independent formatting checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "39734be0f13f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0372c1fbd5f0",
+      "quote": "Use lower case for the first letter of each fragment, unless it’s a proper noun."
+     },
+     {
+      "block_id": "e4e64379607f",
+      "quote": "Start each list item with a capital letter."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The fragment-list items begin in lower case.",
+      "parts": [
+       {
+        "block_id": "4113224a73fb",
+        "quote": "Writers should become familiar with the conventional types of content structure:"
+       },
+       {
+        "block_id": "616751ce13af",
+        "quote": "hierarchical"
+       },
+       {
+        "block_id": "878ff7b0ac51",
+        "quote": "sequential"
+       },
+       {
+        "block_id": "0aa279159a55",
+        "quote": "narrative."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Start each list item with a capital letter",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A sentence-list or stand-alone-list item starts in lower case, or a fragment-list item starts with a capital despite not beginning with a proper noun.",
+    "when": [
+     "Sentence-list and stand-alone-list items start with a capital letter.",
+     "Fragment-list items start in lower case unless the first word is a proper noun."
+    ],
+    "why": "G-2 combines list-type-dependent initial case in one check and records the proper-noun exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "701bccfcaf23",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Align run-over lines with the text, not the bullet or number.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A run-over line in a sentence-list item aligns with its bullet or number rather than with the item's text.",
+    "when": [
+     "Applies to sentence lists with items that wrap onto another line."
+    ],
+    "why": "This is a separate observable text-alignment property, not a repetition of punctuation or grammatical rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "82e4f1693ae9",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "82e4f1693ae9",
+      "quote": "If you include more than one sentence per list item, consider whether:"
+     },
+     {
+      "block_id": "d0fd688cc68a",
+      "quote": "all list items conform to a similar pattern"
+     },
+     {
+      "block_id": "7a09375ebd42",
+      "quote": "the list builds rhythm for readability."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Each numbered item contains one sentence.",
+      "parts": [
+       {
+        "block_id": "cad3a38a091c",
+        "quote": "Actions for the committee"
+       },
+       {
+        "block_id": "976bd89bf27c",
+        "quote": "The secretary will respond to each recommendation."
+       },
+       {
+        "block_id": "464bad68ae83",
+        "quote": "The secretary will allocate responses that need more work to members."
+       },
+       {
+        "block_id": "3c3e279ab4f3",
+        "quote": "Members will discuss the recommendations at the next meeting on 9 March."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The sentence lead-in is separate from the single-sentence items.",
+      "parts": [
+       {
+        "block_id": "7b2b73bf1fa8",
+        "quote": "The committee members decided on several actions."
+       },
+       {
+        "block_id": "a987d8d48448",
+        "quote": "The secretary will respond to each recommendation."
+       },
+       {
+        "block_id": "215995bd147e",
+        "quote": "The secretary will allocate responses that need more work to members."
+       },
+       {
+        "block_id": "9491ace2b99a",
+        "quote": "Members will discuss the recommendations at the next meeting on 9 March."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using multiple sentences in each bullet or numbered item.",
+    "specification": "Treat multiple sentences as discouraged rather than absolutely forbidden. The following advice identifies similar item patterns and readable rhythm as considerations, but supplies no hard acceptance test.",
+    "unit": "block",
+    "violation_condition": "A bullet or numbered item contains multiple sentences without maintaining a similar pattern across items and readable rhythm.",
+    "when": [
+     "The instruction occurs under sentence lists.",
+     "More than one sentence per item is contemplated when items retain a similar pattern and the list builds readable rhythm."
+    ],
+    "why": "G-2 keeps the qualification with the discouragement; G-5 does not turn the writer's consideration process into another check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0aedc06d331e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "eb52ede4538d",
+      "quote": "Use fragment list items when the lead-in states the grammatical subject."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The imperative items receive sentence treatment because the phrase lead-in supplies no subject.",
+      "parts": [
+       {
+        "block_id": "a5fea2bfeb56",
+        "quote": "To write well:"
+       },
+       {
+        "block_id": "be0250a3a7ad",
+        "quote": "Use everyday words."
+       },
+       {
+        "block_id": "fcc668218389",
+        "quote": "Learn about the words people use."
+       },
+       {
+        "block_id": "c8e26b18712b",
+        "quote": "Choose simple words, not complicated expressions."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use full sentence list items for imperative list items where there is no stated subject in the lead-in.",
+    "specification": "A subject stated in the lead-in means a subject grammatically shared with the items, not merely any subject appearing in an independent introductory sentence.",
+    "unit": "block",
+    "violation_condition": "Imperative items without a grammatical subject supplied by the lead-in are treated as fragments, or items continuing a subject supplied by the lead-in are treated as independent sentence items.",
+    "when": [
+     "Imperative items with no stated subject in the lead-in receive full-sentence treatment.",
+     "Items continuing the grammatical subject in the lead-in receive fragment treatment.",
+     "This lead-in distinction does not classify stand-alone lists introduced by headings."
+    ],
+    "why": "G-2 combines the complementary subject-sharing cases into one item-type decision."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "27817a931bf0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "cfeca9d5155f",
+      "quote": "The last rule for fragment lists means that if you add each fragment to a phrase lead-in, it will make a complete sentence."
+     },
+     {
+      "block_id": "d3af9ebead00",
+      "quote": "Fragment list items complete phrase lead-ins to form a grammatical sentence."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Each fragment completes the phrase lead-in.",
+      "parts": [
+       {
+        "block_id": "d25cc7a94d3e",
+        "quote": "Queensland is famous for its:"
+       },
+       {
+        "block_id": "f4f0e1327717",
+        "quote": "islands and coral reefs"
+       },
+       {
+        "block_id": "f010ff763ac8",
+        "quote": "abundant wildlife"
+       },
+       {
+        "block_id": "07c2a7ee14c4",
+        "quote": "tropical rainforest"
+       },
+       {
+        "block_id": "f03a0c836784",
+        "quote": "beautiful beaches."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual identifies the second and third items as incompatible with the phrase lead-in.",
+      "parts": [
+       {
+        "block_id": "acb32687143d",
+        "quote": "Queensland is famous for its:"
+       },
+       {
+        "block_id": "11c94b0e8991",
+        "quote": "islands and coral reefs"
+       },
+       {
+        "block_id": "7f854b0579f6",
+        "quote": "experience the tropical rainforest"
+       },
+       {
+        "block_id": "23a3df616f84",
+        "quote": "the wildlife. It can kill you."
+       },
+       {
+        "block_id": "3d65c611a9e3",
+        "quote": "beautiful beaches."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Make sure each fragment can complete a phrase lead-in.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Combining a fragment-list item with its phrase lead-in fails to produce a complete grammatical sentence.",
+    "when": [
+     "Applies to fragment lists with a phrase lead-in.",
+     "Each item is tested separately with the lead-in."
+    ],
+    "why": "G-4 absorbs the explanations; E-3 preserves each complete list example."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3bd92a9d682d",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "3bd92a9d682d",
+      "quote": "If list items run-on from a phrase lead-in, the list should be very short."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "The full sentence should be 25 words or less.",
+    "specification": "Interpret the full sentence as the phrase lead-in plus all the run-on list items read as one sentence, rather than counting each lead-in–item pairing separately. The page does not explicitly resolve that counting distinction.",
+    "unit": "block",
+    "violation_condition": "A list running on from a phrase lead-in forms a full sentence longer than 25 words.",
+    "when": [
+     "Applies when list items run on from a phrase lead-in."
+    ],
+    "why": "G-4 uses the explicit 25-word wording instead of a second vague shortness rule; E-4 exposes the counting interpretation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "54be70c0d903",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "54be70c0d903",
+      "quote": "Items in stand-alone lists can be nouns or noun phrases."
+     },
+     {
+      "block_id": "54be70c0d903",
+      "quote": "They can also be sentence fragments."
+     },
+     {
+      "block_id": "eff571c7bc16",
+      "quote": "Stand-alone list items do not form a grammatical sentence."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The manual presents these task phrases as stand-alone items.",
+      "parts": [
+       {
+        "block_id": "9b04d78022de",
+        "quote": "My weekly tasks"
+       },
+       {
+        "block_id": "2f27f2c2e3f1",
+        "quote": "Answer phone enquiries"
+       },
+       {
+        "block_id": "8f939051f11b",
+        "quote": "Book conference venues"
+       },
+       {
+        "block_id": "f9e0ba0bce5f",
+        "quote": "Order stationery"
+       },
+       {
+        "block_id": "1ba8d0f21467",
+        "quote": "Take meeting minutes"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Items cannot be full sentences.",
+    "specification": "The page treats verb-initial task phrases such as its weekly-task items as stand-alone fragments. Do not classify such phrases as prohibited full sentences solely because they could also be read as imperatives.",
+    "unit": "block",
+    "violation_condition": "A stand-alone list contains full-sentence items rather than nouns, noun phrases or sentence fragments.",
+    "when": [
+     "Applies to stand-alone lists.",
+     "Nouns, noun phrases and sentence fragments are allowed."
+    ],
+    "why": "G-3 keeps the allowed forms with the prohibition; the example prevents overreading imperative-looking task phrases."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d9af3454c532",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "23f904ef7478",
+      "quote": "Indent most types of lists after the lead-in."
+     },
+     {
+      "block_id": "e2be16a7b85d",
+      "quote": "Indent stand-alone lists if it helps the user scan the list."
+     },
+     {
+      "block_id": "5a8be359fb78",
+      "quote": "Indent each list item if it helps people scan the content."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Indent most lists",
+    "specification": "The explicit exception concerns stand-alone lists. The page does not exhaustively define 'most' or provide an objective test for when indentation helps scanning.",
+    "unit": "block",
+    "violation_condition": "A list following a lead-in is not indented, or a stand-alone list is not indented where indentation is needed to help users scan it.",
+    "when": [
+     "Indent lists after their lead-in.",
+     "Stand-alone lists need indentation only if it helps users scan the content."
+    ],
+    "why": "G-2 makes stand-alone indentation a condition of the same formatting check; G-4 absorbs repetitions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "86f9fdb3cf81",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "d97b7d2272c7",
+      "quote": "Aim to write lists that conform to their type"
+     },
+     {
+      "block_id": "86f9fdb3cf81",
+      "quote": "For example, a fragment list should look the same as other fragment lists."
+     },
+     {
+      "block_id": "76f9fa7010ef",
+      "quote": "For example, the logical flow of text can mean that some sentence lists work best with a sentence lead-in and others with a fragment lead-in."
+     },
+     {
+      "block_id": "04338cdb1ce6",
+      "quote": "For stand-alone lists, follow the same format for all list items – with indent/bullets or without indent/bullets."
+     },
+     {
+      "block_id": "a58ea9bfbae9",
+      "quote": "Use the same symbol, number or letter for the same level in each list."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Ideally, lists of the same type should follow the same format, particularly when they appear close together in your content.",
+    "specification": "Use this check for cross-list presentation consistency, not to issue additional findings for case, full stops or sentence-lead-in punctuation already checked separately. For multilevel lists, 'same symbol, number or letter' means the same marker form or numbering system at a level, not repeating the same numeric value.",
+    "unit": "document",
+    "violation_condition": "Lists of the same type use inconsistent formatting without a content-driven reason, including inconsistent stand-alone indentation or bullets, or inconsistent marker forms for the same multilevel-list level.",
+    "when": [
+     "Compare lists of the same type, especially nearby lists.",
+     "Logical flow can justify different sentence or phrase lead-ins for sentence lists.",
+     "Stand-alone lists should consistently use indentation and bullets, or consistently omit them.",
+     "The marker form for a given multilevel-list level should be consistent across lists."
+    ],
+    "why": "G-2 combines cross-list consistency cases and the content-flow exception; G-4 avoids separate findings for the specific restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7d2722d0155d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "75a3dd52b654",
+      "quote": "Use a numbered (ordered) list when the order is important, such as a list of instructions."
+     },
+     {
+      "block_id": "a8ac1831218e",
+      "quote": "Use an unordered list if the order is not critical to understanding the content."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The page says users must complete these numbered steps in turn.",
+      "parts": [
+       {
+        "block_id": "c365a317de40",
+        "quote": "How to register for the conference:"
+       },
+       {
+        "block_id": "049b99d0314a",
+        "quote": "Choose the days you will attend."
+       },
+       {
+        "block_id": "29d70a5f7e26",
+        "quote": "Pick the workshops you want to join."
+       },
+       {
+        "block_id": "ed61c5dc80b5",
+        "quote": "Enter your discount code (if you have one)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write numbered lists if the order is critical",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An order-critical list is not numbered, or a list whose order is not critical to understanding is presented as numbered rather than unordered.",
+    "when": [
+     "Use a numbered list when order matters, such as instructions that must be completed in sequence.",
+     "Use an unordered list when order is not critical to understanding.",
+     "An unordered list can still be arranged alphabetically or in another helpful sequence."
+    ],
+    "why": "G-2 treats critical and non-critical order as complementary conditions for one list-marker choice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b1dae6c73af2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0d5de557592f",
+      "quote": "Break up text into a numbered list instead of using an in-line numbered list."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The items are a displayed numbered list.",
+      "parts": [
+       {
+        "block_id": "0fa22ea0045e",
+        "quote": "The facilitator will:"
+       },
+       {
+        "block_id": "d4600b489bcb",
+        "quote": "welcome participants to the conference"
+       },
+       {
+        "block_id": "f2522854fc77",
+        "quote": "introduce each of the speakers."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The numbered items are embedded in the sentence.",
+      "parts": [
+       {
+        "block_id": "5eb30d279b4d",
+        "quote": "The facilitator will 1) welcome participants to the conference, and 2) introduce each of the speakers."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using in-line numbered lists",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Numbered items are embedded in running text instead of presented as a displayed numbered list.",
+    "when": [],
+    "why": "G-4 treats the body instruction as the remedy for the heading's prohibition; E-3 preserves the displayed list."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "436b5c48b22a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f2dc7e9b7690",
+      "quote": "use a numbered list"
+     },
+     {
+      "block_id": "82ee2e855e37",
+      "quote": "rephrase the sentences to link them in the same paragraph."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The prose links the sequence with ‘Next’ rather than ordinals.",
+      "parts": [
+       {
+        "block_id": "b1230dfff262",
+        "quote": "The facilitator will welcome participants to the conference. Next, they will introduce each of the speakers."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual explicitly rejects the ordinal sequencing.",
+      "parts": [
+       {
+        "block_id": "2760354ddb4c",
+        "quote": "The facilitator will firstly welcome participants to the conference. Secondly, they will introduce each of the speakers."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "To order points in general content, don’t use ordinal numbers.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "General prose uses ordinals such as ‘firstly’ and ‘secondly’ to sequence points.",
+    "when": [
+     "Applies to ordering points in general content, not to expressing actual ranks.",
+     "A numbered list or linked sentences in the same paragraph are allowed alternatives."
+    ],
+    "why": "The ordinary paragraph following the example label states a new rule; G-3 keeps its permitted alternatives with that rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "82823488c83d",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "b7003ac523ae",
+      "quote": "List items in the order that will make sense to the user reading it."
+     },
+     {
+      "block_id": "b7003ac523ae",
+      "quote": "It’s common to write lists in alphabetical order."
+     },
+     {
+      "block_id": "e7a94c1c4f93",
+      "quote": "For example, you could also sort them by proximity to Perth."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The manual identifies the alphabetical sequence as helpful while allowing context-dependent alternatives.",
+      "parts": [
+       {
+        "block_id": "9da597a92741",
+        "quote": "National parks near Perth"
+       },
+       {
+        "block_id": "711d17030bfc",
+        "quote": "Avon Valley National Park"
+       },
+       {
+        "block_id": "e1a609e651d7",
+        "quote": "Serpentine National Park"
+       },
+       {
+        "block_id": "63a4e26e6e43",
+        "quote": "Walyunga National Park"
+       },
+       {
+        "block_id": "8a0bba9a0e0d",
+        "quote": "Yanchep National Park"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Put unordered lists in a sequence that helps the user",
+    "specification": "Alphabetical order is an example, not a universal requirement. Choosing the helpful order depends on the user's purpose and context.",
+    "unit": "block",
+    "violation_condition": "An unordered list is arranged in a sequence that does not make sense for the user's purpose.",
+    "when": [
+     "Applies to unordered lists.",
+     "Alphabetical order is common.",
+     "Context may justify another sequence, such as geographic proximity."
+    ],
+    "why": "G-2 keeps context-dependent ordering choices together; E-1 does not turn a different sensible order into a violation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f3e5a6e34197",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "31f1b62eacea",
+      "quote": "Some types of content need multilevel lists, but they can be hard for people to follow."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using a multilevel list",
+    "specification": "The page acknowledges that some content needs multilevel lists but does not specify which content qualifies.",
+    "unit": "block",
+    "violation_condition": "Content uses a multilevel list when the hierarchy is not needed.",
+    "when": [
+     "Multilevel lists are allowed when the content needs a hierarchy.",
+     "Necessary multilevel lists remain subject to the depth and marker rules."
+    ],
+    "why": "G-3 records necessary multilevel lists as an exception; the specific requirements for allowed multilevel lists remain separate checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f3a4bd82d88d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use more than 2 levels.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A multilevel list has three or more levels.",
+    "when": [
+     "Applies when a multilevel list is used."
+    ],
+    "why": "The depth cap is independently testable even when using a multilevel list is justified."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8e14424c58b6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use lowercase letters for the second level in a numbered list.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Second-level markers in a numbered list use something other than lowercase letters.",
+    "when": [
+     "Applies to the second level of a multilevel numbered list."
+    ],
+    "why": "This is the specific second-level marker check for numbered lists, distinct from depth and cross-list consistency."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f5b50f7d3756",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The second-level markers are dashes.",
+      "parts": [
+       {
+        "block_id": "4103110de07c",
+        "quote": "There are many types of birds in Australia, including:"
+       },
+       {
+        "block_id": "f201d05e2fb2",
+        "quote": "nocturnal birds"
+       },
+       {
+        "block_id": "e4a1cc9b6ab4",
+        "quote": "– frogmouths"
+       },
+       {
+        "block_id": "9b4e2d9a6654",
+        "quote": "– nightjars"
+       },
+       {
+        "block_id": "4fa74615f0cf",
+        "quote": "– owls"
+       },
+       {
+        "block_id": "ccf4a3f8e1eb",
+        "quote": "marsh birds"
+       },
+       {
+        "block_id": "b6026f455ca1",
+        "quote": "– crakes"
+       },
+       {
+        "block_id": "99044c079fa0",
+        "quote": "– grebes"
+       },
+       {
+        "block_id": "f775aa29ebce",
+        "quote": "– snipes."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual labels this nested-bullet version ‘Not this’; the marker difference is represented by list formatting rather than characters in the item text.",
+      "parts": [
+       {
+        "block_id": "69dc1142a2f5",
+        "quote": "There are many types of birds in Australia, including:"
+       },
+       {
+        "block_id": "c6c4a7104eeb",
+        "quote": "nocturnal birds"
+       },
+       {
+        "block_id": "333a086fd08d",
+        "quote": "frogmouths"
+       },
+       {
+        "block_id": "a90c28a051b0",
+        "quote": "nightjars"
+       },
+       {
+        "block_id": "57d34186f66f",
+        "quote": "owls"
+       },
+       {
+        "block_id": "dacc6aebb16c",
+        "quote": "marsh birds"
+       },
+       {
+        "block_id": "7280aba67db4",
+        "quote": "crakes"
+       },
+       {
+        "block_id": "4b47875f8590",
+        "quote": "grebes"
+       },
+       {
+        "block_id": "50baee24a9c7",
+        "quote": "snipes."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a dash for the second level in a bullet list, not hollow (open) bullets.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Second-level items in a bullet list use hollow bullets or another marker instead of a dash.",
+    "when": [
+     "Applies to the second level of a multilevel bullet list."
+    ],
+    "why": "The manual's contrast tests second-level bullet markers; E-3 keeps the lead-in and all nested items together."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "ae383bf31f21",
+    "end": 110,
+    "prefix": "Lists are series of items. ",
+    "quote": "All lists have a 'lead-in' (a phrase or sentence) or heading to introduce the list.",
+    "start": 27,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "de58c941cd72",
+     "end": 179,
+     "prefix": "le lists with the user in mind. ",
+     "quote": "Set up grammatical structure for list items with a lead-in.",
+     "start": 120,
+     "suffix": ""
+    },
+    {
+     "block_id": "d58d35ea0332",
+     "end": 29,
+     "prefix": "",
+     "quote": "Use a heading, not a lead-in.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8626ad390355",
+     "end": 50,
+     "prefix": "",
+     "quote": "A stand-alone list has no lead-in, only a heading.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A displayed list has neither a lead-in nor a heading, or a stand-alone list uses a lead-in instead of a heading."
+   },
+   "when": [
+    "A sentence list may have a heading, sentence lead-in or phrase lead-in.",
+    "A fragment list has a phrase or sentence lead-in.",
+    "A stand-alone list requires a heading rather than a lead-in."
+   ],
+   "why": "G-2 combines the introductory structure requirements and the stand-alone exception; G-4 absorbs the restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "3ed1d7e9d86d",
+    "end": 43,
+    "prefix": "",
+    "quote": "Don’t use a list if you have only one item.",
+    "start": 0,
+    "suffix": " Lists are only for a series of "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3ed1d7e9d86d",
+     "end": 81,
+     "prefix": "list if you have only one item. ",
+     "quote": "Lists are only for a series of items.",
+     "start": 44,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A list contains only one item."
+   },
+   "when": [],
+   "why": "G-4 treats the following explanation as a restatement of the single-item prohibition."
+  },
+  {
+   "anchor": {
+    "block_id": "9db75496ccb0",
+    "end": 16,
+    "prefix": "",
+    "quote": "Make short lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "c5dd53243dc8",
+     "end": 50,
+     "prefix": "",
+     "quote": "Move long lists to a separate page or an appendix.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "32c099ffc4eaec64",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define a long list or give an item-count threshold. The relocation instruction is treated as the remedy for a long list, not a second finding.",
+    "unit": "document",
+    "violation_condition": "A long list remains in the main content rather than being kept short or moved to a separate page or appendix."
+   },
+   "when": [
+    "Long lists may be placed on a separate page or in an appendix.",
+    "The page gives a separate, explicit 25-word limit for lists running on from a phrase lead-in."
+   ],
+   "why": "G-2 keeps the long-list remedy with the length rule; E-4 prevents inventing a numerical threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "aacd95821342",
+    "end": 25,
+    "prefix": "",
+    "quote": "Limit the number of lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "be45b1dbd4d2",
+     "end": 100,
+     "prefix": "",
+     "quote": "Content with too many lists is hard to follow. The content should flow so people can read it easily.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "a0dda52248023efe",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "No maximum count or density of lists is specified. The explanation makes readability and flow the basis for judging excess.",
+    "unit": "document",
+    "violation_condition": "A document contains so many lists that its flow is difficult to follow."
+   },
+   "when": [],
+   "why": "The heading states a document-level constraint; E-4 prevents substituting an invented list-count limit."
+  },
+  {
+   "anchor": {
+    "block_id": "fd68c2966a67",
+    "end": 39,
+    "prefix": "",
+    "quote": "Use a consistent pattern for list items",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "122cad9fbcad",
+     "end": 58,
+     "prefix": "",
+     "quote": "Write items in a list so they follow a consistent pattern.",
+     "start": 0,
+     "suffix": " The pattern is made up by the n"
+    },
+    {
+     "block_id": "122cad9fbcad",
+     "end": 139,
+     "prefix": "ey follow a consistent pattern. ",
+     "quote": "The pattern is made up by the number of words you use and grammatical structure.",
+     "start": 59,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "6c97356a0cb02399",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This item captures the paragraph's word-count aspect of a consistent pattern. Grammatical parallelism is inventoried separately. The manual gives no permitted variation in item length and does not require identical word counts.",
+    "unit": "block",
+    "violation_condition": "List items have inconsistent lengths that break the list's consistent pattern."
+   },
+   "when": [],
+   "why": "G-4 absorbs the repeated instruction; the grain test separates length consistency from the independently stated grammatical check."
+  },
+  {
+   "anchor": {
+    "block_id": "4d78818dccf2",
+    "end": 48,
+    "prefix": "",
+    "quote": "Write list items so they have parallel structure",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7e5c77f19586",
+     "end": 65,
+     "prefix": "",
+     "quote": "Write all list items so they have the same grammatical structure.",
+     "start": 0,
+     "suffix": " This is called ‘parallel struct"
+    },
+    {
+     "block_id": "ff245b20946f",
+     "end": 43,
+     "prefix": "",
+     "quote": "To make a parallel structure, use the same:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0f5f74d11905",
+     "end": 55,
+     "prefix": "",
+     "quote": "word type to start each item (such as a noun or a verb)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "df3af07dc3d1",
+     "end": 45,
+     "prefix": "",
+     "quote": "tense for each item (past, present or future)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0f7ee19a3617",
+     "end": 59,
+     "prefix": "",
+     "quote": "sentence type (such as a question, direction or statement).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "392f5053efa2",
+     "end": 58,
+     "prefix": "",
+     "quote": "Use a grammatically parallel structure for each list item.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c04b534a3215",
+     "end": 51,
+     "prefix": "",
+     "quote": "Don’t mix different types of lists in the one list.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The items have parallel verb structures.",
+     "parts": [
+      {
+       "block_id": "cafebe7f146f",
+       "end": 7,
+       "prefix": "",
+       "quote": "I will:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "66903e2999cb",
+       "end": 16,
+       "prefix": "",
+       "quote": "read more emails",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "bebae3c8d8dd",
+       "end": 14,
+       "prefix": "",
+       "quote": "go to meetings",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "bcc3b235881d",
+       "end": 12,
+       "prefix": "",
+       "quote": "be punctual.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual identifies the final adjective as inconsistent with the preceding verb forms.",
+     "parts": [
+      {
+       "block_id": "36341c5fb159",
+       "end": 10,
+       "prefix": "",
+       "quote": "I will be:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "629b3d1fbfc2",
+       "end": 19,
+       "prefix": "",
+       "quote": "reading more emails",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d86e8837b104",
+       "end": 17,
+       "prefix": "",
+       "quote": "going to meetings",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f75cb50fe92a",
+       "end": 9,
+       "prefix": "",
+       "quote": "punctual.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "94ff69f214a3fafa",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Items in one list use non-parallel grammatical structures, such as inconsistent starting word types, tenses or sentence types, or a mixture of list types."
+   },
+   "when": [
+    "Use the same starting word type, tense and sentence type across the items.",
+    "Do not mix sentence, fragment and stand-alone item types within one list."
+   ],
+   "why": "G-2 keeps the grammatical cases together; G-4 absorbs repeated parallelism requirements. E-3 keeps each example's lead-in and items together."
+  },
+  {
+   "anchor": {
+    "block_id": "631399916ca1",
+    "end": 57,
+    "prefix": "",
+    "quote": "Move any words repeated in the list items to the lead-in.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret repeated words as shared wording that can be factored into the lead-in while preserving meaning and grammatical structure, not incidental occurrences of the same word.",
+    "unit": "block",
+    "violation_condition": "Words repeated across list items remain in the items even though they can be shared in the lead-in."
+   },
+   "when": [
+    "The repeated wording can be moved into the lead-in without changing the intended meaning."
+   ],
+   "why": "The grain test keeps repeated wording separate from grammatical parallelism; the neighbouring example explicitly tests parallelism instead."
+  },
+  {
+   "anchor": {
+    "block_id": "1e98b25b5c35",
+    "end": 42,
+    "prefix": "",
+    "quote": "Phrase lead-ins always end in a colon (:).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c8eed720e8bf",
+     "end": 35,
+     "prefix": "",
+     "quote": "phrase lead-in (ending in a colon).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5e078ece8f9a",
+     "end": 46,
+     "prefix": "",
+     "quote": "lead-in phrase or sentence followed by a colon",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A phrase lead-in, or a fragment-list lead-in, lacks a terminal colon or ends with a different mark."
+   },
+   "when": [
+    "Applies to phrase lead-ins for lists.",
+    "Fragment lists require a colon after either a phrase or sentence lead-in."
+   ],
+   "why": "G-2 combines the cases requiring a colon; G-4 absorbs the later descriptions. 'Always' makes the requirement explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "3bbb317ce1e8",
+    "end": 135,
+    "prefix": " end in a colon or a full stop. ",
+    "quote": "Choose one punctuation mark and use it for all sentence lead-ins in your document.",
+    "start": 53,
+    "suffix": " If in doubt, choose a colon; it"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3bbb317ce1e8",
+     "end": 52,
+     "prefix": "",
+     "quote": "Sentence lead-ins can end in a colon or a full stop.",
+     "start": 0,
+     "suffix": " Choose one punctuation mark and"
+    },
+    {
+     "block_id": "579841c04152",
+     "end": 49,
+     "prefix": "",
+     "quote": "sentence lead-in (ending in a colon or full stop)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c97bb9808cea",
+     "end": 105,
+     "prefix": "",
+     "quote": "For sentence lists, choose one type of punctuation to end any sentence lead-ins – a colon or a full stop.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Sentence lead-ins use an ending other than a colon or full stop, or inconsistently alternate between those endings within the document."
+   },
+   "when": [
+    "Sentence lead-ins may end in a colon or full stop.",
+    "Choose one of those endings consistently throughout the document.",
+    "A fragment-list lead-in must end in a colon."
+   ],
+   "why": "G-2 records the permitted endings and fragment-list restriction as conditions; G-4 absorbs the repeated consistency instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "bf3b5adabc07",
+    "end": 39,
+    "prefix": "",
+    "quote": "Headings do not have punctuation marks.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "32f7d183f756",
+     "end": 38,
+     "prefix": "",
+     "quote": "heading (without a colon or full stop)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "df88a0567045",
+     "end": 49,
+     "prefix": "",
+     "quote": "Stand-alone lists have a heading without a colon.",
+     "start": 0,
+     "suffix": " Brochures and technical documen"
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "In this list context, interpret the prohibition as terminal heading punctuation, not punctuation intrinsic to wording such as an apostrophe or hyphen.",
+    "unit": "block",
+    "violation_condition": "A list heading has a punctuation mark used as a terminal lead-in mark, such as a colon or full stop."
+   },
+   "when": [
+    "Applies when a heading introduces a list."
+   ],
+   "why": "G-4 consolidates repeated heading-ending requirements; the interpretation avoids treating every internal punctuation character as prohibited."
+  },
+  {
+   "anchor": {
+    "block_id": "11f85a32b0a7",
+    "end": 53,
+    "prefix": "",
+    "quote": "semicolons (;) or commas (,) at the end of list items",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "02f87f2ef0c9",
+     "end": 40,
+     "prefix": "",
+     "quote": "In a bullet or numbered list, don’t use:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An item in a bullet or numbered list ends with a semicolon or comma."
+   },
+   "when": [
+    "Applies to bullet and numbered lists."
+   ],
+   "why": "The list item and its lead-in state one prohibition; commas and semicolons are alternatives in the same end-punctuation check."
+  },
+  {
+   "anchor": {
+    "block_id": "638ec6015355",
+    "end": 31,
+    "prefix": "",
+    "quote": "‘and’ or ‘or’ after list items.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "76bb0e67ec98",
+     "end": 138,
+     "prefix": "",
+     "quote": "Only include ‘and’ or ‘or’ after the second-last list item if it is critical to meaning – for example, you are writing in a legal context.",
+     "start": 0,
+     "suffix": " Make sure the lead-in is a clea"
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A bullet or numbered list appends ‘and’ or ‘or’ to an item when it is not critical to meaning, or appends it somewhere other than after the second-last item."
+   },
+   "when": [
+    "Applies to bullet and numbered lists.",
+    "‘And’ or ‘or’ is allowed after the second-last item only when critical to meaning, for example in a legal context."
+   ],
+   "why": "G-3 makes the critical-to-meaning allowance an exception to the prohibition, not a separate rule."
+  },
+  {
+   "anchor": {
+    "block_id": "2aece538a9dc",
+    "end": 96,
+    "prefix": "",
+    "quote": "When listing items that may be additional or optional, write a lead-in to explain any variables.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "76bb0e67ec98",
+     "end": 226,
+     "prefix": "are writing in a legal context. ",
+     "quote": "Make sure the lead-in is a clear guide for how this kind of list should be interpreted.",
+     "start": 139,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The page supplies this as a lead-in example without accompanying list items.",
+     "parts": [
+      {
+       "block_id": "e4cb7b555b10",
+       "end": 49,
+       "prefix": "",
+       "quote": "Select your preference from one of these options:",
+       "start": 0,
+       "suffix": " [Lead-in with many options]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The required number of selections is explicit.",
+     "parts": [
+      {
+       "block_id": "8248b5f7c97c",
+       "end": 63,
+       "prefix": "",
+       "quote": "Please write your response to any 3 of the following questions:",
+       "start": 0,
+       "suffix": " [Lead-in with a specific number"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The manual presents this as a lead-in for a choice between 2 options.",
+     "parts": [
+      {
+       "block_id": "fb835979a8cd",
+       "end": 41,
+       "prefix": "",
+       "quote": "Applicants need to choose between either:",
+       "start": 0,
+       "suffix": " [Lead-in with a choice between "
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A list with optional or additional items, selection requirements, or meaning-critical ‘and’ or ‘or’ has a lead-in that does not explain how the items are to be interpreted or selected."
+   },
+   "when": [
+    "The list contains additional or optional items or requires a particular number or combination of choices.",
+    "Also applies when ‘and’ or ‘or’ after a list item is critical to meaning."
+   ],
+   "why": "G-2 combines the situations requiring interpretive guidance in the lead-in; example glosses are excluded from the quoted examples."
+  },
+  {
+   "anchor": {
+    "block_id": "4c64164d48f5",
+    "end": 73,
+    "prefix": "",
+    "quote": "Don’t write ‘etc.’ at the end of the list to show the list is incomplete.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "58835d6395f7",
+     "end": 79,
+     "prefix": "",
+     "quote": "Lead-ins for incomplete lists can use ‘for example’, ‘including’ or ‘includes’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A list ends with ‘etc.’ to indicate that further items have been omitted."
+   },
+   "when": [
+    "An incomplete list may instead be introduced with ‘for example’, ‘including’ or ‘includes’."
+   ],
+   "why": "G-3 records the permitted lead-in wording as an alternative, not a separate requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "03170fb27cad",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use full stops to complete sentences and fragment lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e3aaf123e642",
+     "end": 77,
+     "prefix": "",
+     "quote": "Finish each item in a sentence list with a full stop, including the last one.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2adcf653e15e",
+     "end": 64,
+     "prefix": "",
+     "quote": "Finish fragment lists with a full stop only after the last item.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dc056bed75cc",
+     "end": 87,
+     "prefix": "e list is a third type of list. ",
+     "quote": "Stand-alone lists don’t end in a full stop.",
+     "start": 44,
+     "suffix": ""
+    },
+    {
+     "block_id": "39734be0f13f",
+     "end": 71,
+     "prefix": " item with a capital letter and ",
+     "quote": "end it with a full stop.",
+     "start": 47,
+     "suffix": ""
+    },
+    {
+     "block_id": "1c34dff9ea75",
+     "end": 43,
+     "prefix": "",
+     "quote": "Add a full stop to the last list item only.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "37c0b3e2712e",
+     "end": 78,
+     "prefix": "",
+     "quote": "Don’t add full stops to the end of any of the list items (even the last item).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "99dceafd6f56c25d",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A sentence-list item lacks a final full stop, a fragment list lacks a full stop after its last item or has one after an earlier item, or a stand-alone list item ends in a full stop."
+   },
+   "when": [
+    "Every item in a sentence list ends with a full stop.",
+    "Only the last item in a fragment list ends with a full stop.",
+    "No item in a stand-alone list ends with a full stop."
+   ],
+   "why": "G-2 treats list type as the condition controlling one end-full-stop check; G-4 absorbs its later repetitions."
+  },
+  {
+   "anchor": {
+    "block_id": "37bdd73743c4",
+    "end": 51,
+    "prefix": "",
+    "quote": "Follow normal sentence structure in each list item.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c09183817082",
+     "end": 75,
+     "prefix": "",
+     "quote": "Sentence lists have a list of sentences, each marked by bullets or numbers.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An item presented as part of a sentence list is not a grammatically complete sentence."
+   },
+   "when": [
+    "Applies to sentence lists.",
+    "Imperative sentences may have an understood rather than explicitly stated subject."
+   ],
+   "why": "The body states an actionable item-completeness requirement; the surrounding type heading also groups several independent formatting checks."
+  },
+  {
+   "anchor": {
+    "block_id": "39734be0f13f",
+    "end": 42,
+    "prefix": "",
+    "quote": "Start each list item with a capital letter",
+    "start": 0,
+    "suffix": " and end it with a full stop."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0372c1fbd5f0",
+     "end": 80,
+     "prefix": "",
+     "quote": "Use lower case for the first letter of each fragment, unless it’s a proper noun.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e4e64379607f",
+     "end": 43,
+     "prefix": "",
+     "quote": "Start each list item with a capital letter.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The fragment-list items begin in lower case.",
+     "parts": [
+      {
+       "block_id": "4113224a73fb",
+       "end": 80,
+       "prefix": "",
+       "quote": "Writers should become familiar with the conventional types of content structure:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "616751ce13af",
+       "end": 12,
+       "prefix": "",
+       "quote": "hierarchical",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "878ff7b0ac51",
+       "end": 10,
+       "prefix": "",
+       "quote": "sequential",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "0aa279159a55",
+       "end": 10,
+       "prefix": "",
+       "quote": "narrative.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A sentence-list or stand-alone-list item starts in lower case, or a fragment-list item starts with a capital despite not beginning with a proper noun."
+   },
+   "when": [
+    "Sentence-list and stand-alone-list items start with a capital letter.",
+    "Fragment-list items start in lower case unless the first word is a proper noun."
+   ],
+   "why": "G-2 combines list-type-dependent initial case in one check and records the proper-noun exception."
+  },
+  {
+   "anchor": {
+    "block_id": "701bccfcaf23",
+    "end": 61,
+    "prefix": "",
+    "quote": "Align run-over lines with the text, not the bullet or number.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A run-over line in a sentence-list item aligns with its bullet or number rather than with the item's text."
+   },
+   "when": [
+    "Applies to sentence lists with items that wrap onto another line."
+   ],
+   "why": "This is a separate observable text-alignment property, not a repetition of punctuation or grammatical rules."
+  },
+  {
+   "anchor": {
+    "block_id": "82e4f1693ae9",
+    "end": 63,
+    "prefix": "",
+    "quote": "Avoid using multiple sentences in each bullet or numbered item.",
+    "start": 0,
+    "suffix": " If you include more than one se"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "82e4f1693ae9",
+     "end": 134,
+     "prefix": "n each bullet or numbered item. ",
+     "quote": "If you include more than one sentence per list item, consider whether:",
+     "start": 64,
+     "suffix": ""
+    },
+    {
+     "block_id": "d0fd688cc68a",
+     "end": 43,
+     "prefix": "",
+     "quote": "all list items conform to a similar pattern",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "7a09375ebd42",
+     "end": 39,
+     "prefix": "",
+     "quote": "the list builds rhythm for readability.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Each numbered item contains one sentence.",
+     "parts": [
+      {
+       "block_id": "cad3a38a091c",
+       "end": 25,
+       "prefix": "",
+       "quote": "Actions for the committee",
+       "start": 0,
+       "suffix": " [Heading without a colon before"
+      },
+      {
+       "block_id": "976bd89bf27c",
+       "end": 50,
+       "prefix": "",
+       "quote": "The secretary will respond to each recommendation.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "464bad68ae83",
+       "end": 69,
+       "prefix": "",
+       "quote": "The secretary will allocate responses that need more work to members.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "3c3e279ab4f3",
+       "end": 72,
+       "prefix": "",
+       "quote": "Members will discuss the recommendations at the next meeting on 9 March.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The sentence lead-in is separate from the single-sentence items.",
+     "parts": [
+      {
+       "block_id": "7b2b73bf1fa8",
+       "end": 49,
+       "prefix": "",
+       "quote": "The committee members decided on several actions.",
+       "start": 0,
+       "suffix": " [Sentence lead-in to a sentence"
+      },
+      {
+       "block_id": "a987d8d48448",
+       "end": 50,
+       "prefix": "",
+       "quote": "The secretary will respond to each recommendation.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "215995bd147e",
+       "end": 69,
+       "prefix": "",
+       "quote": "The secretary will allocate responses that need more work to members.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "9491ace2b99a",
+       "end": 72,
+       "prefix": "",
+       "quote": "Members will discuss the recommendations at the next meeting on 9 March.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Treat multiple sentences as discouraged rather than absolutely forbidden. The following advice identifies similar item patterns and readable rhythm as considerations, but supplies no hard acceptance test.",
+    "unit": "block",
+    "violation_condition": "A bullet or numbered item contains multiple sentences without maintaining a similar pattern across items and readable rhythm."
+   },
+   "when": [
+    "The instruction occurs under sentence lists.",
+    "More than one sentence per item is contemplated when items retain a similar pattern and the list builds readable rhythm."
+   ],
+   "why": "G-2 keeps the qualification with the discouragement; G-5 does not turn the writer's consideration process into another check."
+  },
+  {
+   "anchor": {
+    "block_id": "0aedc06d331e",
+    "end": 103,
+    "prefix": "",
+    "quote": "Use full sentence list items for imperative list items where there is no stated subject in the lead-in.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "eb52ede4538d",
+     "end": 72,
+     "prefix": "",
+     "quote": "Use fragment list items when the lead-in states the grammatical subject.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The imperative items receive sentence treatment because the phrase lead-in supplies no subject.",
+     "parts": [
+      {
+       "block_id": "a5fea2bfeb56",
+       "end": 14,
+       "prefix": "",
+       "quote": "To write well:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "be0250a3a7ad",
+       "end": 19,
+       "prefix": "",
+       "quote": "Use everyday words.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "fcc668218389",
+       "end": 33,
+       "prefix": "",
+       "quote": "Learn about the words people use.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c8e26b18712b",
+       "end": 49,
+       "prefix": "",
+       "quote": "Choose simple words, not complicated expressions.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "A subject stated in the lead-in means a subject grammatically shared with the items, not merely any subject appearing in an independent introductory sentence.",
+    "unit": "block",
+    "violation_condition": "Imperative items without a grammatical subject supplied by the lead-in are treated as fragments, or items continuing a subject supplied by the lead-in are treated as independent sentence items."
+   },
+   "when": [
+    "Imperative items with no stated subject in the lead-in receive full-sentence treatment.",
+    "Items continuing the grammatical subject in the lead-in receive fragment treatment.",
+    "This lead-in distinction does not classify stand-alone lists introduced by headings."
+   ],
+   "why": "G-2 combines the complementary subject-sharing cases into one item-type decision."
+  },
+  {
+   "anchor": {
+    "block_id": "27817a931bf0",
+    "end": 54,
+    "prefix": "",
+    "quote": "Make sure each fragment can complete a phrase lead-in.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "cfeca9d5155f",
+     "end": 123,
+     "prefix": "",
+     "quote": "The last rule for fragment lists means that if you add each fragment to a phrase lead-in, it will make a complete sentence.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d3af9ebead00",
+     "end": 76,
+     "prefix": "",
+     "quote": "Fragment list items complete phrase lead-ins to form a grammatical sentence.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Each fragment completes the phrase lead-in.",
+     "parts": [
+      {
+       "block_id": "d25cc7a94d3e",
+       "end": 29,
+       "prefix": "",
+       "quote": "Queensland is famous for its:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f4f0e1327717",
+       "end": 23,
+       "prefix": "",
+       "quote": "islands and coral reefs",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f010ff763ac8",
+       "end": 17,
+       "prefix": "",
+       "quote": "abundant wildlife",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "07c2a7ee14c4",
+       "end": 19,
+       "prefix": "",
+       "quote": "tropical rainforest",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f03a0c836784",
+       "end": 18,
+       "prefix": "",
+       "quote": "beautiful beaches.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual identifies the second and third items as incompatible with the phrase lead-in.",
+     "parts": [
+      {
+       "block_id": "acb32687143d",
+       "end": 29,
+       "prefix": "",
+       "quote": "Queensland is famous for its:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "11c94b0e8991",
+       "end": 23,
+       "prefix": "",
+       "quote": "islands and coral reefs",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7f854b0579f6",
+       "end": 34,
+       "prefix": "",
+       "quote": "experience the tropical rainforest",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "23a3df616f84",
+       "end": 30,
+       "prefix": "",
+       "quote": "the wildlife. It can kill you.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "3d65c611a9e3",
+       "end": 18,
+       "prefix": "",
+       "quote": "beautiful beaches.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Combining a fragment-list item with its phrase lead-in fails to produce a complete grammatical sentence."
+   },
+   "when": [
+    "Applies to fragment lists with a phrase lead-in.",
+    "Each item is tested separately with the lead-in."
+   ],
+   "why": "G-4 absorbs the explanations; E-3 preserves each complete list example."
+  },
+  {
+   "anchor": {
+    "block_id": "3bd92a9d682d",
+    "end": 120,
+    "prefix": " the list should be very short. ",
+    "quote": "The full sentence should be 25 words or less.",
+    "start": 75,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "3bd92a9d682d",
+     "end": 74,
+     "prefix": "",
+     "quote": "If list items run-on from a phrase lead-in, the list should be very short.",
+     "start": 0,
+     "suffix": " The full sentence should be 25 "
+    }
+   ],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret the full sentence as the phrase lead-in plus all the run-on list items read as one sentence, rather than counting each lead-in–item pairing separately. The page does not explicitly resolve that counting distinction.",
+    "unit": "block",
+    "violation_condition": "A list running on from a phrase lead-in forms a full sentence longer than 25 words."
+   },
+   "when": [
+    "Applies when list items run on from a phrase lead-in."
+   ],
+   "why": "G-4 uses the explicit 25-word wording instead of a second vague shortness rule; E-4 exposes the counting interpretation."
+  },
+  {
+   "anchor": {
+    "block_id": "54be70c0d903",
+    "end": 125,
+    "prefix": "can also be sentence fragments. ",
+    "quote": "Items cannot be full sentences.",
+    "start": 94,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "54be70c0d903",
+     "end": 56,
+     "prefix": "",
+     "quote": "Items in stand-alone lists can be nouns or noun phrases.",
+     "start": 0,
+     "suffix": " They can also be sentence fragm"
+    },
+    {
+     "block_id": "54be70c0d903",
+     "end": 93,
+     "prefix": "s can be nouns or noun phrases. ",
+     "quote": "They can also be sentence fragments.",
+     "start": 57,
+     "suffix": " Items cannot be full sentences."
+    },
+    {
+     "block_id": "eff571c7bc16",
+     "end": 58,
+     "prefix": "",
+     "quote": "Stand-alone list items do not form a grammatical sentence.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The manual presents these task phrases as stand-alone items.",
+     "parts": [
+      {
+       "block_id": "9b04d78022de",
+       "end": 15,
+       "prefix": "",
+       "quote": "My weekly tasks",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "2f27f2c2e3f1",
+       "end": 22,
+       "prefix": "",
+       "quote": "Answer phone enquiries",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8f939051f11b",
+       "end": 22,
+       "prefix": "",
+       "quote": "Book conference venues",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f9e0ba0bce5f",
+       "end": 16,
+       "prefix": "",
+       "quote": "Order stationery",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "1ba8d0f21467",
+       "end": 20,
+       "prefix": "",
+       "quote": "Take meeting minutes",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 22,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "The page treats verb-initial task phrases such as its weekly-task items as stand-alone fragments. Do not classify such phrases as prohibited full sentences solely because they could also be read as imperatives.",
+    "unit": "block",
+    "violation_condition": "A stand-alone list contains full-sentence items rather than nouns, noun phrases or sentence fragments."
+   },
+   "when": [
+    "Applies to stand-alone lists.",
+    "Nouns, noun phrases and sentence fragments are allowed."
+   ],
+   "why": "G-3 keeps the allowed forms with the prohibition; the example prevents overreading imperative-looking task phrases."
+  },
+  {
+   "anchor": {
+    "block_id": "d9af3454c532",
+    "end": 17,
+    "prefix": "",
+    "quote": "Indent most lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "23f904ef7478",
+     "end": 45,
+     "prefix": "",
+     "quote": "Indent most types of lists after the lead-in.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e2be16a7b85d",
+     "end": 60,
+     "prefix": "",
+     "quote": "Indent stand-alone lists if it helps the user scan the list.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5a8be359fb78",
+     "end": 58,
+     "prefix": "",
+     "quote": "Indent each list item if it helps people scan the content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 23,
+   "seed_uid": "79a068785fce636b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The explicit exception concerns stand-alone lists. The page does not exhaustively define 'most' or provide an objective test for when indentation helps scanning.",
+    "unit": "block",
+    "violation_condition": "A list following a lead-in is not indented, or a stand-alone list is not indented where indentation is needed to help users scan it."
+   },
+   "when": [
+    "Indent lists after their lead-in.",
+    "Stand-alone lists need indentation only if it helps users scan the content."
+   ],
+   "why": "G-2 makes stand-alone indentation a condition of the same formatting check; G-4 absorbs repetitions."
+  },
+  {
+   "anchor": {
+    "block_id": "86f9fdb3cf81",
+    "end": 124,
+    "prefix": "",
+    "quote": "Ideally, lists of the same type should follow the same format, particularly when they appear close together in your content.",
+    "start": 0,
+    "suffix": " For example, a fragment list sh"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "d97b7d2272c7",
+     "end": 45,
+     "prefix": "",
+     "quote": "Aim to write lists that conform to their type",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "86f9fdb3cf81",
+     "end": 199,
+     "prefix": "close together in your content. ",
+     "quote": "For example, a fragment list should look the same as other fragment lists.",
+     "start": 125,
+     "suffix": ""
+    },
+    {
+     "block_id": "76f9fa7010ef",
+     "end": 207,
+     "prefix": "ns this is not always possible. ",
+     "quote": "For example, the logical flow of text can mean that some sentence lists work best with a sentence lead-in and others with a fragment lead-in.",
+     "start": 66,
+     "suffix": ""
+    },
+    {
+     "block_id": "04338cdb1ce6",
+     "end": 113,
+     "prefix": "",
+     "quote": "For stand-alone lists, follow the same format for all list items – with indent/bullets or without indent/bullets.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a58ea9bfbae9",
+     "end": 70,
+     "prefix": "",
+     "quote": "Use the same symbol, number or letter for the same level in each list.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 24,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Use this check for cross-list presentation consistency, not to issue additional findings for case, full stops or sentence-lead-in punctuation already checked separately. For multilevel lists, 'same symbol, number or letter' means the same marker form or numbering system at a level, not repeating the same numeric value.",
+    "unit": "document",
+    "violation_condition": "Lists of the same type use inconsistent formatting without a content-driven reason, including inconsistent stand-alone indentation or bullets, or inconsistent marker forms for the same multilevel-list level."
+   },
+   "when": [
+    "Compare lists of the same type, especially nearby lists.",
+    "Logical flow can justify different sentence or phrase lead-ins for sentence lists.",
+    "Stand-alone lists should consistently use indentation and bullets, or consistently omit them.",
+    "The marker form for a given multilevel-list level should be consistent across lists."
+   ],
+   "why": "G-2 combines cross-list consistency cases and the content-flow exception; G-4 avoids separate findings for the specific restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "7d2722d0155d",
+    "end": 45,
+    "prefix": "",
+    "quote": "Write numbered lists if the order is critical",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "75a3dd52b654",
+     "end": 90,
+     "prefix": "",
+     "quote": "Use a numbered (ordered) list when the order is important, such as a list of instructions.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a8ac1831218e",
+     "end": 80,
+     "prefix": "",
+     "quote": "Use an unordered list if the order is not critical to understanding the content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The page says users must complete these numbered steps in turn.",
+     "parts": [
+      {
+       "block_id": "c365a317de40",
+       "end": 35,
+       "prefix": "",
+       "quote": "How to register for the conference:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "049b99d0314a",
+       "end": 32,
+       "prefix": "",
+       "quote": "Choose the days you will attend.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "29d70a5f7e26",
+       "end": 36,
+       "prefix": "",
+       "quote": "Pick the workshops you want to join.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "ed61c5dc80b5",
+       "end": 43,
+       "prefix": "",
+       "quote": "Enter your discount code (if you have one).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 25,
+   "seed_uid": "ce329e2b671706a0",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An order-critical list is not numbered, or a list whose order is not critical to understanding is presented as numbered rather than unordered."
+   },
+   "when": [
+    "Use a numbered list when order matters, such as instructions that must be completed in sequence.",
+    "Use an unordered list when order is not critical to understanding.",
+    "An unordered list can still be arranged alphabetically or in another helpful sequence."
+   ],
+   "why": "G-2 treats critical and non-critical order as complementary conditions for one list-marker choice."
+  },
+  {
+   "anchor": {
+    "block_id": "b1dae6c73af2",
+    "end": 34,
+    "prefix": "",
+    "quote": "Avoid using in-line numbered lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0d5de557592f",
+     "end": 77,
+     "prefix": "",
+     "quote": "Break up text into a numbered list instead of using an in-line numbered list.",
+     "start": 0,
+     "suffix": " This will aid readability."
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The items are a displayed numbered list.",
+     "parts": [
+      {
+       "block_id": "0fa22ea0045e",
+       "end": 21,
+       "prefix": "",
+       "quote": "The facilitator will:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d4600b489bcb",
+       "end": 38,
+       "prefix": "",
+       "quote": "welcome participants to the conference",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f2522854fc77",
+       "end": 31,
+       "prefix": "",
+       "quote": "introduce each of the speakers.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The numbered items are embedded in the sentence.",
+     "parts": [
+      {
+       "block_id": "5eb30d279b4d",
+       "end": 102,
+       "prefix": "",
+       "quote": "The facilitator will 1) welcome participants to the conference, and 2) introduce each of the speakers.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 26,
+   "seed_uid": "6654a7ede46e6e08",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Numbered items are embedded in running text instead of presented as a displayed numbered list."
+   },
+   "when": [],
+   "why": "G-4 treats the body instruction as the remedy for the heading's prohibition; E-3 preserves the displayed list."
+  },
+  {
+   "anchor": {
+    "block_id": "436b5c48b22a",
+    "end": 62,
+    "prefix": "",
+    "quote": "To order points in general content, don’t use ordinal numbers.",
+    "start": 0,
+    "suffix": " Instead, you can either:"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f2dc7e9b7690",
+     "end": 19,
+     "prefix": "",
+     "quote": "use a numbered list",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "82ee2e855e37",
+     "end": 58,
+     "prefix": "",
+     "quote": "rephrase the sentences to link them in the same paragraph.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The prose links the sequence with ‘Next’ rather than ordinals.",
+     "parts": [
+      {
+       "block_id": "b1230dfff262",
+       "end": 108,
+       "prefix": "",
+       "quote": "The facilitator will welcome participants to the conference. Next, they will introduce each of the speakers.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual explicitly rejects the ordinal sequencing.",
+     "parts": [
+      {
+       "block_id": "2760354ddb4c",
+       "end": 120,
+       "prefix": "",
+       "quote": "The facilitator will firstly welcome participants to the conference. Secondly, they will introduce each of the speakers.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 27,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "General prose uses ordinals such as ‘firstly’ and ‘secondly’ to sequence points."
+   },
+   "when": [
+    "Applies to ordering points in general content, not to expressing actual ranks.",
+    "A numbered list or linked sentences in the same paragraph are allowed alternatives."
+   ],
+   "why": "The ordinary paragraph following the example label states a new rule; G-3 keeps its permitted alternatives with that rule."
+  },
+  {
+   "anchor": {
+    "block_id": "82823488c83d",
+    "end": 53,
+    "prefix": "",
+    "quote": "Put unordered lists in a sequence that helps the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "b7003ac523ae",
+     "end": 68,
+     "prefix": "",
+     "quote": "List items in the order that will make sense to the user reading it.",
+     "start": 0,
+     "suffix": " It’s common to write lists in a"
+    },
+    {
+     "block_id": "b7003ac523ae",
+     "end": 118,
+     "prefix": "e sense to the user reading it. ",
+     "quote": "It’s common to write lists in alphabetical order.",
+     "start": 69,
+     "suffix": ""
+    },
+    {
+     "block_id": "e7a94c1c4f93",
+     "end": 240,
+     "prefix": "he same list of national parks. ",
+     "quote": "For example, you could also sort them by proximity to Perth.",
+     "start": 180,
+     "suffix": "]"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The manual identifies the alphabetical sequence as helpful while allowing context-dependent alternatives.",
+     "parts": [
+      {
+       "block_id": "9da597a92741",
+       "end": 25,
+       "prefix": "",
+       "quote": "National parks near Perth",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "711d17030bfc",
+       "end": 25,
+       "prefix": "",
+       "quote": "Avon Valley National Park",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e1a609e651d7",
+       "end": 24,
+       "prefix": "",
+       "quote": "Serpentine National Park",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "63a4e26e6e43",
+       "end": 22,
+       "prefix": "",
+       "quote": "Walyunga National Park",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8a0bba9a0e0d",
+       "end": 21,
+       "prefix": "",
+       "quote": "Yanchep National Park",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 28,
+   "seed_uid": "d8612a3c12a357b0",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Alphabetical order is an example, not a universal requirement. Choosing the helpful order depends on the user's purpose and context.",
+    "unit": "block",
+    "violation_condition": "An unordered list is arranged in a sequence that does not make sense for the user's purpose."
+   },
+   "when": [
+    "Applies to unordered lists.",
+    "Alphabetical order is common.",
+    "Context may justify another sequence, such as geographic proximity."
+   ],
+   "why": "G-2 keeps context-dependent ordering choices together; E-1 does not turn a different sensible order into a violation."
+  },
+  {
+   "anchor": {
+    "block_id": "f3e5a6e34197",
+    "end": 29,
+    "prefix": "",
+    "quote": "Avoid using a multilevel list",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "31f1b62eacea",
+     "end": 87,
+     "prefix": "",
+     "quote": "Some types of content need multilevel lists, but they can be hard for people to follow.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 29,
+   "seed_uid": "3d8a1512283fa7cc",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page acknowledges that some content needs multilevel lists but does not specify which content qualifies.",
+    "unit": "block",
+    "violation_condition": "Content uses a multilevel list when the hierarchy is not needed."
+   },
+   "when": [
+    "Multilevel lists are allowed when the content needs a hierarchy.",
+    "Necessary multilevel lists remain subject to the depth and marker rules."
+   ],
+   "why": "G-3 records necessary multilevel lists as an exception; the specific requirements for allowed multilevel lists remain separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "f3a4bd82d88d",
+    "end": 29,
+    "prefix": "",
+    "quote": "Don’t use more than 2 levels.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 30,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A multilevel list has three or more levels."
+   },
+   "when": [
+    "Applies when a multilevel list is used."
+   ],
+   "why": "The depth cap is independently testable even when using a multilevel list is justified."
+  },
+  {
+   "anchor": {
+    "block_id": "8e14424c58b6",
+    "end": 62,
+    "prefix": "",
+    "quote": "Use lowercase letters for the second level in a numbered list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 31,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Second-level markers in a numbered list use something other than lowercase letters."
+   },
+   "when": [
+    "Applies to the second level of a multilevel numbered list."
+   ],
+   "why": "This is the specific second-level marker check for numbered lists, distinct from depth and cross-list consistency."
+  },
+  {
+   "anchor": {
+    "block_id": "f5b50f7d3756",
+    "end": 76,
+    "prefix": "",
+    "quote": "Use a dash for the second level in a bullet list, not hollow (open) bullets.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The second-level markers are dashes.",
+     "parts": [
+      {
+       "block_id": "4103110de07c",
+       "end": 54,
+       "prefix": "",
+       "quote": "There are many types of birds in Australia, including:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f201d05e2fb2",
+       "end": 15,
+       "prefix": "",
+       "quote": "nocturnal birds",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e4a1cc9b6ab4",
+       "end": 12,
+       "prefix": "",
+       "quote": "– frogmouths",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "9b4e2d9a6654",
+       "end": 11,
+       "prefix": "",
+       "quote": "– nightjars",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "4fa74615f0cf",
+       "end": 6,
+       "prefix": "",
+       "quote": "– owls",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "ccf4a3f8e1eb",
+       "end": 11,
+       "prefix": "",
+       "quote": "marsh birds",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b6026f455ca1",
+       "end": 8,
+       "prefix": "",
+       "quote": "– crakes",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "99044c079fa0",
+       "end": 8,
+       "prefix": "",
+       "quote": "– grebes",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f775aa29ebce",
+       "end": 9,
+       "prefix": "",
+       "quote": "– snipes.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual labels this nested-bullet version ‘Not this’; the marker difference is represented by list formatting rather than characters in the item text.",
+     "parts": [
+      {
+       "block_id": "69dc1142a2f5",
+       "end": 54,
+       "prefix": "",
+       "quote": "There are many types of birds in Australia, including:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c6c4a7104eeb",
+       "end": 15,
+       "prefix": "",
+       "quote": "nocturnal birds",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "333a086fd08d",
+       "end": 10,
+       "prefix": "",
+       "quote": "frogmouths",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a90c28a051b0",
+       "end": 9,
+       "prefix": "",
+       "quote": "nightjars",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "57d34186f66f",
+       "end": 4,
+       "prefix": "",
+       "quote": "owls",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "dacc6aebb16c",
+       "end": 11,
+       "prefix": "",
+       "quote": "marsh birds",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7280aba67db4",
+       "end": 6,
+       "prefix": "",
+       "quote": "crakes",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "4b47875f8590",
+       "end": 6,
+       "prefix": "",
+       "quote": "grebes",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "50baee24a9c7",
+       "end": 7,
+       "prefix": "",
+       "quote": "snipes.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 32,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Second-level items in a bullet list use hollow bullets or another marker instead of a dash."
+   },
+   "when": [
+    "Applies to the second level of a multilevel bullet list."
+   ],
+   "why": "The manual's contrast tests second-level bullet markers; E-3 keeps the lead-in and all nested items together."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 8861,
+  "output_tokens": 25160,
+  "reasoning_tokens": 8082
+ }
+}

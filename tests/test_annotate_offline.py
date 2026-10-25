@@ -18,6 +18,7 @@ import pytest
 
 from derek.corpus.normalise import NormalisedPage
 from derek.extract.blocks import RENDER_VERSION, parse_blocks
+from derek.ledger.store import load_ledger
 
 REPO = Path(__file__).resolve().parents[1]
 PAGE = REPO / "tools" / "annotate" / "index.html"
@@ -183,7 +184,15 @@ def test_every_seeded_candidate_maps_to_a_block(built):
             total += 1
             if seed["block_id"] not in ids:
                 unmatched += 1
-    assert total > 700, total
+    # Every heading candidate not yet answered by a golden span is shipped. The
+    # count falls as spans replace candidates (consensus, ADR-027, swept most
+    # pages), so it is checked against the ledger rather than a fixed number.
+    from derek.corpus.eligibility import load_eligibility
+    eligibility = load_eligibility(REPO / "corpus" / "eligibility.yaml")
+    expected = sum(1 for r in load_ledger(REPO / "ledger" / "rules.jsonl").values()
+                   if r.derivation.method != "human_span"
+                   and eligibility.decide(r.source.page_path)[0])
+    assert total == expected and total > 0, (total, expected)
     assert unmatched == 0, unmatched
 
 
@@ -443,6 +452,26 @@ def test_replaying_the_same_export_changes_nothing(replay):
 
     assert replay.module.main([str(path)]) == 0
     assert (replay.spans.read_bytes(), replay.ledger.read_bytes()) == after_first
+
+
+def test_a_later_export_does_not_replay_earlier_decisions(replay):
+    """Each upload replays its own spans through the gate, not everyone else's.
+
+    It used to replay every tagged span in the golden set, so each upload added
+    a duplicate history row to every rule anyone had ever kept.
+    """
+    blocks = _blocks_of()
+    prose = [b for b in blocks if b.kind == "para" and b.heading_path]
+    first = _export(replay.tmp, [_span_op(prose[0], tags=ACCEPT, oid="op-a")], name="a.jsonl")
+    assert replay.module.main([str(first)]) == 0
+    before = {u: len(r.review.history) for u, r in load_ledger(replay.ledger).items()}
+
+    second = _export(replay.tmp, [_span_op(prose[5], tags=ACCEPT, oid="op-b")], name="b.jsonl")
+    assert replay.module.main([str(second)]) == 0
+    after = {u: len(r.review.history) for u, r in load_ledger(replay.ledger).items()}
+
+    grew = [u for u in before if after.get(u, 0) > before[u]]
+    assert grew == [], "an earlier span's decision was replayed again"
 
 
 def test_one_bad_op_writes_nothing(replay):

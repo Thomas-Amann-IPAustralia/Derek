@@ -1,0 +1,48 @@
+{
+ "effort": "medium",
+ "input_sha256": "4c21f92c22c71e551aaa2851544504262b6c9320d87a54d7bba8789450504cba",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/punctuation/ellipses.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3605,
+  "output_tokens": 294,
+  "reasoning_tokens": 5333
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "G-1: an H2 heading that groups specific rules under it.",
+   "restates": "",
+   "verdict": "section"
+  },
+  {
+   "id": "C2",
+   "note": "not_text: font styling is a publication format or layout property, not text.",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C3",
+   "note": "G-2, G-4: an exception and condition modifying the ellipsis spacing rule A4.",
+   "restates": "A4",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C4",
+   "note": "G-5: advice to the writer, not an objective property of the text.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C5",
+   "note": "G-5: editorial advice to the writer about original source intent, not a checkable text property.",
+   "restates": "",
+   "verdict": "advice"
+  }
+ ],
+ "version": "v2"
+}

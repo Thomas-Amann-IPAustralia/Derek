@@ -1,0 +1,86 @@
+{
+ "effort": "low",
+ "input_sha256": "515bdb93c01d62519a608b02aef4f62c25fdd534c2ac5ccd708737910f7838ee",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "ce81e430e5d5",
+    "end": 38,
+    "prefix": "",
+    "quote": "Use WCAG principles to meet user needs",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level guidance and overview introducing the 4 WCAG principles reframed as user needs; does not prescribe a specific testable text rule (G-5).",
+   "reason": "advice",
+   "seed_uid": "18e55ab07100a65f"
+  },
+  {
+   "anchor": {
+    "block_id": "272e57695e90",
+    "end": 58,
+    "prefix": "",
+    "quote": "Follow Style Manual guidance on accessibility requirements",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Directs the writer to consult accessibility callouts throughout other pages in the Style Manual rather than stating a rule about text (G-5).",
+   "reason": "advice",
+   "seed_uid": "ff54677f3e558feb"
+  },
+  {
+   "anchor": {
+    "block_id": "8f67775bfc79",
+    "end": 79,
+    "prefix": "",
+    "quote": "Look for accessibility requirements as you check guidance for different topics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Meta-guidance advising the writer how to use the Style Manual (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/apply-accessibility-principles.md",
+ "page_sha256": "d54c27c06cb4f9df67622430c8388471fa4bcbed21d6f51ed42568b241198ce3",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "ce81e430e5d5",
+    "note": "High-level guidance and overview introducing the 4 WCAG principles reframed as user needs; does not prescribe a specific testable text rule (G-5).",
+    "quote": "Use WCAG principles to meet user needs",
+    "reason": "advice"
+   },
+   {
+    "block_id": "272e57695e90",
+    "note": "Directs the writer to consult accessibility callouts throughout other pages in the Style Manual rather than stating a rule about text (G-5).",
+    "quote": "Follow Style Manual guidance on accessibility requirements",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8f67775bfc79",
+    "note": "Meta-guidance advising the writer how to use the Style Manual (G-5).",
+    "quote": "Look for accessibility requirements as you check guidance for different topics.",
+    "reason": "advice"
+   }
+  ],
+  "rules": []
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3890,
+  "output_tokens": 266,
+  "reasoning_tokens": 0
+ }
+}

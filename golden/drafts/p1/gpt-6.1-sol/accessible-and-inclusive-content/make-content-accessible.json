@@ -1,0 +1,143 @@
+{
+ "effort": "high",
+ "input_sha256": "e9d25599d859605b1dc82673a021b09af922bc471773671602f163bef0adddd1",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "ca3b0db60566",
+    "end": 154,
+    "prefix": "o access information they need. ",
+    "quote": "Help them by designing accessible and inclusive content.",
+    "start": 98,
+    "suffix": ""
+   },
+   "note": "General design advice, not a specific property of text that a checker could flag (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2c653ef87e8b",
+    "end": 23,
+    "prefix": "",
+    "quote": "Make content accessible",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the overview of accessibility and inclusion rather than stating an independent text-level check (G-1).",
+   "reason": "section",
+   "seed_uid": "9872f0e6241ca1b1"
+  },
+  {
+   "anchor": {
+    "block_id": "f2511d4c868b",
+    "end": 66,
+    "prefix": "",
+    "quote": "Government services and products need to be available to everyone.",
+    "start": 0,
+    "suffix": " This means creating inclusive c"
+   },
+   "note": "Sets an expectation for government services and products as a whole, not a specific requirement for their wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4448c8494bd8",
+    "end": 92,
+    "prefix": "",
+    "quote": "Australian Government digital services must be usable, inclusive, accessible and responsive.",
+    "start": 0,
+    "suffix": " This is outlined in The data an"
+   },
+   "note": "States a requirement for digital services overall, not a text-level accessibility rule.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ae0a78c53487",
+    "end": 40,
+    "prefix": "",
+    "quote": "Follow accessibility guidance in context",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Directs writers to follow guidance elsewhere; it does not state a separate check on text (G-5).",
+   "reason": "advice",
+   "seed_uid": "34e93acd14cc4e7a"
+  },
+  {
+   "anchor": {
+    "block_id": "adbdb2410e3d",
+    "end": 90,
+    "prefix": "",
+    "quote": "Style Manual topics give you the guidance you need to follow to create accessible content.",
+    "start": 0,
+    "suffix": " Where there are specific access"
+   },
+   "note": "Refers writers to contextual guidance rather than specifying an additional requirement that text can violate (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/make-content-accessible.md",
+ "page_sha256": "5456fc98587b3e1ba592fd9effcc4d4d442d1d2690523517099797bcd215ff87",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "ca3b0db60566",
+    "note": "General design advice, not a specific property of text that a checker could flag (G-5).",
+    "quote": "Help them by designing accessible and inclusive content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2c653ef87e8b",
+    "note": "Introduces the overview of accessibility and inclusion rather than stating an independent text-level check (G-1).",
+    "quote": "Make content accessible",
+    "reason": "section"
+   },
+   {
+    "block_id": "f2511d4c868b",
+    "note": "Sets an expectation for government services and products as a whole, not a specific requirement for their wording.",
+    "quote": "Government services and products need to be available to everyone.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4448c8494bd8",
+    "note": "States a requirement for digital services overall, not a text-level accessibility rule.",
+    "quote": "Australian Government digital services must be usable, inclusive, accessible and responsive.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ae0a78c53487",
+    "note": "Directs writers to follow guidance elsewhere; it does not state a separate check on text (G-5).",
+    "quote": "Follow accessibility guidance in context",
+    "reason": "advice"
+   },
+   {
+    "block_id": "adbdb2410e3d",
+    "note": "Refers writers to contextual guidance rather than specifying an additional requirement that text can violate (G-5).",
+    "quote": "Style Manual topics give you the guidance you need to follow to create accessible content.",
+    "reason": "advice"
+   }
+  ],
+  "rules": []
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3627,
+  "output_tokens": 1121,
+  "reasoning_tokens": 697
+ }
+}

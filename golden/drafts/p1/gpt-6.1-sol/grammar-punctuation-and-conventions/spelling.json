@@ -1,0 +1,541 @@
+{
+ "effort": "high",
+ "input_sha256": "fc8ede3aecf34a39ad6abe9ebc2f2ea62f973530517d22f6e7a8c1e2871645e2",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "8fe8680c184a",
+    "end": 119,
+    "prefix": "rrors detract from readability. ",
+    "quote": "Follow one dictionary for consistency and use it to check variable spellings.",
+    "start": 42,
+    "suffix": ""
+   },
+   "note": "G-5: describes the writer’s reference and checking process; the actionable first-listed-spelling requirement is marked separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8d0d4469aff1",
+    "end": 37,
+    "prefix": "",
+    "quote": "Choose one dictionary for consistency",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: choosing a reference is a workflow action, not independently a property a checker can flag in the submitted text.",
+   "reason": "advice",
+   "seed_uid": "f717d3d537ffa97c"
+  },
+  {
+   "anchor": {
+    "block_id": "5c0e75b4751c",
+    "end": 76,
+    "prefix": "",
+    "quote": "Government organisations should choose one dictionary of Australian English.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an organisational choice of reference, rather than a separate textual requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a04ac82d7640",
+    "end": 30,
+    "prefix": "",
+    "quote": "This manual recommends either:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces recommended reference dictionaries, not a separate spelling finding.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bc46a76d1842",
+    "end": 84,
+    "prefix": "",
+    "quote": "Use your organisation’s preferred dictionary as a spelling reference when you write.",
+    "start": 0,
+    "suffix": " Spelling and word usage can cha"
+   },
+   "note": "G-5: tells the writer which reference to consult.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bc46a76d1842",
+    "end": 209,
+    "prefix": "ord usage can change over time. ",
+    "quote": "Make sure you use an up-to-date edition that reflects current language usages.",
+    "start": 131,
+    "suffix": ""
+   },
+   "note": "G-5: concerns the reference edition used by the writer; consulting an outdated edition is not itself observable in the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3b0ce4938c4d",
+    "end": 97,
+    "prefix": "",
+    "quote": "Only use an alternative spelling listed for a word if you have evidence it will meet a user need.",
+    "start": 0,
+    "suffix": " Record decisions you make about"
+   },
+   "note": "G-2 and G-3: incorporated as the exception to the first-listed-spelling rule, not a second finding for the same spelling.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "05e8173260e1",
+    "end": 74,
+    "prefix": "",
+    "quote": "Specialist dictionaries are essential for scientific or technical writing.",
+    "start": 0,
+    "suffix": " The style sheet for the content"
+   },
+   "note": "G-5: recommends a research resource. The following requirement about specialist terms in the style sheet is marked separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "390f5ea75d12",
+    "end": 154,
+    "prefix": "ings, but there are exceptions. ",
+    "quote": "For Australian spellings, always use an Australian English dictionary.",
+    "start": 84,
+    "suffix": ""
+   },
+   "note": "G-5: identifies the reference to consult rather than stating an additional spelling test.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c47e1df7fcae",
+    "end": 30,
+    "prefix": "",
+    "quote": "Follow guidance in this manual",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a general direction to consult other guidance, not a standalone textual check.",
+   "reason": "advice",
+   "seed_uid": "b17bae8352b49d0e"
+  },
+  {
+   "anchor": {
+    "block_id": "ae39c8da7e8c",
+    "end": 24,
+    "prefix": "",
+    "quote": "Follow our guidance for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: introduces cross-references to guidance on other subjects; it does not state their individual rules.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "27a0912b41f1",
+    "end": 267,
+    "prefix": "ffer from those in this manual. ",
+    "quote": "This is perfectly acceptable – choose either of our recommended dictionaries (or a specialist dictionary) and follow it consistently.",
+    "start": 134,
+    "suffix": ""
+   },
+   "note": "G-3: permits dictionary-dependent differences from the manual’s spellings. This qualification is recorded on the first-listed-spelling rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a6e86e2be2d3",
+    "end": 58,
+    "prefix": "",
+    "quote": "Always follow our guidance for specific terms and phrases.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A general cross-reference, not an additional catch-all finding. Its precedence over dictionary defaults is recorded on the spelling-choice rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "04268f4f7ae8",
+    "end": 228,
+    "prefix": "ings used in the sixth edition. ",
+    "quote": "For example, we now write ‘ement’ not ‘ment’ in acknowledgement, lodgement and judgement (but we use ‘judgment’ for legal material).",
+    "start": 96,
+    "suffix": " This is consistent with current"
+   },
+   "note": "Describes the manual’s own spelling practice under ‘Spelling in this manual’; it is not phrased as an independent instruction requiring every organisation to adopt these spellings.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/spelling.md",
+ "page_sha256": "0c652b98460bc8e8fb1fe23a8f049f0f977fdeb3804321477b04bd34d1bece07",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "8fe8680c184a",
+    "note": "G-5: describes the writer’s reference and checking process; the actionable first-listed-spelling requirement is marked separately.",
+    "quote": "Follow one dictionary for consistency and use it to check variable spellings.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8d0d4469aff1",
+    "note": "G-5: choosing a reference is a workflow action, not independently a property a checker can flag in the submitted text.",
+    "quote": "Choose one dictionary for consistency",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5c0e75b4751c",
+    "note": "G-5: an organisational choice of reference, rather than a separate textual requirement.",
+    "quote": "Government organisations should choose one dictionary of Australian English.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a04ac82d7640",
+    "note": "Introduces recommended reference dictionaries, not a separate spelling finding.",
+    "quote": "This manual recommends either:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bc46a76d1842",
+    "note": "G-5: tells the writer which reference to consult.",
+    "quote": "Use your organisation’s preferred dictionary as a spelling reference when you write.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bc46a76d1842",
+    "note": "G-5: concerns the reference edition used by the writer; consulting an outdated edition is not itself observable in the text.",
+    "quote": "Make sure you use an up-to-date edition that reflects current language usages.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3b0ce4938c4d",
+    "note": "G-2 and G-3: incorporated as the exception to the first-listed-spelling rule, not a second finding for the same spelling.",
+    "quote": "Only use an alternative spelling listed for a word if you have evidence it will meet a user need.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "05e8173260e1",
+    "note": "G-5: recommends a research resource. The following requirement about specialist terms in the style sheet is marked separately.",
+    "quote": "Specialist dictionaries are essential for scientific or technical writing.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "390f5ea75d12",
+    "note": "G-5: identifies the reference to consult rather than stating an additional spelling test.",
+    "quote": "For Australian spellings, always use an Australian English dictionary.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c47e1df7fcae",
+    "note": "G-5: a general direction to consult other guidance, not a standalone textual check.",
+    "quote": "Follow guidance in this manual",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ae39c8da7e8c",
+    "note": "G-5: introduces cross-references to guidance on other subjects; it does not state their individual rules.",
+    "quote": "Follow our guidance for:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "27a0912b41f1",
+    "note": "G-3: permits dictionary-dependent differences from the manual’s spellings. This qualification is recorded on the first-listed-spelling rule.",
+    "quote": "This is perfectly acceptable – choose either of our recommended dictionaries (or a specialist dictionary) and follow it consistently.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a6e86e2be2d3",
+    "note": "A general cross-reference, not an additional catch-all finding. Its precedence over dictionary defaults is recorded on the spelling-choice rule.",
+    "quote": "Always follow our guidance for specific terms and phrases.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "04268f4f7ae8",
+    "note": "Describes the manual’s own spelling practice under ‘Spelling in this manual’; it is not phrased as an independent instruction requiring every organisation to adopt these spellings.",
+    "quote": "For example, we now write ‘ement’ not ‘ment’ in acknowledgement, lodgement and judgement (but we use ‘judgment’ for legal material).",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2c8901ce8b85",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "3b0ce4938c4d",
+      "quote": "Only use an alternative spelling listed for a word if you have evidence it will meet a user need."
+     },
+     {
+      "block_id": "27a0912b41f1",
+      "quote": "This is perfectly acceptable – choose either of our recommended dictionaries (or a specialist dictionary) and follow it consistently."
+     },
+     {
+      "block_id": "a6e86e2be2d3",
+      "quote": "Always follow our guidance for specific terms and phrases."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always use the first entry in the list.",
+    "specification": "The checker needs the selected dictionary and edition, together with any approved spelling exceptions. The page does not define what evidence is sufficient to establish a user need.",
+    "unit": "token",
+    "violation_condition": "A later-listed spelling variant is used instead of the selected dictionary’s first-listed spelling, without evidence that the alternative meets a user need.",
+    "when": [
+     "Applies where the selected dictionary lists alternative spellings of the same word.",
+     "An alternative listed spelling is permitted where there is evidence that it meets a user need.",
+     "Consistent use of an accepted dictionary may produce spellings different from those used in the Style Manual.",
+     "Specific Style Manual guidance for a term or phrase takes precedence over the dictionary default."
+    ],
+    "why": "G-2 and G-3: the user-need exception and dictionary-dependent variations qualify one spelling-choice check rather than creating additional rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3b0ce4938c4d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Record decisions you make about alternative spellings in a style sheet.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A decision to use an alternative dictionary spelling in the associated content is missing from its style sheet.",
+    "when": [
+     "Applies when an alternative spelling listed in the selected dictionary has been chosen.",
+     "Assess the style sheet against the spelling decisions made for the associated content."
+    ],
+    "why": "The missing record is a distinct textual omission, not the spelling-choice violation itself."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "05e8173260e1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "The style sheet for the content should include specialist terms.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A style sheet for scientific or technical content omits specialist terms used in that content.",
+    "when": [
+     "Applies to style sheets for scientific or technical writing.",
+     "Assess the style sheet alongside the associated content."
+    ],
+    "why": "This specifies a property of the style sheet, unlike the adjacent advice about consulting specialist dictionaries."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7924deed2ba5",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "The important thing is to use the word that matches the meaning you want to convey.",
+    "specification": "The intended meaning must be established from context or confirmed by the author. The page supplies no further test for resolving uncertain word choices.",
+    "unit": "sentence",
+    "violation_condition": "A word is used whose meaning does not match the intended meaning of the passage.",
+    "when": [],
+    "why": "This concerns word choice in the text; it is separate from selecting a dictionary or selecting among spelling variants."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "2c8901ce8b85",
+    "end": 94,
+    "prefix": "y variable spellings for words. ",
+    "quote": "Always use the first entry in the list.",
+    "start": 55,
+    "suffix": " This helps to ensure words are "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "3b0ce4938c4d",
+     "end": 97,
+     "prefix": "",
+     "quote": "Only use an alternative spelling listed for a word if you have evidence it will meet a user need.",
+     "start": 0,
+     "suffix": " Record decisions you make about"
+    },
+    {
+     "block_id": "27a0912b41f1",
+     "end": 267,
+     "prefix": "ffer from those in this manual. ",
+     "quote": "This is perfectly acceptable – choose either of our recommended dictionaries (or a specialist dictionary) and follow it consistently.",
+     "start": 134,
+     "suffix": ""
+    },
+    {
+     "block_id": "a6e86e2be2d3",
+     "end": 58,
+     "prefix": "",
+     "quote": "Always follow our guidance for specific terms and phrases.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "The checker needs the selected dictionary and edition, together with any approved spelling exceptions. The page does not define what evidence is sufficient to establish a user need.",
+    "unit": "token",
+    "violation_condition": "A later-listed spelling variant is used instead of the selected dictionary’s first-listed spelling, without evidence that the alternative meets a user need."
+   },
+   "when": [
+    "Applies where the selected dictionary lists alternative spellings of the same word.",
+    "An alternative listed spelling is permitted where there is evidence that it meets a user need.",
+    "Consistent use of an accepted dictionary may produce spellings different from those used in the Style Manual.",
+    "Specific Style Manual guidance for a term or phrase takes precedence over the dictionary default."
+   ],
+   "why": "G-2 and G-3: the user-need exception and dictionary-dependent variations qualify one spelling-choice check rather than creating additional rules."
+  },
+  {
+   "anchor": {
+    "block_id": "3b0ce4938c4d",
+    "end": 169,
+    "prefix": "dence it will meet a user need. ",
+    "quote": "Record decisions you make about alternative spellings in a style sheet.",
+    "start": 98,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A decision to use an alternative dictionary spelling in the associated content is missing from its style sheet."
+   },
+   "when": [
+    "Applies when an alternative spelling listed in the selected dictionary has been chosen.",
+    "Assess the style sheet against the spelling decisions made for the associated content."
+   ],
+   "why": "The missing record is a distinct textual omission, not the spelling-choice violation itself."
+  },
+  {
+   "anchor": {
+    "block_id": "05e8173260e1",
+    "end": 139,
+    "prefix": "cientific or technical writing. ",
+    "quote": "The style sheet for the content should include specialist terms.",
+    "start": 75,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A style sheet for scientific or technical content omits specialist terms used in that content."
+   },
+   "when": [
+    "Applies to style sheets for scientific or technical writing.",
+    "Assess the style sheet alongside the associated content."
+   ],
+   "why": "This specifies a property of the style sheet, unlike the adjacent advice about consulting specialist dictionaries."
+  },
+  {
+   "anchor": {
+    "block_id": "7924deed2ba5",
+    "end": 182,
+    "prefix": "word and alternative spellings. ",
+    "quote": "The important thing is to use the word that matches the meaning you want to convey.",
+    "start": 99,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The intended meaning must be established from context or confirmed by the author. The page supplies no further test for resolving uncertain word choices.",
+    "unit": "sentence",
+    "violation_condition": "A word is used whose meaning does not match the intended meaning of the passage."
+   },
+   "when": [],
+   "why": "This concerns word choice in the text; it is separate from selecting a dictionary or selecting among spelling variants."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4303,
+  "output_tokens": 6675,
+  "reasoning_tokens": 4660
+ }
+}

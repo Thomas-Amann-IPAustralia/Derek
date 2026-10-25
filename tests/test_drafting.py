@@ -198,7 +198,7 @@ def cli(tmp_path, monkeypatch):
     monkeypatch.setattr(drafting, "DRAFTS", tmp_path / "drafts")
     calls = []
 
-    def fake(system, user, schema):
+    def fake(system, user, schema, model=drafting.MODEL, effort=drafting.EFFORT):
         calls.append(user.splitlines()[0])
         page = drafting.load_page(user.splitlines()[0].removeprefix("PAGE: "))
         h = next(b for b in page.blocks if b.kind == "heading" and b.level == 2)

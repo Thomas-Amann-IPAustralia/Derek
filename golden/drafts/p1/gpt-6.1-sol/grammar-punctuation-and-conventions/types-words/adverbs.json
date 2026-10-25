@@ -1,0 +1,355 @@
+{
+ "effort": "high",
+ "input_sha256": "0e900bc4cbd0591afb24a2cecbae9659b0d2244b1eebca81d54fb1846ca6031a",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "614bccdae677",
+    "end": 26,
+    "prefix": "",
+    "quote": "Adverbs can affect clarity",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The candidate heading describes a possible effect of adverbs; the body states the actionable instruction.",
+   "reason": "description",
+   "seed_uid": "e236d5d23650bb50"
+  },
+  {
+   "anchor": {
+    "block_id": "a85a17949218",
+    "end": 153,
+    "prefix": "en they’re added to a sentence. ",
+    "quote": "Use them occasionally to show people how, when, where, or the extent to which something happens.",
+    "start": 57,
+    "suffix": ""
+   },
+   "note": "Consolidated into the rule about removing adverbs without a critical function.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "987dd2059abd",
+    "end": 22,
+    "prefix": "",
+    "quote": "Use adverbs sparingly.",
+    "start": 0,
+    "suffix": " Remove any adverb that doesn’t "
+   },
+   "note": "The following sentence gives the more specific wording of the same check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "494b63ad0f2a",
+    "end": 148,
+    "prefix": " to show or imply a comparison. ",
+    "quote": "In general, you simply add the word ‘more’ or ‘most’ in front of the adverb.",
+    "start": 72,
+    "suffix": ""
+   },
+   "note": "Describes regular comparative formation. It informs the correct-form rule but is not a separate requirement that would incorrectly exclude irregular adverbs.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/adverbs.md",
+ "page_sha256": "e155357fe55a1ea53d5351865ae05b0122b0505cb5f7a8cd66b14f14095d1307",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "614bccdae677",
+    "note": "The candidate heading describes a possible effect of adverbs; the body states the actionable instruction.",
+    "quote": "Adverbs can affect clarity",
+    "reason": "description"
+   },
+   {
+    "block_id": "a85a17949218",
+    "note": "Consolidated into the rule about removing adverbs without a critical function.",
+    "quote": "Use them occasionally to show people how, when, where, or the extent to which something happens.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "987dd2059abd",
+    "note": "The following sentence gives the more specific wording of the same check.",
+    "quote": "Use adverbs sparingly.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "494b63ad0f2a",
+    "note": "Describes regular comparative formation. It informs the correct-form rule but is not a separate requirement that would incorrectly exclude irregular adverbs.",
+    "quote": "In general, you simply add the word ‘more’ or ‘most’ in front of the adverb.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "987dd2059abd",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "987dd2059abd",
+      "quote": "Use adverbs sparingly."
+     },
+     {
+      "block_id": "a85a17949218",
+      "quote": "Use them occasionally to show people how, when, where, or the extent to which something happens."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Remove any adverb that doesn’t play a critical function in a sentence.",
+    "specification": "The page does not define what makes an adverb’s function critical. It also provides no frequency threshold for ‘sparingly’ or ‘occasionally’.",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains an adverb that does not play a critical function.",
+    "when": [],
+    "why": "G-4: the occasional-use and sparing-use instructions are consolidated into the more specific instruction about unnecessary adverbs."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a42f53e9d88b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "494b63ad0f2a",
+      "quote": "In general, you simply add the word ‘more’ or ‘most’ in front of the adverb."
+     },
+     {
+      "block_id": "d430a34a5d24",
+      "quote": "Not all adverbs follow this regular pattern of using ‘more’ or ‘most’ to show comparison."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3ae34f8de9ac",
+        "quote": "Bob spoke more quickly than Tom."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3ad89ba5f2a2",
+        "quote": "Tom speaks more quickly than Bob, but Harry speaks the most quickly of them all."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c58589cd5183",
+        "quote": "He spoke well, but she spoke better."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9242fa81dcdf",
+        "quote": "You finished work early, but they finished even earlier."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Make sure you use the correct form.",
+    "specification": "Read ‘correct form’ in the context of this comparison section: distinguish comparative and superlative adverb forms from adjective forms. The regular ‘more’/‘most’ construction is not a requirement for irregular adverbs.",
+    "unit": "sentence",
+    "violation_condition": "A comparative or superlative adjective form is used where an adverb form is required, such as ‘quickest’ instead of ‘most quickly’.",
+    "when": [
+     "Applies when an adverb expresses comparative or superlative degree.",
+     "Irregular comparative forms, such as ‘better’ and ‘earlier’, do not require ‘more’."
+    ],
+    "why": "G-4: the body supplies the instruction beneath a descriptive heading. G-2: regular and irregular comparison forms are cases of the same correct-form check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "987dd2059abd",
+    "end": 93,
+    "prefix": "Use adverbs sparingly. ",
+    "quote": "Remove any adverb that doesn’t play a critical function in a sentence.",
+    "start": 23,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "987dd2059abd",
+     "end": 22,
+     "prefix": "",
+     "quote": "Use adverbs sparingly.",
+     "start": 0,
+     "suffix": " Remove any adverb that doesn’t "
+    },
+    {
+     "block_id": "a85a17949218",
+     "end": 153,
+     "prefix": "en they’re added to a sentence. ",
+     "quote": "Use them occasionally to show people how, when, where, or the extent to which something happens.",
+     "start": 57,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define what makes an adverb’s function critical. It also provides no frequency threshold for ‘sparingly’ or ‘occasionally’.",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains an adverb that does not play a critical function."
+   },
+   "when": [],
+   "why": "G-4: the occasional-use and sparing-use instructions are consolidated into the more specific instruction about unnecessary adverbs."
+  },
+  {
+   "anchor": {
+    "block_id": "a42f53e9d88b",
+    "end": 102,
+    "prefix": "s can be adjectives or adverbs. ",
+    "quote": "Make sure you use the correct form.",
+    "start": 67,
+    "suffix": " For example, ‘quickest’ is the "
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "494b63ad0f2a",
+     "end": 148,
+     "prefix": " to show or imply a comparison. ",
+     "quote": "In general, you simply add the word ‘more’ or ‘most’ in front of the adverb.",
+     "start": 72,
+     "suffix": ""
+    },
+    {
+     "block_id": "d430a34a5d24",
+     "end": 89,
+     "prefix": "",
+     "quote": "Not all adverbs follow this regular pattern of using ‘more’ or ‘most’ to show comparison.",
+     "start": 0,
+     "suffix": " The following examples show irr"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3ae34f8de9ac",
+       "end": 32,
+       "prefix": "",
+       "quote": "Bob spoke more quickly than Tom.",
+       "start": 0,
+       "suffix": " [Uses ‘more’ to compare Tom’s a"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3ad89ba5f2a2",
+       "end": 80,
+       "prefix": "",
+       "quote": "Tom speaks more quickly than Bob, but Harry speaks the most quickly of them all.",
+       "start": 0,
+       "suffix": " [Uses ‘most’ to compare Harry’s"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c58589cd5183",
+       "end": 36,
+       "prefix": "",
+       "quote": "He spoke well, but she spoke better.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9242fa81dcdf",
+       "end": 56,
+       "prefix": "",
+       "quote": "You finished work early, but they finished even earlier.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Read ‘correct form’ in the context of this comparison section: distinguish comparative and superlative adverb forms from adjective forms. The regular ‘more’/‘most’ construction is not a requirement for irregular adverbs.",
+    "unit": "sentence",
+    "violation_condition": "A comparative or superlative adjective form is used where an adverb form is required, such as ‘quickest’ instead of ‘most quickly’."
+   },
+   "when": [
+    "Applies when an adverb expresses comparative or superlative degree.",
+    "Irregular comparative forms, such as ‘better’ and ‘earlier’, do not require ‘more’."
+   ],
+   "why": "G-4: the body supplies the instruction beneath a descriptive heading. G-2: regular and irregular comparison forms are cases of the same correct-form check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3866,
+  "output_tokens": 3682,
+  "reasoning_tokens": 2510
+ }
+}

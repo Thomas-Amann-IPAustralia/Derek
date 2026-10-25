@@ -1,0 +1,1959 @@
+{
+ "effort": "high",
+ "input_sha256": "c898a4d74c7e11f276b543c16295b4c1a3543852433e5a021a9469a40fe1dc69",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "3525771925cd",
+    "end": 117,
+    "prefix": "s if they are clear and simple. ",
+    "quote": "Make sure everyone can access the information that images convey.",
+    "start": 52,
+    "suffix": ""
+   },
+   "note": "General image-accessibility instruction; the concrete textual requirements are extracted separately.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af2b84cd66bb",
+    "end": 37,
+    "prefix": "",
+    "quote": "Add images only if they help the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Candidate concerns whether to include images, not a property of the words.",
+   "reason": "not_text",
+   "seed_uid": "173e20a69b230323"
+  },
+  {
+   "anchor": {
+    "block_id": "82bf5942e3c9",
+    "end": 79,
+    "prefix": "",
+    "quote": "Use images if they help users complete their task with your service or product.",
+    "start": 0,
+    "suffix": " Images can make it easier for s"
+   },
+   "note": "Image-selection instruction.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cc953f9b8bd2",
+    "end": 62,
+    "prefix": "",
+    "quote": "You must get permission (a licence) to use copyright material.",
+    "start": 0,
+    "suffix": " This includes images and text."
+   },
+   "note": "G-5: obtaining permission is a licensing action; the text alone cannot establish whether it happened.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0297f27dff67",
+    "end": 94,
+    "prefix": "",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to another resource.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "658d2222ac4e",
+    "end": 47,
+    "prefix": "",
+    "quote": "Choose diverse images that are clear and simple",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Candidate concerns image selection and visual content.",
+   "reason": "not_text",
+   "seed_uid": "bb73a74f8077bf6b"
+  },
+  {
+   "anchor": {
+    "block_id": "2b574e589486",
+    "end": 135,
+    "prefix": "",
+    "quote": "Choose images that reflect and support the diversity of Australia’s peoples and cultures, especially if you are using images of people.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns who and what images depict.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8f37e33160f9",
+    "end": 67,
+    "prefix": "",
+    "quote": "Keep images simple and use them to support information in the text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns image complexity and selection.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "61c159c56c74",
+    "end": 15,
+    "prefix": "",
+    "quote": "Images must be:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in to requirements about the images themselves.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "679b5c18da6f",
+    "end": 10,
+    "prefix": "",
+    "quote": "accessible",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An image-quality requirement, not an independently stated wording rule.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d053a598f481",
+    "end": 18,
+    "prefix": "",
+    "quote": "easy to understand",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An image-quality requirement.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "360743b246b0",
+    "end": 8,
+    "prefix": "",
+    "quote": "relevant",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An image-selection requirement.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "455cc1c9b38a",
+    "end": 11,
+    "prefix": "",
+    "quote": "uncluttered",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A visual-design requirement.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b53ff555a7f1",
+    "end": 22,
+    "prefix": "",
+    "quote": "from a credible source",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns image provenance.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5c764df2fcd3",
+    "end": 50,
+    "prefix": "",
+    "quote": "consistent in design and style across the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns visual consistency between images.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5a060871ad3f",
+    "end": 96,
+    "prefix": "",
+    "quote": "Use the same font and typeface, line thickness and colour scheme in all images of the same type.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns typography and graphical styling, not wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f3600273878a",
+    "end": 66,
+    "prefix": "",
+    "quote": "Include decorative images only if they are relevant to the content",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Candidate concerns selection of decorative images.",
+   "reason": "not_text",
+   "seed_uid": "5cb42fe04eabd36b"
+  },
+  {
+   "anchor": {
+    "block_id": "e099a9129627",
+    "end": 124,
+    "prefix": "",
+    "quote": "Don’t use images to fill in space. Decorative images must still be relevant. Use images that relate directly to the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "These instructions concern whether an image belongs in the content.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "91afb1bc94a0",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use alt text, captions and titles to explain images",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups three separately checkable textual requirements.",
+   "reason": "section",
+   "seed_uid": "e806f50d22ac8db5"
+  },
+  {
+   "anchor": {
+    "block_id": "2c49b34f5528",
+    "end": 60,
+    "prefix": "",
+    "quote": "Follow the guidance on adding alt text, captions and titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a direction to follow other guidance, not a distinct text property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9950e9e80e0a",
+    "end": 60,
+    "prefix": "",
+    "quote": "Include images on a page only if they meet a real user need.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns whether to include an image.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e6dd81489701",
+    "end": 54,
+    "prefix": "",
+    "quote": "Understand the purpose of the image to write alt text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes a writer's preparation, not a separately testable property of the alt text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3383f8f68470",
+    "end": 71,
+    "prefix": "",
+    "quote": "Use real text rather than images of text whenever technically possible.",
+    "start": 0,
+    "suffix": " (Logos can be an exception.)"
+   },
+   "note": "Concerns rendering content as text rather than as an image.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3383f8f68470",
+    "end": 100,
+    "prefix": " whenever technically possible. ",
+    "quote": "(Logos can be an exception.)",
+    "start": 72,
+    "suffix": ""
+   },
+   "note": "G-3: an exception to the preceding non-text rendering instruction.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dee5a5b6da1b",
+    "end": 99,
+    "prefix": "",
+    "quote": "Make sure that colour is not the only visual means of conveying information in graphs and diagrams.",
+    "start": 0,
+    "suffix": " Text labels and patterns can su"
+   },
+   "note": "Concerns visual encoding in graphics.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dee5a5b6da1b",
+    "end": 210,
+    "prefix": "n supplement the use of colour. ",
+    "quote": "Make sure the contrast is sufficient for all users.",
+    "start": 159,
+    "suffix": ""
+   },
+   "note": "Concerns visual contrast.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9ac05ae27fb9",
+    "end": 40,
+    "prefix": "",
+    "quote": "Set the correct resolution and file type",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Candidate concerns image-file properties.",
+   "reason": "not_text",
+   "seed_uid": "850b3704ad1c9fea"
+  },
+  {
+   "anchor": {
+    "block_id": "a1ce6234e0b6",
+    "end": 53,
+    "prefix": "",
+    "quote": "Image resolution must be appropriate for the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns image resolution.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1e7244b79346",
+    "end": 110,
+    "prefix": "",
+    "quote": "Don’t embed images with a large file size into content that you will publish online, such as PDFs or webpages.",
+    "start": 0,
+    "suffix": " Optimise and compress all image"
+   },
+   "note": "Concerns embedded file size.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1e7244b79346",
+    "end": 212,
+    "prefix": "line, such as PDFs or webpages. ",
+    "quote": "Optimise and compress all image files so they make it quicker for the user to access the information.",
+    "start": 111,
+    "suffix": ""
+   },
+   "note": "Concerns image-file optimisation.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2020c3b6c3fc",
+    "end": 32,
+    "prefix": "",
+    "quote": "Design for mobile devices first.",
+    "start": 0,
+    "suffix": " An image will scale to the devi"
+   },
+   "note": "Concerns responsive visual design.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2020c3b6c3fc",
+    "end": 154,
+    "prefix": "o the device people view it on. ",
+    "quote": "Check that it’s easy to read on a mobile phone screen and a desktop.",
+    "start": 86,
+    "suffix": ""
+   },
+   "note": "Concerns checking image display on devices.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9f9ec5b742b6",
+    "end": 121,
+    "prefix": "are many file types for images. ",
+    "quote": "Seek specialist advice to optimise an image file as a vector or raster file format.",
+    "start": 38,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to seek specialist assistance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "38f8497f8464",
+    "end": 63,
+    "prefix": "",
+    "quote": "Use graphs, charts and maps if they explain complex information",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Candidate concerns choosing a visual content format.",
+   "reason": "not_text",
+   "seed_uid": "5c3bb70938d523dc"
+  },
+  {
+   "anchor": {
+    "block_id": "ff8c98001700",
+    "end": 164,
+    "prefix": "",
+    "quote": "Use graphs, charts and maps for information that is too detailed for the text. Don’t use them if another format meets the user need – such as a list, table or tool.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns choosing images rather than another presentation format.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e7e516b9fded",
+    "end": 38,
+    "prefix": "",
+    "quote": "Don’t add borders or background tints.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns graph and chart styling.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9cc885aea6f5",
+    "end": 56,
+    "prefix": "",
+    "quote": "Use gridlines only where they help people read the data.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns graphical gridlines.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c63ae2c62664",
+    "end": 131,
+    "prefix": "",
+    "quote": "Use ‘tick marks’ on the x- and y-axes to show the scale of data intervals at a glance. Avoid more than 10 tick marks on the y-axis.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns graphical axis marks and their number.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "95962b1caed0",
+    "end": 62,
+    "prefix": "",
+    "quote": "Scale the y-axis to be consistent across the viewport or page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns chart scaling.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "49adf8c8d5f8",
+    "end": 86,
+    "prefix": "",
+    "quote": "Keep it simple (for example, include no more than 3 or 4 data series on a line graph).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns graphical complexity and data-series count.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5045d345d8c5",
+    "end": 112,
+    "prefix": "",
+    "quote": "Don’t use colour as the only source of meaning. Try adding dots and dashes to lines and cross hatching to areas.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns visual encoding and line or area patterns.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5773ab1c009e",
+    "end": 54,
+    "prefix": "",
+    "quote": "Add legends and units of measurement to complex images",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups distinct checks for legends, measurement units and numerical labels.",
+   "reason": "section",
+   "seed_uid": "42ca8b7cd2a8a235"
+  },
+  {
+   "anchor": {
+    "block_id": "6a7c8d3f6573",
+    "end": 180,
+    "prefix": "",
+    "quote": "Make legends consistent in a webpage or group of webpages dealing with the same topic. Place the legend in the same position (for example, bottom centre, top left or to the right).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns consistent visual presentation and positioning of legends.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "02fa5607524a",
+    "end": 90,
+    "prefix": "",
+    "quote": "Use the same font and typeface, and colours and symbols for the same types of information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns visual styling and symbol encoding.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e58e4802205c",
+    "end": 72,
+    "prefix": "",
+    "quote": "Maps must also have a scale bar and an arrow to show which way is north.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires graphical map elements rather than words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c1caf85504e6",
+    "end": 77,
+    "prefix": "",
+    "quote": "Label the x- and y-axes, as well as legends, titles and captions as relevant.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: absorbed as the locations where measurement units must be supplied.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "37929a30b2e6",
+    "end": 41,
+    "prefix": "",
+    "quote": "Refer to informational images in the text",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body states the actionable requirement more specifically for complex images.",
+   "reason": "restatement",
+   "seed_uid": "4105d2208ac40a79"
+  },
+  {
+   "anchor": {
+    "block_id": "c77e30e406a7",
+    "end": 147,
+    "prefix": "",
+    "quote": "Place the image close to where you mention it in the text. For example, a graph must be on the same page and after the paragraph that refers to it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns image placement and page layout.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fc364e7c6f19",
+    "end": 114,
+    "prefix": "",
+    "quote": "You don’t need to refer to decorative images and illustrations in the text unless they are part of the discussion.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: recorded as an exception on the body-reference rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c52568537288",
+    "end": 61,
+    "prefix": "",
+    "quote": "Check any details that feature in both the text and an image.",
+    "start": 0,
+    "suffix": " For example, the text might quo"
+   },
+   "note": "G-5: instructs the writer to check; it does not itself state a separate consistency requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5cf6e54bdfdf",
+    "end": 34,
+    "prefix": "",
+    "quote": "Image notes appear below an image.",
+    "start": 0,
+    "suffix": " Notes can apply to the whole im"
+   },
+   "note": "Concerns positioning the notes relative to the image.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "26c8fba9ba16",
+    "end": 34,
+    "prefix": "",
+    "quote": "List notes in the following order:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed with the ordered list into the image-note ordering rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bc77ba2b475c",
+    "end": 76,
+    "prefix": "source of data (",
+    "quote": "use the appropriate form for author–date or documentary–note",
+    "start": 16,
+    "suffix": ")."
+   },
+   "note": "G-5: points to the appropriate citation style without specifying a citation-form check on this page.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4f00d12ee9e4",
+    "end": 78,
+    "prefix": "",
+    "quote": "Align notes to the left. They should not extend beyond the edges of the image.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns alignment and layout width, not the wording of notes.",
+   "reason": "not_text",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/images.md",
+ "page_sha256": "b3f69b3358c989b57b5f820f8e402edefd78404a5c9ba2e5d8e51ae8a22d2175",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "3525771925cd",
+    "note": "General image-accessibility instruction; the concrete textual requirements are extracted separately.",
+    "quote": "Make sure everyone can access the information that images convey.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "af2b84cd66bb",
+    "note": "Candidate concerns whether to include images, not a property of the words.",
+    "quote": "Add images only if they help the user",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "82bf5942e3c9",
+    "note": "Image-selection instruction.",
+    "quote": "Use images if they help users complete their task with your service or product.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "cc953f9b8bd2",
+    "note": "G-5: obtaining permission is a licensing action; the text alone cannot establish whether it happened.",
+    "quote": "You must get permission (a licence) to use copyright material.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0297f27dff67",
+    "note": "G-5: directs the writer to another resource.",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "658d2222ac4e",
+    "note": "Candidate concerns image selection and visual content.",
+    "quote": "Choose diverse images that are clear and simple",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "2b574e589486",
+    "note": "Concerns who and what images depict.",
+    "quote": "Choose images that reflect and support the diversity of Australia’s peoples and cultures, especially if you are using images of people.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "8f37e33160f9",
+    "note": "Concerns image complexity and selection.",
+    "quote": "Keep images simple and use them to support information in the text.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "61c159c56c74",
+    "note": "Lead-in to requirements about the images themselves.",
+    "quote": "Images must be:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "679b5c18da6f",
+    "note": "An image-quality requirement, not an independently stated wording rule.",
+    "quote": "accessible",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d053a598f481",
+    "note": "An image-quality requirement.",
+    "quote": "easy to understand",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "360743b246b0",
+    "note": "An image-selection requirement.",
+    "quote": "relevant",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "455cc1c9b38a",
+    "note": "A visual-design requirement.",
+    "quote": "uncluttered",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b53ff555a7f1",
+    "note": "Concerns image provenance.",
+    "quote": "from a credible source",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "5c764df2fcd3",
+    "note": "Concerns visual consistency between images.",
+    "quote": "consistent in design and style across the content.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "5a060871ad3f",
+    "note": "Concerns typography and graphical styling, not wording.",
+    "quote": "Use the same font and typeface, line thickness and colour scheme in all images of the same type.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f3600273878a",
+    "note": "Candidate concerns selection of decorative images.",
+    "quote": "Include decorative images only if they are relevant to the content",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e099a9129627",
+    "note": "These instructions concern whether an image belongs in the content.",
+    "quote": "Don’t use images to fill in space. Decorative images must still be relevant. Use images that relate directly to the content.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "91afb1bc94a0",
+    "note": "G-1: groups three separately checkable textual requirements.",
+    "quote": "Use alt text, captions and titles to explain images",
+    "reason": "section"
+   },
+   {
+    "block_id": "2c49b34f5528",
+    "note": "G-5: a direction to follow other guidance, not a distinct text property.",
+    "quote": "Follow the guidance on adding alt text, captions and titles.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9950e9e80e0a",
+    "note": "Concerns whether to include an image.",
+    "quote": "Include images on a page only if they meet a real user need.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e6dd81489701",
+    "note": "G-5: describes a writer's preparation, not a separately testable property of the alt text.",
+    "quote": "Understand the purpose of the image to write alt text.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3383f8f68470",
+    "note": "Concerns rendering content as text rather than as an image.",
+    "quote": "Use real text rather than images of text whenever technically possible.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "3383f8f68470",
+    "note": "G-3: an exception to the preceding non-text rendering instruction.",
+    "quote": "(Logos can be an exception.)",
+    "reason": "permission"
+   },
+   {
+    "block_id": "dee5a5b6da1b",
+    "note": "Concerns visual encoding in graphics.",
+    "quote": "Make sure that colour is not the only visual means of conveying information in graphs and diagrams.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "dee5a5b6da1b",
+    "note": "Concerns visual contrast.",
+    "quote": "Make sure the contrast is sufficient for all users.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9ac05ae27fb9",
+    "note": "Candidate concerns image-file properties.",
+    "quote": "Set the correct resolution and file type",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a1ce6234e0b6",
+    "note": "Concerns image resolution.",
+    "quote": "Image resolution must be appropriate for the content.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "1e7244b79346",
+    "note": "Concerns embedded file size.",
+    "quote": "Don’t embed images with a large file size into content that you will publish online, such as PDFs or webpages.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "1e7244b79346",
+    "note": "Concerns image-file optimisation.",
+    "quote": "Optimise and compress all image files so they make it quicker for the user to access the information.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "2020c3b6c3fc",
+    "note": "Concerns responsive visual design.",
+    "quote": "Design for mobile devices first.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "2020c3b6c3fc",
+    "note": "Concerns checking image display on devices.",
+    "quote": "Check that it’s easy to read on a mobile phone screen and a desktop.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9f9ec5b742b6",
+    "note": "G-5: directs the writer to seek specialist assistance.",
+    "quote": "Seek specialist advice to optimise an image file as a vector or raster file format.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "38f8497f8464",
+    "note": "Candidate concerns choosing a visual content format.",
+    "quote": "Use graphs, charts and maps if they explain complex information",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ff8c98001700",
+    "note": "Concerns choosing images rather than another presentation format.",
+    "quote": "Use graphs, charts and maps for information that is too detailed for the text. Don’t use them if another format meets the user need – such as a list, table or tool.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e7e516b9fded",
+    "note": "Concerns graph and chart styling.",
+    "quote": "Don’t add borders or background tints.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9cc885aea6f5",
+    "note": "Concerns graphical gridlines.",
+    "quote": "Use gridlines only where they help people read the data.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c63ae2c62664",
+    "note": "Concerns graphical axis marks and their number.",
+    "quote": "Use ‘tick marks’ on the x- and y-axes to show the scale of data intervals at a glance. Avoid more than 10 tick marks on the y-axis.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "95962b1caed0",
+    "note": "Concerns chart scaling.",
+    "quote": "Scale the y-axis to be consistent across the viewport or page.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "49adf8c8d5f8",
+    "note": "Concerns graphical complexity and data-series count.",
+    "quote": "Keep it simple (for example, include no more than 3 or 4 data series on a line graph).",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "5045d345d8c5",
+    "note": "Concerns visual encoding and line or area patterns.",
+    "quote": "Don’t use colour as the only source of meaning. Try adding dots and dashes to lines and cross hatching to areas.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "5773ab1c009e",
+    "note": "G-1: groups distinct checks for legends, measurement units and numerical labels.",
+    "quote": "Add legends and units of measurement to complex images",
+    "reason": "section"
+   },
+   {
+    "block_id": "6a7c8d3f6573",
+    "note": "Concerns consistent visual presentation and positioning of legends.",
+    "quote": "Make legends consistent in a webpage or group of webpages dealing with the same topic. Place the legend in the same position (for example, bottom centre, top left or to the right).",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "02fa5607524a",
+    "note": "Concerns visual styling and symbol encoding.",
+    "quote": "Use the same font and typeface, and colours and symbols for the same types of information.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e58e4802205c",
+    "note": "Requires graphical map elements rather than words.",
+    "quote": "Maps must also have a scale bar and an arrow to show which way is north.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c1caf85504e6",
+    "note": "G-2 and G-4: absorbed as the locations where measurement units must be supplied.",
+    "quote": "Label the x- and y-axes, as well as legends, titles and captions as relevant.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "37929a30b2e6",
+    "note": "G-4: the body states the actionable requirement more specifically for complex images.",
+    "quote": "Refer to informational images in the text",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c77e30e406a7",
+    "note": "Concerns image placement and page layout.",
+    "quote": "Place the image close to where you mention it in the text. For example, a graph must be on the same page and after the paragraph that refers to it.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "fc364e7c6f19",
+    "note": "G-3: recorded as an exception on the body-reference rule.",
+    "quote": "You don’t need to refer to decorative images and illustrations in the text unless they are part of the discussion.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "c52568537288",
+    "note": "G-5: instructs the writer to check; it does not itself state a separate consistency requirement.",
+    "quote": "Check any details that feature in both the text and an image.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5cf6e54bdfdf",
+    "note": "Concerns positioning the notes relative to the image.",
+    "quote": "Image notes appear below an image.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "26c8fba9ba16",
+    "note": "G-4: absorbed with the ordered list into the image-note ordering rule.",
+    "quote": "List notes in the following order:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bc77ba2b475c",
+    "note": "G-5: points to the appropriate citation style without specifying a citation-form check on this page.",
+    "quote": "use the appropriate form for author–date or documentary–note",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4f00d12ee9e4",
+    "note": "Concerns alignment and layout width, not the wording of notes.",
+    "quote": "Align notes to the left. They should not extend beyond the edges of the image.",
+    "reason": "not_text"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9f06769fedf7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Add alt text to all images.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image has no alt text.",
+    "when": [],
+    "why": "G-1: the requirement for alt text is independently checkable, unlike the heading grouping alt text, captions and titles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "70b684df9a4b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include captions for all images that are not decorative.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A non-decorative image has no caption.",
+    "when": [
+     "The image is not decorative."
+    ],
+    "why": "G-2: decorative status limits when the caption requirement applies."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "70b684df9a4b",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Add titles to help users scan content.",
+    "specification": "The page does not specify which images need titles or how to decide whether a title is needed for scanning. This is not an explicit requirement to title every image.",
+    "unit": "section",
+    "violation_condition": "Image content lacks a title needed to help users scan it.",
+    "when": [
+     "In the context of titles for images."
+    ],
+    "why": "G-1: image titles are a separate textual requirement from captions and alt text; the applicability remains underspecified."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "32f5c489007f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "All graphs, charts and maps should have a legend that tells people the meaning of lines, colours and symbols.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A graph, chart or map lacks a legend explaining the meaning of its lines, colours and symbols.",
+    "when": [
+     "The image is a graph, chart or map."
+    ],
+    "why": "G-1: explanatory legend text is independently checkable and is not combined with measurement labels."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "40d36a6d70de",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c1caf85504e6",
+      "quote": "Label the x- and y-axes, as well as legends, titles and captions as relevant."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include all units of measurement.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A measured quantity in a graph, chart or map is presented without its unit of measurement in the relevant labelling.",
+    "when": [
+     "For measured quantities in graphs, charts and maps.",
+     "Units belong on axes, legends, titles and captions as relevant."
+    ],
+    "why": "G-2 and G-4: the list item identifies where the same missing-unit check applies, rather than creating a second labelling rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "632860c2a0f7",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use appropriate units (for example, millions of dollars for a company balance sheet but thousands of dollars for a household budget).",
+    "specification": "The examples establish that denomination should suit the context, but do not establish general thresholds for choosing units, thousands or millions.",
+    "unit": "block",
+    "violation_condition": "Measurement labels use a denomination inappropriate to the magnitude and context of the quantities displayed.",
+    "when": [
+     "For units used in graphs, charts and maps."
+    ],
+    "why": "G-1: inappropriate unit choice is distinct from an omitted unit; E-4 prevents inventing numerical thresholds."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "56ad7c4c34fe",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the appropriate number of decimal places on labels (for example, $1,000 – not $1,000.00 – for a scale of zero to $10,000).",
+    "specification": "The page rejects cents on a dollar scale from zero to $10,000, but gives no general rule for choosing decimal places on other scales.",
+    "unit": "block",
+    "violation_condition": "A numerical label has a number of decimal places inappropriate to the displayed scale.",
+    "when": [
+     "For numerical labels in graphs, charts and maps."
+    ],
+    "why": "G-1: decimal precision is a separate check from unit choice; E-4 prevents extrapolating an unstated precision threshold."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "64a55322e3c3",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "37929a30b2e6",
+      "quote": "Refer to informational images in the text"
+     },
+     {
+      "block_id": "fc364e7c6f19",
+      "quote": "You don’t need to refer to decorative images and illustrations in the text unless they are part of the discussion."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Refer to complex images in the body of the text.",
+    "specification": "Use the body's scope of complex images. The later exception also makes a reference necessary when a decorative image or illustration forms part of the discussion.",
+    "unit": "document",
+    "violation_condition": "A complex informational image has no reference in the body text, or a decorative image or illustration is discussed without being referred to.",
+    "when": [
+     "The image is complex and informational.",
+     "Decorative images and illustrations need no reference unless they are part of the discussion."
+    ],
+    "why": "G-2, G-3 and G-4: consolidate the heading, body requirement and decorative-image exception into one reference check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dd9e6cad8cd0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t repeat the whole caption of the image in the text. Instead, use a locator number to refer to it, for example ‘Figure 1’.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A body-text reference repeats an image's whole caption instead of identifying it by a locator number.",
+    "when": [
+     "When referring to an image in the body text."
+    ],
+    "why": "G-4: the replacement with a locator number explains the same caption-repetition check rather than creating a duplicate."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3173fbd63a6e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9e26808c2a12",
+        "quote": "Figure 6 shows an example of good ergonomic posture."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "14398e49e5bf",
+        "quote": "The photograph of an ideal workstation set-up (see left) shows an example of good ergonomic posture."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t refer to ‘the photograph on the left’.",
+    "specification": "Read the quoted wording as an example of inaccessible sensory identification, not as a prohibition limited to that exact phrase.",
+    "unit": "sentence",
+    "violation_condition": "An image reference relies on a sensory description such as its position on the left to identify the image.",
+    "when": [
+     "When identifying an image in the text."
+    ],
+    "why": "G-1: sensory identification is distinct from repeating a caption; E-2 associates the nearby contrast pair with this check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "da09b6c3a956",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5654faceab3b",
+        "quote": "European Union expenditure more than quadrupled from 2016 to 2018 (Figure 7)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "51dc8065910a",
+        "quote": "Figure 7 shows European Union expenditure increased from US$9 million in 2016 to about US$40 million in 2018."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Ensure your text comments on or interprets the image, rather than repeating the text or data in it.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "Text accompanying an image merely repeats its text or data without commenting on or interpreting it.",
+    "when": [
+     "When discussing information displayed in an image."
+    ],
+    "why": "G-1 and E-2: this prose introduces a separate interpretation check despite appearing beneath an earlier example label."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b70bf4ff91c7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid referring to a page number in the text because page numbers can change during the publishing process.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An image reference in print content identifies its location by page number.",
+    "when": [
+     "For image references in print content."
+    ],
+    "why": "G-2: the Print considerations heading limits this textual reference check to print content."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3b637e355576",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "26c8fba9ba16",
+      "quote": "List notes in the following order:"
+     },
+     {
+      "block_id": "fe713dcbd958",
+      "quote": "abbreviations"
+     },
+     {
+      "block_id": "07b7954ac506",
+      "quote": "notes to superscript locators (such as a superscript ‘#’, ‘a’ or ‘1’)"
+     },
+     {
+      "block_id": "24d817c97aae",
+      "quote": "general note to the image"
+     },
+     {
+      "block_id": "bc77ba2b475c",
+      "quote": "source of data (use the appropriate form for author–date or documentary–note)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Follow the correct order for image notes",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Image notes put abbreviations, superscript-locator notes, a general note or the data source in an order other than the prescribed sequence.",
+    "when": [
+     "When image notes contain any of these categories, their relative order is abbreviations, superscript-locator notes, general note, then source of data."
+    ],
+    "why": "G-2 and G-4: the heading and ordered list define one sequence check, not one rule for each note category."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bdfdfb9f11b2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t include this information in the caption or in ordinary footnotes or endnotes.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Information belonging in image notes is included in the image caption or in ordinary footnotes or endnotes.",
+    "when": [
+     "For image-note information: abbreviations, superscript-locator notes, general notes and data sources."
+    ],
+    "why": "G-1: putting note information in the wrong textual component is distinct from ordering the notes."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "9f06769fedf7",
+    "end": 27,
+    "prefix": "",
+    "quote": "Add alt text to all images.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image has no alt text."
+   },
+   "when": [],
+   "why": "G-1: the requirement for alt text is independently checkable, unlike the heading grouping alt text, captions and titles."
+  },
+  {
+   "anchor": {
+    "block_id": "70b684df9a4b",
+    "end": 56,
+    "prefix": "",
+    "quote": "Include captions for all images that are not decorative.",
+    "start": 0,
+    "suffix": " Add titles to help users scan c"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A non-decorative image has no caption."
+   },
+   "when": [
+    "The image is not decorative."
+   ],
+   "why": "G-2: decorative status limits when the caption requirement applies."
+  },
+  {
+   "anchor": {
+    "block_id": "70b684df9a4b",
+    "end": 95,
+    "prefix": "images that are not decorative. ",
+    "quote": "Add titles to help users scan content.",
+    "start": 57,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not specify which images need titles or how to decide whether a title is needed for scanning. This is not an explicit requirement to title every image.",
+    "unit": "section",
+    "violation_condition": "Image content lacks a title needed to help users scan it."
+   },
+   "when": [
+    "In the context of titles for images."
+   ],
+   "why": "G-1: image titles are a separate textual requirement from captions and alt text; the applicability remains underspecified."
+  },
+  {
+   "anchor": {
+    "block_id": "32f5c489007f",
+    "end": 109,
+    "prefix": "",
+    "quote": "All graphs, charts and maps should have a legend that tells people the meaning of lines, colours and symbols.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A graph, chart or map lacks a legend explaining the meaning of its lines, colours and symbols."
+   },
+   "when": [
+    "The image is a graph, chart or map."
+   ],
+   "why": "G-1: explanatory legend text is independently checkable and is not combined with measurement labels."
+  },
+  {
+   "anchor": {
+    "block_id": "40d36a6d70de",
+    "end": 33,
+    "prefix": "",
+    "quote": "Include all units of measurement.",
+    "start": 0,
+    "suffix": " This helps people understand wh"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c1caf85504e6",
+     "end": 77,
+     "prefix": "",
+     "quote": "Label the x- and y-axes, as well as legends, titles and captions as relevant.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A measured quantity in a graph, chart or map is presented without its unit of measurement in the relevant labelling."
+   },
+   "when": [
+    "For measured quantities in graphs, charts and maps.",
+    "Units belong on axes, legends, titles and captions as relevant."
+   ],
+   "why": "G-2 and G-4: the list item identifies where the same missing-unit check applies, rather than creating a second labelling rule."
+  },
+  {
+   "anchor": {
+    "block_id": "632860c2a0f7",
+    "end": 133,
+    "prefix": "",
+    "quote": "Use appropriate units (for example, millions of dollars for a company balance sheet but thousands of dollars for a household budget).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The examples establish that denomination should suit the context, but do not establish general thresholds for choosing units, thousands or millions.",
+    "unit": "block",
+    "violation_condition": "Measurement labels use a denomination inappropriate to the magnitude and context of the quantities displayed."
+   },
+   "when": [
+    "For units used in graphs, charts and maps."
+   ],
+   "why": "G-1: inappropriate unit choice is distinct from an omitted unit; E-4 prevents inventing numerical thresholds."
+  },
+  {
+   "anchor": {
+    "block_id": "56ad7c4c34fe",
+    "end": 126,
+    "prefix": "",
+    "quote": "Use the appropriate number of decimal places on labels (for example, $1,000 – not $1,000.00 – for a scale of zero to $10,000).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page rejects cents on a dollar scale from zero to $10,000, but gives no general rule for choosing decimal places on other scales.",
+    "unit": "block",
+    "violation_condition": "A numerical label has a number of decimal places inappropriate to the displayed scale."
+   },
+   "when": [
+    "For numerical labels in graphs, charts and maps."
+   ],
+   "why": "G-1: decimal precision is a separate check from unit choice; E-4 prevents extrapolating an unstated precision threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "64a55322e3c3",
+    "end": 48,
+    "prefix": "",
+    "quote": "Refer to complex images in the body of the text.",
+    "start": 0,
+    "suffix": " It helps people relate the disc"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "37929a30b2e6",
+     "end": 41,
+     "prefix": "",
+     "quote": "Refer to informational images in the text",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fc364e7c6f19",
+     "end": 114,
+     "prefix": "",
+     "quote": "You don’t need to refer to decorative images and illustrations in the text unless they are part of the discussion.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Use the body's scope of complex images. The later exception also makes a reference necessary when a decorative image or illustration forms part of the discussion.",
+    "unit": "document",
+    "violation_condition": "A complex informational image has no reference in the body text, or a decorative image or illustration is discussed without being referred to."
+   },
+   "when": [
+    "The image is complex and informational.",
+    "Decorative images and illustrations need no reference unless they are part of the discussion."
+   ],
+   "why": "G-2, G-3 and G-4: consolidate the heading, body requirement and decorative-image exception into one reference check."
+  },
+  {
+   "anchor": {
+    "block_id": "dd9e6cad8cd0",
+    "end": 126,
+    "prefix": "",
+    "quote": "Don’t repeat the whole caption of the image in the text. Instead, use a locator number to refer to it, for example ‘Figure 1’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A body-text reference repeats an image's whole caption instead of identifying it by a locator number."
+   },
+   "when": [
+    "When referring to an image in the body text."
+   ],
+   "why": "G-4: the replacement with a locator number explains the same caption-repetition check rather than creating a duplicate."
+  },
+  {
+   "anchor": {
+    "block_id": "3173fbd63a6e",
+    "end": 44,
+    "prefix": "",
+    "quote": "Don’t refer to ‘the photograph on the left’.",
+    "start": 0,
+    "suffix": " This sensory language is not ac"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9e26808c2a12",
+       "end": 52,
+       "prefix": "",
+       "quote": "Figure 6 shows an example of good ergonomic posture.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "14398e49e5bf",
+       "end": 100,
+       "prefix": "",
+       "quote": "The photograph of an ideal workstation set-up (see left) shows an example of good ergonomic posture.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Read the quoted wording as an example of inaccessible sensory identification, not as a prohibition limited to that exact phrase.",
+    "unit": "sentence",
+    "violation_condition": "An image reference relies on a sensory description such as its position on the left to identify the image."
+   },
+   "when": [
+    "When identifying an image in the text."
+   ],
+   "why": "G-1: sensory identification is distinct from repeating a caption; E-2 associates the nearby contrast pair with this check."
+  },
+  {
+   "anchor": {
+    "block_id": "da09b6c3a956",
+    "end": 99,
+    "prefix": "",
+    "quote": "Ensure your text comments on or interprets the image, rather than repeating the text or data in it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5654faceab3b",
+       "end": 77,
+       "prefix": "",
+       "quote": "European Union expenditure more than quadrupled from 2016 to 2018 (Figure 7).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "51dc8065910a",
+       "end": 109,
+       "prefix": "",
+       "quote": "Figure 7 shows European Union expenditure increased from US$9 million in 2016 to about US$40 million in 2018.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "Text accompanying an image merely repeats its text or data without commenting on or interpreting it."
+   },
+   "when": [
+    "When discussing information displayed in an image."
+   ],
+   "why": "G-1 and E-2: this prose introduces a separate interpretation check despite appearing beneath an earlier example label."
+  },
+  {
+   "anchor": {
+    "block_id": "b70bf4ff91c7",
+    "end": 107,
+    "prefix": "",
+    "quote": "Avoid referring to a page number in the text because page numbers can change during the publishing process.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An image reference in print content identifies its location by page number."
+   },
+   "when": [
+    "For image references in print content."
+   ],
+   "why": "G-2: the Print considerations heading limits this textual reference check to print content."
+  },
+  {
+   "anchor": {
+    "block_id": "3b637e355576",
+    "end": 40,
+    "prefix": "",
+    "quote": "Follow the correct order for image notes",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "26c8fba9ba16",
+     "end": 34,
+     "prefix": "",
+     "quote": "List notes in the following order:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fe713dcbd958",
+     "end": 13,
+     "prefix": "",
+     "quote": "abbreviations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "07b7954ac506",
+     "end": 69,
+     "prefix": "",
+     "quote": "notes to superscript locators (such as a superscript ‘#’, ‘a’ or ‘1’)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "24d817c97aae",
+     "end": 25,
+     "prefix": "",
+     "quote": "general note to the image",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bc77ba2b475c",
+     "end": 78,
+     "prefix": "",
+     "quote": "source of data (use the appropriate form for author–date or documentary–note).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "2bd6ace6fb295cdd",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Image notes put abbreviations, superscript-locator notes, a general note or the data source in an order other than the prescribed sequence."
+   },
+   "when": [
+    "When image notes contain any of these categories, their relative order is abbreviations, superscript-locator notes, general note, then source of data."
+   ],
+   "why": "G-2 and G-4: the heading and ordered list define one sequence check, not one rule for each note category."
+  },
+  {
+   "anchor": {
+    "block_id": "bdfdfb9f11b2",
+    "end": 83,
+    "prefix": "",
+    "quote": "Don’t include this information in the caption or in ordinary footnotes or endnotes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Information belonging in image notes is included in the image caption or in ordinary footnotes or endnotes."
+   },
+   "when": [
+    "For image-note information: abbreviations, superscript-locator notes, general notes and data sources."
+   ],
+   "why": "G-1: putting note information in the wrong textual component is distinct from ordering the notes."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5907,
+  "output_tokens": 10716,
+  "reasoning_tokens": 4076
+ }
+}

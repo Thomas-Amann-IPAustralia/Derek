@@ -1,0 +1,1006 @@
+{
+ "effort": "low",
+ "input_sha256": "7fd4cb243c3a3756e7fd641fad84fb3678268b18570c889bc8cc9814f8ff7977",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "c947bd9d7858",
+    "end": 140,
+    "prefix": "",
+    "quote": "Names of ships, aircraft and other vehicles follow a set style. Using the correct style helps people identify the names of vehicles in text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory rationale for following the style conventions.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "19fa5ad91095",
+    "end": 115,
+    "prefix": "",
+    "quote": "This makes the name of the ship, aircraft or other vehicle clear. The name contrasts with the rest of the sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains why vehicles are italicised and capitalised.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "be7c866f257a",
+    "end": 115,
+    "prefix": "",
+    "quote": "Screen readers don’t pronounce italics. Use the semantic tag <em> to provide emphasis for italicised names in HTML.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Technical guidance on HTML markup (<em> tag) for web accessibility.",
+   "reason": "not_text",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/ships-aircraft-and-other-vehicles.md",
+ "page_sha256": "86cbd1a60be6262dc11f9b1ff10ded6063a8ca8428d1cab5a8ff0d8cc062bd5a",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "c947bd9d7858",
+    "note": "Introductory rationale for following the style conventions.",
+    "quote": "Names of ships, aircraft and other vehicles follow a set style. Using the correct style helps people identify the names of vehicles in text.",
+    "reason": "description"
+   },
+   {
+    "block_id": "19fa5ad91095",
+    "note": "Explains why vehicles are italicised and capitalised.",
+    "quote": "This makes the name of the ship, aircraft or other vehicle clear. The name contrasts with the rest of the sentence.",
+    "reason": "description"
+   },
+   {
+    "block_id": "be7c866f257a",
+    "note": "Technical guidance on HTML markup (<em> tag) for web accessibility.",
+    "quote": "Screen readers don’t pronounce italics. Use the semantic tag <em> to provide emphasis for italicised names in HTML.",
+    "reason": "not_text"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "07251fe34e31",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d8becabb1a58",
+      "quote": "Write the names of individual ships, aircraft and other vehicles:"
+     },
+     {
+      "block_id": "3569724cffb0",
+      "quote": "in italics"
+     },
+     {
+      "block_id": "b42f5fbdc1b8",
+      "quote": "with initial capitals."
+     },
+     {
+      "block_id": "82b9fc7637b0",
+      "quote": "Separate the names of vehicles from titles in citations and reference lists. Separate them according to the type of publication:"
+     },
+     {
+      "block_id": "118602987018",
+      "quote": "If the title is in italics (such as in book and website titles), use roman type for the name of the vehicle."
+     },
+     {
+      "block_id": "1b4e1976265d",
+      "quote": "If the title is in roman type (such as a journal article), use italics for the name of the vehicle."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "HMAS Canberra has the specific ship name italicised with initial capital",
+      "parts": [
+       {
+        "block_id": "099164a86b9f",
+        "quote": "HMAS Canberra is the Royal Australian Navy’s flagship."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Endeavour is italicised and capitalised",
+      "parts": [
+       {
+        "block_id": "595c6cc94963",
+        "quote": "Australian–American astronaut Andy Thomas flew his first flight in space aboard the Endeavour."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Indian Pacific is italicised and capitalised",
+      "parts": [
+       {
+        "block_id": "8952ab98ea25",
+        "quote": "The Indian Pacific travels 4,532 kilometres from Perth to Sydney."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Tambar in roman type within an italicised book title in a citation",
+      "parts": [
+       {
+        "block_id": "027f954a92dd",
+        "quote": "Mair C (2013) The lucky ship: the nine lives of the Australian coaster Tambar1912–1960, Nautical Association of Australia, Australia."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Albatross in italics within roman article title in a citation",
+      "parts": [
+       {
+        "block_id": "d43e14965219",
+        "quote": "McMaugh D (21 March 2020) ‘Albatross breaks bread with women in need of a hand’, Navy Daily, accessed 24 March 2020."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Italicise specific names and use capitals",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the name of an individual ship, aircraft or other vehicle written without italics or without initial capitals",
+    "when": [
+     "applies to names of individual ships, aircraft and other vehicles",
+     "in citations where the publication title is in italics, use roman type instead for the vehicle name"
+    ],
+    "why": "G-4: The candidate heading states the rule clearly; the bullet points and citation sub-rules provide conditions/restatements covered under G-2."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "12b718ec4254",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Navy ship named without the definite article 'the'",
+      "parts": [
+       {
+        "block_id": "099164a86b9f",
+        "quote": "HMAS Canberra is the Royal Australian Navy’s flagship."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don't use the definite article for navy ships.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the definite article 'the' used before the name of a navy ship (e.g. 'the HMAS Canberra')",
+    "when": [
+     "applies when naming navy ships"
+    ],
+    "why": "Distinct naming rule specifically targeting the definite article with navy ships."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e4ef72fdcfb8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8af137a527f7",
+      "quote": "Don’t write brands or types of vehicles in italics"
+     },
+     {
+      "block_id": "79f4bd60a4da",
+      "quote": "Don’t use italics for the ship’s class name."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Brand and model capitalised and not italicised",
+      "parts": [
+       {
+        "block_id": "ae033ba7b0cf",
+        "quote": "She was driving a Toyota Corolla."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Make and model capitalised and not italicised",
+      "parts": [
+       {
+        "block_id": "0a4df13037b9",
+        "quote": "A Boeing 737 brought the Australians home."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Model capitalised and not italicised",
+      "parts": [
+       {
+        "block_id": "dda3380e2f9d",
+        "quote": "They travelled in a Commodore for the last part of the journey."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Ship class name 'Anzac Class' capitalised and not italicised",
+      "parts": [
+       {
+        "block_id": "e81c73311a5b",
+        "quote": "HMASAnzac (III) is the lead ship of eight Anzac Class frigates."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Begin the names of the brands, models and classes of vehicles with an initial capital letter but don’t use italics.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the brand, model, or class of a vehicle written without an initial capital letter or written in italics",
+    "when": [
+     "applies to names of brands, models, and classes of vehicles"
+    ],
+    "why": "G-1, G-4: The body sentence e4ef72fdcfb8 gives the complete positive and negative rule covering brand/model/class capitalization and non-italicization."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9a720b34b2f9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9a720b34b2f9",
+      "quote": "Use an initial capital for a generic name only if it starts a sentence."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Generic vehicle type 'flying boats' in lower case and roman",
+      "parts": [
+       {
+        "block_id": "fbb84fd141f8",
+        "quote": "During the Second World War, flying boats were deployed to strike remote enemy targets to Australia’s north."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Generic vehicle type 'biplane' in lower case and roman",
+      "parts": [
+       {
+        "block_id": "e32c6d80d5ad",
+        "quote": "The Waco 10 was an open-cockpit biplane introduced in 1927."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Generic type 'Mail trains' capitalised only because it begins the sentence",
+      "parts": [
+       {
+        "block_id": "d8d61b6379f3",
+        "quote": "Mail trains stop at every town, adding hours to the trip."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t italicise or capitalise types of ships, aircraft or other vehicles.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a generic type or category of ship, aircraft, or vehicle written with italics or initial capitals (except when starting a sentence)",
+    "when": [
+     "generic vehicle types may be capitalised if they start a sentence"
+    ],
+    "why": "G-2: The second sentence states the sentence-initial exception to the general prohibition on capitalising types of vehicles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0fb5553ff58c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "'The' is part of the name",
+      "parts": [
+       {
+        "block_id": "08d65978cbd6",
+        "quote": "The Ghan takes 54 hours to travel from Adelaide to Darwin."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "'The' is not part of the name and is not italicised",
+      "parts": [
+       {
+        "block_id": "03e863d2d131",
+        "quote": "The Dreamtime was on the shortlist for the name of Qantas’s new fleet of Boeing 787 Dreamliners."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t italicise the definite article (the word ‘the’) before the vehicle’s name unless it is part of the name.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the definite article 'the' preceding a vehicle's name is italicised when it is not part of the proper name",
+    "when": [
+     "does not apply if the definite article is officially part of the vehicle's name"
+    ],
+    "why": "Specific, actionable instruction regarding formatting of the definite article before vehicle names."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2001ec51e170",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Prefix 'HMAS' is in roman type, while vessel name is italicised",
+      "parts": [
+       {
+        "block_id": "61c8ba6de87c",
+        "quote": "HMAS Arunta, HMAS Sydney"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Prefix 'PS' is in roman type, while vessel name is italicised",
+      "parts": [
+       {
+        "block_id": "be4bb59e2bd1",
+        "quote": "The PS Albury travelled the Murray River in the mid-1800s."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t put the abbreviated parts of a ship’s name in italics.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "abbreviations before a ship's name (such as HMAS or PS) written in italics",
+    "when": [],
+    "why": "Clear, distinct formatting rule for ship prefix abbreviations."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7898665a8697",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0f9752c4fb65",
+      "quote": "Use the pronoun ‘it’ for ships, aircraft and other vehicles. Do not write ‘she’ when referring to vehicles in government content. Use pronouns that reflect gender-neutral language."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "'its' used instead of 'her'",
+      "parts": [
+       {
+        "block_id": "11d39feb5546",
+        "quote": "Brisbane was the first stop for the replica Endeavour on its maiden circumnavigation of Australia."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Refer to vehicles with the pronoun ‘it’",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "using 'she', 'her', or gendered pronouns rather than 'it' or 'its' to refer to a vehicle",
+    "when": [],
+    "why": "G-4: Candidate heading succinctly states the rule; body sentences restate and give rationale."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "07251fe34e31",
+    "end": 41,
+    "prefix": "",
+    "quote": "Italicise specific names and use capitals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d8becabb1a58",
+     "end": 65,
+     "prefix": "",
+     "quote": "Write the names of individual ships, aircraft and other vehicles:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3569724cffb0",
+     "end": 10,
+     "prefix": "",
+     "quote": "in italics",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b42f5fbdc1b8",
+     "end": 22,
+     "prefix": "",
+     "quote": "with initial capitals.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "82b9fc7637b0",
+     "end": 128,
+     "prefix": "",
+     "quote": "Separate the names of vehicles from titles in citations and reference lists. Separate them according to the type of publication:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "118602987018",
+     "end": 108,
+     "prefix": "",
+     "quote": "If the title is in italics (such as in book and website titles), use roman type for the name of the vehicle.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1b4e1976265d",
+     "end": 99,
+     "prefix": "",
+     "quote": "If the title is in roman type (such as a journal article), use italics for the name of the vehicle.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "HMAS Canberra has the specific ship name italicised with initial capital",
+     "parts": [
+      {
+       "block_id": "099164a86b9f",
+       "end": 54,
+       "prefix": "",
+       "quote": "HMAS Canberra is the Royal Australian Navy’s flagship.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Endeavour is italicised and capitalised",
+     "parts": [
+      {
+       "block_id": "595c6cc94963",
+       "end": 94,
+       "prefix": "",
+       "quote": "Australian–American astronaut Andy Thomas flew his first flight in space aboard the Endeavour.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Indian Pacific is italicised and capitalised",
+     "parts": [
+      {
+       "block_id": "8952ab98ea25",
+       "end": 65,
+       "prefix": "",
+       "quote": "The Indian Pacific travels 4,532 kilometres from Perth to Sydney.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Tambar in roman type within an italicised book title in a citation",
+     "parts": [
+      {
+       "block_id": "027f954a92dd",
+       "end": 133,
+       "prefix": "",
+       "quote": "Mair C (2013) The lucky ship: the nine lives of the Australian coaster Tambar1912–1960, Nautical Association of Australia, Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Albatross in italics within roman article title in a citation",
+     "parts": [
+      {
+       "block_id": "d43e14965219",
+       "end": 116,
+       "prefix": "",
+       "quote": "McMaugh D (21 March 2020) ‘Albatross breaks bread with women in need of a hand’, Navy Daily, accessed 24 March 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "7f780bf2be17a1ca",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the name of an individual ship, aircraft or other vehicle written without italics or without initial capitals"
+   },
+   "when": [
+    "applies to names of individual ships, aircraft and other vehicles",
+    "in citations where the publication title is in italics, use roman type instead for the vehicle name"
+   ],
+   "why": "G-4: The candidate heading states the rule clearly; the bullet points and citation sub-rules provide conditions/restatements covered under G-2."
+  },
+  {
+   "anchor": {
+    "block_id": "12b718ec4254",
+    "end": 46,
+    "prefix": "",
+    "quote": "Don't use the definite article for navy ships.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Navy ship named without the definite article 'the'",
+     "parts": [
+      {
+       "block_id": "099164a86b9f",
+       "end": 54,
+       "prefix": "",
+       "quote": "HMAS Canberra is the Royal Australian Navy’s flagship.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the definite article 'the' used before the name of a navy ship (e.g. 'the HMAS Canberra')"
+   },
+   "when": [
+    "applies when naming navy ships"
+   ],
+   "why": "Distinct naming rule specifically targeting the definite article with navy ships."
+  },
+  {
+   "anchor": {
+    "block_id": "e4ef72fdcfb8",
+    "end": 115,
+    "prefix": "",
+    "quote": "Begin the names of the brands, models and classes of vehicles with an initial capital letter but don’t use italics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8af137a527f7",
+     "end": 50,
+     "prefix": "",
+     "quote": "Don’t write brands or types of vehicles in italics",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "79f4bd60a4da",
+     "end": 44,
+     "prefix": "",
+     "quote": "Don’t use italics for the ship’s class name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Brand and model capitalised and not italicised",
+     "parts": [
+      {
+       "block_id": "ae033ba7b0cf",
+       "end": 33,
+       "prefix": "",
+       "quote": "She was driving a Toyota Corolla.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Make and model capitalised and not italicised",
+     "parts": [
+      {
+       "block_id": "0a4df13037b9",
+       "end": 42,
+       "prefix": "",
+       "quote": "A Boeing 737 brought the Australians home.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Model capitalised and not italicised",
+     "parts": [
+      {
+       "block_id": "dda3380e2f9d",
+       "end": 63,
+       "prefix": "",
+       "quote": "They travelled in a Commodore for the last part of the journey.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Ship class name 'Anzac Class' capitalised and not italicised",
+     "parts": [
+      {
+       "block_id": "e81c73311a5b",
+       "end": 63,
+       "prefix": "",
+       "quote": "HMASAnzac (III) is the lead ship of eight Anzac Class frigates.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the brand, model, or class of a vehicle written without an initial capital letter or written in italics"
+   },
+   "when": [
+    "applies to names of brands, models, and classes of vehicles"
+   ],
+   "why": "G-1, G-4: The body sentence e4ef72fdcfb8 gives the complete positive and negative rule covering brand/model/class capitalization and non-italicization."
+  },
+  {
+   "anchor": {
+    "block_id": "9a720b34b2f9",
+    "end": 73,
+    "prefix": "",
+    "quote": "Don’t italicise or capitalise types of ships, aircraft or other vehicles.",
+    "start": 0,
+    "suffix": " Use an initial capital for a ge"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9a720b34b2f9",
+     "end": 145,
+     "prefix": "ps, aircraft or other vehicles. ",
+     "quote": "Use an initial capital for a generic name only if it starts a sentence.",
+     "start": 74,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Generic vehicle type 'flying boats' in lower case and roman",
+     "parts": [
+      {
+       "block_id": "fbb84fd141f8",
+       "end": 108,
+       "prefix": "",
+       "quote": "During the Second World War, flying boats were deployed to strike remote enemy targets to Australia’s north.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Generic vehicle type 'biplane' in lower case and roman",
+     "parts": [
+      {
+       "block_id": "e32c6d80d5ad",
+       "end": 59,
+       "prefix": "",
+       "quote": "The Waco 10 was an open-cockpit biplane introduced in 1927.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Generic type 'Mail trains' capitalised only because it begins the sentence",
+     "parts": [
+      {
+       "block_id": "d8d61b6379f3",
+       "end": 57,
+       "prefix": "",
+       "quote": "Mail trains stop at every town, adding hours to the trip.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a generic type or category of ship, aircraft, or vehicle written with italics or initial capitals (except when starting a sentence)"
+   },
+   "when": [
+    "generic vehicle types may be capitalised if they start a sentence"
+   ],
+   "why": "G-2: The second sentence states the sentence-initial exception to the general prohibition on capitalising types of vehicles."
+  },
+  {
+   "anchor": {
+    "block_id": "0fb5553ff58c",
+    "end": 110,
+    "prefix": "",
+    "quote": "Don’t italicise the definite article (the word ‘the’) before the vehicle’s name unless it is part of the name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "'The' is part of the name",
+     "parts": [
+      {
+       "block_id": "08d65978cbd6",
+       "end": 58,
+       "prefix": "",
+       "quote": "The Ghan takes 54 hours to travel from Adelaide to Darwin.",
+       "start": 0,
+       "suffix": " [The definite article is part o"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "'The' is not part of the name and is not italicised",
+     "parts": [
+      {
+       "block_id": "03e863d2d131",
+       "end": 96,
+       "prefix": "",
+       "quote": "The Dreamtime was on the shortlist for the name of Qantas’s new fleet of Boeing 787 Dreamliners.",
+       "start": 0,
+       "suffix": " [The definite article is not pa"
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the definite article 'the' preceding a vehicle's name is italicised when it is not part of the proper name"
+   },
+   "when": [
+    "does not apply if the definite article is officially part of the vehicle's name"
+   ],
+   "why": "Specific, actionable instruction regarding formatting of the definite article before vehicle names."
+  },
+  {
+   "anchor": {
+    "block_id": "2001ec51e170",
+    "end": 60,
+    "prefix": "",
+    "quote": "Don’t put the abbreviated parts of a ship’s name in italics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Prefix 'HMAS' is in roman type, while vessel name is italicised",
+     "parts": [
+      {
+       "block_id": "61c8ba6de87c",
+       "end": 24,
+       "prefix": "",
+       "quote": "HMAS Arunta, HMAS Sydney",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Prefix 'PS' is in roman type, while vessel name is italicised",
+     "parts": [
+      {
+       "block_id": "be4bb59e2bd1",
+       "end": 58,
+       "prefix": "",
+       "quote": "The PS Albury travelled the Murray River in the mid-1800s.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "abbreviations before a ship's name (such as HMAS or PS) written in italics"
+   },
+   "when": [],
+   "why": "Clear, distinct formatting rule for ship prefix abbreviations."
+  },
+  {
+   "anchor": {
+    "block_id": "7898665a8697",
+    "end": 39,
+    "prefix": "",
+    "quote": "Refer to vehicles with the pronoun ‘it’",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0f9752c4fb65",
+     "end": 180,
+     "prefix": "",
+     "quote": "Use the pronoun ‘it’ for ships, aircraft and other vehicles. Do not write ‘she’ when referring to vehicles in government content. Use pronouns that reflect gender-neutral language.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "'its' used instead of 'her'",
+     "parts": [
+      {
+       "block_id": "11d39feb5546",
+       "end": 98,
+       "prefix": "",
+       "quote": "Brisbane was the first stop for the replica Endeavour on its maiden circumnavigation of Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "6a83b916bf8c86dd",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "using 'she', 'her', or gendered pronouns rather than 'it' or 'its' to refer to a vehicle"
+   },
+   "when": [],
+   "why": "G-4: Candidate heading succinctly states the rule; body sentences restate and give rationale."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4340,
+  "output_tokens": 3890,
+  "reasoning_tokens": 0
+ }
+}

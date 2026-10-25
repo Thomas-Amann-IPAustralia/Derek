@@ -6,14 +6,18 @@
     python tools/draft/draft_spans.py --next 5            # the next 5 pages nobody has drafted
     python tools/draft/draft_spans.py --all
     python tools/draft/draft_spans.py --next 5 --dry-run  # what it would do; no key needed
+    python tools/draft/draft_spans.py --all --model gpt-6-astra --jobs 4   # ADR-027's pair
 
 Each page is drafted once per (prompt version, model) and cached under
 ``golden/drafts/`` (ADR-003). A cached page is skipped, so re-running is free. A
 draft is a proposal the annotator shows as a seed; it becomes part of the golden
 set only when a human accepts it there, and nothing in extraction reads it.
 
-Needs ``requirements-draft.txt`` and an ``ANTHROPIC_API_KEY`` (or any credential
-the SDK resolves). ``.github/workflows/draft-spans.yml`` runs it from a browser,
+``--model`` picks the drafter; ``providers.PROVIDERS`` lists the pinned ones.
+The default, ``claude-opus-5``, needs ``requirements-draft.txt`` and an
+``ANTHROPIC_API_KEY`` (or any credential the SDK resolves). ADR-027's pair,
+``gpt-6-astra`` and ``gemini-3.1-pro-preview``, need only the stdlib and
+``OPENAI_API_KEY`` / ``GEMINI_API_KEY`` (injected by the proxy in a cloud session). ``.github/workflows/draft-spans.yml`` runs it from a browser,
 with the key as a repository secret.
 
 Refusal fallback is on (``fallbacks: "default"``): if the model declines a page,
@@ -34,20 +38,33 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 from drafting import (  # noqa: E402
-    EFFORT, MAX_TOKENS, MODEL, PROMPT_SHA256, PROMPT_VERSION, draft_path, eligible_pages,
+    EFFORT, MAX_TOKENS, MODEL, PROMPT_SHA256, PROMPT_VERSION, draft_path, drafter_id,
+    eligible_pages,
     input_sha256, load_blind, load_page, output_schema, prompt_sha256, record, resolve,
     system_prompt, user_message, write_record,
 )
+from providers import PROVIDERS, DraftError, call_gemini, call_openai, cost  # noqa: E402
 
 FALLBACK_BETA = "server-side-fallback-2026-07-01"
 
+# Gemini caps output at 65,536 tokens; the others take more but never need it.
+PROVIDER_MAX_TOKENS = {"anthropic": MAX_TOKENS, "openai": MAX_TOKENS, "gemini": 65536}
 
-class DraftError(RuntimeError):
-    """A page that could not be drafted. Names the page and why."""
 
-
-def call_model(system: str, user: str, schema: dict) -> tuple[dict, str, dict, str]:
+def call_model(system: str, user: str, schema: dict, model: str = MODEL,
+               effort: str = EFFORT) -> tuple[dict, str, dict, str]:
     """One page, one request. Returns (parsed JSON, served model, usage, stop reason)."""
+    provider = PROVIDERS[model]
+    if provider == "openai":
+        return call_openai(model, system, user, schema, effort=effort,
+                           max_tokens=PROVIDER_MAX_TOKENS[provider])
+    if provider == "gemini":
+        return call_gemini(model, system, user, schema, effort=effort,
+                           max_tokens=PROVIDER_MAX_TOKENS[provider])
+    return _call_anthropic(system, user, schema)
+
+
+def _call_anthropic(system: str, user: str, schema: dict) -> tuple[dict, str, dict, str]:
     import anthropic   # lazily: CI and the tests never install the SDK
 
     client = anthropic.Anthropic(max_retries=4)
@@ -85,13 +102,14 @@ def call_model(system: str, user: str, schema: dict) -> tuple[dict, str, dict, s
     return parsed, message.model, usage, message.stop_reason
 
 
-def status(rel: str) -> str:
-    """cached | stale | new, for one page against the current prompt and model."""
-    path = draft_path(rel)
+def status(rel: str, model: str = MODEL, effort: str = EFFORT) -> str:
+    """cached | stale | new, for one page against the current prompt, model and effort."""
+    path = draft_path(rel, model=drafter_id(model, effort))
     if not path.exists():
         return "new"
     rec = json.loads(path.read_text(encoding="utf-8"))
-    return "cached" if rec.get("input_sha256") == input_sha256(load_page(rel)) else "stale"
+    fresh = input_sha256(load_page(rel), model, effort)
+    return "cached" if rec.get("input_sha256") == fresh else "stale"
 
 
 def choose(args) -> list[str]:
@@ -109,7 +127,8 @@ def choose(args) -> list[str]:
         from derek.extract.golden import load_golden
 
         annotated = set(load_golden().spans)
-        todo = [p for p in pages if p not in annotated and status(p) == "new"]
+        todo = [p for p in pages
+                if p not in annotated and status(p, args.model, args.effort) == "new"]
         return todo[:args.next]
     raise SystemExit("name pages, or use --blind, --next N or --all")
 
@@ -124,7 +143,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--dry-run", action="store_true", help="report; call nothing")
     ap.add_argument("--force", action="store_true",
                     help="redraw a cached page (a new call, and a new bill)")
+    ap.add_argument("--model", default=MODEL, choices=sorted(PROVIDERS),
+                    help=f"the drafter (default {MODEL})")
+    ap.add_argument("--effort", default=EFFORT,
+                    help=f"reasoning effort, as the provider names it (default {EFFORT})")
+    ap.add_argument("--jobs", type=int, default=1, help="pages drafted at once")
     args = ap.parse_args(argv)
+    model, effort = args.model, args.effort
 
     # ADR-003: a prompt nobody versioned is a prompt nobody reviewed. Refuse to
     # pay for one.
@@ -136,11 +161,11 @@ def main(argv: list[str] | None = None) -> int:
             f"directory and its own score.")
 
     pages = choose(args)
-    plan = [(rel, status(rel)) for rel in pages]
+    plan = [(rel, status(rel, model, effort)) for rel in pages]
     todo = [rel for rel, st in plan if st != "cached" or args.force]
     stale = [rel for rel, st in plan if st == "stale"]
-    print(f"{len(pages)} page(s): {len(todo)} to draft with {MODEL} "
-          f"(prompt {PROMPT_VERSION}, effort {EFFORT}), {len(pages) - len(todo)} cached.")
+    print(f"{len(pages)} page(s): {len(todo)} to draft with {model} "
+          f"(prompt {PROMPT_VERSION}, effort {effort}), {len(pages) - len(todo)} cached.")
     if stale and not args.force:
         raise SystemExit(
             "these drafts were made from a different input under the same prompt "
@@ -158,25 +183,44 @@ def main(argv: list[str] | None = None) -> int:
     system, schema = system_prompt(), output_schema()
     failed: list[tuple[str, str]] = []
     totals: dict[str, int] = {}
-    for rel in todo:
+    spent = 0.0
+
+    def one(rel: str):
         page = load_page(rel)
-        try:
-            raw, served, usage, stop = call_model(system, user_message(page), schema)
-        except DraftError as exc:
-            failed.append((rel, str(exc)))
-            print(f"  FAILED {rel}: {exc}", file=sys.stderr)
-            continue
-        resolved = resolve(page, raw)
-        write_record(record(page, raw, resolved, served_model=served, usage=usage,
-                            stop_reason=stop), draft_path(rel))
-        for k, v in usage.items():
-            totals[k] = totals.get(k, 0) + v
-        note = f" (served by {served})" if served != MODEL else ""
-        print(f"  {rel}: {len(resolved.rules)} rule(s), {len(resolved.not_rules)} "
-              f"not-rule(s), {len(resolved.refused)} pointer(s) refused{note}")
+        raw, served, usage, stop = call_model(system, user_message(page), schema, model,
+                                              effort)
+        return page, raw, served, usage, stop
+
+    # Threads, not processes: each worker spends its time waiting on HTTPS, and
+    # every write goes to its own page's file, so nothing is shared but totals,
+    # which only the main thread touches.
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as pool:
+        futures = {pool.submit(one, rel): rel for rel in todo}
+        for fut in as_completed(futures):
+            rel = futures[fut]
+            try:
+                page, raw, served, usage, stop = fut.result()
+            except DraftError as exc:
+                failed.append((rel, str(exc)))
+                print(f"  FAILED {rel}: {exc}", file=sys.stderr)
+                continue
+            resolved = resolve(page, raw)
+            write_record(record(page, raw, resolved, served_model=served, usage=usage,
+                                stop_reason=stop, model=model, effort=effort),
+                         draft_path(rel, model=drafter_id(model, effort)))
+            for k, v in usage.items():
+                totals[k] = totals.get(k, 0) + v
+            spent += cost(model, usage)
+            note = f" (served by {served})" if not served.startswith(model) else ""
+            print(f"  {rel}: {len(resolved.rules)} rule(s), {len(resolved.not_rules)} "
+                  f"not-rule(s), {len(resolved.refused)} pointer(s) refused{note}", flush=True)
 
     if totals:
         print("usage: " + ", ".join(f"{k} {v:,}" for k, v in sorted(totals.items())))
+        if spent:
+            print(f"cost: about ${spent:.2f} at the prices in tools/draft/providers.py")
     if failed:
         print(f"\n{len(failed)} page(s) failed and were not written.", file=sys.stderr)
         return 1

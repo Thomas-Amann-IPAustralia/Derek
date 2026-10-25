@@ -1,0 +1,1419 @@
+{
+ "effort": "low",
+ "input_sha256": "84354fe256dd381884a7be219ce2f88047dada6f8efa03f1c75ba7a44627d0bd",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "ae8d51ee01df",
+    "end": 55,
+    "prefix": "",
+    "quote": "Link to something only if it helps meet the user’s need",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Broad design advice on user needs rather than an actionable property of the text.",
+   "reason": "advice",
+   "seed_uid": "c1f961bb113bf4c5"
+  },
+  {
+   "anchor": {
+    "block_id": "8e9595fc2be6",
+    "end": 37,
+    "prefix": "",
+    "quote": "Digital Service Standard requirements",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading referencing DSS standards and advice to do user research.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d348bd3cb40e",
+    "end": 42,
+    "prefix": "",
+    "quote": "Link to a different site only if essential",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General content strategy advice about external links.",
+   "reason": "advice",
+   "seed_uid": "f87c945b3b5f6ce5"
+  },
+  {
+   "anchor": {
+    "block_id": "9199dd243061",
+    "end": 43,
+    "prefix": "",
+    "quote": "Link to sources instead of duplicating them",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Advice to the writer during content planning.",
+   "reason": "advice",
+   "seed_uid": "43b53f08580d56f4"
+  },
+  {
+   "anchor": {
+    "block_id": "d70cf18eb30d",
+    "end": 42,
+    "prefix": "",
+    "quote": "Provide content in HTML format by default.",
+    "start": 0,
+    "suffix": " This has benefits for both acce"
+   },
+   "note": "Format preference advice rather than a text rule about links.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d36f4093f968",
+    "end": 73,
+    "prefix": "",
+    "quote": "You don’t need to explain ‘kB’ and ‘MB’ as they are units of measurement.",
+    "start": 0,
+    "suffix": " ‘PDF’, ‘DOCX’ and other common "
+   },
+   "note": "Permission relaxing explanation of kB/MB.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "89df44c49626",
+    "end": 36,
+    "prefix": "",
+    "quote": "Take care when using file type icons",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General cautionary advice regarding icons.",
+   "reason": "advice",
+   "seed_uid": "39f4345fbc1a7b15"
+  },
+  {
+   "anchor": {
+    "block_id": "c4659e6953fd",
+    "end": 26,
+    "prefix": "",
+    "quote": "Accessibility requirements",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Informational reference to WCAG criteria.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f6ea3b62718a",
+    "end": 53,
+    "prefix": "",
+    "quote": "Create internal links that support the user’s journey",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level information architecture advice.",
+   "reason": "advice",
+   "seed_uid": "e5103bbe09be547b"
+  },
+  {
+   "anchor": {
+    "block_id": "7bc4052a65a2",
+    "end": 53,
+    "prefix": "",
+    "quote": "Add in-page links only if they help the user navigate",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level editorial/design advice on in-page navigation.",
+   "reason": "advice",
+   "seed_uid": "5f7823b949ef2e2a"
+  }
+ ],
+ "page_path": "structuring-content/links.md",
+ "page_sha256": "1af5158b1d512684d23add665d745a95a4e0b856bb9ce63a92cb2ea967373f00",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "ae8d51ee01df",
+    "note": "Broad design advice on user needs rather than an actionable property of the text.",
+    "quote": "Link to something only if it helps meet the user’s need",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8e9595fc2be6",
+    "note": "Section heading referencing DSS standards and advice to do user research.",
+    "quote": "Digital Service Standard requirements",
+    "reason": "section"
+   },
+   {
+    "block_id": "d348bd3cb40e",
+    "note": "General content strategy advice about external links.",
+    "quote": "Link to a different site only if essential",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9199dd243061",
+    "note": "Advice to the writer during content planning.",
+    "quote": "Link to sources instead of duplicating them",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d70cf18eb30d",
+    "note": "Format preference advice rather than a text rule about links.",
+    "quote": "Provide content in HTML format by default.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d36f4093f968",
+    "note": "Permission relaxing explanation of kB/MB.",
+    "quote": "You don’t need to explain ‘kB’ and ‘MB’ as they are units of measurement.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "89df44c49626",
+    "note": "General cautionary advice regarding icons.",
+    "quote": "Take care when using file type icons",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c4659e6953fd",
+    "note": "Informational reference to WCAG criteria.",
+    "quote": "Accessibility requirements",
+    "reason": "section"
+   },
+   {
+    "block_id": "f6ea3b62718a",
+    "note": "High-level information architecture advice.",
+    "quote": "Create internal links that support the user’s journey",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7bc4052a65a2",
+    "note": "High-level editorial/design advice on in-page navigation.",
+    "quote": "Add in-page links only if they help the user navigate",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "6d6532742181",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "6dd9b0acf805",
+      "quote": "Use images for links only if they meet a user need."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use text for links in most cases.",
+    "specification": "Links should generally consist of anchor text rather than linked images, unless an image meets a specific user need.",
+    "unit": "phrase",
+    "violation_condition": "a link implemented using an image rather than anchor text, without meeting a specific user need",
+    "when": [
+     "Unless an image link meets a specific user need."
+    ],
+    "why": "G-2, G-4: Core instruction on using text rather than images for links."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "6dd9b0acf805",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you do use images, accurately describe the link with alt text. Don’t describe the image itself.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an image link whose alt text describes the visual appearance of the image rather than the link destination/purpose, or lacks alt text",
+    "when": [
+     "When using an image as a hyperlink."
+    ],
+    "why": "G-2: Specific rule for image links requiring alt text to describe the link rather than the image."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "653550295a37",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Link directly to the specific page that the user needs to go to, not the homepage.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link pointing to a website's homepage instead of the specific relevant target page (deep linking)",
+    "when": [],
+    "why": "G-2: Deep linking instruction."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "4b08bc165692",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6c8c9bcb42f8",
+      "quote": "Include document title, file type and size when linking to files"
+     },
+     {
+      "block_id": "cb06813dcde6",
+      "quote": "Give users the information they need to decide whether to download the file by providing the:"
+     },
+     {
+      "block_id": "dac4fa1c345e",
+      "quote": "document title (not the file name)"
+     },
+     {
+      "block_id": "146332aa3714",
+      "quote": "the file type"
+     },
+     {
+      "block_id": "64d7ce3c9de5",
+      "quote": "the file size in kilobytes (kB) or megabytes (MB)."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Link text includes document title, file type, and file size.",
+      "parts": [
+       {
+        "block_id": "9224b65489b1",
+        "quote": "You can read more about our financial position in the"
+       },
+       {
+        "block_id": "c1c126db13b1",
+        "quote": "Digital Transformation Agency Annual Report 2019–20"
+       },
+       {
+        "block_id": "9d921b3aad02",
+        "quote": "[PDF 1.98 MB]"
+       },
+       {
+        "block_id": "ee91bdf414ac",
+        "quote": "."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Include all this information in the link text",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link to a non-HTML file that omits the document title, file type, or file size in kB or MB from the link text, or uses the file name instead of the document title",
+    "when": [
+     "When linking to non-HTML documents and files."
+    ],
+    "why": "G-1, G-4: Consolidated candidate heading and list into the actionable instruction."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "d8935954b89f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ac695e011f5a",
+      "quote": "Write link text that makes the destination clear"
+     },
+     {
+      "block_id": "df26ef56637e",
+      "quote": "Links like ‘click here’ or ‘more information’ don’t give the user any information about the destination."
+     },
+     {
+      "block_id": "df414d2dd3e0",
+      "quote": "Write link text that makes the destination and purpose of the link clear."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Descriptive link destination.",
+      "parts": [
+       {
+        "block_id": "9d1d70a5f987",
+        "quote": "Find out more about our upcoming events on our Eventbrite page."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Generic link text 'Click here'.",
+      "parts": [
+       {
+        "block_id": "db7220ab9e32",
+        "quote": "Click here to find out about our upcoming meetups."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write link text that describes the destination in clear language.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "link text that does not describe its destination out of context, such as 'click here' or 'more information'",
+    "when": [],
+    "why": "G-1, G-4: Core rule on descriptive link anchor text."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "91ea0b6fc03b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "fdd0d7578ee7",
+      "quote": "Don’t use exit modals"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use these to tell users they are leaving your site when they use external links.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "an exit modal or exit pop-up alert alerting users that they are navigating to an external website",
+    "when": [],
+    "why": "G-1, G-4: Prohibition against exit modals on external links."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "13ddca2944a9",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "974b829d76db",
+      "quote": "Include keywords at the start of links"
+     },
+     {
+      "block_id": "f0f871e739d6",
+      "quote": "Using relevant words at the start of links is called ‘frontloading’."
+     },
+     {
+      "block_id": "a7a52e88f33f",
+      "quote": "Only link the keywords."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Keywords placed earlier.",
+      "parts": [
+       {
+        "block_id": "1c9c88ddfb77",
+        "quote": "Attend next month’s Brisbane workshop for developers and writers."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Keywords not frontloaded.",
+      "parts": [
+       {
+        "block_id": "8052b29898d8",
+        "quote": "Attend a Brisbane workshop for developers and writers next month."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Keep them concise and put the most important words at the start of the link.",
+    "specification": "The key topic words should be placed at the start of the anchor text.",
+    "unit": "phrase",
+    "violation_condition": "link text that fails to frontload the most important keywords at the beginning of the link",
+    "when": [],
+    "why": "G-1, G-4: Rule on frontloading keywords in links."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "8529ab1ccc13",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "9b5a71db38bf",
+      "quote": "Put most links at the end of sentences"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Link is placed at the end of the sentence.",
+      "parts": [
+       {
+        "block_id": "aedd6898e84e",
+        "quote": "Find out your eligibility for a payment by filling out the application form."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Link is placed early in the sentence.",
+      "parts": [
+       {
+        "block_id": "e1151b3b4161",
+        "quote": "You need to fill out the application form to find out if you are eligible for a payment."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If it’s important for users to understand all your content, put links at the end of sentences.",
+    "specification": "Links should be placed at the end of sentences rather than at the beginning or middle to avoid distracting users before reading the full sentence.",
+    "unit": "sentence",
+    "violation_condition": "a link embedded at the start or middle of a sentence when reading the full sentence is important for user comprehension",
+    "when": [
+     "When it is important for users to understand all content in the sentence."
+    ],
+    "why": "G-1, G-4: Sentence position of links."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "c91e403ba0e5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d9f98f39342f",
+      "quote": "Write short calls to action that explain what they do"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Concise call to action describing what happens next.",
+      "parts": [
+       {
+        "block_id": "3b73fbca8a08",
+        "quote": "Start your application"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Vague 'Click here' call to action.",
+      "parts": [
+       {
+        "block_id": "6782b24d3774",
+        "quote": "Click here to apply"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use concise keywords for call-to-action text or buttons. Accurately describe what will happen next.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "call-to-action or button text using vague phrases like 'Click here to apply' instead of concise, descriptive action keywords",
+    "when": [
+     "When writing text for calls to action or buttons."
+    ],
+    "why": "G-1, G-4: Rule governing call-to-action link/button text."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "f9f8cbbf731b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4d7036c0fa10",
+      "quote": "Link email addresses not names"
+     },
+     {
+      "block_id": "14f26274e3dc",
+      "quote": "Use the mailto: prefix in the URL but not in the link text."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Email address used as anchor text.",
+      "parts": [
+       {
+        "block_id": "383645cd2705",
+        "quote": "belinda.bloggs@dta.gov.au"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Person's name used as anchor text for an email link.",
+      "parts": [
+       {
+        "block_id": "0e31152c9962",
+        "quote": "Belinda Bloggs"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "To link to an email address, use the email address as the link text so it’s not mistaken for a website address.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link to an email address that uses a person's name or other text instead of the email address itself as the visible link text, or includes 'mailto:' in the visible text",
+    "when": [
+     "When linking to an email address."
+    ],
+    "why": "G-1, G-2, G-4: Specific rule regarding linking email addresses."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "84218becf725",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b55ecc3c46ba",
+      "quote": "Open links in the same browser tab or window"
+     },
+     {
+      "block_id": "93d8cfac84f4",
+      "quote": "In all cases, give users contextual information in the link to explain why a link will open in a new window or tab."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Set links to open in the same browser window or tab by default.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link configured to open in a new tab or window without contextual explanation or a specific task-based need",
+    "when": [
+     "Unless opening in a new tab/window is necessary (such as logging on to a secure website, filling out a multi-step form, or downloading a document) and contextual information is provided explaining why."
+    ],
+    "why": "G-1, G-2, G-4: Default link target window behavior and exceptions."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "078dc0a64749",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "124e656d0b33",
+      "quote": "Use the same homepage links across the site"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "You must include a homepage link in your main navigation.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a main navigation menu that lacks a homepage link",
+    "when": [],
+    "why": "G-1, G-4: Mandatory navigation requirement."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "8e540154d2e0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Add homepage links to the agency name or site title and the Commonwealth Coat of Arms image. Place these links in the top left part of the page.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "agency name/site title or Commonwealth Coat of Arms image not linked to the homepage, or not placed in the top left part of the page",
+    "when": [],
+    "why": "G-2, G-4: Specific header homepage link requirement."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "6d6532742181",
+    "end": 33,
+    "prefix": "",
+    "quote": "Use text for links in most cases.",
+    "start": 0,
+    "suffix": " These links are called anchor t"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "6dd9b0acf805",
+     "end": 51,
+     "prefix": "",
+     "quote": "Use images for links only if they meet a user need.",
+     "start": 0,
+     "suffix": " If you do use images, accuratel"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Links should generally consist of anchor text rather than linked images, unless an image meets a specific user need.",
+    "unit": "phrase",
+    "violation_condition": "a link implemented using an image rather than anchor text, without meeting a specific user need"
+   },
+   "when": [
+    "Unless an image link meets a specific user need."
+   ],
+   "why": "G-2, G-4: Core instruction on using text rather than images for links."
+  },
+  {
+   "anchor": {
+    "block_id": "6dd9b0acf805",
+    "end": 150,
+    "prefix": " only if they meet a user need. ",
+    "quote": "If you do use images, accurately describe the link with alt text. Don’t describe the image itself.",
+    "start": 52,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an image link whose alt text describes the visual appearance of the image rather than the link destination/purpose, or lacks alt text"
+   },
+   "when": [
+    "When using an image as a hyperlink."
+   ],
+   "why": "G-2: Specific rule for image links requiring alt text to describe the link rather than the image."
+  },
+  {
+   "anchor": {
+    "block_id": "653550295a37",
+    "end": 82,
+    "prefix": "",
+    "quote": "Link directly to the specific page that the user needs to go to, not the homepage.",
+    "start": 0,
+    "suffix": " This is known as ‘deep linking’"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link pointing to a website's homepage instead of the specific relevant target page (deep linking)"
+   },
+   "when": [],
+   "why": "G-2: Deep linking instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "4b08bc165692",
+    "end": 45,
+    "prefix": "",
+    "quote": "Include all this information in the link text",
+    "start": 0,
+    "suffix": ", but remember that this adds ex"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6c8c9bcb42f8",
+     "end": 64,
+     "prefix": "",
+     "quote": "Include document title, file type and size when linking to files",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cb06813dcde6",
+     "end": 182,
+     "prefix": "o non-HTML documents and files. ",
+     "quote": "Give users the information they need to decide whether to download the file by providing the:",
+     "start": 89,
+     "suffix": ""
+    },
+    {
+     "block_id": "dac4fa1c345e",
+     "end": 34,
+     "prefix": "",
+     "quote": "document title (not the file name)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "146332aa3714",
+     "end": 13,
+     "prefix": "",
+     "quote": "the file type",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "64d7ce3c9de5",
+     "end": 50,
+     "prefix": "",
+     "quote": "the file size in kilobytes (kB) or megabytes (MB).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Link text includes document title, file type, and file size.",
+     "parts": [
+      {
+       "block_id": "9224b65489b1",
+       "end": 53,
+       "prefix": "",
+       "quote": "You can read more about our financial position in the",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c1c126db13b1",
+       "end": 51,
+       "prefix": "",
+       "quote": "Digital Transformation Agency Annual Report 2019–20",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "9d921b3aad02",
+       "end": 13,
+       "prefix": "",
+       "quote": "[PDF 1.98 MB]",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "ee91bdf414ac",
+       "end": 1,
+       "prefix": "",
+       "quote": ".",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link to a non-HTML file that omits the document title, file type, or file size in kB or MB from the link text, or uses the file name instead of the document title"
+   },
+   "when": [
+    "When linking to non-HTML documents and files."
+   ],
+   "why": "G-1, G-4: Consolidated candidate heading and list into the actionable instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "d8935954b89f",
+    "end": 65,
+    "prefix": "",
+    "quote": "Write link text that describes the destination in clear language.",
+    "start": 0,
+    "suffix": " Match the content on the linked"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ac695e011f5a",
+     "end": 48,
+     "prefix": "",
+     "quote": "Write link text that makes the destination clear",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "df26ef56637e",
+     "end": 201,
+     "prefix": "context of surrounding content. ",
+     "quote": "Links like ‘click here’ or ‘more information’ don’t give the user any information about the destination.",
+     "start": 97,
+     "suffix": ""
+    },
+    {
+     "block_id": "df414d2dd3e0",
+     "end": 73,
+     "prefix": "",
+     "quote": "Write link text that makes the destination and purpose of the link clear.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Descriptive link destination.",
+     "parts": [
+      {
+       "block_id": "9d1d70a5f987",
+       "end": 63,
+       "prefix": "",
+       "quote": "Find out more about our upcoming events on our Eventbrite page.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Generic link text 'Click here'.",
+     "parts": [
+      {
+       "block_id": "db7220ab9e32",
+       "end": 50,
+       "prefix": "",
+       "quote": "Click here to find out about our upcoming meetups.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "link text that does not describe its destination out of context, such as 'click here' or 'more information'"
+   },
+   "when": [],
+   "why": "G-1, G-4: Core rule on descriptive link anchor text."
+  },
+  {
+   "anchor": {
+    "block_id": "91ea0b6fc03b",
+    "end": 86,
+    "prefix": "",
+    "quote": "Don’t use these to tell users they are leaving your site when they use external links.",
+    "start": 0,
+    "suffix": " Make it clear in your text that"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "fdd0d7578ee7",
+     "end": 21,
+     "prefix": "",
+     "quote": "Don’t use exit modals",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "an exit modal or exit pop-up alert alerting users that they are navigating to an external website"
+   },
+   "when": [],
+   "why": "G-1, G-4: Prohibition against exit modals on external links."
+  },
+  {
+   "anchor": {
+    "block_id": "13ddca2944a9",
+    "end": 131,
+    "prefix": "d the first few words of links. ",
+    "quote": "Keep them concise and put the most important words at the start of the link.",
+    "start": 55,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "974b829d76db",
+     "end": 38,
+     "prefix": "",
+     "quote": "Include keywords at the start of links",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f0f871e739d6",
+     "end": 68,
+     "prefix": "",
+     "quote": "Using relevant words at the start of links is called ‘frontloading’.",
+     "start": 0,
+     "suffix": " Frontloading makes it easier fo"
+    },
+    {
+     "block_id": "a7a52e88f33f",
+     "end": 108,
+     "prefix": "ple to decide whether to click. ",
+     "quote": "Only link the keywords.",
+     "start": 85,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Keywords placed earlier.",
+     "parts": [
+      {
+       "block_id": "1c9c88ddfb77",
+       "end": 65,
+       "prefix": "",
+       "quote": "Attend next month’s Brisbane workshop for developers and writers.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Keywords not frontloaded.",
+     "parts": [
+      {
+       "block_id": "8052b29898d8",
+       "end": 65,
+       "prefix": "",
+       "quote": "Attend a Brisbane workshop for developers and writers next month.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The key topic words should be placed at the start of the anchor text.",
+    "unit": "phrase",
+    "violation_condition": "link text that fails to frontload the most important keywords at the beginning of the link"
+   },
+   "when": [],
+   "why": "G-1, G-4: Rule on frontloading keywords in links."
+  },
+  {
+   "anchor": {
+    "block_id": "8529ab1ccc13",
+    "end": 94,
+    "prefix": "",
+    "quote": "If it’s important for users to understand all your content, put links at the end of sentences.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "9b5a71db38bf",
+     "end": 38,
+     "prefix": "",
+     "quote": "Put most links at the end of sentences",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Link is placed at the end of the sentence.",
+     "parts": [
+      {
+       "block_id": "aedd6898e84e",
+       "end": 76,
+       "prefix": "",
+       "quote": "Find out your eligibility for a payment by filling out the application form.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Link is placed early in the sentence.",
+     "parts": [
+      {
+       "block_id": "e1151b3b4161",
+       "end": 88,
+       "prefix": "",
+       "quote": "You need to fill out the application form to find out if you are eligible for a payment.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Links should be placed at the end of sentences rather than at the beginning or middle to avoid distracting users before reading the full sentence.",
+    "unit": "sentence",
+    "violation_condition": "a link embedded at the start or middle of a sentence when reading the full sentence is important for user comprehension"
+   },
+   "when": [
+    "When it is important for users to understand all content in the sentence."
+   ],
+   "why": "G-1, G-4: Sentence position of links."
+  },
+  {
+   "anchor": {
+    "block_id": "c91e403ba0e5",
+    "end": 99,
+    "prefix": "",
+    "quote": "Use concise keywords for call-to-action text or buttons. Accurately describe what will happen next.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d9f98f39342f",
+     "end": 53,
+     "prefix": "",
+     "quote": "Write short calls to action that explain what they do",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Concise call to action describing what happens next.",
+     "parts": [
+      {
+       "block_id": "3b73fbca8a08",
+       "end": 22,
+       "prefix": "",
+       "quote": "Start your application",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Vague 'Click here' call to action.",
+     "parts": [
+      {
+       "block_id": "6782b24d3774",
+       "end": 19,
+       "prefix": "",
+       "quote": "Click here to apply",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "call-to-action or button text using vague phrases like 'Click here to apply' instead of concise, descriptive action keywords"
+   },
+   "when": [
+    "When writing text for calls to action or buttons."
+   ],
+   "why": "G-1, G-4: Rule governing call-to-action link/button text."
+  },
+  {
+   "anchor": {
+    "block_id": "f9f8cbbf731b",
+    "end": 111,
+    "prefix": "",
+    "quote": "To link to an email address, use the email address as the link text so it’s not mistaken for a website address.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4d7036c0fa10",
+     "end": 30,
+     "prefix": "",
+     "quote": "Link email addresses not names",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "14f26274e3dc",
+     "end": 59,
+     "prefix": "",
+     "quote": "Use the mailto: prefix in the URL but not in the link text.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Email address used as anchor text.",
+     "parts": [
+      {
+       "block_id": "383645cd2705",
+       "end": 25,
+       "prefix": "",
+       "quote": "belinda.bloggs@dta.gov.au",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Person's name used as anchor text for an email link.",
+     "parts": [
+      {
+       "block_id": "0e31152c9962",
+       "end": 14,
+       "prefix": "",
+       "quote": "Belinda Bloggs",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link to an email address that uses a person's name or other text instead of the email address itself as the visible link text, or includes 'mailto:' in the visible text"
+   },
+   "when": [
+    "When linking to an email address."
+   ],
+   "why": "G-1, G-2, G-4: Specific rule regarding linking email addresses."
+  },
+  {
+   "anchor": {
+    "block_id": "84218becf725",
+    "end": 63,
+    "prefix": "",
+    "quote": "Set links to open in the same browser window or tab by default.",
+    "start": 0,
+    "suffix": " This prevents users from becomi"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b55ecc3c46ba",
+     "end": 44,
+     "prefix": "",
+     "quote": "Open links in the same browser tab or window",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "93d8cfac84f4",
+     "end": 115,
+     "prefix": "",
+     "quote": "In all cases, give users contextual information in the link to explain why a link will open in a new window or tab.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a link configured to open in a new tab or window without contextual explanation or a specific task-based need"
+   },
+   "when": [
+    "Unless opening in a new tab/window is necessary (such as logging on to a secure website, filling out a multi-step form, or downloading a document) and contextual information is provided explaining why."
+   ],
+   "why": "G-1, G-2, G-4: Default link target window behavior and exceptions."
+  },
+  {
+   "anchor": {
+    "block_id": "078dc0a64749",
+    "end": 57,
+    "prefix": "",
+    "quote": "You must include a homepage link in your main navigation.",
+    "start": 0,
+    "suffix": " This helps users when they beco"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "124e656d0b33",
+     "end": 43,
+     "prefix": "",
+     "quote": "Use the same homepage links across the site",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a main navigation menu that lacks a homepage link"
+   },
+   "when": [],
+   "why": "G-1, G-4: Mandatory navigation requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "8e540154d2e0",
+    "end": 144,
+    "prefix": "",
+    "quote": "Add homepage links to the agency name or site title and the Commonwealth Coat of Arms image. Place these links in the top left part of the page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "agency name/site title or Commonwealth Coat of Arms image not linked to the homepage, or not placed in the top left part of the page"
+   },
+   "when": [],
+   "why": "G-2, G-4: Specific header homepage link requirement."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 6642,
+  "output_tokens": 4985,
+  "reasoning_tokens": 0
+ }
+}

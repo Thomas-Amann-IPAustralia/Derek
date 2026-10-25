@@ -1,0 +1,1304 @@
+{
+ "effort": "high",
+ "input_sha256": "48481f495a56d9ee33f80b52ce6538e4204ee1d1132c01549cbd5d0aa289fd0d",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "dbac63ee1136",
+    "end": 143,
+    "prefix": "ing from a sentence or a quote. ",
+    "quote": "Don’t use ellipses to change the intent of the original source.",
+    "start": 80,
+    "suffix": ""
+   },
+   "note": "Consolidated with the quotation-fidelity rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3816f660cb77",
+    "end": 66,
+    "prefix": "",
+    "quote": "The ellipsis (plural ‘ellipses’) is a character of exactly 3 dots.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the character; it does not establish a separate check beyond the ellipsis-symbol rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "33c0ae60ef07",
+    "end": 17,
+    "prefix": "",
+    "quote": "Use the ellipsis:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The following list supplies the conditions for the missing-words-or-ideas rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1b450a1e0dcd",
+    "end": 79,
+    "prefix": "",
+    "quote": "You can use a question mark or exclamation mark after an ellipsis if necessary.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recorded with the rule about punctuation following ellipses; it cannot independently produce a finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "54df726eca16",
+    "end": 106,
+    "prefix": "",
+    "quote": "If a paragraph or more is omitted from a block quotation, you can place the ellipsis on a line of its own.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Optional placement for an omission marker, not a requirement to use a separate line.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3a5fccdb051c",
+    "end": 66,
+    "prefix": "",
+    "quote": "Use the symbol for the ellipsis. Don’t use a string of full stops.",
+    "start": 0,
+    "suffix": " Insert it using:"
+   },
+   "note": "Both sentences express the character-choice rule selected at the heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3a5fccdb051c",
+    "end": 83,
+    "prefix": "n’t use a string of full stops. ",
+    "quote": "Insert it using:",
+    "start": 67,
+    "suffix": ""
+   },
+   "note": "Introduces ways to enter the character, not an additional property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "29a042deb714",
+    "end": 28,
+    "prefix": "",
+    "quote": "the unicode character U+2026",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "One insertion method; the resulting character is covered by the symbol rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2cf5a9d5e4e9",
+    "end": 23,
+    "prefix": "",
+    "quote": "the HTML code <&#8230;>",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An alternative insertion method, not a separate required spelling in published text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d36ab342d771",
+    "end": 53,
+    "prefix": "",
+    "quote": "in many software applications, Alt+Ctrl+. or Option;.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Software keyboard instructions do not establish a separate text rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b6ca6f2d0480",
+    "end": 26,
+    "prefix": "",
+    "quote": "Add spaces around ellipses",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body specifies single spaces and the later prose supplies exceptions.",
+   "reason": "restatement",
+   "seed_uid": "1b8345601e665ba4"
+  },
+  {
+   "anchor": {
+    "block_id": "8caeb6ab6c81",
+    "end": 88,
+    "prefix": "",
+    "quote": "The exception to this rule is if the quote ends in an exclamation mark or question mark.",
+    "start": 0,
+    "suffix": " Include the final punctuation m"
+   },
+   "note": "Limits the surrounding-space requirement; retained as a condition of the spacing rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8caeb6ab6c81",
+    "end": 207,
+    "prefix": "uation mark after the ellipsis. ",
+    "quote": "Don’t include a space between the punctuation and the ellipsis.",
+    "start": 144,
+    "suffix": ""
+   },
+   "note": "The special-case spacing requirement is consolidated with the general ellipsis-spacing rule under G-2.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c703e0f65f27",
+    "end": 91,
+    "prefix": "Use ellipses sparingly. ",
+    "quote": "Overusing ellipses can lead to a suspicion that you are misquoting.",
+    "start": 24,
+    "suffix": " Don’t leave out important detai"
+   },
+   "note": "Explains the reason for sparing use; it is not another check.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c703e0f65f27",
+    "end": 179,
+    "prefix": "picion that you are misquoting. ",
+    "quote": "Don’t leave out important details or change the original intent of the quoted material.",
+    "start": 92,
+    "suffix": ""
+   },
+   "note": "Consolidated with the quotation-fidelity heading and the introductory prohibition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/ellipses.md",
+ "page_sha256": "8b77c6fc02d454c64ad5a099e760674ca04d59f3273b924b8943563331e205b0",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "dbac63ee1136",
+    "note": "Consolidated with the quotation-fidelity rule.",
+    "quote": "Don’t use ellipses to change the intent of the original source.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3816f660cb77",
+    "note": "Defines the character; it does not establish a separate check beyond the ellipsis-symbol rule.",
+    "quote": "The ellipsis (plural ‘ellipses’) is a character of exactly 3 dots.",
+    "reason": "description"
+   },
+   {
+    "block_id": "33c0ae60ef07",
+    "note": "The following list supplies the conditions for the missing-words-or-ideas rule.",
+    "quote": "Use the ellipsis:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1b450a1e0dcd",
+    "note": "Recorded with the rule about punctuation following ellipses; it cannot independently produce a finding.",
+    "quote": "You can use a question mark or exclamation mark after an ellipsis if necessary.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "54df726eca16",
+    "note": "Optional placement for an omission marker, not a requirement to use a separate line.",
+    "quote": "If a paragraph or more is omitted from a block quotation, you can place the ellipsis on a line of its own.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "3a5fccdb051c",
+    "note": "Both sentences express the character-choice rule selected at the heading.",
+    "quote": "Use the symbol for the ellipsis. Don’t use a string of full stops.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3a5fccdb051c",
+    "note": "Introduces ways to enter the character, not an additional property of the resulting text.",
+    "quote": "Insert it using:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "29a042deb714",
+    "note": "One insertion method; the resulting character is covered by the symbol rule.",
+    "quote": "the unicode character U+2026",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2cf5a9d5e4e9",
+    "note": "An alternative insertion method, not a separate required spelling in published text.",
+    "quote": "the HTML code <&#8230;>",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d36ab342d771",
+    "note": "Software keyboard instructions do not establish a separate text rule.",
+    "quote": "in many software applications, Alt+Ctrl+. or Option;.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b6ca6f2d0480",
+    "note": "The body specifies single spaces and the later prose supplies exceptions.",
+    "quote": "Add spaces around ellipses",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8caeb6ab6c81",
+    "note": "Limits the surrounding-space requirement; retained as a condition of the spacing rule.",
+    "quote": "The exception to this rule is if the quote ends in an exclamation mark or question mark.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "8caeb6ab6c81",
+    "note": "The special-case spacing requirement is consolidated with the general ellipsis-spacing rule under G-2.",
+    "quote": "Don’t include a space between the punctuation and the ellipsis.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c703e0f65f27",
+    "note": "Explains the reason for sparing use; it is not another check.",
+    "quote": "Overusing ellipses can lead to a suspicion that you are misquoting.",
+    "reason": "description"
+   },
+   {
+    "block_id": "c703e0f65f27",
+    "note": "Consolidated with the quotation-fidelity heading and the introductory prohibition.",
+    "quote": "Don’t leave out important details or change the original intent of the quoted material.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ae6184ed44a8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "33c0ae60ef07",
+      "quote": "Use the ellipsis:"
+     },
+     {
+      "block_id": "1c8132609e06",
+      "quote": "if you omit words in quoted text"
+     },
+     {
+      "block_id": "8d3f04bd3db2",
+      "quote": "to mark an unfinished phrase, clause or sentence."
+     },
+     {
+      "block_id": "54df726eca16",
+      "quote": "If a paragraph or more is omitted from a block quotation, you can place the ellipsis on a line of its own."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Quoted text with omitted words.",
+      "parts": [
+       {
+        "block_id": "ad2cafd5f76f",
+        "quote": "The report is well written, but it needs a thorough review … There is an obvious need for more work."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Unfinished quoted wording.",
+      "parts": [
+       {
+        "block_id": "b9faff86f6c8",
+        "quote": "Whitlam’s speech on the steps of Parliament House (‘Well may we say …’) is still widely quoted."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The ellipsis stands on its own line for an omitted paragraph or more.",
+      "parts": [
+       {
+        "block_id": "59263caec037",
+        "quote": "The review clarified that the Army might have to fight on home ground."
+       },
+       {
+        "block_id": "d1028e3e9608",
+        "quote": "…"
+       },
+       {
+        "block_id": "8548157df379",
+        "quote": "During exercises, ADF personnel were tasked with tracking down enemy troops from the mythical nation of Musoria."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Show missing words or ideas with ellipses",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An omission within quoted text, or an unfinished phrase, clause or sentence, is not marked with an ellipsis.",
+    "when": [
+     "Applies when words are omitted within quoted text.",
+     "Applies when marking an unfinished phrase, clause or sentence.",
+     "If a paragraph or more is omitted from a block quotation, the ellipsis may appear on a line of its own."
+    ],
+    "why": "G-2 keeps the two uses as conditions of one omission-marker rule; G-3 treats standalone placement as a permission."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "885c672af89d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The annotation follows the quote in square brackets.",
+      "parts": [
+       {
+        "block_id": "8c360a9cc4e6",
+        "quote": "The minister wrote, ‘The policy settings were … comprehensive’ [ellipsis in original]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If there is an ellipsis in the original text you’re quoting, add the phrase ‘ellipsis in original’ in square brackets after the quote.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A quotation containing an ellipsis from the original source lacks the annotation [ellipsis in original] after the quote, or presents that annotation without square brackets.",
+    "when": [
+     "The ellipsis is present in the original source, rather than introduced to mark an omission by the person quoting it.",
+     "Determining whether the ellipsis is original requires access to the source."
+    ],
+    "why": "One required annotation produces one finding; its wording, brackets and position belong to that check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "885c672af89d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the same font as the surrounding text.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The [ellipsis in original] annotation uses a different font from the surrounding text.",
+    "when": [
+     "Applies to the bracketed annotation identifying an ellipsis in the original source.",
+     "Checking requires font information, not just plain text."
+    ],
+    "why": "The font requirement is independent of whether the annotation is present and correctly worded."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "95eacc91c328",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1b450a1e0dcd",
+      "quote": "You can use a question mark or exclamation mark after an ellipsis if necessary."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No full stop follows the ellipsis between sentences.",
+      "parts": [
+       {
+        "block_id": "39f93b23f643",
+        "quote": "The review clarified that the Army might have to fight on home ground … To be properly equipped, the Army needs a new troop carrier."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "An exclamation mark is permitted after the ellipsis.",
+      "parts": [
+       {
+        "block_id": "24ec3de0a5fd",
+        "quote": "I’ve written hundreds of reports: annual reports, white papers …!"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a full stop, comma or semicolon after an ellipsis.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ellipsis is followed by a full stop, comma or semicolon.",
+    "when": [
+     "A question mark or exclamation mark may follow an ellipsis if necessary."
+    ],
+    "why": "G-2 groups the prohibited punctuation marks; G-3 records the permitted marks without creating another rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "50160515d2b2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3a5fccdb051c",
+      "quote": "Use the symbol for the ellipsis. Don’t use a string of full stops."
+     },
+     {
+      "block_id": "3816f660cb77",
+      "quote": "The ellipsis (plural ‘ellipses’) is a character of exactly 3 dots."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not use a string of full stops",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "An ellipsis is represented by a string of full-stop characters instead of the ellipsis character.",
+    "when": [
+     "Applies when representing an ellipsis."
+    ],
+    "why": "G-4 combines the positive and negative formulations into one character-choice check; insertion procedures are not separate rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8541a1afae4c",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "b6ca6f2d0480",
+      "quote": "Add spaces around ellipses"
+     },
+     {
+      "block_id": "8caeb6ab6c81",
+      "quote": "The exception to this rule is if the quote ends in an exclamation mark or question mark."
+     },
+     {
+      "block_id": "8caeb6ab6c81",
+      "quote": "Don’t include a space between the punctuation and the ellipsis."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Single spaces surround the internal ellipsis.",
+      "parts": [
+       {
+        "block_id": "ba1655c301d5",
+        "quote": "The evaluation concluded, ‘The report is well written, but it needs … more work.’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The required spaces are missing.",
+      "parts": [
+       {
+        "block_id": "4b3ced660a2a",
+        "quote": "The evaluation concluded, ‘The report is well written, but it needs…more work.’"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "A terminal ellipsis has a preceding space and directly precedes the closing quotation mark.",
+      "parts": [
+       {
+        "block_id": "44309ebc25bc",
+        "quote": "The evaluation concluded, ‘The report is well written, but …’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The space before the ellipsis is missing.",
+      "parts": [
+       {
+        "block_id": "063e0943df5f",
+        "quote": "The evaluation concluded, ‘The report is well written, but…’"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "There is no space between the ellipsis and question mark.",
+      "parts": [
+       {
+        "block_id": "9bfa11d188fc",
+        "quote": "He asked, ‘What does the Army do during exercises …?’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a single space before and after each ellipsis.",
+    "specification": "Following the Correct example, exempt a terminal ellipsis immediately before a closing quotation mark from the following-space requirement. Also exempt line boundaries around a permitted standalone ellipsis. The explicit question-mark and exclamation-mark exception requires no intervening space.",
+    "unit": "phrase",
+    "violation_condition": "An ellipsis lacks the required single-space separation from surrounding text, has multiple separating spaces, or is separated by a space from a following final question mark or exclamation mark.",
+    "when": [
+     "Normally require one space before and after the ellipsis.",
+     "Do not insert a space between the ellipsis and a following final question mark or exclamation mark.",
+     "A terminal ellipsis may directly precede a closing quotation mark, as shown in the Correct example.",
+     "An ellipsis representing an omitted paragraph or more may stand alone on a line."
+    ],
+    "why": "G-4 selects the precise body instruction; G-2 keeps spacing exceptions in the same rule, with example-derived boundary handling made explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8caeb6ab6c81",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The question mark follows the ellipsis.",
+      "parts": [
+       {
+        "block_id": "9bfa11d188fc",
+        "quote": "He asked, ‘What does the Army do during exercises …?’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Include the final punctuation mark after the ellipsis.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A quotation ending with an ellipsis lacks its required final question mark or exclamation mark after the ellipsis, including when that mark has instead been placed before it.",
+    "when": [
+     "The quote ends in a question mark or exclamation mark and has a terminal ellipsis."
+    ],
+    "why": "E-2 identifies an instruction after example labels; retaining final punctuation is a different check from spacing it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c703e0f65f27",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use ellipses sparingly.",
+    "specification": "The page gives no count, density or other threshold for excessive use. A reviewer must resolve what ‘sparingly’ means in context; no numerical threshold has been invented.",
+    "unit": "document",
+    "violation_condition": "A text contains excessive or repeatedly distracting use of ellipses.",
+    "when": [],
+    "why": "This concerns an observable property of the text, not a writer’s workflow; its undefined threshold must remain visible rather than be invented."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6a7dd4f7f8d6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "dbac63ee1136",
+      "quote": "Don’t use ellipses to change the intent of the original source."
+     },
+     {
+      "block_id": "c703e0f65f27",
+      "quote": "Don’t leave out important details or change the original intent of the quoted material."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The reason for rewriting is retained.",
+      "parts": [
+       {
+        "block_id": "03f26b2159f0",
+        "quote": "The report is well written, but it needs rewriting now circumstances have changed … There is now an obvious need for more work."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The page identifies the omitted reason for the work as important information.",
+      "parts": [
+       {
+        "block_id": "03ef50135607",
+        "quote": "The report … needs rewriting … obvious need for more work."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t change the original intent of quoted material",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Omissions from quoted material remove important details or misrepresent the original source’s intent.",
+    "when": [
+     "Applies to omissions from quoted material represented by ellipses.",
+     "Assessment requires comparison with the original source, including important context."
+    ],
+    "why": "G-4 consolidates repeated instructions; G-2 treats omission of important details as a case of the same quotation-fidelity check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "ae6184ed44a8",
+    "end": 41,
+    "prefix": "",
+    "quote": "Show missing words or ideas with ellipses",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "33c0ae60ef07",
+     "end": 17,
+     "prefix": "",
+     "quote": "Use the ellipsis:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1c8132609e06",
+     "end": 32,
+     "prefix": "",
+     "quote": "if you omit words in quoted text",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8d3f04bd3db2",
+     "end": 49,
+     "prefix": "",
+     "quote": "to mark an unfinished phrase, clause or sentence.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "54df726eca16",
+     "end": 106,
+     "prefix": "",
+     "quote": "If a paragraph or more is omitted from a block quotation, you can place the ellipsis on a line of its own.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Quoted text with omitted words.",
+     "parts": [
+      {
+       "block_id": "ad2cafd5f76f",
+       "end": 100,
+       "prefix": "",
+       "quote": "The report is well written, but it needs a thorough review … There is an obvious need for more work.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Unfinished quoted wording.",
+     "parts": [
+      {
+       "block_id": "b9faff86f6c8",
+       "end": 95,
+       "prefix": "",
+       "quote": "Whitlam’s speech on the steps of Parliament House (‘Well may we say …’) is still widely quoted.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The ellipsis stands on its own line for an omitted paragraph or more.",
+     "parts": [
+      {
+       "block_id": "59263caec037",
+       "end": 70,
+       "prefix": "",
+       "quote": "The review clarified that the Army might have to fight on home ground.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d1028e3e9608",
+       "end": 1,
+       "prefix": "",
+       "quote": "…",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8548157df379",
+       "end": 112,
+       "prefix": "",
+       "quote": "During exercises, ADF personnel were tasked with tracking down enemy troops from the mythical nation of Musoria.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "1701363e5346a625",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An omission within quoted text, or an unfinished phrase, clause or sentence, is not marked with an ellipsis."
+   },
+   "when": [
+    "Applies when words are omitted within quoted text.",
+    "Applies when marking an unfinished phrase, clause or sentence.",
+    "If a paragraph or more is omitted from a block quotation, the ellipsis may appear on a line of its own."
+   ],
+   "why": "G-2 keeps the two uses as conditions of one omission-marker rule; G-3 treats standalone placement as a permission."
+  },
+  {
+   "anchor": {
+    "block_id": "885c672af89d",
+    "end": 134,
+    "prefix": "",
+    "quote": "If there is an ellipsis in the original text you’re quoting, add the phrase ‘ellipsis in original’ in square brackets after the quote.",
+    "start": 0,
+    "suffix": " Use the same font as the surrou"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The annotation follows the quote in square brackets.",
+     "parts": [
+      {
+       "block_id": "8c360a9cc4e6",
+       "end": 86,
+       "prefix": "",
+       "quote": "The minister wrote, ‘The policy settings were … comprehensive’ [ellipsis in original].",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A quotation containing an ellipsis from the original source lacks the annotation [ellipsis in original] after the quote, or presents that annotation without square brackets."
+   },
+   "when": [
+    "The ellipsis is present in the original source, rather than introduced to mark an omission by the person quoting it.",
+    "Determining whether the ellipsis is original requires access to the source."
+   ],
+   "why": "One required annotation produces one finding; its wording, brackets and position belong to that check."
+  },
+  {
+   "anchor": {
+    "block_id": "885c672af89d",
+    "end": 177,
+    "prefix": "quare brackets after the quote. ",
+    "quote": "Use the same font as the surrounding text.",
+    "start": 135,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The [ellipsis in original] annotation uses a different font from the surrounding text."
+   },
+   "when": [
+    "Applies to the bracketed annotation identifying an ellipsis in the original source.",
+    "Checking requires font information, not just plain text."
+   ],
+   "why": "The font requirement is independent of whether the annotation is present and correctly worded."
+  },
+  {
+   "anchor": {
+    "block_id": "95eacc91c328",
+    "end": 60,
+    "prefix": "",
+    "quote": "Don’t use a full stop, comma or semicolon after an ellipsis.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1b450a1e0dcd",
+     "end": 79,
+     "prefix": "",
+     "quote": "You can use a question mark or exclamation mark after an ellipsis if necessary.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No full stop follows the ellipsis between sentences.",
+     "parts": [
+      {
+       "block_id": "39f93b23f643",
+       "end": 132,
+       "prefix": "",
+       "quote": "The review clarified that the Army might have to fight on home ground … To be properly equipped, the Army needs a new troop carrier.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "An exclamation mark is permitted after the ellipsis.",
+     "parts": [
+      {
+       "block_id": "24ec3de0a5fd",
+       "end": 65,
+       "prefix": "",
+       "quote": "I’ve written hundreds of reports: annual reports, white papers …!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ellipsis is followed by a full stop, comma or semicolon."
+   },
+   "when": [
+    "A question mark or exclamation mark may follow an ellipsis if necessary."
+   ],
+   "why": "G-2 groups the prohibited punctuation marks; G-3 records the permitted marks without creating another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "50160515d2b2",
+    "end": 33,
+    "prefix": "",
+    "quote": "Do not use a string of full stops",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3a5fccdb051c",
+     "end": 66,
+     "prefix": "",
+     "quote": "Use the symbol for the ellipsis. Don’t use a string of full stops.",
+     "start": 0,
+     "suffix": " Insert it using:"
+    },
+    {
+     "block_id": "3816f660cb77",
+     "end": 66,
+     "prefix": "",
+     "quote": "The ellipsis (plural ‘ellipses’) is a character of exactly 3 dots.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "ee94b0741f4f473a",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "An ellipsis is represented by a string of full-stop characters instead of the ellipsis character."
+   },
+   "when": [
+    "Applies when representing an ellipsis."
+   ],
+   "why": "G-4 combines the positive and negative formulations into one character-choice check; insertion procedures are not separate rules."
+  },
+  {
+   "anchor": {
+    "block_id": "8541a1afae4c",
+    "end": 50,
+    "prefix": "",
+    "quote": "Use a single space before and after each ellipsis.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "b6ca6f2d0480",
+     "end": 26,
+     "prefix": "",
+     "quote": "Add spaces around ellipses",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8caeb6ab6c81",
+     "end": 88,
+     "prefix": "",
+     "quote": "The exception to this rule is if the quote ends in an exclamation mark or question mark.",
+     "start": 0,
+     "suffix": " Include the final punctuation m"
+    },
+    {
+     "block_id": "8caeb6ab6c81",
+     "end": 207,
+     "prefix": "uation mark after the ellipsis. ",
+     "quote": "Don’t include a space between the punctuation and the ellipsis.",
+     "start": 144,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Single spaces surround the internal ellipsis.",
+     "parts": [
+      {
+       "block_id": "ba1655c301d5",
+       "end": 81,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but it needs … more work.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The required spaces are missing.",
+     "parts": [
+      {
+       "block_id": "4b3ced660a2a",
+       "end": 79,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but it needs…more work.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "A terminal ellipsis has a preceding space and directly precedes the closing quotation mark.",
+     "parts": [
+      {
+       "block_id": "44309ebc25bc",
+       "end": 61,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but …’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The space before the ellipsis is missing.",
+     "parts": [
+      {
+       "block_id": "063e0943df5f",
+       "end": 60,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but…’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "There is no space between the ellipsis and question mark.",
+     "parts": [
+      {
+       "block_id": "9bfa11d188fc",
+       "end": 53,
+       "prefix": "",
+       "quote": "He asked, ‘What does the Army do during exercises …?’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Following the Correct example, exempt a terminal ellipsis immediately before a closing quotation mark from the following-space requirement. Also exempt line boundaries around a permitted standalone ellipsis. The explicit question-mark and exclamation-mark exception requires no intervening space.",
+    "unit": "phrase",
+    "violation_condition": "An ellipsis lacks the required single-space separation from surrounding text, has multiple separating spaces, or is separated by a space from a following final question mark or exclamation mark."
+   },
+   "when": [
+    "Normally require one space before and after the ellipsis.",
+    "Do not insert a space between the ellipsis and a following final question mark or exclamation mark.",
+    "A terminal ellipsis may directly precede a closing quotation mark, as shown in the Correct example.",
+    "An ellipsis representing an omitted paragraph or more may stand alone on a line."
+   ],
+   "why": "G-4 selects the precise body instruction; G-2 keeps spacing exceptions in the same rule, with example-derived boundary handling made explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "8caeb6ab6c81",
+    "end": 143,
+    "prefix": "lamation mark or question mark. ",
+    "quote": "Include the final punctuation mark after the ellipsis.",
+    "start": 89,
+    "suffix": " Don’t include a space between t"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The question mark follows the ellipsis.",
+     "parts": [
+      {
+       "block_id": "9bfa11d188fc",
+       "end": 53,
+       "prefix": "",
+       "quote": "He asked, ‘What does the Army do during exercises …?’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A quotation ending with an ellipsis lacks its required final question mark or exclamation mark after the ellipsis, including when that mark has instead been placed before it."
+   },
+   "when": [
+    "The quote ends in a question mark or exclamation mark and has a terminal ellipsis."
+   ],
+   "why": "E-2 identifies an instruction after example labels; retaining final punctuation is a different check from spacing it."
+  },
+  {
+   "anchor": {
+    "block_id": "c703e0f65f27",
+    "end": 23,
+    "prefix": "",
+    "quote": "Use ellipses sparingly.",
+    "start": 0,
+    "suffix": " Overusing ellipses can lead to "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no count, density or other threshold for excessive use. A reviewer must resolve what ‘sparingly’ means in context; no numerical threshold has been invented.",
+    "unit": "document",
+    "violation_condition": "A text contains excessive or repeatedly distracting use of ellipses."
+   },
+   "when": [],
+   "why": "This concerns an observable property of the text, not a writer’s workflow; its undefined threshold must remain visible rather than be invented."
+  },
+  {
+   "anchor": {
+    "block_id": "6a7dd4f7f8d6",
+    "end": 51,
+    "prefix": "",
+    "quote": "Don’t change the original intent of quoted material",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "dbac63ee1136",
+     "end": 143,
+     "prefix": "ing from a sentence or a quote. ",
+     "quote": "Don’t use ellipses to change the intent of the original source.",
+     "start": 80,
+     "suffix": ""
+    },
+    {
+     "block_id": "c703e0f65f27",
+     "end": 179,
+     "prefix": "picion that you are misquoting. ",
+     "quote": "Don’t leave out important details or change the original intent of the quoted material.",
+     "start": 92,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The reason for rewriting is retained.",
+     "parts": [
+      {
+       "block_id": "03f26b2159f0",
+       "end": 127,
+       "prefix": "",
+       "quote": "The report is well written, but it needs rewriting now circumstances have changed … There is now an obvious need for more work.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The page identifies the omitted reason for the work as important information.",
+     "parts": [
+      {
+       "block_id": "03ef50135607",
+       "end": 58,
+       "prefix": "",
+       "quote": "The report … needs rewriting … obvious need for more work.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "b47d928ba3a06465",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Omissions from quoted material remove important details or misrepresent the original source’s intent."
+   },
+   "when": [
+    "Applies to omissions from quoted material represented by ellipses.",
+    "Assessment requires comparison with the original source, including important context."
+   ],
+   "why": "G-4 consolidates repeated instructions; G-2 treats omission of important details as a case of the same quotation-fidelity check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4402,
+  "output_tokens": 8136,
+  "reasoning_tokens": 3624
+ }
+}

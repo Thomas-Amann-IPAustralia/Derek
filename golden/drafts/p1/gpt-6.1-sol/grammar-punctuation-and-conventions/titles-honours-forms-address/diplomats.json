@@ -1,0 +1,815 @@
+{
+ "effort": "high",
+ "input_sha256": "5333661ae30f641bfcf77377b319ebf5b724be551f47eea90204c816336c997a",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "6eeac505355d",
+    "end": 107,
+    "prefix": "",
+    "quote": "Use the correct term when referring to ambassadors, high commissioners, nuncios and other diplomatic staff.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Opening summary, absorbed into the title-choice rule and elaborated by the more specific address rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "086700dc98e2",
+    "end": 81,
+    "prefix": "",
+    "quote": "Use initial capitals when writing to ambassadors, high commissioners and nuncios.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the capitalisation heading and supplies its writing-to context; included in that rule’s covers.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9f6976d139df",
+    "end": 96,
+    "prefix": "",
+    "quote": "Use ‘His Excellency’ or ‘Her Excellency’ to address high commissioners, ambassadors and nuncios.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the address-form heading; not a second check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7dc7bb177114",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use the name and official position to address:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the name-and-appointment heading; its following list supplies the covered recipient categories.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/titles-honours-forms-address/diplomats.md",
+ "page_sha256": "f8c70e7b934e0c60ec1bf8ef16dc2e8f24ce6297650c78401b8f0b1caf2c5a58",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "6eeac505355d",
+    "note": "Opening summary, absorbed into the title-choice rule and elaborated by the more specific address rules.",
+    "quote": "Use the correct term when referring to ambassadors, high commissioners, nuncios and other diplomatic staff.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "086700dc98e2",
+    "note": "Restates the capitalisation heading and supplies its writing-to context; included in that rule’s covers.",
+    "quote": "Use initial capitals when writing to ambassadors, high commissioners and nuncios.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9f6976d139df",
+    "note": "Restates the address-form heading; not a second check.",
+    "quote": "Use ‘His Excellency’ or ‘Her Excellency’ to address high commissioners, ambassadors and nuncios.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7dc7bb177114",
+    "note": "Restates the name-and-appointment heading; its following list supplies the covered recipient categories.",
+    "quote": "Use the name and official position to address:",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "177fd7c7ad95",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6eeac505355d",
+      "quote": "Use the correct term when referring to ambassadors, high commissioners, nuncios and other diplomatic staff."
+     },
+     {
+      "block_id": "63cd307a25a1",
+      "quote": "The title for diplomats depends on what they represent:"
+     },
+     {
+      "block_id": "4850d342425e",
+      "quote": "High commissioners represent Commonwealth countries."
+     },
+     {
+      "block_id": "870dba9a8853",
+      "quote": "Ambassadors represent non-Commonwealth countries."
+     },
+     {
+      "block_id": "142acb65f40d",
+      "quote": "Nuncios represent the Holy See, the governing body of the Roman Catholic Church."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the correct term when referring to diplomats",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A diplomatic representative is given a title inconsistent with the entity represented: high commissioner for a Commonwealth country, ambassador for a non-Commonwealth country, or nuncio for the Holy See.",
+    "when": [
+     "The represented country or body is identifiable.",
+     "Apply the three title distinctions stated on this page; do not infer additional distinctions for other diplomatic positions."
+    ],
+    "why": "G-2 combines the representation cases into one title-choice check; G-4 absorbs the introductory restatement. The heading has a distinct check beyond grouping its children."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f7d5a5dff74d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "086700dc98e2",
+      "quote": "Use initial capitals when writing to ambassadors, high commissioners and nuncios."
+     },
+     {
+      "block_id": "c3cf0d50c018",
+      "quote": "The pronouns ‘His’ and ‘Her’ are part of the title. Write these with an initial capital as well."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a4f03cf18cb1",
+        "quote": "His Excellency Mr Babar Amin, High Commissioner for Pakistan"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use initial capitals for the titles of high commissioners, ambassadors and nuncios",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "When writing to an ambassador, high commissioner or nuncio, a substantive word in the diplomat’s title has a lowercase initial, including ‘his’ or ‘her’ when it forms part of the title.",
+    "when": [
+     "When writing to ambassadors, high commissioners and nuncios.",
+     "The pronouns ‘His’ and ‘Her’ are included when they form part of the title."
+    ],
+    "why": "G-4 combines the heading and body wording; the pronoun instruction extends the same title-capitalisation check rather than creating another finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ac6aca60231b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9f6976d139df",
+      "quote": "Use ‘His Excellency’ or ‘Her Excellency’ to address high commissioners, ambassadors and nuncios."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "967b0b30b42b",
+        "quote": "Her Excellency the Hon Dame Annette Faye King, High Commissioner for New Zealand"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "569f033dfe0d",
+        "quote": "Her Excellency Ms Francesca Tardioli, Ambassador of Italy"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "07a166c74985",
+        "quote": "His Excellency Mr Tim Kane, Ambassador to Brazil"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5ad336c593fe",
+        "quote": "His Excellency Archbishop (Most Rev) Adolfo Tito Yllana, Apostolic Nuncio for Holy See"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address high commissioners, ambassadors and nuncios with ‘His Excellency’ or ‘Her Excellency’",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A high commissioner’s, ambassador’s or nuncio’s style of address accompanying their name omits ‘His Excellency’ or ‘Her Excellency’.",
+    "when": [
+     "Applies to styles of address accompanying the names of high commissioners, ambassadors and nuncios.",
+     "Email and letter salutations follow the separate formal and informal opening requirements."
+    ],
+    "why": "G-4 treats the heading and body as one requirement; E-2 attaches the following examples to this address-form rule."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "88b975971720",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "e83e5f5d0be0",
+      "quote": "In formal correspondence with ambassadors, high commissioners and nuncios:"
+     },
+     {
+      "block_id": "0fc695ede7d7",
+      "quote": "In informal correspondence:"
+     },
+     {
+      "block_id": "d58b2a95787e",
+      "quote": "Open with ‘Dear High Commissioner’ or ‘Dear Ambassador’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Open with ‘Your Excellency’.",
+    "specification": "Treat the informal openings as recipient-specific. Do not assess informal openings to nuncios: the page gives no informal salutation for that role.",
+    "unit": "document",
+    "violation_condition": "Formal correspondence to an ambassador, high commissioner or nuncio lacks the opening ‘Your Excellency’, or informal correspondence to a high commissioner or ambassador lacks the corresponding opening ‘Dear High Commissioner’ or ‘Dear Ambassador’.",
+    "when": [
+     "Applies to emails and letters.",
+     "Formal correspondence to ambassadors, high commissioners and nuncios opens with ‘Your Excellency’.",
+     "Informal correspondence to high commissioners opens with ‘Dear High Commissioner’.",
+     "Informal correspondence to ambassadors opens with ‘Dear Ambassador’."
+    ],
+    "why": "G-2 combines formal and informal cases into one salutation check; the closing formula is a separate property of the correspondence."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "59313fb24705",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e83e5f5d0be0",
+      "quote": "In formal correspondence with ambassadors, high commissioners and nuncios:"
+     },
+     {
+      "block_id": "0fc695ede7d7",
+      "quote": "In informal correspondence:"
+     },
+     {
+      "block_id": "ab9ae553e3b3",
+      "quote": "Conclude with ‘Yours sincerely’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Correspondence to an ambassador, high commissioner or nuncio lacks ‘Yours faithfully’ as its formal closing formula, or lacks ‘Yours sincerely’ as its informal closing formula.",
+    "when": [
+     "Applies to emails and letters to ambassadors, high commissioners and nuncios.",
+     "Formal correspondence concludes with ‘Yours faithfully’.",
+     "Informal correspondence concludes with ‘Yours sincerely’."
+    ],
+    "why": "G-2 combines formal and informal cases into one closing-formula check, separate from the opening salutation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c972cb5cf78e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7dc7bb177114",
+      "quote": "Use the name and official position to address:"
+     },
+     {
+      "block_id": "f703c6704f3c",
+      "quote": "diplomatic staff (such as chargés d’affaires and counsellors)"
+     },
+     {
+      "block_id": "56798ea422b0",
+      "quote": "consular appointees (such as consuls general, vice-consuls and honorary consuls)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "750b034dcc5c",
+        "quote": "Mr John Smith, Chargé d’Affaires"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0f7da4f9e971",
+        "quote": "Ms Susan Grace, Consul General in Chennai"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address other diplomatic staff by name and appointment",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An address for other diplomatic staff or a consular appointee omits the person’s name or official position.",
+    "when": [
+     "Applies to diplomatic staff such as chargés d’affaires and counsellors.",
+     "Also applies to consular appointees such as consuls general, vice-consuls and honorary consuls."
+    ],
+    "why": "G-4 absorbs the body restatement; G-2 keeps the diplomatic and consular recipient categories within one name-and-position check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "177fd7c7ad95",
+    "end": 48,
+    "prefix": "",
+    "quote": "Use the correct term when referring to diplomats",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6eeac505355d",
+     "end": 107,
+     "prefix": "",
+     "quote": "Use the correct term when referring to ambassadors, high commissioners, nuncios and other diplomatic staff.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "63cd307a25a1",
+     "end": 55,
+     "prefix": "",
+     "quote": "The title for diplomats depends on what they represent:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4850d342425e",
+     "end": 52,
+     "prefix": "",
+     "quote": "High commissioners represent Commonwealth countries.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "870dba9a8853",
+     "end": 49,
+     "prefix": "",
+     "quote": "Ambassadors represent non-Commonwealth countries.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "142acb65f40d",
+     "end": 80,
+     "prefix": "",
+     "quote": "Nuncios represent the Holy See, the governing body of the Roman Catholic Church.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "4829cbc3091ea476",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A diplomatic representative is given a title inconsistent with the entity represented: high commissioner for a Commonwealth country, ambassador for a non-Commonwealth country, or nuncio for the Holy See."
+   },
+   "when": [
+    "The represented country or body is identifiable.",
+    "Apply the three title distinctions stated on this page; do not infer additional distinctions for other diplomatic positions."
+   ],
+   "why": "G-2 combines the representation cases into one title-choice check; G-4 absorbs the introductory restatement. The heading has a distinct check beyond grouping its children."
+  },
+  {
+   "anchor": {
+    "block_id": "f7d5a5dff74d",
+    "end": 82,
+    "prefix": "",
+    "quote": "Use initial capitals for the titles of high commissioners, ambassadors and nuncios",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "086700dc98e2",
+     "end": 81,
+     "prefix": "",
+     "quote": "Use initial capitals when writing to ambassadors, high commissioners and nuncios.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c3cf0d50c018",
+     "end": 96,
+     "prefix": "",
+     "quote": "The pronouns ‘His’ and ‘Her’ are part of the title. Write these with an initial capital as well.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a4f03cf18cb1",
+       "end": 60,
+       "prefix": "",
+       "quote": "His Excellency Mr Babar Amin, High Commissioner for Pakistan",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "900dc7409c1163c0",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "When writing to an ambassador, high commissioner or nuncio, a substantive word in the diplomat’s title has a lowercase initial, including ‘his’ or ‘her’ when it forms part of the title."
+   },
+   "when": [
+    "When writing to ambassadors, high commissioners and nuncios.",
+    "The pronouns ‘His’ and ‘Her’ are included when they form part of the title."
+   ],
+   "why": "G-4 combines the heading and body wording; the pronoun instruction extends the same title-capitalisation check rather than creating another finding."
+  },
+  {
+   "anchor": {
+    "block_id": "ac6aca60231b",
+    "end": 93,
+    "prefix": "",
+    "quote": "Address high commissioners, ambassadors and nuncios with ‘His Excellency’ or ‘Her Excellency’",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9f6976d139df",
+     "end": 96,
+     "prefix": "",
+     "quote": "Use ‘His Excellency’ or ‘Her Excellency’ to address high commissioners, ambassadors and nuncios.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "967b0b30b42b",
+       "end": 80,
+       "prefix": "",
+       "quote": "Her Excellency the Hon Dame Annette Faye King, High Commissioner for New Zealand",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "569f033dfe0d",
+       "end": 57,
+       "prefix": "",
+       "quote": "Her Excellency Ms Francesca Tardioli, Ambassador of Italy",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "07a166c74985",
+       "end": 48,
+       "prefix": "",
+       "quote": "His Excellency Mr Tim Kane, Ambassador to Brazil",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5ad336c593fe",
+       "end": 86,
+       "prefix": "",
+       "quote": "His Excellency Archbishop (Most Rev) Adolfo Tito Yllana, Apostolic Nuncio for Holy See",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "d89f6eb0d896ca6c",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A high commissioner’s, ambassador’s or nuncio’s style of address accompanying their name omits ‘His Excellency’ or ‘Her Excellency’."
+   },
+   "when": [
+    "Applies to styles of address accompanying the names of high commissioners, ambassadors and nuncios.",
+    "Email and letter salutations follow the separate formal and informal opening requirements."
+   ],
+   "why": "G-4 treats the heading and body as one requirement; E-2 attaches the following examples to this address-form rule."
+  },
+  {
+   "anchor": {
+    "block_id": "88b975971720",
+    "end": 28,
+    "prefix": "",
+    "quote": "Open with ‘Your Excellency’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "e83e5f5d0be0",
+     "end": 74,
+     "prefix": "",
+     "quote": "In formal correspondence with ambassadors, high commissioners and nuncios:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0fc695ede7d7",
+     "end": 27,
+     "prefix": "",
+     "quote": "In informal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d58b2a95787e",
+     "end": 56,
+     "prefix": "",
+     "quote": "Open with ‘Dear High Commissioner’ or ‘Dear Ambassador’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Treat the informal openings as recipient-specific. Do not assess informal openings to nuncios: the page gives no informal salutation for that role.",
+    "unit": "document",
+    "violation_condition": "Formal correspondence to an ambassador, high commissioner or nuncio lacks the opening ‘Your Excellency’, or informal correspondence to a high commissioner or ambassador lacks the corresponding opening ‘Dear High Commissioner’ or ‘Dear Ambassador’."
+   },
+   "when": [
+    "Applies to emails and letters.",
+    "Formal correspondence to ambassadors, high commissioners and nuncios opens with ‘Your Excellency’.",
+    "Informal correspondence to high commissioners opens with ‘Dear High Commissioner’.",
+    "Informal correspondence to ambassadors opens with ‘Dear Ambassador’."
+   ],
+   "why": "G-2 combines formal and informal cases into one salutation check; the closing formula is a separate property of the correspondence."
+  },
+  {
+   "anchor": {
+    "block_id": "59313fb24705",
+    "end": 33,
+    "prefix": "",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e83e5f5d0be0",
+     "end": 74,
+     "prefix": "",
+     "quote": "In formal correspondence with ambassadors, high commissioners and nuncios:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0fc695ede7d7",
+     "end": 27,
+     "prefix": "",
+     "quote": "In informal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ab9ae553e3b3",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Correspondence to an ambassador, high commissioner or nuncio lacks ‘Yours faithfully’ as its formal closing formula, or lacks ‘Yours sincerely’ as its informal closing formula."
+   },
+   "when": [
+    "Applies to emails and letters to ambassadors, high commissioners and nuncios.",
+    "Formal correspondence concludes with ‘Yours faithfully’.",
+    "Informal correspondence concludes with ‘Yours sincerely’."
+   ],
+   "why": "G-2 combines formal and informal cases into one closing-formula check, separate from the opening salutation."
+  },
+  {
+   "anchor": {
+    "block_id": "c972cb5cf78e",
+    "end": 54,
+    "prefix": "",
+    "quote": "Address other diplomatic staff by name and appointment",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7dc7bb177114",
+     "end": 46,
+     "prefix": "",
+     "quote": "Use the name and official position to address:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f703c6704f3c",
+     "end": 61,
+     "prefix": "",
+     "quote": "diplomatic staff (such as chargés d’affaires and counsellors)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "56798ea422b0",
+     "end": 81,
+     "prefix": "",
+     "quote": "consular appointees (such as consuls general, vice-consuls and honorary consuls).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "750b034dcc5c",
+       "end": 32,
+       "prefix": "",
+       "quote": "Mr John Smith, Chargé d’Affaires",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0f7da4f9e971",
+       "end": 41,
+       "prefix": "",
+       "quote": "Ms Susan Grace, Consul General in Chennai",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "2e46e58f5ea377e4",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An address for other diplomatic staff or a consular appointee omits the person’s name or official position."
+   },
+   "when": [
+    "Applies to diplomatic staff such as chargés d’affaires and counsellors.",
+    "Also applies to consular appointees such as consuls general, vice-consuls and honorary consuls."
+   ],
+   "why": "G-4 absorbs the body restatement; G-2 keeps the diplomatic and consular recipient categories within one name-and-position check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3896,
+  "output_tokens": 7467,
+  "reasoning_tokens": 4660
+ }
+}

@@ -1,0 +1,509 @@
+{
+ "effort": "high",
+ "input_sha256": "2d05ee251204335d269108b00eaf9e94f43ebae3fc8c1beff7306243db0c4f8e",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "90eb89f7fdbc",
+    "end": 86,
+    "prefix": "ow emphasis and convey emotion. ",
+    "quote": "Only use them in informal content.",
+    "start": 52,
+    "suffix": ""
+   },
+   "note": "The restriction is captured by the more explicit rule against exclamation marks in formal content.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6598e7e47ec6",
+    "end": 38,
+    "prefix": "",
+    "quote": "Don’t use exclamation marks in general",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body gives the actionable formal-content restriction, qualified by restrained use in less formal content.",
+   "reason": "restatement",
+   "seed_uid": "841b8483acb1ff40"
+  },
+  {
+   "anchor": {
+    "block_id": "9d2a13ff2fd4",
+    "end": 165,
+    "prefix": "aterial and social media posts. ",
+    "quote": "Be aware that exclamation marks can create a sense of panic or stress.",
+    "start": 95,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to consider a possible effect; it does not state a separate text condition to flag.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "192e944c3a8d",
+    "end": 46,
+    "prefix": "",
+    "quote": "Write one exclamation mark: don’t overuse them",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups two distinct checks—frequency across content and multiple exclamation marks at a sentence ending. Both are stated more precisely in the body.",
+   "reason": "section",
+   "seed_uid": "7a776446aba28ef1"
+  },
+  {
+   "anchor": {
+    "block_id": "3757d355a895",
+    "end": 38,
+    "prefix": "",
+    "quote": "Don’t use exclamation marks too often.",
+    "start": 0,
+    "suffix": " Exclamation marks can lose thei"
+   },
+   "note": "G-4: repeats the instruction to use exclamation marks sparingly.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e02388e478ba",
+    "end": 104,
+    "prefix": "",
+    "quote": "Some people use multiple exclamation marks in social media. This is not suitable for government content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: confirms that the single-exclamation-mark rule also applies to government social media content.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/exclamation-marks.md",
+ "page_sha256": "6018b073c67da1774ec81897b6b48ccd84e36f8a5e0064acc86cddb360bf6047",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "90eb89f7fdbc",
+    "note": "The restriction is captured by the more explicit rule against exclamation marks in formal content.",
+    "quote": "Only use them in informal content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6598e7e47ec6",
+    "note": "The body gives the actionable formal-content restriction, qualified by restrained use in less formal content.",
+    "quote": "Don’t use exclamation marks in general",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9d2a13ff2fd4",
+    "note": "G-5: asks the writer to consider a possible effect; it does not state a separate text condition to flag.",
+    "quote": "Be aware that exclamation marks can create a sense of panic or stress.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "192e944c3a8d",
+    "note": "G-1: groups two distinct checks—frequency across content and multiple exclamation marks at a sentence ending. Both are stated more precisely in the body.",
+    "quote": "Write one exclamation mark: don’t overuse them",
+    "reason": "section"
+   },
+   {
+    "block_id": "3757d355a895",
+    "note": "G-4: repeats the instruction to use exclamation marks sparingly.",
+    "quote": "Don’t use exclamation marks too often.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e02388e478ba",
+    "note": "G-4: confirms that the single-exclamation-mark rule also applies to government social media content.",
+    "quote": "Some people use multiple exclamation marks in social media. This is not suitable for government content.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a4f5db1a2a91",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "90eb89f7fdbc",
+      "quote": "Only use them in informal content."
+     },
+     {
+      "block_id": "6598e7e47ec6",
+      "quote": "Don’t use exclamation marks in general"
+     },
+     {
+      "block_id": "65469ada04d6",
+      "quote": "Exclamation marks often appear ‘as themselves’ in instructions to users of government services."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Presented under ‘Not this’ as an inappropriate use of an exclamation mark.",
+      "parts": [
+       {
+        "block_id": "33ecd1f96363",
+        "quote": "A state of emergency has been declared for all areas of the ACT!"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use exclamation marks in formal content, such as government reports or briefings.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An exclamation mark is used as emphatic punctuation in formal government content.",
+    "when": [
+     "Applies to formal content, including government reports and briefings.",
+     "Less formal content may use exclamation marks sparingly.",
+     "An exclamation mark displayed as a literal character, such as in password instructions, is not emphatic punctuation."
+    ],
+    "why": "G-4 consolidates the heading and introductory restriction; G-2 records the informal-content and literal-character qualifications."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9d2a13ff2fd4",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "3757d355a895",
+      "quote": "Don’t use exclamation marks too often."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1bf6eeda873a",
+        "quote": "Congratulations to our 2020 Australia Day Award recipients!"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cbc9a912e032",
+        "quote": "Happy international mother language day! #ourAPS believes in the importance of cultural and linguistic diversity (CALD) for a sustainable and harmonious Australian society."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use them sparingly in less formal content such as promotional material and social media posts.",
+    "specification": "The page gives no numerical threshold for ‘sparingly’ or ‘too often’. A frequency threshold would require a reviewer’s decision; occasional use is not itself a violation.",
+    "unit": "document",
+    "violation_condition": "Exclamation marks occur too frequently in less formal government content.",
+    "when": [
+     "Applies to less formal government content, including promotional material and social media posts.",
+     "Formal content is subject to the separate restriction on using exclamation marks at all."
+    ],
+    "why": "G-4 merges the two statements of the frequency restriction; G-1 keeps frequency separate from multiple marks at one sentence ending."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0198b026bcfa",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "192e944c3a8d",
+      "quote": "Write one exclamation mark"
+     },
+     {
+      "block_id": "e02388e478ba",
+      "quote": "Some people use multiple exclamation marks in social media. This is not suitable for government content."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "aad1410bd9cf",
+        "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "52cddf1badf2",
+        "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!!!"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "At the end of each sentence you want to emphasise, use only one exclamation mark.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence ends with more than one exclamation mark used for emphasis.",
+    "when": [
+     "Applies when exclamation marks are used to emphasise a sentence.",
+     "Applies to government social media content as well as other government content.",
+     "Does not apply to exclamation marks displayed as literal characters rather than sentence punctuation."
+    ],
+    "why": "G-1 separates the heading’s frequency and sentence-ending checks; G-2 and G-4 absorb the social-media clarification."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "a4f5db1a2a91",
+    "end": 138,
+    "prefix": "ren’t part of government voice. ",
+    "quote": "Don’t use exclamation marks in formal content, such as government reports or briefings.",
+    "start": 51,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "90eb89f7fdbc",
+     "end": 86,
+     "prefix": "ow emphasis and convey emotion. ",
+     "quote": "Only use them in informal content.",
+     "start": 52,
+     "suffix": ""
+    },
+    {
+     "block_id": "6598e7e47ec6",
+     "end": 38,
+     "prefix": "",
+     "quote": "Don’t use exclamation marks in general",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "65469ada04d6",
+     "end": 95,
+     "prefix": "",
+     "quote": "Exclamation marks often appear ‘as themselves’ in instructions to users of government services.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "violating",
+     "note": "Presented under ‘Not this’ as an inappropriate use of an exclamation mark.",
+     "parts": [
+      {
+       "block_id": "33ecd1f96363",
+       "end": 64,
+       "prefix": "",
+       "quote": "A state of emergency has been declared for all areas of the ACT!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An exclamation mark is used as emphatic punctuation in formal government content."
+   },
+   "when": [
+    "Applies to formal content, including government reports and briefings.",
+    "Less formal content may use exclamation marks sparingly.",
+    "An exclamation mark displayed as a literal character, such as in password instructions, is not emphatic punctuation."
+   ],
+   "why": "G-4 consolidates the heading and introductory restriction; G-2 records the informal-content and literal-character qualifications."
+  },
+  {
+   "anchor": {
+    "block_id": "9d2a13ff2fd4",
+    "end": 94,
+    "prefix": "",
+    "quote": "Use them sparingly in less formal content such as promotional material and social media posts.",
+    "start": 0,
+    "suffix": " Be aware that exclamation marks"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "3757d355a895",
+     "end": 38,
+     "prefix": "",
+     "quote": "Don’t use exclamation marks too often.",
+     "start": 0,
+     "suffix": " Exclamation marks can lose thei"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1bf6eeda873a",
+       "end": 59,
+       "prefix": "",
+       "quote": "Congratulations to our 2020 Australia Day Award recipients!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cbc9a912e032",
+       "end": 172,
+       "prefix": "",
+       "quote": "Happy international mother language day! #ourAPS believes in the importance of cultural and linguistic diversity (CALD) for a sustainable and harmonious Australian society.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no numerical threshold for ‘sparingly’ or ‘too often’. A frequency threshold would require a reviewer’s decision; occasional use is not itself a violation.",
+    "unit": "document",
+    "violation_condition": "Exclamation marks occur too frequently in less formal government content."
+   },
+   "when": [
+    "Applies to less formal government content, including promotional material and social media posts.",
+    "Formal content is subject to the separate restriction on using exclamation marks at all."
+   ],
+   "why": "G-4 merges the two statements of the frequency restriction; G-1 keeps frequency separate from multiple marks at one sentence ending."
+  },
+  {
+   "anchor": {
+    "block_id": "0198b026bcfa",
+    "end": 81,
+    "prefix": "",
+    "quote": "At the end of each sentence you want to emphasise, use only one exclamation mark.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "192e944c3a8d",
+     "end": 26,
+     "prefix": "",
+     "quote": "Write one exclamation mark",
+     "start": 0,
+     "suffix": ": don’t overuse them"
+    },
+    {
+     "block_id": "e02388e478ba",
+     "end": 104,
+     "prefix": "",
+     "quote": "Some people use multiple exclamation marks in social media. This is not suitable for government content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "aad1410bd9cf",
+       "end": 79,
+       "prefix": "",
+       "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "52cddf1badf2",
+       "end": 81,
+       "prefix": "",
+       "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!!!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence ends with more than one exclamation mark used for emphasis."
+   },
+   "when": [
+    "Applies when exclamation marks are used to emphasise a sentence.",
+    "Applies to government social media content as well as other government content.",
+    "Does not apply to exclamation marks displayed as literal characters rather than sentence punctuation."
+   ],
+   "why": "G-1 separates the heading’s frequency and sentence-ending checks; G-2 and G-4 absorb the social-media clarification."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3794,
+  "output_tokens": 3941,
+  "reasoning_tokens": 2236
+ }
+}

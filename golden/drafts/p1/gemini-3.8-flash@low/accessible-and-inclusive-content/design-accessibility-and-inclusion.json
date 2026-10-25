@@ -1,0 +1,162 @@
+{
+ "effort": "low",
+ "input_sha256": "521d4d0d8b8a90b86845f85583bb008e9c370232ceeb272ea514be39cc2f5e2d",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "ace913730924",
+    "end": 14,
+    "prefix": "",
+    "quote": "Design for all",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading introducing high-level principles of inclusive design and human-computer interaction; not a testable text rule (G-1, G-5).",
+   "reason": "section",
+   "seed_uid": "fee4240f44b6b064"
+  },
+  {
+   "anchor": {
+    "block_id": "c92db460cb0f",
+    "end": 16,
+    "prefix": "",
+    "quote": "Do user research",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Process guidance advising the author/team to conduct user research, not a rule governing text (G-5).",
+   "reason": "advice",
+   "seed_uid": "072fa5a25e8eff4b"
+  },
+  {
+   "anchor": {
+    "block_id": "df95592b22a8",
+    "end": 82,
+    "prefix": "",
+    "quote": "Combine your user research with accessibility techniques to design usable content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level procedural advice to writers/designers, not an actionable rule for checking text (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "00f2953d3dc4",
+    "end": 29,
+    "prefix": "",
+    "quote": "Ask what makes content usable",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General conceptual advice encouraging writers to think about usability and accessibility (G-5).",
+   "reason": "advice",
+   "seed_uid": "1aeb2416b63610c4"
+  },
+  {
+   "anchor": {
+    "block_id": "178c4e1f82a8",
+    "end": 48,
+    "prefix": "",
+    "quote": "Create content for people with diverse abilities",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading discussing accessibility principles and barriers; high-level philosophy rather than a concrete text check (G-1, G-5).",
+   "reason": "section",
+   "seed_uid": "18107e0392e824cb"
+  },
+  {
+   "anchor": {
+    "block_id": "045e31ec091c",
+    "end": 184,
+    "prefix": "orary and situational barriers. ",
+    "quote": "Government content needs to be designed so it does not create barriers to access.",
+    "start": 103,
+    "suffix": ""
+   },
+   "note": "High-level principle and design goal, not an automatable text rule (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "07c881a04686",
+    "end": 55,
+    "prefix": "",
+    "quote": "When you design content, it needs to serve people with:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A broad design objective regarding user groups rather than a rule that can flag text (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/design-accessibility-and-inclusion.md",
+ "page_sha256": "54d7d75d696053cd97208fadafeb979705c3893f65276d83d9c8b669cb04ae72",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "ace913730924",
+    "note": "Section heading introducing high-level principles of inclusive design and human-computer interaction; not a testable text rule (G-1, G-5).",
+    "quote": "Design for all",
+    "reason": "section"
+   },
+   {
+    "block_id": "c92db460cb0f",
+    "note": "Process guidance advising the author/team to conduct user research, not a rule governing text (G-5).",
+    "quote": "Do user research",
+    "reason": "advice"
+   },
+   {
+    "block_id": "df95592b22a8",
+    "note": "High-level procedural advice to writers/designers, not an actionable rule for checking text (G-5).",
+    "quote": "Combine your user research with accessibility techniques to design usable content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "00f2953d3dc4",
+    "note": "General conceptual advice encouraging writers to think about usability and accessibility (G-5).",
+    "quote": "Ask what makes content usable",
+    "reason": "advice"
+   },
+   {
+    "block_id": "178c4e1f82a8",
+    "note": "Section heading discussing accessibility principles and barriers; high-level philosophy rather than a concrete text check (G-1, G-5).",
+    "quote": "Create content for people with diverse abilities",
+    "reason": "section"
+   },
+   {
+    "block_id": "045e31ec091c",
+    "note": "High-level principle and design goal, not an automatable text rule (G-5).",
+    "quote": "Government content needs to be designed so it does not create barriers to access.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "07c881a04686",
+    "note": "A broad design objective regarding user groups rather than a rule that can flag text (G-5).",
+    "quote": "When you design content, it needs to serve people with:",
+    "reason": "advice"
+   }
+  ],
+  "rules": []
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4072,
+  "output_tokens": 561,
+  "reasoning_tokens": 0
+ }
+}

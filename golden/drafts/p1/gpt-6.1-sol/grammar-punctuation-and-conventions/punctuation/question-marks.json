@@ -1,0 +1,806 @@
+{
+ "effort": "high",
+ "input_sha256": "470732a953746614077db1c40f09b5e65160b811168086cfc0f9b0602e158575",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "0ab67f8fc9b1",
+    "end": 71,
+    "prefix": "",
+    "quote": "Users expect direct questions and requests to end with a question mark.",
+    "start": 0,
+    "suffix": " Indirect questions, commands an"
+   },
+   "note": "Consolidated into the direct-question ending rule under G-4.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0ab67f8fc9b1",
+    "end": 153,
+    "prefix": "ts to end with a question mark. ",
+    "quote": "Indirect questions, commands and rhetorical questions can take other punctuation.",
+    "start": 72,
+    "suffix": ""
+   },
+   "note": "Introductory permission, clarified by the later rules and rhetorical-question exception.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "37da261b2ca9",
+    "end": 163,
+    "prefix": "",
+    "quote": "Like other punctuation marks, question marks stay with the text they refer to. Usually, this is immediately after the last letter of the last word of the sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the placement rule under G-4.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "22e4201a0658",
+    "end": 66,
+    "prefix": "",
+    "quote": "Brackets and quotation marks change the position of question marks",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the placement cases; the following instruction and list supply the actionable conditions consolidated into the placement rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8b912bed6c66",
+    "end": 58,
+    "prefix": "",
+    "quote": "For brackets and quotation marks, place the question mark:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "This lead-in and its two list items are incorporated into the placement rule, not separate findings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f5b67ab21708",
+    "end": 44,
+    "prefix": "",
+    "quote": "Inserted question marks can show uncertainty",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits uncertainty markers but does not require their use. Recorded as an exception to ordinary placement.",
+   "reason": "permission",
+   "seed_uid": "5e5efb49d1b73d2b"
+  },
+  {
+   "anchor": {
+    "block_id": "56808f68b567",
+    "end": 87,
+    "prefix": "",
+    "quote": "Question marks can express doubt and uncertainty about dates or other specific details.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the permitted uncertainty-marker use; no independent finding can arise from not using it.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9d0ddd605b0b",
+    "end": 42,
+    "prefix": "",
+    "quote": "Direct questions end with a question mark.",
+    "start": 0,
+    "suffix": " Most begin with one of these wo"
+   },
+   "note": "Consolidated into the direct-question ending rule under G-4.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2f4f899b7d34",
+    "end": 102,
+    "prefix": "",
+    "quote": "Indirect questions don’t end with question marks, even if they include a word such as ‘who’ or ‘does’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the rule for indirect questions and commands.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a25bf36957b2",
+    "end": 57,
+    "prefix": "",
+    "quote": "To turn indirect questions into direct questions you can:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces optional conversion methods, not a requirement to convert indirect questions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6964cc37345a",
+    "end": 56,
+    "prefix": "",
+    "quote": "rearrange the words so the verb comes before the subject",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An optional conversion method under ‘you can’, not a universal word-order requirement for direct questions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c5db500d3b2c",
+    "end": 39,
+    "prefix": "",
+    "quote": "introduce a word such as ‘can’ or ‘why’",
+    "start": 0,
+    "suffix": " – but make sure there is a subj"
+   },
+   "note": "The word-introduction method is optional. The separate subject requirement in the same item is retained as a narrowly scoped rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ba62601362bf",
+    "end": 98,
+    "prefix": "",
+    "quote": "Guidance in this manual recommends to avoid questions as headings, except for Easy Read materials.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: cross-reference to guidance whose subject is headings; the stated Easy Read exception belongs with that rule.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "17d5b1bda9d3",
+    "end": 169,
+    "prefix": "",
+    "quote": "Spellcheckers often recommend that you change indirect questions to end with a question mark. This isn’t always correct. It depends on whether you are asking a question.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes and cautions against a spellchecker recommendation; it does not endorse an additional punctuation rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "19a2e8e0dfc3",
+    "end": 149,
+    "prefix": "nds aren’t framed as questions. ",
+    "quote": "They don’t start with words such as ‘what’, ‘are’ or ‘does’,and don’t end with a question mark.",
+    "start": 54,
+    "suffix": ""
+   },
+   "note": "The ending requirement is consolidated into the indirect-question and command rule. The opening-word explanation is not promoted into a separate prohibition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ed368c297b7c",
+    "end": 63,
+    "prefix": "",
+    "quote": "Rhetorical questions end in a question mark or exclamation mark",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-3: the alternative ending is recorded as an exception to the direct-question rule, avoiding a second finding for the same ending.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0e16a231b3e7",
+    "end": 98,
+    "prefix": "",
+    "quote": "Depending on the context, a rhetorical question can end in a question mark or an exclamation mark.",
+    "start": 0,
+    "suffix": " Exclamation marks add emphasis "
+   },
+   "note": "Allows an exclamation mark instead of a question mark; incorporated into the direct-question rule’s conditions.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/question-marks.md",
+ "page_sha256": "fe8b2e58b00bae6722e144df629e3aa46444f9e0b82ac202e064b6775825063e",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "0ab67f8fc9b1",
+    "note": "Consolidated into the direct-question ending rule under G-4.",
+    "quote": "Users expect direct questions and requests to end with a question mark.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0ab67f8fc9b1",
+    "note": "Introductory permission, clarified by the later rules and rhetorical-question exception.",
+    "quote": "Indirect questions, commands and rhetorical questions can take other punctuation.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "37da261b2ca9",
+    "note": "Consolidated into the placement rule under G-4.",
+    "quote": "Like other punctuation marks, question marks stay with the text they refer to. Usually, this is immediately after the last letter of the last word of the sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "22e4201a0658",
+    "note": "Describes the placement cases; the following instruction and list supply the actionable conditions consolidated into the placement rule.",
+    "quote": "Brackets and quotation marks change the position of question marks",
+    "reason": "description"
+   },
+   {
+    "block_id": "8b912bed6c66",
+    "note": "This lead-in and its two list items are incorporated into the placement rule, not separate findings.",
+    "quote": "For brackets and quotation marks, place the question mark:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f5b67ab21708",
+    "note": "G-3: permits uncertainty markers but does not require their use. Recorded as an exception to ordinary placement.",
+    "quote": "Inserted question marks can show uncertainty",
+    "reason": "permission"
+   },
+   {
+    "block_id": "56808f68b567",
+    "note": "Explains the permitted uncertainty-marker use; no independent finding can arise from not using it.",
+    "quote": "Question marks can express doubt and uncertainty about dates or other specific details.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "9d0ddd605b0b",
+    "note": "Consolidated into the direct-question ending rule under G-4.",
+    "quote": "Direct questions end with a question mark.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2f4f899b7d34",
+    "note": "Consolidated into the rule for indirect questions and commands.",
+    "quote": "Indirect questions don’t end with question marks, even if they include a word such as ‘who’ or ‘does’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a25bf36957b2",
+    "note": "Introduces optional conversion methods, not a requirement to convert indirect questions.",
+    "quote": "To turn indirect questions into direct questions you can:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6964cc37345a",
+    "note": "An optional conversion method under ‘you can’, not a universal word-order requirement for direct questions.",
+    "quote": "rearrange the words so the verb comes before the subject",
+    "reason": "permission"
+   },
+   {
+    "block_id": "c5db500d3b2c",
+    "note": "The word-introduction method is optional. The separate subject requirement in the same item is retained as a narrowly scoped rule.",
+    "quote": "introduce a word such as ‘can’ or ‘why’",
+    "reason": "permission"
+   },
+   {
+    "block_id": "ba62601362bf",
+    "note": "G-6: cross-reference to guidance whose subject is headings; the stated Easy Read exception belongs with that rule.",
+    "quote": "Guidance in this manual recommends to avoid questions as headings, except for Easy Read materials.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "17d5b1bda9d3",
+    "note": "Describes and cautions against a spellchecker recommendation; it does not endorse an additional punctuation rule.",
+    "quote": "Spellcheckers often recommend that you change indirect questions to end with a question mark. This isn’t always correct. It depends on whether you are asking a question.",
+    "reason": "description"
+   },
+   {
+    "block_id": "19a2e8e0dfc3",
+    "note": "The ending requirement is consolidated into the indirect-question and command rule. The opening-word explanation is not promoted into a separate prohibition.",
+    "quote": "They don’t start with words such as ‘what’, ‘are’ or ‘does’,and don’t end with a question mark.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ed368c297b7c",
+    "note": "G-2 and G-3: the alternative ending is recorded as an exception to the direct-question rule, avoiding a second finding for the same ending.",
+    "quote": "Rhetorical questions end in a question mark or exclamation mark",
+    "reason": "permission"
+   },
+   {
+    "block_id": "0e16a231b3e7",
+    "note": "Allows an exclamation mark instead of a question mark; incorporated into the direct-question rule’s conditions.",
+    "quote": "Depending on the context, a rhetorical question can end in a question mark or an exclamation mark.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "525045981ea7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "37da261b2ca9",
+      "quote": "Like other punctuation marks, question marks stay with the text they refer to. Usually, this is immediately after the last letter of the last word of the sentence."
+     },
+     {
+      "block_id": "22e4201a0658",
+      "quote": "Brackets and quotation marks change the position of question marks"
+     },
+     {
+      "block_id": "8b912bed6c66",
+      "quote": "For brackets and quotation marks, place the question mark:"
+     },
+     {
+      "block_id": "4236ae3b803c",
+      "quote": "before a closing bracket or quotation mark if the question is part of the text in the brackets or quotation marks"
+     },
+     {
+      "block_id": "3bc4c7dcc494",
+      "quote": "after the closing bracket or quotation mark if the question is part of the surrounding text."
+     },
+     {
+      "block_id": "56808f68b567",
+      "quote": "Question marks can express doubt and uncertainty about dates or other specific details."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Question marks usually go after the last letter in a sentence",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A question mark does not immediately follow the text it punctuates, or is on the wrong side of a closing bracket or quotation mark for the scope of the question.",
+    "when": [
+     "Applies to question marks punctuating questions.",
+     "If the question belongs to the text inside brackets or quotation marks, the question mark goes before the closing delimiter.",
+     "If the question belongs to the surrounding text, the question mark goes after the closing delimiter.",
+     "Question marks inserted to express uncertainty about dates or other details are outside this sentence-ending placement check."
+    ],
+    "why": "G-2 consolidates the default placement and delimiter-dependent cases; G-3 excludes optional uncertainty markers; G-4 absorbs the explanatory wording."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "be20b366fff7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0ab67f8fc9b1",
+      "quote": "Users expect direct questions and requests to end with a question mark."
+     },
+     {
+      "block_id": "9d0ddd605b0b",
+      "quote": "Direct questions end with a question mark."
+     },
+     {
+      "block_id": "af679d52dc21",
+      "quote": "Some sentences don’t start with one of the words such as ‘who’, ‘could’ and ‘does’ but still end with a question mark."
+     },
+     {
+      "block_id": "ca351f6b5d6a",
+      "quote": "Sometimes questions are tagged on to the end of another clause."
+     },
+     {
+      "block_id": "b99a7e8c19d3",
+      "quote": "Requests are often framed as questions."
+     },
+     {
+      "block_id": "ed368c297b7c",
+      "quote": "Rhetorical questions end in a question mark or exclamation mark"
+     },
+     {
+      "block_id": "0e16a231b3e7",
+      "quote": "Depending on the context, a rhetorical question can end in a question mark or an exclamation mark."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Direct questions and requests end in a question mark",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A direct question or request framed as a question lacks a closing question mark, unless it is a rhetorical question ending with an exclamation mark.",
+    "when": [
+     "Includes questions that do not begin with a conventional interrogative or auxiliary word.",
+     "Includes questions tagged onto another clause.",
+     "Applies to requests framed as questions, not to commands or instructions.",
+     "A rhetorical question may end with an exclamation mark instead."
+    ],
+    "why": "G-2 keeps question forms and the rhetorical-question exception together; G-3 treats the permitted exclamation mark as an exception; G-4 consolidates restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3ad305134543",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2f4f899b7d34",
+      "quote": "Indirect questions don’t end with question marks, even if they include a word such as ‘who’ or ‘does’."
+     },
+     {
+      "block_id": "f89d46fe18c2",
+      "quote": "Indirect questions are often used in headings."
+     },
+     {
+      "block_id": "19a2e8e0dfc3",
+      "quote": "Instructions and commands aren’t framed as questions."
+     },
+     {
+      "block_id": "19a2e8e0dfc3",
+      "quote": "They don’t start with words such as ‘what’, ‘are’ or ‘does’,and don’t end with a question mark."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Indirect questions and commands don’t use a question mark",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An indirect question, command or instruction is punctuated with a closing question mark.",
+    "when": [
+     "An indirect question remains covered even if it contains a word such as ‘who’ or ‘does’.",
+     "Also applies to indirect questions used as headings.",
+     "Requests actually framed as direct questions are not commands for this check."
+    ],
+    "why": "G-2 combines the stated cases of inappropriate question-mark endings; G-4 absorbs the body restatements without creating a separate rule about opening words."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c5db500d3b2c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "a25bf36957b2",
+      "quote": "To turn indirect questions into direct questions you can:"
+     },
+     {
+      "block_id": "c5db500d3b2c",
+      "quote": "introduce a word such as ‘can’ or ‘why’ – but make sure there is a subject."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "make sure there is a subject.",
+    "specification": "The subject requirement is explicitly attached to the suggested conversion method. The page does not establish whether it should extend to other direct questions or question fragments, and conversion history may not be recoverable from the resulting text.",
+    "unit": "sentence",
+    "violation_condition": "A direct question formed by introducing a word into an indirect question lacks a grammatical subject.",
+    "when": [
+     "An indirect question is being turned into a direct question by introducing a word such as ‘can’ or ‘why’."
+    ],
+    "why": "The optional conversion method is not itself a rule under G-3, but its explicit subject requirement describes a text property; the uncertain scope is deferred rather than generalised."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "525045981ea7",
+    "end": 61,
+    "prefix": "",
+    "quote": "Question marks usually go after the last letter in a sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "37da261b2ca9",
+     "end": 163,
+     "prefix": "",
+     "quote": "Like other punctuation marks, question marks stay with the text they refer to. Usually, this is immediately after the last letter of the last word of the sentence.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "22e4201a0658",
+     "end": 66,
+     "prefix": "",
+     "quote": "Brackets and quotation marks change the position of question marks",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8b912bed6c66",
+     "end": 58,
+     "prefix": "",
+     "quote": "For brackets and quotation marks, place the question mark:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4236ae3b803c",
+     "end": 113,
+     "prefix": "",
+     "quote": "before a closing bracket or quotation mark if the question is part of the text in the brackets or quotation marks",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3bc4c7dcc494",
+     "end": 92,
+     "prefix": "",
+     "quote": "after the closing bracket or quotation mark if the question is part of the surrounding text.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "56808f68b567",
+     "end": 87,
+     "prefix": "",
+     "quote": "Question marks can express doubt and uncertainty about dates or other specific details.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A question mark does not immediately follow the text it punctuates, or is on the wrong side of a closing bracket or quotation mark for the scope of the question."
+   },
+   "when": [
+    "Applies to question marks punctuating questions.",
+    "If the question belongs to the text inside brackets or quotation marks, the question mark goes before the closing delimiter.",
+    "If the question belongs to the surrounding text, the question mark goes after the closing delimiter.",
+    "Question marks inserted to express uncertainty about dates or other details are outside this sentence-ending placement check."
+   ],
+   "why": "G-2 consolidates the default placement and delimiter-dependent cases; G-3 excludes optional uncertainty markers; G-4 absorbs the explanatory wording."
+  },
+  {
+   "anchor": {
+    "block_id": "be20b366fff7",
+    "end": 52,
+    "prefix": "",
+    "quote": "Direct questions and requests end in a question mark",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0ab67f8fc9b1",
+     "end": 71,
+     "prefix": "",
+     "quote": "Users expect direct questions and requests to end with a question mark.",
+     "start": 0,
+     "suffix": " Indirect questions, commands an"
+    },
+    {
+     "block_id": "9d0ddd605b0b",
+     "end": 42,
+     "prefix": "",
+     "quote": "Direct questions end with a question mark.",
+     "start": 0,
+     "suffix": " Most begin with one of these wo"
+    },
+    {
+     "block_id": "af679d52dc21",
+     "end": 118,
+     "prefix": "",
+     "quote": "Some sentences don’t start with one of the words such as ‘who’, ‘could’ and ‘does’ but still end with a question mark.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ca351f6b5d6a",
+     "end": 63,
+     "prefix": "",
+     "quote": "Sometimes questions are tagged on to the end of another clause.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b99a7e8c19d3",
+     "end": 39,
+     "prefix": "",
+     "quote": "Requests are often framed as questions.",
+     "start": 0,
+     "suffix": " Requests suggest that people ha"
+    },
+    {
+     "block_id": "ed368c297b7c",
+     "end": 63,
+     "prefix": "",
+     "quote": "Rhetorical questions end in a question mark or exclamation mark",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0e16a231b3e7",
+     "end": 98,
+     "prefix": "",
+     "quote": "Depending on the context, a rhetorical question can end in a question mark or an exclamation mark.",
+     "start": 0,
+     "suffix": " Exclamation marks add emphasis "
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A direct question or request framed as a question lacks a closing question mark, unless it is a rhetorical question ending with an exclamation mark."
+   },
+   "when": [
+    "Includes questions that do not begin with a conventional interrogative or auxiliary word.",
+    "Includes questions tagged onto another clause.",
+    "Applies to requests framed as questions, not to commands or instructions.",
+    "A rhetorical question may end with an exclamation mark instead."
+   ],
+   "why": "G-2 keeps question forms and the rhetorical-question exception together; G-3 treats the permitted exclamation mark as an exception; G-4 consolidates restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "3ad305134543",
+    "end": 57,
+    "prefix": "",
+    "quote": "Indirect questions and commands don’t use a question mark",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2f4f899b7d34",
+     "end": 102,
+     "prefix": "",
+     "quote": "Indirect questions don’t end with question marks, even if they include a word such as ‘who’ or ‘does’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f89d46fe18c2",
+     "end": 46,
+     "prefix": "",
+     "quote": "Indirect questions are often used in headings.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "19a2e8e0dfc3",
+     "end": 53,
+     "prefix": "",
+     "quote": "Instructions and commands aren’t framed as questions.",
+     "start": 0,
+     "suffix": " They don’t start with words suc"
+    },
+    {
+     "block_id": "19a2e8e0dfc3",
+     "end": 149,
+     "prefix": "nds aren’t framed as questions. ",
+     "quote": "They don’t start with words such as ‘what’, ‘are’ or ‘does’,and don’t end with a question mark.",
+     "start": 54,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An indirect question, command or instruction is punctuated with a closing question mark."
+   },
+   "when": [
+    "An indirect question remains covered even if it contains a word such as ‘who’ or ‘does’.",
+    "Also applies to indirect questions used as headings.",
+    "Requests actually framed as direct questions are not commands for this check."
+   ],
+   "why": "G-2 combines the stated cases of inappropriate question-mark endings; G-4 absorbs the body restatements without creating a separate rule about opening words."
+  },
+  {
+   "anchor": {
+    "block_id": "c5db500d3b2c",
+    "end": 75,
+    "prefix": "rd such as ‘can’ or ‘why’ – but ",
+    "quote": "make sure there is a subject.",
+    "start": 46,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "a25bf36957b2",
+     "end": 57,
+     "prefix": "",
+     "quote": "To turn indirect questions into direct questions you can:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c5db500d3b2c",
+     "end": 75,
+     "prefix": "",
+     "quote": "introduce a word such as ‘can’ or ‘why’ – but make sure there is a subject.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The subject requirement is explicitly attached to the suggested conversion method. The page does not establish whether it should extend to other direct questions or question fragments, and conversion history may not be recoverable from the resulting text.",
+    "unit": "sentence",
+    "violation_condition": "A direct question formed by introducing a word into an indirect question lacks a grammatical subject."
+   },
+   "when": [
+    "An indirect question is being turned into a direct question by introducing a word such as ‘can’ or ‘why’."
+   ],
+   "why": "The optional conversion method is not itself a rule under G-3, but its explicit subject requirement describes a text property; the uncertain scope is deferred rather than generalised."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4822,
+  "output_tokens": 8400,
+  "reasoning_tokens": 5416
+ }
+}

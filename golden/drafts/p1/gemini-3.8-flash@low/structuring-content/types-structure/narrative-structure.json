@@ -1,0 +1,321 @@
+{
+ "effort": "low",
+ "input_sha256": "2a93a182ae441212d112aa12fb6b5782e511da4febfcc62316051e9ca4dc7368",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "4496804b1d05",
+    "end": 39,
+    "prefix": "",
+    "quote": "Use narrative structure to tell a story",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General conceptual advice / writing guidance rather than an actionable textual rule.",
+   "reason": "advice",
+   "seed_uid": "4d8e1e05df2279bd"
+  },
+  {
+   "anchor": {
+    "block_id": "eded758c9955",
+    "end": 19,
+    "prefix": "",
+    "quote": "Adapt the narrative",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Writing process guidance; not a checkable text rule.",
+   "reason": "advice",
+   "seed_uid": "22a24f1f3021e9ca"
+  },
+  {
+   "anchor": {
+    "block_id": "546d1bb433dd",
+    "end": 58,
+    "prefix": "",
+    "quote": "Be aware of narrative bias when writing government content",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Mindset advice to the writer; the actual text rule is in block 985e813e9840.",
+   "reason": "advice",
+   "seed_uid": "abcf888e768cd6ec"
+  },
+  {
+   "anchor": {
+    "block_id": "8edffa0d3c00",
+    "end": 49,
+    "prefix": "",
+    "quote": "Choose an appropriate type of narrative structure",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level editorial decision guidance.",
+   "reason": "advice",
+   "seed_uid": "39166038880f426c"
+  },
+  {
+   "anchor": {
+    "block_id": "0ae0912d81f2",
+    "end": 33,
+    "prefix": "",
+    "quote": "Write a beginning, middle and end",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping descriptions of introductory, body, and concluding components.",
+   "reason": "section",
+   "seed_uid": "ecc9d290f138d0df"
+  },
+  {
+   "anchor": {
+    "block_id": "fd786a01ddc3",
+    "end": 26,
+    "prefix": "",
+    "quote": "Write effective narratives",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General section heading introducing best practices for narrative coherence.",
+   "reason": "section",
+   "seed_uid": "71f5f2ce679ee933"
+  }
+ ],
+ "page_path": "structuring-content/types-structure/narrative-structure.md",
+ "page_sha256": "76c6f0be04c8b9c2db8ab03d6315e03f81dd13aebdbd593682d6cbbcb865e3ea",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "4496804b1d05",
+    "note": "General conceptual advice / writing guidance rather than an actionable textual rule.",
+    "quote": "Use narrative structure to tell a story",
+    "reason": "advice"
+   },
+   {
+    "block_id": "eded758c9955",
+    "note": "Writing process guidance; not a checkable text rule.",
+    "quote": "Adapt the narrative",
+    "reason": "advice"
+   },
+   {
+    "block_id": "546d1bb433dd",
+    "note": "Mindset advice to the writer; the actual text rule is in block 985e813e9840.",
+    "quote": "Be aware of narrative bias when writing government content",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8edffa0d3c00",
+    "note": "High-level editorial decision guidance.",
+    "quote": "Choose an appropriate type of narrative structure",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0ae0912d81f2",
+    "note": "Section heading grouping descriptions of introductory, body, and concluding components.",
+    "quote": "Write a beginning, middle and end",
+    "reason": "section"
+   },
+   {
+    "block_id": "fd786a01ddc3",
+    "note": "General section heading introducing best practices for narrative coherence.",
+    "quote": "Write effective narratives",
+    "reason": "section"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "985e813e9840",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "83fd5a3e0706",
+      "quote": "So, it’s important to ensure your narrative is based on evidence from authoritative sources or actual events."
+     },
+     {
+      "block_id": "985e813e9840",
+      "quote": "Don’t include details that might work with the story but aren’t factual."
+     },
+     {
+      "block_id": "985e813e9840",
+      "quote": "And never include any information based on an assumption that something happened because of something else."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Government content must be evidence-based and created transparently.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "content asserting facts or causal connections without supporting evidence, or containing non-factual details to suit a narrative",
+    "when": [],
+    "why": "G-2, G-4: The section establishes a strict requirement for evidence-based narrative in government content and specifies negative conditions (no non-factual story details, no unsupported assumptions of cause and effect)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ad245f7ed572",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Omit anything that isn’t related to your primary message.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "content included in the body/middle section that does not relate to the primary message",
+    "when": [],
+    "why": "Direct instruction on text composition restricting irrelevant content in the middle of a narrative."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9d96a59a2900",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "There must be a logical connection between the 3 parts.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a narrative lacking logical connection or continuity between the beginning, middle, and end",
+    "when": [],
+    "why": "Clear structural constraint on multi-part narrative writing."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "985e813e9840",
+    "end": 68,
+    "prefix": "",
+    "quote": "Government content must be evidence-based and created transparently.",
+    "start": 0,
+    "suffix": " Don’t include details that migh"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "83fd5a3e0706",
+     "end": 262,
+     "prefix": " counter to a strong narrative. ",
+     "quote": "So, it’s important to ensure your narrative is based on evidence from authoritative sources or actual events.",
+     "start": 153,
+     "suffix": ""
+    },
+    {
+     "block_id": "985e813e9840",
+     "end": 141,
+     "prefix": "ased and created transparently. ",
+     "quote": "Don’t include details that might work with the story but aren’t factual.",
+     "start": 69,
+     "suffix": " And never include any informati"
+    },
+    {
+     "block_id": "985e813e9840",
+     "end": 249,
+     "prefix": "h the story but aren’t factual. ",
+     "quote": "And never include any information based on an assumption that something happened because of something else.",
+     "start": 142,
+     "suffix": " Without supporting evidence, an"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "content asserting facts or causal connections without supporting evidence, or containing non-factual details to suit a narrative"
+   },
+   "when": [],
+   "why": "G-2, G-4: The section establishes a strict requirement for evidence-based narrative in government content and specifies negative conditions (no non-factual story details, no unsupported assumptions of cause and effect)."
+  },
+  {
+   "anchor": {
+    "block_id": "ad245f7ed572",
+    "end": 125,
+    "prefix": " and continues to engage users. ",
+    "quote": "Omit anything that isn’t related to your primary message.",
+    "start": 68,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "content included in the body/middle section that does not relate to the primary message"
+   },
+   "when": [],
+   "why": "Direct instruction on text composition restricting irrelevant content in the middle of a narrative."
+  },
+  {
+   "anchor": {
+    "block_id": "9d96a59a2900",
+    "end": 258,
+    "prefix": "t the beginning, middle and end.",
+    "quote": "There must be a logical connection between the 3 parts.",
+    "start": 203,
+    "suffix": " Within them, use headings as si"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a narrative lacking logical connection or continuity between the beginning, middle, and end"
+   },
+   "when": [],
+   "why": "Clear structural constraint on multi-part narrative writing."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5678,
+  "output_tokens": 1127,
+  "reasoning_tokens": 0
+ }
+}

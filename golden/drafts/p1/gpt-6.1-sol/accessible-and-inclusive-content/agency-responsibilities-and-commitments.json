@@ -1,0 +1,494 @@
+{
+ "effort": "high",
+ "input_sha256": "daa98bd928d67134fe786fe2d162170a97536b4b6173d6dce33951f5b6ef327e",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "9655b5fce561",
+    "end": 154,
+    "prefix": "andard for government agencies. ",
+    "quote": "Test your content against the Web Content Accessibility Guidelines (WCAG) success criteria.",
+    "start": 63,
+    "suffix": " Agencies should commit to impro"
+   },
+   "note": "G-5: testing is a writer's activity, not a property separately detectable in the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9655b5fce561",
+    "end": 230,
+    "prefix": "elines (WCAG) success criteria. ",
+    "quote": "Agencies should commit to improving their performance against the standard.",
+    "start": 155,
+    "suffix": ""
+   },
+   "note": "An organisational commitment, not a separate requirement for the wording of content.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c78848dffa62",
+    "end": 49,
+    "prefix": "",
+    "quote": "Use WCAG to guide your agency about accessibility",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the agency to use an external source of guidance.",
+   "reason": "advice",
+   "seed_uid": "f8f3ddac1581e5c6"
+  },
+  {
+   "anchor": {
+    "block_id": "d38e2fa6ee55",
+    "end": 34,
+    "prefix": "Meet WCAG level AA, but ",
+    "quote": "aim higher",
+    "start": 24,
+    "suffix": ""
+   },
+   "note": "An aspiration beyond the required AA baseline, without a separate failure condition.",
+   "reason": "advice",
+   "seed_uid": "24557ad7f8639990"
+  },
+  {
+   "anchor": {
+    "block_id": "c0196fe6eb14",
+    "end": 52,
+    "prefix": "",
+    "quote": "Test your content against the WCAG success criteria.",
+    "start": 0,
+    "suffix": " You need to meet the level A cr"
+   },
+   "note": "G-5: describes a testing activity rather than a separate property of the content.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c0196fe6eb14",
+    "end": 108,
+    "prefix": "inst the WCAG success criteria. ",
+    "quote": "You need to meet the level A criteria to meet level AA.",
+    "start": 53,
+    "suffix": ""
+   },
+   "note": "G-2: a prerequisite absorbed into the AA conformance rule, not a second conformance finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a0ed884628e6",
+    "end": 105,
+    "prefix": "",
+    "quote": "Your agency will need to make its own assessment about whether content achieves a WCAG level AA standard.",
+    "start": 0,
+    "suffix": " You'll find the WCAG success cr"
+   },
+   "note": "G-5: assigns responsibility for assessment; it does not add a separate text requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "07499d8644e5",
+    "end": 178,
+    "prefix": "re covered in the Style Manual. ",
+    "quote": "You will need to refer to WCAG to check if there are more criteria to consider for a specific piece of content.",
+    "start": 67,
+    "suffix": ""
+   },
+   "note": "G-5: an instruction to consult an external standard.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ef5370efd2d6",
+    "end": 160,
+    "prefix": "el AAA standard to some topics. ",
+    "quote": "This promotes the aim that government content meets the highest WCAG standard whenever possible.",
+    "start": 64,
+    "suffix": ""
+   },
+   "note": "Explains the aspiration behind references to AAA; it does not establish an independently checkable AAA requirement.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "86d6d9834ec8",
+    "end": 34,
+    "prefix": "",
+    "quote": "Include an accessibility statement",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: represented by the more specific body instruction to include a page explaining the extent of WCAG compliance.",
+   "reason": "restatement",
+   "seed_uid": "cd7f4016a947f73f"
+  },
+  {
+   "anchor": {
+    "block_id": "cc8c6010d7a7",
+    "end": 107,
+    "prefix": "",
+    "quote": "For example, your statement might mention how your agency is working on its implementation of the standard.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: suggests optional statement content; it does not require an implementation-progress description.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "eb70bf5ef2da",
+    "end": 90,
+    "prefix": "",
+    "quote": "You can check how the Style Manual measures up to level AA in its accessibility statement.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Points readers to an existing statement, rather than imposing a text requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9daf3e115893",
+    "end": 59,
+    "prefix": "",
+    "quote": "You may also need to refer to other relevant W3C standards.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: advice to consult other standards.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d7ae9b9c29f8",
+    "end": 133,
+    "prefix": "",
+    "quote": "For procurements, check Accessibility requirements suitable for public procurement of ICT products and services (AS EN 301 549:2016).",
+    "start": 0,
+    "suffix": " Refer to the digital sourcing C"
+   },
+   "note": "G-5: a procurement-related instruction to consult a standard, not a requirement about the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d7ae9b9c29f8",
+    "end": 240,
+    "prefix": " services (AS EN 301 549:2016). ",
+    "quote": "Refer to the digital sourcing Consider First policy, which applies to non-corporate Commonwealth entities.",
+    "start": 134,
+    "suffix": ""
+   },
+   "note": "G-5: directs readers to another policy.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/agency-responsibilities-and-commitments.md",
+ "page_sha256": "02c0a534ef8b35571e321df1d56d70336b2978d2d6b462076cdf6f8b65d6e2ee",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "9655b5fce561",
+    "note": "G-5: testing is a writer's activity, not a property separately detectable in the finished text.",
+    "quote": "Test your content against the Web Content Accessibility Guidelines (WCAG) success criteria.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9655b5fce561",
+    "note": "An organisational commitment, not a separate requirement for the wording of content.",
+    "quote": "Agencies should commit to improving their performance against the standard.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c78848dffa62",
+    "note": "G-5: directs the agency to use an external source of guidance.",
+    "quote": "Use WCAG to guide your agency about accessibility",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d38e2fa6ee55",
+    "note": "An aspiration beyond the required AA baseline, without a separate failure condition.",
+    "quote": "aim higher",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c0196fe6eb14",
+    "note": "G-5: describes a testing activity rather than a separate property of the content.",
+    "quote": "Test your content against the WCAG success criteria.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c0196fe6eb14",
+    "note": "G-2: a prerequisite absorbed into the AA conformance rule, not a second conformance finding.",
+    "quote": "You need to meet the level A criteria to meet level AA.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a0ed884628e6",
+    "note": "G-5: assigns responsibility for assessment; it does not add a separate text requirement.",
+    "quote": "Your agency will need to make its own assessment about whether content achieves a WCAG level AA standard.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "07499d8644e5",
+    "note": "G-5: an instruction to consult an external standard.",
+    "quote": "You will need to refer to WCAG to check if there are more criteria to consider for a specific piece of content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ef5370efd2d6",
+    "note": "Explains the aspiration behind references to AAA; it does not establish an independently checkable AAA requirement.",
+    "quote": "This promotes the aim that government content meets the highest WCAG standard whenever possible.",
+    "reason": "description"
+   },
+   {
+    "block_id": "86d6d9834ec8",
+    "note": "G-4: represented by the more specific body instruction to include a page explaining the extent of WCAG compliance.",
+    "quote": "Include an accessibility statement",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cc8c6010d7a7",
+    "note": "G-3: suggests optional statement content; it does not require an implementation-progress description.",
+    "quote": "For example, your statement might mention how your agency is working on its implementation of the standard.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "eb70bf5ef2da",
+    "note": "Points readers to an existing statement, rather than imposing a text requirement.",
+    "quote": "You can check how the Style Manual measures up to level AA in its accessibility statement.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9daf3e115893",
+    "note": "G-5: advice to consult other standards.",
+    "quote": "You may also need to refer to other relevant W3C standards.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d7ae9b9c29f8",
+    "note": "G-5: a procurement-related instruction to consult a standard, not a requirement about the text.",
+    "quote": "For procurements, check Accessibility requirements suitable for public procurement of ICT products and services (AS EN 301 549:2016).",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d7ae9b9c29f8",
+    "note": "G-5: directs readers to another policy.",
+    "quote": "Refer to the digital sourcing Consider First policy, which applies to non-corporate Commonwealth entities.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d38e2fa6ee55",
+    "clarity_suggestion": "not_automatable",
+    "covers": [
+     {
+      "block_id": "9655b5fce561",
+      "quote": "Accessibility is a mandatory standard for government agencies."
+     },
+     {
+      "block_id": "67447808e66e",
+      "quote": "WCAG 2.2 is the current version."
+     },
+     {
+      "block_id": "8ebb74334d5e",
+      "quote": "Accessibility is a mandatory government standard."
+     },
+     {
+      "block_id": "8ebb74334d5e",
+      "quote": "WCAG is a baseline accessibility standard for Australian Government content."
+     },
+     {
+      "block_id": "c0196fe6eb14",
+      "quote": "You need to meet the level A criteria to meet level AA."
+     }
+    ],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Meet WCAG level AA",
+    "specification": "This is an overarching conformance requirement, not a standalone text check. The page identifies WCAG 2.2 as current but does not enumerate its success criteria. Assessing conformance requires those external criteria and can require evidence beyond the text. Aiming above AA is aspirational, not an additional failure condition.",
+    "unit": "document",
+    "violation_condition": "Australian Government content fails an applicable WCAG level A or level AA success criterion.",
+    "when": [
+     "Applies to Australian Government content.",
+     "Meeting level AA includes meeting level A criteria."
+    ],
+    "why": "G-2 and G-4: consolidate the mandatory baseline and its level A prerequisite; do not turn the aspiration to exceed AA into another check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "5935c0a5dbf4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "86d6d9834ec8",
+      "quote": "Include an accessibility statement"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include a page on your site that explains the extent your service or product complies with WCAG.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An agency website lacks a page explaining the extent to which its service or product complies with WCAG.",
+    "when": [
+     "Assess the agency website as a whole; the statement need not appear on every page."
+    ],
+    "why": "G-4: the body gives the actionable requirement and absorbs the heading; the statement is a site-level requirement."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "d38e2fa6ee55",
+    "end": 18,
+    "prefix": "",
+    "quote": "Meet WCAG level AA",
+    "start": 0,
+    "suffix": ", but aim higher"
+   },
+   "clarity_suggestion": "not_automatable",
+   "covers": [
+    {
+     "block_id": "9655b5fce561",
+     "end": 62,
+     "prefix": "",
+     "quote": "Accessibility is a mandatory standard for government agencies.",
+     "start": 0,
+     "suffix": " Test your content against the W"
+    },
+    {
+     "block_id": "67447808e66e",
+     "end": 88,
+     "prefix": "ntent Accessibility Guidelines. ",
+     "quote": "WCAG 2.2 is the current version.",
+     "start": 56,
+     "suffix": " The Worldwide Web Consortium (W"
+    },
+    {
+     "block_id": "8ebb74334d5e",
+     "end": 49,
+     "prefix": "",
+     "quote": "Accessibility is a mandatory government standard.",
+     "start": 0,
+     "suffix": " WCAG is a baseline accessibilit"
+    },
+    {
+     "block_id": "8ebb74334d5e",
+     "end": 126,
+     "prefix": " mandatory government standard. ",
+     "quote": "WCAG is a baseline accessibility standard for Australian Government content.",
+     "start": 50,
+     "suffix": ""
+    },
+    {
+     "block_id": "c0196fe6eb14",
+     "end": 108,
+     "prefix": "inst the WCAG success criteria. ",
+     "quote": "You need to meet the level A criteria to meet level AA.",
+     "start": 53,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "This is an overarching conformance requirement, not a standalone text check. The page identifies WCAG 2.2 as current but does not enumerate its success criteria. Assessing conformance requires those external criteria and can require evidence beyond the text. Aiming above AA is aspirational, not an additional failure condition.",
+    "unit": "document",
+    "violation_condition": "Australian Government content fails an applicable WCAG level A or level AA success criterion."
+   },
+   "when": [
+    "Applies to Australian Government content.",
+    "Meeting level AA includes meeting level A criteria."
+   ],
+   "why": "G-2 and G-4: consolidate the mandatory baseline and its level A prerequisite; do not turn the aspiration to exceed AA into another check."
+  },
+  {
+   "anchor": {
+    "block_id": "5935c0a5dbf4",
+    "end": 96,
+    "prefix": "",
+    "quote": "Include a page on your site that explains the extent your service or product complies with WCAG.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "86d6d9834ec8",
+     "end": 34,
+     "prefix": "",
+     "quote": "Include an accessibility statement",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An agency website lacks a page explaining the extent to which its service or product complies with WCAG."
+   },
+   "when": [
+    "Assess the agency website as a whole; the statement need not appear on every page."
+   ],
+   "why": "G-4: the body gives the actionable requirement and absorbs the heading; the statement is a site-level requirement."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4085,
+  "output_tokens": 3759,
+  "reasoning_tokens": 2070
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "effort": "high",
+ "input_sha256": "63139ff8efa15e75de74529ad7676116e4d81437d72d6a5c30dc400ba2bf99fe",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "e0554b4c1789",
+    "end": 139,
+    "prefix": "that add meaning to a sentence. ",
+    "quote": "Write and punctuate them correctly to give people clear and useful information.",
+    "start": 60,
+    "suffix": ""
+   },
+   "note": "General advice to write correctly, without specifying a textual feature a checker could flag (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "50394157b9ac",
+    "end": 74,
+    "prefix": "only add meaning to a sentence. ",
+    "quote": "They can’t stand on their own.",
+    "start": 44,
+    "suffix": ""
+   },
+   "note": "Describes the grammatical status of phrases; it does not establish a general prohibition on standalone phrases in headings, labels or other writing.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5fa880cea1eb",
+    "end": 179,
+    "prefix": " to another noun in the phrase. ",
+    "quote": "Possessive phrases usually have an apostrophe.",
+    "start": 133,
+    "suffix": ""
+   },
+   "note": "Describes a usual characteristic rather than specifying when an apostrophe is required.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9681d301f2cf",
+    "end": 93,
+    "prefix": "use plural nouns as adjectives. ",
+    "quote": "No apostrophes are needed.",
+    "start": 67,
+    "suffix": ""
+   },
+   "note": "Says apostrophes are unnecessary in non-possessive and generic phrases, rather than explicitly prohibiting them. Do not turn an absence of requirement into a prohibition (G-3).",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/parts-sentences/phrases.md",
+ "page_sha256": "1b65f114aadceda6ba3c2dbe0ae4e118e3909922fdc1db66e50570471325756d",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "e0554b4c1789",
+    "note": "General advice to write correctly, without specifying a textual feature a checker could flag (G-5).",
+    "quote": "Write and punctuate them correctly to give people clear and useful information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "50394157b9ac",
+    "note": "Describes the grammatical status of phrases; it does not establish a general prohibition on standalone phrases in headings, labels or other writing.",
+    "quote": "They can’t stand on their own.",
+    "reason": "description"
+   },
+   {
+    "block_id": "5fa880cea1eb",
+    "note": "Describes a usual characteristic rather than specifying when an apostrophe is required.",
+    "quote": "Possessive phrases usually have an apostrophe.",
+    "reason": "description"
+   },
+   {
+    "block_id": "9681d301f2cf",
+    "note": "Says apostrophes are unnecessary in non-possessive and generic phrases, rather than explicitly prohibiting them. Do not turn an absence of requirement into a prohibition (G-3).",
+    "quote": "No apostrophes are needed.",
+    "reason": "permission"
+   }
+  ],
+  "rules": []
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4691,
+  "output_tokens": 1811,
+  "reasoning_tokens": 1506
+ }
+}

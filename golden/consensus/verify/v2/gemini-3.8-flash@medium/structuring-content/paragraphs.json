@@ -1,0 +1,83 @@
+{
+ "effort": "medium",
+ "input_sha256": "56421a40699a59cc3e9c60c667e571e031d85fa2706b17170ffadd96e0a60867",
+ "model": "gemini-3.8-flash",
+ "page_path": "structuring-content/paragraphs.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "cached_input_tokens": 0,
+  "input_tokens": 5220,
+  "output_tokens": 628,
+  "reasoning_tokens": 7117
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "G-5: Advice to the writer on organizing content under headings, not a testable rule on text.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C2",
+   "note": "G-4: Restates A1 ('Limit each paragraph to one topic').",
+   "restates": "A1",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C3",
+   "note": "E-2: Specific rule requiring active voice in topic sentences, directly tested by Write this / Not this.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "E-2: Bracketed explanatory note on the Not this example for C3, not a rule of its own.",
+   "restates": "C3",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C5",
+   "note": "G-5: General advice to the writer on list composition rather than a flaggable rule.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C6",
+   "note": "Actionable check requiring items in an itemised list to be grammatically parallel.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C7",
+   "note": "G-5: High-level principle advising plain language rather than an individual check a tool cites.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C8",
+   "note": "Actionable check to flag unexplained unusual words, phrases, or idioms.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C9",
+   "note": "Concrete, testable rule requiring acronyms to be expanded on first use.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C10",
+   "note": "Concrete, testable rule flagging double negatives.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C11",
+   "note": "Describes what WCAG 3.1.5 Level AAA entails rather than instructing Australian Government style.",
+   "restates": "",
+   "verdict": "description"
+  }
+ ],
+ "version": "v2"
+}

@@ -1,0 +1,3769 @@
+{
+ "effort": "high",
+ "input_sha256": "428180ce397b1b638b91567f036a6489f986901c9e72d02c18de4bedbf02e31b",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "aca7b6223d18",
+    "end": 89,
+    "prefix": "",
+    "quote": "Cite film, television, radio and podcast programs so people can find the source material.",
+    "start": 0,
+    "suffix": " Use the right style and comply "
+   },
+   "note": "Purpose-level summary of the specific citation and reference requirements below.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "aca7b6223d18",
+    "end": 141,
+    "prefix": "e can find the source material. ",
+    "quote": "Use the right style and comply with copyright laws.",
+    "start": 90,
+    "suffix": ""
+   },
+   "note": "General direction to the writer; the page supplies actionable attribution and formatting requirements separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b0a2e8c861e8",
+    "end": 31,
+    "prefix": "",
+    "quote": "Cite electronic media correctly",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups several different naming, formatting and copyright checks.",
+   "reason": "section",
+   "seed_uid": "904576301a9554a7"
+  },
+  {
+   "anchor": {
+    "block_id": "1a7fcd757339",
+    "end": 69,
+    "prefix": "",
+    "quote": "Use italics for published works and roman type for unpublished works.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the whole-work italics rule and the more specific unpublished-script title rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0cf2164157fe",
+    "end": 62,
+    "prefix": "",
+    "quote": "Place the names of episodes in quotation marks and roman type.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the parts-of-works title-formatting rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "256630044759",
+    "end": 94,
+    "prefix": "",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs research rather than specifying a property of the checked text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1a30df33ae32",
+    "end": 45,
+    "prefix": "",
+    "quote": "Use italics and sentence case for film titles",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: heads a section containing distinct title-fidelity, typography, date and reference requirements. Its two formatting checks are consolidated with their page-wide equivalents.",
+   "reason": "section",
+   "seed_uid": "106ecbaadba7cfc2"
+  },
+  {
+   "anchor": {
+    "block_id": "df6c1f60353b",
+    "end": 109,
+    "prefix": "it appears in film information. ",
+    "quote": "Include punctuation marks and any intentional misspelling.",
+    "start": 51,
+    "suffix": " Italicise the title and use sen"
+   },
+   "note": "G-2: details of preserving the source film title, not a separate fidelity rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "df6c1f60353b",
+    "end": 152,
+    "prefix": "nd any intentional misspelling. ",
+    "quote": "Italicise the title and use sentence case.",
+    "start": 110,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the whole-work italics and sentence-case checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2c28b83354ea",
+    "end": 122,
+    "prefix": "",
+    "quote": "If the film is part of a series, include the number of the series in the same format as in the original title of the film.",
+    "start": 0,
+    "suffix": " For example, if the original ti"
+   },
+   "note": "G-2: a condition of preserving the original film title.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2c28b83354ea",
+    "end": 205,
+    "prefix": "the original title of the film. ",
+    "quote": "For example, if the original title has the number written as a word, use the word.",
+    "start": 123,
+    "suffix": ""
+   },
+   "note": "G-4: explains the original series-number format requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7cec3a4fe327",
+    "end": 64,
+    "prefix": "",
+    "quote": "In-text citations of films often include the year of production.",
+    "start": 0,
+    "suffix": " Place this after the title in r"
+   },
+   "note": "Does not require a year in every film citation; retained as a condition on the production-year formatting rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7cec3a4fe327",
+    "end": 134,
+    "prefix": "include the year of production. ",
+    "quote": "Place this after the title in roman type and enclosed in parentheses.",
+    "start": 65,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the common production-year formatting rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "77f6e7902c1f",
+    "end": 81,
+    "prefix": "",
+    "quote": "If you mention the date in the text, you don’t have to include it in parentheses.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: an exception to repeating a film's date in parentheses.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1a6e30aabdff",
+    "end": 80,
+    "prefix": "",
+    "quote": "After the first mention, you can abbreviate the title as long as it makes sense.",
+    "start": 0,
+    "suffix": " You can also omit the date in p"
+   },
+   "note": "G-3: recorded as an exception to film-title fidelity.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1a6e30aabdff",
+    "end": 123,
+    "prefix": "itle as long as it makes sense. ",
+    "quote": "You can also omit the date in parentheses.",
+    "start": 81,
+    "suffix": " This often happens with well-kn"
+   },
+   "note": "G-3: recorded as a later-mention exception on the film production-year rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5456dd05083c",
+    "end": 32,
+    "prefix": "",
+    "quote": "Reference list entries for films",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: descriptive heading; the reference template states the actionable structure.",
+   "reason": "section",
+   "seed_uid": "982b10981bc7911f"
+  },
+  {
+   "anchor": {
+    "block_id": "3571edc1ccac",
+    "end": 62,
+    "prefix": "",
+    "quote": "In a reference list, use the director and the year of release.",
+    "start": 0,
+    "suffix": " Include the place of production"
+   },
+   "note": "G-4: included in the film reference template.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3571edc1ccac",
+    "end": 104,
+    "prefix": "rector and the year of release. ",
+    "quote": "Include the place of production if known.",
+    "start": 63,
+    "suffix": " If there is no credited directo"
+   },
+   "note": "G-2: a condition of the film reference structure.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3571edc1ccac",
+    "end": 168,
+    "prefix": "e place of production if known. ",
+    "quote": "If there is no credited director, use the name of the producer.",
+    "start": 105,
+    "suffix": ""
+   },
+   "note": "G-2: fallback creator condition in the film reference rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "63a73a4c8d3c",
+    "end": 29,
+    "prefix": "",
+    "quote": "Italicise television programs",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: already covered by the whole-work title italics rule.",
+   "reason": "restatement",
+   "seed_uid": "5de7b8d18ea400ba"
+  },
+  {
+   "anchor": {
+    "block_id": "6c8ccb8ad513",
+    "end": 76,
+    "prefix": "",
+    "quote": "Use sentence case, roman type and quotation marks for episodes of a program.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: its checks are covered by the sentence-case and episode-title formatting rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7e17ac907be6",
+    "end": 81,
+    "prefix": "",
+    "quote": "Include the year of production of television programs in roman type and brackets.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: the television case of the production-year rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "edcae2efb4ce",
+    "end": 46,
+    "prefix": "",
+    "quote": "Reference list entries for television programs",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: descriptive heading; the template and its conditions supply the rule.",
+   "reason": "section",
+   "seed_uid": "dfa22276f79b8b30"
+  },
+  {
+   "anchor": {
+    "block_id": "8c139f6222fd",
+    "end": 90,
+    "prefix": "",
+    "quote": "In a reference list, include the name of the director or producer and the year of release.",
+    "start": 0,
+    "suffix": " Include the place of production"
+   },
+   "note": "G-4: included in the television reference template.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8c139f6222fd",
+    "end": 132,
+    "prefix": "oducer and the year of release. ",
+    "quote": "Include the place of production if known.",
+    "start": 91,
+    "suffix": ""
+   },
+   "note": "G-2: condition on the television reference structure.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "92c8a3ed77f2",
+    "end": 72,
+    "prefix": "",
+    "quote": "If the episode doesn’t have a name, write the name of the program first.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: unnamed-episode variant of the television reference rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d2a3bcc2e99e",
+    "end": 56,
+    "prefix": "",
+    "quote": "Italicise radio programs and use roman type for episodes",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups distinct whole-program and episode-title checks, both stated more specifically below.",
+   "reason": "section",
+   "seed_uid": "6aaf1321505299a8"
+  },
+  {
+   "anchor": {
+    "block_id": "8b4de957ca48",
+    "end": 39,
+    "prefix": "",
+    "quote": "Use italics for the titles of programs.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: radio case of the whole-work title italics rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "820c5c6d306e",
+    "end": 86,
+    "prefix": "",
+    "quote": "Enclose the names of individual episodes in single quotation marks and use roman type.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: radio case of the episode-title rule, specifying single quotation marks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "697fbd93cf05",
+    "end": 18,
+    "prefix": "",
+    "quote": "Use sentence case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the page-wide title sentence-case rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "714e60bed8ef",
+    "end": 41,
+    "prefix": "",
+    "quote": "Reference list entries for radio programs",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: descriptive heading; the template states the checkable reference structure.",
+   "reason": "section",
+   "seed_uid": "d8713a316731b93e"
+  },
+  {
+   "anchor": {
+    "block_id": "2f42c1aba032",
+    "end": 67,
+    "prefix": "",
+    "quote": "In a reference list, include the full date the episode went to air.",
+    "start": 0,
+    "suffix": " Include the place of production"
+   },
+   "note": "G-4: the radio template already contains the full broadcast-date element.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2f42c1aba032",
+    "end": 109,
+    "prefix": "l date the episode went to air. ",
+    "quote": "Include the place of production if known.",
+    "start": 68,
+    "suffix": ""
+   },
+   "note": "G-2: condition on the radio reference structure.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5b17b191e845",
+    "end": 56,
+    "prefix": "",
+    "quote": "Italicise podcast series and use roman type for episodes",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups separate series-title and episode-title formatting checks.",
+   "reason": "section",
+   "seed_uid": "6ba73fe6aed3ccd2"
+  },
+  {
+   "anchor": {
+    "block_id": "7e6f89327e53",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use italics for the name of the program series.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: podcast case of the whole-work title italics rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "724bb14a38e7",
+    "end": 80,
+    "prefix": "",
+    "quote": "Use roman type and quotation marks for the names of individual podcast episodes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: podcast case of the episode-title formatting rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "522524ba77c4",
+    "end": 18,
+    "prefix": "",
+    "quote": "Use sentence case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the page-wide title sentence-case rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4efc53e47e42",
+    "end": 35,
+    "prefix": "",
+    "quote": "Reference list entries for podcasts",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups reference structure and distinct hyperlink checks.",
+   "reason": "section",
+   "seed_uid": "6126b461d5f79077"
+  },
+  {
+   "anchor": {
+    "block_id": "68f79364ab99",
+    "end": 101,
+    "prefix": "f you played it from a webpage. ",
+    "quote": "Don’t link to the podcast’s file name.",
+    "start": 63,
+    "suffix": " Always link to the webpage that"
+   },
+   "note": "G-4: the negative form of the hosting-webpage link-destination requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "68f79364ab99",
+    "end": 222,
+    "prefix": "that hosts the podcast episode. ",
+    "quote": "Include the date it was accessed at the end of the reference.",
+    "start": 161,
+    "suffix": ""
+   },
+   "note": "G-4: included in the podcast reference template.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e1787621893b",
+    "end": 51,
+    "prefix": "",
+    "quote": "Apply the same rules for script titles as for books",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups published and unpublished script title conventions, followed by reference-list requirements.",
+   "reason": "section",
+   "seed_uid": "219bab6545bea947"
+  },
+  {
+   "anchor": {
+    "block_id": "d6cec23fdf85",
+    "end": 58,
+    "prefix": "",
+    "quote": "Use italics and sentence case for published script titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the whole-work italics and title sentence-case rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "765cf32f70d2",
+    "end": 34,
+    "prefix": "",
+    "quote": "Reference list entries for scripts",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: descriptive heading; the template and online conditions state the actual checks.",
+   "reason": "section",
+   "seed_uid": "f2acd14f56108c54"
+  },
+  {
+   "anchor": {
+    "block_id": "0745aecbad95",
+    "end": 41,
+    "prefix": "",
+    "quote": "Reference the script as you would a book.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the following template provides the actionable book-style structure.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "31785d5393d1",
+    "end": 103,
+    "prefix": "script, hyperlink the title and ",
+    "quote": "include the date you accessed it.",
+    "start": 70,
+    "suffix": ""
+   },
+   "note": "G-2: the online access-date condition is included in the script reference-structure rule; the hyperlink clause is marked separately.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "13d2919718ee",
+    "end": 52,
+    "prefix": "",
+    "quote": "Use roman type and quotation marks for review titles",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body instruction is more precise because it specifies published reviews and single quotation marks.",
+   "reason": "restatement",
+   "seed_uid": "453dcc2ca27ae408"
+  },
+  {
+   "anchor": {
+    "block_id": "bad80781dc1f",
+    "end": 158,
+    "prefix": "osed in single quotation marks. ",
+    "quote": "Write the title of the reviewed material in italics and use sentence case.",
+    "start": 84,
+    "suffix": ""
+   },
+   "note": "G-4: the reviewed work retains the whole-work title conventions already marked.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ccfb7b106cf6",
+    "end": 87,
+    "prefix": "",
+    "quote": "You may be able to hyperlink to the online review, depending on copyright restrictions.",
+    "start": 0,
+    "suffix": " If you access it online, includ"
+   },
+   "note": "G-3: permits a hyperlink subject to copyright restrictions; it does not require one.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ccfb7b106cf6",
+    "end": 138,
+    "prefix": "ding on copyright restrictions. ",
+    "quote": "If you access it online, include an accessed date.",
+    "start": 88,
+    "suffix": ""
+   },
+   "note": "G-2: conditional access-date element of the review reference rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0ddb0048e51b",
+    "end": 34,
+    "prefix": "",
+    "quote": "Reference list entries for reviews",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: descriptive heading; the template supplies the reference structure.",
+   "reason": "section",
+   "seed_uid": "0366e3a332ec011f"
+  },
+  {
+   "anchor": {
+    "block_id": "c8d296d1eaa2",
+    "end": 140,
+    "prefix": "",
+    "quote": "If the name of the reviewed work appears in the title of the review, use italics for the work name but roman type for the rest of the title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: exception within the review-title formatting rule, preserving italics for the embedded work name.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "referencing-and-attribution/author-date/broadcast-media-and-podcasts-film-video-television-and-radio-programs.md",
+ "page_sha256": "aa6579f5a1c04134eb2c562fdd101aff6209ada66c9232beb19744082f463c14",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "aca7b6223d18",
+    "note": "Purpose-level summary of the specific citation and reference requirements below.",
+    "quote": "Cite film, television, radio and podcast programs so people can find the source material.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "aca7b6223d18",
+    "note": "General direction to the writer; the page supplies actionable attribution and formatting requirements separately.",
+    "quote": "Use the right style and comply with copyright laws.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b0a2e8c861e8",
+    "note": "G-1: groups several different naming, formatting and copyright checks.",
+    "quote": "Cite electronic media correctly",
+    "reason": "section"
+   },
+   {
+    "block_id": "1a7fcd757339",
+    "note": "G-4: absorbed by the whole-work italics rule and the more specific unpublished-script title rule.",
+    "quote": "Use italics for published works and roman type for unpublished works.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0cf2164157fe",
+    "note": "G-4: repeats the parts-of-works title-formatting rule.",
+    "quote": "Place the names of episodes in quotation marks and roman type.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "256630044759",
+    "note": "G-5: directs research rather than specifying a property of the checked text.",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1a30df33ae32",
+    "note": "G-1: heads a section containing distinct title-fidelity, typography, date and reference requirements. Its two formatting checks are consolidated with their page-wide equivalents.",
+    "quote": "Use italics and sentence case for film titles",
+    "reason": "section"
+   },
+   {
+    "block_id": "df6c1f60353b",
+    "note": "G-2: details of preserving the source film title, not a separate fidelity rule.",
+    "quote": "Include punctuation marks and any intentional misspelling.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "df6c1f60353b",
+    "note": "G-4: absorbed by the whole-work italics and sentence-case checks.",
+    "quote": "Italicise the title and use sentence case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2c28b83354ea",
+    "note": "G-2: a condition of preserving the original film title.",
+    "quote": "If the film is part of a series, include the number of the series in the same format as in the original title of the film.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2c28b83354ea",
+    "note": "G-4: explains the original series-number format requirement.",
+    "quote": "For example, if the original title has the number written as a word, use the word.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7cec3a4fe327",
+    "note": "Does not require a year in every film citation; retained as a condition on the production-year formatting rule.",
+    "quote": "In-text citations of films often include the year of production.",
+    "reason": "description"
+   },
+   {
+    "block_id": "7cec3a4fe327",
+    "note": "G-4: absorbed by the common production-year formatting rule.",
+    "quote": "Place this after the title in roman type and enclosed in parentheses.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "77f6e7902c1f",
+    "note": "G-3: an exception to repeating a film's date in parentheses.",
+    "quote": "If you mention the date in the text, you don’t have to include it in parentheses.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "1a6e30aabdff",
+    "note": "G-3: recorded as an exception to film-title fidelity.",
+    "quote": "After the first mention, you can abbreviate the title as long as it makes sense.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "1a6e30aabdff",
+    "note": "G-3: recorded as a later-mention exception on the film production-year rule.",
+    "quote": "You can also omit the date in parentheses.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "5456dd05083c",
+    "note": "G-1: descriptive heading; the reference template states the actionable structure.",
+    "quote": "Reference list entries for films",
+    "reason": "section"
+   },
+   {
+    "block_id": "3571edc1ccac",
+    "note": "G-4: included in the film reference template.",
+    "quote": "In a reference list, use the director and the year of release.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3571edc1ccac",
+    "note": "G-2: a condition of the film reference structure.",
+    "quote": "Include the place of production if known.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3571edc1ccac",
+    "note": "G-2: fallback creator condition in the film reference rule.",
+    "quote": "If there is no credited director, use the name of the producer.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "63a73a4c8d3c",
+    "note": "G-4: already covered by the whole-work title italics rule.",
+    "quote": "Italicise television programs",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6c8ccb8ad513",
+    "note": "G-4: its checks are covered by the sentence-case and episode-title formatting rules.",
+    "quote": "Use sentence case, roman type and quotation marks for episodes of a program.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7e17ac907be6",
+    "note": "G-2 and G-4: the television case of the production-year rule.",
+    "quote": "Include the year of production of television programs in roman type and brackets.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "edcae2efb4ce",
+    "note": "G-1: descriptive heading; the template and its conditions supply the rule.",
+    "quote": "Reference list entries for television programs",
+    "reason": "section"
+   },
+   {
+    "block_id": "8c139f6222fd",
+    "note": "G-4: included in the television reference template.",
+    "quote": "In a reference list, include the name of the director or producer and the year of release.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8c139f6222fd",
+    "note": "G-2: condition on the television reference structure.",
+    "quote": "Include the place of production if known.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "92c8a3ed77f2",
+    "note": "G-2: unnamed-episode variant of the television reference rule.",
+    "quote": "If the episode doesn’t have a name, write the name of the program first.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d2a3bcc2e99e",
+    "note": "G-1: groups distinct whole-program and episode-title checks, both stated more specifically below.",
+    "quote": "Italicise radio programs and use roman type for episodes",
+    "reason": "section"
+   },
+   {
+    "block_id": "8b4de957ca48",
+    "note": "G-4: radio case of the whole-work title italics rule.",
+    "quote": "Use italics for the titles of programs.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "820c5c6d306e",
+    "note": "G-2 and G-4: radio case of the episode-title rule, specifying single quotation marks.",
+    "quote": "Enclose the names of individual episodes in single quotation marks and use roman type.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "697fbd93cf05",
+    "note": "G-4: absorbed by the page-wide title sentence-case rule.",
+    "quote": "Use sentence case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "714e60bed8ef",
+    "note": "G-1: descriptive heading; the template states the checkable reference structure.",
+    "quote": "Reference list entries for radio programs",
+    "reason": "section"
+   },
+   {
+    "block_id": "2f42c1aba032",
+    "note": "G-4: the radio template already contains the full broadcast-date element.",
+    "quote": "In a reference list, include the full date the episode went to air.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2f42c1aba032",
+    "note": "G-2: condition on the radio reference structure.",
+    "quote": "Include the place of production if known.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5b17b191e845",
+    "note": "G-1: groups separate series-title and episode-title formatting checks.",
+    "quote": "Italicise podcast series and use roman type for episodes",
+    "reason": "section"
+   },
+   {
+    "block_id": "7e6f89327e53",
+    "note": "G-4: podcast case of the whole-work title italics rule.",
+    "quote": "Use italics for the name of the program series.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "724bb14a38e7",
+    "note": "G-4: podcast case of the episode-title formatting rule.",
+    "quote": "Use roman type and quotation marks for the names of individual podcast episodes.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "522524ba77c4",
+    "note": "G-4: absorbed by the page-wide title sentence-case rule.",
+    "quote": "Use sentence case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4efc53e47e42",
+    "note": "G-1: groups reference structure and distinct hyperlink checks.",
+    "quote": "Reference list entries for podcasts",
+    "reason": "section"
+   },
+   {
+    "block_id": "68f79364ab99",
+    "note": "G-4: the negative form of the hosting-webpage link-destination requirement.",
+    "quote": "Don’t link to the podcast’s file name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "68f79364ab99",
+    "note": "G-4: included in the podcast reference template.",
+    "quote": "Include the date it was accessed at the end of the reference.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e1787621893b",
+    "note": "G-1: groups published and unpublished script title conventions, followed by reference-list requirements.",
+    "quote": "Apply the same rules for script titles as for books",
+    "reason": "section"
+   },
+   {
+    "block_id": "d6cec23fdf85",
+    "note": "G-4: absorbed by the whole-work italics and title sentence-case rules.",
+    "quote": "Use italics and sentence case for published script titles.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "765cf32f70d2",
+    "note": "G-1: descriptive heading; the template and online conditions state the actual checks.",
+    "quote": "Reference list entries for scripts",
+    "reason": "section"
+   },
+   {
+    "block_id": "0745aecbad95",
+    "note": "G-4: the following template provides the actionable book-style structure.",
+    "quote": "Reference the script as you would a book.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "31785d5393d1",
+    "note": "G-2: the online access-date condition is included in the script reference-structure rule; the hyperlink clause is marked separately.",
+    "quote": "include the date you accessed it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "13d2919718ee",
+    "note": "G-4: the body instruction is more precise because it specifies published reviews and single quotation marks.",
+    "quote": "Use roman type and quotation marks for review titles",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bad80781dc1f",
+    "note": "G-4: the reviewed work retains the whole-work title conventions already marked.",
+    "quote": "Write the title of the reviewed material in italics and use sentence case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ccfb7b106cf6",
+    "note": "G-3: permits a hyperlink subject to copyright restrictions; it does not require one.",
+    "quote": "You may be able to hyperlink to the online review, depending on copyright restrictions.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "ccfb7b106cf6",
+    "note": "G-2: conditional access-date element of the review reference rule.",
+    "quote": "If you access it online, include an accessed date.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0ddb0048e51b",
+    "note": "G-1: descriptive heading; the template supplies the reference structure.",
+    "quote": "Reference list entries for reviews",
+    "reason": "section"
+   },
+   {
+    "block_id": "c8d296d1eaa2",
+    "note": "G-2: exception within the review-title formatting rule, preserving italics for the embedded work name.",
+    "quote": "If the name of the reviewed work appears in the title of the review, use italics for the work name but roman type for the rest of the title.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a63002a9fbb8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "df6c1f60353b",
+      "quote": "Italicise the title and use sentence case."
+     },
+     {
+      "block_id": "6c8ccb8ad513",
+      "quote": "Use sentence case, roman type and quotation marks for episodes of a program."
+     },
+     {
+      "block_id": "697fbd93cf05",
+      "quote": "Use sentence case."
+     },
+     {
+      "block_id": "522524ba77c4",
+      "quote": "Use sentence case."
+     },
+     {
+      "block_id": "d6cec23fdf85",
+      "quote": "Use italics and sentence case for published script titles."
+     },
+     {
+      "block_id": "bad80781dc1f",
+      "quote": "Write the title of the reviewed material in italics and use sentence case."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cbe97bf6ce83",
+        "quote": "Ride like a girl (2019) tells the story of jockey Michelle Payne."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fd0a912555e5",
+        "quote": "The Australian story episode ‘Out of the blue’ is about a shark attack in the Whitsundays."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6bd484ce3dd5",
+        "quote": "‘Evil crows, bird funerals, swooping magpies’ is an episode from Triple J’s Science with Dr Karl podcast."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use sentence case – retain initial capitals for the first word, proper nouns and proper adjectives.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A title of a work or episode uses capitals other than those required for its first word, proper nouns or proper adjectives.",
+    "when": [
+     "Applies to the film, television, radio, podcast and script titles discussed on this page, including episode titles.",
+     "Names of companies, channels, streaming services and networks retain the organisation's own capitalisation."
+    ],
+    "why": "G-2 and G-4: consolidate the repeated sentence-case check without also marking each medium-specific restatement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e25168f9e4bc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1a7fcd757339",
+      "quote": "Use italics for published works and roman type for unpublished works."
+     },
+     {
+      "block_id": "df6c1f60353b",
+      "quote": "Italicise the title and use sentence case."
+     },
+     {
+      "block_id": "63a73a4c8d3c",
+      "quote": "Italicise television programs"
+     },
+     {
+      "block_id": "8b4de957ca48",
+      "quote": "Use italics for the titles of programs."
+     },
+     {
+      "block_id": "7e6f89327e53",
+      "quote": "Use italics for the name of the program series."
+     },
+     {
+      "block_id": "d6cec23fdf85",
+      "quote": "Use italics and sentence case for published script titles."
+     },
+     {
+      "block_id": "bad80781dc1f",
+      "quote": "Write the title of the reviewed material in italics and use sentence case."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cca7185e5935",
+        "quote": "Picnic at Hanging Rock (1975) helped to revive the Australian film industry in the 1970s."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "95ade173b669",
+        "quote": "Gruen is a popular television program on ABC TV."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d9df3675e291",
+        "quote": "Environmentalists will enjoy the radio program Off track on ABC Radio National."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4a1b4ceafa66",
+        "quote": "A local podcast in this popular genre is Australian true crime, hosted by Meshel Laurie and Emily Webb."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8c8f5938a087",
+        "quote": "Peter Carey and Ray Lawrence co-wrote Bliss: the screenplay."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c9531a6e64ca",
+        "quote": "You can read David Knox’s review of The gloaming on TV Tonight."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Italicise the titles of films, television and radio programs, and podcasts.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title of a film, television program, radio program, podcast series or published script is not italicised.",
+    "when": [
+     "Applies to titles of whole works, including the title of a work being reviewed.",
+     "Does not apply to episode titles, review titles or unpublished script titles."
+    ],
+    "why": "G-2 and G-4: the media-specific instructions repeat one whole-work title-formatting check; unpublished scripts are handled separately."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fa49fdc11bfc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0cf2164157fe",
+      "quote": "Place the names of episodes in quotation marks and roman type."
+     },
+     {
+      "block_id": "6c8ccb8ad513",
+      "quote": "Use sentence case, roman type and quotation marks for episodes of a program."
+     },
+     {
+      "block_id": "820c5c6d306e",
+      "quote": "Enclose the names of individual episodes in single quotation marks and use roman type."
+     },
+     {
+      "block_id": "724bb14a38e7",
+      "quote": "Use roman type and quotation marks for the names of individual podcast episodes."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fd0a912555e5",
+        "quote": "The Australian story episode ‘Out of the blue’ is about a shark attack in the Whitsundays."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f29faacda39e",
+        "quote": "‘The bilby, the moon and the Birriliburu Rangers’ from Off track went to air in January."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6bd484ce3dd5",
+        "quote": "‘Evil crows, bird funerals, swooping magpies’ is an episode from Triple J’s Science with Dr Karl podcast."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use roman type and quotation marks for parts of works, such as episodes.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An episode title is italicised or lacks enclosing quotation marks.",
+    "when": [
+     "Applies to titles of individual television, radio and podcast episodes.",
+     "Radio episode titles are explicitly required to use single quotation marks."
+    ],
+    "why": "G-2 and G-4: television, radio and podcast instructions repeat the same episode-title formatting check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "243146397414",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1a7fcd757339",
+      "quote": "Use italics for published works and roman type for unpublished works."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8796f36fa281",
+        "quote": "‘Cycle accident’ is in the university film script archives."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use roman type and quotation marks for unpublished script titles.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An unpublished script title is italicised or is not enclosed in quotation marks.",
+    "when": [
+     "Applies to unpublished scripts, not published scripts."
+    ],
+    "why": "G-4: use the specific script instruction, which adds quotation marks to the general unpublished-work convention."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bad80781dc1f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "13d2919718ee",
+      "quote": "Use roman type and quotation marks for review titles"
+     },
+     {
+      "block_id": "c8d296d1eaa2",
+      "quote": "If the name of the reviewed work appears in the title of the review, use italics for the work name but roman type for the rest of the title."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "87f78064a865",
+        "quote": "David Stratton’s review of Bombshell, ‘Women put Fox on run’, contributed to the debate about the film."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "441487fe7cfa",
+        "quote": "Buckmaster L (24 September 2019) ‘Ride like a girl review – cinematic schmaltz swamps Michelle Payne’s ride to the Melbourne Cup’ [review of Ride like a girl directed by Rachel Griffiths], The Guardian, accessed 19 January 2020."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write titles of published reviews in roman type enclosed in single quotation marks.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A published review title is not enclosed in single quotation marks, or its text is italicised other than an embedded title of the reviewed work.",
+    "when": [
+     "Applies to published review titles, both in running text and in references.",
+     "A reviewed work's name within the review title is italicised; the rest of the review title remains roman."
+    ],
+    "why": "G-2 and G-4: the embedded work title is an exception within the review-title formatting rule, not a second competing check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4c425eb8bfb6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3877ae3fa38a",
+      "quote": "production companies"
+     },
+     {
+      "block_id": "4257da809068",
+      "quote": "networks"
+     },
+     {
+      "block_id": "efffbccaad9b",
+      "quote": "channels"
+     },
+     {
+      "block_id": "d92dd566c3fb",
+      "quote": "streaming services."
+     },
+     {
+      "block_id": "afb5b154d2e7",
+      "quote": "Use roman type and the spelling and capitalisation that the company uses for the names of channels, streaming services and networks."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "95ade173b669",
+        "quote": "Gruen is a popular television program on ABC TV."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e653a8ead2b5",
+        "quote": "Channel 7 has been screening cricket over the summer."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use roman type and no quotation marks for the names of:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name of a production company, network, channel or streaming service is italicised or enclosed in quotation marks as a title.",
+    "when": [
+     "Applies to names of production companies, networks, channels and streaming services."
+    ],
+    "why": "G-2 and G-4: the list supplies the scope of one name-formatting rule; spelling and capitalisation are a separate check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "afb5b154d2e7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "95ade173b669",
+        "quote": "Gruen is a popular television program on ABC TV."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e653a8ead2b5",
+        "quote": "Channel 7 has been screening cricket over the summer."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use roman type and the spelling and capitalisation that the company uses for the names of channels, streaming services and networks.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A channel, streaming service or network name has spelling or capitalisation different from the company's own form.",
+    "when": [
+     "Applies to channel, streaming service and network names.",
+     "Roman-type formatting is checked under the separate organisation-name formatting rule."
+    ],
+    "why": "The rule-grain test separates an incorrect official name from incorrect typography; those findings have different causes."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4b314f1ab0f7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use full names of organisations the first time you mention them.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An organisation's first mention uses a shortened name without giving its full name.",
+    "when": [
+     "Applies to the first mention of an organisation."
+    ],
+    "why": "This states a checkable first-mention requirement rather than a general naming-section introduction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e557ae96be7c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e557ae96be7c",
+      "quote": "This includes video and audio."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "You must attribute copyright material you reference.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Copyright material referenced in the document has no attribution.",
+    "when": [
+     "Applies to referenced copyright material, including video and audio."
+    ],
+    "why": "The explicit 'must' establishes an attribution requirement; the following sentence extends its scope."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6a95f9beead1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Include all the details required by open access licences (read how to attribute Creative Commons).",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An attribution for material under an open access licence omits a detail required by that licence.",
+    "when": [
+     "Applies when the referenced material is covered by an open access licence.",
+     "The applicable licence determines the required attribution details."
+    ],
+    "why": "This checks licence-specific completeness, which is distinct from the complete absence of attribution."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "df6c1f60353b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "df6c1f60353b",
+      "quote": "Include punctuation marks and any intentional misspelling."
+     },
+     {
+      "block_id": "2c28b83354ea",
+      "quote": "If the film is part of a series, include the number of the series in the same format as in the original title of the film."
+     },
+     {
+      "block_id": "2c28b83354ea",
+      "quote": "For example, if the original title has the number written as a word, use the word."
+     },
+     {
+      "block_id": "1a6e30aabdff",
+      "quote": "After the first mention, you can abbreviate the title as long as it makes sense."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bda4632544bd",
+        "quote": "Mad Max 2 (1981) was the second in the Mad Max series of films."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d9f9a9eb349e",
+        "quote": "They released The man from Snowy River II in 1988."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "548774d86a50",
+        "quote": "Picnic at Hanging Rock (1975) continues to be a popular film. Joan Lindsay wrote the story that formed the basis for Picnic."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the title as it appears in film information.",
+    "specification": "Preserve the original wording, punctuation, spelling and series-number form, but apply the separately stated sentence-case convention. A later shortened title is acceptable when the film remains identifiable.",
+    "unit": "document",
+    "violation_condition": "A film title changes the source title's wording, punctuation, intentional misspelling or series-number form, other than a permitted later abbreviation.",
+    "when": [
+     "Applies to film titles.",
+     "Preserve a series number as a word, arabic numeral or roman numeral according to the original title.",
+     "After the first mention, a title may be abbreviated if it still makes sense."
+    ],
+    "why": "G-2 and G-3: punctuation and series-number form are cases of title fidelity; later abbreviation is an exception, not another rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2ba7b321159f",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "7cec3a4fe327",
+      "quote": "In-text citations of films often include the year of production."
+     },
+     {
+      "block_id": "7cec3a4fe327",
+      "quote": "Place this after the title in roman type and enclosed in parentheses."
+     },
+     {
+      "block_id": "77f6e7902c1f",
+      "quote": "If you mention the date in the text, you don’t have to include it in parentheses."
+     },
+     {
+      "block_id": "1a6e30aabdff",
+      "quote": "You can also omit the date in parentheses."
+     },
+     {
+      "block_id": "7e17ac907be6",
+      "quote": "Include the year of production of television programs in roman type and brackets."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cbe97bf6ce83",
+        "quote": "Ride like a girl (2019) tells the story of jockey Michelle Payne."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d9f9a9eb349e",
+        "quote": "They released The man from Snowy River II in 1988."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c40ddc31015e",
+        "quote": "One of the longest-running police dramas on Australian television was Homicide (1964–77)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f29faacda39e",
+        "quote": "One of the longest-running Australian radio programs was Blue hills (1949–76)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the year of production in parentheses. Use roman type after the title.",
+    "specification": "Treat the television instruction's 'brackets' as parentheses, as shown in its example. Film years are optional; when supplied as citation dates they follow the same formatting convention. A production-year range is also acceptable, as the examples show.",
+    "unit": "sentence",
+    "violation_condition": "An in-text production year is not in roman type in parentheses after the title, or a television or radio program citation omits its required production year.",
+    "when": [
+     "Applies to in-text citations of films, television programs and radio programs.",
+     "A film's year need not be repeated in parentheses if its date is mentioned in the running text.",
+     "A film's parenthesised date may also be omitted after its first mention."
+    ],
+    "why": "G-2 and G-3: consolidate the production-year convention while retaining the film-specific permissions and different inclusion requirements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0ae9e680cfe5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bdd5f84dd345",
+        "quote": "Season 2 of Offspring introduced the character of Dr Patrick Reid."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2acc7723e39b",
+        "quote": "Season II of Offspring introduced the character of Dr Patrick Reid."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use arabic – not roman – numerals for the numbers of seasons.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A television season number is written as a roman numeral rather than an arabic numeral.",
+    "when": [
+     "Applies to television season numbers."
+    ],
+    "why": "E-2: the Like this/Not this pair tests the instruction immediately above it, not the television-title heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a689b5d28c5c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3571edc1ccac",
+      "quote": "In a reference list, use the director and the year of release."
+     },
+     {
+      "block_id": "3571edc1ccac",
+      "quote": "Include the place of production if known."
+     },
+     {
+      "block_id": "3571edc1ccac",
+      "quote": "If there is no credited director, use the name of the producer."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "549aac611049",
+        "quote": "Seet S (director) (2019) Storm boy [motion picture], Ambience Entertainment, Screen Australia, South Australian Film Corporation, Australia."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "997b1d75633f",
+        "quote": "Safran H (director) (1976) Storm boy [motion picture], South Australian Film Corporation, Australia."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "478cc32dcc36",
+        "quote": "Jury WF (producer) (1916) Battle of the Somme [motion picture], British Topical Committee for War Films, London, UK."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Rule: Director D (director) or Producer P (producer) (Year) Title of film: subtitle of film [motion picture], Name of Studio or Publisher, Place of Production.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A film reference-list entry omits an applicable element or uses an arrangement inconsistent with the stated director-or-producer, release year, title, medium, studio or publisher, and production-place structure.",
+    "when": [
+     "Applies to film entries in an author–date reference list.",
+     "Use the director as the credited creator; use the producer if there is no credited director.",
+     "Include the place of production if known.",
+     "Include a subtitle only when the film has one."
+    ],
+    "why": "G-2 and G-4: the template states one reference-entry structure; credited creator and known place are conditions within it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dd2e6512b585",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "8c139f6222fd",
+      "quote": "In a reference list, include the name of the director or producer and the year of release."
+     },
+     {
+      "block_id": "8c139f6222fd",
+      "quote": "Include the place of production if known."
+     },
+     {
+      "block_id": "92c8a3ed77f2",
+      "quote": "If the episode doesn’t have a name, write the name of the program first."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "23293eaca56c",
+        "quote": "Pellizzeri R (director) (1994) ‘Luck of the draw’ [television program], Blue heelers (season 1, episode 44), Seven Network, Melbourne."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ceb31c5483be",
+        "quote": "ABC Television (2019) Gardening Australia (season 30, episode 35) [television program], ABC Television, Sydney."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Rule: Director D (director) or Producer P (producer) (Year) ‘Title of episode: subtitle of episode’ [television program], Name of series (season number, episode number), Name of Station or Studio, Place of Production.",
+    "specification": "For an unnamed episode, interpret 'write the name of the program first' as using the program name in the title position after creator and year, followed by season and episode details, as the Gardening Australia example shows.",
+    "unit": "block",
+    "violation_condition": "A television reference-list entry omits applicable identifying elements or orders them inconsistently with the stated episode-and-series reference structure.",
+    "when": [
+     "Applies to television program entries in an author–date reference list.",
+     "Include the director or producer and the year of release.",
+     "Include the place of production if known.",
+     "For an unnamed episode, use the program name instead of a named episode title."
+    ],
+    "why": "G-2 and G-4: an unnamed episode changes the applicable reference form rather than creating an independent rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e211ea5ccdef",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2f42c1aba032",
+      "quote": "In a reference list, include the full date the episode went to air."
+     },
+     {
+      "block_id": "2f42c1aba032",
+      "quote": "Include the place of production if known."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7d45b3482b08",
+        "quote": "Jones A (presenter) (18 January 2020) ‘The bilby, the moon and the Birriliburu Rangers’ [radio program], Off track, ABC Radio National, Sydney."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Rule: Presenter P (presenter) (Day Month Year) ‘Title of episode: subtitle of episode’ [radio program], Name of program, Name of Station or Studio, Place of Production.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A radio reference-list entry omits applicable elements, gives only a year instead of the full broadcast date, or departs from the stated presenter, episode, program and station structure.",
+    "when": [
+     "Applies to radio program entries in an author–date reference list.",
+     "The date is the full date the episode went to air.",
+     "Include the place of production if known.",
+     "Include a subtitle only when the episode has one."
+    ],
+    "why": "G-2 and G-4: the prose supplies conditions for the radio reference template rather than additional checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a23b9d0fa8c5",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "68f79364ab99",
+      "quote": "Include the date it was accessed at the end of the reference."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "962a836734ce",
+        "quote": "Stephens J (host) (26 December 2019) ‘Best of 2019: the beauty queen killer’ [podcast], True crime conversations, Mamamia Podcasts, accessed 21 January 2020."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "98321af31c8b",
+        "quote": "Hooper C (host) and Arnall K (producer) (3 November 2019) ‘Goodbye secret garage shame’[podcast], The pineapple project, ABC, accessed 4 February 2020."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Rule: Host H (host) and Producer P (producer) (Day Month Year) ‘Title of podcast: subtitle of podcast’ [podcast], Name of podcast, Name of Podcast Network, accessed Day Month Year.",
+    "specification": "Treat the host and producer fields as dependent on the supplied credits: the first example has a host only, while the second has both. Do not require an invented producer credit. Include the accessed date at the end.",
+    "unit": "block",
+    "violation_condition": "A podcast reference-list entry omits applicable creator, date, episode, series, network or access-date elements, or puts them in an order inconsistent with the stated template.",
+    "when": [
+     "Applies to podcast entries in an author–date reference list.",
+     "Include a subtitle only when the episode has one."
+    ],
+    "why": "G-4 and E-2: the template and its access-date instruction are one reference-structure rule, interpreted consistently with both examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "68f79364ab99",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Hyperlink the episode’s title if you played it from a webpage.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A podcast episode played from a webpage has an unlinked episode title in its reference.",
+    "when": [
+     "Applies to podcast references when the episode was played from a webpage."
+    ],
+    "why": "The presence of a title hyperlink is a separate check from the destination of that hyperlink."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "68f79364ab99",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "68f79364ab99",
+      "quote": "Don’t link to the podcast’s file name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always link to the webpage that hosts the podcast episode.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A podcast reference hyperlink targets the podcast file rather than the webpage hosting the episode, or targets another page instead of the hosting webpage.",
+    "when": [
+     "Applies to hyperlinks supplied for podcast episodes in references."
+    ],
+    "why": "G-4: the prohibition on a file link and the instruction to link to the hosting webpage express one destination check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3f48f2682ec7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0745aecbad95",
+      "quote": "Reference the script as you would a book."
+     },
+     {
+      "block_id": "31785d5393d1",
+      "quote": "If you are referencing an online film script, hyperlink the title and include the date you accessed it."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a933464098d8",
+        "quote": "Carey P and Lawrence R (1985) Bliss: the screenplay, University of Queensland Press, St Lucia, Queensland."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Rule: Author A (Year) Title of script: subtitle of script, Name of Publisher, Place of Publication.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A script reference-list entry omits applicable author, year, title, publisher or publication-place elements, orders them inconsistently with the book-style template, or omits an access date for an online film script.",
+    "when": [
+     "Applies to script entries in an author–date reference list.",
+     "Include a subtitle only when the script has one.",
+     "For an online film script, also include the date it was accessed."
+    ],
+    "why": "G-2 and G-4: the book-style template and conditional access date form one script reference-structure check; hyperlinking is separate."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "31785d5393d1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you are referencing an online film script, hyperlink the title",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An online film script's title is not hyperlinked in its reference.",
+    "when": [
+     "Applies to references to online film scripts."
+    ],
+    "why": "The rule-grain test separates a missing title hyperlink from missing bibliographic information."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b47c6cb78971",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ccfb7b106cf6",
+      "quote": "If you access it online, include an accessed date."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "441487fe7cfa",
+        "quote": "Buckmaster L (24 September 2019) ‘Ride like a girl review – cinematic schmaltz swamps Michelle Payne’s ride to the Melbourne Cup’ [review of Ride like a girl directed by Rachel Griffiths], The Guardian, accessed 19 January 2020."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0f01791f7a23",
+        "quote": "Byram V (17 January 2020) ‘Ride the roller-coaster of action that hurtles into Home and Away’s Summer Bay in 2020’ [review of the television series Home and away], The Canberra Times, accessed 19 January 2020."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6a8c941ca3cc",
+        "quote": "Stratton D (18–19 January 2020) ‘Women put Fox on run’ [review of Bombshell directed by Jay Roach], Weekend Australian Review."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Rule: Reviewer R (Day Month Year) ‘Title of review: subtitle of review’ [review of Title of work by Creator], Name of Blog, Newspaper or Magazine, accessed Day Month Year.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A review reference-list entry omits applicable reviewer, publication date, review title, identification of the reviewed work or publication details, departs from their stated arrangement, or lacks an accessed date when the review was accessed online.",
+    "when": [
+     "Applies to review entries in an author–date reference list.",
+     "Include an accessed date when the review was accessed online.",
+     "Include a subtitle only when the review has one.",
+     "The description of the reviewed work identifies its creator as applicable."
+    ],
+    "why": "G-2 and G-4: the online-access condition qualifies the reference template; the print example must not be marked as missing an accessed date."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "a63002a9fbb8",
+    "end": 99,
+    "prefix": "",
+    "quote": "Use sentence case – retain initial capitals for the first word, proper nouns and proper adjectives.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "df6c1f60353b",
+     "end": 152,
+     "prefix": "nd any intentional misspelling. ",
+     "quote": "Italicise the title and use sentence case.",
+     "start": 110,
+     "suffix": ""
+    },
+    {
+     "block_id": "6c8ccb8ad513",
+     "end": 76,
+     "prefix": "",
+     "quote": "Use sentence case, roman type and quotation marks for episodes of a program.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "697fbd93cf05",
+     "end": 18,
+     "prefix": "",
+     "quote": "Use sentence case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "522524ba77c4",
+     "end": 18,
+     "prefix": "",
+     "quote": "Use sentence case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d6cec23fdf85",
+     "end": 58,
+     "prefix": "",
+     "quote": "Use italics and sentence case for published script titles.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bad80781dc1f",
+     "end": 158,
+     "prefix": "osed in single quotation marks. ",
+     "quote": "Write the title of the reviewed material in italics and use sentence case.",
+     "start": 84,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cbe97bf6ce83",
+       "end": 65,
+       "prefix": "",
+       "quote": "Ride like a girl (2019) tells the story of jockey Michelle Payne.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fd0a912555e5",
+       "end": 90,
+       "prefix": "",
+       "quote": "The Australian story episode ‘Out of the blue’ is about a shark attack in the Whitsundays.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6bd484ce3dd5",
+       "end": 105,
+       "prefix": "",
+       "quote": "‘Evil crows, bird funerals, swooping magpies’ is an episode from Triple J’s Science with Dr Karl podcast.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A title of a work or episode uses capitals other than those required for its first word, proper nouns or proper adjectives."
+   },
+   "when": [
+    "Applies to the film, television, radio, podcast and script titles discussed on this page, including episode titles.",
+    "Names of companies, channels, streaming services and networks retain the organisation's own capitalisation."
+   ],
+   "why": "G-2 and G-4: consolidate the repeated sentence-case check without also marking each medium-specific restatement."
+  },
+  {
+   "anchor": {
+    "block_id": "e25168f9e4bc",
+    "end": 75,
+    "prefix": "",
+    "quote": "Italicise the titles of films, television and radio programs, and podcasts.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1a7fcd757339",
+     "end": 69,
+     "prefix": "",
+     "quote": "Use italics for published works and roman type for unpublished works.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "df6c1f60353b",
+     "end": 152,
+     "prefix": "nd any intentional misspelling. ",
+     "quote": "Italicise the title and use sentence case.",
+     "start": 110,
+     "suffix": ""
+    },
+    {
+     "block_id": "63a73a4c8d3c",
+     "end": 29,
+     "prefix": "",
+     "quote": "Italicise television programs",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8b4de957ca48",
+     "end": 39,
+     "prefix": "",
+     "quote": "Use italics for the titles of programs.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "7e6f89327e53",
+     "end": 47,
+     "prefix": "",
+     "quote": "Use italics for the name of the program series.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d6cec23fdf85",
+     "end": 58,
+     "prefix": "",
+     "quote": "Use italics and sentence case for published script titles.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bad80781dc1f",
+     "end": 158,
+     "prefix": "osed in single quotation marks. ",
+     "quote": "Write the title of the reviewed material in italics and use sentence case.",
+     "start": 84,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cca7185e5935",
+       "end": 89,
+       "prefix": "",
+       "quote": "Picnic at Hanging Rock (1975) helped to revive the Australian film industry in the 1970s.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "95ade173b669",
+       "end": 48,
+       "prefix": "",
+       "quote": "Gruen is a popular television program on ABC TV.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d9df3675e291",
+       "end": 79,
+       "prefix": "",
+       "quote": "Environmentalists will enjoy the radio program Off track on ABC Radio National.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4a1b4ceafa66",
+       "end": 103,
+       "prefix": "",
+       "quote": "A local podcast in this popular genre is Australian true crime, hosted by Meshel Laurie and Emily Webb.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8c8f5938a087",
+       "end": 60,
+       "prefix": "",
+       "quote": "Peter Carey and Ray Lawrence co-wrote Bliss: the screenplay.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c9531a6e64ca",
+       "end": 63,
+       "prefix": "",
+       "quote": "You can read David Knox’s review of The gloaming on TV Tonight.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title of a film, television program, radio program, podcast series or published script is not italicised."
+   },
+   "when": [
+    "Applies to titles of whole works, including the title of a work being reviewed.",
+    "Does not apply to episode titles, review titles or unpublished script titles."
+   ],
+   "why": "G-2 and G-4: the media-specific instructions repeat one whole-work title-formatting check; unpublished scripts are handled separately."
+  },
+  {
+   "anchor": {
+    "block_id": "fa49fdc11bfc",
+    "end": 72,
+    "prefix": "",
+    "quote": "Use roman type and quotation marks for parts of works, such as episodes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0cf2164157fe",
+     "end": 62,
+     "prefix": "",
+     "quote": "Place the names of episodes in quotation marks and roman type.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6c8ccb8ad513",
+     "end": 76,
+     "prefix": "",
+     "quote": "Use sentence case, roman type and quotation marks for episodes of a program.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "820c5c6d306e",
+     "end": 86,
+     "prefix": "",
+     "quote": "Enclose the names of individual episodes in single quotation marks and use roman type.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "724bb14a38e7",
+     "end": 80,
+     "prefix": "",
+     "quote": "Use roman type and quotation marks for the names of individual podcast episodes.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fd0a912555e5",
+       "end": 90,
+       "prefix": "",
+       "quote": "The Australian story episode ‘Out of the blue’ is about a shark attack in the Whitsundays.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f29faacda39e",
+       "end": 88,
+       "prefix": "",
+       "quote": "‘The bilby, the moon and the Birriliburu Rangers’ from Off track went to air in January.",
+       "start": 0,
+       "suffix": " One of the longest-running Aust"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6bd484ce3dd5",
+       "end": 105,
+       "prefix": "",
+       "quote": "‘Evil crows, bird funerals, swooping magpies’ is an episode from Triple J’s Science with Dr Karl podcast.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An episode title is italicised or lacks enclosing quotation marks."
+   },
+   "when": [
+    "Applies to titles of individual television, radio and podcast episodes.",
+    "Radio episode titles are explicitly required to use single quotation marks."
+   ],
+   "why": "G-2 and G-4: television, radio and podcast instructions repeat the same episode-title formatting check."
+  },
+  {
+   "anchor": {
+    "block_id": "243146397414",
+    "end": 65,
+    "prefix": "",
+    "quote": "Use roman type and quotation marks for unpublished script titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1a7fcd757339",
+     "end": 69,
+     "prefix": "",
+     "quote": "Use italics for published works and roman type for unpublished works.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8796f36fa281",
+       "end": 59,
+       "prefix": "",
+       "quote": "‘Cycle accident’ is in the university film script archives.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An unpublished script title is italicised or is not enclosed in quotation marks."
+   },
+   "when": [
+    "Applies to unpublished scripts, not published scripts."
+   ],
+   "why": "G-4: use the specific script instruction, which adds quotation marks to the general unpublished-work convention."
+  },
+  {
+   "anchor": {
+    "block_id": "bad80781dc1f",
+    "end": 83,
+    "prefix": "",
+    "quote": "Write titles of published reviews in roman type enclosed in single quotation marks.",
+    "start": 0,
+    "suffix": " Write the title of the reviewed"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "13d2919718ee",
+     "end": 52,
+     "prefix": "",
+     "quote": "Use roman type and quotation marks for review titles",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c8d296d1eaa2",
+     "end": 140,
+     "prefix": "",
+     "quote": "If the name of the reviewed work appears in the title of the review, use italics for the work name but roman type for the rest of the title.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "87f78064a865",
+       "end": 103,
+       "prefix": "",
+       "quote": "David Stratton’s review of Bombshell, ‘Women put Fox on run’, contributed to the debate about the film.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "441487fe7cfa",
+       "end": 228,
+       "prefix": "",
+       "quote": "Buckmaster L (24 September 2019) ‘Ride like a girl review – cinematic schmaltz swamps Michelle Payne’s ride to the Melbourne Cup’ [review of Ride like a girl directed by Rachel Griffiths], The Guardian, accessed 19 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A published review title is not enclosed in single quotation marks, or its text is italicised other than an embedded title of the reviewed work."
+   },
+   "when": [
+    "Applies to published review titles, both in running text and in references.",
+    "A reviewed work's name within the review title is italicised; the rest of the review title remains roman."
+   ],
+   "why": "G-2 and G-4: the embedded work title is an exception within the review-title formatting rule, not a second competing check."
+  },
+  {
+   "anchor": {
+    "block_id": "4c425eb8bfb6",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use roman type and no quotation marks for the names of:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3877ae3fa38a",
+     "end": 20,
+     "prefix": "",
+     "quote": "production companies",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4257da809068",
+     "end": 8,
+     "prefix": "",
+     "quote": "networks",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "efffbccaad9b",
+     "end": 8,
+     "prefix": "",
+     "quote": "channels",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d92dd566c3fb",
+     "end": 19,
+     "prefix": "",
+     "quote": "streaming services.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "afb5b154d2e7",
+     "end": 132,
+     "prefix": "",
+     "quote": "Use roman type and the spelling and capitalisation that the company uses for the names of channels, streaming services and networks.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "95ade173b669",
+       "end": 48,
+       "prefix": "",
+       "quote": "Gruen is a popular television program on ABC TV.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e653a8ead2b5",
+       "end": 53,
+       "prefix": "",
+       "quote": "Channel 7 has been screening cricket over the summer.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name of a production company, network, channel or streaming service is italicised or enclosed in quotation marks as a title."
+   },
+   "when": [
+    "Applies to names of production companies, networks, channels and streaming services."
+   ],
+   "why": "G-2 and G-4: the list supplies the scope of one name-formatting rule; spelling and capitalisation are a separate check."
+  },
+  {
+   "anchor": {
+    "block_id": "afb5b154d2e7",
+    "end": 132,
+    "prefix": "",
+    "quote": "Use roman type and the spelling and capitalisation that the company uses for the names of channels, streaming services and networks.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "95ade173b669",
+       "end": 48,
+       "prefix": "",
+       "quote": "Gruen is a popular television program on ABC TV.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e653a8ead2b5",
+       "end": 53,
+       "prefix": "",
+       "quote": "Channel 7 has been screening cricket over the summer.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A channel, streaming service or network name has spelling or capitalisation different from the company's own form."
+   },
+   "when": [
+    "Applies to channel, streaming service and network names.",
+    "Roman-type formatting is checked under the separate organisation-name formatting rule."
+   ],
+   "why": "The rule-grain test separates an incorrect official name from incorrect typography; those findings have different causes."
+  },
+  {
+   "anchor": {
+    "block_id": "4b314f1ab0f7",
+    "end": 64,
+    "prefix": "",
+    "quote": "Use full names of organisations the first time you mention them.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An organisation's first mention uses a shortened name without giving its full name."
+   },
+   "when": [
+    "Applies to the first mention of an organisation."
+   ],
+   "why": "This states a checkable first-mention requirement rather than a general naming-section introduction."
+  },
+  {
+   "anchor": {
+    "block_id": "e557ae96be7c",
+    "end": 52,
+    "prefix": "",
+    "quote": "You must attribute copyright material you reference.",
+    "start": 0,
+    "suffix": " This includes video and audio."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e557ae96be7c",
+     "end": 83,
+     "prefix": "pyright material you reference. ",
+     "quote": "This includes video and audio.",
+     "start": 53,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Copyright material referenced in the document has no attribution."
+   },
+   "when": [
+    "Applies to referenced copyright material, including video and audio."
+   ],
+   "why": "The explicit 'must' establishes an attribution requirement; the following sentence extends its scope."
+  },
+  {
+   "anchor": {
+    "block_id": "6a95f9beead1",
+    "end": 98,
+    "prefix": "",
+    "quote": "Include all the details required by open access licences (read how to attribute Creative Commons).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An attribution for material under an open access licence omits a detail required by that licence."
+   },
+   "when": [
+    "Applies when the referenced material is covered by an open access licence.",
+    "The applicable licence determines the required attribution details."
+   ],
+   "why": "This checks licence-specific completeness, which is distinct from the complete absence of attribution."
+  },
+  {
+   "anchor": {
+    "block_id": "df6c1f60353b",
+    "end": 50,
+    "prefix": "",
+    "quote": "Write the title as it appears in film information.",
+    "start": 0,
+    "suffix": " Include punctuation marks and a"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "df6c1f60353b",
+     "end": 109,
+     "prefix": "it appears in film information. ",
+     "quote": "Include punctuation marks and any intentional misspelling.",
+     "start": 51,
+     "suffix": " Italicise the title and use sen"
+    },
+    {
+     "block_id": "2c28b83354ea",
+     "end": 122,
+     "prefix": "",
+     "quote": "If the film is part of a series, include the number of the series in the same format as in the original title of the film.",
+     "start": 0,
+     "suffix": " For example, if the original ti"
+    },
+    {
+     "block_id": "2c28b83354ea",
+     "end": 205,
+     "prefix": "the original title of the film. ",
+     "quote": "For example, if the original title has the number written as a word, use the word.",
+     "start": 123,
+     "suffix": ""
+    },
+    {
+     "block_id": "1a6e30aabdff",
+     "end": 80,
+     "prefix": "",
+     "quote": "After the first mention, you can abbreviate the title as long as it makes sense.",
+     "start": 0,
+     "suffix": " You can also omit the date in p"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bda4632544bd",
+       "end": 63,
+       "prefix": "",
+       "quote": "Mad Max 2 (1981) was the second in the Mad Max series of films.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d9f9a9eb349e",
+       "end": 50,
+       "prefix": "",
+       "quote": "They released The man from Snowy River II in 1988.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "548774d86a50",
+       "end": 124,
+       "prefix": "",
+       "quote": "Picnic at Hanging Rock (1975) continues to be a popular film. Joan Lindsay wrote the story that formed the basis for Picnic.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Preserve the original wording, punctuation, spelling and series-number form, but apply the separately stated sentence-case convention. A later shortened title is acceptable when the film remains identifiable.",
+    "unit": "document",
+    "violation_condition": "A film title changes the source title's wording, punctuation, intentional misspelling or series-number form, other than a permitted later abbreviation."
+   },
+   "when": [
+    "Applies to film titles.",
+    "Preserve a series number as a word, arabic numeral or roman numeral according to the original title.",
+    "After the first mention, a title may be abbreviated if it still makes sense."
+   ],
+   "why": "G-2 and G-3: punctuation and series-number form are cases of title fidelity; later abbreviation is an exception, not another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "2ba7b321159f",
+    "end": 76,
+    "prefix": "",
+    "quote": "Write the year of production in parentheses. Use roman type after the title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "7cec3a4fe327",
+     "end": 64,
+     "prefix": "",
+     "quote": "In-text citations of films often include the year of production.",
+     "start": 0,
+     "suffix": " Place this after the title in r"
+    },
+    {
+     "block_id": "7cec3a4fe327",
+     "end": 134,
+     "prefix": "include the year of production. ",
+     "quote": "Place this after the title in roman type and enclosed in parentheses.",
+     "start": 65,
+     "suffix": ""
+    },
+    {
+     "block_id": "77f6e7902c1f",
+     "end": 81,
+     "prefix": "",
+     "quote": "If you mention the date in the text, you don’t have to include it in parentheses.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1a6e30aabdff",
+     "end": 123,
+     "prefix": "itle as long as it makes sense. ",
+     "quote": "You can also omit the date in parentheses.",
+     "start": 81,
+     "suffix": " This often happens with well-kn"
+    },
+    {
+     "block_id": "7e17ac907be6",
+     "end": 81,
+     "prefix": "",
+     "quote": "Include the year of production of television programs in roman type and brackets.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cbe97bf6ce83",
+       "end": 65,
+       "prefix": "",
+       "quote": "Ride like a girl (2019) tells the story of jockey Michelle Payne.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d9f9a9eb349e",
+       "end": 50,
+       "prefix": "",
+       "quote": "They released The man from Snowy River II in 1988.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c40ddc31015e",
+       "end": 89,
+       "prefix": "",
+       "quote": "One of the longest-running police dramas on Australian television was Homicide (1964–77).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f29faacda39e",
+       "end": 167,
+       "prefix": "f track went to air in January. ",
+       "quote": "One of the longest-running Australian radio programs was Blue hills (1949–76).",
+       "start": 89,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Treat the television instruction's 'brackets' as parentheses, as shown in its example. Film years are optional; when supplied as citation dates they follow the same formatting convention. A production-year range is also acceptable, as the examples show.",
+    "unit": "sentence",
+    "violation_condition": "An in-text production year is not in roman type in parentheses after the title, or a television or radio program citation omits its required production year."
+   },
+   "when": [
+    "Applies to in-text citations of films, television programs and radio programs.",
+    "A film's year need not be repeated in parentheses if its date is mentioned in the running text.",
+    "A film's parenthesised date may also be omitted after its first mention."
+   ],
+   "why": "G-2 and G-3: consolidate the production-year convention while retaining the film-specific permissions and different inclusion requirements."
+  },
+  {
+   "anchor": {
+    "block_id": "0ae9e680cfe5",
+    "end": 61,
+    "prefix": "",
+    "quote": "Use arabic – not roman – numerals for the numbers of seasons.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bdd5f84dd345",
+       "end": 66,
+       "prefix": "",
+       "quote": "Season 2 of Offspring introduced the character of Dr Patrick Reid.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2acc7723e39b",
+       "end": 67,
+       "prefix": "",
+       "quote": "Season II of Offspring introduced the character of Dr Patrick Reid.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A television season number is written as a roman numeral rather than an arabic numeral."
+   },
+   "when": [
+    "Applies to television season numbers."
+   ],
+   "why": "E-2: the Like this/Not this pair tests the instruction immediately above it, not the television-title heading."
+  },
+  {
+   "anchor": {
+    "block_id": "a689b5d28c5c",
+    "end": 159,
+    "prefix": "",
+    "quote": "Rule: Director D (director) or Producer P (producer) (Year) Title of film: subtitle of film [motion picture], Name of Studio or Publisher, Place of Production.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3571edc1ccac",
+     "end": 62,
+     "prefix": "",
+     "quote": "In a reference list, use the director and the year of release.",
+     "start": 0,
+     "suffix": " Include the place of production"
+    },
+    {
+     "block_id": "3571edc1ccac",
+     "end": 104,
+     "prefix": "rector and the year of release. ",
+     "quote": "Include the place of production if known.",
+     "start": 63,
+     "suffix": " If there is no credited directo"
+    },
+    {
+     "block_id": "3571edc1ccac",
+     "end": 168,
+     "prefix": "e place of production if known. ",
+     "quote": "If there is no credited director, use the name of the producer.",
+     "start": 105,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "549aac611049",
+       "end": 140,
+       "prefix": "",
+       "quote": "Seet S (director) (2019) Storm boy [motion picture], Ambience Entertainment, Screen Australia, South Australian Film Corporation, Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "997b1d75633f",
+       "end": 100,
+       "prefix": "",
+       "quote": "Safran H (director) (1976) Storm boy [motion picture], South Australian Film Corporation, Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "478cc32dcc36",
+       "end": 116,
+       "prefix": "",
+       "quote": "Jury WF (producer) (1916) Battle of the Somme [motion picture], British Topical Committee for War Films, London, UK.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A film reference-list entry omits an applicable element or uses an arrangement inconsistent with the stated director-or-producer, release year, title, medium, studio or publisher, and production-place structure."
+   },
+   "when": [
+    "Applies to film entries in an author–date reference list.",
+    "Use the director as the credited creator; use the producer if there is no credited director.",
+    "Include the place of production if known.",
+    "Include a subtitle only when the film has one."
+   ],
+   "why": "G-2 and G-4: the template states one reference-entry structure; credited creator and known place are conditions within it."
+  },
+  {
+   "anchor": {
+    "block_id": "dd2e6512b585",
+    "end": 217,
+    "prefix": "",
+    "quote": "Rule: Director D (director) or Producer P (producer) (Year) ‘Title of episode: subtitle of episode’ [television program], Name of series (season number, episode number), Name of Station or Studio, Place of Production.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "8c139f6222fd",
+     "end": 90,
+     "prefix": "",
+     "quote": "In a reference list, include the name of the director or producer and the year of release.",
+     "start": 0,
+     "suffix": " Include the place of production"
+    },
+    {
+     "block_id": "8c139f6222fd",
+     "end": 132,
+     "prefix": "oducer and the year of release. ",
+     "quote": "Include the place of production if known.",
+     "start": 91,
+     "suffix": ""
+    },
+    {
+     "block_id": "92c8a3ed77f2",
+     "end": 72,
+     "prefix": "",
+     "quote": "If the episode doesn’t have a name, write the name of the program first.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "23293eaca56c",
+       "end": 134,
+       "prefix": "",
+       "quote": "Pellizzeri R (director) (1994) ‘Luck of the draw’ [television program], Blue heelers (season 1, episode 44), Seven Network, Melbourne.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ceb31c5483be",
+       "end": 111,
+       "prefix": "",
+       "quote": "ABC Television (2019) Gardening Australia (season 30, episode 35) [television program], ABC Television, Sydney.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "For an unnamed episode, interpret 'write the name of the program first' as using the program name in the title position after creator and year, followed by season and episode details, as the Gardening Australia example shows.",
+    "unit": "block",
+    "violation_condition": "A television reference-list entry omits applicable identifying elements or orders them inconsistently with the stated episode-and-series reference structure."
+   },
+   "when": [
+    "Applies to television program entries in an author–date reference list.",
+    "Include the director or producer and the year of release.",
+    "Include the place of production if known.",
+    "For an unnamed episode, use the program name instead of a named episode title."
+   ],
+   "why": "G-2 and G-4: an unnamed episode changes the applicable reference form rather than creating an independent rule."
+  },
+  {
+   "anchor": {
+    "block_id": "e211ea5ccdef",
+    "end": 168,
+    "prefix": "",
+    "quote": "Rule: Presenter P (presenter) (Day Month Year) ‘Title of episode: subtitle of episode’ [radio program], Name of program, Name of Station or Studio, Place of Production.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2f42c1aba032",
+     "end": 67,
+     "prefix": "",
+     "quote": "In a reference list, include the full date the episode went to air.",
+     "start": 0,
+     "suffix": " Include the place of production"
+    },
+    {
+     "block_id": "2f42c1aba032",
+     "end": 109,
+     "prefix": "l date the episode went to air. ",
+     "quote": "Include the place of production if known.",
+     "start": 68,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7d45b3482b08",
+       "end": 143,
+       "prefix": "",
+       "quote": "Jones A (presenter) (18 January 2020) ‘The bilby, the moon and the Birriliburu Rangers’ [radio program], Off track, ABC Radio National, Sydney.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A radio reference-list entry omits applicable elements, gives only a year instead of the full broadcast date, or departs from the stated presenter, episode, program and station structure."
+   },
+   "when": [
+    "Applies to radio program entries in an author–date reference list.",
+    "The date is the full date the episode went to air.",
+    "Include the place of production if known.",
+    "Include a subtitle only when the episode has one."
+   ],
+   "why": "G-2 and G-4: the prose supplies conditions for the radio reference template rather than additional checks."
+  },
+  {
+   "anchor": {
+    "block_id": "a23b9d0fa8c5",
+    "end": 180,
+    "prefix": "",
+    "quote": "Rule: Host H (host) and Producer P (producer) (Day Month Year) ‘Title of podcast: subtitle of podcast’ [podcast], Name of podcast, Name of Podcast Network, accessed Day Month Year.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "68f79364ab99",
+     "end": 222,
+     "prefix": "that hosts the podcast episode. ",
+     "quote": "Include the date it was accessed at the end of the reference.",
+     "start": 161,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "962a836734ce",
+       "end": 157,
+       "prefix": "",
+       "quote": "Stephens J (host) (26 December 2019) ‘Best of 2019: the beauty queen killer’ [podcast], True crime conversations, Mamamia Podcasts, accessed 21 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "98321af31c8b",
+       "end": 151,
+       "prefix": "",
+       "quote": "Hooper C (host) and Arnall K (producer) (3 November 2019) ‘Goodbye secret garage shame’[podcast], The pineapple project, ABC, accessed 4 February 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Treat the host and producer fields as dependent on the supplied credits: the first example has a host only, while the second has both. Do not require an invented producer credit. Include the accessed date at the end.",
+    "unit": "block",
+    "violation_condition": "A podcast reference-list entry omits applicable creator, date, episode, series, network or access-date elements, or puts them in an order inconsistent with the stated template."
+   },
+   "when": [
+    "Applies to podcast entries in an author–date reference list.",
+    "Include a subtitle only when the episode has one."
+   ],
+   "why": "G-4 and E-2: the template and its access-date instruction are one reference-structure rule, interpreted consistently with both examples."
+  },
+  {
+   "anchor": {
+    "block_id": "68f79364ab99",
+    "end": 62,
+    "prefix": "",
+    "quote": "Hyperlink the episode’s title if you played it from a webpage.",
+    "start": 0,
+    "suffix": " Don’t link to the podcast’s fil"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A podcast episode played from a webpage has an unlinked episode title in its reference."
+   },
+   "when": [
+    "Applies to podcast references when the episode was played from a webpage."
+   ],
+   "why": "The presence of a title hyperlink is a separate check from the destination of that hyperlink."
+  },
+  {
+   "anchor": {
+    "block_id": "68f79364ab99",
+    "end": 160,
+    "prefix": "ink to the podcast’s file name. ",
+    "quote": "Always link to the webpage that hosts the podcast episode.",
+    "start": 102,
+    "suffix": " Include the date it was accesse"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "68f79364ab99",
+     "end": 101,
+     "prefix": "f you played it from a webpage. ",
+     "quote": "Don’t link to the podcast’s file name.",
+     "start": 63,
+     "suffix": " Always link to the webpage that"
+    }
+   ],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A podcast reference hyperlink targets the podcast file rather than the webpage hosting the episode, or targets another page instead of the hosting webpage."
+   },
+   "when": [
+    "Applies to hyperlinks supplied for podcast episodes in references."
+   ],
+   "why": "G-4: the prohibition on a file link and the instruction to link to the hosting webpage express one destination check."
+  },
+  {
+   "anchor": {
+    "block_id": "3f48f2682ec7",
+    "end": 99,
+    "prefix": "",
+    "quote": "Rule: Author A (Year) Title of script: subtitle of script, Name of Publisher, Place of Publication.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0745aecbad95",
+     "end": 41,
+     "prefix": "",
+     "quote": "Reference the script as you would a book.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "31785d5393d1",
+     "end": 103,
+     "prefix": "",
+     "quote": "If you are referencing an online film script, hyperlink the title and include the date you accessed it.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a933464098d8",
+       "end": 106,
+       "prefix": "",
+       "quote": "Carey P and Lawrence R (1985) Bliss: the screenplay, University of Queensland Press, St Lucia, Queensland.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A script reference-list entry omits applicable author, year, title, publisher or publication-place elements, orders them inconsistently with the book-style template, or omits an access date for an online film script."
+   },
+   "when": [
+    "Applies to script entries in an author–date reference list.",
+    "Include a subtitle only when the script has one.",
+    "For an online film script, also include the date it was accessed."
+   ],
+   "why": "G-2 and G-4: the book-style template and conditional access date form one script reference-structure check; hyperlinking is separate."
+  },
+  {
+   "anchor": {
+    "block_id": "31785d5393d1",
+    "end": 65,
+    "prefix": "",
+    "quote": "If you are referencing an online film script, hyperlink the title",
+    "start": 0,
+    "suffix": " and include the date you access"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An online film script's title is not hyperlinked in its reference."
+   },
+   "when": [
+    "Applies to references to online film scripts."
+   ],
+   "why": "The rule-grain test separates a missing title hyperlink from missing bibliographic information."
+  },
+  {
+   "anchor": {
+    "block_id": "b47c6cb78971",
+    "end": 171,
+    "prefix": "",
+    "quote": "Rule: Reviewer R (Day Month Year) ‘Title of review: subtitle of review’ [review of Title of work by Creator], Name of Blog, Newspaper or Magazine, accessed Day Month Year.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ccfb7b106cf6",
+     "end": 138,
+     "prefix": "ding on copyright restrictions. ",
+     "quote": "If you access it online, include an accessed date.",
+     "start": 88,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "441487fe7cfa",
+       "end": 228,
+       "prefix": "",
+       "quote": "Buckmaster L (24 September 2019) ‘Ride like a girl review – cinematic schmaltz swamps Michelle Payne’s ride to the Melbourne Cup’ [review of Ride like a girl directed by Rachel Griffiths], The Guardian, accessed 19 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0f01791f7a23",
+       "end": 209,
+       "prefix": "",
+       "quote": "Byram V (17 January 2020) ‘Ride the roller-coaster of action that hurtles into Home and Away’s Summer Bay in 2020’ [review of the television series Home and away], The Canberra Times, accessed 19 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6a8c941ca3cc",
+       "end": 126,
+       "prefix": "",
+       "quote": "Stratton D (18–19 January 2020) ‘Women put Fox on run’ [review of Bombshell directed by Jay Roach], Weekend Australian Review.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A review reference-list entry omits applicable reviewer, publication date, review title, identification of the reviewed work or publication details, departs from their stated arrangement, or lacks an accessed date when the review was accessed online."
+   },
+   "when": [
+    "Applies to review entries in an author–date reference list.",
+    "Include an accessed date when the review was accessed online.",
+    "Include a subtitle only when the review has one.",
+    "The description of the reviewed work identifies its creator as applicable."
+   ],
+   "why": "G-2 and G-4: the online-access condition qualifies the reference template; the print example must not be marked as missing an accessed date."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 6731,
+  "output_tokens": 18524,
+  "reasoning_tokens": 5582
+ }
+}

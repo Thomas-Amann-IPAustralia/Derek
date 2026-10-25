@@ -1,0 +1,1850 @@
+{
+ "effort": "high",
+ "input_sha256": "cb8c90e18293add52ffb7e1472dbddf47b4312ae6e859b9cc3a82192fb1268d9",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "3294d05c4bc3",
+    "end": 149,
+    "prefix": "l terms have specific meanings. ",
+    "quote": "Introduce scientific terms and common names if that helps users, but always use the correct spelling and style.",
+    "start": 38,
+    "suffix": ""
+   },
+   "note": "General reader-oriented introductory advice; it supplies no independent spelling, naming or formatting check beyond the specific rules below.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "00dd6e6cd9b3",
+    "end": 45,
+    "prefix": "",
+    "quote": "Use capitals for proper nouns and genus names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Use the more precise body rule, which also mentions proper adjectives.",
+   "reason": "restatement",
+   "seed_uid": "4933a82218d6d847"
+  },
+  {
+   "anchor": {
+    "block_id": "c7e8503e1fb5",
+    "end": 183,
+    "prefix": "r if it is the name of a genus. ",
+    "quote": "Otherwise don’t use initial capitals for the names of:",
+    "start": 129,
+    "suffix": ""
+   },
+   "note": "The following categories are cases of the medical-term capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8cca1af1f180",
+    "end": 187,
+    "prefix": "d initialisms of medical terms. ",
+    "quote": "Spell out the full term in lower case, unless the word or term you’re shortening includes a proper name or a genus name.",
+    "start": 67,
+    "suffix": ""
+   },
+   "note": "Absorbed into medical-term capitalisation; do not create a second finding for the same full-term casing error.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c0d97c036e4b",
+    "end": 64,
+    "prefix": "",
+    "quote": "When referring to an eponym in writing, use the following rules:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the conditional possessive-form instructions without stating the required form.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1b2f6b6cab2f",
+    "end": 132,
+    "prefix": "",
+    "quote": "If it is a disease or anatomical part named after the person who discovered, studied or described it, don’t use the possessive case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated under the eponym possessive-form rule as its discoverer, investigator or describer case, under G-2.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a0e7071baae3",
+    "end": 135,
+    "prefix": "",
+    "quote": "This rule doesn’t apply to names of organisations dedicated to studying certain diseases or supporting people who are affected by them.",
+    "start": 0,
+    "suffix": " Always refer to organisations i"
+   },
+   "note": "Exception to the medical-eponym rule; recorded under that rule’s conditions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "631ae4d9473d",
+    "end": 24,
+    "prefix": "",
+    "quote": "Italicise organism names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body supplies the narrower, actionable scope: scientific names of infectious organisms.",
+   "reason": "restatement",
+   "seed_uid": "974c0ee81ae62123"
+  },
+  {
+   "anchor": {
+    "block_id": "1f859683f171",
+    "end": 157,
+    "prefix": "ria and parasites – in italics. ",
+    "quote": "Use an initial capital for the name of the genus only.",
+    "start": 103,
+    "suffix": ""
+   },
+   "note": "Absorbed into medical-term capitalisation rather than attached as another check to the italics rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5f45c8269f0a",
+    "end": 59,
+    "prefix": "",
+    "quote": "Cite common names for pharmaceutical drugs, not brand names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body states the qualified preference and permits a supplementary parenthetical brand name.",
+   "reason": "restatement",
+   "seed_uid": "183317fb2a12ba8d"
+  },
+  {
+   "anchor": {
+    "block_id": "770e2770fc2c",
+    "end": 72,
+    "prefix": " names of drugs where possible. ",
+    "quote": "Write them in lower case.",
+    "start": 47,
+    "suffix": ""
+   },
+   "note": "Generic drug-name casing is absorbed into medical-term capitalisation.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a001ab7c077e",
+    "end": 68,
+    "prefix": "",
+    "quote": "You can include the brand name in parentheses after the common name.",
+    "start": 0,
+    "suffix": " Use initial capitals for brand "
+   },
+   "note": "Permitted supplementary brand naming, recorded on the generic-name preference.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a001ab7c077e",
+    "end": 106,
+    "prefix": "entheses after the common name. ",
+    "quote": "Use initial capitals for brand names.",
+    "start": 69,
+    "suffix": " Commercial terms might be trade"
+   },
+   "note": "Brand-name casing is absorbed into medical-term capitalisation.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a001ab7c077e",
+    "end": 177,
+    "prefix": "itial capitals for brand names. ",
+    "quote": "Commercial terms might be trade marked: take care using product names.",
+    "start": 107,
+    "suffix": ""
+   },
+   "note": "Caution to the writer, without a specified textual trademark treatment to check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d94e8522b9fb",
+    "end": 62,
+    "prefix": "",
+    "quote": "Refer to medical conditions using clear and inclusive language",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups the more specific checks on outdated terminology, person-focused references and presentation of equivalent names.",
+   "reason": "section",
+   "seed_uid": "f09f9a3f76eb7f42"
+  },
+  {
+   "anchor": {
+    "block_id": "458f0d56bdab",
+    "end": 111,
+    "prefix": "",
+    "quote": "Refer to peak bodies that study the condition or that provide support and information to people affected by it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Research advice to the writer; it does not require a citation or another observable feature in the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f836d6c261ff",
+    "end": 80,
+    "prefix": "",
+    "quote": "When you are writing about people with a medical condition, focus on the person.",
+    "start": 0,
+    "suffix": " Use neutral language to describ"
+   },
+   "note": "Consolidated into the instruction not to label the person.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f836d6c261ff",
+    "end": 128,
+    "prefix": "condition, focus on the person. ",
+    "quote": "Use neutral language to describe the condition.",
+    "start": 81,
+    "suffix": " Don’t label the person."
+   },
+   "note": "Part of the same person-focused reference check illustrated by the following contrast examples.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9e10cd1b08e4",
+    "end": 137,
+    "prefix": "scientific name in parentheses. ",
+    "quote": "Don’t use ‘or’.",
+    "start": 122,
+    "suffix": " This could confuse readers into"
+   },
+   "note": "The prohibited alternative to parenthesising the scientific name; not a second finding for the same paired-name construction.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/medical-terms.md",
+ "page_sha256": "8858501c3a7d849efdc16cd6757f864df884c98c8213a9a7d0d1c14e7699a4a5",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "3294d05c4bc3",
+    "note": "General reader-oriented introductory advice; it supplies no independent spelling, naming or formatting check beyond the specific rules below.",
+    "quote": "Introduce scientific terms and common names if that helps users, but always use the correct spelling and style.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "00dd6e6cd9b3",
+    "note": "Use the more precise body rule, which also mentions proper adjectives.",
+    "quote": "Use capitals for proper nouns and genus names",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c7e8503e1fb5",
+    "note": "The following categories are cases of the medical-term capitalisation rule.",
+    "quote": "Otherwise don’t use initial capitals for the names of:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8cca1af1f180",
+    "note": "Absorbed into medical-term capitalisation; do not create a second finding for the same full-term casing error.",
+    "quote": "Spell out the full term in lower case, unless the word or term you’re shortening includes a proper name or a genus name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c0d97c036e4b",
+    "note": "Introduces the conditional possessive-form instructions without stating the required form.",
+    "quote": "When referring to an eponym in writing, use the following rules:",
+    "reason": "section"
+   },
+   {
+    "block_id": "1b2f6b6cab2f",
+    "note": "Consolidated under the eponym possessive-form rule as its discoverer, investigator or describer case, under G-2.",
+    "quote": "If it is a disease or anatomical part named after the person who discovered, studied or described it, don’t use the possessive case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a0e7071baae3",
+    "note": "Exception to the medical-eponym rule; recorded under that rule’s conditions.",
+    "quote": "This rule doesn’t apply to names of organisations dedicated to studying certain diseases or supporting people who are affected by them.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "631ae4d9473d",
+    "note": "The body supplies the narrower, actionable scope: scientific names of infectious organisms.",
+    "quote": "Italicise organism names",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1f859683f171",
+    "note": "Absorbed into medical-term capitalisation rather than attached as another check to the italics rule.",
+    "quote": "Use an initial capital for the name of the genus only.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5f45c8269f0a",
+    "note": "The body states the qualified preference and permits a supplementary parenthetical brand name.",
+    "quote": "Cite common names for pharmaceutical drugs, not brand names",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "770e2770fc2c",
+    "note": "Generic drug-name casing is absorbed into medical-term capitalisation.",
+    "quote": "Write them in lower case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a001ab7c077e",
+    "note": "Permitted supplementary brand naming, recorded on the generic-name preference.",
+    "quote": "You can include the brand name in parentheses after the common name.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a001ab7c077e",
+    "note": "Brand-name casing is absorbed into medical-term capitalisation.",
+    "quote": "Use initial capitals for brand names.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a001ab7c077e",
+    "note": "Caution to the writer, without a specified textual trademark treatment to check.",
+    "quote": "Commercial terms might be trade marked: take care using product names.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d94e8522b9fb",
+    "note": "Groups the more specific checks on outdated terminology, person-focused references and presentation of equivalent names.",
+    "quote": "Refer to medical conditions using clear and inclusive language",
+    "reason": "section"
+   },
+   {
+    "block_id": "458f0d56bdab",
+    "note": "Research advice to the writer; it does not require a citation or another observable feature in the text.",
+    "quote": "Refer to peak bodies that study the condition or that provide support and information to people affected by it.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f836d6c261ff",
+    "note": "Consolidated into the instruction not to label the person.",
+    "quote": "When you are writing about people with a medical condition, focus on the person.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f836d6c261ff",
+    "note": "Part of the same person-focused reference check illustrated by the following contrast examples.",
+    "quote": "Use neutral language to describe the condition.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9e10cd1b08e4",
+    "note": "The prohibited alternative to parenthesising the scientific name; not a second finding for the same paired-name construction.",
+    "quote": "Don’t use ‘or’.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c7e8503e1fb5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "00dd6e6cd9b3",
+      "quote": "Use capitals for proper nouns and genus names"
+     },
+     {
+      "block_id": "c7e8503e1fb5",
+      "quote": "Otherwise don’t use initial capitals for the names of:"
+     },
+     {
+      "block_id": "32bc03d6d825",
+      "quote": "diseases and viruses"
+     },
+     {
+      "block_id": "fb4c51d3af54",
+      "quote": "diagnostic procedures"
+     },
+     {
+      "block_id": "8ec35eb33839",
+      "quote": "syndromes"
+     },
+     {
+      "block_id": "69f2aea50478",
+      "quote": "anatomical parts."
+     },
+     {
+      "block_id": "8cca1af1f180",
+      "quote": "Spell out the full term in lower case, unless the word or term you’re shortening includes a proper name or a genus name."
+     },
+     {
+      "block_id": "1f859683f171",
+      "quote": "Use an initial capital for the name of the genus only."
+     },
+     {
+      "block_id": "770e2770fc2c",
+      "quote": "Write them in lower case."
+     },
+     {
+      "block_id": "a001ab7c077e",
+      "quote": "Use initial capitals for brand names."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Conventional letter designator retains its capital.",
+      "parts": [
+       {
+        "block_id": "15b1b5f7422c",
+        "quote": "hepatitis B"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Proper name is capitalised.",
+      "parts": [
+       {
+        "block_id": "cdcfa7a3f455",
+        "quote": "Hendra virus"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Common disease name is lower case.",
+      "parts": [
+       {
+        "block_id": "7e0b65a40698",
+        "quote": "foot-and-mouth disease"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Proper name is capitalised.",
+      "parts": [
+       {
+        "block_id": "194535df6ad2",
+        "quote": "Golgi apparatus"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Proper name is capitalised.",
+      "parts": [
+       {
+        "block_id": "5d207bf32aa1",
+        "quote": "Tourette syndrome"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Common diagnostic-procedure name is lower case.",
+      "parts": [
+       {
+        "block_id": "634ba2a16e61",
+        "quote": "computed tomography"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Common anatomical name is lower case.",
+      "parts": [
+       {
+        "block_id": "855ebdd79bd5",
+        "quote": "colon"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use an initial capital letter for medical terms only if the term is a proper noun or adjective, or if it is the name of a genus.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A medical term has incorrect initial capitalisation: an ordinary common term, generic drug name or species name is capitalised, or a proper name, proper adjective, genus name or drug brand lacks its initial capital.",
+    "when": [
+     "Applies to term-specific capitalisation, not capitals required at the beginning of a sentence.",
+     "Includes names of diseases, viruses, diagnostic procedures, syndromes and anatomical parts.",
+     "Includes the full terms represented by medical acronyms and initialisms; the shortened forms have a separate capitalisation rule.",
+     "In scientific organism names, capitalise the genus name but not the species name.",
+     "Generic drug names are lower case; brand names have initial capitals.",
+     "Preserve conventional letter designators, such as the B in hepatitis B."
+    ],
+    "why": "G-2 and G-4: consolidate the repeated medical-term capitalisation check and its term-specific cases; do not flag the same casing error under several rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8cca1af1f180",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The acronym is capitalised.",
+      "parts": [
+       {
+        "block_id": "6357038db842",
+        "quote": "acquired immune deficiency syndrome (AIDS)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The initialism is capitalised.",
+      "parts": [
+       {
+        "block_id": "3486dc4311da",
+        "quote": "drug-resistant Streptococcus pneumoniae (DRSP) disease"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The initialism is capitalised.",
+      "parts": [
+       {
+        "block_id": "847c0490d50e",
+        "quote": "sudden infant death syndrome (SIDS)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The initialism is capitalised.",
+      "parts": [
+       {
+        "block_id": "70a24e4fd0ed",
+        "quote": "intensive care unit (ICU)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The initialism is capitalised.",
+      "parts": [
+       {
+        "block_id": "bb8abbe89a4e",
+        "quote": "magnetic resonance imaging (MRI)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use capital letters for acronyms and initialisms of medical terms.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A medical acronym or initialism is written with lower-case letters instead of capitals.",
+    "when": [
+     "Applies to medical acronyms and initialisms, not their spelled-out full terms."
+    ],
+    "why": "G-1 and G-4: mark the actionable body instruction; capitalising a shortened form is distinct from capitalising its full medical term."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5dad87511e37",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1b2f6b6cab2f",
+      "quote": "If it is a disease or anatomical part named after the person who discovered, studied or described it, don’t use the possessive case."
+     },
+     {
+      "block_id": "a0e7071baae3",
+      "quote": "This rule doesn’t apply to names of organisations dedicated to studying certain diseases or supporting people who are affected by them."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Named after someone who had the disease.",
+      "parts": [
+       {
+        "block_id": "68c7019dfbd9",
+        "quote": "Lou Gehrig’s disease"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Named after people who had the disease.",
+      "parts": [
+       {
+        "block_id": "ef0507bc5501",
+        "quote": "Legionnaires’ disease"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Named after its describer.",
+      "parts": [
+       {
+        "block_id": "933d7700cdd0",
+        "quote": "Alzheimer disease"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Named after its describer.",
+      "parts": [
+       {
+        "block_id": "847bf5b99ea4",
+        "quote": "Down syndrome"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Anatomical part named after an anatomist.",
+      "parts": [
+       {
+        "block_id": "3004c4499b5b",
+        "quote": "Henle loop"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If it is a disease named after people who had the disease, use the possessive case.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A medical eponym has the wrong possessive form for its origin: a disease named after people who had it is non-possessive, or a disease or anatomical part named after its discoverer, investigator or describer is possessive.",
+    "when": [
+     "Use the possessive for diseases named after people who had the disease.",
+     "Use the non-possessive for diseases or anatomical parts named after people who discovered, studied or described them.",
+     "Does not apply to names of organisations dedicated to studying diseases or supporting affected people."
+    ],
+    "why": "G-2 and G-3: the origin of the eponym changes the required possessive form; organisation names are an exception to that single check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a0e7071baae3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The organisation’s own possessive form is retained.",
+      "parts": [
+       {
+        "block_id": "a8ca7fd2d8f5",
+        "quote": "Alzheimer’s Association"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The organisation’s own name is retained.",
+      "parts": [
+       {
+        "block_id": "931146a8009f",
+        "quote": "Crohn’s & Colitis Australia"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Always refer to organisations in the same way as they refer to themselves.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name of a disease-related organisation is written differently from the organisation’s own form, including changing its possessive form to match the medical-eponym convention.",
+    "when": [
+     "In this context, applies to names of organisations dedicated to studying diseases or supporting people affected by them."
+    ],
+    "why": "G-2 and G-3: the exception to medical-eponym spelling contains a separate, checkable requirement to preserve an organisation’s own name."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f859683f171",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "631ae4d9473d",
+      "quote": "Italicise organism names"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The source presents this as correct usage; its supplied plain-text rendering does not preserve italics and appears to have lost spaces.",
+      "parts": [
+       {
+        "block_id": "0a6c2f575609",
+        "quote": "The bacterium Legionella pneumophilacausesLegionnaires’ disease."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write scientific names of infectious organisms – such as viruses, bacteria and parasites – in italics.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A scientific name of an infectious organism is not italicised.",
+    "when": [
+     "Applies to scientific names of infectious organisms, including viruses, bacteria and parasites."
+    ],
+    "why": "G-4: use the body’s precise scientific-name scope rather than the broader heading; genus capitalisation is absorbed into the capitalisation rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "770e2770fc2c",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "5f45c8269f0a",
+      "quote": "Cite common names for pharmaceutical drugs, not brand names"
+     },
+     {
+      "block_id": "a001ab7c077e",
+      "quote": "You can include the brand name in parentheses after the common name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The generic name precedes an optional parenthetical brand.",
+      "parts": [
+       {
+        "block_id": "1cc363109523",
+        "quote": "benzoyl peroxide (Benzac)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The generic name precedes an optional parenthetical brand.",
+      "parts": [
+       {
+        "block_id": "7233bf944505",
+        "quote": "paracetamol (Panadol)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Use the generic names of drugs where possible.",
+    "specification": "Flag a brand-only reference when a usable generic name is known. The page does not define every circumstance in which using a generic name is possible.",
+    "unit": "sentence",
+    "violation_condition": "A drug is referred to by its brand name instead of an available generic or common name.",
+    "when": [
+     "Applies where a generic or common drug name can be used.",
+     "A brand name may accompany the common name in parentheses; that is not a brand-only substitution."
+    ],
+    "why": "G-3 and G-4: the body qualifies the heading’s preference and permits supplementary brand names; drug-name capitalisation is the existing capitalisation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bded7094cdbc",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The paragraph identifies this as the replacement term.",
+      "parts": [
+       {
+        "block_id": "83f3ebd50da9",
+        "quote": "bipolar disorder"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Be mindful of outdated language that can perpetuate stigma or misunderstandings about the condition.",
+    "specification": "Interpret this as avoiding outdated condition terminology, rather than checking the writer’s state of mind. A maintained terminology source is needed; the page identifies ‘manic depression’ as superseded by ‘bipolar disorder’.",
+    "unit": "phrase",
+    "violation_condition": "A medical condition is described using an outdated term that perpetuates stigma or misunderstanding.",
+    "when": [
+     "Applies to condition terminology that has become outdated as research and social understanding evolve.",
+     "Current guidance from relevant peak bodies can establish whether terminology is outdated."
+    ],
+    "why": "G-1: extract the outdated-terminology check from the broad inclusive-language section, separately from person-labelling and paired-name formatting."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f836d6c261ff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f836d6c261ff",
+      "quote": "When you are writing about people with a medical condition, focus on the person."
+     },
+     {
+      "block_id": "f836d6c261ff",
+      "quote": "Use neutral language to describe the condition."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7df049b42091",
+        "quote": "a person with cancer"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "461dbce18f19",
+        "quote": "people with asthma"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0520c5a66d90",
+        "quote": "a person with diabetes"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "307244b7a665",
+        "quote": "a cancer patient"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ce77c7710073",
+        "quote": "Asthma sufferers"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8c07f4705125",
+        "quote": "a diabetic person"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t label the person.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A person is labelled by their medical condition or described as a sufferer, rather than referred to neutrally as a person with the condition.",
+    "when": [
+     "Applies when writing about people with a medical condition."
+    ],
+    "why": "G-4 and E-2: the paragraph’s instructions and its contrast examples express one person-focused, neutral-reference check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9e10cd1b08e4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9e10cd1b08e4",
+      "quote": "Don’t use ‘or’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e99c4bee4ed2",
+        "quote": "People with pneumonia-like infections might have Legionnaires’ disease (legionellosis)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "23166e7bc826",
+        "quote": "People with pneumonia-like infections might have Legionnaires’ disease or legionellosis."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If you’re writing both the scientific and common names for a medical condition, place the scientific name in parentheses.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The scientific and common names of the same medical condition are given without placing the scientific name in parentheses after the common name, including joining the names with ‘or’.",
+    "when": [
+     "Applies when both names identify the same medical condition."
+    ],
+    "why": "G-2 and E-2: parentheses and avoiding ‘or’ are complementary parts of one check on how equivalent medical-condition names are presented."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "c7e8503e1fb5",
+    "end": 128,
+    "prefix": "",
+    "quote": "Use an initial capital letter for medical terms only if the term is a proper noun or adjective, or if it is the name of a genus.",
+    "start": 0,
+    "suffix": " Otherwise don’t use initial cap"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "00dd6e6cd9b3",
+     "end": 45,
+     "prefix": "",
+     "quote": "Use capitals for proper nouns and genus names",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c7e8503e1fb5",
+     "end": 183,
+     "prefix": "r if it is the name of a genus. ",
+     "quote": "Otherwise don’t use initial capitals for the names of:",
+     "start": 129,
+     "suffix": ""
+    },
+    {
+     "block_id": "32bc03d6d825",
+     "end": 20,
+     "prefix": "",
+     "quote": "diseases and viruses",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fb4c51d3af54",
+     "end": 21,
+     "prefix": "",
+     "quote": "diagnostic procedures",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8ec35eb33839",
+     "end": 9,
+     "prefix": "",
+     "quote": "syndromes",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "69f2aea50478",
+     "end": 17,
+     "prefix": "",
+     "quote": "anatomical parts.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8cca1af1f180",
+     "end": 187,
+     "prefix": "d initialisms of medical terms. ",
+     "quote": "Spell out the full term in lower case, unless the word or term you’re shortening includes a proper name or a genus name.",
+     "start": 67,
+     "suffix": ""
+    },
+    {
+     "block_id": "1f859683f171",
+     "end": 157,
+     "prefix": "ria and parasites – in italics. ",
+     "quote": "Use an initial capital for the name of the genus only.",
+     "start": 103,
+     "suffix": ""
+    },
+    {
+     "block_id": "770e2770fc2c",
+     "end": 72,
+     "prefix": " names of drugs where possible. ",
+     "quote": "Write them in lower case.",
+     "start": 47,
+     "suffix": ""
+    },
+    {
+     "block_id": "a001ab7c077e",
+     "end": 106,
+     "prefix": "entheses after the common name. ",
+     "quote": "Use initial capitals for brand names.",
+     "start": 69,
+     "suffix": " Commercial terms might be trade"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Conventional letter designator retains its capital.",
+     "parts": [
+      {
+       "block_id": "15b1b5f7422c",
+       "end": 11,
+       "prefix": "",
+       "quote": "hepatitis B",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Proper name is capitalised.",
+     "parts": [
+      {
+       "block_id": "cdcfa7a3f455",
+       "end": 12,
+       "prefix": "",
+       "quote": "Hendra virus",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Common disease name is lower case.",
+     "parts": [
+      {
+       "block_id": "7e0b65a40698",
+       "end": 22,
+       "prefix": "",
+       "quote": "foot-and-mouth disease",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Proper name is capitalised.",
+     "parts": [
+      {
+       "block_id": "194535df6ad2",
+       "end": 15,
+       "prefix": "",
+       "quote": "Golgi apparatus",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Proper name is capitalised.",
+     "parts": [
+      {
+       "block_id": "5d207bf32aa1",
+       "end": 17,
+       "prefix": "",
+       "quote": "Tourette syndrome",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Common diagnostic-procedure name is lower case.",
+     "parts": [
+      {
+       "block_id": "634ba2a16e61",
+       "end": 19,
+       "prefix": "",
+       "quote": "computed tomography",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Common anatomical name is lower case.",
+     "parts": [
+      {
+       "block_id": "855ebdd79bd5",
+       "end": 5,
+       "prefix": "",
+       "quote": "colon",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A medical term has incorrect initial capitalisation: an ordinary common term, generic drug name or species name is capitalised, or a proper name, proper adjective, genus name or drug brand lacks its initial capital."
+   },
+   "when": [
+    "Applies to term-specific capitalisation, not capitals required at the beginning of a sentence.",
+    "Includes names of diseases, viruses, diagnostic procedures, syndromes and anatomical parts.",
+    "Includes the full terms represented by medical acronyms and initialisms; the shortened forms have a separate capitalisation rule.",
+    "In scientific organism names, capitalise the genus name but not the species name.",
+    "Generic drug names are lower case; brand names have initial capitals.",
+    "Preserve conventional letter designators, such as the B in hepatitis B."
+   ],
+   "why": "G-2 and G-4: consolidate the repeated medical-term capitalisation check and its term-specific cases; do not flag the same casing error under several rules."
+  },
+  {
+   "anchor": {
+    "block_id": "8cca1af1f180",
+    "end": 66,
+    "prefix": "",
+    "quote": "Use capital letters for acronyms and initialisms of medical terms.",
+    "start": 0,
+    "suffix": " Spell out the full term in lowe"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The acronym is capitalised.",
+     "parts": [
+      {
+       "block_id": "6357038db842",
+       "end": 42,
+       "prefix": "",
+       "quote": "acquired immune deficiency syndrome (AIDS)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The initialism is capitalised.",
+     "parts": [
+      {
+       "block_id": "3486dc4311da",
+       "end": 54,
+       "prefix": "",
+       "quote": "drug-resistant Streptococcus pneumoniae (DRSP) disease",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The initialism is capitalised.",
+     "parts": [
+      {
+       "block_id": "847c0490d50e",
+       "end": 35,
+       "prefix": "",
+       "quote": "sudden infant death syndrome (SIDS)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The initialism is capitalised.",
+     "parts": [
+      {
+       "block_id": "70a24e4fd0ed",
+       "end": 25,
+       "prefix": "",
+       "quote": "intensive care unit (ICU)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The initialism is capitalised.",
+     "parts": [
+      {
+       "block_id": "bb8abbe89a4e",
+       "end": 32,
+       "prefix": "",
+       "quote": "magnetic resonance imaging (MRI)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A medical acronym or initialism is written with lower-case letters instead of capitals."
+   },
+   "when": [
+    "Applies to medical acronyms and initialisms, not their spelled-out full terms."
+   ],
+   "why": "G-1 and G-4: mark the actionable body instruction; capitalising a shortened form is distinct from capitalising its full medical term."
+  },
+  {
+   "anchor": {
+    "block_id": "5dad87511e37",
+    "end": 83,
+    "prefix": "",
+    "quote": "If it is a disease named after people who had the disease, use the possessive case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1b2f6b6cab2f",
+     "end": 132,
+     "prefix": "",
+     "quote": "If it is a disease or anatomical part named after the person who discovered, studied or described it, don’t use the possessive case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a0e7071baae3",
+     "end": 135,
+     "prefix": "",
+     "quote": "This rule doesn’t apply to names of organisations dedicated to studying certain diseases or supporting people who are affected by them.",
+     "start": 0,
+     "suffix": " Always refer to organisations i"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Named after someone who had the disease.",
+     "parts": [
+      {
+       "block_id": "68c7019dfbd9",
+       "end": 20,
+       "prefix": "",
+       "quote": "Lou Gehrig’s disease",
+       "start": 0,
+       "suffix": " [Named after Lou Gehrig, a high"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Named after people who had the disease.",
+     "parts": [
+      {
+       "block_id": "ef0507bc5501",
+       "end": 21,
+       "prefix": "",
+       "quote": "Legionnaires’ disease",
+       "start": 0,
+       "suffix": " [Named after members of the Ame"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Named after its describer.",
+     "parts": [
+      {
+       "block_id": "933d7700cdd0",
+       "end": 17,
+       "prefix": "",
+       "quote": "Alzheimer disease",
+       "start": 0,
+       "suffix": " [Named after Dr Alois Alzheimer"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Named after its describer.",
+     "parts": [
+      {
+       "block_id": "847bf5b99ea4",
+       "end": 13,
+       "prefix": "",
+       "quote": "Down syndrome",
+       "start": 0,
+       "suffix": " [Named after Dr John L H Down, "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Anatomical part named after an anatomist.",
+     "parts": [
+      {
+       "block_id": "3004c4499b5b",
+       "end": 10,
+       "prefix": "",
+       "quote": "Henle loop",
+       "start": 0,
+       "suffix": " [Anatomical part named after an"
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A medical eponym has the wrong possessive form for its origin: a disease named after people who had it is non-possessive, or a disease or anatomical part named after its discoverer, investigator or describer is possessive."
+   },
+   "when": [
+    "Use the possessive for diseases named after people who had the disease.",
+    "Use the non-possessive for diseases or anatomical parts named after people who discovered, studied or described them.",
+    "Does not apply to names of organisations dedicated to studying diseases or supporting affected people."
+   ],
+   "why": "G-2 and G-3: the origin of the eponym changes the required possessive form; organisation names are an exception to that single check."
+  },
+  {
+   "anchor": {
+    "block_id": "a0e7071baae3",
+    "end": 210,
+    "prefix": "eople who are affected by them. ",
+    "quote": "Always refer to organisations in the same way as they refer to themselves.",
+    "start": 136,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The organisation’s own possessive form is retained.",
+     "parts": [
+      {
+       "block_id": "a8ca7fd2d8f5",
+       "end": 23,
+       "prefix": "",
+       "quote": "Alzheimer’s Association",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The organisation’s own name is retained.",
+     "parts": [
+      {
+       "block_id": "931146a8009f",
+       "end": 27,
+       "prefix": "",
+       "quote": "Crohn’s & Colitis Australia",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name of a disease-related organisation is written differently from the organisation’s own form, including changing its possessive form to match the medical-eponym convention."
+   },
+   "when": [
+    "In this context, applies to names of organisations dedicated to studying diseases or supporting people affected by them."
+   ],
+   "why": "G-2 and G-3: the exception to medical-eponym spelling contains a separate, checkable requirement to preserve an organisation’s own name."
+  },
+  {
+   "anchor": {
+    "block_id": "1f859683f171",
+    "end": 102,
+    "prefix": "",
+    "quote": "Write scientific names of infectious organisms – such as viruses, bacteria and parasites – in italics.",
+    "start": 0,
+    "suffix": " Use an initial capital for the "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "631ae4d9473d",
+     "end": 24,
+     "prefix": "",
+     "quote": "Italicise organism names",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The source presents this as correct usage; its supplied plain-text rendering does not preserve italics and appears to have lost spaces.",
+     "parts": [
+      {
+       "block_id": "0a6c2f575609",
+       "end": 64,
+       "prefix": "",
+       "quote": "The bacterium Legionella pneumophilacausesLegionnaires’ disease.",
+       "start": 0,
+       "suffix": " [Legionella is the name of the "
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A scientific name of an infectious organism is not italicised."
+   },
+   "when": [
+    "Applies to scientific names of infectious organisms, including viruses, bacteria and parasites."
+   ],
+   "why": "G-4: use the body’s precise scientific-name scope rather than the broader heading; genus capitalisation is absorbed into the capitalisation rule."
+  },
+  {
+   "anchor": {
+    "block_id": "770e2770fc2c",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use the generic names of drugs where possible.",
+    "start": 0,
+    "suffix": " Write them in lower case."
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "5f45c8269f0a",
+     "end": 59,
+     "prefix": "",
+     "quote": "Cite common names for pharmaceutical drugs, not brand names",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a001ab7c077e",
+     "end": 68,
+     "prefix": "",
+     "quote": "You can include the brand name in parentheses after the common name.",
+     "start": 0,
+     "suffix": " Use initial capitals for brand "
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The generic name precedes an optional parenthetical brand.",
+     "parts": [
+      {
+       "block_id": "1cc363109523",
+       "end": 25,
+       "prefix": "",
+       "quote": "benzoyl peroxide (Benzac)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The generic name precedes an optional parenthetical brand.",
+     "parts": [
+      {
+       "block_id": "7233bf944505",
+       "end": 21,
+       "prefix": "",
+       "quote": "paracetamol (Panadol)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "Flag a brand-only reference when a usable generic name is known. The page does not define every circumstance in which using a generic name is possible.",
+    "unit": "sentence",
+    "violation_condition": "A drug is referred to by its brand name instead of an available generic or common name."
+   },
+   "when": [
+    "Applies where a generic or common drug name can be used.",
+    "A brand name may accompany the common name in parentheses; that is not a brand-only substitution."
+   ],
+   "why": "G-3 and G-4: the body qualifies the heading’s preference and permits supplementary brand names; drug-name capitalisation is the existing capitalisation check."
+  },
+  {
+   "anchor": {
+    "block_id": "bded7094cdbc",
+    "end": 223,
+    "prefix": "nding of the conditions evolve. ",
+    "quote": "Be mindful of outdated language that can perpetuate stigma or misunderstandings about the condition.",
+    "start": 123,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The paragraph identifies this as the replacement term.",
+     "parts": [
+      {
+       "block_id": "83f3ebd50da9",
+       "end": 26,
+       "prefix": "The term ‘",
+       "quote": "bipolar disorder",
+       "start": 10,
+       "suffix": "’ replaces ‘manic depression’, a"
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Interpret this as avoiding outdated condition terminology, rather than checking the writer’s state of mind. A maintained terminology source is needed; the page identifies ‘manic depression’ as superseded by ‘bipolar disorder’.",
+    "unit": "phrase",
+    "violation_condition": "A medical condition is described using an outdated term that perpetuates stigma or misunderstanding."
+   },
+   "when": [
+    "Applies to condition terminology that has become outdated as research and social understanding evolve.",
+    "Current guidance from relevant peak bodies can establish whether terminology is outdated."
+   ],
+   "why": "G-1: extract the outdated-terminology check from the broad inclusive-language section, separately from person-labelling and paired-name formatting."
+  },
+  {
+   "anchor": {
+    "block_id": "f836d6c261ff",
+    "end": 152,
+    "prefix": "uage to describe the condition. ",
+    "quote": "Don’t label the person.",
+    "start": 129,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f836d6c261ff",
+     "end": 80,
+     "prefix": "",
+     "quote": "When you are writing about people with a medical condition, focus on the person.",
+     "start": 0,
+     "suffix": " Use neutral language to describ"
+    },
+    {
+     "block_id": "f836d6c261ff",
+     "end": 128,
+     "prefix": "condition, focus on the person. ",
+     "quote": "Use neutral language to describe the condition.",
+     "start": 81,
+     "suffix": " Don’t label the person."
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7df049b42091",
+       "end": 20,
+       "prefix": "",
+       "quote": "a person with cancer",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "461dbce18f19",
+       "end": 18,
+       "prefix": "",
+       "quote": "people with asthma",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0520c5a66d90",
+       "end": 22,
+       "prefix": "",
+       "quote": "a person with diabetes",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "307244b7a665",
+       "end": 16,
+       "prefix": "",
+       "quote": "a cancer patient",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ce77c7710073",
+       "end": 16,
+       "prefix": "",
+       "quote": "Asthma sufferers",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8c07f4705125",
+       "end": 17,
+       "prefix": "",
+       "quote": "a diabetic person",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A person is labelled by their medical condition or described as a sufferer, rather than referred to neutrally as a person with the condition."
+   },
+   "when": [
+    "Applies when writing about people with a medical condition."
+   ],
+   "why": "G-4 and E-2: the paragraph’s instructions and its contrast examples express one person-focused, neutral-reference check."
+  },
+  {
+   "anchor": {
+    "block_id": "9e10cd1b08e4",
+    "end": 121,
+    "prefix": "",
+    "quote": "If you’re writing both the scientific and common names for a medical condition, place the scientific name in parentheses.",
+    "start": 0,
+    "suffix": " Don’t use ‘or’. This could conf"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9e10cd1b08e4",
+     "end": 137,
+     "prefix": "scientific name in parentheses. ",
+     "quote": "Don’t use ‘or’.",
+     "start": 122,
+     "suffix": " This could confuse readers into"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e99c4bee4ed2",
+       "end": 87,
+       "prefix": "",
+       "quote": "People with pneumonia-like infections might have Legionnaires’ disease (legionellosis).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "23166e7bc826",
+       "end": 88,
+       "prefix": "",
+       "quote": "People with pneumonia-like infections might have Legionnaires’ disease or legionellosis.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The scientific and common names of the same medical condition are given without placing the scientific name in parentheses after the common name, including joining the names with ‘or’."
+   },
+   "when": [
+    "Applies when both names identify the same medical condition."
+   ],
+   "why": "G-2 and E-2: parentheses and avoiding ‘or’ are complementary parts of one check on how equivalent medical-condition names are presented."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4843,
+  "output_tokens": 12467,
+  "reasoning_tokens": 6627
+ }
+}

@@ -1,0 +1,3128 @@
+{
+ "effort": "low",
+ "input_sha256": "c9fd1d4fde1f15e74df97e5a36f47c864046b406669aac4aa93850645c9646bb",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "493f4078eed3",
+    "end": 39,
+    "prefix": "",
+    "quote": "Follow Australian conventions for dates",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping specific date rules",
+   "reason": "section",
+   "seed_uid": "1305f50f545dce8f"
+  },
+  {
+   "anchor": {
+    "block_id": "c7970862683d",
+    "end": 49,
+    "prefix": "",
+    "quote": "Combine numerals and words for dates in body text",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping rules on writing dates in body text",
+   "reason": "section",
+   "seed_uid": "2e9bb3b1be64a065"
+  },
+  {
+   "anchor": {
+    "block_id": "607c8e6c0ed6",
+    "end": 16,
+    "prefix": "",
+    "quote": "Incomplete dates",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Subsection heading grouping incomplete date guidance",
+   "reason": "section",
+   "seed_uid": "1135f014601e251d"
+  },
+  {
+   "anchor": {
+    "block_id": "f2a43c4aef8d",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use shortened forms for dates when space is limited",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping date abbreviation guidelines",
+   "reason": "section",
+   "seed_uid": "273d04c3fddc2c29"
+  },
+  {
+   "anchor": {
+    "block_id": "e2873707865a",
+    "end": 53,
+    "prefix": "",
+    "quote": "Don’t write dates as numerals unless space is limited",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping numeric date rules",
+   "reason": "section",
+   "seed_uid": "ff6c880298eda7cd"
+  },
+  {
+   "anchor": {
+    "block_id": "959a6253c51d",
+    "end": 36,
+    "prefix": "",
+    "quote": "Use a forward slash in numeric dates",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Heading restated by 885dc2c0dd6b",
+   "reason": "restatement",
+   "seed_uid": "46aec0b09f786388"
+  },
+  {
+   "anchor": {
+    "block_id": "bf9de59d843f",
+    "end": 39,
+    "prefix": "",
+    "quote": "Numeric dates can have 2-digit elements",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Optional permission for specific financial/system contexts",
+   "reason": "permission",
+   "seed_uid": "9d74d7494b45910a"
+  },
+  {
+   "anchor": {
+    "block_id": "49dde36ceaf8",
+    "end": 41,
+    "prefix": "",
+    "quote": "Use words for spans of years in body text",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Heading restated by b22ca5aaf38f",
+   "reason": "restatement",
+   "seed_uid": "e7e2e5b76ed57e37"
+  },
+  {
+   "anchor": {
+    "block_id": "f83684a26eb0",
+    "end": 48,
+    "prefix": "",
+    "quote": "Use en dashes for particular types of year spans",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping en dash rules for year spans",
+   "reason": "section",
+   "seed_uid": "c91a8269ed207174"
+  },
+  {
+   "anchor": {
+    "block_id": "9740842bfcb7",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use words for spans of days and months in body text",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice restated in body paragraph e065492d9b61",
+   "reason": "restatement",
+   "seed_uid": "3ce832370332f63d"
+  },
+  {
+   "anchor": {
+    "block_id": "cb5a84c7f355",
+    "end": 64,
+    "prefix": "",
+    "quote": "Use en dashes for spans of days and months when space is limited",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Discretionary guidance ('exercise your judgement')",
+   "reason": "advice",
+   "seed_uid": "5a4d7e2e00a07efe"
+  },
+  {
+   "anchor": {
+    "block_id": "b5ca09a4eaca",
+    "end": 56,
+    "prefix": "",
+    "quote": "Refer to specific days, events and periods with capitals",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of general capitalisation rules for proper nouns",
+   "reason": "duplicate",
+   "seed_uid": "3d4658b412caa29b"
+  },
+  {
+   "anchor": {
+    "block_id": "6159cdcf1345",
+    "end": 9,
+    "prefix": "",
+    "quote": "Centuries",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Subsection heading grouping century conventions",
+   "reason": "section",
+   "seed_uid": "998c00e7543e4d2e"
+  },
+  {
+   "anchor": {
+    "block_id": "019ab0568f88",
+    "end": 29,
+    "prefix": "",
+    "quote": "Use numerals for times of day",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping time expressions",
+   "reason": "section",
+   "seed_uid": "ab1e045f88f91427"
+  },
+  {
+   "anchor": {
+    "block_id": "5fa0f803123c",
+    "end": 25,
+    "prefix": "",
+    "quote": "Times using ‘am’ and ‘pm’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Subsection heading grouping am/pm conventions",
+   "reason": "section",
+   "seed_uid": "cb22092d175b6c28"
+  },
+  {
+   "anchor": {
+    "block_id": "b607785068ac",
+    "end": 17,
+    "prefix": "",
+    "quote": "The 24-hour clock",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Subsection heading grouping 24-hour clock rules",
+   "reason": "section",
+   "seed_uid": "518b64c9698edb41"
+  },
+  {
+   "anchor": {
+    "block_id": "5b7dd5a00859",
+    "end": 53,
+    "prefix": "",
+    "quote": "Use en dashes for spans of time when space is limited",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping time span rules",
+   "reason": "section",
+   "seed_uid": "61720b7cd1a927b0"
+  },
+  {
+   "anchor": {
+    "block_id": "a57a87b56e6e",
+    "end": 45,
+    "prefix": "",
+    "quote": "Follow the manual’s number rules for duration",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of choosing numerals or words rules",
+   "reason": "duplicate",
+   "seed_uid": "57875d3601bc46e7"
+  },
+  {
+   "anchor": {
+    "block_id": "3db26c06b70d",
+    "end": 59,
+    "prefix": "",
+    "quote": "Use shortened forms for units of time when space is limited",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping units of time abbreviations",
+   "reason": "section",
+   "seed_uid": "4b7a5b5e95ae35c7"
+  },
+  {
+   "anchor": {
+    "block_id": "3e1b92db0131",
+    "end": 30,
+    "prefix": "",
+    "quote": "How to combine dates and times",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping combination rules",
+   "reason": "section",
+   "seed_uid": "7fb3d15b2d2bed8d"
+  },
+  {
+   "anchor": {
+    "block_id": "34916497a4f5",
+    "end": 59,
+    "prefix": "",
+    "quote": "Meet standards for data systems and information interchange",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Advisory section on external ISO standards for data transfer",
+   "reason": "advice",
+   "seed_uid": "c4334b4acac366d9"
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/dates-and-time.md",
+ "page_sha256": "6d423d00e0a62cfd9d0180093aa1bdd27d8ded408db050226a5db2ec90dcbee5",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "493f4078eed3",
+    "note": "Section heading grouping specific date rules",
+    "quote": "Follow Australian conventions for dates",
+    "reason": "section"
+   },
+   {
+    "block_id": "c7970862683d",
+    "note": "Section heading grouping rules on writing dates in body text",
+    "quote": "Combine numerals and words for dates in body text",
+    "reason": "section"
+   },
+   {
+    "block_id": "607c8e6c0ed6",
+    "note": "Subsection heading grouping incomplete date guidance",
+    "quote": "Incomplete dates",
+    "reason": "section"
+   },
+   {
+    "block_id": "f2a43c4aef8d",
+    "note": "Section heading grouping date abbreviation guidelines",
+    "quote": "Use shortened forms for dates when space is limited",
+    "reason": "section"
+   },
+   {
+    "block_id": "e2873707865a",
+    "note": "Section heading grouping numeric date rules",
+    "quote": "Don’t write dates as numerals unless space is limited",
+    "reason": "section"
+   },
+   {
+    "block_id": "959a6253c51d",
+    "note": "Heading restated by 885dc2c0dd6b",
+    "quote": "Use a forward slash in numeric dates",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bf9de59d843f",
+    "note": "Optional permission for specific financial/system contexts",
+    "quote": "Numeric dates can have 2-digit elements",
+    "reason": "permission"
+   },
+   {
+    "block_id": "49dde36ceaf8",
+    "note": "Heading restated by b22ca5aaf38f",
+    "quote": "Use words for spans of years in body text",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f83684a26eb0",
+    "note": "Section heading grouping en dash rules for year spans",
+    "quote": "Use en dashes for particular types of year spans",
+    "reason": "section"
+   },
+   {
+    "block_id": "9740842bfcb7",
+    "note": "General advice restated in body paragraph e065492d9b61",
+    "quote": "Use words for spans of days and months in body text",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cb5a84c7f355",
+    "note": "Discretionary guidance ('exercise your judgement')",
+    "quote": "Use en dashes for spans of days and months when space is limited",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b5ca09a4eaca",
+    "note": "Duplicate of general capitalisation rules for proper nouns",
+    "quote": "Refer to specific days, events and periods with capitals",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "6159cdcf1345",
+    "note": "Subsection heading grouping century conventions",
+    "quote": "Centuries",
+    "reason": "section"
+   },
+   {
+    "block_id": "019ab0568f88",
+    "note": "Section heading grouping time expressions",
+    "quote": "Use numerals for times of day",
+    "reason": "section"
+   },
+   {
+    "block_id": "5fa0f803123c",
+    "note": "Subsection heading grouping am/pm conventions",
+    "quote": "Times using ‘am’ and ‘pm’",
+    "reason": "section"
+   },
+   {
+    "block_id": "b607785068ac",
+    "note": "Subsection heading grouping 24-hour clock rules",
+    "quote": "The 24-hour clock",
+    "reason": "section"
+   },
+   {
+    "block_id": "5b7dd5a00859",
+    "note": "Section heading grouping time span rules",
+    "quote": "Use en dashes for spans of time when space is limited",
+    "reason": "section"
+   },
+   {
+    "block_id": "a57a87b56e6e",
+    "note": "Duplicate of choosing numerals or words rules",
+    "quote": "Follow the manual’s number rules for duration",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "3db26c06b70d",
+    "note": "Section heading grouping units of time abbreviations",
+    "quote": "Use shortened forms for units of time when space is limited",
+    "reason": "section"
+   },
+   {
+    "block_id": "3e1b92db0131",
+    "note": "Section heading grouping combination rules",
+    "quote": "How to combine dates and times",
+    "reason": "section"
+   },
+   {
+    "block_id": "34916497a4f5",
+    "note": "Advisory section on external ISO standards for data transfer",
+    "quote": "Meet standards for data systems and information interchange",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e74a915dc2d3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ea1451b5317e",
+      "quote": "In Australia, the conventional sequence for dates is ‘day month year’. Use this sequence when expressing dates in numerals and words."
+     },
+     {
+      "block_id": "e3201135caee",
+      "quote": "Spell out the name of the day if it is being used, but don’t include a comma after the day."
+     },
+     {
+      "block_id": "c41fb95e0efe",
+      "quote": "The names of months and days start with an initial capital because they are proper nouns."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Day, month spelled out, year, without punctuation",
+      "parts": [
+       {
+        "block_id": "2cc5b33dfefa",
+        "quote": "31 December 2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Day of week spelled out without comma",
+      "parts": [
+       {
+        "block_id": "4747dbf11c02",
+        "quote": "Thursday 31 December 2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Month before day with comma",
+      "parts": [
+       {
+        "block_id": "af457c311860",
+        "quote": "December 31, 2020"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Comma after day of week",
+      "parts": [
+       {
+        "block_id": "d9fd0273c101",
+        "quote": "Thursday, 31 December 2020"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For dates in body text, use numerals for the day and year and spell out the name of the month. Don’t include a comma or any other punctuation.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A date in body text not using the sequence 'day month year', using words instead of numerals for day/year, abbreviating the month name, or containing a comma or punctuation separating the date elements",
+    "when": [
+     "When writing dates in body text",
+     "Australian convention sequence is 'day month year'"
+    ],
+    "why": "G-1, G-2: Headings group date rules; e74a915dc2d3 gives the core body text rule covering sequence, punctuation, and capitalisation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "778037d2d9ed",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "970dc8f9b450",
+      "quote": "Keeping the day and month together allows people to identify the information appearing before the line break as a date."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Non-breaking space between '8' and 'November'",
+      "parts": [
+       {
+        "block_id": "f3019a599b7e",
+        "quote": "Please find attached the new agenda for the extraordinary general meeting, 2 pm 8 November 2022."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "No non-breaking space between '8' and 'November'",
+      "parts": [
+       {
+        "block_id": "d8e48606dc5a",
+        "quote": "Please find attached the draft minutes of the extraordinary general meeting held in Sydney, 8 November 2022."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Insert a non-breaking space between the day and the month so they stay together on one line.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A date expression in text where the space between the day and the month is a standard breaking space rather than a non-breaking space",
+    "when": [],
+    "why": "Specific typographic requirement with explicit write this/not this pairs."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d55dd62b0864",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "985f8a107aa2",
+      "quote": "There is an exception to the general rule for writing dates in body text. If you refer to the day but not the month, use an ordinal number."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Cardinal number for day",
+      "parts": [
+       {
+        "block_id": "41393662a0fc",
+        "quote": "1 May 1997"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Cardinal number for day in date",
+      "parts": [
+       {
+        "block_id": "023d41c4e600",
+        "quote": "Schedule 3 commences on the first 1 July after the bill receives Royal Assent."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Ordinal number used for date",
+      "parts": [
+       {
+        "block_id": "37f042f9b35b",
+        "quote": "1st May 1997"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Ordinal number used for date",
+      "parts": [
+       {
+        "block_id": "2f84908d1dd3",
+        "quote": "Schedule 3 commences on the first 1st July after the bill receives Royal Assent."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use an ordinal number (12th, 21st etc.) when writing dates in body text.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ordinal number (e.g. 1st, 2nd, 12th) used for the day in a full date or day-month date in body text",
+    "when": [
+     "Applies when writing dates in body text",
+     "Exception: If you refer to the day but not the month, use an ordinal number (e.g. 'the 20th')"
+    ],
+    "why": "G-2: Exception (referring to day without month) is consolidated under when."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f80710abe59",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "162baa196e9b",
+      "quote": "Don’t use superscript for the ordinal suffix."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Ordinal suffix not in superscript",
+      "parts": [
+       {
+        "block_id": "5f473ff74c53",
+        "quote": "She will leave by the 20th."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Ordinal suffix formatted in superscript",
+      "parts": [
+       {
+        "block_id": "f23e0076a875",
+        "quote": "She will leave by the 20th."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t put the ordinal suffix (‘st’, ‘nd’, ‘rd’ or ‘th’) in superscript.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ordinal suffix formatted as superscript",
+    "when": [
+     "Applies when using ordinal numbers (e.g. when day is mentioned without month, or for centuries)"
+    ],
+    "why": "G-4: Consolidation of identical superscript prohibition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "68f027bb5122",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Full 4-digit year",
+      "parts": [
+       {
+        "block_id": "fbef9c89babc",
+        "quote": "1945"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Abbreviated year with apostrophe",
+      "parts": [
+       {
+        "block_id": "2a9de5fbde3f",
+        "quote": "‘45"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Abbreviated 2-digit year",
+      "parts": [
+       {
+        "block_id": "02a78f8b5e70",
+        "quote": "45"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "If you refer to the year only, use the full numerical year. Don’t abbreviate it.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A standalone year written as an abbreviated 2-digit number (e.g. '45 or ‘45)",
+    "when": [
+     "When referring to a calendar year on its own"
+    ],
+    "why": "Clear rule with negative constraint and examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "73e0658039f3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use a full stop after shortened days and months.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A shortened form of a day or month followed by a full stop (e.g. 'Jan.' or 'Mon.')",
+    "when": [
+     "When using abbreviated names for days and months"
+    ],
+    "why": "Direct punctuation negative prohibition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "44bca96ffb82",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9be65adede57",
+      "quote": "Don’t abbreviate dates in body text"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Day and month spelled out in full",
+      "parts": [
+       {
+        "block_id": "1b22bb87f80d",
+        "quote": "The Labor Party called an urgent conference on Saturday 22 December."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Abbreviated day and month in body text",
+      "parts": [
+       {
+        "block_id": "2aaa73e4f8be",
+        "quote": "The Labor Party called an urgent conference on Sat 22 Dec."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid abbreviated words when writing dates in body text.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Abbreviated day or month names used in body text (e.g. 'Sat 22 Dec')",
+    "when": [
+     "When writing dates in body text"
+    ],
+    "why": "G-4: Marking the body sentence rule supported by Write this/Not this."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "885dc2c0dd6b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "84a2de358200",
+      "quote": "Use Australia’s conventional order of ‘day month year’ unless you are writing for users in a country that uses a different style."
+     },
+     {
+      "block_id": "6f92b9cc6116",
+      "quote": "Avoid writing dates entirely in numerals for general content. Use numeric dates only when space is limited (such as in tables)."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "d/m/yyyy format",
+      "parts": [
+       {
+        "block_id": "175195cabace",
+        "quote": "4/6/2021"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "d/m/yyyy format",
+      "parts": [
+       {
+        "block_id": "9457bbb05285",
+        "quote": "7/12/2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "USA m/d/yyyy format",
+      "parts": [
+       {
+        "block_id": "214ba50ca81f",
+        "quote": "12/7/2020"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "yyyy-mm-dd format in general numeric text",
+      "parts": [
+       {
+        "block_id": "cac36a56a60d",
+        "quote": "2021-06-04"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Separate the numbers in a numeric date with an unspaced forward slash, using the format ‘day/month/year’.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A numeric date written in a non-Australian sequence (such as month/day/year) or using spaces around forward slashes",
+    "when": [
+     "When expressing dates entirely in numerals (e.g. where space is limited, such as in tables)",
+     "Australian conventional order is day/month/year"
+    ],
+    "why": "G-1, G-2: Consolidates numeric date formatting and sequencing."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4e1606e8f40e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9a2b8a149b0e",
+      "quote": "Don’t use an apostrophe for decades"
+     },
+     {
+      "block_id": "0b3f420ce171",
+      "quote": "In more casual writing, you can use expressions such as ‘the eighties’. You can also use an apostrophe to show the missing numerals in a decade – for example, ‘In the ’80s, all my jackets had shoulder pads.’"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Plural decade without apostrophe",
+      "parts": [
+       {
+        "block_id": "f6b5c5e97c73",
+        "quote": "2010s"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Plural decade without apostrophe",
+      "parts": [
+       {
+        "block_id": "c18a42fbe2f0",
+        "quote": "1980s"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Plural decade with apostrophe",
+      "parts": [
+       {
+        "block_id": "612f54fc6272",
+        "quote": "2010’s"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Plural decade with apostrophe",
+      "parts": [
+       {
+        "block_id": "9e2615e97fa3",
+        "quote": "1980’s"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Write decades with an ‘s’ on the end. Don’t use an apostrophe to show the plural.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A plural decade written with an apostrophe before the 's' (e.g. 2010's, 1980's)",
+    "when": [
+     "When writing decades as plural numerals",
+     "An apostrophe may be used to show missing numerals at the start of a decade (e.g. 'In the ’80s')"
+    ],
+    "why": "G-2, G-4: Direct rule on plural decade spelling."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b22ca5aaf38f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "38fbda3780f7",
+      "quote": "Don’t replace the word between the years with an en dash."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Span using 'to'",
+      "parts": [
+       {
+        "block_id": "70a1c93ddf61",
+        "quote": "the years 2015 to 2019"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Span using 'from ... to'",
+      "parts": [
+       {
+        "block_id": "d5b9cf4bfa89",
+        "quote": "from 2015 to 2019"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Span using 'between ... and'",
+      "parts": [
+       {
+        "block_id": "e6bbccc55a09",
+        "quote": "between 2015 and 2019"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "En dash used instead of 'to'",
+      "parts": [
+       {
+        "block_id": "90e74513ce25",
+        "quote": "the years 2015–2019"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "En dash used with 'from'",
+      "parts": [
+       {
+        "block_id": "078c5260c8bb",
+        "quote": "from 2015–2019"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "En dash used with 'between'",
+      "parts": [
+       {
+        "block_id": "df70ef1db70f",
+        "quote": "between 2015–2019"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "As a general rule, write spans of years in words, using ‘to’, ‘from … to’ or ‘between … and’. Write the years out in full, not as abbreviations.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A span of years in body text that uses an en dash instead of words, or abbreviates the years",
+    "when": [
+     "In body text",
+     "Exceptions exist for financial years, calendar year spans, titles, and parentheses (which use en dashes)"
+    ],
+    "why": "G-2, G-4: Core rule for general year spans in body text."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cd22923c793d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2eff131bd7a8",
+      "quote": "Always use unspaced en dashes in spans of years. Don’t use forward slashes."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Unspaced en dash in title span",
+      "parts": [
+       {
+        "block_id": "14f843a15679",
+        "quote": "National Road Safety Action Plan 2018–20"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Unspaced en dash for financial year",
+      "parts": [
+       {
+        "block_id": "55d48e10fe8e",
+        "quote": "Australia’s energy consumption rose by 0.6% in 2018–19 and fell by 2.9% in 2019–20."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Forward slash in title span",
+      "parts": [
+       {
+        "block_id": "8946786ab3fb",
+        "quote": "National Road Safety Action Plan 2018/20"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Forward slash in financial year",
+      "parts": [
+       {
+        "block_id": "e36871c2145f",
+        "quote": "Australia’s energy consumption rose by 0.6% in 2018/19 and fell by 2.9% in 2019/20."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use an unspaced en dash for a:\n[0166e8549a81] financial year\n[4bdc31bfd83a] calendar year\n[15233c5e171d] span of years in the titles of publications and programs\n[08b80e30b2f8] span of years written in parentheses, such as for a term of office and the years of birth and death.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A financial year, calendar year span, program/publication title year span, or parenthetical year span written with a forward slash or spaced dash rather than an unspaced en dash",
+    "when": [
+     "For financial years, calendar year spans, titles of publications/programs, or year spans in parentheses"
+    ],
+    "why": "G-1, G-2: Specific exception to the general words-for-year-spans rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b4eccd270da6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a138c086f80b",
+      "quote": "Write ‘century’ and ‘centuries’ in lower case."
+     },
+     {
+      "block_id": "5e60a48c30f2",
+      "quote": "Don’t use shortened forms, such as 18C or C18, unless you have limited space."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Numerals for century",
+      "parts": [
+       {
+        "block_id": "07c29e6570cf",
+        "quote": "the 18th century"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Numerals in hyphenated compound century",
+      "parts": [
+       {
+        "block_id": "5e1b80b02288",
+        "quote": "a 19th-century writer"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Spelled out ordinal word for century",
+      "parts": [
+       {
+        "block_id": "b4cdc6e7a50d",
+        "quote": "the eighteenth century"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Spelled out ordinal word for century",
+      "parts": [
+       {
+        "block_id": "03ad530e530f",
+        "quote": "a nineteenth-century writer"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use numerals, not words, for centuries. This is an exception to the rule for ordinal numbers.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A century written using words rather than numerals (e.g. 'eighteenth century' instead of '18th century')",
+    "when": [],
+    "why": "G-2, G-4: Rule governing numerals for centuries and associated conventions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f48d2bb34b29",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ca96fe2bdd2f",
+      "quote": "In most documents, numerals give a clearer expression of time. Write times of day using numerals, especially when you need to convey precise times."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Colon between hours and minutes",
+      "parts": [
+       {
+        "block_id": "136cfe260378",
+        "quote": "The bus leaves at 8:22 am."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a colon between the hours and minutes.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A time of day using a full stop (e.g. 10.50) instead of a colon (10:50) between hours and minutes",
+    "when": [
+     "When writing times of day with hours and minutes"
+    ],
+    "why": "Clear punctuation rule for times of day."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "db22d7f4bea5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2f107d7ccfe1",
+      "quote": "Don’t use ‘am’ and ‘pm’ with words that duplicate their meaning, for example ‘morning’ and ‘afternoon’."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Lower case 'am' separated by space",
+      "parts": [
+       {
+        "block_id": "e3359a457072",
+        "quote": "Please respond by 10 am tomorrow."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Lower case 'pm' separated by space",
+      "parts": [
+       {
+        "block_id": "15c6bc0107d5",
+        "quote": "Let’s meet at 6:30 pm."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Redundant 'morning' with 'am'",
+      "parts": [
+       {
+        "block_id": "3e69e3df7b7d",
+        "quote": "Please respond by 10 am tomorrow morning."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Redundant 'in the evening' with 'pm'",
+      "parts": [
+       {
+        "block_id": "e08da905c9a5",
+        "quote": "Let’s meet at 6:30 pm in the evening."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write ‘am’ and ‘pm’ in lower case. Separate the numbers and the initialism with a non-breaking space.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The initialisms 'am' or 'pm' written in capital letters, without a preceding space, with a normal space instead of a non-breaking space, or accompanied by redundant temporal words like 'morning', 'evening', or 'afternoon'",
+    "when": [
+     "When expressing times of day with am/pm"
+    ],
+    "why": "G-2: Consolidates casing, spacing, and redundancy prohibitions for am/pm."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "29491ff355f1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5ca121b1be20",
+      "quote": "Noon, midday and midnight"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Use of 'midnight'",
+      "parts": [
+       {
+        "block_id": "851dfee5124c",
+        "quote": "We have extended the closing date to midnight Friday 7 October 2022."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Use of '12 am'",
+      "parts": [
+       {
+        "block_id": "c1a86684f22e",
+        "quote": "We have extended the closing date to 12 am Friday 7 October 2022."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Use ‘noon’, ‘midday’ or ‘midnight’ instead of ‘12 am’ or ‘12 pm’.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "'12 am' or '12 pm' used in place of 'noon', 'midday', or 'midnight'",
+    "when": [],
+    "why": "Specific preference rule with Write this/Not this."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f63b514f5163",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3b595e7d0444",
+      "quote": "Always use a ‘leading zero’ for hours under 10 – for example, write ‘05:30’ not ‘5:30’."
+     },
+     {
+      "block_id": "492cfeb04447",
+      "quote": "Use a colon to separate the hours, minutes and seconds in the 24-hour clock."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "24-hour time without am/pm",
+      "parts": [
+       {
+        "block_id": "47ca7054fc24",
+        "quote": "06:45"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "24-hour time with am",
+      "parts": [
+       {
+        "block_id": "a6bf27c68672",
+        "quote": "06:45 am"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "24-hour time with pm",
+      "parts": [
+       {
+        "block_id": "9ba8fcd55471",
+        "quote": "23:18 pm"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t add ‘am’ or ‘pm’ to times written in 24-hour clock format.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A time written in 24-hour clock format that includes 'am' or 'pm'",
+    "when": [
+     "When using 24-hour clock format"
+    ],
+    "why": "G-2: Consolidates formatting of 24-hour clock."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ebd18658480a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "En dash alone between times",
+      "parts": [
+       {
+        "block_id": "c2b79b96eab2",
+        "quote": "Closed 11 am – 2 pm."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Combining 'between' with en dash",
+      "parts": [
+       {
+        "block_id": "4f8e7126bd1a",
+        "quote": "Closed between 11 am – 2 pm."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t combine words and the en dash.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A time span combining 'between' or 'from' with an en dash (e.g. 'between 11 am – 2 pm')",
+    "when": [
+     "When writing spans of time using en dashes"
+    ],
+    "why": "Direct negative constraint with Write this/Not this."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a6e9fc0e4896",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5e4ed2ec029b",
+      "quote": "Never add an ‘s’ to show a plural."
+     },
+     {
+      "block_id": "38b43b303ded",
+      "quote": "But don’t space a number and its unit when your expression contains more than one time measure. Use a non-breaking space between each time value instead."
+     },
+     {
+      "block_id": "5b458ec4361c",
+      "quote": "Never add an ‘s’ to show a plural."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Non-breaking space, no plural s",
+      "parts": [
+       {
+        "block_id": "afe4cfa2bb95",
+        "quote": "35 s"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "No space between number and unit",
+      "parts": [
+       {
+        "block_id": "94d70bcb6b28",
+        "quote": "35s"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "No space and plural s added",
+      "parts": [
+       {
+        "block_id": "83c2580842fb",
+        "quote": "6hs"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If your expression contains one time measure only, insert a non-breaking space between the number and unit.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A single abbreviated time measure without a non-breaking space between the numeral and the unit, or with an 's' added to make a plural",
+    "when": [
+     "When abbreviating units of time (e.g. s, min, h, d, wk, mo, y, yr) for a single measure",
+     "If an expression contains more than one time measure, do not space the number and unit (e.g. 11min 12s)"
+    ],
+    "why": "G-2: Consolidates spacing and plural rules for abbreviated units of time."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e2daee91ec2f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6069a4f1f0f3",
+      "quote": "Avoid using ‘bi’ to mean either 2 or twice"
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Clear phrasing instead of 'biennially'",
+      "parts": [
+       {
+        "block_id": "36584f1b0711",
+        "quote": "We meet once every 2 years."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Use of 'biennially'",
+      "parts": [
+       {
+        "block_id": "94ba86003960",
+        "quote": "We meet biennially."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Instead of using these words, be clear about the frequency and period of time you mean.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "The words 'bimonthly', 'biannual', or 'biennial' used to describe frequency or time periods",
+    "when": [
+     "When describing frequency or periods of time"
+    ],
+    "why": "Direct advice against ambiguous temporal prefixes, backed by Write this/Not this."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ea879bd18936",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b8f8e79a5e3d",
+      "quote": "There is no fixed rule about the order of dates and times when combining them in body text. You can choose whether the date or the time should come first. The order doesn’t matter as long as the information is clear and the sentence flows logically."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Time placed before day and date",
+      "parts": [
+       {
+        "block_id": "e874b1a2ef2b",
+        "quote": "They will appear before the committee at 3 pm on Wednesday 7 August 2024."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Time placed after day and date",
+      "parts": [
+       {
+        "block_id": "de1751117132",
+        "quote": "They will appear before the committee on Wednesday 7 August 2024 at 3 pm."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Time placed between day and date",
+      "parts": [
+       {
+        "block_id": "38cc2b7dde89",
+        "quote": "They will appear before the committee at Wednesday 3 pm on 7 August."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "the time doesn’t come between the day and the date",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A time expression placed between the day of the week and the date (e.g. 'Wednesday 3 pm on 7 August')",
+    "when": [
+     "When combining dates and times in body text"
+    ],
+    "why": "G-2, G-4: Rule governing the relative order of dates and times."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "Use an unspaced en dash for a:\n[0166e8549a81] financial year\n[4bdc31bfd83a] calendar year\n[15233c5e171d] span of years in the titles of publications and programs\n[08b80e30b2f8] span of years written i",
+   "what": "rule",
+   "why": "not found exactly once in block cd22923c793d"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "e74a915dc2d3",
+    "end": 142,
+    "prefix": "",
+    "quote": "For dates in body text, use numerals for the day and year and spell out the name of the month. Don’t include a comma or any other punctuation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ea1451b5317e",
+     "end": 133,
+     "prefix": "",
+     "quote": "In Australia, the conventional sequence for dates is ‘day month year’. Use this sequence when expressing dates in numerals and words.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e3201135caee",
+     "end": 91,
+     "prefix": "",
+     "quote": "Spell out the name of the day if it is being used, but don’t include a comma after the day.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c41fb95e0efe",
+     "end": 89,
+     "prefix": "",
+     "quote": "The names of months and days start with an initial capital because they are proper nouns.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Day, month spelled out, year, without punctuation",
+     "parts": [
+      {
+       "block_id": "2cc5b33dfefa",
+       "end": 16,
+       "prefix": "",
+       "quote": "31 December 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Day of week spelled out without comma",
+     "parts": [
+      {
+       "block_id": "4747dbf11c02",
+       "end": 25,
+       "prefix": "",
+       "quote": "Thursday 31 December 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Month before day with comma",
+     "parts": [
+      {
+       "block_id": "af457c311860",
+       "end": 17,
+       "prefix": "",
+       "quote": "December 31, 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Comma after day of week",
+     "parts": [
+      {
+       "block_id": "d9fd0273c101",
+       "end": 26,
+       "prefix": "",
+       "quote": "Thursday, 31 December 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A date in body text not using the sequence 'day month year', using words instead of numerals for day/year, abbreviating the month name, or containing a comma or punctuation separating the date elements"
+   },
+   "when": [
+    "When writing dates in body text",
+    "Australian convention sequence is 'day month year'"
+   ],
+   "why": "G-1, G-2: Headings group date rules; e74a915dc2d3 gives the core body text rule covering sequence, punctuation, and capitalisation."
+  },
+  {
+   "anchor": {
+    "block_id": "778037d2d9ed",
+    "end": 92,
+    "prefix": "",
+    "quote": "Insert a non-breaking space between the day and the month so they stay together on one line.",
+    "start": 0,
+    "suffix": " A non-breaking space means that"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "970dc8f9b450",
+     "end": 119,
+     "prefix": "",
+     "quote": "Keeping the day and month together allows people to identify the information appearing before the line break as a date.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Non-breaking space between '8' and 'November'",
+     "parts": [
+      {
+       "block_id": "f3019a599b7e",
+       "end": 96,
+       "prefix": "",
+       "quote": "Please find attached the new agenda for the extraordinary general meeting, 2 pm 8 November 2022.",
+       "start": 0,
+       "suffix": " [With a non-breaking space betw"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "No non-breaking space between '8' and 'November'",
+     "parts": [
+      {
+       "block_id": "d8e48606dc5a",
+       "end": 108,
+       "prefix": "",
+       "quote": "Please find attached the draft minutes of the extraordinary general meeting held in Sydney, 8 November 2022.",
+       "start": 0,
+       "suffix": " [With no non-breaking space bet"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A date expression in text where the space between the day and the month is a standard breaking space rather than a non-breaking space"
+   },
+   "when": [],
+   "why": "Specific typographic requirement with explicit write this/not this pairs."
+  },
+  {
+   "anchor": {
+    "block_id": "d55dd62b0864",
+    "end": 78,
+    "prefix": "",
+    "quote": "Don’t use an ordinal number (12th, 21st etc.) when writing dates in body text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "985f8a107aa2",
+     "end": 139,
+     "prefix": "",
+     "quote": "There is an exception to the general rule for writing dates in body text. If you refer to the day but not the month, use an ordinal number.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Cardinal number for day",
+     "parts": [
+      {
+       "block_id": "41393662a0fc",
+       "end": 10,
+       "prefix": "",
+       "quote": "1 May 1997",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Cardinal number for day in date",
+     "parts": [
+      {
+       "block_id": "023d41c4e600",
+       "end": 78,
+       "prefix": "",
+       "quote": "Schedule 3 commences on the first 1 July after the bill receives Royal Assent.",
+       "start": 0,
+       "suffix": " [Extract from an explanatory me"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Ordinal number used for date",
+     "parts": [
+      {
+       "block_id": "37f042f9b35b",
+       "end": 12,
+       "prefix": "",
+       "quote": "1st May 1997",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Ordinal number used for date",
+     "parts": [
+      {
+       "block_id": "2f84908d1dd3",
+       "end": 80,
+       "prefix": "",
+       "quote": "Schedule 3 commences on the first 1st July after the bill receives Royal Assent.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ordinal number (e.g. 1st, 2nd, 12th) used for the day in a full date or day-month date in body text"
+   },
+   "when": [
+    "Applies when writing dates in body text",
+    "Exception: If you refer to the day but not the month, use an ordinal number (e.g. 'the 20th')"
+   ],
+   "why": "G-2: Exception (referring to day without month) is consolidated under when."
+  },
+  {
+   "anchor": {
+    "block_id": "1f80710abe59",
+    "end": 71,
+    "prefix": "",
+    "quote": "Don’t put the ordinal suffix (‘st’, ‘nd’, ‘rd’ or ‘th’) in superscript.",
+    "start": 0,
+    "suffix": " Superscript can cause problems "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "162baa196e9b",
+     "end": 45,
+     "prefix": "",
+     "quote": "Don’t use superscript for the ordinal suffix.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Ordinal suffix not in superscript",
+     "parts": [
+      {
+       "block_id": "5f473ff74c53",
+       "end": 27,
+       "prefix": "",
+       "quote": "She will leave by the 20th.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Ordinal suffix formatted in superscript",
+     "parts": [
+      {
+       "block_id": "f23e0076a875",
+       "end": 27,
+       "prefix": "",
+       "quote": "She will leave by the 20th.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ordinal suffix formatted as superscript"
+   },
+   "when": [
+    "Applies when using ordinal numbers (e.g. when day is mentioned without month, or for centuries)"
+   ],
+   "why": "G-4: Consolidation of identical superscript prohibition."
+  },
+  {
+   "anchor": {
+    "block_id": "68f027bb5122",
+    "end": 80,
+    "prefix": "",
+    "quote": "If you refer to the year only, use the full numerical year. Don’t abbreviate it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Full 4-digit year",
+     "parts": [
+      {
+       "block_id": "fbef9c89babc",
+       "end": 4,
+       "prefix": "",
+       "quote": "1945",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Abbreviated year with apostrophe",
+     "parts": [
+      {
+       "block_id": "2a9de5fbde3f",
+       "end": 3,
+       "prefix": "",
+       "quote": "‘45",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Abbreviated 2-digit year",
+     "parts": [
+      {
+       "block_id": "02a78f8b5e70",
+       "end": 2,
+       "prefix": "",
+       "quote": "45",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A standalone year written as an abbreviated 2-digit number (e.g. '45 or ‘45)"
+   },
+   "when": [
+    "When referring to a calendar year on its own"
+   ],
+   "why": "Clear rule with negative constraint and examples."
+  },
+  {
+   "anchor": {
+    "block_id": "73e0658039f3",
+    "end": 54,
+    "prefix": "",
+    "quote": "Don’t use a full stop after shortened days and months.",
+    "start": 0,
+    "suffix": " No full stop is the correct Aus"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A shortened form of a day or month followed by a full stop (e.g. 'Jan.' or 'Mon.')"
+   },
+   "when": [
+    "When using abbreviated names for days and months"
+   ],
+   "why": "Direct punctuation negative prohibition."
+  },
+  {
+   "anchor": {
+    "block_id": "44bca96ffb82",
+    "end": 56,
+    "prefix": "",
+    "quote": "Avoid abbreviated words when writing dates in body text.",
+    "start": 0,
+    "suffix": " Words written in full are usual"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9be65adede57",
+     "end": 35,
+     "prefix": "",
+     "quote": "Don’t abbreviate dates in body text",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Day and month spelled out in full",
+     "parts": [
+      {
+       "block_id": "1b22bb87f80d",
+       "end": 68,
+       "prefix": "",
+       "quote": "The Labor Party called an urgent conference on Saturday 22 December.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Abbreviated day and month in body text",
+     "parts": [
+      {
+       "block_id": "2aaa73e4f8be",
+       "end": 58,
+       "prefix": "",
+       "quote": "The Labor Party called an urgent conference on Sat 22 Dec.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Abbreviated day or month names used in body text (e.g. 'Sat 22 Dec')"
+   },
+   "when": [
+    "When writing dates in body text"
+   ],
+   "why": "G-4: Marking the body sentence rule supported by Write this/Not this."
+  },
+  {
+   "anchor": {
+    "block_id": "885dc2c0dd6b",
+    "end": 105,
+    "prefix": "",
+    "quote": "Separate the numbers in a numeric date with an unspaced forward slash, using the format ‘day/month/year’.",
+    "start": 0,
+    "suffix": " This format uses single digits "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "84a2de358200",
+     "end": 129,
+     "prefix": "",
+     "quote": "Use Australia’s conventional order of ‘day month year’ unless you are writing for users in a country that uses a different style.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6f92b9cc6116",
+     "end": 127,
+     "prefix": "",
+     "quote": "Avoid writing dates entirely in numerals for general content. Use numeric dates only when space is limited (such as in tables).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "d/m/yyyy format",
+     "parts": [
+      {
+       "block_id": "175195cabace",
+       "end": 8,
+       "prefix": "",
+       "quote": "4/6/2021",
+       "start": 0,
+       "suffix": " [Australia: d/m/yyyy]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "d/m/yyyy format",
+     "parts": [
+      {
+       "block_id": "9457bbb05285",
+       "end": 9,
+       "prefix": "",
+       "quote": "7/12/2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "USA m/d/yyyy format",
+     "parts": [
+      {
+       "block_id": "214ba50ca81f",
+       "end": 9,
+       "prefix": "",
+       "quote": "12/7/2020",
+       "start": 0,
+       "suffix": " [USA: m/d/yyyy]"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "yyyy-mm-dd format in general numeric text",
+     "parts": [
+      {
+       "block_id": "cac36a56a60d",
+       "end": 10,
+       "prefix": "",
+       "quote": "2021-06-04",
+       "start": 0,
+       "suffix": " [Sweden: yyyy-mm-dd]"
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A numeric date written in a non-Australian sequence (such as month/day/year) or using spaces around forward slashes"
+   },
+   "when": [
+    "When expressing dates entirely in numerals (e.g. where space is limited, such as in tables)",
+    "Australian conventional order is day/month/year"
+   ],
+   "why": "G-1, G-2: Consolidates numeric date formatting and sequencing."
+  },
+  {
+   "anchor": {
+    "block_id": "4e1606e8f40e",
+    "end": 81,
+    "prefix": "",
+    "quote": "Write decades with an ‘s’ on the end. Don’t use an apostrophe to show the plural.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9a2b8a149b0e",
+     "end": 35,
+     "prefix": "",
+     "quote": "Don’t use an apostrophe for decades",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0b3f420ce171",
+     "end": 207,
+     "prefix": "",
+     "quote": "In more casual writing, you can use expressions such as ‘the eighties’. You can also use an apostrophe to show the missing numerals in a decade – for example, ‘In the ’80s, all my jackets had shoulder pads.’",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Plural decade without apostrophe",
+     "parts": [
+      {
+       "block_id": "f6b5c5e97c73",
+       "end": 5,
+       "prefix": "",
+       "quote": "2010s",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Plural decade without apostrophe",
+     "parts": [
+      {
+       "block_id": "c18a42fbe2f0",
+       "end": 5,
+       "prefix": "",
+       "quote": "1980s",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Plural decade with apostrophe",
+     "parts": [
+      {
+       "block_id": "612f54fc6272",
+       "end": 6,
+       "prefix": "",
+       "quote": "2010’s",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Plural decade with apostrophe",
+     "parts": [
+      {
+       "block_id": "9e2615e97fa3",
+       "end": 6,
+       "prefix": "",
+       "quote": "1980’s",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A plural decade written with an apostrophe before the 's' (e.g. 2010's, 1980's)"
+   },
+   "when": [
+    "When writing decades as plural numerals",
+    "An apostrophe may be used to show missing numerals at the start of a decade (e.g. 'In the ’80s')"
+   ],
+   "why": "G-2, G-4: Direct rule on plural decade spelling."
+  },
+  {
+   "anchor": {
+    "block_id": "b22ca5aaf38f",
+    "end": 144,
+    "prefix": "",
+    "quote": "As a general rule, write spans of years in words, using ‘to’, ‘from … to’ or ‘between … and’. Write the years out in full, not as abbreviations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "38fbda3780f7",
+     "end": 57,
+     "prefix": "",
+     "quote": "Don’t replace the word between the years with an en dash.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Span using 'to'",
+     "parts": [
+      {
+       "block_id": "70a1c93ddf61",
+       "end": 22,
+       "prefix": "",
+       "quote": "the years 2015 to 2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Span using 'from ... to'",
+     "parts": [
+      {
+       "block_id": "d5b9cf4bfa89",
+       "end": 17,
+       "prefix": "",
+       "quote": "from 2015 to 2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Span using 'between ... and'",
+     "parts": [
+      {
+       "block_id": "e6bbccc55a09",
+       "end": 21,
+       "prefix": "",
+       "quote": "between 2015 and 2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "En dash used instead of 'to'",
+     "parts": [
+      {
+       "block_id": "90e74513ce25",
+       "end": 19,
+       "prefix": "",
+       "quote": "the years 2015–2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "En dash used with 'from'",
+     "parts": [
+      {
+       "block_id": "078c5260c8bb",
+       "end": 14,
+       "prefix": "",
+       "quote": "from 2015–2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "En dash used with 'between'",
+     "parts": [
+      {
+       "block_id": "df70ef1db70f",
+       "end": 17,
+       "prefix": "",
+       "quote": "between 2015–2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A span of years in body text that uses an en dash instead of words, or abbreviates the years"
+   },
+   "when": [
+    "In body text",
+    "Exceptions exist for financial years, calendar year spans, titles, and parentheses (which use en dashes)"
+   ],
+   "why": "G-2, G-4: Core rule for general year spans in body text."
+  },
+  {
+   "anchor": {
+    "block_id": "b4eccd270da6",
+    "end": 93,
+    "prefix": "",
+    "quote": "Use numerals, not words, for centuries. This is an exception to the rule for ordinal numbers.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a138c086f80b",
+     "end": 46,
+     "prefix": "",
+     "quote": "Write ‘century’ and ‘centuries’ in lower case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5e60a48c30f2",
+     "end": 77,
+     "prefix": "",
+     "quote": "Don’t use shortened forms, such as 18C or C18, unless you have limited space.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Numerals for century",
+     "parts": [
+      {
+       "block_id": "07c29e6570cf",
+       "end": 16,
+       "prefix": "",
+       "quote": "the 18th century",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Numerals in hyphenated compound century",
+     "parts": [
+      {
+       "block_id": "5e1b80b02288",
+       "end": 21,
+       "prefix": "",
+       "quote": "a 19th-century writer",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Spelled out ordinal word for century",
+     "parts": [
+      {
+       "block_id": "b4cdc6e7a50d",
+       "end": 22,
+       "prefix": "",
+       "quote": "the eighteenth century",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Spelled out ordinal word for century",
+     "parts": [
+      {
+       "block_id": "03ad530e530f",
+       "end": 27,
+       "prefix": "",
+       "quote": "a nineteenth-century writer",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A century written using words rather than numerals (e.g. 'eighteenth century' instead of '18th century')"
+   },
+   "when": [],
+   "why": "G-2, G-4: Rule governing numerals for centuries and associated conventions."
+  },
+  {
+   "anchor": {
+    "block_id": "f48d2bb34b29",
+    "end": 42,
+    "prefix": "",
+    "quote": "Use a colon between the hours and minutes.",
+    "start": 0,
+    "suffix": " The use of a colon as the separ"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ca96fe2bdd2f",
+     "end": 147,
+     "prefix": "",
+     "quote": "In most documents, numerals give a clearer expression of time. Write times of day using numerals, especially when you need to convey precise times.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Colon between hours and minutes",
+     "parts": [
+      {
+       "block_id": "136cfe260378",
+       "end": 26,
+       "prefix": "",
+       "quote": "The bus leaves at 8:22 am.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A time of day using a full stop (e.g. 10.50) instead of a colon (10:50) between hours and minutes"
+   },
+   "when": [
+    "When writing times of day with hours and minutes"
+   ],
+   "why": "Clear punctuation rule for times of day."
+  },
+  {
+   "anchor": {
+    "block_id": "db22d7f4bea5",
+    "end": 101,
+    "prefix": "",
+    "quote": "Write ‘am’ and ‘pm’ in lower case. Separate the numbers and the initialism with a non-breaking space.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2f107d7ccfe1",
+     "end": 103,
+     "prefix": "",
+     "quote": "Don’t use ‘am’ and ‘pm’ with words that duplicate their meaning, for example ‘morning’ and ‘afternoon’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Lower case 'am' separated by space",
+     "parts": [
+      {
+       "block_id": "e3359a457072",
+       "end": 33,
+       "prefix": "",
+       "quote": "Please respond by 10 am tomorrow.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Lower case 'pm' separated by space",
+     "parts": [
+      {
+       "block_id": "15c6bc0107d5",
+       "end": 22,
+       "prefix": "",
+       "quote": "Let’s meet at 6:30 pm.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Redundant 'morning' with 'am'",
+     "parts": [
+      {
+       "block_id": "3e69e3df7b7d",
+       "end": 41,
+       "prefix": "",
+       "quote": "Please respond by 10 am tomorrow morning.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Redundant 'in the evening' with 'pm'",
+     "parts": [
+      {
+       "block_id": "e08da905c9a5",
+       "end": 37,
+       "prefix": "",
+       "quote": "Let’s meet at 6:30 pm in the evening.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The initialisms 'am' or 'pm' written in capital letters, without a preceding space, with a normal space instead of a non-breaking space, or accompanied by redundant temporal words like 'morning', 'evening', or 'afternoon'"
+   },
+   "when": [
+    "When expressing times of day with am/pm"
+   ],
+   "why": "G-2: Consolidates casing, spacing, and redundancy prohibitions for am/pm."
+  },
+  {
+   "anchor": {
+    "block_id": "29491ff355f1",
+    "end": 65,
+    "prefix": "",
+    "quote": "Use ‘noon’, ‘midday’ or ‘midnight’ instead of ‘12 am’ or ‘12 pm’.",
+    "start": 0,
+    "suffix": " This makes it easier for people"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5ca121b1be20",
+     "end": 25,
+     "prefix": "",
+     "quote": "Noon, midday and midnight",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Use of 'midnight'",
+     "parts": [
+      {
+       "block_id": "851dfee5124c",
+       "end": 68,
+       "prefix": "",
+       "quote": "We have extended the closing date to midnight Friday 7 October 2022.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Use of '12 am'",
+     "parts": [
+      {
+       "block_id": "c1a86684f22e",
+       "end": 65,
+       "prefix": "",
+       "quote": "We have extended the closing date to 12 am Friday 7 October 2022.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "'12 am' or '12 pm' used in place of 'noon', 'midday', or 'midnight'"
+   },
+   "when": [],
+   "why": "Specific preference rule with Write this/Not this."
+  },
+  {
+   "anchor": {
+    "block_id": "f63b514f5163",
+    "end": 64,
+    "prefix": "",
+    "quote": "Don’t add ‘am’ or ‘pm’ to times written in 24-hour clock format.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3b595e7d0444",
+     "end": 87,
+     "prefix": "",
+     "quote": "Always use a ‘leading zero’ for hours under 10 – for example, write ‘05:30’ not ‘5:30’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "492cfeb04447",
+     "end": 76,
+     "prefix": "",
+     "quote": "Use a colon to separate the hours, minutes and seconds in the 24-hour clock.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "24-hour time without am/pm",
+     "parts": [
+      {
+       "block_id": "47ca7054fc24",
+       "end": 5,
+       "prefix": "",
+       "quote": "06:45",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "24-hour time with am",
+     "parts": [
+      {
+       "block_id": "a6bf27c68672",
+       "end": 8,
+       "prefix": "",
+       "quote": "06:45 am",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "24-hour time with pm",
+     "parts": [
+      {
+       "block_id": "9ba8fcd55471",
+       "end": 8,
+       "prefix": "",
+       "quote": "23:18 pm",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A time written in 24-hour clock format that includes 'am' or 'pm'"
+   },
+   "when": [
+    "When using 24-hour clock format"
+   ],
+   "why": "G-2: Consolidates formatting of 24-hour clock."
+  },
+  {
+   "anchor": {
+    "block_id": "ebd18658480a",
+    "end": 36,
+    "prefix": "",
+    "quote": "Don’t combine words and the en dash.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "En dash alone between times",
+     "parts": [
+      {
+       "block_id": "c2b79b96eab2",
+       "end": 20,
+       "prefix": "",
+       "quote": "Closed 11 am – 2 pm.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Combining 'between' with en dash",
+     "parts": [
+      {
+       "block_id": "4f8e7126bd1a",
+       "end": 28,
+       "prefix": "",
+       "quote": "Closed between 11 am – 2 pm.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A time span combining 'between' or 'from' with an en dash (e.g. 'between 11 am – 2 pm')"
+   },
+   "when": [
+    "When writing spans of time using en dashes"
+   ],
+   "why": "Direct negative constraint with Write this/Not this."
+  },
+  {
+   "anchor": {
+    "block_id": "a6e9fc0e4896",
+    "end": 107,
+    "prefix": "",
+    "quote": "If your expression contains one time measure only, insert a non-breaking space between the number and unit.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5e4ed2ec029b",
+     "end": 34,
+     "prefix": "",
+     "quote": "Never add an ‘s’ to show a plural.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "38b43b303ded",
+     "end": 153,
+     "prefix": "",
+     "quote": "But don’t space a number and its unit when your expression contains more than one time measure. Use a non-breaking space between each time value instead.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5b458ec4361c",
+     "end": 34,
+     "prefix": "",
+     "quote": "Never add an ‘s’ to show a plural.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Non-breaking space, no plural s",
+     "parts": [
+      {
+       "block_id": "afe4cfa2bb95",
+       "end": 4,
+       "prefix": "",
+       "quote": "35 s",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "No space between number and unit",
+     "parts": [
+      {
+       "block_id": "94d70bcb6b28",
+       "end": 3,
+       "prefix": "",
+       "quote": "35s",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "No space and plural s added",
+     "parts": [
+      {
+       "block_id": "83c2580842fb",
+       "end": 3,
+       "prefix": "",
+       "quote": "6hs",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A single abbreviated time measure without a non-breaking space between the numeral and the unit, or with an 's' added to make a plural"
+   },
+   "when": [
+    "When abbreviating units of time (e.g. s, min, h, d, wk, mo, y, yr) for a single measure",
+    "If an expression contains more than one time measure, do not space the number and unit (e.g. 11min 12s)"
+   ],
+   "why": "G-2: Consolidates spacing and plural rules for abbreviated units of time."
+  },
+  {
+   "anchor": {
+    "block_id": "e2daee91ec2f",
+    "end": 87,
+    "prefix": "",
+    "quote": "Instead of using these words, be clear about the frequency and period of time you mean.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6069a4f1f0f3",
+     "end": 42,
+     "prefix": "",
+     "quote": "Avoid using ‘bi’ to mean either 2 or twice",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Clear phrasing instead of 'biennially'",
+     "parts": [
+      {
+       "block_id": "36584f1b0711",
+       "end": 27,
+       "prefix": "",
+       "quote": "We meet once every 2 years.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Use of 'biennially'",
+     "parts": [
+      {
+       "block_id": "94ba86003960",
+       "end": 19,
+       "prefix": "",
+       "quote": "We meet biennially.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "The words 'bimonthly', 'biannual', or 'biennial' used to describe frequency or time periods"
+   },
+   "when": [
+    "When describing frequency or periods of time"
+   ],
+   "why": "Direct advice against ambiguous temporal prefixes, backed by Write this/Not this."
+  },
+  {
+   "anchor": {
+    "block_id": "ea879bd18936",
+    "end": 50,
+    "prefix": "",
+    "quote": "the time doesn’t come between the day and the date",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b8f8e79a5e3d",
+     "end": 249,
+     "prefix": "",
+     "quote": "There is no fixed rule about the order of dates and times when combining them in body text. You can choose whether the date or the time should come first. The order doesn’t matter as long as the information is clear and the sentence flows logically.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Time placed before day and date",
+     "parts": [
+      {
+       "block_id": "e874b1a2ef2b",
+       "end": 73,
+       "prefix": "",
+       "quote": "They will appear before the committee at 3 pm on Wednesday 7 August 2024.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Time placed after day and date",
+     "parts": [
+      {
+       "block_id": "de1751117132",
+       "end": 73,
+       "prefix": "",
+       "quote": "They will appear before the committee on Wednesday 7 August 2024 at 3 pm.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Time placed between day and date",
+     "parts": [
+      {
+       "block_id": "38cc2b7dde89",
+       "end": 68,
+       "prefix": "",
+       "quote": "They will appear before the committee at Wednesday 3 pm on 7 August.",
+       "start": 0,
+       "suffix": " [The time appears between day a"
+      }
+     ]
+    }
+   ],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A time expression placed between the day of the week and the date (e.g. 'Wednesday 3 pm on 7 August')"
+   },
+   "when": [
+    "When combining dates and times in body text"
+   ],
+   "why": "G-2, G-4: Rule governing the relative order of dates and times."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 19257,
+  "output_tokens": 12056,
+  "reasoning_tokens": 0
+ }
+}

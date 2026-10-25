@@ -187,3 +187,18 @@ def test_the_lint_writes_nothing(tmp_path, monkeypatch, capsys):
     out = capsys.readouterr().out
     assert out.startswith("# Golden-set worklist") or out.startswith("No findings")
     assert [p.read_bytes() if p.exists() else None for p in watched] == before
+
+
+def test_a_label_written_as_a_paragraph_counts_in_the_lint():
+    """currency.md: 'Not this' is a paragraph under a 'Write this' heading."""
+    from derek.corpus.normalise import NormalisedPage
+    from derek.eval.golden_lint import _nearest_labels
+    from derek.extract.blocks import parse_blocks
+
+    rel = "grammar-punctuation-and-conventions/numbers-and-measurements/currency.md"
+    text = NormalisedPage(rel, (golden_lint.PAGES / rel).read_text(encoding="utf-8")).text
+    blocks = parse_blocks(rel, text)
+    labels = _nearest_labels(blocks)
+    wrong = next(b for b in blocks if b.plain == "£9 8s 7d")
+    right = next(b for b in blocks if b.plain == "9 pounds, 8 shillings and 7 pence")
+    assert labels[wrong.id] == "not this" and labels[right.id] == "write this"

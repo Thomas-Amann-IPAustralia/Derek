@@ -1,0 +1,922 @@
+{
+ "effort": "low",
+ "input_sha256": "5be93dd6dcf06b0999a0c9f779689a0b52d9eba5fb969986d051882f9f954ebb",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "c77f8a7dc426",
+    "end": 27,
+    "prefix": "",
+    "quote": "Use gender-neutral language",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Parent section heading grouping guidance on pronouns, job titles, and personal titles (G-1).",
+   "reason": "section",
+   "seed_uid": "2d50501b3f9c27bf"
+  },
+  {
+   "anchor": {
+    "block_id": "6f6095817d88",
+    "end": 125,
+    "prefix": "",
+    "quote": "Use terms that recognise gender equality. Avoid terms that discriminate on the basis of a person’s gender or sexual identity.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Broad introductory guidance and ethical/legal principle rather than an actionable specific text rule (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b5c5bc0e861d",
+    "end": 25,
+    "prefix": "",
+    "quote": "Learn the user’s pronoun.",
+    "start": 0,
+    "suffix": " If it’s not clear and you can’t"
+   },
+   "note": "Advice to the writer about interpersonal interaction and research (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "42014ab83edf",
+    "end": 94,
+    "prefix": "",
+    "quote": "You can use ‘they’ or ‘them’ when you would otherwise use a singular personal pronoun such as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Permission to use singular 'they'/'them' (G-3).",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d938ce4b0517",
+    "end": 142,
+    "prefix": "",
+    "quote": "You can also use ‘themselves’ or ‘themself’ instead of ‘himself’ or ‘herself’. ‘Themself’ is an extension of using ‘they’ for a single person.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Permission to use 'themselves' or 'themself' (G-3).",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16a90577ee65",
+    "end": 33,
+    "prefix": "",
+    "quote": "Check for changes in language use",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Candidate heading giving research advice to the writer (G-5).",
+   "reason": "advice",
+   "seed_uid": "d4186c12fa737e08"
+  },
+  {
+   "anchor": {
+    "block_id": "1f175faa85e8",
+    "end": 162,
+    "prefix": "",
+    "quote": "Take care in areas where language is changing. Follow the rule that people have the right to identify their sexual orientation and gender identity as they choose.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General awareness and behavioral principle for writers (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/inclusive-language/gender-and-sexual-diversity.md",
+ "page_sha256": "79877cd0cf0504ee3dac2a6b99c88e592b65b293dba4240ad1ef5f59c7a76ebf",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "c77f8a7dc426",
+    "note": "Parent section heading grouping guidance on pronouns, job titles, and personal titles (G-1).",
+    "quote": "Use gender-neutral language",
+    "reason": "section"
+   },
+   {
+    "block_id": "6f6095817d88",
+    "note": "Broad introductory guidance and ethical/legal principle rather than an actionable specific text rule (G-5).",
+    "quote": "Use terms that recognise gender equality. Avoid terms that discriminate on the basis of a person’s gender or sexual identity.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b5c5bc0e861d",
+    "note": "Advice to the writer about interpersonal interaction and research (G-5).",
+    "quote": "Learn the user’s pronoun.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "42014ab83edf",
+    "note": "Permission to use singular 'they'/'them' (G-3).",
+    "quote": "You can use ‘they’ or ‘them’ when you would otherwise use a singular personal pronoun such as:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "d938ce4b0517",
+    "note": "Permission to use 'themselves' or 'themself' (G-3).",
+    "quote": "You can also use ‘themselves’ or ‘themself’ instead of ‘himself’ or ‘herself’. ‘Themself’ is an extension of using ‘they’ for a single person.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "16a90577ee65",
+    "note": "Candidate heading giving research advice to the writer (G-5).",
+    "quote": "Check for changes in language use",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1f175faa85e8",
+    "note": "General awareness and behavioral principle for writers (G-5).",
+    "quote": "Take care in areas where language is changing. Follow the rule that people have the right to identify their sexual orientation and gender identity as they choose.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b5c5bc0e861d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2dcd06b5d8e1",
+      "quote": "There are many ways to avoid using gender-specific pronouns."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uses second-person pronouns to avoid gender-specific pronouns.",
+      "parts": [
+       {
+        "block_id": "a737b2eef4da",
+        "quote": "You must provide copies of the application to your referees."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses a plural pronoun to avoid gender-specific pronouns.",
+      "parts": [
+       {
+        "block_id": "2b65aecac167",
+        "quote": "Candidates must provide copies of the application to their referees."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Omits the pronoun altogether to avoid gender-specific pronouns.",
+      "parts": [
+       {
+        "block_id": "cd62f1bc7163",
+        "quote": "Every candidate must provide copies of the application to referees."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If it’s not clear and you can’t ask them, choose gender-neutral pronouns.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "using gender-specific singular pronouns (such as he, she, him, her) for a person whose gender is unknown or unverified",
+    "when": [
+     "A person's preferred pronouns are not known and cannot be asked directly."
+    ],
+    "why": "G-2, G-4: Core instruction on avoiding gender-specific pronouns when a person's pronouns are unknown."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ab13a3fd0f51",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "52ea4d4d6d75",
+      "quote": "Avoid using job titles that end in ‘-man’ or ‘-woman’."
+     },
+     {
+      "block_id": "6323a95ac691",
+      "quote": "Avoid using the traditional terms for jobs that end in ‘-man’."
+     },
+     {
+      "block_id": "dd9c1c6a8c3c",
+      "quote": "You should also avoid job terms that specify women."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "8aad81a484fb",
+        "quote": "police officer"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Gender-specific job title.",
+      "parts": [
+       {
+        "block_id": "0e1c72a1e892",
+        "quote": "policeman"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "b5b24a52a2e9",
+        "quote": "minister of religion"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Gender-specific job title.",
+      "parts": [
+       {
+        "block_id": "317e8637270f",
+        "quote": "clergyman"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "ae44e185fddf",
+        "quote": "firefighter"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Gender-specific job title.",
+      "parts": [
+       {
+        "block_id": "23c010c11a44",
+        "quote": "fireman"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "b366aa161fb6",
+        "quote": "supervisor"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Gender-specific job title.",
+      "parts": [
+       {
+        "block_id": "0348cf124dc1",
+        "quote": "foreman"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "000f3240373e",
+        "quote": "actor"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Job term specifying women.",
+      "parts": [
+       {
+        "block_id": "1458b575db22",
+        "quote": "actress"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "675a52366bcd",
+        "quote": "host"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Job term specifying women.",
+      "parts": [
+       {
+        "block_id": "0b3b531eba76",
+        "quote": "hostess"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "2db9fe3cbd54",
+        "quote": "waiter"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Job term specifying women.",
+      "parts": [
+       {
+        "block_id": "c9d6dab9c6c8",
+        "quote": "waitress"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Gender-neutral job title.",
+      "parts": [
+       {
+        "block_id": "881022e77570",
+        "quote": "flight attendant"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Job term specifying women.",
+      "parts": [
+       {
+        "block_id": "fe43c4e33232",
+        "quote": "stewardess"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid gender-specific job titles",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of gender-specific job titles, including titles ending in '-man' or terms specifying women (such as actress, waitress, stewardess)",
+    "when": [],
+    "why": "G-2, G-4: Consolidated general rule covering titles ending in '-man', '-woman', or terms specifying women."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cfc0ea084580",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use gender-specific adjectives only when gender is relevant.",
+    "specification": "Do not qualify a profession or title with gender (e.g. 'female doctor', 'male nurse') unless gender is specifically relevant to the discussion.",
+    "unit": "phrase",
+    "violation_condition": "a gender-specific adjective (such as female or male) modifying a profession or title when gender is not relevant",
+    "when": [
+     "Gender is directly relevant to the topic (e.g. economic analysis of female-dominated industries)."
+    ],
+    "why": "Distinct directive regarding qualifying professions/titles with gendered adjectives."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5d798622aa5a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use ‘Mx’ when a person indicates this is what they prefer, but not otherwise.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'Mx' for a person who has not indicated that preference, or failing to use 'Mx' when indicated",
+    "when": [
+     "The person has explicitly indicated a preference for the title 'Mx'."
+    ],
+    "why": "Specific conditional instruction governing the use of the title 'Mx'."
+   },
+   {
+    "applies_to": [
+     "form"
+    ],
+    "block_id": "60545e8593e1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t ask for a title or gender identity unless the form is designed to collect this information.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a form or survey requesting a personal title or gender identity when not specifically designed to collect that information",
+    "when": [
+     "The form is specifically designed to collect title or gender identity information."
+    ],
+    "why": "Specific rule for forms and surveys regarding personal titles and gender identity fields."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "b5c5bc0e861d",
+    "end": 99,
+    "prefix": "Learn the user’s pronoun. ",
+    "quote": "If it’s not clear and you can’t ask them, choose gender-neutral pronouns.",
+    "start": 26,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2dcd06b5d8e1",
+     "end": 60,
+     "prefix": "",
+     "quote": "There are many ways to avoid using gender-specific pronouns.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses second-person pronouns to avoid gender-specific pronouns.",
+     "parts": [
+      {
+       "block_id": "a737b2eef4da",
+       "end": 60,
+       "prefix": "",
+       "quote": "You must provide copies of the application to your referees.",
+       "start": 0,
+       "suffix": " [Use the second-person pronouns"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses a plural pronoun to avoid gender-specific pronouns.",
+     "parts": [
+      {
+       "block_id": "2b65aecac167",
+       "end": 68,
+       "prefix": "",
+       "quote": "Candidates must provide copies of the application to their referees.",
+       "start": 0,
+       "suffix": " [Use a plural pronoun. The pron"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Omits the pronoun altogether to avoid gender-specific pronouns.",
+     "parts": [
+      {
+       "block_id": "cd62f1bc7163",
+       "end": 67,
+       "prefix": "",
+       "quote": "Every candidate must provide copies of the application to referees.",
+       "start": 0,
+       "suffix": " [Leave the pronoun out altogeth"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "using gender-specific singular pronouns (such as he, she, him, her) for a person whose gender is unknown or unverified"
+   },
+   "when": [
+    "A person's preferred pronouns are not known and cannot be asked directly."
+   ],
+   "why": "G-2, G-4: Core instruction on avoiding gender-specific pronouns when a person's pronouns are unknown."
+  },
+  {
+   "anchor": {
+    "block_id": "ab13a3fd0f51",
+    "end": 32,
+    "prefix": "",
+    "quote": "Avoid gender-specific job titles",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "52ea4d4d6d75",
+     "end": 54,
+     "prefix": "",
+     "quote": "Avoid using job titles that end in ‘-man’ or ‘-woman’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6323a95ac691",
+     "end": 62,
+     "prefix": "",
+     "quote": "Avoid using the traditional terms for jobs that end in ‘-man’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dd9c1c6a8c3c",
+     "end": 51,
+     "prefix": "",
+     "quote": "You should also avoid job terms that specify women.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "8aad81a484fb",
+       "end": 14,
+       "prefix": "",
+       "quote": "police officer",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Gender-specific job title.",
+     "parts": [
+      {
+       "block_id": "0e1c72a1e892",
+       "end": 9,
+       "prefix": "",
+       "quote": "policeman",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "b5b24a52a2e9",
+       "end": 20,
+       "prefix": "",
+       "quote": "minister of religion",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Gender-specific job title.",
+     "parts": [
+      {
+       "block_id": "317e8637270f",
+       "end": 9,
+       "prefix": "",
+       "quote": "clergyman",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "ae44e185fddf",
+       "end": 11,
+       "prefix": "",
+       "quote": "firefighter",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Gender-specific job title.",
+     "parts": [
+      {
+       "block_id": "23c010c11a44",
+       "end": 7,
+       "prefix": "",
+       "quote": "fireman",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "b366aa161fb6",
+       "end": 10,
+       "prefix": "",
+       "quote": "supervisor",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Gender-specific job title.",
+     "parts": [
+      {
+       "block_id": "0348cf124dc1",
+       "end": 7,
+       "prefix": "",
+       "quote": "foreman",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "000f3240373e",
+       "end": 5,
+       "prefix": "",
+       "quote": "actor",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Job term specifying women.",
+     "parts": [
+      {
+       "block_id": "1458b575db22",
+       "end": 7,
+       "prefix": "",
+       "quote": "actress",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "675a52366bcd",
+       "end": 4,
+       "prefix": "",
+       "quote": "host",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Job term specifying women.",
+     "parts": [
+      {
+       "block_id": "0b3b531eba76",
+       "end": 7,
+       "prefix": "",
+       "quote": "hostess",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "2db9fe3cbd54",
+       "end": 6,
+       "prefix": "",
+       "quote": "waiter",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Job term specifying women.",
+     "parts": [
+      {
+       "block_id": "c9d6dab9c6c8",
+       "end": 8,
+       "prefix": "",
+       "quote": "waitress",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Gender-neutral job title.",
+     "parts": [
+      {
+       "block_id": "881022e77570",
+       "end": 16,
+       "prefix": "",
+       "quote": "flight attendant",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Job term specifying women.",
+     "parts": [
+      {
+       "block_id": "fe43c4e33232",
+       "end": 10,
+       "prefix": "",
+       "quote": "stewardess",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "f53200c373416892",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of gender-specific job titles, including titles ending in '-man' or terms specifying women (such as actress, waitress, stewardess)"
+   },
+   "when": [],
+   "why": "G-2, G-4: Consolidated general rule covering titles ending in '-man', '-woman', or terms specifying women."
+  },
+  {
+   "anchor": {
+    "block_id": "cfc0ea084580",
+    "end": 129,
+    "prefix": "profession or title in general. ",
+    "quote": "Use gender-specific adjectives only when gender is relevant.",
+    "start": 69,
+    "suffix": " For example, an economic analys"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Do not qualify a profession or title with gender (e.g. 'female doctor', 'male nurse') unless gender is specifically relevant to the discussion.",
+    "unit": "phrase",
+    "violation_condition": "a gender-specific adjective (such as female or male) modifying a profession or title when gender is not relevant"
+   },
+   "when": [
+    "Gender is directly relevant to the topic (e.g. economic analysis of female-dominated industries)."
+   ],
+   "why": "Distinct directive regarding qualifying professions/titles with gendered adjectives."
+  },
+  {
+   "anchor": {
+    "block_id": "5d798622aa5a",
+    "end": 171,
+    "prefix": "be referred to by their gender. ",
+    "quote": "Use ‘Mx’ when a person indicates this is what they prefer, but not otherwise.",
+    "start": 94,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'Mx' for a person who has not indicated that preference, or failing to use 'Mx' when indicated"
+   },
+   "when": [
+    "The person has explicitly indicated a preference for the title 'Mx'."
+   ],
+   "why": "Specific conditional instruction governing the use of the title 'Mx'."
+  },
+  {
+   "anchor": {
+    "block_id": "60545e8593e1",
+    "end": 153,
+    "prefix": "k for people to specify gender. ",
+    "quote": "Don’t ask for a title or gender identity unless the form is designed to collect this information.",
+    "start": 56,
+    "suffix": " For example, a form can ask for"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "form"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a form or survey requesting a personal title or gender identity when not specifically designed to collect that information"
+   },
+   "when": [
+    "The form is specifically designed to collect title or gender identity information."
+   ],
+   "why": "Specific rule for forms and surveys regarding personal titles and gender identity fields."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5447,
+  "output_tokens": 3218,
+  "reasoning_tokens": 0
+ }
+}

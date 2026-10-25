@@ -1,0 +1,1336 @@
+{
+ "effort": "high",
+ "input_sha256": "ba20e53a02a3b1a284f7fb75859da142bea4c8643ecd91ade846018c31d9cf61",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "6f29feeb3c89",
+    "end": 55,
+    "prefix": "",
+    "quote": "I can understand any information contained in an image.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A user need concerning information in images, not a standalone rule about the supplied words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a81bbc28e2d8",
+    "end": 83,
+    "prefix": "",
+    "quote": "I can access equivalent information to anything contained in a video or audio file.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A user need concerning media alternatives; it does not specify a textual check.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f4b727c11148",
+    "end": 80,
+    "prefix": "",
+    "quote": "I can change the content's presentation without losing information or structure.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns presentation behaviour rather than a property of the wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f9b8c7d0e185",
+    "end": 76,
+    "prefix": "",
+    "quote": "I can find and navigate the content and determine where I am on the webpage.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A navigation and orientation user need, not a specified text rule.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ac18c494cc86",
+    "end": 82,
+    "prefix": "",
+    "quote": "I can avoid making any mistakes with my inputs, and correct any that I might make.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns input and error-recovery functionality rather than the words alone.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "25ed63298fbe",
+    "end": 72,
+    "prefix": "",
+    "quote": "Before starting, agree on the scope of the substantive edit in the team.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an instruction about organising editorial work.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "648a94d24a36",
+    "end": 122,
+    "prefix": "",
+    "quote": "conduct a plain English review to check sentence length, replace complex words with simpler alternatives and remove jargon",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a possible substantive-editing task under 'The substantive edit can:', not a separate sentence-length or word-choice specification.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af7ba9cc3506",
+    "end": 75,
+    "prefix": "",
+    "quote": "check the design of the content to make sure it is the best possible format",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes an editor's review task without specifying a property a text checker can test.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d0a20444332b",
+    "end": 68,
+    "prefix": "",
+    "quote": "reorganise content to improve the flow of information and navigation",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a possible substantive-editing action, not an independent requirement for a particular organisation.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "83faebb522a2",
+    "end": 67,
+    "prefix": "",
+    "quote": "identify gaps in the content or any information that can be removed",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: tells an editor what to review.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8dfaef6cba1d",
+    "end": 87,
+    "prefix": "",
+    "quote": "reword content to make it easier to understand and to achieve consistent voice and tone",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes a possible editing intervention rather than specifying a required voice or tone.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "50c105203261",
+    "end": 55,
+    "prefix": "",
+    "quote": "check compliance with specific government requirements.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an instruction to check other requirements, not a statement of those requirements.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8213e1adf17b",
+    "end": 105,
+    "prefix": "",
+    "quote": "The style sheet is updated through a substantive edit to record any decisions that can inform a copyedit.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes maintaining an editorial working record.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2dd1d9b6665a",
+    "end": 53,
+    "prefix": "",
+    "quote": "Substantive editing is not rewriting or fact-checking",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the scope of an editing service; it does not prohibit particular wording.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "38b2053275f4",
+    "end": 89,
+    "prefix": "",
+    "quote": "write a significant amount of new content (but it can include advice to add more content)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Part of the definition of what substantive editing does not include, not a prohibition on new content.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "073e28aa67e5",
+    "end": 83,
+    "prefix": "",
+    "quote": "substantially rewrite to shorten text (but it can involve advice to delete content)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the scope of substantive editing, not an allowable length or rewriting rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f6fb0b3cb45c",
+    "end": 118,
+    "prefix": "",
+    "quote": "choose the right typeface or apply formatting styles (but can include checking bolded, italicised and underlined font)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines which production tasks are outside substantive editing.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "78d5f97d0fa0",
+    "end": 111,
+    "prefix": "",
+    "quote": "fact-check, such as checking names of people and places, dates, citations, quotes or links to external content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the scope of substantive editing; it does not exempt the content from accuracy requirements.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4e5a5cafdd70",
+    "end": 97,
+    "prefix": "",
+    "quote": "An editor can rewrite or fact-check content, but these are separate tasks to substantive editing.",
+    "start": 0,
+    "suffix": " They should happen before any e"
+   },
+   "note": "G-3: permits separate editorial tasks and clarifies their classification; nothing in the text can violate this permission.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4e5a5cafdd70",
+    "end": 143,
+    "prefix": "e tasks to substantive editing. ",
+    "quote": "They should happen before any editing begins.",
+    "start": 98,
+    "suffix": ""
+   },
+   "note": "G-5: a workflow-order recommendation for rewriting and fact-checking.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6ecff357221c",
+    "end": 68,
+    "prefix": "",
+    "quote": "Before starting, agree on the scope of the copyedit within the team.",
+    "start": 0,
+    "suffix": " An editor might identify substa"
+   },
+   "note": "G-5: an instruction about organising editorial work.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6ecff357221c",
+    "end": 207,
+    "prefix": "he content during the copyedit. ",
+    "quote": "The team should decide how it will address those issues.",
+    "start": 151,
+    "suffix": ""
+   },
+   "note": "G-5: tells the team to decide how to handle substantive issues discovered during copyediting.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "42b936fe24e6",
+    "end": 119,
+    "prefix": "",
+    "quote": "If there is any more substantive editing or rewriting after the copyedit, the content will need to be copyedited again.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: requires a workflow step, not a property observable in the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4e98f084ab11",
+    "end": 58,
+    "prefix": "",
+    "quote": "corrects issues with language in line with the style sheet",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a copyeditor's task; no particular style-sheet decision is supplied.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6bd033693607",
+    "end": 74,
+    "prefix": "",
+    "quote": "aligns the style of references and citations with agreed referencing style",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a copyeditor's task without specifying the agreed referencing style.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "87724754a113",
+    "end": 46,
+    "prefix": "",
+    "quote": "comments on inconsistencies in voice and tone.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes what a copyeditor comments on, not a separate rule requiring comments in the content.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "18a8a191939e",
+    "end": 58,
+    "prefix": "",
+    "quote": "A copyedit also checks for issues or inconsistencies with:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: introduces a review checklist rather than defining textual violations.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "30346b5a74f2",
+    "end": 71,
+    "prefix": "",
+    "quote": "The style sheet is updated during a copyedit to record style decisions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes maintenance of the editorial working record.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4a19e962ec37",
+    "end": 51,
+    "prefix": "",
+    "quote": "Copyediting is not substantive editing or rewriting",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the scope of copyediting, not a restriction on the resulting text.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dafa15a3b3c9",
+    "end": 82,
+    "prefix": "",
+    "quote": "restructure content (other than to make sentences clear and grammatically correct)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Part of the definition of what copyediting does not include.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a0fec212f4db",
+    "end": 33,
+    "prefix": "",
+    "quote": "write new content or shorten text",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines work outside copyediting; it does not prohibit adding or shortening content.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3bfe38e43287",
+    "end": 95,
+    "prefix": "",
+    "quote": "rewrite text to unify voice or edit for plain English (other than to deal with isolated issues)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the boundary between copyediting and substantive editing, not an exception to plain-language requirements.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "194af773824b",
+    "end": 21,
+    "prefix": "",
+    "quote": "format or design text",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Identifies a task outside copyediting.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2ca5991251bf",
+    "end": 10,
+    "prefix": "",
+    "quote": "fact-check",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Identifies a task outside copyediting, not an exemption from accuracy requirements.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "68c4196959a6",
+    "end": 105,
+    "prefix": "",
+    "quote": "check external links embedded in the content (other than a spot check in case there are systemic issues).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the scope of copyediting rather than prescribing link wording or validity.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "33535bb0f3a5",
+    "end": 79,
+    "prefix": "",
+    "quote": "Proofreaders do not make changes to content. Proofreaders query issues such as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs how proofreaders handle issues; it is not a property of the content being checked.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "875ca4902234",
+    "end": 87,
+    "prefix": "",
+    "quote": "The proofreader’s queries go to whoever is responsible for resolving particular issues.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes responsibility and routing in the proofreading workflow.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f34d565075a6",
+    "end": 156,
+    "prefix": "reading until no errors remain. ",
+    "quote": "Each time proofing corrections are made, the proofreader should check the content again.",
+    "start": 68,
+    "suffix": " Each check ensures there are no"
+   },
+   "note": "G-5: a repeated-check workflow requirement that cannot be established from the final text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "151da0aefeb6",
+    "end": 154,
+    "prefix": "s when there is no master copy. ",
+    "quote": "This requires an experienced proofreader, because there is no authorised version to compare against.",
+    "start": 54,
+    "suffix": ""
+   },
+   "note": "G-5: specifies staffing for blind proofreading, not a textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ab602f3f7ef7",
+    "end": 71,
+    "prefix": "",
+    "quote": "Proofreading is not editing and it is not a substitute for copyediting.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Distinguishes editorial processes; it does not define a violation in the resulting words.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cb2f9317648a",
+    "end": 46,
+    "prefix": "",
+    "quote": "for inconsistent language, spelling or grammar",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Under 'Proofreading does not include checking:', this defines task scope rather than permitting language errors.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1446f2c1de4e",
+    "end": 69,
+    "prefix": "",
+    "quote": "non-textual elements, such as the content of tables or illustrations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Part of the description of proofreading's scope, not a table-content rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c3c5d5299a01",
+    "end": 156,
+    "prefix": "s notice issues and query them. ",
+    "quote": "Proofreading is not a chance to have another round of editing, add more content, or add new functions to content.",
+    "start": 43,
+    "suffix": ""
+   },
+   "note": "G-5: limits activities at a production stage rather than forbidding particular content.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "969402dec856",
+    "end": 36,
+    "prefix": "",
+    "quote": "Proofreading is better with 2 people",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a staffing recommendation, not a rule about the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f2eea1a27ca1",
+    "end": 59,
+    "prefix": "",
+    "quote": "Proofreaders are most effective when working in teams of 2.",
+    "start": 0,
+    "suffix": " The team is:"
+   },
+   "note": "G-5: explains the recommended proofreading staffing arrangement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d6363f14d09a",
+    "end": 39,
+    "prefix": "",
+    "quote": "A style sheet includes decisions about:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the role and typical contents of a style sheet; the following list does not prescribe a dictionary, spelling variant or house-style choice.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d2f46e05e105",
+    "end": 98,
+    "prefix": "",
+    "quote": "It can also include any style decisions informed by user research on user needs and accessibility.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits additional style-sheet material without requiring it.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3995ce410490",
+    "end": 75,
+    "prefix": "",
+    "quote": "An editor adds to the style sheet as they edit, including elements such as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes recording decisions during editing; it does not state the spelling, capitalisation, grammar or punctuation choices to enforce.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "43ca128cd0e4",
+    "end": 125,
+    "prefix": "",
+    "quote": "Keeping a style sheet up to date means all team members can use the same style, making the content as consistent as possible.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: explains the benefit of maintaining an editorial tool, rather than adding another consistency rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e42da7a1c0e1",
+    "end": 234,
+    "prefix": "standards for editing practice. ",
+    "quote": "This resource sets out the corestandards that professional editors should meet.",
+    "start": 155,
+    "suffix": " It is the foundation for IPEd’s"
+   },
+   "note": "Describes an external professional-practice resource; no standards for the text are stated here.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/editing-and-proofreading.md",
+ "page_sha256": "2032a2771d6ce7ecdb269356fef8251ded61405c5e5ed68f2e133a6c67de23ca",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "6f29feeb3c89",
+    "note": "A user need concerning information in images, not a standalone rule about the supplied words.",
+    "quote": "I can understand any information contained in an image.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a81bbc28e2d8",
+    "note": "A user need concerning media alternatives; it does not specify a textual check.",
+    "quote": "I can access equivalent information to anything contained in a video or audio file.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f4b727c11148",
+    "note": "Concerns presentation behaviour rather than a property of the wording.",
+    "quote": "I can change the content's presentation without losing information or structure.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f9b8c7d0e185",
+    "note": "A navigation and orientation user need, not a specified text rule.",
+    "quote": "I can find and navigate the content and determine where I am on the webpage.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ac18c494cc86",
+    "note": "Concerns input and error-recovery functionality rather than the words alone.",
+    "quote": "I can avoid making any mistakes with my inputs, and correct any that I might make.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "25ed63298fbe",
+    "note": "G-5: an instruction about organising editorial work.",
+    "quote": "Before starting, agree on the scope of the substantive edit in the team.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "648a94d24a36",
+    "note": "G-5: a possible substantive-editing task under 'The substantive edit can:', not a separate sentence-length or word-choice specification.",
+    "quote": "conduct a plain English review to check sentence length, replace complex words with simpler alternatives and remove jargon",
+    "reason": "advice"
+   },
+   {
+    "block_id": "af7ba9cc3506",
+    "note": "G-5: describes an editor's review task without specifying a property a text checker can test.",
+    "quote": "check the design of the content to make sure it is the best possible format",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d0a20444332b",
+    "note": "G-5: a possible substantive-editing action, not an independent requirement for a particular organisation.",
+    "quote": "reorganise content to improve the flow of information and navigation",
+    "reason": "advice"
+   },
+   {
+    "block_id": "83faebb522a2",
+    "note": "G-5: tells an editor what to review.",
+    "quote": "identify gaps in the content or any information that can be removed",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8dfaef6cba1d",
+    "note": "G-5: describes a possible editing intervention rather than specifying a required voice or tone.",
+    "quote": "reword content to make it easier to understand and to achieve consistent voice and tone",
+    "reason": "advice"
+   },
+   {
+    "block_id": "50c105203261",
+    "note": "G-5: an instruction to check other requirements, not a statement of those requirements.",
+    "quote": "check compliance with specific government requirements.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8213e1adf17b",
+    "note": "G-5: describes maintaining an editorial working record.",
+    "quote": "The style sheet is updated through a substantive edit to record any decisions that can inform a copyedit.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2dd1d9b6665a",
+    "note": "Defines the scope of an editing service; it does not prohibit particular wording.",
+    "quote": "Substantive editing is not rewriting or fact-checking",
+    "reason": "description"
+   },
+   {
+    "block_id": "38b2053275f4",
+    "note": "Part of the definition of what substantive editing does not include, not a prohibition on new content.",
+    "quote": "write a significant amount of new content (but it can include advice to add more content)",
+    "reason": "description"
+   },
+   {
+    "block_id": "073e28aa67e5",
+    "note": "Defines the scope of substantive editing, not an allowable length or rewriting rule.",
+    "quote": "substantially rewrite to shorten text (but it can involve advice to delete content)",
+    "reason": "description"
+   },
+   {
+    "block_id": "f6fb0b3cb45c",
+    "note": "Defines which production tasks are outside substantive editing.",
+    "quote": "choose the right typeface or apply formatting styles (but can include checking bolded, italicised and underlined font)",
+    "reason": "description"
+   },
+   {
+    "block_id": "78d5f97d0fa0",
+    "note": "Defines the scope of substantive editing; it does not exempt the content from accuracy requirements.",
+    "quote": "fact-check, such as checking names of people and places, dates, citations, quotes or links to external content.",
+    "reason": "description"
+   },
+   {
+    "block_id": "4e5a5cafdd70",
+    "note": "G-3: permits separate editorial tasks and clarifies their classification; nothing in the text can violate this permission.",
+    "quote": "An editor can rewrite or fact-check content, but these are separate tasks to substantive editing.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "4e5a5cafdd70",
+    "note": "G-5: a workflow-order recommendation for rewriting and fact-checking.",
+    "quote": "They should happen before any editing begins.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6ecff357221c",
+    "note": "G-5: an instruction about organising editorial work.",
+    "quote": "Before starting, agree on the scope of the copyedit within the team.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6ecff357221c",
+    "note": "G-5: tells the team to decide how to handle substantive issues discovered during copyediting.",
+    "quote": "The team should decide how it will address those issues.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "42b936fe24e6",
+    "note": "G-5: requires a workflow step, not a property observable in the resulting text.",
+    "quote": "If there is any more substantive editing or rewriting after the copyedit, the content will need to be copyedited again.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4e98f084ab11",
+    "note": "Describes a copyeditor's task; no particular style-sheet decision is supplied.",
+    "quote": "corrects issues with language in line with the style sheet",
+    "reason": "description"
+   },
+   {
+    "block_id": "6bd033693607",
+    "note": "Describes a copyeditor's task without specifying the agreed referencing style.",
+    "quote": "aligns the style of references and citations with agreed referencing style",
+    "reason": "description"
+   },
+   {
+    "block_id": "87724754a113",
+    "note": "Describes what a copyeditor comments on, not a separate rule requiring comments in the content.",
+    "quote": "comments on inconsistencies in voice and tone.",
+    "reason": "description"
+   },
+   {
+    "block_id": "18a8a191939e",
+    "note": "G-5: introduces a review checklist rather than defining textual violations.",
+    "quote": "A copyedit also checks for issues or inconsistencies with:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "30346b5a74f2",
+    "note": "G-5: describes maintenance of the editorial working record.",
+    "quote": "The style sheet is updated during a copyedit to record style decisions.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4a19e962ec37",
+    "note": "Defines the scope of copyediting, not a restriction on the resulting text.",
+    "quote": "Copyediting is not substantive editing or rewriting",
+    "reason": "description"
+   },
+   {
+    "block_id": "dafa15a3b3c9",
+    "note": "Part of the definition of what copyediting does not include.",
+    "quote": "restructure content (other than to make sentences clear and grammatically correct)",
+    "reason": "description"
+   },
+   {
+    "block_id": "a0fec212f4db",
+    "note": "Defines work outside copyediting; it does not prohibit adding or shortening content.",
+    "quote": "write new content or shorten text",
+    "reason": "description"
+   },
+   {
+    "block_id": "3bfe38e43287",
+    "note": "Defines the boundary between copyediting and substantive editing, not an exception to plain-language requirements.",
+    "quote": "rewrite text to unify voice or edit for plain English (other than to deal with isolated issues)",
+    "reason": "description"
+   },
+   {
+    "block_id": "194af773824b",
+    "note": "Identifies a task outside copyediting.",
+    "quote": "format or design text",
+    "reason": "description"
+   },
+   {
+    "block_id": "2ca5991251bf",
+    "note": "Identifies a task outside copyediting, not an exemption from accuracy requirements.",
+    "quote": "fact-check",
+    "reason": "description"
+   },
+   {
+    "block_id": "68c4196959a6",
+    "note": "Defines the scope of copyediting rather than prescribing link wording or validity.",
+    "quote": "check external links embedded in the content (other than a spot check in case there are systemic issues).",
+    "reason": "description"
+   },
+   {
+    "block_id": "33535bb0f3a5",
+    "note": "G-5: directs how proofreaders handle issues; it is not a property of the content being checked.",
+    "quote": "Proofreaders do not make changes to content. Proofreaders query issues such as:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "875ca4902234",
+    "note": "G-5: describes responsibility and routing in the proofreading workflow.",
+    "quote": "The proofreader’s queries go to whoever is responsible for resolving particular issues.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f34d565075a6",
+    "note": "G-5: a repeated-check workflow requirement that cannot be established from the final text.",
+    "quote": "Each time proofing corrections are made, the proofreader should check the content again.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "151da0aefeb6",
+    "note": "G-5: specifies staffing for blind proofreading, not a textual property.",
+    "quote": "This requires an experienced proofreader, because there is no authorised version to compare against.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ab602f3f7ef7",
+    "note": "Distinguishes editorial processes; it does not define a violation in the resulting words.",
+    "quote": "Proofreading is not editing and it is not a substitute for copyediting.",
+    "reason": "description"
+   },
+   {
+    "block_id": "cb2f9317648a",
+    "note": "Under 'Proofreading does not include checking:', this defines task scope rather than permitting language errors.",
+    "quote": "for inconsistent language, spelling or grammar",
+    "reason": "description"
+   },
+   {
+    "block_id": "1446f2c1de4e",
+    "note": "Part of the description of proofreading's scope, not a table-content rule.",
+    "quote": "non-textual elements, such as the content of tables or illustrations.",
+    "reason": "description"
+   },
+   {
+    "block_id": "c3c5d5299a01",
+    "note": "G-5: limits activities at a production stage rather than forbidding particular content.",
+    "quote": "Proofreading is not a chance to have another round of editing, add more content, or add new functions to content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "969402dec856",
+    "note": "G-5: a staffing recommendation, not a rule about the text.",
+    "quote": "Proofreading is better with 2 people",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f2eea1a27ca1",
+    "note": "G-5: explains the recommended proofreading staffing arrangement.",
+    "quote": "Proofreaders are most effective when working in teams of 2.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d6363f14d09a",
+    "note": "Describes the role and typical contents of a style sheet; the following list does not prescribe a dictionary, spelling variant or house-style choice.",
+    "quote": "A style sheet includes decisions about:",
+    "reason": "description"
+   },
+   {
+    "block_id": "d2f46e05e105",
+    "note": "G-3: permits additional style-sheet material without requiring it.",
+    "quote": "It can also include any style decisions informed by user research on user needs and accessibility.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "3995ce410490",
+    "note": "G-5: describes recording decisions during editing; it does not state the spelling, capitalisation, grammar or punctuation choices to enforce.",
+    "quote": "An editor adds to the style sheet as they edit, including elements such as:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "43ca128cd0e4",
+    "note": "G-5: explains the benefit of maintaining an editorial tool, rather than adding another consistency rule.",
+    "quote": "Keeping a style sheet up to date means all team members can use the same style, making the content as consistent as possible.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e42da7a1c0e1",
+    "note": "Describes an external professional-practice resource; no standards for the text are stated here.",
+    "quote": "This resource sets out the corestandards that professional editors should meet.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4a35fc6a1ccd",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "0f602771fa06",
+      "quote": "You must make sure content is clear"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Make sure content uses plain language.",
+    "specification": "The page supplies no reading-level threshold or operational definition of plain language. Treat the general clarity statement as supporting this requirement, not as a second finding for the same language problem. Use the more specific unusual-expression and acronym rules for those defects.",
+    "unit": "paragraph",
+    "violation_condition": "The language is unnecessarily difficult for the intended audience to understand.",
+    "when": [
+     "Clarity is expressly mandatory for content subject to the Digital Service Standard."
+    ],
+    "why": "G-4 consolidates the overlapping clarity wording; the more specific vocabulary and acronym checks remain separate."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f68979da6fc",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "0f602771fa06",
+      "quote": "You must make sure content is clear, accurate and consistent to meet the Digital Service Standard:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "You must make sure content is consistent",
+    "specification": "The page requires consistency but does not specify which dimensions must be checked or how intentional variations should be distinguished from errors.",
+    "unit": "document",
+    "violation_condition": "Comparable parts of the content use inconsistent language or style without a contextual reason for the variation.",
+    "when": [],
+    "why": "G-4 consolidates the repeated consistency requirement; consistency is distinct from clarity, structure and correctness."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f68979da6fc",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "You must make sure content is consistent, has a clear structure and is error free to make it accessible for all users.",
+    "specification": "This item captures only the clear-structure requirement in the quoted sentence. The page does not define a test for structural clarity or prescribe a particular heading hierarchy.",
+    "unit": "document",
+    "violation_condition": "The content lacks a clear organisation or hierarchy through which users can follow its information.",
+    "when": [],
+    "why": "The grain test separates structural clarity from the sentence's independently checkable consistency and correctness requirements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f68979da6fc",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "0f602771fa06",
+      "quote": "You must make sure content is clear, accurate and consistent to meet the Digital Service Standard:"
+     },
+     {
+      "block_id": "ecc6728b291b",
+      "quote": "The master copy should be error-free so the proofreader can check for any introduced errors."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "You must make sure content is consistent, has a clear structure and is error free to make it accessible for all users.",
+    "specification": "This item captures the general accuracy and error-free requirement, not the separate consistency or structure requirements. The page does not define an error taxonomy or a factual-verification method, so it does not by itself specify an implementable correctness check.",
+    "unit": "document",
+    "violation_condition": "The content contains an error or inaccurate information.",
+    "when": [
+     "The approved master copy used for proofreading is also expressly expected to be error-free."
+    ],
+    "why": "G-4 consolidates accuracy and error-free wording; G-2 retains the master-copy application without creating a second correctness finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4a35fc6a1ccd",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid (or explain) unusual words, phrases and idioms.",
+    "specification": "Assess whether an expression is unusual for the intended audience rather than against a universal prohibited-word list. The page does not prescribe where its explanation must appear.",
+    "unit": "document",
+    "violation_condition": "An unusual word, phrase or idiom appears without an explanation that makes it understandable to the intended audience.",
+    "when": [
+     "An unusual word, phrase or idiom may be used if it is explained."
+    ],
+    "why": "G-2 and G-3 keep avoidance and the explanation exception together as one check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4a35fc6a1ccd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Expand all acronyms on their first use.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An acronym's first occurrence in the content has no expansion.",
+    "when": [
+     "Check the first use of each acronym in the content."
+    ],
+    "why": "The grain test keeps the concrete first-use expansion check separate from general plain-language advice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "da6859dfd0d8",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Make sure other content elements, including captions, transcripts, alt text, link text, headings and instructions are accessible to all users.",
+    "specification": "This is a high-level requirement about the accessibility of supporting text. The sentence does not define an operational accessibility test; the WCAG titles elsewhere on the page should not be expanded into unstated rules.",
+    "unit": "block",
+    "violation_condition": "A supporting textual element is inaccessible to users.",
+    "when": [
+     "Applies to captions, transcripts, alt text, link text, headings, instructions and comparable supporting textual elements."
+    ],
+    "why": "G-2 keeps the listed element types as cases of one accessibility requirement; this concerns text rather than the editing workflow."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "You must make sure content is consistent, has a clear structure and is error free to make it accessible for all users.",
+   "what": "rule",
+   "why": "the same span was returned twice"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "4a35fc6a1ccd",
+    "end": 38,
+    "prefix": "",
+    "quote": "Make sure content uses plain language.",
+    "start": 0,
+    "suffix": " This helps all users and is ess"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "0f602771fa06",
+     "end": 35,
+     "prefix": "",
+     "quote": "You must make sure content is clear",
+     "start": 0,
+     "suffix": ", accurate and consistent to mee"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page supplies no reading-level threshold or operational definition of plain language. Treat the general clarity statement as supporting this requirement, not as a second finding for the same language problem. Use the more specific unusual-expression and acronym rules for those defects.",
+    "unit": "paragraph",
+    "violation_condition": "The language is unnecessarily difficult for the intended audience to understand."
+   },
+   "when": [
+    "Clarity is expressly mandatory for content subject to the Digital Service Standard."
+   ],
+   "why": "G-4 consolidates the overlapping clarity wording; the more specific vocabulary and acronym checks remain separate."
+  },
+  {
+   "anchor": {
+    "block_id": "1f68979da6fc",
+    "end": 40,
+    "prefix": "",
+    "quote": "You must make sure content is consistent",
+    "start": 0,
+    "suffix": ", has a clear structure and is e"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "0f602771fa06",
+     "end": 98,
+     "prefix": "",
+     "quote": "You must make sure content is clear, accurate and consistent to meet the Digital Service Standard:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "The page requires consistency but does not specify which dimensions must be checked or how intentional variations should be distinguished from errors.",
+    "unit": "document",
+    "violation_condition": "Comparable parts of the content use inconsistent language or style without a contextual reason for the variation."
+   },
+   "when": [],
+   "why": "G-4 consolidates the repeated consistency requirement; consistency is distinct from clarity, structure and correctness."
+  },
+  {
+   "anchor": {
+    "block_id": "1f68979da6fc",
+    "end": 118,
+    "prefix": "",
+    "quote": "You must make sure content is consistent, has a clear structure and is error free to make it accessible for all users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "This item captures only the clear-structure requirement in the quoted sentence. The page does not define a test for structural clarity or prescribe a particular heading hierarchy.",
+    "unit": "document",
+    "violation_condition": "The content lacks a clear organisation or hierarchy through which users can follow its information."
+   },
+   "when": [],
+   "why": "The grain test separates structural clarity from the sentence's independently checkable consistency and correctness requirements."
+  },
+  {
+   "anchor": {
+    "block_id": "4a35fc6a1ccd",
+    "end": 140,
+    "prefix": "sers and is essential for some. ",
+    "quote": "Avoid (or explain) unusual words, phrases and idioms.",
+    "start": 87,
+    "suffix": " Expand all acronyms on their fi"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Assess whether an expression is unusual for the intended audience rather than against a universal prohibited-word list. The page does not prescribe where its explanation must appear.",
+    "unit": "document",
+    "violation_condition": "An unusual word, phrase or idiom appears without an explanation that makes it understandable to the intended audience."
+   },
+   "when": [
+    "An unusual word, phrase or idiom may be used if it is explained."
+   ],
+   "why": "G-2 and G-3 keep avoidance and the explanation exception together as one check."
+  },
+  {
+   "anchor": {
+    "block_id": "4a35fc6a1ccd",
+    "end": 180,
+    "prefix": "sual words, phrases and idioms. ",
+    "quote": "Expand all acronyms on their first use.",
+    "start": 141,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An acronym's first occurrence in the content has no expansion."
+   },
+   "when": [
+    "Check the first use of each acronym in the content."
+   ],
+   "why": "The grain test keeps the concrete first-use expansion check separate from general plain-language advice."
+  },
+  {
+   "anchor": {
+    "block_id": "da6859dfd0d8",
+    "end": 142,
+    "prefix": "",
+    "quote": "Make sure other content elements, including captions, transcripts, alt text, link text, headings and instructions are accessible to all users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This is a high-level requirement about the accessibility of supporting text. The sentence does not define an operational accessibility test; the WCAG titles elsewhere on the page should not be expanded into unstated rules.",
+    "unit": "block",
+    "violation_condition": "A supporting textual element is inaccessible to users."
+   },
+   "when": [
+    "Applies to captions, transcripts, alt text, link text, headings, instructions and comparable supporting textual elements."
+   ],
+   "why": "G-2 keeps the listed element types as cases of one accessibility requirement; this concerns text rather than the editing workflow."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 6531,
+  "output_tokens": 12400,
+  "reasoning_tokens": 7441
+ }
+}

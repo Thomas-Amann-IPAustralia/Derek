@@ -1,0 +1,4323 @@
+{
+ "effort": "high",
+ "input_sha256": "af89cb4b3da8c8ce491298c519c4ba5408832b128a41428357904f58d69633ac",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "417450013860",
+    "end": 135,
+    "prefix": "",
+    "quote": "Refer to members of Australian parliaments and councils in the correct style. Follow these rules to address and title people correctly.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: general direction to follow the page, not an independently testable textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8cc760aa3604",
+    "end": 79,
+    "prefix": "",
+    "quote": "Capitalise titles for current senators and members of the Australian Parliament",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed into the parliamentary-title capitalisation check under G-2 and G-4.",
+   "reason": "restatement",
+   "seed_uid": "b4baf0f1590adce8"
+  },
+  {
+   "anchor": {
+    "block_id": "7d0f85fcb74e",
+    "end": 75,
+    "prefix": "",
+    "quote": "Address certain office holders of the Australian Parliament as ‘Honourable’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body identifies the entitled office holders; the heading is absorbed into that rule under G-4.",
+   "reason": "restatement",
+   "seed_uid": "12c31937de86b256"
+  },
+  {
+   "anchor": {
+    "block_id": "e3b3f7d554e8",
+    "end": 71,
+    "prefix": "",
+    "quote": "Use the appropriate form for members of state and territory parliaments",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups post-nominals, additional honours, correspondence and office-specific forms of address.",
+   "reason": "section",
+   "seed_uid": "218a1a8e2b750188"
+  },
+  {
+   "anchor": {
+    "block_id": "5a184832669c",
+    "end": 52,
+    "prefix": "",
+    "quote": "Number of chambers in state and territory parliament",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes parliamentary organisation; it does not prescribe a property of the writing.",
+   "reason": "description",
+   "seed_uid": "63dfa491879b1588"
+  },
+  {
+   "anchor": {
+    "block_id": "c23f7f4bc631",
+    "end": 28,
+    "prefix": "",
+    "quote": "Use the correct post-nominal",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed into the membership-post-nominal check, whose conditions supply the actual jurisdiction-and-chamber mapping.",
+   "reason": "restatement",
+   "seed_uid": "f23c9df5652a0ca9"
+  },
+  {
+   "anchor": {
+    "block_id": "4225c7d30a38",
+    "end": 51,
+    "prefix": "",
+    "quote": "Follow these rules to use the correct post-nominal.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: introduces the following rules without adding an independently checkable requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c7b8080a60ee",
+    "end": 64,
+    "prefix": "",
+    "quote": "A parliamentarian may have other post-nominals after their name.",
+    "start": 0,
+    "suffix": " These can include:"
+   },
+   "note": "G-3: additional post-nominals are optional. Their form, if included, is governed by the following rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2fcd62ff17f5",
+    "end": 119,
+    "prefix": "e way the parliamentarian does. ",
+    "quote": "If you’re unsure, check with the parliamentarian’s office.",
+    "start": 61,
+    "suffix": ""
+   },
+   "note": "G-5: a verification action for the writer, not a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b6a07e5d98d7",
+    "end": 74,
+    "prefix": "",
+    "quote": "Address certain office holders in state and NT parliaments as ‘Honourable’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed into the Honourable-entitlement check; the body supplies its state and NT conditions.",
+   "reason": "restatement",
+   "seed_uid": "4dc5cd11d20d85e4"
+  },
+  {
+   "anchor": {
+    "block_id": "6282a1100b66",
+    "end": 32,
+    "prefix": "",
+    "quote": "Address state premiers correctly",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups a full-address template, verification advice, and formal and less formal correspondence conventions.",
+   "reason": "section",
+   "seed_uid": "96e6b9228b0f6e79"
+  },
+  {
+   "anchor": {
+    "block_id": "860fa0086ba9",
+    "end": 140,
+    "prefix": "",
+    "quote": "Check the premier’s website to see whether they include other post-nominals in their title, such as academic or professional qualifications.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: tells the writer where to verify additional post-nominals.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fffcb5abf94f",
+    "end": 46,
+    "prefix": "",
+    "quote": "Address the chief minister of the NT correctly",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the ordered full-address template and correspondence conventions.",
+   "reason": "section",
+   "seed_uid": "655e9756d03cc95a"
+  },
+  {
+   "anchor": {
+    "block_id": "ce4d585f7ef0",
+    "end": 64,
+    "prefix": "",
+    "quote": "Address the chief minister of the ACT with their preferred title",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The ordered body template supplies the actionable wording; the preferred personal title is retained as its ACT condition.",
+   "reason": "restatement",
+   "seed_uid": "a1fe9afc3370b2ff"
+  },
+  {
+   "anchor": {
+    "block_id": "e16a6ac04474",
+    "end": 70,
+    "prefix": "",
+    "quote": "Address mayors and members of local governments with the correct title",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups civic styles, personal prefixes, punctuation, local office titles and correspondence conventions.",
+   "reason": "section",
+   "seed_uid": "d9e7f726f326d437"
+  },
+  {
+   "anchor": {
+    "block_id": "64c42ed5f863",
+    "end": 77,
+    "prefix": "",
+    "quote": "Address members of local governments in urban and regional areas differently.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the distinctions specified by the following rules; it supplies no additional check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fc35e11d63cf",
+    "end": 141,
+    "prefix": "",
+    "quote": "Check the current title of a mayor or local government member to ensure accuracy. Check with the mayor’s or member’s office if you’re unsure.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: verification actions for the writer.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e7784d6300ab",
+    "end": 127,
+    "prefix": "",
+    "quote": "In emails and letters, you can use either the full form ‘Right Honourable’ or its shortened form ‘Rt Hon’ (without full stops).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: the choice of full or shortened form is a permission recorded on the civic-title rule. The prescribed abbreviation and absence of full stops are retained in the abbreviation check.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/titles-honours-forms-address/parliaments-and-councils.md",
+ "page_sha256": "20e69cf6ca72b1bb5f901b744dfc26f02719d8c207b6465899489882a6145028",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "417450013860",
+    "note": "G-5: general direction to follow the page, not an independently testable textual property.",
+    "quote": "Refer to members of Australian parliaments and councils in the correct style. Follow these rules to address and title people correctly.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8cc760aa3604",
+    "note": "Absorbed into the parliamentary-title capitalisation check under G-2 and G-4.",
+    "quote": "Capitalise titles for current senators and members of the Australian Parliament",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7d0f85fcb74e",
+    "note": "The body identifies the entitled office holders; the heading is absorbed into that rule under G-4.",
+    "quote": "Address certain office holders of the Australian Parliament as ‘Honourable’",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e3b3f7d554e8",
+    "note": "G-1: groups post-nominals, additional honours, correspondence and office-specific forms of address.",
+    "quote": "Use the appropriate form for members of state and territory parliaments",
+    "reason": "section"
+   },
+   {
+    "block_id": "5a184832669c",
+    "note": "Describes parliamentary organisation; it does not prescribe a property of the writing.",
+    "quote": "Number of chambers in state and territory parliament",
+    "reason": "description"
+   },
+   {
+    "block_id": "c23f7f4bc631",
+    "note": "Absorbed into the membership-post-nominal check, whose conditions supply the actual jurisdiction-and-chamber mapping.",
+    "quote": "Use the correct post-nominal",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4225c7d30a38",
+    "note": "G-5: introduces the following rules without adding an independently checkable requirement.",
+    "quote": "Follow these rules to use the correct post-nominal.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c7b8080a60ee",
+    "note": "G-3: additional post-nominals are optional. Their form, if included, is governed by the following rule.",
+    "quote": "A parliamentarian may have other post-nominals after their name.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "2fcd62ff17f5",
+    "note": "G-5: a verification action for the writer, not a property of the resulting text.",
+    "quote": "If you’re unsure, check with the parliamentarian’s office.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b6a07e5d98d7",
+    "note": "Absorbed into the Honourable-entitlement check; the body supplies its state and NT conditions.",
+    "quote": "Address certain office holders in state and NT parliaments as ‘Honourable’",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6282a1100b66",
+    "note": "G-1: groups a full-address template, verification advice, and formal and less formal correspondence conventions.",
+    "quote": "Address state premiers correctly",
+    "reason": "section"
+   },
+   {
+    "block_id": "860fa0086ba9",
+    "note": "G-5: tells the writer where to verify additional post-nominals.",
+    "quote": "Check the premier’s website to see whether they include other post-nominals in their title, such as academic or professional qualifications.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "fffcb5abf94f",
+    "note": "G-1: groups the ordered full-address template and correspondence conventions.",
+    "quote": "Address the chief minister of the NT correctly",
+    "reason": "section"
+   },
+   {
+    "block_id": "ce4d585f7ef0",
+    "note": "The ordered body template supplies the actionable wording; the preferred personal title is retained as its ACT condition.",
+    "quote": "Address the chief minister of the ACT with their preferred title",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e16a6ac04474",
+    "note": "G-1: groups civic styles, personal prefixes, punctuation, local office titles and correspondence conventions.",
+    "quote": "Address mayors and members of local governments with the correct title",
+    "reason": "section"
+   },
+   {
+    "block_id": "64c42ed5f863",
+    "note": "Introduces the distinctions specified by the following rules; it supplies no additional check.",
+    "quote": "Address members of local governments in urban and regional areas differently.",
+    "reason": "section"
+   },
+   {
+    "block_id": "fc35e11d63cf",
+    "note": "G-5: verification actions for the writer.",
+    "quote": "Check the current title of a mayor or local government member to ensure accuracy. Check with the mayor’s or member’s office if you’re unsure.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e7784d6300ab",
+    "note": "G-3: the choice of full or shortened form is a permission recorded on the civic-title rule. The prescribed abbreviation and absence of full stops are retained in the abbreviation check.",
+    "quote": "In emails and letters, you can use either the full form ‘Right Honourable’ or its shortened form ‘Rt Hon’ (without full stops).",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "def7fc2c4816",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "076bd2fb34f1",
+      "quote": "Capitalise the titles of the current holders of the positions of:"
+     },
+     {
+      "block_id": "f3403e5e8b43",
+      "quote": "Prime Minister"
+     },
+     {
+      "block_id": "cf510284d3a5",
+      "quote": "Treasurer."
+     },
+     {
+      "block_id": "0208c55ff879",
+      "quote": "Do this even when the titles are abbreviated."
+     },
+     {
+      "block_id": "bcfa193a8a7f",
+      "quote": "If referencing prime ministers or treasurers generically, use lower case."
+     },
+     {
+      "block_id": "ff74a5590da8",
+      "quote": "Use lower case letters for former prime ministers and treasurers of Australia."
+     },
+     {
+      "block_id": "8cc760aa3604",
+      "quote": "Capitalise titles for current senators and members of the Australian Parliament"
+     },
+     {
+      "block_id": "a91ceb1ab4f6",
+      "quote": "Write these titles as follows:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Current office holder.",
+      "parts": [
+       {
+        "block_id": "32101b70ec43",
+        "quote": "The Prime Minister announced the new initiative this morning."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Abbreviated title.",
+      "parts": [
+       {
+        "block_id": "070020c535ba",
+        "quote": "The PM announced the new initiative this morning."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Generic reference.",
+      "parts": [
+       {
+        "block_id": "294d5793fa2c",
+        "quote": "Terms of office vary for prime ministers around the world."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Current office holder.",
+      "parts": [
+       {
+        "block_id": "1d5ad11a2dae",
+        "quote": "The Treasurer will present the mid-year report tomorrow."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Generic reference.",
+      "parts": [
+       {
+        "block_id": "4cc5aa568b7d",
+        "quote": "In many countries treasurers are preparing responses to this latest development."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former office holder.",
+      "parts": [
+       {
+        "block_id": "c68c8fcfd92a",
+        "quote": "Alfred Deakin served 3 terms as prime minister of Australia."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former office holder.",
+      "parts": [
+       {
+        "block_id": "c06bfeb02267",
+        "quote": "Australia’s first female prime minister was Julia Gillard, who took office in 2010."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former office holder.",
+      "parts": [
+       {
+        "block_id": "f60293b4a9f2",
+        "quote": "Peter Costello remains the longest-serving treasurer in Australian history."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Capitalise the titles of the current prime minister and treasurer",
+    "specification": "Interpret the capitalisation instruction as applying to titles identifying particular current office holders, not to generic role descriptions such as the lower-case plurals in the list of parliamentary website links. The explicit lower-case instructions for generic and former office holders concern prime ministers and treasurers.",
+    "unit": "sentence",
+    "violation_condition": "An official title identifying a current Australian parliamentary office holder is incorrectly lower-cased, or ‘prime minister’ or ‘treasurer’ is capitalised when used generically or for a former Australian office holder.",
+    "when": [
+     "Capitalise the titles of the current Australian Prime Minister and Treasurer, including abbreviated forms.",
+     "Use lower case for generic references to prime ministers and treasurers.",
+     "Use lower case for former Australian prime ministers and treasurers.",
+     "Capitalise titles identifying current senators and members of the Australian Parliament."
+    ],
+    "why": "G-2 combines office-holder and generic-reference conditions for the same capitalisation check; G-4 avoids duplicate heading and body rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a3d84ba8b44f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Title precedes the given name.",
+      "parts": [
+       {
+        "block_id": "e9798886b84d",
+        "quote": "Senator Claire Chandler"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "People elected to the upper house take the title ‘Senator’ before their given name.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A current federal senator’s name in a form of address lacks the title ‘Senator’ before the given name, or places that title after the name.",
+    "when": [
+     "Applies to senators in the Australian Parliament.",
+     "Checks the presence and position of the title, rather than its capitalisation."
+    ],
+    "why": "This is a distinct title-placement check, not merely a restatement of the capitalisation heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e7f770854b86",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "440e75044261",
+      "quote": "In formal emails and letters, address members of state and territory parliaments with the relevant post-nominal after their name."
+     },
+     {
+      "block_id": "c23f7f4bc631",
+      "quote": "Use the correct post-nominal"
+     },
+     {
+      "block_id": "f0dc575db053",
+      "quote": "Members of state and territory parliaments use the post-nominal:"
+     },
+     {
+      "block_id": "1714e4a05b0f",
+      "quote": "MLC (Member of the Legislative Council)"
+     },
+     {
+      "block_id": "c8ebdac6806a",
+      "quote": "MLA (Member of the Legislative Assembly)"
+     },
+     {
+      "block_id": "cc990b1636c1",
+      "quote": "MP (Member of the Legislative Assembly or Member of the House of Assembly)."
+     },
+     {
+      "block_id": "439c903b2a1f",
+      "quote": "All bicameral parliaments use the post-nominal 'MLC' for members of their upper houses."
+     },
+     {
+      "block_id": "30dda4e614c5",
+      "quote": "Use MLC for members of the Legislative Council of:"
+     },
+     {
+      "block_id": "39e6874e1de3",
+      "quote": "NSW"
+     },
+     {
+      "block_id": "39dd0e0456c7",
+      "quote": "SA"
+     },
+     {
+      "block_id": "a47d60f29bb1",
+      "quote": "Tas"
+     },
+     {
+      "block_id": "b5395ae697ba",
+      "quote": "Vic"
+     },
+     {
+      "block_id": "4c82cf375ccd",
+      "quote": "WA."
+     },
+     {
+      "block_id": "d46fb59ab28a",
+      "quote": "Use MLA for members of the Legislative Assembly of:"
+     },
+     {
+      "block_id": "9daed64f9e13",
+      "quote": "ACT"
+     },
+     {
+      "block_id": "6e5089ff8ddf",
+      "quote": "NT"
+     },
+     {
+      "block_id": "0000b9724a41",
+      "quote": "WA."
+     },
+     {
+      "block_id": "dae4b90b0a66",
+      "quote": "Use MP for members of the Legislative Assembly of:"
+     },
+     {
+      "block_id": "88dfe653951c",
+      "quote": "NSW"
+     },
+     {
+      "block_id": "bd6343e32db1",
+      "quote": "Qld"
+     },
+     {
+      "block_id": "ce4611d0dbb8",
+      "quote": "Vic."
+     },
+     {
+      "block_id": "b545ec642a5b",
+      "quote": "Use MP for members of the House of Assembly of:"
+     },
+     {
+      "block_id": "36051ee46e1a",
+      "quote": "SA"
+     },
+     {
+      "block_id": "50e98ce3ea5d",
+      "quote": "Tas."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Federal House of Representatives.",
+      "parts": [
+       {
+        "block_id": "422876ef2e6b",
+        "quote": "Ms Zali Steggall OAM MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Legislative Council.",
+      "parts": [
+       {
+        "block_id": "94158a6f462f",
+        "quote": "The Hon Nick Goiran MLC"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "ACT Legislative Assembly.",
+      "parts": [
+       {
+        "block_id": "7cc00734bedf",
+        "quote": "Ms Jo Clay MLA"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Victorian Legislative Assembly.",
+      "parts": [
+       {
+        "block_id": "c44d635df3b6",
+        "quote": "Mr Danny O'Brien MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Queensland Legislative Assembly.",
+      "parts": [
+       {
+        "block_id": "26a270fabeb9",
+        "quote": "Dr Barbara O'Shea MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "South Australian House of Assembly.",
+      "parts": [
+       {
+        "block_id": "e06da14a8371",
+        "quote": "Mr Nick McBride MP"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Members of the House of Representatives take the initialism ‘MP’ after their name.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A parliamentary name requiring a membership post-nominal lacks the applicable post-nominal after the name, or uses one that does not match the parliament and chamber.",
+    "when": [
+     "Federal House of Representatives members take MP after their name.",
+     "Formal emails and letters to state and territory parliamentarians require the relevant membership post-nominal after the name.",
+     "Use MLC for Legislative Council members in NSW, SA, Tas, Vic and WA.",
+     "Use MLA for Legislative Assembly members in the ACT, NT and WA.",
+     "Use MP for Legislative Assembly members in NSW, Qld and Vic.",
+     "Use MP for House of Assembly members in SA and Tas.",
+     "Whenever a state or territory parliamentary membership post-nominal is supplied, its form must match this jurisdiction-and-chamber mapping."
+    ],
+    "why": "G-2 keeps parliamentary post-nominal selection in one check with jurisdiction and chamber conditions; G-4 absorbs the summary heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e7f770854b86",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "MP follows OAM.",
+      "parts": [
+       {
+        "block_id": "422876ef2e6b",
+        "quote": "Ms Zali Steggall OAM MP"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write it after any other post-nominals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A federal House of Representatives member’s MP appears before another post-nominal belonging to that person.",
+    "when": [
+     "Applies when a federal House of Representatives member has other post-nominals as well as MP."
+    ],
+    "why": "The order of an existing MP is a different finding from a missing or incorrect membership post-nominal."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e7f770854b86",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No comma before or between post-nominals.",
+      "parts": [
+       {
+        "block_id": "422876ef2e6b",
+        "quote": "Ms Zali Steggall OAM MP"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use commas before or between post-nominals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma separates a person’s name from their post-nominals or separates two of their post-nominals.",
+    "when": [
+     "Do not treat a comma after the final post-nominal introducing an office title as a comma between post-nominals."
+    ],
+    "why": "The punctuation prohibition is independently actionable and is not the post-nominal selection or ordering rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3f915637bbe2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7d0f85fcb74e",
+      "quote": "Address certain office holders of the Australian Parliament as ‘Honourable’"
+     },
+     {
+      "block_id": "3f915637bbe2",
+      "quote": "They retain the title for life."
+     },
+     {
+      "block_id": "a6a032d9eed1",
+      "quote": "The President of the Senate and the Speaker of the House of Representatives (the presiding officers) use the title ‘Honourable’."
+     },
+     {
+      "block_id": "9a81b02b4cb7",
+      "quote": "‘Honourable’ is also given to members of the Australian Parliament who are:"
+     },
+     {
+      "block_id": "6c382f8e9cf9",
+      "quote": "former members of state ministries"
+     },
+     {
+      "block_id": "6de84e463813",
+      "quote": "former presiding officers of state parliaments."
+     },
+     {
+      "block_id": "b6a07e5d98d7",
+      "quote": "Address certain office holders in state and NT parliaments as ‘Honourable’"
+     },
+     {
+      "block_id": "d109772353de",
+      "quote": "Use ‘Honourable’ when addressing all members of the executive councils of the states and the NT:"
+     },
+     {
+      "block_id": "a96f194facd8",
+      "quote": "premiers and ministers in all states"
+     },
+     {
+      "block_id": "306ffc7a9a43",
+      "quote": "chief minister and ministers in the NT"
+     },
+     {
+      "block_id": "435f4b41e297",
+      "quote": "former ministers in all states and the NT."
+     },
+     {
+      "block_id": "2c01581e9b9c",
+      "quote": "Use ‘Honourable’ when addressing these parliamentarians:"
+     },
+     {
+      "block_id": "2ceddc69a6eb",
+      "quote": "members of all state legislative councils except in Victoria"
+     },
+     {
+      "block_id": "29c27426c5ea",
+      "quote": "Leader of the Opposition in Tasmania"
+     },
+     {
+      "block_id": "d160987a8fbe",
+      "quote": "presidents of all legislative councils"
+     },
+     {
+      "block_id": "4f03627041d5",
+      "quote": "speakers of all parliaments except in the ACT."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Serving federal minister.",
+      "parts": [
+       {
+        "block_id": "8bf8b9c06553",
+        "quote": "The Hon Chris Bowen MP, Minister for Climate Change and Energy"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former federal minister.",
+      "parts": [
+       {
+        "block_id": "c5150a8befcd",
+        "quote": "The Hon Darren Chester MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former assistant minister.",
+      "parts": [
+       {
+        "block_id": "a3e6ee1b5569",
+        "quote": "The Hon Michelle Landry MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Federal presiding officer.",
+      "parts": [
+       {
+        "block_id": "4cf40509e659",
+        "quote": "Senator the Hon Sue Lines, President of the Senate"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Federal presiding officer.",
+      "parts": [
+       {
+        "block_id": "67a99b1ac1cc",
+        "quote": "The Hon Milton Dick MP, Speaker of the House of Representatives"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former state minister.",
+      "parts": [
+       {
+        "block_id": "74839554e62f",
+        "quote": "The Hon Bob Katter MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "State Legislative Council president.",
+      "parts": [
+       {
+        "block_id": "2199f0ff8553",
+        "quote": "NSW: The Hon Benjamin Cameron Franklin MLC, President of the Legislative Council"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "NT speaker.",
+      "parts": [
+       {
+        "block_id": "af182bcd2bec",
+        "quote": "NT: The Hon Robyn Lambley MLA, Speaker of the Legislative Assembly"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "State minister.",
+      "parts": [
+       {
+        "block_id": "4c9bfbb132af",
+        "quote": "Qld: The Hon John-Paul Langbroek MP, Minister for Education and the Arts"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "State Legislative Council member.",
+      "parts": [
+       {
+        "block_id": "2157e98dd078",
+        "quote": "SA: The Hon Jing Shyuan Lee MLC"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Tasmanian Leader of the Opposition.",
+      "parts": [
+       {
+        "block_id": "a33dbacba9fb",
+        "quote": "Tas: The Hon Joshua Willie MP, Leader of the Opposition"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "State premier.",
+      "parts": [
+       {
+        "block_id": "7fe3116788d5",
+        "quote": "Vic: The Hon Jacinta Allan MP, Premier of Victoria"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "State Legislative Council member.",
+      "parts": [
+       {
+        "block_id": "27242628f1f0",
+        "quote": "WA: The Hon Maryka Groenewald MLC"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the title ‘Honourable’ for ministers (including the prime minister) and parliamentary secretaries in the Australian Parliament.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A form of address for an office holder in one of the specified entitled categories omits ‘Honourable’ or its permitted abbreviation ‘Hon’.",
+    "when": [
+     "Federal ministers, including the prime minister, and parliamentary secretaries receive the title and retain it for life.",
+     "The federal examples also illustrate serving and former assistant ministers.",
+     "The President of the Senate and Speaker of the House of Representatives receive the title.",
+     "Federal parliamentarians who are former state ministers or former presiding officers of state parliaments receive the title.",
+     "State premiers and ministers, the NT chief minister and ministers, and former ministers in all states and the NT receive the title.",
+     "State Legislative Council members receive the title except in Victoria.",
+     "The Tasmanian Leader of the Opposition, all Legislative Council presidents, and parliamentary speakers except in the ACT receive the title.",
+     "The full title and the abbreviation Hon are alternatives; this rule does not require abbreviation."
+    ],
+    "why": "G-2 treats the entitled offices and lifetime-retention provision as conditions of one Honourable-title check, avoiding overlapping eligibility rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6a25ad621ef5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e7784d6300ab",
+      "quote": "In emails and letters, you can use either the full form ‘Right Honourable’ or its shortened form ‘Rt Hon’ (without full stops)."
+     },
+     {
+      "block_id": "3e01b7d2007d",
+      "quote": "The abbreviation for ‘President’ is ‘Pres’ without a full stop"
+     },
+     {
+      "block_id": "c7c438a02595",
+      "quote": "The abbreviation for ‘Alderman’ is ‘Ald’ without a full stop."
+     },
+     {
+      "block_id": "50a13670b312",
+      "quote": "The abbreviation for ‘Councillor’ is ‘Cr’ without a full stop."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Hon has no full stop.",
+      "parts": [
+       {
+        "block_id": "c5150a8befcd",
+        "quote": "The Hon Darren Chester MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Rt Hon has no full stops.",
+      "parts": [
+       {
+        "block_id": "2f7d642a48a6",
+        "quote": "The Rt Hon the Lord Mayor of Hobart, Councillor Anna Reynolds"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Ald has no full stop.",
+      "parts": [
+       {
+        "block_id": "4be6b1537ea6",
+        "quote": "Ald Miller"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Cr has no full stop.",
+      "parts": [
+       {
+        "block_id": "d3d00522cfe7",
+        "quote": "Cr Brown"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The abbreviation for ‘Honourable’ is ‘Hon’ without a full stop.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "One of the specified official titles is abbreviated using an incorrect short form or a full stop, such as ‘Hon.’, ‘Rt. Hon.’, ‘Pres.’, ‘Ald.’ or ‘Cr.’.",
+    "when": [
+     "The specified abbreviations are Hon for Honourable, Rt Hon for Right Honourable, Pres for President, Ald for Alderman and Cr for Councillor.",
+     "The permission to use Rt Hon is stated for emails and letters to lord mayors.",
+     "This rule checks an abbreviation when used; it does not require replacing a full title with an abbreviation.",
+     "The separate preference for President over Pres still applies."
+    ],
+    "why": "G-2 consolidates the prescribed abbreviation forms into one lookup check; G-3 preserves the choice to use full titles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "70a5369d9e16",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Serving minister.",
+      "parts": [
+       {
+        "block_id": "277b1237df30",
+        "quote": "Senator the Hon Penny Wong, Minister for Foreign Affairs"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former minister.",
+      "parts": [
+       {
+        "block_id": "99c103ab1f41",
+        "quote": "Senator the Hon Bridget McKenzie"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Former assistant minister.",
+      "parts": [
+       {
+        "block_id": "18717ef238aa",
+        "quote": "Senator the Hon Jonathon Duniam"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the title ‘Senator’ before ‘the Honourable’ if the minister or parliamentary secretary is a member of the Senate.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A federal senator entitled to Honourable has the title sequence reversed or otherwise lacks ‘Senator’ before ‘the Honourable’ or ‘the Hon’.",
+    "when": [
+     "Applies to federal ministers and parliamentary secretaries who are senators.",
+     "The examples include senators retaining Honourable after ministerial or assistant ministerial service.",
+     "Hon is a permitted abbreviation of Honourable."
+    ],
+    "why": "The relative order of two titles is independently checkable from entitlement to either title."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "41eef0ac83cf",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "25a516a84979",
+      "quote": "Open with ‘My dear Minister’."
+     },
+     {
+      "block_id": "29c714a57004",
+      "quote": "Open with ‘Dear Ms’ (or ‘Mr’, ‘Mrs’, ‘Mx’, ‘Dr’ and so on)."
+     },
+     {
+      "block_id": "b9ee63c70e08",
+      "quote": "Open with ‘Dear Mr’ (or ‘Ms’, ‘Mrs’, ‘Mx’, ‘Dr’ and so on)."
+     },
+     {
+      "block_id": "4f7bd53d8424",
+      "quote": "Open with ‘Dear Premier’."
+     },
+     {
+      "block_id": "d9f4f43569fe",
+      "quote": "Open with ‘My dear Premier’."
+     },
+     {
+      "block_id": "4cb81011976e",
+      "quote": "Open with ‘Dear Chief Minister’."
+     },
+     {
+      "block_id": "c7d559c9814d",
+      "quote": "Open with ‘Dear Chief Minister’."
+     },
+     {
+      "block_id": "032de5258a2d",
+      "quote": "Open with ‘Dear Chief Minister’."
+     },
+     {
+      "block_id": "f8149ee55363",
+      "quote": "Open with ‘Dear Chief Minister’."
+     },
+     {
+      "block_id": "90d2fc12dbea",
+      "quote": "Open with ‘Dear Lord Mayor’."
+     },
+     {
+      "block_id": "174f82b79785",
+      "quote": "Open with ‘Dear Mayor’ (or ‘Dear Lord Mayor’ if applicable)."
+     },
+     {
+      "block_id": "d99d22fd5b13",
+      "quote": "Open with ‘Dear President’, ‘Dear Alderman’ or ‘Dear Councillor’ as appropriate."
+     },
+     {
+      "block_id": "632457b84bdb",
+      "quote": "Open with ‘Dear President’, ‘Dear Alderman’ or ‘Dear Councillor [family name]’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Open with ‘Dear Minister’.",
+    "specification": "Determine recipient role and formal or less formal correspondence from document context or supplied metadata. Do not invent a linguistic threshold for formality.",
+    "unit": "document",
+    "violation_condition": "Correspondence to one of the specified office holders lacks the opening appropriate to the recipient’s office and the stated level of formality.",
+    "when": [
+     "For a federal minister, use Dear Minister in formal emails and letters and My dear Minister in less formal correspondence.",
+     "For an ordinary state or territory parliamentarian, use Dear with the applicable personal title, such as Ms, Mr, Mrs, Mx or Dr, in formal and less formal correspondence.",
+     "For a state premier, use Dear Premier formally and My dear Premier less formally.",
+     "For either territory chief minister, use Dear Chief Minister in formal and less formal correspondence.",
+     "For a capital-city lord mayor, use Dear Lord Mayor.",
+     "For other mayors, use Dear Mayor, or Dear Lord Mayor where applicable.",
+     "For a shire president, alderman or councillor in formal emails and letters, use Dear President, Dear Alderman or Dear Councillor as appropriate.",
+     "For less formal correspondence to those local office holders, the specified openings are Dear President, Dear Alderman or Dear Councillor followed by the family name in the councillor form.",
+     "Apply office-specific openings in preference to the general state-or-territory-member opening."
+    ],
+    "why": "G-2 makes recipient office and formality conditions of one correspondence-opening check rather than separate overlapping salutation rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "25487e0230a7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "fc6eb7b533d2",
+      "quote": "Conclude with ‘Yours sincerely’."
+     },
+     {
+      "block_id": "f91b0e87834a",
+      "quote": "Conclude with ‘Yours faithfully’."
+     },
+     {
+      "block_id": "4e32725dba9c",
+      "quote": "Conclude with ‘Yours sincerely’."
+     },
+     {
+      "block_id": "4ee953589dd0",
+      "quote": "Conclude with ‘Yours faithfully’."
+     },
+     {
+      "block_id": "47b3d074f71d",
+      "quote": "Conclude with ‘Yours sincerely’."
+     },
+     {
+      "block_id": "1c74940e9cc1",
+      "quote": "Conclude with ‘Yours faithfully’."
+     },
+     {
+      "block_id": "36d7b32bc7f6",
+      "quote": "Conclude with ‘Yours sincerely’."
+     },
+     {
+      "block_id": "68d9c06f3bb1",
+      "quote": "Conclude with ‘Yours faithfully’."
+     },
+     {
+      "block_id": "d34fa61bda0e",
+      "quote": "Conclude with ‘Yours sincerely’."
+     },
+     {
+      "block_id": "ccabe83dacca",
+      "quote": "Conclude with ‘Yours faithfully’."
+     },
+     {
+      "block_id": "f53301b158ef",
+      "quote": "Conclude with ‘Yours faithfully’."
+     },
+     {
+      "block_id": "e7641b342091",
+      "quote": "Conclude with ‘Yours faithfully’."
+     },
+     {
+      "block_id": "fa9ff42f16cb",
+      "quote": "Conclude with ‘Yours sincerely’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "specification": "Determine formal or less formal correspondence from document context or supplied metadata, rather than inventing a textual threshold.",
+    "unit": "document",
+    "violation_condition": "Correspondence to one of the specified office holders lacks the prescribed closing for its recipient category and level of formality.",
+    "when": [
+     "For federal ministers, state and territory parliamentarians, state premiers, territory chief ministers, shire presidents, aldermen and councillors, use Yours faithfully in formal correspondence and Yours sincerely in less formal correspondence.",
+     "For lord mayors and other mayors, use Yours faithfully; the page supplies no less-formal alternative."
+    ],
+    "why": "G-2 consolidates repeated closing instructions and their formality conditions; opening and closing remain distinct findings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2fcd62ff17f5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c7b8080a60ee",
+      "quote": "A parliamentarian may have other post-nominals after their name."
+     },
+     {
+      "block_id": "090ccef700b5",
+      "quote": "civilian and military honours"
+     },
+     {
+      "block_id": "80fe9acca14a",
+      "quote": "educational and professional qualifications."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If so, write these in the same way the parliamentarian does.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Additional post-nominals for a state or territory parliamentarian are written differently from the parliamentarian’s own usage.",
+    "when": [
+     "Applies when additional post-nominals are included for a state or territory parliamentarian.",
+     "These can include civilian or military honours and educational or professional qualifications.",
+     "Including such additional post-nominals is permitted, not independently required by this passage."
+    ],
+    "why": "G-3 preserves optional inclusion, while the following instruction imposes a checkable correspondence with the parliamentarian’s usage."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "74ede8c313f6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "ACT speaker is not styled Honourable.",
+      "parts": [
+       {
+        "block_id": "76c365c58ad2",
+        "quote": "Mr Mark Parton MLA, Speaker of the ACT Legislative Assembly"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "ACT minister is not styled Honourable.",
+      "parts": [
+       {
+        "block_id": "19578db0d849",
+        "quote": "Ms Rachel Stephen-Smith MLA, Minister for Health"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Office holders in the ACT Legislative Assembly don’t use the title ‘Honourable’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ACT Legislative Assembly office holder is addressed as ‘Honourable’ or ‘Hon’ by virtue of that ACT office.",
+    "when": [
+     "Applies to forms of address for office holders in the ACT Legislative Assembly."
+    ],
+    "why": "This is a prohibition on an inapplicable title, distinct from omitting a title that an entitled office holder should receive."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "74ede8c313f6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Health portfolio form.",
+      "parts": [
+       {
+        "block_id": "19578db0d849",
+        "quote": "Ms Rachel Stephen-Smith MLA, Minister for Health"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Mental Health portfolio form.",
+      "parts": [
+       {
+        "block_id": "835fc20d9dbf",
+        "quote": "Ms Rachel Stephen-Smith MLA, Minister for Mental Health"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Finance portfolio form.",
+      "parts": [
+       {
+        "block_id": "3489647e9166",
+        "quote": "Ms Rachel Stephen-Smith MLA, Minister for Finance"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Public Service portfolio form.",
+      "parts": [
+       {
+        "block_id": "b85b3c0e28a9",
+        "quote": "Ms Rachel Stephen-Smith MLA, Minister for the Public Service"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address emails and letters to them using the ministerial title appropriate to the topic.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email or letter to an ACT minister uses a ministerial portfolio title unrelated to the subject of the correspondence.",
+    "when": [
+     "Applies to emails and letters to ACT ministers.",
+     "Select among the recipient’s portfolios according to the topic of the correspondence."
+    ],
+    "why": "The ordinary prose after the examples states a separate topic-dependent title-selection rule; it is not part of the example label."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a8200aa84531",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7bcf1d909912",
+      "quote": "Address the chief minister of the NT with details in this order:"
+     },
+     {
+      "block_id": "0d88195b1b17",
+      "quote": "‘The Hon’"
+     },
+     {
+      "block_id": "10c35371bb7f",
+      "quote": "their given and family names"
+     },
+     {
+      "block_id": "be851ec02f54",
+      "quote": "‘MLA, Chief Minister of the Northern Territory’."
+     },
+     {
+      "block_id": "ce4d585f7ef0",
+      "quote": "Address the chief minister of the ACT with their preferred title"
+     },
+     {
+      "block_id": "670d1c5d8996",
+      "quote": "Address the chief minister of the ACT with details in this order:"
+     },
+     {
+      "block_id": "19a431a32089",
+      "quote": "the appropriate title (‘Dr’, ‘Mr’, ‘Ms’, ‘Mx’ and so on)"
+     },
+     {
+      "block_id": "a9140dccbc98",
+      "quote": "their given and family names"
+     },
+     {
+      "block_id": "927a9e5c6add",
+      "quote": "‘MLA, Chief Minister of the ACT’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "State premier.",
+      "parts": [
+       {
+        "block_id": "2ac758a01949",
+        "quote": "The Hon Peter Malinauskas MP, Premier of South Australia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Premier with additional post-nominals.",
+      "parts": [
+       {
+        "block_id": "75cb2bbb4bca",
+        "quote": "The Hon Roger Cook BA GradDipBus (PR) MBA MLA, Premier of Western Australia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "NT chief minister.",
+      "parts": [
+       {
+        "block_id": "71dea51a2b67",
+        "quote": "The Hon Lia Finocchiaro MLA, Chief Minister of the Northern Territory"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "ACT chief minister.",
+      "parts": [
+       {
+        "block_id": "d78604eed403",
+        "quote": "Mr Andrew Barr MLA, Chief Minister of the ACT"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address state premiers as ‘The Hon [given and family names] MLA/MP, Premier of …’",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A full form of address for a state premier or territory chief minister omits the required personal-name or office components, or puts the components in the wrong sequence.",
+    "when": [
+     "For state premiers, the sequence is The Hon, given and family names, applicable MLA or MP, a comma, and Premier of the state.",
+     "For the NT chief minister, the sequence is The Hon, given and family names, and MLA, Chief Minister of the Northern Territory.",
+     "For the ACT chief minister, the sequence is the appropriate personal title, given and family names, and MLA, Chief Minister of the ACT.",
+     "Other post-nominals used by the office holder can also appear.",
+     "Apply to full forms of address rather than every running-text mention.",
+     "Check full-address components and their order here; use the separate rules for Honourable eligibility and parliamentary post-nominal selection."
+    ],
+    "why": "G-2 consolidates the role-specific full-address templates; G-1 leaves their broader headings to group address and correspondence checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dd68030a171f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a9dc9ae4c831",
+      "quote": "Adelaide"
+     },
+     {
+      "block_id": "1e38a25e4c95",
+      "quote": "Brisbane"
+     },
+     {
+      "block_id": "d9b8c14421c8",
+      "quote": "Hobart"
+     },
+     {
+      "block_id": "f46957191b89",
+      "quote": "Melbourne"
+     },
+     {
+      "block_id": "583a5b25e2c0",
+      "quote": "Perth"
+     },
+     {
+      "block_id": "c17a1508d75e",
+      "quote": "Sydney."
+     },
+     {
+      "block_id": "e7784d6300ab",
+      "quote": "In emails and letters, you can use either the full form ‘Right Honourable’ or its shortened form ‘Rt Hon’ (without full stops)."
+     },
+     {
+      "block_id": "399a9a5a95b7",
+      "quote": "Address the lord mayor of Darwin as ‘The Right Worshipful the Lord Mayor of Darwin’."
+     },
+     {
+      "block_id": "18d504c562a4",
+      "quote": "Address the mayors of Geelong, Newcastle and Wollongong as ‘The Right Worshipful the [Lord] Mayor of [name of the city]’."
+     },
+     {
+      "block_id": "578c2388d109",
+      "quote": "Address mayors of other cities as ‘His’ or ‘Her Worship the Mayor of [name of city]’."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Right Honourable capital-city style.",
+      "parts": [
+       {
+        "block_id": "f76340eec3f7",
+        "quote": "The Right Honourable the Lord Mayor of Brisbane, Councillor Adrian Schrinner"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Permitted abbreviated style.",
+      "parts": [
+       {
+        "block_id": "2f7d642a48a6",
+        "quote": "The Rt Hon the Lord Mayor of Hobart, Councillor Anna Reynolds"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Darwin style.",
+      "parts": [
+       {
+        "block_id": "1ea48dbb3353",
+        "quote": "The Right Worshipful the Lord Mayor of Darwin, Peter Styles"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Greater Geelong style.",
+      "parts": [
+       {
+        "block_id": "5e740a552c24",
+        "quote": "The Right Worshipful the Mayor of Greater Geelong, Mr Stretch Kontelj OAM"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Newcastle style.",
+      "parts": [
+       {
+        "block_id": "54bb9fae0c45",
+        "quote": "The Right Worshipful the Lord Mayor of Newcastle, Dr Ross Kerridge"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Wollongong style.",
+      "parts": [
+       {
+        "block_id": "846a13b74b40",
+        "quote": "The Right Worshipful the Lord Mayor of Wollongong, Councillor Tania Brown"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Other-city style.",
+      "parts": [
+       {
+        "block_id": "e28fcd3f7401",
+        "quote": "His Worship the Mayor of Fremantle, Mr Ben Lawver"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the title ‘The Right Honourable the Lord Mayor of [the name of the city]’ for lord mayors of:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A mayor’s full civic form of address uses the wrong civic style or omits the prescribed mayoral title and city.",
+    "when": [
+     "For Adelaide, Brisbane, Hobart, Melbourne, Perth and Sydney, use The Right Honourable the Lord Mayor of the city.",
+     "In emails and letters, Right Honourable may be shortened to Rt Hon without full stops.",
+     "For Darwin, use The Right Worshipful the Lord Mayor of Darwin.",
+     "For Geelong, Newcastle and Wollongong, use The Right Worshipful the Mayor or Lord Mayor of the city, according to the applicable office.",
+     "The examples use Mayor of Greater Geelong and Lord Mayor of Newcastle and Wollongong.",
+     "For other cities, use His or Her Worship the Mayor of the city, as applicable.",
+     "Applies to full forms of address, not every ordinary reference to a mayor."
+    ],
+    "why": "G-2 treats the city-based civic styles as conditions of one title-selection check; G-3 records the permitted abbreviation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8debf8b3f841",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "419f593492e7",
+      "quote": "Use the honorific ‘Ms’, ‘Mr’, ‘Mx’, ‘Mrs’ or ‘Dr’ with the names of the lord mayors of Adelaide and Perth."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Councillor before the name.",
+      "parts": [
+       {
+        "block_id": "f76340eec3f7",
+        "quote": "The Right Honourable the Lord Mayor of Brisbane, Councillor Adrian Schrinner"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Councillor before the name.",
+      "parts": [
+       {
+        "block_id": "2f7d642a48a6",
+        "quote": "The Rt Hon the Lord Mayor of Hobart, Councillor Anna Reynolds"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Councillor before the name.",
+      "parts": [
+       {
+        "block_id": "54de55bc48f5",
+        "quote": "The Right Honourable the Lord Mayor of Melbourne, Councillor Nicholas Reece"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Councillor before the name.",
+      "parts": [
+       {
+        "block_id": "7e5a9fdee0a7",
+        "quote": "The Rt Hon the Lord Mayor of Sydney, Councillor Clover Moore AO"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Personal honorific before the name.",
+      "parts": [
+       {
+        "block_id": "18033e465bc6",
+        "quote": "The Rt Hon the Lord Mayor of Adelaide, Dr Jane Lomax-Smith AM"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Add ‘Councillor’ before the names of the lord mayors of Brisbane, Hobart, Melbourne and Sydney.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A full address to one of the six specified capital-city lord mayors omits or substitutes the required title before the person’s name.",
+    "when": [
+     "For Brisbane, Hobart, Melbourne and Sydney, put Councillor before the lord mayor’s name.",
+     "For Adelaide and Perth, use the applicable personal honorific Ms, Mr, Mx, Mrs or Dr with the lord mayor’s name."
+    ],
+    "why": "G-2 combines city-dependent personal prefixes; this is distinct from selecting the preceding civic style."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e8b08d8f904a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Comma follows the city name.",
+      "parts": [
+       {
+        "block_id": "f76340eec3f7",
+        "quote": "The Right Honourable the Lord Mayor of Brisbane, Councillor Adrian Schrinner"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Comma follows the city name.",
+      "parts": [
+       {
+        "block_id": "18033e465bc6",
+        "quote": "The Rt Hon the Lord Mayor of Adelaide, Dr Jane Lomax-Smith AM"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Put a comma after the name of the city.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A full capital-city lord-mayoral address runs the city name directly into the office holder’s personal name or personal title without a comma.",
+    "when": [
+     "Applies when the city-based lord-mayoral title is followed by the office holder’s personal name.",
+     "Does not require a trailing comma when only the civic title is given."
+    ],
+    "why": "The missing separator is an independent punctuation finding, not a civic-title or personal-prefix error."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3e01b7d2007d",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "c7c438a02595",
+      "quote": "Address an alderman (regardless of gender) as ‘Alderman[family name]’."
+     },
+     {
+      "block_id": "50a13670b312",
+      "quote": "Address a councillor as ‘Councillor [family name]’."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Shire president.",
+      "parts": [
+       {
+        "block_id": "985abf0b9aee",
+        "quote": "President Smith"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Full alderman title.",
+      "parts": [
+       {
+        "block_id": "c62605a322e5",
+        "quote": "Alderman Miller"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Permitted abbreviated title.",
+      "parts": [
+       {
+        "block_id": "4be6b1537ea6",
+        "quote": "Ald Miller"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Full councillor title.",
+      "parts": [
+       {
+        "block_id": "16c83577f589",
+        "quote": "Councillor Brown"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Permitted abbreviated title.",
+      "parts": [
+       {
+        "block_id": "d3d00522cfe7",
+        "quote": "Cr Brown"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address a shire president as ‘President [family name]’.",
+    "specification": "Read the missing space in ‘Alderman[family name]’ in light of the manual’s examples ‘Alderman Miller’ and ‘Ald Miller’: separate the title and family name with a space.",
+    "unit": "phrase",
+    "violation_condition": "A form of address for a shire president, alderman or councillor lacks the corresponding office title before the family name, uses the wrong office title, or joins the title and family name without a space.",
+    "when": [
+     "Use President followed by the family name for a shire president.",
+     "Use Alderman followed by the family name regardless of gender; Ald is a permitted abbreviation.",
+     "Use Councillor followed by the family name; Cr is a permitted abbreviation.",
+     "Pres is a recognised abbreviation of President, but the separate preference for the full title applies."
+    ],
+    "why": "G-2 combines office-dependent title-and-family-name forms; E-4 makes the resolution of the source’s missing space explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3e01b7d2007d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Preferred full title.",
+      "parts": [
+       {
+        "block_id": "985abf0b9aee",
+        "quote": "President Smith"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "use the full title ‘President’ because it’s clearer.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A shire president is addressed using the abbreviated title ‘Pres’ rather than ‘President’.",
+    "when": [
+     "Applies to the title of a shire president.",
+     "Pres is recognised as an abbreviation, but President is the expressly preferred alternative."
+    ],
+    "why": "This is an explicit preference over a named alternative, separate from correct abbreviation spelling and title placement."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "def7fc2c4816",
+    "end": 65,
+    "prefix": "",
+    "quote": "Capitalise the titles of the current prime minister and treasurer",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "076bd2fb34f1",
+     "end": 65,
+     "prefix": "",
+     "quote": "Capitalise the titles of the current holders of the positions of:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f3403e5e8b43",
+     "end": 14,
+     "prefix": "",
+     "quote": "Prime Minister",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cf510284d3a5",
+     "end": 10,
+     "prefix": "",
+     "quote": "Treasurer.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0208c55ff879",
+     "end": 45,
+     "prefix": "",
+     "quote": "Do this even when the titles are abbreviated.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bcfa193a8a7f",
+     "end": 73,
+     "prefix": "",
+     "quote": "If referencing prime ministers or treasurers generically, use lower case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ff74a5590da8",
+     "end": 78,
+     "prefix": "",
+     "quote": "Use lower case letters for former prime ministers and treasurers of Australia.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8cc760aa3604",
+     "end": 79,
+     "prefix": "",
+     "quote": "Capitalise titles for current senators and members of the Australian Parliament",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a91ceb1ab4f6",
+     "end": 30,
+     "prefix": "",
+     "quote": "Write these titles as follows:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Current office holder.",
+     "parts": [
+      {
+       "block_id": "32101b70ec43",
+       "end": 61,
+       "prefix": "",
+       "quote": "The Prime Minister announced the new initiative this morning.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Abbreviated title.",
+     "parts": [
+      {
+       "block_id": "070020c535ba",
+       "end": 49,
+       "prefix": "",
+       "quote": "The PM announced the new initiative this morning.",
+       "start": 0,
+       "suffix": " [Less formal]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Generic reference.",
+     "parts": [
+      {
+       "block_id": "294d5793fa2c",
+       "end": 58,
+       "prefix": "",
+       "quote": "Terms of office vary for prime ministers around the world.",
+       "start": 0,
+       "suffix": " [Generic]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Current office holder.",
+     "parts": [
+      {
+       "block_id": "1d5ad11a2dae",
+       "end": 56,
+       "prefix": "",
+       "quote": "The Treasurer will present the mid-year report tomorrow.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Generic reference.",
+     "parts": [
+      {
+       "block_id": "4cc5aa568b7d",
+       "end": 80,
+       "prefix": "",
+       "quote": "In many countries treasurers are preparing responses to this latest development.",
+       "start": 0,
+       "suffix": " [Generic]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former office holder.",
+     "parts": [
+      {
+       "block_id": "c68c8fcfd92a",
+       "end": 60,
+       "prefix": "",
+       "quote": "Alfred Deakin served 3 terms as prime minister of Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former office holder.",
+     "parts": [
+      {
+       "block_id": "c06bfeb02267",
+       "end": 83,
+       "prefix": "",
+       "quote": "Australia’s first female prime minister was Julia Gillard, who took office in 2010.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former office holder.",
+     "parts": [
+      {
+       "block_id": "f60293b4a9f2",
+       "end": 75,
+       "prefix": "",
+       "quote": "Peter Costello remains the longest-serving treasurer in Australian history.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "6dce4f152f4bc813",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret the capitalisation instruction as applying to titles identifying particular current office holders, not to generic role descriptions such as the lower-case plurals in the list of parliamentary website links. The explicit lower-case instructions for generic and former office holders concern prime ministers and treasurers.",
+    "unit": "sentence",
+    "violation_condition": "An official title identifying a current Australian parliamentary office holder is incorrectly lower-cased, or ‘prime minister’ or ‘treasurer’ is capitalised when used generically or for a former Australian office holder."
+   },
+   "when": [
+    "Capitalise the titles of the current Australian Prime Minister and Treasurer, including abbreviated forms.",
+    "Use lower case for generic references to prime ministers and treasurers.",
+    "Use lower case for former Australian prime ministers and treasurers.",
+    "Capitalise titles identifying current senators and members of the Australian Parliament."
+   ],
+   "why": "G-2 combines office-holder and generic-reference conditions for the same capitalisation check; G-4 avoids duplicate heading and body rules."
+  },
+  {
+   "anchor": {
+    "block_id": "a3d84ba8b44f",
+    "end": 83,
+    "prefix": "",
+    "quote": "People elected to the upper house take the title ‘Senator’ before their given name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Title precedes the given name.",
+     "parts": [
+      {
+       "block_id": "e9798886b84d",
+       "end": 23,
+       "prefix": "",
+       "quote": "Senator Claire Chandler",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A current federal senator’s name in a form of address lacks the title ‘Senator’ before the given name, or places that title after the name."
+   },
+   "when": [
+    "Applies to senators in the Australian Parliament.",
+    "Checks the presence and position of the title, rather than its capitalisation."
+   ],
+   "why": "This is a distinct title-placement check, not merely a restatement of the capitalisation heading."
+  },
+  {
+   "anchor": {
+    "block_id": "e7f770854b86",
+    "end": 82,
+    "prefix": "",
+    "quote": "Members of the House of Representatives take the initialism ‘MP’ after their name.",
+    "start": 0,
+    "suffix": " Write it after any other post-n"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "440e75044261",
+     "end": 129,
+     "prefix": "",
+     "quote": "In formal emails and letters, address members of state and territory parliaments with the relevant post-nominal after their name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c23f7f4bc631",
+     "end": 28,
+     "prefix": "",
+     "quote": "Use the correct post-nominal",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f0dc575db053",
+     "end": 64,
+     "prefix": "",
+     "quote": "Members of state and territory parliaments use the post-nominal:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1714e4a05b0f",
+     "end": 39,
+     "prefix": "",
+     "quote": "MLC (Member of the Legislative Council)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c8ebdac6806a",
+     "end": 40,
+     "prefix": "",
+     "quote": "MLA (Member of the Legislative Assembly)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cc990b1636c1",
+     "end": 75,
+     "prefix": "",
+     "quote": "MP (Member of the Legislative Assembly or Member of the House of Assembly).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "439c903b2a1f",
+     "end": 87,
+     "prefix": "",
+     "quote": "All bicameral parliaments use the post-nominal 'MLC' for members of their upper houses.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "30dda4e614c5",
+     "end": 50,
+     "prefix": "",
+     "quote": "Use MLC for members of the Legislative Council of:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "39e6874e1de3",
+     "end": 3,
+     "prefix": "",
+     "quote": "NSW",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "39dd0e0456c7",
+     "end": 2,
+     "prefix": "",
+     "quote": "SA",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a47d60f29bb1",
+     "end": 3,
+     "prefix": "",
+     "quote": "Tas",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b5395ae697ba",
+     "end": 3,
+     "prefix": "",
+     "quote": "Vic",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4c82cf375ccd",
+     "end": 3,
+     "prefix": "",
+     "quote": "WA.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d46fb59ab28a",
+     "end": 51,
+     "prefix": "",
+     "quote": "Use MLA for members of the Legislative Assembly of:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9daed64f9e13",
+     "end": 3,
+     "prefix": "",
+     "quote": "ACT",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6e5089ff8ddf",
+     "end": 2,
+     "prefix": "",
+     "quote": "NT",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0000b9724a41",
+     "end": 3,
+     "prefix": "",
+     "quote": "WA.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dae4b90b0a66",
+     "end": 50,
+     "prefix": "",
+     "quote": "Use MP for members of the Legislative Assembly of:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "88dfe653951c",
+     "end": 3,
+     "prefix": "",
+     "quote": "NSW",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bd6343e32db1",
+     "end": 3,
+     "prefix": "",
+     "quote": "Qld",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ce4611d0dbb8",
+     "end": 4,
+     "prefix": "",
+     "quote": "Vic.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b545ec642a5b",
+     "end": 47,
+     "prefix": "",
+     "quote": "Use MP for members of the House of Assembly of:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "36051ee46e1a",
+     "end": 2,
+     "prefix": "",
+     "quote": "SA",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "50e98ce3ea5d",
+     "end": 4,
+     "prefix": "",
+     "quote": "Tas.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Federal House of Representatives.",
+     "parts": [
+      {
+       "block_id": "422876ef2e6b",
+       "end": 23,
+       "prefix": "",
+       "quote": "Ms Zali Steggall OAM MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Legislative Council.",
+     "parts": [
+      {
+       "block_id": "94158a6f462f",
+       "end": 23,
+       "prefix": "",
+       "quote": "The Hon Nick Goiran MLC",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "ACT Legislative Assembly.",
+     "parts": [
+      {
+       "block_id": "7cc00734bedf",
+       "end": 14,
+       "prefix": "",
+       "quote": "Ms Jo Clay MLA",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Victorian Legislative Assembly.",
+     "parts": [
+      {
+       "block_id": "c44d635df3b6",
+       "end": 19,
+       "prefix": "",
+       "quote": "Mr Danny O'Brien MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Queensland Legislative Assembly.",
+     "parts": [
+      {
+       "block_id": "26a270fabeb9",
+       "end": 20,
+       "prefix": "",
+       "quote": "Dr Barbara O'Shea MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "South Australian House of Assembly.",
+     "parts": [
+      {
+       "block_id": "e06da14a8371",
+       "end": 18,
+       "prefix": "",
+       "quote": "Mr Nick McBride MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A parliamentary name requiring a membership post-nominal lacks the applicable post-nominal after the name, or uses one that does not match the parliament and chamber."
+   },
+   "when": [
+    "Federal House of Representatives members take MP after their name.",
+    "Formal emails and letters to state and territory parliamentarians require the relevant membership post-nominal after the name.",
+    "Use MLC for Legislative Council members in NSW, SA, Tas, Vic and WA.",
+    "Use MLA for Legislative Assembly members in the ACT, NT and WA.",
+    "Use MP for Legislative Assembly members in NSW, Qld and Vic.",
+    "Use MP for House of Assembly members in SA and Tas.",
+    "Whenever a state or territory parliamentary membership post-nominal is supplied, its form must match this jurisdiction-and-chamber mapping."
+   ],
+   "why": "G-2 keeps parliamentary post-nominal selection in one check with jurisdiction and chamber conditions; G-4 absorbs the summary heading."
+  },
+  {
+   "anchor": {
+    "block_id": "e7f770854b86",
+    "end": 122,
+    "prefix": "itialism ‘MP’ after their name. ",
+    "quote": "Write it after any other post-nominals.",
+    "start": 83,
+    "suffix": " Don’t use commas before or betw"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "MP follows OAM.",
+     "parts": [
+      {
+       "block_id": "422876ef2e6b",
+       "end": 23,
+       "prefix": "",
+       "quote": "Ms Zali Steggall OAM MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A federal House of Representatives member’s MP appears before another post-nominal belonging to that person."
+   },
+   "when": [
+    "Applies when a federal House of Representatives member has other post-nominals as well as MP."
+   ],
+   "why": "The order of an existing MP is a different finding from a missing or incorrect membership post-nominal."
+  },
+  {
+   "anchor": {
+    "block_id": "e7f770854b86",
+    "end": 172,
+    "prefix": " after any other post-nominals. ",
+    "quote": "Don’t use commas before or between post-nominals.",
+    "start": 123,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No comma before or between post-nominals.",
+     "parts": [
+      {
+       "block_id": "422876ef2e6b",
+       "end": 23,
+       "prefix": "",
+       "quote": "Ms Zali Steggall OAM MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma separates a person’s name from their post-nominals or separates two of their post-nominals."
+   },
+   "when": [
+    "Do not treat a comma after the final post-nominal introducing an office title as a comma between post-nominals."
+   ],
+   "why": "The punctuation prohibition is independently actionable and is not the post-nominal selection or ordering rule."
+  },
+  {
+   "anchor": {
+    "block_id": "3f915637bbe2",
+    "end": 131,
+    "prefix": "",
+    "quote": "Use the title ‘Honourable’ for ministers (including the prime minister) and parliamentary secretaries in the Australian Parliament.",
+    "start": 0,
+    "suffix": " The title is given to these off"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7d0f85fcb74e",
+     "end": 75,
+     "prefix": "",
+     "quote": "Address certain office holders of the Australian Parliament as ‘Honourable’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3f915637bbe2",
+     "end": 265,
+     "prefix": " the Federal Executive Council. ",
+     "quote": "They retain the title for life.",
+     "start": 234,
+     "suffix": ""
+    },
+    {
+     "block_id": "a6a032d9eed1",
+     "end": 128,
+     "prefix": "",
+     "quote": "The President of the Senate and the Speaker of the House of Representatives (the presiding officers) use the title ‘Honourable’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9a81b02b4cb7",
+     "end": 75,
+     "prefix": "",
+     "quote": "‘Honourable’ is also given to members of the Australian Parliament who are:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6c382f8e9cf9",
+     "end": 34,
+     "prefix": "",
+     "quote": "former members of state ministries",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6de84e463813",
+     "end": 47,
+     "prefix": "",
+     "quote": "former presiding officers of state parliaments.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b6a07e5d98d7",
+     "end": 74,
+     "prefix": "",
+     "quote": "Address certain office holders in state and NT parliaments as ‘Honourable’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d109772353de",
+     "end": 96,
+     "prefix": "",
+     "quote": "Use ‘Honourable’ when addressing all members of the executive councils of the states and the NT:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a96f194facd8",
+     "end": 36,
+     "prefix": "",
+     "quote": "premiers and ministers in all states",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "306ffc7a9a43",
+     "end": 38,
+     "prefix": "",
+     "quote": "chief minister and ministers in the NT",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "435f4b41e297",
+     "end": 42,
+     "prefix": "",
+     "quote": "former ministers in all states and the NT.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2c01581e9b9c",
+     "end": 56,
+     "prefix": "",
+     "quote": "Use ‘Honourable’ when addressing these parliamentarians:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2ceddc69a6eb",
+     "end": 60,
+     "prefix": "",
+     "quote": "members of all state legislative councils except in Victoria",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "29c27426c5ea",
+     "end": 36,
+     "prefix": "",
+     "quote": "Leader of the Opposition in Tasmania",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d160987a8fbe",
+     "end": 38,
+     "prefix": "",
+     "quote": "presidents of all legislative councils",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4f03627041d5",
+     "end": 46,
+     "prefix": "",
+     "quote": "speakers of all parliaments except in the ACT.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Serving federal minister.",
+     "parts": [
+      {
+       "block_id": "8bf8b9c06553",
+       "end": 62,
+       "prefix": "",
+       "quote": "The Hon Chris Bowen MP, Minister for Climate Change and Energy",
+       "start": 0,
+       "suffix": " [Serving minister]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former federal minister.",
+     "parts": [
+      {
+       "block_id": "c5150a8befcd",
+       "end": 25,
+       "prefix": "",
+       "quote": "The Hon Darren Chester MP",
+       "start": 0,
+       "suffix": " [Serving MP and former minister"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former assistant minister.",
+     "parts": [
+      {
+       "block_id": "a3e6ee1b5569",
+       "end": 26,
+       "prefix": "",
+       "quote": "The Hon Michelle Landry MP",
+       "start": 0,
+       "suffix": " [Serving MP and former assistan"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Federal presiding officer.",
+     "parts": [
+      {
+       "block_id": "4cf40509e659",
+       "end": 50,
+       "prefix": "",
+       "quote": "Senator the Hon Sue Lines, President of the Senate",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Federal presiding officer.",
+     "parts": [
+      {
+       "block_id": "67a99b1ac1cc",
+       "end": 63,
+       "prefix": "",
+       "quote": "The Hon Milton Dick MP, Speaker of the House of Representatives",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former state minister.",
+     "parts": [
+      {
+       "block_id": "74839554e62f",
+       "end": 21,
+       "prefix": "",
+       "quote": "The Hon Bob Katter MP",
+       "start": 0,
+       "suffix": " [Former minister in the Queensl"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "State Legislative Council president.",
+     "parts": [
+      {
+       "block_id": "2199f0ff8553",
+       "end": 80,
+       "prefix": "",
+       "quote": "NSW: The Hon Benjamin Cameron Franklin MLC, President of the Legislative Council",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "NT speaker.",
+     "parts": [
+      {
+       "block_id": "af182bcd2bec",
+       "end": 66,
+       "prefix": "",
+       "quote": "NT: The Hon Robyn Lambley MLA, Speaker of the Legislative Assembly",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "State minister.",
+     "parts": [
+      {
+       "block_id": "4c9bfbb132af",
+       "end": 72,
+       "prefix": "",
+       "quote": "Qld: The Hon John-Paul Langbroek MP, Minister for Education and the Arts",
+       "start": 0,
+       "suffix": " [Serving minister]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "State Legislative Council member.",
+     "parts": [
+      {
+       "block_id": "2157e98dd078",
+       "end": 31,
+       "prefix": "",
+       "quote": "SA: The Hon Jing Shyuan Lee MLC",
+       "start": 0,
+       "suffix": " [Member of the Legislative Coun"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Tasmanian Leader of the Opposition.",
+     "parts": [
+      {
+       "block_id": "a33dbacba9fb",
+       "end": 55,
+       "prefix": "",
+       "quote": "Tas: The Hon Joshua Willie MP, Leader of the Opposition",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "State premier.",
+     "parts": [
+      {
+       "block_id": "7fe3116788d5",
+       "end": 50,
+       "prefix": "",
+       "quote": "Vic: The Hon Jacinta Allan MP, Premier of Victoria",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "State Legislative Council member.",
+     "parts": [
+      {
+       "block_id": "27242628f1f0",
+       "end": 33,
+       "prefix": "",
+       "quote": "WA: The Hon Maryka Groenewald MLC",
+       "start": 0,
+       "suffix": " [Member of the Legislative Coun"
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A form of address for an office holder in one of the specified entitled categories omits ‘Honourable’ or its permitted abbreviation ‘Hon’."
+   },
+   "when": [
+    "Federal ministers, including the prime minister, and parliamentary secretaries receive the title and retain it for life.",
+    "The federal examples also illustrate serving and former assistant ministers.",
+    "The President of the Senate and Speaker of the House of Representatives receive the title.",
+    "Federal parliamentarians who are former state ministers or former presiding officers of state parliaments receive the title.",
+    "State premiers and ministers, the NT chief minister and ministers, and former ministers in all states and the NT receive the title.",
+    "State Legislative Council members receive the title except in Victoria.",
+    "The Tasmanian Leader of the Opposition, all Legislative Council presidents, and parliamentary speakers except in the ACT receive the title.",
+    "The full title and the abbreviation Hon are alternatives; this rule does not require abbreviation."
+   ],
+   "why": "G-2 treats the entitled offices and lifetime-retention provision as conditions of one Honourable-title check, avoiding overlapping eligibility rules."
+  },
+  {
+   "anchor": {
+    "block_id": "6a25ad621ef5",
+    "end": 63,
+    "prefix": "",
+    "quote": "The abbreviation for ‘Honourable’ is ‘Hon’ without a full stop.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e7784d6300ab",
+     "end": 127,
+     "prefix": "",
+     "quote": "In emails and letters, you can use either the full form ‘Right Honourable’ or its shortened form ‘Rt Hon’ (without full stops).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3e01b7d2007d",
+     "end": 118,
+     "prefix": "t as ‘President [family name]’. ",
+     "quote": "The abbreviation for ‘President’ is ‘Pres’ without a full stop",
+     "start": 56,
+     "suffix": ", but use the full title ‘Presid"
+    },
+    {
+     "block_id": "c7c438a02595",
+     "end": 132,
+     "prefix": "er) as ‘Alderman[family name]’. ",
+     "quote": "The abbreviation for ‘Alderman’ is ‘Ald’ without a full stop.",
+     "start": 71,
+     "suffix": ""
+    },
+    {
+     "block_id": "50a13670b312",
+     "end": 114,
+     "prefix": " as ‘Councillor [family name]’. ",
+     "quote": "The abbreviation for ‘Councillor’ is ‘Cr’ without a full stop.",
+     "start": 52,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Hon has no full stop.",
+     "parts": [
+      {
+       "block_id": "c5150a8befcd",
+       "end": 25,
+       "prefix": "",
+       "quote": "The Hon Darren Chester MP",
+       "start": 0,
+       "suffix": " [Serving MP and former minister"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Rt Hon has no full stops.",
+     "parts": [
+      {
+       "block_id": "2f7d642a48a6",
+       "end": 61,
+       "prefix": "",
+       "quote": "The Rt Hon the Lord Mayor of Hobart, Councillor Anna Reynolds",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Ald has no full stop.",
+     "parts": [
+      {
+       "block_id": "4be6b1537ea6",
+       "end": 10,
+       "prefix": "",
+       "quote": "Ald Miller",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Cr has no full stop.",
+     "parts": [
+      {
+       "block_id": "d3d00522cfe7",
+       "end": 8,
+       "prefix": "",
+       "quote": "Cr Brown",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "One of the specified official titles is abbreviated using an incorrect short form or a full stop, such as ‘Hon.’, ‘Rt. Hon.’, ‘Pres.’, ‘Ald.’ or ‘Cr.’."
+   },
+   "when": [
+    "The specified abbreviations are Hon for Honourable, Rt Hon for Right Honourable, Pres for President, Ald for Alderman and Cr for Councillor.",
+    "The permission to use Rt Hon is stated for emails and letters to lord mayors.",
+    "This rule checks an abbreviation when used; it does not require replacing a full title with an abbreviation.",
+    "The separate preference for President over Pres still applies."
+   ],
+   "why": "G-2 consolidates the prescribed abbreviation forms into one lookup check; G-3 preserves the choice to use full titles."
+  },
+  {
+   "anchor": {
+    "block_id": "70a5369d9e16",
+    "end": 117,
+    "prefix": "",
+    "quote": "Use the title ‘Senator’ before ‘the Honourable’ if the minister or parliamentary secretary is a member of the Senate.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Serving minister.",
+     "parts": [
+      {
+       "block_id": "277b1237df30",
+       "end": 56,
+       "prefix": "",
+       "quote": "Senator the Hon Penny Wong, Minister for Foreign Affairs",
+       "start": 0,
+       "suffix": " [Serving minister]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former minister.",
+     "parts": [
+      {
+       "block_id": "99c103ab1f41",
+       "end": 32,
+       "prefix": "",
+       "quote": "Senator the Hon Bridget McKenzie",
+       "start": 0,
+       "suffix": " [Serving MP and former minister"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Former assistant minister.",
+     "parts": [
+      {
+       "block_id": "18717ef238aa",
+       "end": 31,
+       "prefix": "",
+       "quote": "Senator the Hon Jonathon Duniam",
+       "start": 0,
+       "suffix": " [Serving MP and former assistan"
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A federal senator entitled to Honourable has the title sequence reversed or otherwise lacks ‘Senator’ before ‘the Honourable’ or ‘the Hon’."
+   },
+   "when": [
+    "Applies to federal ministers and parliamentary secretaries who are senators.",
+    "The examples include senators retaining Honourable after ministerial or assistant ministerial service.",
+    "Hon is a permitted abbreviation of Honourable."
+   ],
+   "why": "The relative order of two titles is independently checkable from entitlement to either title."
+  },
+  {
+   "anchor": {
+    "block_id": "41eef0ac83cf",
+    "end": 26,
+    "prefix": "",
+    "quote": "Open with ‘Dear Minister’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "25a516a84979",
+     "end": 29,
+     "prefix": "",
+     "quote": "Open with ‘My dear Minister’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "29c714a57004",
+     "end": 59,
+     "prefix": "",
+     "quote": "Open with ‘Dear Ms’ (or ‘Mr’, ‘Mrs’, ‘Mx’, ‘Dr’ and so on).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b9ee63c70e08",
+     "end": 59,
+     "prefix": "",
+     "quote": "Open with ‘Dear Mr’ (or ‘Ms’, ‘Mrs’, ‘Mx’, ‘Dr’ and so on).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4f7bd53d8424",
+     "end": 25,
+     "prefix": "",
+     "quote": "Open with ‘Dear Premier’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d9f4f43569fe",
+     "end": 28,
+     "prefix": "",
+     "quote": "Open with ‘My dear Premier’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4cb81011976e",
+     "end": 32,
+     "prefix": "",
+     "quote": "Open with ‘Dear Chief Minister’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c7d559c9814d",
+     "end": 32,
+     "prefix": "",
+     "quote": "Open with ‘Dear Chief Minister’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "032de5258a2d",
+     "end": 32,
+     "prefix": "",
+     "quote": "Open with ‘Dear Chief Minister’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f8149ee55363",
+     "end": 32,
+     "prefix": "",
+     "quote": "Open with ‘Dear Chief Minister’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "90d2fc12dbea",
+     "end": 28,
+     "prefix": "",
+     "quote": "Open with ‘Dear Lord Mayor’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "174f82b79785",
+     "end": 60,
+     "prefix": "",
+     "quote": "Open with ‘Dear Mayor’ (or ‘Dear Lord Mayor’ if applicable).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d99d22fd5b13",
+     "end": 80,
+     "prefix": "",
+     "quote": "Open with ‘Dear President’, ‘Dear Alderman’ or ‘Dear Councillor’ as appropriate.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "632457b84bdb",
+     "end": 79,
+     "prefix": "",
+     "quote": "Open with ‘Dear President’, ‘Dear Alderman’ or ‘Dear Councillor [family name]’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Determine recipient role and formal or less formal correspondence from document context or supplied metadata. Do not invent a linguistic threshold for formality.",
+    "unit": "document",
+    "violation_condition": "Correspondence to one of the specified office holders lacks the opening appropriate to the recipient’s office and the stated level of formality."
+   },
+   "when": [
+    "For a federal minister, use Dear Minister in formal emails and letters and My dear Minister in less formal correspondence.",
+    "For an ordinary state or territory parliamentarian, use Dear with the applicable personal title, such as Ms, Mr, Mrs, Mx or Dr, in formal and less formal correspondence.",
+    "For a state premier, use Dear Premier formally and My dear Premier less formally.",
+    "For either territory chief minister, use Dear Chief Minister in formal and less formal correspondence.",
+    "For a capital-city lord mayor, use Dear Lord Mayor.",
+    "For other mayors, use Dear Mayor, or Dear Lord Mayor where applicable.",
+    "For a shire president, alderman or councillor in formal emails and letters, use Dear President, Dear Alderman or Dear Councillor as appropriate.",
+    "For less formal correspondence to those local office holders, the specified openings are Dear President, Dear Alderman or Dear Councillor followed by the family name in the councillor form.",
+    "Apply office-specific openings in preference to the general state-or-territory-member opening."
+   ],
+   "why": "G-2 makes recipient office and formality conditions of one correspondence-opening check rather than separate overlapping salutation rules."
+  },
+  {
+   "anchor": {
+    "block_id": "25487e0230a7",
+    "end": 33,
+    "prefix": "",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "fc6eb7b533d2",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f91b0e87834a",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4e32725dba9c",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4ee953589dd0",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "47b3d074f71d",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1c74940e9cc1",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "36d7b32bc7f6",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "68d9c06f3bb1",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d34fa61bda0e",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ccabe83dacca",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f53301b158ef",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e7641b342091",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fa9ff42f16cb",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Determine formal or less formal correspondence from document context or supplied metadata, rather than inventing a textual threshold.",
+    "unit": "document",
+    "violation_condition": "Correspondence to one of the specified office holders lacks the prescribed closing for its recipient category and level of formality."
+   },
+   "when": [
+    "For federal ministers, state and territory parliamentarians, state premiers, territory chief ministers, shire presidents, aldermen and councillors, use Yours faithfully in formal correspondence and Yours sincerely in less formal correspondence.",
+    "For lord mayors and other mayors, use Yours faithfully; the page supplies no less-formal alternative."
+   ],
+   "why": "G-2 consolidates repeated closing instructions and their formality conditions; opening and closing remain distinct findings."
+  },
+  {
+   "anchor": {
+    "block_id": "2fcd62ff17f5",
+    "end": 60,
+    "prefix": "",
+    "quote": "If so, write these in the same way the parliamentarian does.",
+    "start": 0,
+    "suffix": " If you’re unsure, check with th"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c7b8080a60ee",
+     "end": 64,
+     "prefix": "",
+     "quote": "A parliamentarian may have other post-nominals after their name.",
+     "start": 0,
+     "suffix": " These can include:"
+    },
+    {
+     "block_id": "090ccef700b5",
+     "end": 29,
+     "prefix": "",
+     "quote": "civilian and military honours",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "80fe9acca14a",
+     "end": 44,
+     "prefix": "",
+     "quote": "educational and professional qualifications.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Additional post-nominals for a state or territory parliamentarian are written differently from the parliamentarian’s own usage."
+   },
+   "when": [
+    "Applies when additional post-nominals are included for a state or territory parliamentarian.",
+    "These can include civilian or military honours and educational or professional qualifications.",
+    "Including such additional post-nominals is permitted, not independently required by this passage."
+   ],
+   "why": "G-3 preserves optional inclusion, while the following instruction imposes a checkable correspondence with the parliamentarian’s usage."
+  },
+  {
+   "anchor": {
+    "block_id": "74ede8c313f6",
+    "end": 80,
+    "prefix": "",
+    "quote": "Office holders in the ACT Legislative Assembly don’t use the title ‘Honourable’.",
+    "start": 0,
+    "suffix": " Ministers in theACT have more t"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "ACT speaker is not styled Honourable.",
+     "parts": [
+      {
+       "block_id": "76c365c58ad2",
+       "end": 59,
+       "prefix": "",
+       "quote": "Mr Mark Parton MLA, Speaker of the ACT Legislative Assembly",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "ACT minister is not styled Honourable.",
+     "parts": [
+      {
+       "block_id": "19578db0d849",
+       "end": 48,
+       "prefix": "",
+       "quote": "Ms Rachel Stephen-Smith MLA, Minister for Health",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An ACT Legislative Assembly office holder is addressed as ‘Honourable’ or ‘Hon’ by virtue of that ACT office."
+   },
+   "when": [
+    "Applies to forms of address for office holders in the ACT Legislative Assembly."
+   ],
+   "why": "This is a prohibition on an inapplicable title, distinct from omitting a title that an entitled office holder should receive."
+  },
+  {
+   "anchor": {
+    "block_id": "74ede8c313f6",
+    "end": 219,
+    "prefix": "T have more than one portfolio. ",
+    "quote": "Address emails and letters to them using the ministerial title appropriate to the topic.",
+    "start": 131,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Health portfolio form.",
+     "parts": [
+      {
+       "block_id": "19578db0d849",
+       "end": 48,
+       "prefix": "",
+       "quote": "Ms Rachel Stephen-Smith MLA, Minister for Health",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Mental Health portfolio form.",
+     "parts": [
+      {
+       "block_id": "835fc20d9dbf",
+       "end": 55,
+       "prefix": "",
+       "quote": "Ms Rachel Stephen-Smith MLA, Minister for Mental Health",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Finance portfolio form.",
+     "parts": [
+      {
+       "block_id": "3489647e9166",
+       "end": 49,
+       "prefix": "",
+       "quote": "Ms Rachel Stephen-Smith MLA, Minister for Finance",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Public Service portfolio form.",
+     "parts": [
+      {
+       "block_id": "b85b3c0e28a9",
+       "end": 60,
+       "prefix": "",
+       "quote": "Ms Rachel Stephen-Smith MLA, Minister for the Public Service",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email or letter to an ACT minister uses a ministerial portfolio title unrelated to the subject of the correspondence."
+   },
+   "when": [
+    "Applies to emails and letters to ACT ministers.",
+    "Select among the recipient’s portfolios according to the topic of the correspondence."
+   ],
+   "why": "The ordinary prose after the examples states a separate topic-dependent title-selection rule; it is not part of the example label."
+  },
+  {
+   "anchor": {
+    "block_id": "a8200aa84531",
+    "end": 81,
+    "prefix": "",
+    "quote": "Address state premiers as ‘The Hon [given and family names] MLA/MP, Premier of …’",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7bcf1d909912",
+     "end": 64,
+     "prefix": "",
+     "quote": "Address the chief minister of the NT with details in this order:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0d88195b1b17",
+     "end": 9,
+     "prefix": "",
+     "quote": "‘The Hon’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "10c35371bb7f",
+     "end": 28,
+     "prefix": "",
+     "quote": "their given and family names",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "be851ec02f54",
+     "end": 48,
+     "prefix": "",
+     "quote": "‘MLA, Chief Minister of the Northern Territory’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ce4d585f7ef0",
+     "end": 64,
+     "prefix": "",
+     "quote": "Address the chief minister of the ACT with their preferred title",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "670d1c5d8996",
+     "end": 65,
+     "prefix": "",
+     "quote": "Address the chief minister of the ACT with details in this order:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "19a431a32089",
+     "end": 56,
+     "prefix": "",
+     "quote": "the appropriate title (‘Dr’, ‘Mr’, ‘Ms’, ‘Mx’ and so on)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a9140dccbc98",
+     "end": 28,
+     "prefix": "",
+     "quote": "their given and family names",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "927a9e5c6add",
+     "end": 33,
+     "prefix": "",
+     "quote": "‘MLA, Chief Minister of the ACT’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "State premier.",
+     "parts": [
+      {
+       "block_id": "2ac758a01949",
+       "end": 56,
+       "prefix": "",
+       "quote": "The Hon Peter Malinauskas MP, Premier of South Australia",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Premier with additional post-nominals.",
+     "parts": [
+      {
+       "block_id": "75cb2bbb4bca",
+       "end": 75,
+       "prefix": "",
+       "quote": "The Hon Roger Cook BA GradDipBus (PR) MBA MLA, Premier of Western Australia",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "NT chief minister.",
+     "parts": [
+      {
+       "block_id": "71dea51a2b67",
+       "end": 69,
+       "prefix": "",
+       "quote": "The Hon Lia Finocchiaro MLA, Chief Minister of the Northern Territory",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "ACT chief minister.",
+     "parts": [
+      {
+       "block_id": "d78604eed403",
+       "end": 45,
+       "prefix": "",
+       "quote": "Mr Andrew Barr MLA, Chief Minister of the ACT",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A full form of address for a state premier or territory chief minister omits the required personal-name or office components, or puts the components in the wrong sequence."
+   },
+   "when": [
+    "For state premiers, the sequence is The Hon, given and family names, applicable MLA or MP, a comma, and Premier of the state.",
+    "For the NT chief minister, the sequence is The Hon, given and family names, and MLA, Chief Minister of the Northern Territory.",
+    "For the ACT chief minister, the sequence is the appropriate personal title, given and family names, and MLA, Chief Minister of the ACT.",
+    "Other post-nominals used by the office holder can also appear.",
+    "Apply to full forms of address rather than every running-text mention.",
+    "Check full-address components and their order here; use the separate rules for Honourable eligibility and parliamentary post-nominal selection."
+   ],
+   "why": "G-2 consolidates the role-specific full-address templates; G-1 leaves their broader headings to group address and correspondence checks."
+  },
+  {
+   "anchor": {
+    "block_id": "dd68030a171f",
+    "end": 97,
+    "prefix": "",
+    "quote": "Use the title ‘The Right Honourable the Lord Mayor of [the name of the city]’ for lord mayors of:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a9dc9ae4c831",
+     "end": 8,
+     "prefix": "",
+     "quote": "Adelaide",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1e38a25e4c95",
+     "end": 8,
+     "prefix": "",
+     "quote": "Brisbane",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d9b8c14421c8",
+     "end": 6,
+     "prefix": "",
+     "quote": "Hobart",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f46957191b89",
+     "end": 9,
+     "prefix": "",
+     "quote": "Melbourne",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "583a5b25e2c0",
+     "end": 5,
+     "prefix": "",
+     "quote": "Perth",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c17a1508d75e",
+     "end": 7,
+     "prefix": "",
+     "quote": "Sydney.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e7784d6300ab",
+     "end": 127,
+     "prefix": "",
+     "quote": "In emails and letters, you can use either the full form ‘Right Honourable’ or its shortened form ‘Rt Hon’ (without full stops).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "399a9a5a95b7",
+     "end": 84,
+     "prefix": "",
+     "quote": "Address the lord mayor of Darwin as ‘The Right Worshipful the Lord Mayor of Darwin’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "18d504c562a4",
+     "end": 121,
+     "prefix": "",
+     "quote": "Address the mayors of Geelong, Newcastle and Wollongong as ‘The Right Worshipful the [Lord] Mayor of [name of the city]’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "578c2388d109",
+     "end": 85,
+     "prefix": "",
+     "quote": "Address mayors of other cities as ‘His’ or ‘Her Worship the Mayor of [name of city]’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Right Honourable capital-city style.",
+     "parts": [
+      {
+       "block_id": "f76340eec3f7",
+       "end": 76,
+       "prefix": "",
+       "quote": "The Right Honourable the Lord Mayor of Brisbane, Councillor Adrian Schrinner",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Permitted abbreviated style.",
+     "parts": [
+      {
+       "block_id": "2f7d642a48a6",
+       "end": 61,
+       "prefix": "",
+       "quote": "The Rt Hon the Lord Mayor of Hobart, Councillor Anna Reynolds",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Darwin style.",
+     "parts": [
+      {
+       "block_id": "1ea48dbb3353",
+       "end": 59,
+       "prefix": "",
+       "quote": "The Right Worshipful the Lord Mayor of Darwin, Peter Styles",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Greater Geelong style.",
+     "parts": [
+      {
+       "block_id": "5e740a552c24",
+       "end": 73,
+       "prefix": "",
+       "quote": "The Right Worshipful the Mayor of Greater Geelong, Mr Stretch Kontelj OAM",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Newcastle style.",
+     "parts": [
+      {
+       "block_id": "54bb9fae0c45",
+       "end": 66,
+       "prefix": "",
+       "quote": "The Right Worshipful the Lord Mayor of Newcastle, Dr Ross Kerridge",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Wollongong style.",
+     "parts": [
+      {
+       "block_id": "846a13b74b40",
+       "end": 73,
+       "prefix": "",
+       "quote": "The Right Worshipful the Lord Mayor of Wollongong, Councillor Tania Brown",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Other-city style.",
+     "parts": [
+      {
+       "block_id": "e28fcd3f7401",
+       "end": 49,
+       "prefix": "",
+       "quote": "His Worship the Mayor of Fremantle, Mr Ben Lawver",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A mayor’s full civic form of address uses the wrong civic style or omits the prescribed mayoral title and city."
+   },
+   "when": [
+    "For Adelaide, Brisbane, Hobart, Melbourne, Perth and Sydney, use The Right Honourable the Lord Mayor of the city.",
+    "In emails and letters, Right Honourable may be shortened to Rt Hon without full stops.",
+    "For Darwin, use The Right Worshipful the Lord Mayor of Darwin.",
+    "For Geelong, Newcastle and Wollongong, use The Right Worshipful the Mayor or Lord Mayor of the city, according to the applicable office.",
+    "The examples use Mayor of Greater Geelong and Lord Mayor of Newcastle and Wollongong.",
+    "For other cities, use His or Her Worship the Mayor of the city, as applicable.",
+    "Applies to full forms of address, not every ordinary reference to a mayor."
+   ],
+   "why": "G-2 treats the city-based civic styles as conditions of one title-selection check; G-3 records the permitted abbreviation."
+  },
+  {
+   "anchor": {
+    "block_id": "8debf8b3f841",
+    "end": 95,
+    "prefix": "",
+    "quote": "Add ‘Councillor’ before the names of the lord mayors of Brisbane, Hobart, Melbourne and Sydney.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "419f593492e7",
+     "end": 106,
+     "prefix": "",
+     "quote": "Use the honorific ‘Ms’, ‘Mr’, ‘Mx’, ‘Mrs’ or ‘Dr’ with the names of the lord mayors of Adelaide and Perth.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Councillor before the name.",
+     "parts": [
+      {
+       "block_id": "f76340eec3f7",
+       "end": 76,
+       "prefix": "",
+       "quote": "The Right Honourable the Lord Mayor of Brisbane, Councillor Adrian Schrinner",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Councillor before the name.",
+     "parts": [
+      {
+       "block_id": "2f7d642a48a6",
+       "end": 61,
+       "prefix": "",
+       "quote": "The Rt Hon the Lord Mayor of Hobart, Councillor Anna Reynolds",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Councillor before the name.",
+     "parts": [
+      {
+       "block_id": "54de55bc48f5",
+       "end": 75,
+       "prefix": "",
+       "quote": "The Right Honourable the Lord Mayor of Melbourne, Councillor Nicholas Reece",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Councillor before the name.",
+     "parts": [
+      {
+       "block_id": "7e5a9fdee0a7",
+       "end": 63,
+       "prefix": "",
+       "quote": "The Rt Hon the Lord Mayor of Sydney, Councillor Clover Moore AO",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Personal honorific before the name.",
+     "parts": [
+      {
+       "block_id": "18033e465bc6",
+       "end": 61,
+       "prefix": "",
+       "quote": "The Rt Hon the Lord Mayor of Adelaide, Dr Jane Lomax-Smith AM",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A full address to one of the six specified capital-city lord mayors omits or substitutes the required title before the person’s name."
+   },
+   "when": [
+    "For Brisbane, Hobart, Melbourne and Sydney, put Councillor before the lord mayor’s name.",
+    "For Adelaide and Perth, use the applicable personal honorific Ms, Mr, Mx, Mrs or Dr with the lord mayor’s name."
+   ],
+   "why": "G-2 combines city-dependent personal prefixes; this is distinct from selecting the preceding civic style."
+  },
+  {
+   "anchor": {
+    "block_id": "e8b08d8f904a",
+    "end": 39,
+    "prefix": "",
+    "quote": "Put a comma after the name of the city.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Comma follows the city name.",
+     "parts": [
+      {
+       "block_id": "f76340eec3f7",
+       "end": 76,
+       "prefix": "",
+       "quote": "The Right Honourable the Lord Mayor of Brisbane, Councillor Adrian Schrinner",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Comma follows the city name.",
+     "parts": [
+      {
+       "block_id": "18033e465bc6",
+       "end": 61,
+       "prefix": "",
+       "quote": "The Rt Hon the Lord Mayor of Adelaide, Dr Jane Lomax-Smith AM",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A full capital-city lord-mayoral address runs the city name directly into the office holder’s personal name or personal title without a comma."
+   },
+   "when": [
+    "Applies when the city-based lord-mayoral title is followed by the office holder’s personal name.",
+    "Does not require a trailing comma when only the civic title is given."
+   ],
+   "why": "The missing separator is an independent punctuation finding, not a civic-title or personal-prefix error."
+  },
+  {
+   "anchor": {
+    "block_id": "3e01b7d2007d",
+    "end": 55,
+    "prefix": "",
+    "quote": "Address a shire president as ‘President [family name]’.",
+    "start": 0,
+    "suffix": " The abbreviation for ‘President"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "c7c438a02595",
+     "end": 70,
+     "prefix": "",
+     "quote": "Address an alderman (regardless of gender) as ‘Alderman[family name]’.",
+     "start": 0,
+     "suffix": " The abbreviation for ‘Alderman’"
+    },
+    {
+     "block_id": "50a13670b312",
+     "end": 51,
+     "prefix": "",
+     "quote": "Address a councillor as ‘Councillor [family name]’.",
+     "start": 0,
+     "suffix": " The abbreviation for ‘Councillo"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Shire president.",
+     "parts": [
+      {
+       "block_id": "985abf0b9aee",
+       "end": 15,
+       "prefix": "",
+       "quote": "President Smith",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Full alderman title.",
+     "parts": [
+      {
+       "block_id": "c62605a322e5",
+       "end": 15,
+       "prefix": "",
+       "quote": "Alderman Miller",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Permitted abbreviated title.",
+     "parts": [
+      {
+       "block_id": "4be6b1537ea6",
+       "end": 10,
+       "prefix": "",
+       "quote": "Ald Miller",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Full councillor title.",
+     "parts": [
+      {
+       "block_id": "16c83577f589",
+       "end": 16,
+       "prefix": "",
+       "quote": "Councillor Brown",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Permitted abbreviated title.",
+     "parts": [
+      {
+       "block_id": "d3d00522cfe7",
+       "end": 8,
+       "prefix": "",
+       "quote": "Cr Brown",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Read the missing space in ‘Alderman[family name]’ in light of the manual’s examples ‘Alderman Miller’ and ‘Ald Miller’: separate the title and family name with a space.",
+    "unit": "phrase",
+    "violation_condition": "A form of address for a shire president, alderman or councillor lacks the corresponding office title before the family name, uses the wrong office title, or joins the title and family name without a space."
+   },
+   "when": [
+    "Use President followed by the family name for a shire president.",
+    "Use Alderman followed by the family name regardless of gender; Ald is a permitted abbreviation.",
+    "Use Councillor followed by the family name; Cr is a permitted abbreviation.",
+    "Pres is a recognised abbreviation of President, but the separate preference for the full title applies."
+   ],
+   "why": "G-2 combines office-dependent title-and-family-name forms; E-4 makes the resolution of the source’s missing space explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "3e01b7d2007d",
+    "end": 176,
+    "prefix": "‘Pres’ without a full stop, but ",
+    "quote": "use the full title ‘President’ because it’s clearer.",
+    "start": 124,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Preferred full title.",
+     "parts": [
+      {
+       "block_id": "985abf0b9aee",
+       "end": 15,
+       "prefix": "",
+       "quote": "President Smith",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A shire president is addressed using the abbreviated title ‘Pres’ rather than ‘President’."
+   },
+   "when": [
+    "Applies to the title of a shire president.",
+    "Pres is recognised as an abbreviation, but President is the expressly preferred alternative."
+   ],
+   "why": "This is an explicit preference over a named alternative, separate from correct abbreviation spelling and title placement."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 8529,
+  "output_tokens": 21032,
+  "reasoning_tokens": 6665
+ }
+}

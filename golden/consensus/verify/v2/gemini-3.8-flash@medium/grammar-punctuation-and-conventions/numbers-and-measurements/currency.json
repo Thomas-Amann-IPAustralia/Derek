@@ -1,0 +1,66 @@
+{
+ "effort": "medium",
+ "input_sha256": "1b180ebfb559b8b7483168b72181b4ea3206ef3e5a59d8c16e8e6fb68286a904",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/currency.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4936,
+  "output_tokens": 463,
+  "reasoning_tokens": 6330
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "Separate check from symbol order (A1); flags whitespace between currency symbol and numerals.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C2",
+   "note": "Testable rule flagging a full stop after the cents abbreviation 'c' when not sentence-ending.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C3",
+   "note": "Testable rule requiring country prefix followed by '$' for non-Australian dollar currencies.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "Testable consistency rule requiring IBAN codes across all referenced currencies when IBAN is used.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C5",
+   "note": "G-3: Relaxes A8 by permitting the symbol 'A£' or 'former Australian pounds' if confusion is possible.",
+   "restates": "",
+   "verdict": "permission"
+  },
+  {
+   "id": "C6",
+   "note": "G-5: Advice to the writer about precision; cannot be violated by text.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C7",
+   "note": "Testable rule prohibiting a space or full stop when using 'm' for million in tables or charts.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C8",
+   "note": "G-5: Advice to the writer to provide an explanatory note for the abbreviation.",
+   "restates": "",
+   "verdict": "advice"
+  }
+ ],
+ "version": "v2"
+}

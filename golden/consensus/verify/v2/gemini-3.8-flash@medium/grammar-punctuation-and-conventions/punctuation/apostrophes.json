@@ -1,0 +1,42 @@
+{
+ "effort": "medium",
+ "input_sha256": "f9076970ee438f53f549da30ef9954da143205bd8a0c81aded4f272f3bd75875",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/punctuation/apostrophes.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 8489,
+  "output_tokens": 231,
+  "reasoning_tokens": 6949
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "G-2: specific case in the table governed by agreed rule A1.",
+   "restates": "A1",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C2",
+   "note": "G-5: diagnostic test advising the writer how to choose between it's and its.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C3",
+   "note": "Actionable prohibition against styling single letter and digit plurals.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "G-4: duplicate candidate covering the same formatting restriction as C3.",
+   "restates": "C3",
+   "verdict": "restatement"
+  }
+ ],
+ "version": "v2"
+}

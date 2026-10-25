@@ -1,0 +1,1402 @@
+{
+ "effort": "high",
+ "input_sha256": "8d5aa1c5c13ccd02b4f4c311228b4063e1c712e647e53ddbb34d309d19a51dd6",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "d1e4dd211168",
+    "end": 58,
+    "prefix": "",
+    "quote": "Make content easy for people to find using search engines.",
+    "start": 0,
+    "suffix": " Include keywords in URLs, metad"
+   },
+   "note": "An overall objective, not an independently specified textual property; the subsequent rules provide the concrete checks.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d1e4dd211168",
+    "end": 106,
+    "prefix": "e to find using search engines. ",
+    "quote": "Include keywords in URLs, metadata and content.",
+    "start": 59,
+    "suffix": " Create accessible links to high"
+   },
+   "note": "Absorbed by the keyword-inclusion rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d1e4dd211168",
+    "end": 155,
+    "prefix": " in URLs, metadata and content. ",
+    "quote": "Create accessible links to high-quality content.",
+    "start": 107,
+    "suffix": ""
+   },
+   "note": "Summary of the later link-clarity and destination-quality guidance.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d3e783652e8a",
+    "end": 32,
+    "prefix": "",
+    "quote": "Optimise content for users first",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Sets the writer’s priority rather than specifying an independently checkable textual feature.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2661da3d67f0",
+    "end": 69,
+    "prefix": "",
+    "quote": "Help people find the content they need using optimisation techniques.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice about the writer’s objective and method.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f956daa3120b",
+    "end": 72,
+    "prefix": "",
+    "quote": "Focus on making the page for users first, and for search engines second.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A priority for the writing process, not a separate text check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "39970f426290",
+    "end": 113,
+    "prefix": "",
+    "quote": "Write content that includes these terms and topics, and that answers the questions people are most likely to ask.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Part of the hypothetical family-tax-benefits example; it illustrates user-first optimisation rather than adding a separate general rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8fdfc2378c9b",
+    "end": 111,
+    "prefix": "",
+    "quote": "You must help the users of your service to find the information they need to meet the Digital Service Standard.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "States a service-level obligation without specifying a separate textual property a checker could flag.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3273776b8821",
+    "end": 35,
+    "prefix": "",
+    "quote": "Use keywords in the URL and content",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the keyword-inclusion instruction and several distinct URL checks.",
+   "reason": "section",
+   "seed_uid": "bc0ef8ec7fc5d143"
+  },
+  {
+   "anchor": {
+    "block_id": "8e87d22d003a",
+    "end": 37,
+    "prefix": "",
+    "quote": "Write metadata that explains the page",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the more specific title and meta-description requirements.",
+   "reason": "section",
+   "seed_uid": "e733d6c6838c9af8"
+  },
+  {
+   "anchor": {
+    "block_id": "a79d4ede80fb",
+    "end": 89,
+    "prefix": "",
+    "quote": "Write these parts so that users can tell whether the page holds what they’re looking for.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the title and meta-description guidance; their specific clarity checks are marked instead.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "120752bfa240",
+    "end": 16,
+    "prefix": "",
+    "quote": "include keywords",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The title-specific case is absorbed by the keyword-inclusion rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "357d3d64446e",
+    "end": 58,
+    "prefix": "",
+    "quote": "Ensure the linking text to this page relates to the title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed as a specific criterion of the link destination-and-purpose clarity rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dba32da99a59",
+    "end": 58,
+    "prefix": "",
+    "quote": "Descriptions need to be user-focused and contain keywords.",
+    "start": 0,
+    "suffix": " They can be up to 160 character"
+   },
+   "note": "Its user-focused wording is consolidated with the plain-language meta-description rule; keyword inclusion is consolidated with the general keyword rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "333bf32f7fda",
+    "end": 43,
+    "prefix": "",
+    "quote": "Create useful links to high-quality content",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the more specific link wording, destination-quality and placement guidance.",
+   "reason": "section",
+   "seed_uid": "3382ba9795d1fd8f"
+  },
+  {
+   "anchor": {
+    "block_id": "ca31e3b47871",
+    "end": 92,
+    "prefix": "",
+    "quote": "Use relevant keywords as the anchor text (for example, don’t use ‘click here’ as link text).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed by the keyword-inclusion rule as its link-text case.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d4d6655f3349",
+    "end": 80,
+    "prefix": "",
+    "quote": "Make sure users can read content on all devices using responsive design methods.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The manual’s example sentence containing a link, not an independent responsive-design instruction on this page.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b87be305c788",
+    "end": 38,
+    "prefix": "",
+    "quote": "Use analytics as part of user research",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: concerns the research process, not a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": "73183f612163a2af"
+  },
+  {
+   "anchor": {
+    "block_id": "ed05506cd04c",
+    "end": 30,
+    "prefix": "",
+    "quote": "Don’t rely on analytics alone.",
+    "start": 0,
+    "suffix": " Use analytics as part of resear"
+   },
+   "note": "G-5: a constraint on research methods, not on text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ed05506cd04c",
+    "end": 76,
+    "prefix": "Don’t rely on analytics alone. ",
+    "quote": "Use analytics as part of research with users.",
+    "start": 31,
+    "suffix": ""
+   },
+   "note": "G-5: instructs the writer’s research process.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bebbf5915ac5",
+    "end": 107,
+    "prefix": "",
+    "quote": "Be careful of using common metrics (like number of unique visits and time on page) as a measure of success.",
+    "start": 0,
+    "suffix": " A page might meet a user’s need"
+   },
+   "note": "G-5: cautions about evaluation methods rather than specifying a textual violation.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/findable-content/page-optimisation.md",
+ "page_sha256": "16ccc170ac7a0db98f14f0e213b93c39e1b238a002b063cbe60f8b77ee46e26a",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "d1e4dd211168",
+    "note": "An overall objective, not an independently specified textual property; the subsequent rules provide the concrete checks.",
+    "quote": "Make content easy for people to find using search engines.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d1e4dd211168",
+    "note": "Absorbed by the keyword-inclusion rule.",
+    "quote": "Include keywords in URLs, metadata and content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d1e4dd211168",
+    "note": "Summary of the later link-clarity and destination-quality guidance.",
+    "quote": "Create accessible links to high-quality content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d3e783652e8a",
+    "note": "Sets the writer’s priority rather than specifying an independently checkable textual feature.",
+    "quote": "Optimise content for users first",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2661da3d67f0",
+    "note": "General advice about the writer’s objective and method.",
+    "quote": "Help people find the content they need using optimisation techniques.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f956daa3120b",
+    "note": "A priority for the writing process, not a separate text check.",
+    "quote": "Focus on making the page for users first, and for search engines second.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "39970f426290",
+    "note": "Part of the hypothetical family-tax-benefits example; it illustrates user-first optimisation rather than adding a separate general rule.",
+    "quote": "Write content that includes these terms and topics, and that answers the questions people are most likely to ask.",
+    "reason": "description"
+   },
+   {
+    "block_id": "8fdfc2378c9b",
+    "note": "States a service-level obligation without specifying a separate textual property a checker could flag.",
+    "quote": "You must help the users of your service to find the information they need to meet the Digital Service Standard.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3273776b8821",
+    "note": "G-1: groups the keyword-inclusion instruction and several distinct URL checks.",
+    "quote": "Use keywords in the URL and content",
+    "reason": "section"
+   },
+   {
+    "block_id": "8e87d22d003a",
+    "note": "G-1: groups the more specific title and meta-description requirements.",
+    "quote": "Write metadata that explains the page",
+    "reason": "section"
+   },
+   {
+    "block_id": "a79d4ede80fb",
+    "note": "G-1: introduces the title and meta-description guidance; their specific clarity checks are marked instead.",
+    "quote": "Write these parts so that users can tell whether the page holds what they’re looking for.",
+    "reason": "section"
+   },
+   {
+    "block_id": "120752bfa240",
+    "note": "The title-specific case is absorbed by the keyword-inclusion rule.",
+    "quote": "include keywords",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "357d3d64446e",
+    "note": "Absorbed as a specific criterion of the link destination-and-purpose clarity rule.",
+    "quote": "Ensure the linking text to this page relates to the title.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "dba32da99a59",
+    "note": "Its user-focused wording is consolidated with the plain-language meta-description rule; keyword inclusion is consolidated with the general keyword rule.",
+    "quote": "Descriptions need to be user-focused and contain keywords.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "333bf32f7fda",
+    "note": "G-1: groups the more specific link wording, destination-quality and placement guidance.",
+    "quote": "Create useful links to high-quality content",
+    "reason": "section"
+   },
+   {
+    "block_id": "ca31e3b47871",
+    "note": "Absorbed by the keyword-inclusion rule as its link-text case.",
+    "quote": "Use relevant keywords as the anchor text (for example, don’t use ‘click here’ as link text).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d4d6655f3349",
+    "note": "The manual’s example sentence containing a link, not an independent responsive-design instruction on this page.",
+    "quote": "Make sure users can read content on all devices using responsive design methods.",
+    "reason": "description"
+   },
+   {
+    "block_id": "b87be305c788",
+    "note": "G-5: concerns the research process, not a property of the resulting text.",
+    "quote": "Use analytics as part of user research",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ed05506cd04c",
+    "note": "G-5: a constraint on research methods, not on text.",
+    "quote": "Don’t rely on analytics alone.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ed05506cd04c",
+    "note": "G-5: instructs the writer’s research process.",
+    "quote": "Use analytics as part of research with users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bebbf5915ac5",
+    "note": "G-5: cautions about evaluation methods rather than specifying a textual violation.",
+    "quote": "Be careful of using common metrics (like number of unique visits and time on page) as a measure of success.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "32f1bb7d1b82",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "fa2b0cd3663f",
+      "quote": "web address (URL, or ‘uniform resource locator’)"
+     },
+     {
+      "block_id": "87e925519349",
+      "quote": "metadata"
+     },
+     {
+      "block_id": "987aa4312214",
+      "quote": "headings"
+     },
+     {
+      "block_id": "0bbc002e1091",
+      "quote": "page content"
+     },
+     {
+      "block_id": "37bde4272c9b",
+      "quote": "internal links"
+     },
+     {
+      "block_id": "e10a4237e87b",
+      "quote": "captions and alt text for images."
+     },
+     {
+      "block_id": "d1e4dd211168",
+      "quote": "Include keywords in URLs, metadata and content."
+     },
+     {
+      "block_id": "120752bfa240",
+      "quote": "include keywords"
+     },
+     {
+      "block_id": "dba32da99a59",
+      "quote": "contain keywords."
+     },
+     {
+      "block_id": "ca31e3b47871",
+      "quote": "Use relevant keywords as the anchor text (for example, don’t use ‘click here’ as link text)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use keywords in the:",
+    "specification": "The page does not specify target keywords, minimum frequency, or whether every individual heading, link or image description must contain keywords. These details require editorial interpretation; do not invent a keyword-density threshold.",
+    "unit": "document",
+    "violation_condition": "Relevant keywords are missing from the specified textual components of a webpage.",
+    "when": [
+     "Applies to URLs, metadata, headings, page content, link text, and image captions and alt text.",
+     "Does not require adding otherwise unnecessary links, images or captions."
+    ],
+    "why": "G-2 groups the locations of the same keyword-inclusion check; G-4 absorbs repeated keyword instructions."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "e68f593bd452",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Create URLs that contain words from the title of the page",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A page URL contains no words from that page’s title.",
+    "when": [
+     "Compare the URL wording with the title of the page it identifies."
+    ],
+    "why": "The title-word relationship is a distinct check from keyword inclusion and keyword position."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "e68f593bd452",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Create URLs that contain words from the title of the page with the main keywords close to the start.",
+    "specification": "This item concerns keyword position only. The manual does not define ‘close to the start’ or explain whether position is measured from the hostname or the page-specific path.",
+    "unit": "document",
+    "violation_condition": "The main keywords occur late in a page URL rather than close to its start.",
+    "when": [
+     "Assess the position of the page’s main keywords within its URL."
+    ],
+    "why": "Keyword position can be wrong even when the URL contains both keywords and title words, so it is a separate finding."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "18bdcd8b9d77",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "The URL should be below 100 characters",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A page URL contains 100 or more characters.",
+    "when": [
+     "Applies to the page URL."
+    ],
+    "why": "URL length and intelligibility are independently checkable properties, so they are separated."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "18bdcd8b9d77",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "make sense to the user.",
+    "specification": "The manual supplies no test for whether a URL makes sense to its intended users. Assessment needs the page context and audience.",
+    "unit": "document",
+    "violation_condition": "A page URL is unintelligible to its intended users.",
+    "when": [
+     "Assess the URL in the context of its page and intended users."
+    ],
+    "why": "Intelligibility is a textual property of the URL and is independent of its character count."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "2eb30009d48c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The example also illustrates a readable, title-derived URL, but it is attached to the nearest separator rule (E-2).",
+      "parts": [
+       {
+        "block_id": "1b99552df79d",
+        "quote": "https://stylemanual.gov.au/about-style-manual"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "To separate words in the URL, use hyphens instead of spaces or underscores.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "Spaces or underscores, rather than hyphens, separate words in a page URL.",
+    "when": [
+     "Applies where a separator is used between words in a URL, not to punctuation serving another URL function."
+    ],
+    "why": "This is one separator-choice check; spaces and underscores are alternative violations of it."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "55a43c3c1821",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8adcb3cbee46",
+      "quote": "The title should:"
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "be different on each page",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The same page title is reused on different pages of a website.",
+    "when": [
+     "Requires comparison with titles of other pages on the website."
+    ],
+    "why": "Title uniqueness is independent of title length, clarity and keyword inclusion."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "0ce84d05e91d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8adcb3cbee46",
+      "quote": "The title should:"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "be 70 characters or fewer.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A page title contains more than 70 characters.",
+    "when": [
+     "Applies to the page title used in metadata and search results."
+    ],
+    "why": "The explicit title-length limit produces a finding separate from the other title requirements."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "b4e57db5c935",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b4e57db5c935",
+      "quote": "This is the first thing a screen reader user will hear and needs to assure them they are on the right page."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write clear page titles.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A page title does not clearly identify the page’s subject, leaving users unable to tell whether they are on the right page.",
+    "when": [
+     "Assess the title against the page’s content and intended users."
+    ],
+    "why": "G-1 uses the specific title instruction rather than making the metadata section’s general introduction another rule."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "238149cff66d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "238149cff66d",
+      "quote": "This helps users to know if it’s what they need."
+     },
+     {
+      "block_id": "dba32da99a59",
+      "quote": "Descriptions need to be user-focused"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Describe the content in plain language.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A meta description does not explain the page’s content in language that its intended users can readily understand and use to judge its relevance.",
+    "when": [
+     "Applies to the meta description, not a search-engine-generated content snippet."
+    ],
+    "why": "G-4 consolidates the user-focused explanation with the specific plain-language description instruction; keyword inclusion remains a separate check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "dba32da99a59",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "They can be up to 160 characters.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A meta description contains more than 160 characters.",
+    "when": [
+     "Applies to the meta description field, not a search-engine-generated content snippet."
+    ],
+    "why": "This establishes a checkable upper bound rather than a free-standing permission under G-3."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "16deac9fc49e",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Link to content on other quality sites",
+    "specification": "The manual does not define site quality. Assessment requires information about the destination, not merely the visible URL.",
+    "unit": "document",
+    "violation_condition": "An external link points to content on a low-quality site.",
+    "when": [
+     "Applies when linking to content on other websites."
+    ],
+    "why": "Destination quality and link placement are independent properties and therefore separate checks."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "16deac9fc49e",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Link to content on other quality sites towards the end of the content.",
+    "specification": "This item concerns placement only. The manual gives no paragraph, section or proportional boundary for ‘towards the end’.",
+    "unit": "document",
+    "violation_condition": "Links to content on other websites are positioned away from the end of the page’s content.",
+    "when": [
+     "Applies to links to other websites, not internal links."
+    ],
+    "why": "Link placement can be wrong even when the destination is high quality, so it warrants its own finding."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "b28a9f97f70f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "357d3d64446e",
+      "quote": "Ensure the linking text to this page relates to the title."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The explanatory block identifies which words are linked; it is not part of the example sentence.",
+      "parts": [
+       {
+        "block_id": "d4d6655f3349",
+        "quote": "Make sure users can read content on all devices using responsive design methods."
+       },
+       {
+        "block_id": "0011c15d5a0f",
+        "quote": "[The text ‘responsive design methods’ links to a page about consistent and responsive design.]"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write link text that makes the destination and purpose of the link clear.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Link text fails to make its destination and purpose clear, including wording unrelated to the destination page’s title.",
+    "when": [
+     "Applies to internal and external links.",
+     "For a link to a page, consider the destination page’s title when assessing the wording."
+    ],
+    "why": "G-4 consolidates title-related link wording with the destination-clarity check instead of creating overlapping findings."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "32f1bb7d1b82",
+    "end": 20,
+    "prefix": "",
+    "quote": "Use keywords in the:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "fa2b0cd3663f",
+     "end": 48,
+     "prefix": "",
+     "quote": "web address (URL, or ‘uniform resource locator’)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "87e925519349",
+     "end": 8,
+     "prefix": "",
+     "quote": "metadata",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "987aa4312214",
+     "end": 8,
+     "prefix": "",
+     "quote": "headings",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0bbc002e1091",
+     "end": 12,
+     "prefix": "",
+     "quote": "page content",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "37bde4272c9b",
+     "end": 14,
+     "prefix": "",
+     "quote": "internal links",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e10a4237e87b",
+     "end": 33,
+     "prefix": "",
+     "quote": "captions and alt text for images.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d1e4dd211168",
+     "end": 106,
+     "prefix": "e to find using search engines. ",
+     "quote": "Include keywords in URLs, metadata and content.",
+     "start": 59,
+     "suffix": " Create accessible links to high"
+    },
+    {
+     "block_id": "120752bfa240",
+     "end": 16,
+     "prefix": "",
+     "quote": "include keywords",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dba32da99a59",
+     "end": 58,
+     "prefix": "ons need to be user-focused and ",
+     "quote": "contain keywords.",
+     "start": 41,
+     "suffix": " They can be up to 160 character"
+    },
+    {
+     "block_id": "ca31e3b47871",
+     "end": 92,
+     "prefix": "",
+     "quote": "Use relevant keywords as the anchor text (for example, don’t use ‘click here’ as link text).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not specify target keywords, minimum frequency, or whether every individual heading, link or image description must contain keywords. These details require editorial interpretation; do not invent a keyword-density threshold.",
+    "unit": "document",
+    "violation_condition": "Relevant keywords are missing from the specified textual components of a webpage."
+   },
+   "when": [
+    "Applies to URLs, metadata, headings, page content, link text, and image captions and alt text.",
+    "Does not require adding otherwise unnecessary links, images or captions."
+   ],
+   "why": "G-2 groups the locations of the same keyword-inclusion check; G-4 absorbs repeated keyword instructions."
+  },
+  {
+   "anchor": {
+    "block_id": "e68f593bd452",
+    "end": 57,
+    "prefix": "",
+    "quote": "Create URLs that contain words from the title of the page",
+    "start": 0,
+    "suffix": " with the main keywords close to"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A page URL contains no words from that page’s title."
+   },
+   "when": [
+    "Compare the URL wording with the title of the page it identifies."
+   ],
+   "why": "The title-word relationship is a distinct check from keyword inclusion and keyword position."
+  },
+  {
+   "anchor": {
+    "block_id": "e68f593bd452",
+    "end": 100,
+    "prefix": "",
+    "quote": "Create URLs that contain words from the title of the page with the main keywords close to the start.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This item concerns keyword position only. The manual does not define ‘close to the start’ or explain whether position is measured from the hostname or the page-specific path.",
+    "unit": "document",
+    "violation_condition": "The main keywords occur late in a page URL rather than close to its start."
+   },
+   "when": [
+    "Assess the position of the page’s main keywords within its URL."
+   ],
+   "why": "Keyword position can be wrong even when the URL contains both keywords and title words, so it is a separate finding."
+  },
+  {
+   "anchor": {
+    "block_id": "18bdcd8b9d77",
+    "end": 38,
+    "prefix": "",
+    "quote": "The URL should be below 100 characters",
+    "start": 0,
+    "suffix": " and make sense to the user."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A page URL contains 100 or more characters."
+   },
+   "when": [
+    "Applies to the page URL."
+   ],
+   "why": "URL length and intelligibility are independently checkable properties, so they are separated."
+  },
+  {
+   "anchor": {
+    "block_id": "18bdcd8b9d77",
+    "end": 66,
+    "prefix": "uld be below 100 characters and ",
+    "quote": "make sense to the user.",
+    "start": 43,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The manual supplies no test for whether a URL makes sense to its intended users. Assessment needs the page context and audience.",
+    "unit": "document",
+    "violation_condition": "A page URL is unintelligible to its intended users."
+   },
+   "when": [
+    "Assess the URL in the context of its page and intended users."
+   ],
+   "why": "Intelligibility is a textual property of the URL and is independent of its character count."
+  },
+  {
+   "anchor": {
+    "block_id": "2eb30009d48c",
+    "end": 75,
+    "prefix": "",
+    "quote": "To separate words in the URL, use hyphens instead of spaces or underscores.",
+    "start": 0,
+    "suffix": " This helps both people and sear"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The example also illustrates a readable, title-derived URL, but it is attached to the nearest separator rule (E-2).",
+     "parts": [
+      {
+       "block_id": "1b99552df79d",
+       "end": 45,
+       "prefix": "",
+       "quote": "https://stylemanual.gov.au/about-style-manual",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "Spaces or underscores, rather than hyphens, separate words in a page URL."
+   },
+   "when": [
+    "Applies where a separator is used between words in a URL, not to punctuation serving another URL function."
+   ],
+   "why": "This is one separator-choice check; spaces and underscores are alternative violations of it."
+  },
+  {
+   "anchor": {
+    "block_id": "55a43c3c1821",
+    "end": 25,
+    "prefix": "",
+    "quote": "be different on each page",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8adcb3cbee46",
+     "end": 17,
+     "prefix": "",
+     "quote": "The title should:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The same page title is reused on different pages of a website."
+   },
+   "when": [
+    "Requires comparison with titles of other pages on the website."
+   ],
+   "why": "Title uniqueness is independent of title length, clarity and keyword inclusion."
+  },
+  {
+   "anchor": {
+    "block_id": "0ce84d05e91d",
+    "end": 26,
+    "prefix": "",
+    "quote": "be 70 characters or fewer.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8adcb3cbee46",
+     "end": 17,
+     "prefix": "",
+     "quote": "The title should:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A page title contains more than 70 characters."
+   },
+   "when": [
+    "Applies to the page title used in metadata and search results."
+   ],
+   "why": "The explicit title-length limit produces a finding separate from the other title requirements."
+  },
+  {
+   "anchor": {
+    "block_id": "b4e57db5c935",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write clear page titles.",
+    "start": 0,
+    "suffix": " This is the first thing a scree"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b4e57db5c935",
+     "end": 132,
+     "prefix": "Write clear page titles. ",
+     "quote": "This is the first thing a screen reader user will hear and needs to assure them they are on the right page.",
+     "start": 25,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A page title does not clearly identify the page’s subject, leaving users unable to tell whether they are on the right page."
+   },
+   "when": [
+    "Assess the title against the page’s content and intended users."
+   ],
+   "why": "G-1 uses the specific title instruction rather than making the metadata section’s general introduction another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "238149cff66d",
+    "end": 39,
+    "prefix": "",
+    "quote": "Describe the content in plain language.",
+    "start": 0,
+    "suffix": " This helps users to know if it’"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "238149cff66d",
+     "end": 88,
+     "prefix": " the content in plain language. ",
+     "quote": "This helps users to know if it’s what they need.",
+     "start": 40,
+     "suffix": ""
+    },
+    {
+     "block_id": "dba32da99a59",
+     "end": 36,
+     "prefix": "",
+     "quote": "Descriptions need to be user-focused",
+     "start": 0,
+     "suffix": " and contain keywords. They can "
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A meta description does not explain the page’s content in language that its intended users can readily understand and use to judge its relevance."
+   },
+   "when": [
+    "Applies to the meta description, not a search-engine-generated content snippet."
+   ],
+   "why": "G-4 consolidates the user-focused explanation with the specific plain-language description instruction; keyword inclusion remains a separate check."
+  },
+  {
+   "anchor": {
+    "block_id": "dba32da99a59",
+    "end": 92,
+    "prefix": "r-focused and contain keywords. ",
+    "quote": "They can be up to 160 characters.",
+    "start": 59,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A meta description contains more than 160 characters."
+   },
+   "when": [
+    "Applies to the meta description field, not a search-engine-generated content snippet."
+   ],
+   "why": "This establishes a checkable upper bound rather than a free-standing permission under G-3."
+  },
+  {
+   "anchor": {
+    "block_id": "16deac9fc49e",
+    "end": 38,
+    "prefix": "",
+    "quote": "Link to content on other quality sites",
+    "start": 0,
+    "suffix": " towards the end of the content."
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The manual does not define site quality. Assessment requires information about the destination, not merely the visible URL.",
+    "unit": "document",
+    "violation_condition": "An external link points to content on a low-quality site."
+   },
+   "when": [
+    "Applies when linking to content on other websites."
+   ],
+   "why": "Destination quality and link placement are independent properties and therefore separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "16deac9fc49e",
+    "end": 70,
+    "prefix": "",
+    "quote": "Link to content on other quality sites towards the end of the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This item concerns placement only. The manual gives no paragraph, section or proportional boundary for ‘towards the end’.",
+    "unit": "document",
+    "violation_condition": "Links to content on other websites are positioned away from the end of the page’s content."
+   },
+   "when": [
+    "Applies to links to other websites, not internal links."
+   ],
+   "why": "Link placement can be wrong even when the destination is high quality, so it warrants its own finding."
+  },
+  {
+   "anchor": {
+    "block_id": "b28a9f97f70f",
+    "end": 73,
+    "prefix": "",
+    "quote": "Write link text that makes the destination and purpose of the link clear.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "357d3d64446e",
+     "end": 58,
+     "prefix": "",
+     "quote": "Ensure the linking text to this page relates to the title.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The explanatory block identifies which words are linked; it is not part of the example sentence.",
+     "parts": [
+      {
+       "block_id": "d4d6655f3349",
+       "end": 80,
+       "prefix": "",
+       "quote": "Make sure users can read content on all devices using responsive design methods.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "0011c15d5a0f",
+       "end": 94,
+       "prefix": "",
+       "quote": "[The text ‘responsive design methods’ links to a page about consistent and responsive design.]",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Link text fails to make its destination and purpose clear, including wording unrelated to the destination page’s title."
+   },
+   "when": [
+    "Applies to internal and external links.",
+    "For a link to a page, consider the destination page’s title when assessing the wording."
+   ],
+   "why": "G-4 consolidates title-related link wording with the destination-clarity check instead of creating overlapping findings."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5126,
+  "output_tokens": 12262,
+  "reasoning_tokens": 7250
+ }
+}

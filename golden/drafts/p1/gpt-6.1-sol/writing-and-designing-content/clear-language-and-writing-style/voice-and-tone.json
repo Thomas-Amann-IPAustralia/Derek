@@ -1,0 +1,1301 @@
+{
+ "effort": "high",
+ "input_sha256": "ec6ce5d7b4ca7cb96675681ddd8cc4b4fd93f2f071fd03fa361ed3ea2ea81334",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "961290ffbebb",
+    "end": 39,
+    "prefix": "",
+    "quote": "Adapt writing style with tone and voice",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the more explicit body instruction about adapting tone and voice is the rule anchor.",
+   "reason": "restatement",
+   "seed_uid": "784a4bcd6683aca9"
+  },
+  {
+   "anchor": {
+    "block_id": "5e2dc934f0bb",
+    "end": 82,
+    "prefix": " is a result of voice and tone. ",
+    "quote": "Adjust your style to meet user needs.",
+    "start": 45,
+    "suffix": " It influences whether and how p"
+   },
+   "note": "G-4: absorbed into the audience-and-context rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "aac15010fb9e",
+    "end": 21,
+    "prefix": "",
+    "quote": "Align tone to context",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the word-choice, viewpoint, grammar and formality discussion; it is not an additional umbrella finding.",
+   "reason": "section",
+   "seed_uid": "3dd4f97e0072cad6"
+  },
+  {
+   "anchor": {
+    "block_id": "5c97c1b3266a",
+    "end": 32,
+    "prefix": "",
+    "quote": "Choose how formal tone should be",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the tone levels and their specific properties.",
+   "reason": "section",
+   "seed_uid": "37e423b5b5269e74"
+  },
+  {
+   "anchor": {
+    "block_id": "8fe0572a86fd",
+    "end": 24,
+    "prefix": "",
+    "quote": "Identify the right voice",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces voice selection and the properties of the suggested basic government voice.",
+   "reason": "section",
+   "seed_uid": "dd4a9c32dd806bbf"
+  },
+  {
+   "anchor": {
+    "block_id": "251c8de001b3",
+    "end": 75,
+    "prefix": "",
+    "quote": "The second person (using the pronoun ‘you’) is active, direct and personal.",
+    "start": 0,
+    "suffix": " It can be more engaging for peo"
+   },
+   "note": "Describes effects of second person; it does not require every government text to use ‘you’.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "260a5bd72fc9",
+    "end": 50,
+    "prefix": "",
+    "quote": "often uses the third person (he, she, they, them).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "‘Often’ describes a tendency of formal tone, not a requirement to use third person.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bf155e66cd37",
+    "end": 182,
+    "prefix": "ters often adopt a formal tone. ",
+    "quote": "You can also use it in emails and letters when you have not yet met the person you are writing to.",
+    "start": 84,
+    "suffix": ""
+   },
+   "note": "G-3: permits formal tone in this context; it does not require it.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bc13e8c5257b",
+    "end": 42,
+    "prefix": "",
+    "quote": "can use contractions and personal pronouns",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: standard tone permits these forms but does not require their presence.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b8636c17645d",
+    "end": 64,
+    "prefix": "",
+    "quote": "You will probably use standard tone for most government content.",
+    "start": 0,
+    "suffix": " This includes:"
+   },
+   "note": "Predicts common use; it does not establish a mandatory default tone.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "414ae416de25",
+    "end": 54,
+    "prefix": "",
+    "quote": "Informal tone uses contractions and personal pronouns.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes characteristic informal usage; absence of either feature does not establish a violation.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2f5dece48030",
+    "end": 90,
+    "prefix": "",
+    "quote": "Informal tone can use metaphors and idioms, which can have a negative effect on inclusion.",
+    "start": 0,
+    "suffix": " Metaphors and idioms are not pl"
+   },
+   "note": "G-3: recorded as an exception to the formal-and-standard-tone restriction, not as a separate rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e99fb2493c9a",
+    "end": 149,
+    "prefix": "used in social media and blogs. ",
+    "quote": "Your writing might also become more informal as you get to know the people you are writing to.",
+    "start": 55,
+    "suffix": ""
+   },
+   "note": "Describes a possible change in relationship and tone, not an obligation to become informal.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4f3fc2008664",
+    "end": 93,
+    "prefix": "",
+    "quote": "Check your organisation’s style guide to see if it has advice about the organisation’s voice.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a research step for the writer, not a property that can be found missing from the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e084f9c7099a",
+    "end": 63,
+    "prefix": "",
+    "quote": "If not, a safe place to start is with a basic government voice.",
+    "start": 0,
+    "suffix": " It is the voice of a ‘definitiv"
+   },
+   "note": "Suggests a starting point when organisational advice is unavailable; it does not require every document to adopt that voice.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "833d3342df6d",
+    "end": 57,
+    "prefix": "",
+    "quote": "‘speaks’ to people – using the pronoun ‘you’, for example",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Illustrates a respectful relationship with readers. ‘For example’ does not establish a compulsory pronoun check.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "26b831213c86",
+    "end": 20,
+    "prefix": "",
+    "quote": "is in plain language",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A broad summary of the specific clear-language properties, not an additional finding over the vocabulary, active-voice, concision and organisation checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "95a17a7f46ef",
+    "end": 68,
+    "prefix": "",
+    "quote": "makes it easy for people to understand what they need to know or do.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the intended outcome of clear and direct writing rather than adding a separate check over the listed properties.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/clear-language-and-writing-style/voice-and-tone.md",
+ "page_sha256": "875ccdf8a443873790ef42042029243882c41bdffd2600f69bd8744c635b7f5c",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "961290ffbebb",
+    "note": "G-4: the more explicit body instruction about adapting tone and voice is the rule anchor.",
+    "quote": "Adapt writing style with tone and voice",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5e2dc934f0bb",
+    "note": "G-4: absorbed into the audience-and-context rule.",
+    "quote": "Adjust your style to meet user needs.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "aac15010fb9e",
+    "note": "G-1: groups the word-choice, viewpoint, grammar and formality discussion; it is not an additional umbrella finding.",
+    "quote": "Align tone to context",
+    "reason": "section"
+   },
+   {
+    "block_id": "5c97c1b3266a",
+    "note": "G-1: introduces the tone levels and their specific properties.",
+    "quote": "Choose how formal tone should be",
+    "reason": "section"
+   },
+   {
+    "block_id": "8fe0572a86fd",
+    "note": "G-1: introduces voice selection and the properties of the suggested basic government voice.",
+    "quote": "Identify the right voice",
+    "reason": "section"
+   },
+   {
+    "block_id": "251c8de001b3",
+    "note": "Describes effects of second person; it does not require every government text to use ‘you’.",
+    "quote": "The second person (using the pronoun ‘you’) is active, direct and personal.",
+    "reason": "description"
+   },
+   {
+    "block_id": "260a5bd72fc9",
+    "note": "‘Often’ describes a tendency of formal tone, not a requirement to use third person.",
+    "quote": "often uses the third person (he, she, they, them).",
+    "reason": "description"
+   },
+   {
+    "block_id": "bf155e66cd37",
+    "note": "G-3: permits formal tone in this context; it does not require it.",
+    "quote": "You can also use it in emails and letters when you have not yet met the person you are writing to.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "bc13e8c5257b",
+    "note": "G-3: standard tone permits these forms but does not require their presence.",
+    "quote": "can use contractions and personal pronouns",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b8636c17645d",
+    "note": "Predicts common use; it does not establish a mandatory default tone.",
+    "quote": "You will probably use standard tone for most government content.",
+    "reason": "description"
+   },
+   {
+    "block_id": "414ae416de25",
+    "note": "Describes characteristic informal usage; absence of either feature does not establish a violation.",
+    "quote": "Informal tone uses contractions and personal pronouns.",
+    "reason": "description"
+   },
+   {
+    "block_id": "2f5dece48030",
+    "note": "G-3: recorded as an exception to the formal-and-standard-tone restriction, not as a separate rule.",
+    "quote": "Informal tone can use metaphors and idioms, which can have a negative effect on inclusion.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "e99fb2493c9a",
+    "note": "Describes a possible change in relationship and tone, not an obligation to become informal.",
+    "quote": "Your writing might also become more informal as you get to know the people you are writing to.",
+    "reason": "description"
+   },
+   {
+    "block_id": "4f3fc2008664",
+    "note": "G-5: a research step for the writer, not a property that can be found missing from the text.",
+    "quote": "Check your organisation’s style guide to see if it has advice about the organisation’s voice.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e084f9c7099a",
+    "note": "Suggests a starting point when organisational advice is unavailable; it does not require every document to adopt that voice.",
+    "quote": "If not, a safe place to start is with a basic government voice.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "833d3342df6d",
+    "note": "Illustrates a respectful relationship with readers. ‘For example’ does not establish a compulsory pronoun check.",
+    "quote": "‘speaks’ to people – using the pronoun ‘you’, for example",
+    "reason": "description"
+   },
+   {
+    "block_id": "26b831213c86",
+    "note": "A broad summary of the specific clear-language properties, not an additional finding over the vocabulary, active-voice, concision and organisation checks.",
+    "quote": "is in plain language",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "95a17a7f46ef",
+    "note": "Describes the intended outcome of clear and direct writing rather than adding a separate check over the listed properties.",
+    "quote": "makes it easy for people to understand what they need to know or do.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7056ae6d6109",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "961290ffbebb",
+      "quote": "Adapt writing style with tone and voice"
+     },
+     {
+      "block_id": "5e2dc934f0bb",
+      "quote": "Adjust your style to meet user needs."
+     },
+     {
+      "block_id": "59c2807b3972",
+      "quote": "The appropriate level of formality depends on what the relationship is between content and its user."
+     },
+     {
+      "block_id": "9e373a226882",
+      "quote": "The right voice for content will depend on the persona fit for the content."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Adapt tone and voice to engage users, so the content can meet their needs.",
+    "specification": "Suitability requires information about the intended users, purpose and context. The page does not prescribe one tone or voice for every document.",
+    "unit": "document",
+    "violation_condition": "The content’s tone or persona is inappropriate for its intended users, purpose or context.",
+    "when": [
+     "Assess suitability for the particular audience and content type.",
+     "Ministerial briefs need not use the same tone and voice as speeches or website information."
+    ],
+    "why": "G-4 consolidates the repeated audience-and-context instruction; G-2 keeps the different content contexts together."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6189d42fc069",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Using the first person singular (the pronoun ‘I’) is rarely suitable in government content, except in correspondence.",
+    "specification": "‘Rarely suitable’ makes this a review flag rather than an absolute prohibition. The page does not identify the exceptional suitable uses outside correspondence.",
+    "unit": "sentence",
+    "violation_condition": "The author uses the first-person singular pronoun ‘I’ in government content other than correspondence.",
+    "when": [
+     "Applies to government content.",
+     "Correspondence is an explicit exception."
+    ],
+    "why": "G-2 keeps the correspondence exception and the qualified restriction in one check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "586d763baf87",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bc13e8c5257b",
+      "quote": "can use contractions and personal pronouns"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "doesn’t use contractions",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A contraction appears in content using formal tone.",
+    "when": [
+     "Applies when the content uses formal tone.",
+     "Contractions are permitted in standard tone."
+    ],
+    "why": "G-2 limits the restriction to formal tone; G-3 records the standard-tone permission rather than making it another rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d0fad306db5b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6926eef79adc",
+      "quote": "is literal – words are used with their dictionary meaning"
+     },
+     {
+      "block_id": "35f790661af0",
+      "quote": "doesn’t use metaphor, slang or idioms"
+     },
+     {
+      "block_id": "2f5dece48030",
+      "quote": "Informal tone can use metaphors and idioms, which can have a negative effect on inclusion."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "doesn’t use metaphors, idioms or slang.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Formal-tone content uses words non-literally, or standard-tone content contains a metaphor or idiom.",
+    "when": [
+     "Formal tone uses words literally, with their dictionary meanings.",
+     "Both formal and standard tone exclude metaphors and idioms.",
+     "Informal tone may use metaphors and idioms, although the page warns about their effects on inclusion and plain language."
+    ],
+    "why": "G-2 combines the tone-dependent figurative-language restrictions; G-3 records the informal-tone permission. Slang has a separate all-tone check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d0aad3c105eb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "35f790661af0",
+      "quote": "doesn’t use metaphor, slang or idioms"
+     },
+     {
+      "block_id": "d0fad306db5b",
+      "quote": "doesn’t use metaphors, idioms or slang."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "You should not use slang when writing on behalf of government.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Slang appears in writing on behalf of government.",
+    "when": [
+     "Applies when writing on behalf of government, regardless of tone."
+    ],
+    "why": "G-2 and G-4 consolidate the slang restrictions into one check rather than flagging slang again for each tone."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ef6b8922c24c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "uses inclusive language",
+    "specification": "This page names inclusive language as a property but does not supply the detailed criteria needed to operationalise it.",
+    "unit": "sentence",
+    "violation_condition": "Exclusionary or discriminatory language appears in content intended to use the recommended respectful government voice.",
+    "when": [
+     "Applies to the respectful writing style described as part of the suggested basic government voice."
+    ],
+    "why": "G-1 keeps the specific inclusive-language property rather than adding a broad respectful-style rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c7e2f7aba85a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "expresses ideas in everyday words",
+    "specification": "Assess familiarity for the intended users. The page supplies no fixed vocabulary list or rare-word threshold.",
+    "unit": "sentence",
+    "violation_condition": "Ideas are expressed in vocabulary that is unnecessarily unfamiliar to the intended users rather than everyday words.",
+    "when": [
+     "Applies to the respectful writing style described as part of the suggested basic government voice."
+    ],
+    "why": "G-1 selects the specific vocabulary property instead of creating an additional broad plain-language finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b49456fea99",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "doesn’t use inflammatory language, such as name-calling or sarcasm",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Inflammatory wording, including name-calling or sarcasm, appears in content intended to use a respectful government voice.",
+    "when": [
+     "Applies to the respectful writing style described as part of the suggested basic government voice."
+    ],
+    "why": "G-1 retains the specific inflammatory-language restriction; name-calling and sarcasm are instances of that check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "26fbd1b527a4",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "doesn’t speak down to people",
+    "specification": "Assess how the wording treats readers; explaining a basic concept is not by itself evidence of condescension.",
+    "unit": "sentence",
+    "violation_condition": "The wording patronises readers or treats them as inferior.",
+    "when": [
+     "Applies to the respectful writing style described as part of the suggested basic government voice."
+    ],
+    "why": "The one-finding test separates condescension from the distinct problem of excessive familiarity."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "26fbd1b527a4",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "isn’t too familiar either.",
+    "specification": "The page gives no boundary for ‘too familiar’; assessment requires the intended relationship with readers.",
+    "unit": "sentence",
+    "violation_condition": "The wording assumes an excessively familiar relationship with readers.",
+    "when": [
+     "Applies to the respectful writing style described as part of the suggested basic government voice."
+    ],
+    "why": "The one-finding test separates excessive familiarity from speaking down to readers."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ba9668554fd0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "uses active voice",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Passive voice appears where the content is intended to use the recommended clear and direct writing style.",
+    "when": [
+     "Applies to the clear and direct writing style described as part of the suggested basic government voice."
+    ],
+    "why": "G-1 keeps the specific grammatical-voice property rather than adding a duplicate clear-and-direct umbrella check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f2c693591556",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "is concise",
+    "specification": "Interpret concision as avoiding unnecessary wording or repetition, not as a numerical sentence-length or word-count limit.",
+    "unit": "paragraph",
+    "violation_condition": "Avoidably wordy or repetitive content adds length without contributing to the message.",
+    "when": [
+     "Applies to the clear and direct writing style described as part of the suggested basic government voice."
+    ],
+    "why": "G-1 retains concision as a specific property; E-4 avoids inventing a length threshold."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "265d66e2c41d",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "structures ideas",
+    "specification": "The page gives no organisational pattern or concrete structural test. Operational criteria would need to be supplied.",
+    "unit": "document",
+    "violation_condition": "The content lacks a coherent organisation of its ideas.",
+    "when": [
+     "Applies to the clear and direct writing style described as part of the suggested basic government voice."
+    ],
+    "why": "G-1 retains organisation as a distinct property rather than folding it into vocabulary, grammar or concision."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c984d82753f0",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "3d2ac7c63025",
+      "quote": "relies on facts"
+     },
+     {
+      "block_id": "0b35a0516846",
+      "quote": "Viewpoint affects perception of whether information is neutral or impartial."
+     },
+     {
+      "block_id": "0b35a0516846",
+      "quote": "Adjectives and adverbs can also affect whether the information comes across as fact or opinion."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "doesn’t include opinion",
+    "specification": "Judge whether wording expresses or implies subjective evaluation. Personal pronouns, adjectives and adverbs are contextual cues, not automatically prohibited forms.",
+    "unit": "sentence",
+    "violation_condition": "Opinion or subjective framing appears in content intended to be objective and impartial.",
+    "when": [
+     "Applies to the objective and impartial writing style described as part of the suggested basic government voice.",
+     "Consider viewpoint and the effects of adjectives and adverbs."
+    ],
+    "why": "G-4 consolidates the fact-versus-opinion wording; G-2 keeps viewpoint and word-choice cues within the same contextual check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5b54cc466ff0",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "is balanced and non-biased.",
+    "specification": "Assess partiality in context. The page provides no quantitative measure of balance.",
+    "unit": "document",
+    "violation_condition": "The content presents information in a one-sided or biased way despite its intended objective and impartial voice.",
+    "when": [
+     "Applies to the objective and impartial writing style described as part of the suggested basic government voice."
+    ],
+    "why": "The one-finding test distinguishes biased selection or presentation from the separate presence of opinion."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "7056ae6d6109",
+    "end": 74,
+    "prefix": "",
+    "quote": "Adapt tone and voice to engage users, so the content can meet their needs.",
+    "start": 0,
+    "suffix": " For example, briefs for ministe"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "961290ffbebb",
+     "end": 39,
+     "prefix": "",
+     "quote": "Adapt writing style with tone and voice",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5e2dc934f0bb",
+     "end": 82,
+     "prefix": " is a result of voice and tone. ",
+     "quote": "Adjust your style to meet user needs.",
+     "start": 45,
+     "suffix": " It influences whether and how p"
+    },
+    {
+     "block_id": "59c2807b3972",
+     "end": 100,
+     "prefix": "",
+     "quote": "The appropriate level of formality depends on what the relationship is between content and its user.",
+     "start": 0,
+     "suffix": " There are 3 levels of formality"
+    },
+    {
+     "block_id": "9e373a226882",
+     "end": 161,
+     "prefix": "t can be personal and friendly. ",
+     "quote": "The right voice for content will depend on the persona fit for the content.",
+     "start": 86,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Suitability requires information about the intended users, purpose and context. The page does not prescribe one tone or voice for every document.",
+    "unit": "document",
+    "violation_condition": "The content’s tone or persona is inappropriate for its intended users, purpose or context."
+   },
+   "when": [
+    "Assess suitability for the particular audience and content type.",
+    "Ministerial briefs need not use the same tone and voice as speeches or website information."
+   ],
+   "why": "G-4 consolidates the repeated audience-and-context instruction; G-2 keeps the different content contexts together."
+  },
+  {
+   "anchor": {
+    "block_id": "6189d42fc069",
+    "end": 117,
+    "prefix": "",
+    "quote": "Using the first person singular (the pronoun ‘I’) is rarely suitable in government content, except in correspondence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "‘Rarely suitable’ makes this a review flag rather than an absolute prohibition. The page does not identify the exceptional suitable uses outside correspondence.",
+    "unit": "sentence",
+    "violation_condition": "The author uses the first-person singular pronoun ‘I’ in government content other than correspondence."
+   },
+   "when": [
+    "Applies to government content.",
+    "Correspondence is an explicit exception."
+   ],
+   "why": "G-2 keeps the correspondence exception and the qualified restriction in one check."
+  },
+  {
+   "anchor": {
+    "block_id": "586d763baf87",
+    "end": 24,
+    "prefix": "",
+    "quote": "doesn’t use contractions",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bc13e8c5257b",
+     "end": 42,
+     "prefix": "",
+     "quote": "can use contractions and personal pronouns",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A contraction appears in content using formal tone."
+   },
+   "when": [
+    "Applies when the content uses formal tone.",
+    "Contractions are permitted in standard tone."
+   ],
+   "why": "G-2 limits the restriction to formal tone; G-3 records the standard-tone permission rather than making it another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "d0fad306db5b",
+    "end": 39,
+    "prefix": "",
+    "quote": "doesn’t use metaphors, idioms or slang.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6926eef79adc",
+     "end": 57,
+     "prefix": "",
+     "quote": "is literal – words are used with their dictionary meaning",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "35f790661af0",
+     "end": 37,
+     "prefix": "",
+     "quote": "doesn’t use metaphor, slang or idioms",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2f5dece48030",
+     "end": 90,
+     "prefix": "",
+     "quote": "Informal tone can use metaphors and idioms, which can have a negative effect on inclusion.",
+     "start": 0,
+     "suffix": " Metaphors and idioms are not pl"
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Formal-tone content uses words non-literally, or standard-tone content contains a metaphor or idiom."
+   },
+   "when": [
+    "Formal tone uses words literally, with their dictionary meanings.",
+    "Both formal and standard tone exclude metaphors and idioms.",
+    "Informal tone may use metaphors and idioms, although the page warns about their effects on inclusion and plain language."
+   ],
+   "why": "G-2 combines the tone-dependent figurative-language restrictions; G-3 records the informal-tone permission. Slang has a separate all-tone check."
+  },
+  {
+   "anchor": {
+    "block_id": "d0aad3c105eb",
+    "end": 62,
+    "prefix": "",
+    "quote": "You should not use slang when writing on behalf of government.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "35f790661af0",
+     "end": 37,
+     "prefix": "",
+     "quote": "doesn’t use metaphor, slang or idioms",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d0fad306db5b",
+     "end": 39,
+     "prefix": "",
+     "quote": "doesn’t use metaphors, idioms or slang.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Slang appears in writing on behalf of government."
+   },
+   "when": [
+    "Applies when writing on behalf of government, regardless of tone."
+   ],
+   "why": "G-2 and G-4 consolidate the slang restrictions into one check rather than flagging slang again for each tone."
+  },
+  {
+   "anchor": {
+    "block_id": "ef6b8922c24c",
+    "end": 23,
+    "prefix": "",
+    "quote": "uses inclusive language",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This page names inclusive language as a property but does not supply the detailed criteria needed to operationalise it.",
+    "unit": "sentence",
+    "violation_condition": "Exclusionary or discriminatory language appears in content intended to use the recommended respectful government voice."
+   },
+   "when": [
+    "Applies to the respectful writing style described as part of the suggested basic government voice."
+   ],
+   "why": "G-1 keeps the specific inclusive-language property rather than adding a broad respectful-style rule."
+  },
+  {
+   "anchor": {
+    "block_id": "c7e2f7aba85a",
+    "end": 33,
+    "prefix": "",
+    "quote": "expresses ideas in everyday words",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess familiarity for the intended users. The page supplies no fixed vocabulary list or rare-word threshold.",
+    "unit": "sentence",
+    "violation_condition": "Ideas are expressed in vocabulary that is unnecessarily unfamiliar to the intended users rather than everyday words."
+   },
+   "when": [
+    "Applies to the respectful writing style described as part of the suggested basic government voice."
+   ],
+   "why": "G-1 selects the specific vocabulary property instead of creating an additional broad plain-language finding."
+  },
+  {
+   "anchor": {
+    "block_id": "7b49456fea99",
+    "end": 66,
+    "prefix": "",
+    "quote": "doesn’t use inflammatory language, such as name-calling or sarcasm",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Inflammatory wording, including name-calling or sarcasm, appears in content intended to use a respectful government voice."
+   },
+   "when": [
+    "Applies to the respectful writing style described as part of the suggested basic government voice."
+   ],
+   "why": "G-1 retains the specific inflammatory-language restriction; name-calling and sarcasm are instances of that check."
+  },
+  {
+   "anchor": {
+    "block_id": "26fbd1b527a4",
+    "end": 28,
+    "prefix": "",
+    "quote": "doesn’t speak down to people",
+    "start": 0,
+    "suffix": ", but isn’t too familiar either."
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Assess how the wording treats readers; explaining a basic concept is not by itself evidence of condescension.",
+    "unit": "sentence",
+    "violation_condition": "The wording patronises readers or treats them as inferior."
+   },
+   "when": [
+    "Applies to the respectful writing style described as part of the suggested basic government voice."
+   ],
+   "why": "The one-finding test separates condescension from the distinct problem of excessive familiarity."
+  },
+  {
+   "anchor": {
+    "block_id": "26fbd1b527a4",
+    "end": 60,
+    "prefix": "esn’t speak down to people, but ",
+    "quote": "isn’t too familiar either.",
+    "start": 34,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page gives no boundary for ‘too familiar’; assessment requires the intended relationship with readers.",
+    "unit": "sentence",
+    "violation_condition": "The wording assumes an excessively familiar relationship with readers."
+   },
+   "when": [
+    "Applies to the respectful writing style described as part of the suggested basic government voice."
+   ],
+   "why": "The one-finding test separates excessive familiarity from speaking down to readers."
+  },
+  {
+   "anchor": {
+    "block_id": "ba9668554fd0",
+    "end": 17,
+    "prefix": "",
+    "quote": "uses active voice",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Passive voice appears where the content is intended to use the recommended clear and direct writing style."
+   },
+   "when": [
+    "Applies to the clear and direct writing style described as part of the suggested basic government voice."
+   ],
+   "why": "G-1 keeps the specific grammatical-voice property rather than adding a duplicate clear-and-direct umbrella check."
+  },
+  {
+   "anchor": {
+    "block_id": "f2c693591556",
+    "end": 10,
+    "prefix": "",
+    "quote": "is concise",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret concision as avoiding unnecessary wording or repetition, not as a numerical sentence-length or word-count limit.",
+    "unit": "paragraph",
+    "violation_condition": "Avoidably wordy or repetitive content adds length without contributing to the message."
+   },
+   "when": [
+    "Applies to the clear and direct writing style described as part of the suggested basic government voice."
+   ],
+   "why": "G-1 retains concision as a specific property; E-4 avoids inventing a length threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "265d66e2c41d",
+    "end": 16,
+    "prefix": "",
+    "quote": "structures ideas",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page gives no organisational pattern or concrete structural test. Operational criteria would need to be supplied.",
+    "unit": "document",
+    "violation_condition": "The content lacks a coherent organisation of its ideas."
+   },
+   "when": [
+    "Applies to the clear and direct writing style described as part of the suggested basic government voice."
+   ],
+   "why": "G-1 retains organisation as a distinct property rather than folding it into vocabulary, grammar or concision."
+  },
+  {
+   "anchor": {
+    "block_id": "c984d82753f0",
+    "end": 23,
+    "prefix": "",
+    "quote": "doesn’t include opinion",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "3d2ac7c63025",
+     "end": 15,
+     "prefix": "",
+     "quote": "relies on facts",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0b35a0516846",
+     "end": 76,
+     "prefix": "",
+     "quote": "Viewpoint affects perception of whether information is neutral or impartial.",
+     "start": 0,
+     "suffix": " Adjectives and adverbs can also"
+    },
+    {
+     "block_id": "0b35a0516846",
+     "end": 172,
+     "prefix": "mation is neutral or impartial. ",
+     "quote": "Adjectives and adverbs can also affect whether the information comes across as fact or opinion.",
+     "start": 77,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Judge whether wording expresses or implies subjective evaluation. Personal pronouns, adjectives and adverbs are contextual cues, not automatically prohibited forms.",
+    "unit": "sentence",
+    "violation_condition": "Opinion or subjective framing appears in content intended to be objective and impartial."
+   },
+   "when": [
+    "Applies to the objective and impartial writing style described as part of the suggested basic government voice.",
+    "Consider viewpoint and the effects of adjectives and adverbs."
+   ],
+   "why": "G-4 consolidates the fact-versus-opinion wording; G-2 keeps viewpoint and word-choice cues within the same contextual check."
+  },
+  {
+   "anchor": {
+    "block_id": "5b54cc466ff0",
+    "end": 27,
+    "prefix": "",
+    "quote": "is balanced and non-biased.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess partiality in context. The page provides no quantitative measure of balance.",
+    "unit": "document",
+    "violation_condition": "The content presents information in a one-sided or biased way despite its intended objective and impartial voice."
+   },
+   "when": [
+    "Applies to the objective and impartial writing style described as part of the suggested basic government voice."
+   ],
+   "why": "The one-finding test distinguishes biased selection or presentation from the separate presence of opinion."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5689,
+  "output_tokens": 16549,
+  "reasoning_tokens": 11912
+ }
+}

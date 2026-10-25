@@ -1,0 +1,790 @@
+{
+ "effort": "low",
+ "input_sha256": "1344923b90b57636c2024ee7f77b84b8a6055234f253ece5a5df4b724f2fcf59",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "ef2401bcbd91",
+    "end": 29,
+    "prefix": "",
+    "quote": "Add more details for journals",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The section describes common/usual conventions ('it is usual for each article in a journal to have...') rather than prescriptive editorial rules.",
+   "reason": "description",
+   "seed_uid": "095dc19c771d4235"
+  },
+  {
+   "anchor": {
+    "block_id": "7ed5575b2396",
+    "end": 27,
+    "prefix": "",
+    "quote": "Consider accessible formats",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice and recommendations ('Consider using EPUB', links to external WCAG/EPUB standards).",
+   "reason": "advice",
+   "seed_uid": "6ff78b6b580a9f39"
+  },
+  {
+   "anchor": {
+    "block_id": "bb209f21910c",
+    "end": 151,
+    "prefix": "",
+    "quote": "You must make all government content accessible to people with disability. This is part of Australian law under the Disability Discrimination Act 1992.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of overarching accessibility rules found on the accessibility pages.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5d1b5721dc9b",
+    "end": 155,
+    "prefix": "",
+    "quote": "You must choose a licence to release copyright materials. If you work in government, use an open access licence if you can (for example, Creative Commons).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of copyright and licensing rules on the copyright/intellectual property pages.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7c55fadc37aa",
+    "end": 15,
+    "prefix": "",
+    "quote": "Separate covers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Heading grouping descriptive practices and print rules.",
+   "reason": "section",
+   "seed_uid": "ce1d5520797a6248"
+  },
+  {
+   "anchor": {
+    "block_id": "9680762274fd",
+    "end": 87,
+    "prefix": "",
+    "quote": "For digital-only content, you must publish 5 articles before you can apply for an ISSN.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "External administrative prerequisite set by the National Library of Australia, not an editorial rule for text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c365806fabc8",
+    "end": 161,
+    "prefix": "",
+    "quote": "Managing and disposing of records properly is a requirement under the Archives Act 1983. You must follow your organisation’s information management requirements.",
+    "start": 0,
+    "suffix": " Visit the National Archives of "
+   },
+   "note": "Legal compliance advice regarding recordkeeping, not a text rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/journals-magazines-and-newspapers.md",
+ "page_sha256": "3e8623364bf5b166418c7a459811b17576a91cd1d62665deb3f520110ebd954e",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "ef2401bcbd91",
+    "note": "The section describes common/usual conventions ('it is usual for each article in a journal to have...') rather than prescriptive editorial rules.",
+    "quote": "Add more details for journals",
+    "reason": "description"
+   },
+   {
+    "block_id": "7ed5575b2396",
+    "note": "General advice and recommendations ('Consider using EPUB', links to external WCAG/EPUB standards).",
+    "quote": "Consider accessible formats",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bb209f21910c",
+    "note": "Duplicate of overarching accessibility rules found on the accessibility pages.",
+    "quote": "You must make all government content accessible to people with disability. This is part of Australian law under the Disability Discrimination Act 1992.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "5d1b5721dc9b",
+    "note": "Duplicate of copyright and licensing rules on the copyright/intellectual property pages.",
+    "quote": "You must choose a licence to release copyright materials. If you work in government, use an open access licence if you can (for example, Creative Commons).",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "7c55fadc37aa",
+    "note": "Heading grouping descriptive practices and print rules.",
+    "quote": "Separate covers",
+    "reason": "section"
+   },
+   {
+    "block_id": "9680762274fd",
+    "note": "External administrative prerequisite set by the National Library of Australia, not an editorial rule for text.",
+    "quote": "For digital-only content, you must publish 5 articles before you can apply for an ISSN.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c365806fabc8",
+    "note": "Legal compliance advice regarding recordkeeping, not a text rule.",
+    "quote": "Managing and disposing of records properly is a requirement under the Archives Act 1983. You must follow your organisation’s information management requirements.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "37e19355452b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "5fc033459808",
+      "quote": "Include all parts of the periodical"
+     },
+     {
+      "block_id": "bf6b97f1555a",
+      "quote": "Number each issue of a serial and include other publication information so people can find it."
+     },
+     {
+      "block_id": "fe0ddbb637af",
+      "quote": "title"
+     },
+     {
+      "block_id": "9043c4f30e0d",
+      "quote": "year, volume and issue number"
+     },
+     {
+      "block_id": "bc29a4914463",
+      "quote": "name of the sponsoring body"
+     },
+     {
+      "block_id": "e41fb7e28b3d",
+      "quote": "name of the publisher or distributor or both"
+     },
+     {
+      "block_id": "e0922593afe3",
+      "quote": "copyright details"
+     },
+     {
+      "block_id": "0e6366fb9b8c",
+      "quote": "restrictions on circulation"
+     },
+     {
+      "block_id": "f9c3e06adb58",
+      "quote": "International Standard Serial Number (ISSN)."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Because each issue is complete in itself, you must include the following:",
+    "specification": "Every periodical issue must include front-matter metadata comprising title, year/volume/issue, sponsoring body, publisher/distributor, copyright details, circulation restrictions, and ISSN.",
+    "unit": "document",
+    "violation_condition": "a periodical issue that omits its title; year, volume and issue number; sponsoring body; publisher or distributor; copyright details; circulation restrictions; or ISSN",
+    "when": [
+     "The publication is an issue of a periodical (journal, magazine, or serial)."
+    ],
+    "why": "G-1, G-2, G-4: The section heading and list are consolidated into the mandatory rule stated at 37e19355452b."
+   },
+   {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "block_id": "322c36a3cbb8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If the periodical shows page numbers, use odd numbers for the right-hand pages.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an even page number appearing on a right-hand (recto) page in a printed or PDF periodical",
+    "when": [
+     "The periodical is published in print or as a paginated PDF and displays page numbers."
+    ],
+    "why": "Specific typographic/pagination rule for print/PDF periodicals."
+   },
+   {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "block_id": "48b47229a51f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "23da2bfed631",
+      "quote": "Group issues into volumes"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "In print and PDF periodicals, start each new volume at page 1. Number the pages of the issues so they continue from one issue to the next, throughout the volume.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a new volume of a print or PDF periodical not starting at page 1, or page numbering restarting at 1 within consecutive issues of the same volume rather than continuing sequentially",
+    "when": [
+     "The publication is a print or PDF periodical grouped into volumes."
+    ],
+    "why": "G-1, G-4: Heading is consolidated with the operational instruction in the paragraph."
+   },
+   {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "block_id": "2e93d4246df5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5fabb2a333a3",
+      "quote": "Repeat all of this information, except for the ISSN, on the first page with the rest of the essential information, such as copyright and any restrictions on circulation."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include the title, date of issue, International Standard Serial Number (ISSN) and sponsoring body on the outside front cover of the volume.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a bound print volume that omits the title, date of issue, ISSN, or sponsoring body on its outside front cover",
+    "when": [
+     "Issues of a periodical with covers are bound into a print volume."
+    ],
+    "why": "G-2: Covers the front-cover and first-page requirements for bound print volumes."
+   },
+   {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "block_id": "1fc05058d199",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2ed1232d4477",
+      "quote": "the title"
+     },
+     {
+      "block_id": "bdff03ae7726",
+      "quote": "the publishing date"
+     },
+     {
+      "block_id": "29d90156d67f",
+      "quote": "the sponsoring body"
+     },
+     {
+      "block_id": "bb55d62d3bf5",
+      "quote": "the volume and part number (if any)."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Put the publication details for each issue on the cover page.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a periodical without a separate cover that omits the title, publishing date, sponsoring body, or volume/part number on its cover page",
+    "when": [
+     "The periodical is a print issue without a separate cover (such as a newspaper or magazine)."
+    ],
+    "why": "G-1, G-4: The lead-in sentence and list specify required cover-page details for periodicals without separate covers."
+   },
+   {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "block_id": "94826ad6cc3a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Start each issue of a periodical without a separate cover from page 1. Include the title, date and page number at the top or bottom of the page.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an issue of a periodical without a separate cover that does not start from page 1, or that omits the title, date, or page number in the header/footer",
+    "when": [
+     "The periodical is published without a separate cover."
+    ],
+    "why": "G-2: Pagination and running header/footer rule for periodicals without separate covers."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "99d024f563e0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d43b689523fd",
+      "quote": "Apply for identifying numbers for your periodical"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use separate ISSNs for a digital periodical and a print periodical, even if they look the same.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "using the same ISSN for both the digital and print editions of a periodical",
+    "when": [
+     "A periodical is published in both digital and print formats."
+    ],
+    "why": "G-1, G-4: Concrete rule on assigning distinct ISSNs for print and digital editions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dbdeb2e010a2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6a7e3ad3eae3",
+      "quote": "Explain how to access datasets and extra material"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Both printed and digital periodicals must tell their users how to access extra material.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a periodical that refers to supplemental material (such as datasets, code, audio, or video) without providing access information (such as a hyperlink or appendix notice)",
+    "when": [
+     "The periodical incorporates or relies on external supplemental material or datasets."
+    ],
+    "why": "G-1, G-4: Concrete requirement to include access instructions for extra material."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "37e19355452b",
+    "end": 73,
+    "prefix": "",
+    "quote": "Because each issue is complete in itself, you must include the following:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "5fc033459808",
+     "end": 35,
+     "prefix": "",
+     "quote": "Include all parts of the periodical",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bf6b97f1555a",
+     "end": 245,
+     "prefix": "are sometimes called ‘serials’. ",
+     "quote": "Number each issue of a serial and include other publication information so people can find it.",
+     "start": 151,
+     "suffix": ""
+    },
+    {
+     "block_id": "fe0ddbb637af",
+     "end": 5,
+     "prefix": "",
+     "quote": "title",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9043c4f30e0d",
+     "end": 29,
+     "prefix": "",
+     "quote": "year, volume and issue number",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bc29a4914463",
+     "end": 27,
+     "prefix": "",
+     "quote": "name of the sponsoring body",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e41fb7e28b3d",
+     "end": 44,
+     "prefix": "",
+     "quote": "name of the publisher or distributor or both",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e0922593afe3",
+     "end": 17,
+     "prefix": "",
+     "quote": "copyright details",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0e6366fb9b8c",
+     "end": 27,
+     "prefix": "",
+     "quote": "restrictions on circulation",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f9c3e06adb58",
+     "end": 44,
+     "prefix": "",
+     "quote": "International Standard Serial Number (ISSN).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "Every periodical issue must include front-matter metadata comprising title, year/volume/issue, sponsoring body, publisher/distributor, copyright details, circulation restrictions, and ISSN.",
+    "unit": "document",
+    "violation_condition": "a periodical issue that omits its title; year, volume and issue number; sponsoring body; publisher or distributor; copyright details; circulation restrictions; or ISSN"
+   },
+   "when": [
+    "The publication is an issue of a periodical (journal, magazine, or serial)."
+   ],
+   "why": "G-1, G-2, G-4: The section heading and list are consolidated into the mandatory rule stated at 37e19355452b."
+  },
+  {
+   "anchor": {
+    "block_id": "322c36a3cbb8",
+    "end": 152,
+    "prefix": "shed online as PDF have covers. ",
+    "quote": "If the periodical shows page numbers, use odd numbers for the right-hand pages.",
+    "start": 73,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an even page number appearing on a right-hand (recto) page in a printed or PDF periodical"
+   },
+   "when": [
+    "The periodical is published in print or as a paginated PDF and displays page numbers."
+   ],
+   "why": "Specific typographic/pagination rule for print/PDF periodicals."
+  },
+  {
+   "anchor": {
+    "block_id": "48b47229a51f",
+    "end": 161,
+    "prefix": "",
+    "quote": "In print and PDF periodicals, start each new volume at page 1. Number the pages of the issues so they continue from one issue to the next, throughout the volume.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "23da2bfed631",
+     "end": 25,
+     "prefix": "",
+     "quote": "Group issues into volumes",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a new volume of a print or PDF periodical not starting at page 1, or page numbering restarting at 1 within consecutive issues of the same volume rather than continuing sequentially"
+   },
+   "when": [
+    "The publication is a print or PDF periodical grouped into volumes."
+   ],
+   "why": "G-1, G-4: Heading is consolidated with the operational instruction in the paragraph."
+  },
+  {
+   "anchor": {
+    "block_id": "2e93d4246df5",
+    "end": 139,
+    "prefix": "",
+    "quote": "Include the title, date of issue, International Standard Serial Number (ISSN) and sponsoring body on the outside front cover of the volume.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5fabb2a333a3",
+     "end": 169,
+     "prefix": "",
+     "quote": "Repeat all of this information, except for the ISSN, on the first page with the rest of the essential information, such as copyright and any restrictions on circulation.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a bound print volume that omits the title, date of issue, ISSN, or sponsoring body on its outside front cover"
+   },
+   "when": [
+    "Issues of a periodical with covers are bound into a print volume."
+   ],
+   "why": "G-2: Covers the front-cover and first-page requirements for bound print volumes."
+  },
+  {
+   "anchor": {
+    "block_id": "1fc05058d199",
+    "end": 61,
+    "prefix": "",
+    "quote": "Put the publication details for each issue on the cover page.",
+    "start": 0,
+    "suffix": " Include:"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2ed1232d4477",
+     "end": 9,
+     "prefix": "",
+     "quote": "the title",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bdff03ae7726",
+     "end": 19,
+     "prefix": "",
+     "quote": "the publishing date",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "29d90156d67f",
+     "end": 19,
+     "prefix": "",
+     "quote": "the sponsoring body",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bb55d62d3bf5",
+     "end": 36,
+     "prefix": "",
+     "quote": "the volume and part number (if any).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a periodical without a separate cover that omits the title, publishing date, sponsoring body, or volume/part number on its cover page"
+   },
+   "when": [
+    "The periodical is a print issue without a separate cover (such as a newspaper or magazine)."
+   ],
+   "why": "G-1, G-4: The lead-in sentence and list specify required cover-page details for periodicals without separate covers."
+  },
+  {
+   "anchor": {
+    "block_id": "94826ad6cc3a",
+    "end": 144,
+    "prefix": "",
+    "quote": "Start each issue of a periodical without a separate cover from page 1. Include the title, date and page number at the top or bottom of the page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "report",
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an issue of a periodical without a separate cover that does not start from page 1, or that omits the title, date, or page number in the header/footer"
+   },
+   "when": [
+    "The periodical is published without a separate cover."
+   ],
+   "why": "G-2: Pagination and running header/footer rule for periodicals without separate covers."
+  },
+  {
+   "anchor": {
+    "block_id": "99d024f563e0",
+    "end": 138,
+    "prefix": " unique way to locate the work. ",
+    "quote": "Use separate ISSNs for a digital periodical and a print periodical, even if they look the same.",
+    "start": 43,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d43b689523fd",
+     "end": 49,
+     "prefix": "",
+     "quote": "Apply for identifying numbers for your periodical",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "using the same ISSN for both the digital and print editions of a periodical"
+   },
+   "when": [
+    "A periodical is published in both digital and print formats."
+   ],
+   "why": "G-1, G-4: Concrete rule on assigning distinct ISSNs for print and digital editions."
+  },
+  {
+   "anchor": {
+    "block_id": "dbdeb2e010a2",
+    "end": 88,
+    "prefix": "",
+    "quote": "Both printed and digital periodicals must tell their users how to access extra material.",
+    "start": 0,
+    "suffix": " Online periodicals use a hyperl"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6a7e3ad3eae3",
+     "end": 49,
+     "prefix": "",
+     "quote": "Explain how to access datasets and extra material",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a periodical that refers to supplemental material (such as datasets, code, audio, or video) without providing access information (such as a hyperlink or appendix notice)"
+   },
+   "when": [
+    "The periodical incorporates or relies on external supplemental material or datasets."
+   ],
+   "why": "G-1, G-4: Concrete requirement to include access instructions for extra material."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5558,
+  "output_tokens": 2904,
+  "reasoning_tokens": 0
+ }
+}

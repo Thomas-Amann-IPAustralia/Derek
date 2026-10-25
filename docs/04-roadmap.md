@@ -215,8 +215,18 @@ rules, which is what Phase 2b is for.
       proposed): `tools/draft/` and `draft-spans.yml`, a draft layer in the annotator,
       `golden/blind.json` (10 pages never shown a draft), and `derek/eval/draft_score.py`.
       **Built and tested; not yet run**, because it needs an API key.
-- [ ] **Finish and sweep the first three pages**, working through the annotator's
-      *Checks* card. They are blind, so they are the first measurement.
+- [x] **Two-model consensus replaces marking by hand** ([ADR-027](02-decisions.md#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand),
+      owner's decision, 2026-10-25). The sample ran on the ten blind pages for about
+      $11.60. On the two hand-marked pages it had, either model found 79% of the
+      human's rules and inverted no example, against the heading walk's 52%. Seven
+      pages are swept by consensus, with 81 rules accepted.
+- [ ] **Draft the other 118 pages with both models** (about $105–120, or half through the
+      batch APIs), adjudicate, and export.
+- [ ] **Deduplicate across pages** (G-6), from `golden_lint`'s `stated-on-another-page`.
+- [ ] **The 50-rule sample** (`consensus.py sample`): a human checks title and examples.
+      It gates the batch.
+- [ ] ~~Finish and sweep the first three pages~~. They stay as the human measurement and
+      are never written by consensus.
 - [ ] **Draft the blind pages and score them** (`draft-spans.yml` with `blind`). This
       decides ADR-025: if drafts do not beat the sentence regex on recall, or they get
       example polarity wrong more often than a human, drafting stops here.

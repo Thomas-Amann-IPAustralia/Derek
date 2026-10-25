@@ -35,6 +35,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
 | [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
 | [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
+| [027](#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand) | Two-model consensus, adjudicated, replaces marking by hand | Accepted (owner), 2026-10-25; supersedes ADR-025's "a human marks them". Pair: GPT-6.1 Sol (high) + Gemini 3.8 Flash (low), batched |
 
 ---
 
@@ -1286,3 +1287,261 @@ telling a 4-digit count from a year or a postcode is meaning, not pattern.
 **What this does not do.** It does not let a proposal change a review verdict, run a
 rule that is not accepted, or execute anything from the ledger.
 
+
+---
+
+## ADR-027 — Two-model consensus, adjudicated, replaces marking by hand
+
+**Decision (owner).** Rules are identified by two models from different families,
+`gpt-6-astra` and `gemini-3.1-pro-preview` (`tools/draft/providers.py:PAIR`), drafting
+every eligible page independently with ADR-025's pinned prompt and pointer check.
+`tools/draft/consensus.py` lines the two drafts up. What both found the same way is
+taken. Every difference becomes an item with a stable id in
+`golden/consensus/queue.jsonl`. The items are decided by a third family (Claude, in a
+working session), with a reason, in `golden/consensus/adjudications.jsonl`. A page is
+exported only when every item on it is decided. The export uses the annotator's own op
+format, so it reaches `golden/spans.jsonl` and the ledger through
+`tools/annotate/apply_spans.py` and `server._apply`, with every refusal they already
+make. A human then checks a uniform random sample of 50 consensus rules
+(`consensus.py sample`), and that verdict gates the batch.
+
+**Reason.** The owner's call, made because marking by hand had stopped the project. Three
+pages in a month, at about 23 words a minute, against 162,000 words. The annotator also
+asked its user for judgements its interface did not explain. A process nobody can run
+protects nothing.
+
+**What was measured first** (the sample: the ten pages in `golden/blind.json`, 2026-10-25):
+
+| | |
+|---|---|
+| Spend | $8.44 recorded ($6.23 `gpt-6-astra`, $2.21 Gemini), plus up to about $3.20 for one Astra call on `treaties.md` that used its whole 64,000-token output on reasoning and was not written, so about $11.60 in all |
+| Against the human's marks (`commas.md`, `pronouns.md`; `consensus.py score`) | rules found by both models 61% (17/28), by either 79% (22/28). Four of the six misses are what `docs/08` says not to mark: two permissions (G-3), a section (G-1), a cross-page duplicate (G-6). |
+| Examples with opposite polarity to the human's | **0** of 54 compared |
+| The heading walk, same pages | 52% |
+| Gemini alone, three human pages | 73% recall, 0 inversions |
+| Seven consensus pages | 40 rules agreed outright; 105 items adjudicated: 68 single-model rules (26 kept, 42 dropped as restatements, conditions, advice or not text), 35 tag disputes, 2 dropped candidates |
+| `golden_lint` on consensus pages | no `fix`-level finding (the human pages carry 29: rules with no violation condition) |
+
+**Does this break D-7?** Yes, in its second clause, and it is the owner's decision to do
+so. No model runs at extraction time: `derek/extract/` still reads only declared
+inputs, and `build --check` still reproduces the ledger byte for byte. But a model, checked
+by a model of another family and adjudicated by a third, now decides that a rule
+exists. ADR-025's other safeguards stay, because they answer the Octavius failure itself:
+
+1. **It only points.** Every statement and every example is a block id plus a quote that
+   `drafting.resolve` finds in the manual or refuses. No text a model wrote becomes a rule
+   or a test of one (D-1, D-5, postmortem F4). The violation condition and the tags are a
+   model's words, as they were before.
+2. **Two families, then a third.** One model's blind spot is unlikely to be the other's.
+   Where they agree, the polarity of an example is two independent readings. Where they
+   disagree, nothing is taken without a recorded reason.
+3. **Polarity is never settled by rule.** An example the two models attach with opposite
+   polarity, or that only one attached with no *Correct*/*Incorrect* label to agree with,
+   always goes to the adjudicator. That is the Octavius inversion.
+4. **Human pages are left alone.** Consensus never writes to a page a human marked, so
+   those pages stay a measurement of the models, not of the models against themselves.
+5. **D-10 holds where it bites.** A consensus rule is `accepted`, but nothing fires
+   without a matcher, and a matcher is adopted only by a named human (ADR-026). The
+   sample gates the batch.
+
+**Disagreements settled by rule, not by hand.** On the sample these were the commonest
+disputes. Each is a reading of written policy, so `consensus.SETTLE` decides it the same
+way every time:
+
+* *Modality* SHOULD against MUST (or the `_NOT` pair): MUST only if the statement says
+  *must*, *never*, *always*, *required*, *illegal* or *mandatory* (ADR-016, and the prompt's
+  own instruction). Gemini read bare instructions as MUST far more often than Astra.
+* *Unit*: the larger. A checker given more text than it needs can still decide.
+* *Clarity*: the more cautious reading. Two readers disagreeing about whether a rule is
+  operational is evidence that it is not clearly so.
+* *Detection hint*: a definite answer over `unsure`, otherwise the primary drafter's.
+  It is a routing guess that ADR-026 refines.
+
+Direction (ADR-006), `applies_to`, rule existence and example polarity always go to the
+adjudicator.
+
+**How the adjudicator decided** (so the next session decides the same way). The test is
+`docs/08`'s: one rule is one thing a checker would flag and cite. Restatements fold into
+the rule they restate (G-4), and conditions go under its **When** (G-2). Advice that
+depends on the writer's intent is dropped (G-5). So is guidance about print or
+publication format (dust jackets, spines, page sides, HTML as a format), as `not_text`
+(D-6). A property of the finished text is kept even when no checker exists for it yet,
+with `clarity: ambiguous_deferred`, rather than lost.
+
+**Costs, all of them real.**
+
+*A yardstick with a model's fingerprints on it.* ADR-025 warned of this for seeded pages.
+It is now true of every consensus page. `span_recall` and any future heuristic measured
+against them is partly measured against the models. Only the human pages are clean.
+
+*The adjudicator is a model.* Its decisions are data with reasons, and the 50-rule sample
+is how a human finds out whether they hold.
+
+*Formatting rules are kept and not yet checkable.* Italics, page numbering and report
+structure are real rules, but Derek's `Document` is plain text by design (D-13). They are in
+the ledger with no route to a finding until a format-aware adapter exists.
+
+*Cross-page duplicates.* A per-page reader cannot see G-6. `golden_lint` reports the
+candidates (six on the sample), and they are deduplicated after the full batch.
+
+*Money.* About $0.91 a page at standard prices for the pair, so about $105–120 for the
+remaining 118 pages, or about half that through the providers' batch APIs.
+
+**What this does not do.** It does not let a model run at extraction time or in CI, write
+to the ledger except through `apply_spans.py`, adopt a matcher, or mark a human page.
+
+**Cheaper drafters (a recommendation; the owner decides adoption).** The owner judged the
+batch estimate too high and asked for cheaper models and lower efforts, one complex page
+each. The page was `commas.md`: 18,000 characters, 23 human-marked rules (four of them
+ones `docs/08` says not to mark), and 47–53 of the human's examples in reach. Each
+result is cached under `golden/drafts/p1/<model>@<effort>/`, and
+`consensus.py compare PAGE` reprints the table for free.
+
+| drafter | rules found | human examples attached | inverted | cost |
+|---|---|---|---|---|
+| `gpt-6-astra`, high (the sample's) | 16/23 | 40/53 | 0 | $1.07 |
+| `gpt-6-astra`, low | 15/23 | **0** | 0 | $0.36 |
+| **`gpt-6.1-sol`, high** | **17/23** | **40/53** | 0 | **$0.22** |
+| `gpt-6.1-sol`, medium | 16/23 | **0** | 0 | $0.11 |
+| `gpt-6.1-sol`, low | 15/23 | **0** | 0 | $0.08 |
+| `gpt-6-luna`, high | 16/23 | **0** | 0 | $0.01, with 3 pointers refused |
+| `gemini-3.1-pro-preview`, high (the sample's) | 15/23 | 41/47 | 0 | $0.32 |
+
+*Below high effort the OpenAI models return no examples at all*, and Luna returns none even
+at high effort. The schema allows an empty list, and they take that option. A drafter with
+no examples cannot be used: the examples are what tests a rule (D-1) and what Phase 5
+trains on. Finding rules is not the hard part, since every setting found 15–17.
+Attaching the manual's examples is, and only high effort does it.
+
+*`gpt-6.1-sol` at high effort is Astra's equal at a fifth of the price.* Paired with Gemini
+Pro, consensus on this page finds 14 of 23 rules agreed and 18 either way (Astra's pair:
+13 and 18), leaves 5 single-model rules instead of 7, and costs $0.55 instead of $1.39.
+
+*The Gemini side is untested.* Gemini 3.8 Flash and Gemini Pro at low effort were in the
+test, but the Gemini project's prepaid credits ran out (HTTP 402) before any of them ran.
+
+*Not tried.* A prompt that requires at least one example wherever the manual labels one
+might rescue the cheaper settings. It is a new prompt version, so every cached draft
+would be re-drawn under it.
+
+Spend on the comparison: $0.78, all OpenAI.
+
+**Gemini Flash, after the top-up.** Same page, same yardstick:
+
+| drafter | rules found | human examples attached | inverted | cost |
+|---|---|---|---|---|
+| `gemini-3.8-flash`, low | 13/23 | 25/45 | 0 | $0.04 |
+| `gemini-3.8-flash`, medium | 14/23 | 32/45 | 0 | $0.17 |
+| `gemini-3.8-flash`, high | spent its whole 65,536-token output on reasoning; nothing written | | | about $0.25 |
+
+*Over-extraction was looked for and not found.* Every rule any drafter proposed that the
+human did not mark is a sentence that does state a rule on the page: non-essential
+clauses, the 25-word limit on joined clauses, no comma ending a bullet item, adjective
+order, appositive commas. On this page each model proposed fewer rules than the human
+marked (Flash 14–15, Sol 21, human 23), so the risk is missing rules, not inventing them.
+
+| pair | taken without review | of those, the human's | items left | cost |
+|---|---|---|---|---|
+| Sol + Flash low | 14 | 13 (the other a real rule) | 7 | $0.26 |
+| Sol + Flash medium | 15 | 14 (the other a real rule) | 7 | $0.39 |
+| Sol + Gemini Pro | 17 | 14 (the other 3 real rules) | 6 | $0.54 |
+
+**Decision (owner), 2026-10-25: `gpt-6.1-sol` at high effort and `gemini-3.8-flash` at low
+effort, through both providers' batch APIs** (`tools/draft/batch.py`, half price). The full
+batch was estimated at $8–9. `providers.PAIR` holds the pair. The seven sample pages keep
+their Astra and Gemini Pro consensus as applied.
+
+At the same time, `consensus._dropped_candidates` stopped raising an item for a heading
+candidate that a rule both models agreed on restates, usually the sentence directly under
+it. Those go into the sweep's `dropped` with a G-4 reason. A single-model rule does not
+count as cover, because the adjudicator may yet drop it.
+
+**The full batch, and a second reading (owner's decision, 2026-10-25).** The pair drafted
+the manual: Flash 128 of 128 pages and 962 rules for $1.25, Sol 118 of 128 pages and
+1,680 rules for $11.10. Of Sol's cost, $3.57 was 10 pages that ran to the 64,000-token
+output limit and were billed in full for nothing. Two of those were sample pages already
+done. The other 8 were retried once with the cap at 32,000. On the three human pages
+the pair agreed on 21 of 33 human rules, found 26 between them, and inverted no example.
+
+Consensus left 1,283 items. 969 were rules only one model found, and in 626 of those
+Flash had said nothing at all: at low effort it read less of each page (962 rules to
+Sol's 1,680). That is not a second opinion, so the owner approved one, and approved
+letting it decide:
+
+* `tools/draft/verify.py` asks the other family, page by page, about each rule only one
+  model found. It sees the page, the rules both agreed on, and the candidates, and
+  answers `rule` or one of `docs/08`'s reasons it is not one.
+* **A `rule` verdict settles existence.** Two families then agree the rule exists, the
+  same standard as an agreed rule. Any other verdict leaves the item for the
+  adjudicator, with the verdict attached. A same-family verdict counts for nothing, so only
+  Sol's single-model rules are read (by `gemini-3.8-flash` at medium effort), and Flash's
+  go to the adjudicator.
+* **It never touches polarity.** A confirmed rule keeps an example only where the
+  manual's *Correct*/*Incorrect* label agrees with it. Any other example is an item.
+* **No cross-page verdicts.** Prompt v1 offered `duplicate` (G-6) and used it on five of
+  seven commas candidates, guessing at pages it could not see. v2 removed it, because
+  duplicates are found by comparing the finished pages.
+
+On the three human pages, v2 called 10 candidates rules. The adjudicator would keep all
+ten, three of them rules the human marked. Of the three it rejected, two rejections were
+right and one (the 25-word limit, called advice) is arguable, and that one still reaches
+the adjudicator. Cost on those pages: $0.15, live.
+
+**How the full batch came out (2026-10-25).** The second reading read 924 Sol-only
+candidates on 105 pages for $1.29: 361 `rule`, 337 `advice`, 66 `restatement`, 56
+`section`, 53 `description`, 42 `not_text`, 9 `permission`. The 361 settled themselves.
+Everything else, 1,068 items, was decided and recorded in
+`golden/consensus/adjudications.jsonl`:
+
+| Kind | Items | Kept | Dropped |
+|---|---|---|---|
+| Single-model rules the second reading did not confirm | 744 | 59 | 685 |
+| Tag disputes (direction, applies_to) | 243 | — | — |
+| Examples whose polarity the manual's label did not settle | 53 | — | — |
+| Seeded candidates no consensus rule covered | 28 | 9 | 19 |
+
+The adjudicator mostly agreed with the second reading. The 59 kept over it are concrete
+and checkable, and were called advice only because the manual words them softly, for
+example the 15-word sentence average, 280 characters for a post, `÷`, *it's*/*its*,
+4-3-3 for mobile numbers, and the salutations for diplomats, judges and the
+Governor-General. A seeded candidate a human had already accepted was kept.
+
+Two rules were fixed while adjudicating, so the next session applies them the same way:
+
+* **Direction.** `presence` when a wrong form or word is in the text: case, spelling, a
+  hyphen, italics, a wrong citation format. `absence` when a separate required element is
+  missing: a comma between items, an expansion, a heading, a URL, an attribution.
+  Capitalisation is therefore `presence` (the lower-case form is what is wrong).
+  `golden_lint`'s `direction-looks-inverted` check reads capitalisation the other way
+  and fires 408 times on consensus pages. It is a heuristic `check`, and these were not
+  changed to satisfy it.
+* **Labels.** An example's polarity comes from the nearest label before it in its
+  section, whether the label is a heading or a paragraph that is only a label. A census
+  of the corpus added *Like this*, *Avoid this*, *Write* and *Don't write* to *Correct*
+  and *Incorrect*. With paragraph labels read, 0 of 760 agreed examples contradict the
+  manual. `derek/detect/document.py`, which decides which blocks are the manual's wrong
+  examples, still reads heading labels only and has the same gap.
+
+Applied: 3,228 ops, 1,257 loadable rules (942 agreed or confirmed, 278 decided by the
+adjudicator, 37 the owner's), 175 with the manual's paired examples.
+
+**G-6 cleanup.** Rules stated on more than one page were found by comparing finished
+pages, with word overlap on statements and violation conditions plus shared examples.
+That gave 80 clusters. Each rule is kept once, on the page whose subject it is, and the
+other copies go into their sweep's `dropped` with the home rule named. 29 copies were
+dropped on 17 pages, for example *Expand all acronyms on their first use*, repeated in
+the checklist on six pages, now lives on the acronyms page. Some apparent repeats were
+kept on purpose:
+
+* **Author-date and documentary-note templates.** Each referencing system's template is
+  its own rule, and a checker cites the system the document uses.
+* **Forms of address.** *Conclude with 'Yours faithfully'* and *Open with 'Your
+  Excellency'* are kept per addressee.
+* **Same wording, different object.** For example, 70 characters for a heading and for a
+  page title, title case for Acts, bills and cases, and plurals of personal and
+  topographic names.
+
+Two repeats are on `commas.md`, a page the owner marked: the rounded-numbers rule
+`docs/08` itself uses as the G-6 example, and commas in 4-digit numbers. They are left
+for the owner, because a page a human marked is not written to. 1,228 rules load after
+the cleanup, 174 of them with pairs.

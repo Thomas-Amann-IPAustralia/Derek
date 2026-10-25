@@ -1,0 +1,36 @@
+{
+ "effort": "medium",
+ "input_sha256": "891dd44720a3189e0e2ab3201830500343ed99146773f88791c8478aa0fe6eae",
+ "model": "gemini-3.8-flash",
+ "page_path": "writing-and-designing-content/findable-content.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 2196,
+  "output_tokens": 196,
+  "reasoning_tokens": 1102
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "G-5: high-level SEO advice to the writer, not a rule about a specific text property that a checker can flag.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C2",
+   "note": "G-5: general guidance to the writer; specific link rules belong on the hyperlinks page.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C3",
+   "note": "G-4: same sentence as C2, offering broad editorial advice rather than a verifiable text rule.",
+   "restates": "C2",
+   "verdict": "restatement"
+  }
+ ],
+ "version": "v2"
+}

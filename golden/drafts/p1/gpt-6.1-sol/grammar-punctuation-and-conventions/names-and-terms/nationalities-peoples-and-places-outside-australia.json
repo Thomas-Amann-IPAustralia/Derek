@@ -1,0 +1,1610 @@
+{
+ "effort": "high",
+ "input_sha256": "574b5d52abf00ee81c7074eb92c3ebab5c3608c98875c094332ba575ee0ae805",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "17c2d1b0b881",
+    "end": 50,
+    "prefix": "",
+    "quote": "Check official sources for country and place names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: consulting sources is a writer action, not a property detectable in the resulting text.",
+   "reason": "advice",
+   "seed_uid": "b4ad8018dda53dea"
+  },
+  {
+   "anchor": {
+    "block_id": "9044a45b6ba8",
+    "end": 98,
+    "prefix": "es have several official names. ",
+    "quote": "Consult trusted references to decide which name to use",
+    "start": 44,
+    "suffix": ", then use it consistently. Help"
+   },
+   "note": "G-5: the research clause is excluded; the separate consistency clause is retained as a rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "72ad3a784070",
+    "end": 25,
+    "prefix": "",
+    "quote": "Use initial capitals for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: this lead-in and its scope items are absorbed into the country-name capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "37d757fb4f7f",
+    "end": 54,
+    "prefix": "",
+    "quote": "Shorten a country name only if it is clear to the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body wording is selected because it states both clarity and accuracy.",
+   "reason": "restatement",
+   "seed_uid": "43cfc3ecff720dc8"
+  },
+  {
+   "anchor": {
+    "block_id": "696c2cfd31b5",
+    "end": 78,
+    "prefix": "",
+    "quote": "English-language content usually uses the English version of a country’s name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the English-version rule, with English-language content recorded as a condition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cb416a8f8d48",
+    "end": 72,
+    "prefix": "",
+    "quote": "There are some cases where the preferred official name isn’t in English.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: this supplies an exception to the English-version rule, not a separate prohibition.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e57af99b6bbc",
+    "end": 113,
+    "prefix": "",
+    "quote": "In English-speaking countries, the convention is to use the established English forms for well-known place names.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: the place-name case is consolidated into the English-version rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "170399e94204",
+    "end": 69,
+    "prefix": "",
+    "quote": "When the name is used generically, you don’t need an initial capital.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: relaxes the capitalisation requirement for generic uses; it does not prohibit capitals.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "704fe7761825",
+    "end": 51,
+    "prefix": "",
+    "quote": "Check the official status for area and region names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: checking status is research advice. The body supplies the actionable regional-name and directional-term rules.",
+   "reason": "advice",
+   "seed_uid": "14e0f73a95d872e3"
+  },
+  {
+   "anchor": {
+    "block_id": "4bf04e2afb47",
+    "end": 157,
+    "prefix": "nd gain a semi-official status. ",
+    "quote": "Use a dictionary to help you decide when this is appropriate.",
+    "start": 96,
+    "suffix": ""
+   },
+   "note": "G-5: dictionary consultation is a writer action; semi-official status is retained as a condition on the regional-name rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "556c6061df24",
+    "end": 212,
+    "prefix": " word used for the nationality. ",
+    "quote": "It’s not always obvious though, so check a dictionary to ensure you’re using the correct term.",
+    "start": 118,
+    "suffix": ""
+   },
+   "note": "G-5: advises dictionary checking rather than stating a separate nationality-term convention.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "87a743afffdb",
+    "end": 55,
+    "prefix": "",
+    "quote": "Follow guidance for writing non-English personal names.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a cross-reference to guidance, without stating a concrete text property to check on this page.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "62496571a32b",
+    "end": 39,
+    "prefix": "",
+    "quote": "Capitalise the names of certain groups.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: the group-name cases are absorbed into the nationality and peoples capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2b6a7952bbb3",
+    "end": 59,
+    "prefix": "",
+    "quote": "Check if an official language differs from the country name",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to check a fact; it does not state a separate naming or formatting convention.",
+   "reason": "advice",
+   "seed_uid": "08f50979ef3ee6be"
+  },
+  {
+   "anchor": {
+    "block_id": "88a83df5fb97",
+    "end": 83,
+    "prefix": "",
+    "quote": "The name of a country’s language isn’t always derived from the name of the country.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the relationship between country and language names; it does not prescribe a text form.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/nationalities-peoples-and-places-outside-australia.md",
+ "page_sha256": "c81462064e8e119bbb97a951bb6bc7672893eae2a66fb6b12614d37d583ac0c1",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "17c2d1b0b881",
+    "note": "G-5: consulting sources is a writer action, not a property detectable in the resulting text.",
+    "quote": "Check official sources for country and place names",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9044a45b6ba8",
+    "note": "G-5: the research clause is excluded; the separate consistency clause is retained as a rule.",
+    "quote": "Consult trusted references to decide which name to use",
+    "reason": "advice"
+   },
+   {
+    "block_id": "72ad3a784070",
+    "note": "G-4: this lead-in and its scope items are absorbed into the country-name capitalisation rule.",
+    "quote": "Use initial capitals for:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "37d757fb4f7f",
+    "note": "G-4: the body wording is selected because it states both clarity and accuracy.",
+    "quote": "Shorten a country name only if it is clear to the user",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "696c2cfd31b5",
+    "note": "G-4: absorbed into the English-version rule, with English-language content recorded as a condition.",
+    "quote": "English-language content usually uses the English version of a country’s name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cb416a8f8d48",
+    "note": "G-3: this supplies an exception to the English-version rule, not a separate prohibition.",
+    "quote": "There are some cases where the preferred official name isn’t in English.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "e57af99b6bbc",
+    "note": "G-2 and G-4: the place-name case is consolidated into the English-version rule.",
+    "quote": "In English-speaking countries, the convention is to use the established English forms for well-known place names.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "170399e94204",
+    "note": "G-3: relaxes the capitalisation requirement for generic uses; it does not prohibit capitals.",
+    "quote": "When the name is used generically, you don’t need an initial capital.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "704fe7761825",
+    "note": "G-5: checking status is research advice. The body supplies the actionable regional-name and directional-term rules.",
+    "quote": "Check the official status for area and region names",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4bf04e2afb47",
+    "note": "G-5: dictionary consultation is a writer action; semi-official status is retained as a condition on the regional-name rule.",
+    "quote": "Use a dictionary to help you decide when this is appropriate.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "556c6061df24",
+    "note": "G-5: advises dictionary checking rather than stating a separate nationality-term convention.",
+    "quote": "It’s not always obvious though, so check a dictionary to ensure you’re using the correct term.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "87a743afffdb",
+    "note": "G-5: a cross-reference to guidance, without stating a concrete text property to check on this page.",
+    "quote": "Follow guidance for writing non-English personal names.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "62496571a32b",
+    "note": "G-2 and G-4: the group-name cases are absorbed into the nationality and peoples capitalisation rule.",
+    "quote": "Capitalise the names of certain groups.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2b6a7952bbb3",
+    "note": "G-5: asks the writer to check a fact; it does not state a separate naming or formatting convention.",
+    "quote": "Check if an official language differs from the country name",
+    "reason": "advice"
+   },
+   {
+    "block_id": "88a83df5fb97",
+    "note": "Describes the relationship between country and language names; it does not prescribe a text form.",
+    "quote": "The name of a country’s language isn’t always derived from the name of the country.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "127325d2b9f8",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "This demonstrates an explicitly historical reference, not use of an obsolete name as current.",
+      "parts": [
+       {
+        "block_id": "df4a06ab3030",
+        "quote": "The Democratic Republic of the Congo used to be called ‘Zaire’. The former name came from the Portuguese colonial name for the Congo River."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Refer to peoples and places outside Australia based on current information.",
+    "specification": "Check the currency of names and geographic descriptions, not whether the writer performed research. An explicitly historical reference to a former name is not a claim that it is current.",
+    "unit": "sentence",
+    "violation_condition": "A reference to a people or place outside Australia presents outdated naming or geographic information as current.",
+    "when": [
+     "When referring to the current name or status of a people or place outside Australia.",
+     "Historical names may appear in references explicitly presented as historical."
+    ],
+    "why": "G-5 distinguishes a checkable property of the reference—currency—from advice about researching it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9044a45b6ba8",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Explaining a full name and its short form is not inconsistent ordinary reference.",
+      "parts": [
+       {
+        "block_id": "510045adedeb",
+        "quote": "The United Kingdom of Great Britain and Northern Ireland is often called the ‘United Kingdom’."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "use it consistently.",
+    "specification": "Check for a stable naming convention among alternative country names. Introducing a full name and its clear, accurate short form, or explaining alternative names, is not itself inconsistent usage.",
+    "unit": "document",
+    "violation_condition": "A document inconsistently switches between alternative names for the same country.",
+    "when": [
+     "When a country has alternative names and a name has been selected for use.",
+     "Assess ordinary references, rather than passages explaining alternative or historical names."
+    ],
+    "why": "G-5 excludes the research instruction while retaining the independently checkable requirement for consistent naming."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9e7998b52921",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "72ad3a784070",
+      "quote": "Use initial capitals for:"
+     },
+     {
+      "block_id": "082d7f2df3e1",
+      "quote": "the official name of a country"
+     },
+     {
+      "block_id": "d8739be88ff3",
+      "quote": "any commonly used short forms of the country’s name"
+     },
+     {
+      "block_id": "3dd3c0bbdf86",
+      "quote": "the names of states, territories and provinces."
+     },
+     {
+      "block_id": "170399e94204",
+      "quote": "When the name is used generically, you don’t need an initial capital."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Official names and their short forms retain initial capitals.",
+      "parts": [
+       {
+        "block_id": "cd165387401f",
+        "quote": "the Cayman Islands – the Caymans"
+       },
+       {
+        "block_id": "3fa95f2366f2",
+        "quote": "the Falkland Islands – the Falklands"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Spell country names with a capital letter",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An official country name, a commonly used short form, or a state, territory or province name lacks its required initial capitals.",
+    "when": [
+     "Applies to official country names, commonly used short forms, and names of states, territories and provinces.",
+     "An initial capital is not required when a name is used generically.",
+     "The definite article ‘the’ is governed by the separate article-capitalisation rule."
+    ],
+    "why": "G-2 combines the listed name categories and the generic-use exception; G-4 absorbs the body's restatement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "001282edce4c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The article remains lower case while the names take capitals.",
+      "parts": [
+       {
+        "block_id": "cd165387401f",
+        "quote": "the Cayman Islands – the Caymans"
+       },
+       {
+        "block_id": "3fa95f2366f2",
+        "quote": "the Falkland Islands – the Falklands"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "The definite article ‘the’ isn’t capitalised unless it begins a sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The definite article before a country or place name is written as ‘The’ when it does not begin a sentence.",
+    "when": [
+     "When ‘the’ precedes a country or place name.",
+     "A capital is appropriate when the article begins a sentence."
+    ],
+    "why": "G-2 keeps the sentence-initial exception with the article check; this is distinct from capitalising the name itself."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8d429e28a3ed",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "37d757fb4f7f",
+      "quote": "Shorten a country name only if it is clear to the user"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The shortened form identifies the same country accurately.",
+      "parts": [
+       {
+        "block_id": "c72e8d8e753d",
+        "quote": "‘North Korea’ is the shortened form of the Democratic People’s Republic of Korea."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a short form of a country’s name only if it’s clear and accurate.",
+    "specification": "Assess clarity using the intended audience and the document's context, including any earlier introduction of the name. Accuracy requires the short form to identify the intended country rather than a different or broader entity.",
+    "unit": "document",
+    "violation_condition": "A shortened country name is ambiguous to the intended user or inaccurately identifies the country.",
+    "when": [
+     "When a shortened country name is used."
+    ],
+    "why": "G-4 selects the body wording because it includes both clarity and accuracy; these are conditions on the same shortening check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "75f3261400d5",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "696c2cfd31b5",
+      "quote": "English-language content usually uses the English version of a country’s name."
+     },
+     {
+      "block_id": "cb416a8f8d48",
+      "quote": "There are some cases where the preferred official name isn’t in English."
+     },
+     {
+      "block_id": "e57af99b6bbc",
+      "quote": "In English-speaking countries, the convention is to use the established English forms for well-known place names."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "These illustrate English versions; the foreign names mentioned for comparison are not presented as errors.",
+      "parts": [
+       {
+        "block_id": "74d881a2c08c",
+        "quote": "‘Socialist Republic of Vietnam’ is the English version of Cộng hòa xã hội chủ nghĩa Việt Nam."
+       },
+       {
+        "block_id": "d6677fdd2de7",
+        "quote": "‘Germany’ is the English version of Deutschland."
+       },
+       {
+        "block_id": "b8dd4973ee98",
+        "quote": "‘New Zealand’ is the English version of Aotearoa."
+       },
+       {
+        "block_id": "b1277f0ced52",
+        "quote": "‘The Czech Republic’ or ‘Czechia’ are the English versions of Česká republika."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Preferred official names illustrate exceptions to the English-form convention.",
+      "parts": [
+       {
+        "block_id": "c617d93bec77",
+        "quote": "‘Côte d’Ivoire’ is the preferred official name for the Ivory Coast."
+       },
+       {
+        "block_id": "cb7b3d7a6e09",
+        "quote": "‘Eswatini’ is the preferred name for Swaziland."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "These illustrate established English place-name forms.",
+      "parts": [
+       {
+        "block_id": "93f6f272823a",
+        "quote": "Beijing"
+       },
+       {
+        "block_id": "4edf97dc3057",
+        "quote": "Krakow"
+       },
+       {
+        "block_id": "96f7371e2de8",
+        "quote": "Rome"
+       },
+       {
+        "block_id": "67bf1af63efd",
+        "quote": "Brussels"
+       },
+       {
+        "block_id": "f5bc1b485650",
+        "quote": "Florence"
+       },
+       {
+        "block_id": "408e3a4c175d",
+        "quote": "Pyongyang"
+       },
+       {
+        "block_id": "5d6d1051a330",
+        "quote": "the Hague"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use English versions of countries and places in most content",
+    "specification": "Interpret the heading through the body: apply it to English-language content and, for places, to names with established English forms. Preferred official non-English names are exceptions. Do not assume every unfamiliar place name has an English alternative.",
+    "unit": "phrase",
+    "violation_condition": "English-language content uses a non-English country name or a non-English form of a well-known place name where an established English form is expected and no preferred-official-name exception applies.",
+    "when": [
+     "In English-language content.",
+     "For place names, when the place is well known and has an established English form.",
+     "A preferred official name may be non-English; the page gives Côte d’Ivoire and Eswatini."
+    ],
+    "why": "G-2 combines country and place-name cases with the preferred-name exception; G-4 avoids separate findings for the body restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d946243e3269",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4bf04e2afb47",
+      "quote": "Some names that aren’t officially recognised become well known and gain a semi-official status."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Recognised regional names take initial capitals.",
+      "parts": [
+       {
+        "block_id": "8b426f2b3ed1",
+        "quote": "North Africa"
+       },
+       {
+        "block_id": "4920fceb71c5",
+        "quote": "Central America"
+       },
+       {
+        "block_id": "e36a00292247",
+        "quote": "the Balkans"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "This illustrates a well-known name with semi-official status.",
+      "parts": [
+       {
+        "block_id": "d74766fefae6",
+        "quote": "Kurdistan"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Groups of nations or areas that are recognised as political or geographic regions take initial capitals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name of a recognised political or geographic region lacks its required initial capitals.",
+    "when": [
+     "For names of groups of nations or areas recognised as political or geographic regions.",
+     "Recognition can include well-known names that have gained semi-official status.",
+     "An initial capital is not required when a name is used generically."
+    ],
+    "why": "G-2 retains recognition and semi-official status as cases of one regional-name capitalisation check; G-5 excludes the research advice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "73c015a3b877",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The directional terms describe areas rather than forming part of the names.",
+      "parts": [
+       {
+        "block_id": "dc61bf624d0c",
+        "quote": "southern Germany"
+       },
+       {
+        "block_id": "28172f8bbec7",
+        "quote": "northern Iraq"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use lower case if the names of compass points (such as north and south-east) are not part of the name but are used to refer to the geographic area.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A compass-point or directional term is capitalised away from the start of a sentence even though it describes a geographic area rather than forming part of its name.",
+    "when": [
+     "When a compass point or directional term describes an area rather than forming part of a proper name.",
+     "Do not flag a capital required at the beginning of a sentence."
+    ],
+    "why": "G-2 keeps proper-name membership as the condition on one lower-case check, distinct from capitalising recognised regional names."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4a5ed949c087",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "62496571a32b",
+      "quote": "Capitalise the names of certain groups."
+     },
+     {
+      "block_id": "170399e94204",
+      "quote": "When the name is used generically, you don’t need an initial capital."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The nationality terms take initial capitals.",
+      "parts": [
+       {
+        "block_id": "32d089874664",
+        "quote": "Türkiye – Turkish"
+       },
+       {
+        "block_id": "a995fdacfe31",
+        "quote": "Melanesia – Melanesian"
+       },
+       {
+        "block_id": "7db1d0e2891a",
+        "quote": "the Philippines – Filipino"
+       },
+       {
+        "block_id": "10a4ed091272",
+        "quote": "Congo – Congolese"
+       },
+       {
+        "block_id": "61563919f573",
+        "quote": "United Arab Emirates – Emirati"
+       },
+       {
+        "block_id": "b76249c0cb13",
+        "quote": "New Zealand – New Zealander"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "These identify the group-name cases covered by the capitalisation check.",
+      "parts": [
+       {
+        "block_id": "c1624b7bb48b",
+        "quote": "People groups – Hispanic, Sentinelese, Vietnamese Rục, Sámi"
+       },
+       {
+        "block_id": "5915886109af",
+        "quote": "Clans – Clan Campbell (Scottish)"
+       },
+       {
+        "block_id": "e058615e9505",
+        "quote": "People from particular regions – Asian, European, Sumatran, Basque"
+       },
+       {
+        "block_id": "c83fecf53489",
+        "quote": "People who follow particular religions – Jewish, Christian, Muslim, Buddhist, Hindu, Greek Orthodox"
+       },
+       {
+        "block_id": "9b06dbc95e3b",
+        "quote": "People who speak particular languages – Hokkien-speaking"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Generic uses are exempt from the initial-capital requirement; these are not evidence that capitals are prohibited.",
+      "parts": [
+       {
+        "block_id": "7596415c8f61",
+        "quote": "brussels sprout"
+       },
+       {
+        "block_id": "9291ad212045",
+        "quote": "venetian blind"
+       },
+       {
+        "block_id": "efa05e2201da",
+        "quote": "french door"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write nationalities, peoples and places with initial capitals",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A nationality term or the name of a people or group lacks its required initial capitals.",
+    "when": [
+     "This entry covers nationality terms and names of peoples and groups; geographic place names are assigned to the more specific country- and region-name rules.",
+     "The illustrated groups include people groups, clans, people from particular regions, religious groups and language groups.",
+     "An initial capital is not required when a name is used generically."
+    ],
+    "why": "G-2 combines the nationality and group-name cases; G-4 absorbs the body restatement, while more specific place-name rules prevent duplicate findings."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "127325d2b9f8",
+    "end": 75,
+    "prefix": "",
+    "quote": "Refer to peoples and places outside Australia based on current information.",
+    "start": 0,
+    "suffix": " Correct spelling and style avoi"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "This demonstrates an explicitly historical reference, not use of an obsolete name as current.",
+     "parts": [
+      {
+       "block_id": "df4a06ab3030",
+       "end": 139,
+       "prefix": "",
+       "quote": "The Democratic Republic of the Congo used to be called ‘Zaire’. The former name came from the Portuguese colonial name for the Congo River.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Check the currency of names and geographic descriptions, not whether the writer performed research. An explicitly historical reference to a former name is not a claim that it is current.",
+    "unit": "sentence",
+    "violation_condition": "A reference to a people or place outside Australia presents outdated naming or geographic information as current."
+   },
+   "when": [
+    "When referring to the current name or status of a people or place outside Australia.",
+    "Historical names may appear in references explicitly presented as historical."
+   ],
+   "why": "G-5 distinguishes a checkable property of the reference—currency—from advice about researching it."
+  },
+  {
+   "anchor": {
+    "block_id": "9044a45b6ba8",
+    "end": 125,
+    "prefix": " decide which name to use, then ",
+    "quote": "use it consistently.",
+    "start": 105,
+    "suffix": " Helpful references include:"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Explaining a full name and its short form is not inconsistent ordinary reference.",
+     "parts": [
+      {
+       "block_id": "510045adedeb",
+       "end": 94,
+       "prefix": "",
+       "quote": "The United Kingdom of Great Britain and Northern Ireland is often called the ‘United Kingdom’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Check for a stable naming convention among alternative country names. Introducing a full name and its clear, accurate short form, or explaining alternative names, is not itself inconsistent usage.",
+    "unit": "document",
+    "violation_condition": "A document inconsistently switches between alternative names for the same country."
+   },
+   "when": [
+    "When a country has alternative names and a name has been selected for use.",
+    "Assess ordinary references, rather than passages explaining alternative or historical names."
+   ],
+   "why": "G-5 excludes the research instruction while retaining the independently checkable requirement for consistent naming."
+  },
+  {
+   "anchor": {
+    "block_id": "9e7998b52921",
+    "end": 41,
+    "prefix": "",
+    "quote": "Spell country names with a capital letter",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "72ad3a784070",
+     "end": 25,
+     "prefix": "",
+     "quote": "Use initial capitals for:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "082d7f2df3e1",
+     "end": 30,
+     "prefix": "",
+     "quote": "the official name of a country",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d8739be88ff3",
+     "end": 51,
+     "prefix": "",
+     "quote": "any commonly used short forms of the country’s name",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3dd3c0bbdf86",
+     "end": 47,
+     "prefix": "",
+     "quote": "the names of states, territories and provinces.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "170399e94204",
+     "end": 69,
+     "prefix": "",
+     "quote": "When the name is used generically, you don’t need an initial capital.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Official names and their short forms retain initial capitals.",
+     "parts": [
+      {
+       "block_id": "cd165387401f",
+       "end": 32,
+       "prefix": "",
+       "quote": "the Cayman Islands – the Caymans",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "3fa95f2366f2",
+       "end": 36,
+       "prefix": "",
+       "quote": "the Falkland Islands – the Falklands",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "80ad92ebfc0884ab",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An official country name, a commonly used short form, or a state, territory or province name lacks its required initial capitals."
+   },
+   "when": [
+    "Applies to official country names, commonly used short forms, and names of states, territories and provinces.",
+    "An initial capital is not required when a name is used generically.",
+    "The definite article ‘the’ is governed by the separate article-capitalisation rule."
+   ],
+   "why": "G-2 combines the listed name categories and the generic-use exception; G-4 absorbs the body's restatement."
+  },
+  {
+   "anchor": {
+    "block_id": "001282edce4c",
+    "end": 73,
+    "prefix": "",
+    "quote": "The definite article ‘the’ isn’t capitalised unless it begins a sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The article remains lower case while the names take capitals.",
+     "parts": [
+      {
+       "block_id": "cd165387401f",
+       "end": 32,
+       "prefix": "",
+       "quote": "the Cayman Islands – the Caymans",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "3fa95f2366f2",
+       "end": 36,
+       "prefix": "",
+       "quote": "the Falkland Islands – the Falklands",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The definite article before a country or place name is written as ‘The’ when it does not begin a sentence."
+   },
+   "when": [
+    "When ‘the’ precedes a country or place name.",
+    "A capital is appropriate when the article begins a sentence."
+   ],
+   "why": "G-2 keeps the sentence-initial exception with the article check; this is distinct from capitalising the name itself."
+  },
+  {
+   "anchor": {
+    "block_id": "8d429e28a3ed",
+    "end": 69,
+    "prefix": "",
+    "quote": "Use a short form of a country’s name only if it’s clear and accurate.",
+    "start": 0,
+    "suffix": " Shortened forms can make it eas"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "37d757fb4f7f",
+     "end": 54,
+     "prefix": "",
+     "quote": "Shorten a country name only if it is clear to the user",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The shortened form identifies the same country accurately.",
+     "parts": [
+      {
+       "block_id": "c72e8d8e753d",
+       "end": 81,
+       "prefix": "",
+       "quote": "‘North Korea’ is the shortened form of the Democratic People’s Republic of Korea.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess clarity using the intended audience and the document's context, including any earlier introduction of the name. Accuracy requires the short form to identify the intended country rather than a different or broader entity.",
+    "unit": "document",
+    "violation_condition": "A shortened country name is ambiguous to the intended user or inaccurately identifies the country."
+   },
+   "when": [
+    "When a shortened country name is used."
+   ],
+   "why": "G-4 selects the body wording because it includes both clarity and accuracy; these are conditions on the same shortening check."
+  },
+  {
+   "anchor": {
+    "block_id": "75f3261400d5",
+    "end": 60,
+    "prefix": "",
+    "quote": "Use English versions of countries and places in most content",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "696c2cfd31b5",
+     "end": 78,
+     "prefix": "",
+     "quote": "English-language content usually uses the English version of a country’s name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cb416a8f8d48",
+     "end": 72,
+     "prefix": "",
+     "quote": "There are some cases where the preferred official name isn’t in English.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e57af99b6bbc",
+     "end": 113,
+     "prefix": "",
+     "quote": "In English-speaking countries, the convention is to use the established English forms for well-known place names.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "These illustrate English versions; the foreign names mentioned for comparison are not presented as errors.",
+     "parts": [
+      {
+       "block_id": "74d881a2c08c",
+       "end": 93,
+       "prefix": "",
+       "quote": "‘Socialist Republic of Vietnam’ is the English version of Cộng hòa xã hội chủ nghĩa Việt Nam.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d6677fdd2de7",
+       "end": 48,
+       "prefix": "",
+       "quote": "‘Germany’ is the English version of Deutschland.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b8dd4973ee98",
+       "end": 49,
+       "prefix": "",
+       "quote": "‘New Zealand’ is the English version of Aotearoa.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b1277f0ced52",
+       "end": 78,
+       "prefix": "",
+       "quote": "‘The Czech Republic’ or ‘Czechia’ are the English versions of Česká republika.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Preferred official names illustrate exceptions to the English-form convention.",
+     "parts": [
+      {
+       "block_id": "c617d93bec77",
+       "end": 67,
+       "prefix": "",
+       "quote": "‘Côte d’Ivoire’ is the preferred official name for the Ivory Coast.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "cb7b3d7a6e09",
+       "end": 47,
+       "prefix": "",
+       "quote": "‘Eswatini’ is the preferred name for Swaziland.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "These illustrate established English place-name forms.",
+     "parts": [
+      {
+       "block_id": "93f6f272823a",
+       "end": 7,
+       "prefix": "",
+       "quote": "Beijing",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "4edf97dc3057",
+       "end": 6,
+       "prefix": "",
+       "quote": "Krakow",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "96f7371e2de8",
+       "end": 4,
+       "prefix": "",
+       "quote": "Rome",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "67bf1af63efd",
+       "end": 8,
+       "prefix": "",
+       "quote": "Brussels",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f5bc1b485650",
+       "end": 8,
+       "prefix": "",
+       "quote": "Florence",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "408e3a4c175d",
+       "end": 9,
+       "prefix": "",
+       "quote": "Pyongyang",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "5d6d1051a330",
+       "end": 9,
+       "prefix": "",
+       "quote": "the Hague",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "814546210e3de9c2",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret the heading through the body: apply it to English-language content and, for places, to names with established English forms. Preferred official non-English names are exceptions. Do not assume every unfamiliar place name has an English alternative.",
+    "unit": "phrase",
+    "violation_condition": "English-language content uses a non-English country name or a non-English form of a well-known place name where an established English form is expected and no preferred-official-name exception applies."
+   },
+   "when": [
+    "In English-language content.",
+    "For place names, when the place is well known and has an established English form.",
+    "A preferred official name may be non-English; the page gives Côte d’Ivoire and Eswatini."
+   ],
+   "why": "G-2 combines country and place-name cases with the preferred-name exception; G-4 avoids separate findings for the body restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "d946243e3269",
+    "end": 104,
+    "prefix": "",
+    "quote": "Groups of nations or areas that are recognised as political or geographic regions take initial capitals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4bf04e2afb47",
+     "end": 95,
+     "prefix": "",
+     "quote": "Some names that aren’t officially recognised become well known and gain a semi-official status.",
+     "start": 0,
+     "suffix": " Use a dictionary to help you de"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Recognised regional names take initial capitals.",
+     "parts": [
+      {
+       "block_id": "8b426f2b3ed1",
+       "end": 12,
+       "prefix": "",
+       "quote": "North Africa",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "4920fceb71c5",
+       "end": 15,
+       "prefix": "",
+       "quote": "Central America",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e36a00292247",
+       "end": 11,
+       "prefix": "",
+       "quote": "the Balkans",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "This illustrates a well-known name with semi-official status.",
+     "parts": [
+      {
+       "block_id": "d74766fefae6",
+       "end": 9,
+       "prefix": "",
+       "quote": "Kurdistan",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name of a recognised political or geographic region lacks its required initial capitals."
+   },
+   "when": [
+    "For names of groups of nations or areas recognised as political or geographic regions.",
+    "Recognition can include well-known names that have gained semi-official status.",
+    "An initial capital is not required when a name is used generically."
+   ],
+   "why": "G-2 retains recognition and semi-official status as cases of one regional-name capitalisation check; G-5 excludes the research advice."
+  },
+  {
+   "anchor": {
+    "block_id": "73c015a3b877",
+    "end": 147,
+    "prefix": "",
+    "quote": "Use lower case if the names of compass points (such as north and south-east) are not part of the name but are used to refer to the geographic area.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The directional terms describe areas rather than forming part of the names.",
+     "parts": [
+      {
+       "block_id": "dc61bf624d0c",
+       "end": 16,
+       "prefix": "",
+       "quote": "southern Germany",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "28172f8bbec7",
+       "end": 13,
+       "prefix": "",
+       "quote": "northern Iraq",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A compass-point or directional term is capitalised away from the start of a sentence even though it describes a geographic area rather than forming part of its name."
+   },
+   "when": [
+    "When a compass point or directional term describes an area rather than forming part of a proper name.",
+    "Do not flag a capital required at the beginning of a sentence."
+   ],
+   "why": "G-2 keeps proper-name membership as the condition on one lower-case check, distinct from capitalising recognised regional names."
+  },
+  {
+   "anchor": {
+    "block_id": "4a5ed949c087",
+    "end": 61,
+    "prefix": "",
+    "quote": "Write nationalities, peoples and places with initial capitals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "62496571a32b",
+     "end": 39,
+     "prefix": "",
+     "quote": "Capitalise the names of certain groups.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "170399e94204",
+     "end": 69,
+     "prefix": "",
+     "quote": "When the name is used generically, you don’t need an initial capital.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The nationality terms take initial capitals.",
+     "parts": [
+      {
+       "block_id": "32d089874664",
+       "end": 17,
+       "prefix": "",
+       "quote": "Türkiye – Turkish",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a995fdacfe31",
+       "end": 22,
+       "prefix": "",
+       "quote": "Melanesia – Melanesian",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7db1d0e2891a",
+       "end": 26,
+       "prefix": "",
+       "quote": "the Philippines – Filipino",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "10a4ed091272",
+       "end": 17,
+       "prefix": "",
+       "quote": "Congo – Congolese",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "61563919f573",
+       "end": 30,
+       "prefix": "",
+       "quote": "United Arab Emirates – Emirati",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b76249c0cb13",
+       "end": 27,
+       "prefix": "",
+       "quote": "New Zealand – New Zealander",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "These identify the group-name cases covered by the capitalisation check.",
+     "parts": [
+      {
+       "block_id": "c1624b7bb48b",
+       "end": 59,
+       "prefix": "",
+       "quote": "People groups – Hispanic, Sentinelese, Vietnamese Rục, Sámi",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "5915886109af",
+       "end": 32,
+       "prefix": "",
+       "quote": "Clans – Clan Campbell (Scottish)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e058615e9505",
+       "end": 66,
+       "prefix": "",
+       "quote": "People from particular regions – Asian, European, Sumatran, Basque",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c83fecf53489",
+       "end": 99,
+       "prefix": "",
+       "quote": "People who follow particular religions – Jewish, Christian, Muslim, Buddhist, Hindu, Greek Orthodox",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "9b06dbc95e3b",
+       "end": 56,
+       "prefix": "",
+       "quote": "People who speak particular languages – Hokkien-speaking",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Generic uses are exempt from the initial-capital requirement; these are not evidence that capitals are prohibited.",
+     "parts": [
+      {
+       "block_id": "7596415c8f61",
+       "end": 15,
+       "prefix": "",
+       "quote": "brussels sprout",
+       "start": 0,
+       "suffix": " [A type of sprout, not a sprout"
+      },
+      {
+       "block_id": "9291ad212045",
+       "end": 14,
+       "prefix": "",
+       "quote": "venetian blind",
+       "start": 0,
+       "suffix": " [A type of screen for a window,"
+      },
+      {
+       "block_id": "efa05e2201da",
+       "end": 11,
+       "prefix": "",
+       "quote": "french door",
+       "start": 0,
+       "suffix": " [A type of door, not a door fro"
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "f172d8b3f552cc6b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A nationality term or the name of a people or group lacks its required initial capitals."
+   },
+   "when": [
+    "This entry covers nationality terms and names of peoples and groups; geographic place names are assigned to the more specific country- and region-name rules.",
+    "The illustrated groups include people groups, clans, people from particular regions, religious groups and language groups.",
+    "An initial capital is not required when a name is used generically."
+   ],
+   "why": "G-2 combines the nationality and group-name cases; G-4 absorbs the body restatement, while more specific place-name rules prevent duplicate findings."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5168,
+  "output_tokens": 16520,
+  "reasoning_tokens": 11107
+ }
+}

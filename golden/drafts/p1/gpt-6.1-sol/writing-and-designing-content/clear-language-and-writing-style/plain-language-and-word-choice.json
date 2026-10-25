@@ -1,0 +1,1551 @@
+{
+ "effort": "high",
+ "input_sha256": "da918a548f3e99727379f93b921e70ff2c0d7ef1c6a367f877b8b46a8c55b26d",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "7a9bcc2a0728",
+    "end": 122,
+    "prefix": "ds they can understand quickly: ",
+    "quote": "use the list on this page.",
+    "start": 96,
+    "suffix": " Clarify expressions people migh"
+   },
+   "note": "G-5: directs the writer to a resource rather than specifying a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7a9bcc2a0728",
+    "end": 175,
+    "prefix": "kly: use the list on this page. ",
+    "quote": "Clarify expressions people might be unfamiliar with.",
+    "start": 123,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the rule to avoid or explain unfamiliar expressions.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1141a174f16a",
+    "end": 18,
+    "prefix": "",
+    "quote": "Use everyday words",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: consolidated with the simple-word preference rather than creating a second general word-choice finding.",
+   "reason": "restatement",
+   "seed_uid": "a66762992966d86b"
+  },
+  {
+   "anchor": {
+    "block_id": "81e43e363d6e",
+    "end": 43,
+    "prefix": "",
+    "quote": "Choose words that people are familiar with.",
+    "start": 0,
+    "suffix": " Unfamiliar words make content h"
+   },
+   "note": "G-4: absorbed into the everyday, simple-word preference.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c8d4496f3496",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write in plain language.",
+    "start": 0,
+    "suffix": " This helps all users and is ess"
+   },
+   "note": "G-4: broad restatement of the plain-word preference, not an additional independent check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "18a190d506ab",
+    "end": 100,
+    "prefix": "rds, phrases, idioms and so on. ",
+    "quote": "Expand all acronyms on their first use.",
+    "start": 61,
+    "suffix": ""
+   },
+   "note": "G-4: consolidated with the later first-use spelling-out instruction.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6bdf7e723201",
+    "end": 35,
+    "prefix": "",
+    "quote": "Use ‘we’, ‘you’ and ‘us’ if you can",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body states the same rule with its more precise voice-and-tone condition.",
+   "reason": "restatement",
+   "seed_uid": "53e5f5a2862c6304"
+  },
+  {
+   "anchor": {
+    "block_id": "8500b00254e9",
+    "end": 109,
+    "prefix": "",
+    "quote": "A direct, active voice and tone helps to engage users. Active voice and tone makes it clear who must do what.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the benefit of direct, active wording; it does not state a separate instruction to flag all passive constructions.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e4a3b094c16a",
+    "end": 12,
+    "prefix": "",
+    "quote": "Avoid jargon",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the rule covering avoidance or explanation of unusual expressions.",
+   "reason": "restatement",
+   "seed_uid": "f908f23393475e5c"
+  },
+  {
+   "anchor": {
+    "block_id": "06700441fdd3",
+    "end": 32,
+    "prefix": "",
+    "quote": "Remove jargon, slang and idioms.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated with the page's avoid-or-explain instruction and its specialist-term permission.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5fb0b31850b7",
+    "end": 22,
+    "prefix": "",
+    "quote": "Use inclusive language",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body sentence supplies the actionable requirement for respectful wording.",
+   "reason": "restatement",
+   "seed_uid": "c5d2bbc238adcb31"
+  },
+  {
+   "anchor": {
+    "block_id": "e41bc3d7c677",
+    "end": 32,
+    "prefix": "",
+    "quote": "Learn about the words people use",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes audience research by the writer, not a directly violable property of the text.",
+   "reason": "advice",
+   "seed_uid": "260e1383cc3f3976"
+  },
+  {
+   "anchor": {
+    "block_id": "8e61c1afbb2c",
+    "end": 83,
+    "prefix": "",
+    "quote": "Find out if your word choice matches the words people will use to find the content.",
+    "start": 0,
+    "suffix": " What is obvious to you might no"
+   },
+   "note": "G-5: an instruction to investigate audience vocabulary.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8e42e510d423",
+    "end": 64,
+    "prefix": "",
+    "quote": "You can build insight through user research and content testing.",
+    "start": 0,
+    "suffix": " For example, you can check whet"
+   },
+   "note": "G-5: suggests a research method rather than a text check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ae258d7fe3e2",
+    "end": 88,
+    "prefix": "",
+    "quote": "Check search engine analytics for terms people are using to find related content online.",
+    "start": 0,
+    "suffix": " You can discover useful search "
+   },
+   "note": "G-5: a research action; the resulting text cannot show whether analytics were checked.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6b4921437e46",
+    "end": 92,
+    "prefix": "n one way to express something. ",
+    "quote": "Find the simplest, clearest option.",
+    "start": 57,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the simple-word preference.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6c95f7da426a",
+    "end": 59,
+    "prefix": "",
+    "quote": "Replace longer words and phrases with simpler alternatives.",
+    "start": 0,
+    "suffix": " You can use this table as a sta"
+   },
+   "note": "G-4: body restatement of the selected simple-word heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6c95f7da426a",
+    "end": 103,
+    "prefix": "ases with simpler alternatives. ",
+    "quote": "You can use this table as a starting point.",
+    "start": 60,
+    "suffix": ""
+   },
+   "note": "G-5: suggests how to use a resource; it does not require table consultation.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "851adc8e55fc",
+    "end": 36,
+    "prefix": "",
+    "quote": "(or tell people how many there were)",
+    "start": 0,
+    "suffix": " |"
+   },
+   "note": "An alternative within the table's illustration of replacing ‘a number of’, not a separate universal requirement to supply counts.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "72053214bdf3",
+    "end": 46,
+    "prefix": "",
+    "quote": "(or tell people a specific or rough timeframe)",
+    "start": 0,
+    "suffix": " |"
+   },
+   "note": "An alternative within the table's illustration of replacing ‘at a later date’, not a separate universal timeframe rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fa2c5a6fd1cc",
+    "end": 62,
+    "prefix": "drive | ",
+    "quote": "say what you are doing – for example, ‘increasing’ ...",
+    "start": 8,
+    "suffix": " |"
+   },
+   "note": "The table's contextual replacement guidance for vague ‘deliver’ or ‘drive’ wording belongs to the simple-expression check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4318274a8266",
+    "end": 47,
+    "prefix": "",
+    "quote": "(or break up the sentence to avoid this phrase)",
+    "start": 0,
+    "suffix": " |"
+   },
+   "note": "G-3: offers another way to remove ‘despite the fact that’; it does not require every such sentence to be split.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e01acdb0466b",
+    "end": 56,
+    "prefix": "",
+    "quote": "Keep words and phrases with special meaning to a minimum",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the more specific checks for unfamiliar terms, shortened forms, first-use expansion and specialist summaries.",
+   "reason": "section",
+   "seed_uid": "90c9aa31028653a3"
+  },
+  {
+   "anchor": {
+    "block_id": "90d46d1355d2",
+    "end": 77,
+    "prefix": "",
+    "quote": "For names and terms with special meaning, follow style rules and conventions.",
+    "start": 0,
+    "suffix": " This helps users scan content."
+   },
+   "note": "G-5: a general direction to follow other rules, without stating an independently checkable convention here.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "febfd9e4604f",
+    "end": 98,
+    "prefix": "",
+    "quote": "Be selective about shortened forms, such as abbreviations, contractions, acronyms and initialisms.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the following frequency and familiarity conditions make this general advice actionable.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d960cfc2a530",
+    "end": 154,
+    "prefix": "of the term, for example ‘DNA’. ",
+    "quote": "Check a dictionary to see if the acronym or initialism is listed.",
+    "start": 89,
+    "suffix": ""
+   },
+   "note": "G-5: a writer's research action, not a property that can be checked in the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ec0d93f1b11c",
+    "end": 153,
+    "prefix": "able in plain language content. ",
+    "quote": "Try to avoid them altogether if they are used only once or twice.",
+    "start": 88,
+    "suffix": ""
+   },
+   "note": "G-2: the explicit low-frequency case is included in the shortened-form selection rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5b20d377118a",
+    "end": 93,
+    "prefix": "",
+    "quote": "You can include technical or specialist terms if your research shows your audience uses them.",
+    "start": 0,
+    "suffix": " But start with plain language w"
+   },
+   "note": "G-3: recorded as an audience-research exception, not an independent rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5b20d377118a",
+    "end": 182,
+    "prefix": " shows your audience uses them. ",
+    "quote": "But start with plain language words as the default to keep the reading level accessible.",
+    "start": 94,
+    "suffix": " Plain language helps everyone."
+   },
+   "note": "G-4: restates the plain-word preference while qualifying the preceding permission.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2e38f6cba468",
+    "end": 43,
+    "prefix": "",
+    "quote": "explain terms – for example, use a glossary",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: specialist-term application of the existing unfamiliar-expression explanation rule; a glossary is one possible method.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "86a53f0a28c6",
+    "end": 103,
+    "prefix": "",
+    "quote": "In content with many specialist terms, reserve shortened forms for the most frequently used terms only.",
+    "start": 0,
+    "suffix": " Spell out other terms in full."
+   },
+   "note": "G-2: a stricter application condition within the shortened-form selection rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "86a53f0a28c6",
+    "end": 134,
+    "prefix": "ost frequently used terms only. ",
+    "quote": "Spell out other terms in full.",
+    "start": 104,
+    "suffix": ""
+   },
+   "note": "G-4: the complementary wording of the specialist-content restriction, not another first-use expansion rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/clear-language-and-writing-style/plain-language-and-word-choice.md",
+ "page_sha256": "0225d6659aeeb6a8e747f4f9e24c142edce2d29d51d556baaef23d05dd7bdd49",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "7a9bcc2a0728",
+    "note": "G-5: directs the writer to a resource rather than specifying a property of the resulting text.",
+    "quote": "use the list on this page.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7a9bcc2a0728",
+    "note": "G-4: absorbed into the rule to avoid or explain unfamiliar expressions.",
+    "quote": "Clarify expressions people might be unfamiliar with.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1141a174f16a",
+    "note": "G-4: consolidated with the simple-word preference rather than creating a second general word-choice finding.",
+    "quote": "Use everyday words",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "81e43e363d6e",
+    "note": "G-4: absorbed into the everyday, simple-word preference.",
+    "quote": "Choose words that people are familiar with.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c8d4496f3496",
+    "note": "G-4: broad restatement of the plain-word preference, not an additional independent check.",
+    "quote": "Write in plain language.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "18a190d506ab",
+    "note": "G-4: consolidated with the later first-use spelling-out instruction.",
+    "quote": "Expand all acronyms on their first use.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6bdf7e723201",
+    "note": "G-4: the body states the same rule with its more precise voice-and-tone condition.",
+    "quote": "Use ‘we’, ‘you’ and ‘us’ if you can",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8500b00254e9",
+    "note": "Explains the benefit of direct, active wording; it does not state a separate instruction to flag all passive constructions.",
+    "quote": "A direct, active voice and tone helps to engage users. Active voice and tone makes it clear who must do what.",
+    "reason": "description"
+   },
+   {
+    "block_id": "e4a3b094c16a",
+    "note": "G-4: absorbed into the rule covering avoidance or explanation of unusual expressions.",
+    "quote": "Avoid jargon",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "06700441fdd3",
+    "note": "Consolidated with the page's avoid-or-explain instruction and its specialist-term permission.",
+    "quote": "Remove jargon, slang and idioms.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5fb0b31850b7",
+    "note": "G-4: the body sentence supplies the actionable requirement for respectful wording.",
+    "quote": "Use inclusive language",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e41bc3d7c677",
+    "note": "G-5: describes audience research by the writer, not a directly violable property of the text.",
+    "quote": "Learn about the words people use",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8e61c1afbb2c",
+    "note": "G-5: an instruction to investigate audience vocabulary.",
+    "quote": "Find out if your word choice matches the words people will use to find the content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8e42e510d423",
+    "note": "G-5: suggests a research method rather than a text check.",
+    "quote": "You can build insight through user research and content testing.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ae258d7fe3e2",
+    "note": "G-5: a research action; the resulting text cannot show whether analytics were checked.",
+    "quote": "Check search engine analytics for terms people are using to find related content online.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6b4921437e46",
+    "note": "G-4: absorbed into the simple-word preference.",
+    "quote": "Find the simplest, clearest option.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6c95f7da426a",
+    "note": "G-4: body restatement of the selected simple-word heading.",
+    "quote": "Replace longer words and phrases with simpler alternatives.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6c95f7da426a",
+    "note": "G-5: suggests how to use a resource; it does not require table consultation.",
+    "quote": "You can use this table as a starting point.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "851adc8e55fc",
+    "note": "An alternative within the table's illustration of replacing ‘a number of’, not a separate universal requirement to supply counts.",
+    "quote": "(or tell people how many there were)",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "72053214bdf3",
+    "note": "An alternative within the table's illustration of replacing ‘at a later date’, not a separate universal timeframe rule.",
+    "quote": "(or tell people a specific or rough timeframe)",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "fa2c5a6fd1cc",
+    "note": "The table's contextual replacement guidance for vague ‘deliver’ or ‘drive’ wording belongs to the simple-expression check.",
+    "quote": "say what you are doing – for example, ‘increasing’ ...",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4318274a8266",
+    "note": "G-3: offers another way to remove ‘despite the fact that’; it does not require every such sentence to be split.",
+    "quote": "(or break up the sentence to avoid this phrase)",
+    "reason": "permission"
+   },
+   {
+    "block_id": "e01acdb0466b",
+    "note": "G-1: introduces the more specific checks for unfamiliar terms, shortened forms, first-use expansion and specialist summaries.",
+    "quote": "Keep words and phrases with special meaning to a minimum",
+    "reason": "section"
+   },
+   {
+    "block_id": "90d46d1355d2",
+    "note": "G-5: a general direction to follow other rules, without stating an independently checkable convention here.",
+    "quote": "For names and terms with special meaning, follow style rules and conventions.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "febfd9e4604f",
+    "note": "G-4: the following frequency and familiarity conditions make this general advice actionable.",
+    "quote": "Be selective about shortened forms, such as abbreviations, contractions, acronyms and initialisms.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d960cfc2a530",
+    "note": "G-5: a writer's research action, not a property that can be checked in the resulting text.",
+    "quote": "Check a dictionary to see if the acronym or initialism is listed.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ec0d93f1b11c",
+    "note": "G-2: the explicit low-frequency case is included in the shortened-form selection rule.",
+    "quote": "Try to avoid them altogether if they are used only once or twice.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5b20d377118a",
+    "note": "G-3: recorded as an audience-research exception, not an independent rule.",
+    "quote": "You can include technical or specialist terms if your research shows your audience uses them.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "5b20d377118a",
+    "note": "G-4: restates the plain-word preference while qualifying the preceding permission.",
+    "quote": "But start with plain language words as the default to keep the reading level accessible.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2e38f6cba468",
+    "note": "G-4: specialist-term application of the existing unfamiliar-expression explanation rule; a glossary is one possible method.",
+    "quote": "explain terms – for example, use a glossary",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "86a53f0a28c6",
+    "note": "G-2: a stricter application condition within the shortened-form selection rule.",
+    "quote": "In content with many specialist terms, reserve shortened forms for the most frequently used terms only.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "86a53f0a28c6",
+    "note": "G-4: the complementary wording of the specialist-content restriction, not another first-use expansion rule.",
+    "quote": "Spell out other terms in full.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "94876ef69e8d",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "1141a174f16a",
+      "quote": "Use everyday words"
+     },
+     {
+      "block_id": "81e43e363d6e",
+      "quote": "Choose words that people are familiar with."
+     },
+     {
+      "block_id": "7a9bcc2a0728",
+      "quote": "Engage people with words they can understand quickly"
+     },
+     {
+      "block_id": "c8d4496f3496",
+      "quote": "Write in plain language."
+     },
+     {
+      "block_id": "6b4921437e46",
+      "quote": "Find the simplest, clearest option."
+     },
+     {
+      "block_id": "6c95f7da426a",
+      "quote": "Replace longer words and phrases with simpler alternatives."
+     },
+     {
+      "block_id": "5b20d377118a",
+      "quote": "But start with plain language words as the default to keep the reading level accessible."
+     },
+     {
+      "block_id": "f43f0a17aeda",
+      "quote": "table (verb) – unless tabling a document in parliament"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Compliant example under ‘Like this’.",
+      "parts": [
+       {
+        "block_id": "5485f42af17a",
+        "quote": "Email your receipt by 5 pm today to claim the prize."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Violating example under ‘Not this’.",
+      "parts": [
+       {
+        "block_id": "ac855b8ce588",
+        "quote": "You are required to disclose financial documentation in a timely manner or you will be deemed to be disqualified from this prize offer."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Choose simple words, not complicated expressions",
+    "specification": "The table supplies candidate substitutions, not context-free replacements. Check that the simpler alternative preserves the intended meaning. The everyday-word instructions elsewhere on the page express the same word-choice preference.",
+    "unit": "sentence",
+    "violation_condition": "A needlessly complicated or formal word or expression is used where a simpler, familiar alternative would preserve the intended meaning.",
+    "when": [
+     "Apply the table's verb-specific recommendations only to the indicated verb uses.",
+     "The recommendation against ‘table’ as a verb excludes tabling a document in parliament.",
+     "Technical or specialist terms may be used when research shows that the audience uses them; plain language remains the default."
+    ],
+    "why": "G-4 consolidates the repeated plain-word preference; G-2 retains the table's contextual qualifications rather than creating a rule for every substitution."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "18a190d506ab",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "7a9bcc2a0728",
+      "quote": "Clarify expressions people might be unfamiliar with."
+     },
+     {
+      "block_id": "e4a3b094c16a",
+      "quote": "Avoid jargon"
+     },
+     {
+      "block_id": "06700441fdd3",
+      "quote": "Remove jargon, slang and idioms."
+     },
+     {
+      "block_id": "5b20d377118a",
+      "quote": "You can include technical or specialist terms if your research shows your audience uses them."
+     },
+     {
+      "block_id": "2e38f6cba468",
+      "quote": "explain terms – for example, use a glossary"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Compliant example under ‘Like this’.",
+      "parts": [
+       {
+        "block_id": "3ef78fdeff1f",
+        "quote": "They changed their decision in response to new information."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual identifies ‘in light of’ as an idiom.",
+      "parts": [
+       {
+        "block_id": "b14cfd9b4f93",
+        "quote": "They changed their decision in light of new information."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "specification": "Assess unfamiliarity against the intended audience. Explanations may be supplied in the text or a glossary. This combines the page's removal instruction with its explicit alternative of explaining unusual expressions.",
+    "unit": "document",
+    "violation_condition": "Jargon, slang, idioms or unfamiliar expressions are retained without an explanation that makes their meaning accessible to the intended audience.",
+    "when": [
+     "Avoiding the expression or explaining it satisfies the unusual-expression requirement.",
+     "Technical or specialist terms may be retained when research shows that the audience uses them.",
+     "Explain specialist terms that readers still need help understanding, including unavoidable terms with special meanings."
+    ],
+    "why": "G-2 and G-3 keep avoidance, explanation and the audience-research permission together; G-4 absorbs the repeated jargon and clarification instructions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4874a921c4d8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using double negatives.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses a double negative.",
+    "when": [],
+    "why": "This is an independent, text-checkable prohibition, not a restatement of the word-choice rules."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "8bf0be679fa9",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles, (year 7 or between 12 and 14 years old)",
+    "specification": "The page supplies the target reading level but no assessment method. Do not invent a readability formula or infer that all content is required to achieve Level AAA.",
+    "unit": "document",
+    "violation_condition": "Content intended to satisfy the cited WCAG Level AAA reading-level requirement exceeds lower-secondary reading difficulty after proper names and titles are excluded.",
+    "when": [
+     "Apply only when assessing conformance with the cited WCAG Level AAA reading-level requirement.",
+     "Exclude proper names and titles from the reading-level assessment."
+    ],
+    "why": "G-2 keeps the Level AAA condition and exclusions within one reading-level check; this does not create an unconditional AAA requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "16c7a037848d",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "6bdf7e723201",
+      "quote": "Use ‘we’, ‘you’ and ‘us’ if you can"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Compliant example under ‘Like this’.",
+      "parts": [
+       {
+        "block_id": "127597d4d7aa",
+        "quote": "We will assess your application within 30 days."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual presents this as ‘Not this’ for the direct, personal treatment.",
+      "parts": [
+       {
+        "block_id": "f93094149c71",
+        "quote": "Applications are assessed within 30 days."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use personal pronouns (like ‘we’, ‘you’, ‘us’) when it suits the voice and tone.",
+    "specification": "Suitability depends on the intended voice and tone, which this page does not define. Do not require a pronoun in every sentence or turn the accompanying discussion of active voice into a separate prohibition.",
+    "unit": "sentence",
+    "violation_condition": "Impersonal wording omits personal pronouns where they would suit the content's intended voice and tone.",
+    "when": [
+     "Apply when personal pronouns suit the intended voice and tone."
+    ],
+    "why": "G-4 selects the more precise body instruction and absorbs the heading; G-2 preserves its voice-and-tone condition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b39ab92b89d7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "5fb0b31850b7",
+      "quote": "Use inclusive language"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Choose words that respect all people, including their rights and their heritage.",
+    "specification": "Assess respectful treatment in context. The instruction does not require every reference to people to mention their rights or heritage.",
+    "unit": "sentence",
+    "violation_condition": "Wording refers to people in a way that disrespects them, their rights or their heritage.",
+    "when": [],
+    "why": "G-4 uses the actionable body sentence rather than making the broad heading a second rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "06c22abf3696",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "febfd9e4604f",
+      "quote": "Be selective about shortened forms, such as abbreviations, contractions, acronyms and initialisms."
+     },
+     {
+      "block_id": "d960cfc2a530",
+      "quote": "Some shortened forms are better-known than the full form of the term, for example ‘DNA’."
+     },
+     {
+      "block_id": "ec0d93f1b11c",
+      "quote": "Try to avoid them altogether if they are used only once or twice."
+     },
+     {
+      "block_id": "86a53f0a28c6",
+      "quote": "In content with many specialist terms, reserve shortened forms for the most frequently used terms only."
+     },
+     {
+      "block_id": "86a53f0a28c6",
+      "quote": "Spell out other terms in full."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Shorten only the words and phrases that are well known or used many times in your content.",
+    "specification": "The page explicitly discourages forms used once or twice, but does not quantify ‘many times’, ‘many specialist terms’ or ‘most frequently used’. Preserve those unresolved thresholds rather than inventing counts. The passage lists contractions among shortened forms, although its worked example concerns an organisation initialism.",
+    "unit": "document",
+    "violation_condition": "A shortened form is neither well known nor used many times, is used only once or twice despite the advice to avoid such forms, or abbreviates a less-frequent specialist term in content with many specialist terms.",
+    "when": [
+     "General eligibility is that the word or phrase is well known or used many times in the content.",
+     "Avoid shortened forms used only once or twice.",
+     "In content with many specialist terms, reserve shortened forms for the most frequently used terms and write other terms in full.",
+     "Some shortened forms, such as ‘DNA’, are better known than their full forms."
+    ],
+    "why": "G-2 consolidates the general frequency condition and the stricter specialist-content case; G-4 absorbs the selectivity restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d1fb3af88c87",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "18a190d506ab",
+      "quote": "Expand all acronyms on their first use."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The full organisation name precedes its initialism.",
+      "parts": [
+       {
+        "block_id": "9e154a673af0",
+        "quote": "The Digital Transformation Agency (DTA) helps government agencies create digital services."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Spell them out the first time you use them.",
+    "specification": "The check is clear for acronyms and initialisms. The surrounding passage also lists abbreviations and contractions as shortened forms, but does not explain how first-use expansion applies to ordinary contractions; that wider scope needs review. The page does not explicitly exempt familiar forms from first-use expansion.",
+    "unit": "document",
+    "violation_condition": "A shortened form first appears without the full words it represents being given.",
+    "when": [
+     "Check the first use of a shortened form in the content."
+    ],
+    "why": "G-4 combines the two first-use expansion instructions; this remains separate from the rule deciding whether a shortened form should be used at all."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3783e7f2713c",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "84ecf446aef5",
+      "quote": "To help people understand specialist or technical content:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "include a short summary without using specialist terms.",
+    "specification": "Look for a concise account of the content's main points in non-specialist language. The page does not set a numerical limit for ‘short’.",
+    "unit": "document",
+    "violation_condition": "Specialist or technical content lacks a short summary in non-specialist language, or its summary itself uses specialist terms.",
+    "when": [
+     "Apply to specialist or technical content."
+    ],
+    "why": "The list lead-in supplies the condition; the summary is a distinct document component, not another instance of explaining an individual term."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "94876ef69e8d",
+    "end": 48,
+    "prefix": "",
+    "quote": "Choose simple words, not complicated expressions",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "1141a174f16a",
+     "end": 18,
+     "prefix": "",
+     "quote": "Use everyday words",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "81e43e363d6e",
+     "end": 43,
+     "prefix": "",
+     "quote": "Choose words that people are familiar with.",
+     "start": 0,
+     "suffix": " Unfamiliar words make content h"
+    },
+    {
+     "block_id": "7a9bcc2a0728",
+     "end": 94,
+     "prefix": "uage can express complex ideas. ",
+     "quote": "Engage people with words they can understand quickly",
+     "start": 42,
+     "suffix": ": use the list on this page. Cla"
+    },
+    {
+     "block_id": "c8d4496f3496",
+     "end": 24,
+     "prefix": "",
+     "quote": "Write in plain language.",
+     "start": 0,
+     "suffix": " This helps all users and is ess"
+    },
+    {
+     "block_id": "6b4921437e46",
+     "end": 92,
+     "prefix": "n one way to express something. ",
+     "quote": "Find the simplest, clearest option.",
+     "start": 57,
+     "suffix": ""
+    },
+    {
+     "block_id": "6c95f7da426a",
+     "end": 59,
+     "prefix": "",
+     "quote": "Replace longer words and phrases with simpler alternatives.",
+     "start": 0,
+     "suffix": " You can use this table as a sta"
+    },
+    {
+     "block_id": "5b20d377118a",
+     "end": 182,
+     "prefix": " shows your audience uses them. ",
+     "quote": "But start with plain language words as the default to keep the reading level accessible.",
+     "start": 94,
+     "suffix": " Plain language helps everyone."
+    },
+    {
+     "block_id": "f43f0a17aeda",
+     "end": 54,
+     "prefix": "",
+     "quote": "table (verb) – unless tabling a document in parliament",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Compliant example under ‘Like this’.",
+     "parts": [
+      {
+       "block_id": "5485f42af17a",
+       "end": 52,
+       "prefix": "",
+       "quote": "Email your receipt by 5 pm today to claim the prize.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Violating example under ‘Not this’.",
+     "parts": [
+      {
+       "block_id": "ac855b8ce588",
+       "end": 135,
+       "prefix": "",
+       "quote": "You are required to disclose financial documentation in a timely manner or you will be deemed to be disqualified from this prize offer.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "2410251551e019a9",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "The table supplies candidate substitutions, not context-free replacements. Check that the simpler alternative preserves the intended meaning. The everyday-word instructions elsewhere on the page express the same word-choice preference.",
+    "unit": "sentence",
+    "violation_condition": "A needlessly complicated or formal word or expression is used where a simpler, familiar alternative would preserve the intended meaning."
+   },
+   "when": [
+    "Apply the table's verb-specific recommendations only to the indicated verb uses.",
+    "The recommendation against ‘table’ as a verb excludes tabling a document in parliament.",
+    "Technical or specialist terms may be used when research shows that the audience uses them; plain language remains the default."
+   ],
+   "why": "G-4 consolidates the repeated plain-word preference; G-2 retains the table's contextual qualifications rather than creating a rule for every substitution."
+  },
+  {
+   "anchor": {
+    "block_id": "18a190d506ab",
+    "end": 60,
+    "prefix": "",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "start": 0,
+    "suffix": " Expand all acronyms on their fi"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "7a9bcc2a0728",
+     "end": 175,
+     "prefix": "kly: use the list on this page. ",
+     "quote": "Clarify expressions people might be unfamiliar with.",
+     "start": 123,
+     "suffix": ""
+    },
+    {
+     "block_id": "e4a3b094c16a",
+     "end": 12,
+     "prefix": "",
+     "quote": "Avoid jargon",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "06700441fdd3",
+     "end": 32,
+     "prefix": "",
+     "quote": "Remove jargon, slang and idioms.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5b20d377118a",
+     "end": 93,
+     "prefix": "",
+     "quote": "You can include technical or specialist terms if your research shows your audience uses them.",
+     "start": 0,
+     "suffix": " But start with plain language w"
+    },
+    {
+     "block_id": "2e38f6cba468",
+     "end": 43,
+     "prefix": "",
+     "quote": "explain terms – for example, use a glossary",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Compliant example under ‘Like this’.",
+     "parts": [
+      {
+       "block_id": "3ef78fdeff1f",
+       "end": 59,
+       "prefix": "",
+       "quote": "They changed their decision in response to new information.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual identifies ‘in light of’ as an idiom.",
+     "parts": [
+      {
+       "block_id": "b14cfd9b4f93",
+       "end": 56,
+       "prefix": "",
+       "quote": "They changed their decision in light of new information.",
+       "start": 0,
+       "suffix": " [‘In light of’ is an idiom.]"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Assess unfamiliarity against the intended audience. Explanations may be supplied in the text or a glossary. This combines the page's removal instruction with its explicit alternative of explaining unusual expressions.",
+    "unit": "document",
+    "violation_condition": "Jargon, slang, idioms or unfamiliar expressions are retained without an explanation that makes their meaning accessible to the intended audience."
+   },
+   "when": [
+    "Avoiding the expression or explaining it satisfies the unusual-expression requirement.",
+    "Technical or specialist terms may be retained when research shows that the audience uses them.",
+    "Explain specialist terms that readers still need help understanding, including unavoidable terms with special meanings."
+   ],
+   "why": "G-2 and G-3 keep avoidance, explanation and the audience-research permission together; G-4 absorbs the repeated jargon and clarification instructions."
+  },
+  {
+   "anchor": {
+    "block_id": "4874a921c4d8",
+    "end": 29,
+    "prefix": "",
+    "quote": "Avoid using double negatives.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses a double negative."
+   },
+   "when": [],
+   "why": "This is an independent, text-checkable prohibition, not a restatement of the word-choice rules."
+  },
+  {
+   "anchor": {
+    "block_id": "8bf0be679fa9",
+    "end": 174,
+    "prefix": "3.1.5 Reading level–level AAA. ",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles, (year 7 or between 12 and 14 years old)",
+    "start": 31,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "The page supplies the target reading level but no assessment method. Do not invent a readability formula or infer that all content is required to achieve Level AAA.",
+    "unit": "document",
+    "violation_condition": "Content intended to satisfy the cited WCAG Level AAA reading-level requirement exceeds lower-secondary reading difficulty after proper names and titles are excluded."
+   },
+   "when": [
+    "Apply only when assessing conformance with the cited WCAG Level AAA reading-level requirement.",
+    "Exclude proper names and titles from the reading-level assessment."
+   ],
+   "why": "G-2 keeps the Level AAA condition and exclusions within one reading-level check; this does not create an unconditional AAA requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "16c7a037848d",
+    "end": 80,
+    "prefix": "",
+    "quote": "Use personal pronouns (like ‘we’, ‘you’, ‘us’) when it suits the voice and tone.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "6bdf7e723201",
+     "end": 35,
+     "prefix": "",
+     "quote": "Use ‘we’, ‘you’ and ‘us’ if you can",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Compliant example under ‘Like this’.",
+     "parts": [
+      {
+       "block_id": "127597d4d7aa",
+       "end": 47,
+       "prefix": "",
+       "quote": "We will assess your application within 30 days.",
+       "start": 0,
+       "suffix": " [Active voice makes who is doin"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual presents this as ‘Not this’ for the direct, personal treatment.",
+     "parts": [
+      {
+       "block_id": "f93094149c71",
+       "end": 41,
+       "prefix": "",
+       "quote": "Applications are assessed within 30 days.",
+       "start": 0,
+       "suffix": " [Passive voice makes who is doi"
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Suitability depends on the intended voice and tone, which this page does not define. Do not require a pronoun in every sentence or turn the accompanying discussion of active voice into a separate prohibition.",
+    "unit": "sentence",
+    "violation_condition": "Impersonal wording omits personal pronouns where they would suit the content's intended voice and tone."
+   },
+   "when": [
+    "Apply when personal pronouns suit the intended voice and tone."
+   ],
+   "why": "G-4 selects the more precise body instruction and absorbs the heading; G-2 preserves its voice-and-tone condition."
+  },
+  {
+   "anchor": {
+    "block_id": "b39ab92b89d7",
+    "end": 142,
+    "prefix": "hen it uses inclusive language. ",
+    "quote": "Choose words that respect all people, including their rights and their heritage.",
+    "start": 62,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "5fb0b31850b7",
+     "end": 22,
+     "prefix": "",
+     "quote": "Use inclusive language",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess respectful treatment in context. The instruction does not require every reference to people to mention their rights or heritage.",
+    "unit": "sentence",
+    "violation_condition": "Wording refers to people in a way that disrespects them, their rights or their heritage."
+   },
+   "when": [],
+   "why": "G-4 uses the actionable body sentence rather than making the broad heading a second rule."
+  },
+  {
+   "anchor": {
+    "block_id": "06c22abf3696",
+    "end": 90,
+    "prefix": "",
+    "quote": "Shorten only the words and phrases that are well known or used many times in your content.",
+    "start": 0,
+    "suffix": " Shortened forms can help people"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "febfd9e4604f",
+     "end": 98,
+     "prefix": "",
+     "quote": "Be selective about shortened forms, such as abbreviations, contractions, acronyms and initialisms.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d960cfc2a530",
+     "end": 88,
+     "prefix": "",
+     "quote": "Some shortened forms are better-known than the full form of the term, for example ‘DNA’.",
+     "start": 0,
+     "suffix": " Check a dictionary to see if th"
+    },
+    {
+     "block_id": "ec0d93f1b11c",
+     "end": 153,
+     "prefix": "able in plain language content. ",
+     "quote": "Try to avoid them altogether if they are used only once or twice.",
+     "start": 88,
+     "suffix": ""
+    },
+    {
+     "block_id": "86a53f0a28c6",
+     "end": 103,
+     "prefix": "",
+     "quote": "In content with many specialist terms, reserve shortened forms for the most frequently used terms only.",
+     "start": 0,
+     "suffix": " Spell out other terms in full."
+    },
+    {
+     "block_id": "86a53f0a28c6",
+     "end": 134,
+     "prefix": "ost frequently used terms only. ",
+     "quote": "Spell out other terms in full.",
+     "start": 104,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page explicitly discourages forms used once or twice, but does not quantify ‘many times’, ‘many specialist terms’ or ‘most frequently used’. Preserve those unresolved thresholds rather than inventing counts. The passage lists contractions among shortened forms, although its worked example concerns an organisation initialism.",
+    "unit": "document",
+    "violation_condition": "A shortened form is neither well known nor used many times, is used only once or twice despite the advice to avoid such forms, or abbreviates a less-frequent specialist term in content with many specialist terms."
+   },
+   "when": [
+    "General eligibility is that the word or phrase is well known or used many times in the content.",
+    "Avoid shortened forms used only once or twice.",
+    "In content with many specialist terms, reserve shortened forms for the most frequently used terms and write other terms in full.",
+    "Some shortened forms, such as ‘DNA’, are better known than their full forms."
+   ],
+   "why": "G-2 consolidates the general frequency condition and the stricter specialist-content case; G-4 absorbs the selectivity restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "d1fb3af88c87",
+    "end": 43,
+    "prefix": "",
+    "quote": "Spell them out the first time you use them.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "18a190d506ab",
+     "end": 100,
+     "prefix": "rds, phrases, idioms and so on. ",
+     "quote": "Expand all acronyms on their first use.",
+     "start": 61,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The full organisation name precedes its initialism.",
+     "parts": [
+      {
+       "block_id": "9e154a673af0",
+       "end": 90,
+       "prefix": "",
+       "quote": "The Digital Transformation Agency (DTA) helps government agencies create digital services.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The check is clear for acronyms and initialisms. The surrounding passage also lists abbreviations and contractions as shortened forms, but does not explain how first-use expansion applies to ordinary contractions; that wider scope needs review. The page does not explicitly exempt familiar forms from first-use expansion.",
+    "unit": "document",
+    "violation_condition": "A shortened form first appears without the full words it represents being given."
+   },
+   "when": [
+    "Check the first use of a shortened form in the content."
+   ],
+   "why": "G-4 combines the two first-use expansion instructions; this remains separate from the rule deciding whether a shortened form should be used at all."
+  },
+  {
+   "anchor": {
+    "block_id": "3783e7f2713c",
+    "end": 55,
+    "prefix": "",
+    "quote": "include a short summary without using specialist terms.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "84ecf446aef5",
+     "end": 58,
+     "prefix": "",
+     "quote": "To help people understand specialist or technical content:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Look for a concise account of the content's main points in non-specialist language. The page does not set a numerical limit for ‘short’.",
+    "unit": "document",
+    "violation_condition": "Specialist or technical content lacks a short summary in non-specialist language, or its summary itself uses specialist terms."
+   },
+   "when": [
+    "Apply to specialist or technical content."
+   ],
+   "why": "The list lead-in supplies the condition; the summary is a distinct document component, not another instance of explaining an individual term."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 7228,
+  "output_tokens": 11786,
+  "reasoning_tokens": 6214
+ }
+}

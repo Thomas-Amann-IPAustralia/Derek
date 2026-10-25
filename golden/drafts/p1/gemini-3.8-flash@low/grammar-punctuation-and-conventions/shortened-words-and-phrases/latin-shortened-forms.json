@@ -1,0 +1,522 @@
+{
+ "effort": "low",
+ "input_sha256": "59fad0a877dcfa08e59e2066aee5c019082edb8c052de82e6c80210345368a83",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "001a4f952986",
+    "end": 114,
+    "prefix": "",
+    "quote": "If you think you need to include ‘etc.’ because there’s more to say, include these ideas in your sentence instead.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Writer advice on how to rewrite thoughts rather than a direct textual rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/shortened-words-and-phrases/latin-shortened-forms.md",
+ "page_sha256": "1a28181a8ea99d5354c668edf4461dd9f33a9887405c6c69b1352d9f14f9c9fa",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "001a4f952986",
+    "note": "Writer advice on how to rewrite thoughts rather than a direct textual rule.",
+    "quote": "If you think you need to include ‘etc.’ because there’s more to say, include these ideas in your sentence instead.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a4bcd633e4f3",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "cc92a28cc314",
+      "quote": "Avoid using Latin shortened forms in most content"
+     },
+     {
+      "block_id": "b348339d8b74",
+      "quote": "Use Latin forms only in limited situations – for example:"
+     },
+     {
+      "block_id": "d3ab00543589",
+      "quote": "where there’s limited space, such as in tables"
+     },
+     {
+      "block_id": "61a0c286a3b7",
+      "quote": "in technical and specialist publications that use them."
+     },
+     {
+      "block_id": "5953845bc9fe",
+      "quote": "Use the English words where possible"
+     },
+     {
+      "block_id": "2dcb84e1a55f",
+      "quote": "Rather than using ‘e.g.’ or ‘i.e.’ write the English words out in full. Write ‘for example’ and ‘that is’ instead, particularly in more formal publications."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uses 'for example' instead of 'e.g.'",
+      "parts": [
+       {
+        "block_id": "5507560ec38f",
+        "quote": "They found some aspects of grammar confusing – for example, the different types of pronouns."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'that is' instead of 'i.e.'",
+      "parts": [
+       {
+        "block_id": "0169977b788c",
+        "quote": "The department has a major problem with its website – that is, users find pages are very slow to load."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'e.g.' instead of English equivalent in general text.",
+      "parts": [
+       {
+        "block_id": "a493d70e031e",
+        "quote": "They found some aspects of grammar confusing, e.g. the different types of pronouns."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Uses 'i.e.' instead of English equivalent in general text.",
+      "parts": [
+       {
+        "block_id": "048ade20a2d5",
+        "quote": "The department has a major problem with its website, i.e. users find pages very slow to load."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use English rather than Latin shortened forms, except in some cases.",
+    "specification": "Prefer English equivalents to Latin abbreviations in running text, reserving Latin abbreviations primarily for tables, citations, or technical/specialist contexts.",
+    "unit": "phrase",
+    "violation_condition": "use of Latin shortened forms (such as e.g., i.e., etc., c., cf., viz.) outside of permitted contexts like tables or specialist publications",
+    "when": [
+     "Latin forms may be used where there is limited space, such as in tables.",
+     "Latin forms may be used in technical and specialist publications that use them."
+    ],
+    "why": "G-1, G-2, G-4: The general principle of avoiding Latin abbreviations is restated across headings and body text; exceptions for tables and specialist publications are conditions under When."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "05462ef9218f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c26d4640a61c",
+      "quote": "Unlike other shortened forms, some Latin shortened forms have full stops."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "The terms ‘i.e.’ and ‘e.g.’ need full stops after each letter.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "writing 'ie' or 'eg' (or other variants lacking internal or terminal full stops) when the Latin forms 'i.e.' or 'e.g.' are used",
+    "when": [
+     "Applies when 'i.e.' or 'e.g.' is used."
+    ],
+    "why": "G-2, G-4: Concrete punctuation rule for Latin abbreviations that do use full stops."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6e9366f8d8bc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Don’t follow ‘e.g.’ or ‘i.e.’ with a comma, regardless of whether you would use a comma in the sentence.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a comma immediately following 'e.g.' or 'i.e.' (e.g. 'e.g.,' or 'i.e.,')",
+    "when": [],
+    "why": "Clear, standalone punctuation rule specifically barring trailing commas after 'e.g.' and 'i.e.'"
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d6b387a5dbea",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d6b387a5dbea",
+      "quote": "Use of ‘etc.’ is redundant in a list introduced by ‘for example’, ‘such as’ or ‘including’. These expressions show that the list is incomplete."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "List introduced by 'for example' without 'etc.'",
+      "parts": [
+       {
+        "block_id": "29ffc27473a4",
+        "quote": "This funding is intended for upgrading roads in Gold Coast and Hinterland urban centres (for example, Surfers Paradise and Southport)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Exhaustive list without 'etc.'",
+      "parts": [
+       {
+        "block_id": "bf63c4adf8d7",
+        "quote": "This funding is for upgrading roads in the Gold Coast and Hinterland urban centres (Surfers Paradise, Southport, Upper Coomera and Robina)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Includes 'etc.' at the end of a list introduced by 'for example'.",
+      "parts": [
+       {
+        "block_id": "fc407ab955b5",
+        "quote": "This funding is for upgrading roads in Gold Coast and Hinterland urban centres (for example, Surfers Paradise, Southport etc.)."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use the shortened form for et cetera.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of 'etc.' or '&c.', especially when redundant in lists introduced by 'for example', 'such as', or 'including'",
+    "when": [
+     "Particularly prohibited in lists introduced by expressions showing incompleteness ('for example', 'such as', 'including')."
+    ],
+    "why": "Specific imperative prohibition against 'etc.', supported by dedicated examples."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "a4bcd633e4f3",
+    "end": 68,
+    "prefix": "",
+    "quote": "Use English rather than Latin shortened forms, except in some cases.",
+    "start": 0,
+    "suffix": " People will prefer the English "
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "cc92a28cc314",
+     "end": 49,
+     "prefix": "",
+     "quote": "Avoid using Latin shortened forms in most content",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b348339d8b74",
+     "end": 57,
+     "prefix": "",
+     "quote": "Use Latin forms only in limited situations – for example:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d3ab00543589",
+     "end": 46,
+     "prefix": "",
+     "quote": "where there’s limited space, such as in tables",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "61a0c286a3b7",
+     "end": 55,
+     "prefix": "",
+     "quote": "in technical and specialist publications that use them.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5953845bc9fe",
+     "end": 36,
+     "prefix": "",
+     "quote": "Use the English words where possible",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2dcb84e1a55f",
+     "end": 156,
+     "prefix": "",
+     "quote": "Rather than using ‘e.g.’ or ‘i.e.’ write the English words out in full. Write ‘for example’ and ‘that is’ instead, particularly in more formal publications.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses 'for example' instead of 'e.g.'",
+     "parts": [
+      {
+       "block_id": "5507560ec38f",
+       "end": 92,
+       "prefix": "",
+       "quote": "They found some aspects of grammar confusing – for example, the different types of pronouns.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses 'that is' instead of 'i.e.'",
+     "parts": [
+      {
+       "block_id": "0169977b788c",
+       "end": 102,
+       "prefix": "",
+       "quote": "The department has a major problem with its website – that is, users find pages are very slow to load.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses 'e.g.' instead of English equivalent in general text.",
+     "parts": [
+      {
+       "block_id": "a493d70e031e",
+       "end": 83,
+       "prefix": "",
+       "quote": "They found some aspects of grammar confusing, e.g. the different types of pronouns.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses 'i.e.' instead of English equivalent in general text.",
+     "parts": [
+      {
+       "block_id": "048ade20a2d5",
+       "end": 93,
+       "prefix": "",
+       "quote": "The department has a major problem with its website, i.e. users find pages very slow to load.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Prefer English equivalents to Latin abbreviations in running text, reserving Latin abbreviations primarily for tables, citations, or technical/specialist contexts.",
+    "unit": "phrase",
+    "violation_condition": "use of Latin shortened forms (such as e.g., i.e., etc., c., cf., viz.) outside of permitted contexts like tables or specialist publications"
+   },
+   "when": [
+    "Latin forms may be used where there is limited space, such as in tables.",
+    "Latin forms may be used in technical and specialist publications that use them."
+   ],
+   "why": "G-1, G-2, G-4: The general principle of avoiding Latin abbreviations is restated across headings and body text; exceptions for tables and specialist publications are conditions under When."
+  },
+  {
+   "anchor": {
+    "block_id": "05462ef9218f",
+    "end": 62,
+    "prefix": "",
+    "quote": "The terms ‘i.e.’ and ‘e.g.’ need full stops after each letter.",
+    "start": 0,
+    "suffix": " This helps screen readers annou"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c26d4640a61c",
+     "end": 73,
+     "prefix": "",
+     "quote": "Unlike other shortened forms, some Latin shortened forms have full stops.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "writing 'ie' or 'eg' (or other variants lacking internal or terminal full stops) when the Latin forms 'i.e.' or 'e.g.' are used"
+   },
+   "when": [
+    "Applies when 'i.e.' or 'e.g.' is used."
+   ],
+   "why": "G-2, G-4: Concrete punctuation rule for Latin abbreviations that do use full stops."
+  },
+  {
+   "anchor": {
+    "block_id": "6e9366f8d8bc",
+    "end": 104,
+    "prefix": "",
+    "quote": "Don’t follow ‘e.g.’ or ‘i.e.’ with a comma, regardless of whether you would use a comma in the sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a comma immediately following 'e.g.' or 'i.e.' (e.g. 'e.g.,' or 'i.e.,')"
+   },
+   "when": [],
+   "why": "Clear, standalone punctuation rule specifically barring trailing commas after 'e.g.' and 'i.e.'"
+  },
+  {
+   "anchor": {
+    "block_id": "d6b387a5dbea",
+    "end": 43,
+    "prefix": "",
+    "quote": "Don’t use the shortened form for et cetera.",
+    "start": 0,
+    "suffix": " Use of ‘etc.’ is redundant in a"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d6b387a5dbea",
+     "end": 187,
+     "prefix": "e shortened form for et cetera. ",
+     "quote": "Use of ‘etc.’ is redundant in a list introduced by ‘for example’, ‘such as’ or ‘including’. These expressions show that the list is incomplete.",
+     "start": 44,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "List introduced by 'for example' without 'etc.'",
+     "parts": [
+      {
+       "block_id": "29ffc27473a4",
+       "end": 134,
+       "prefix": "",
+       "quote": "This funding is intended for upgrading roads in Gold Coast and Hinterland urban centres (for example, Surfers Paradise and Southport).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Exhaustive list without 'etc.'",
+     "parts": [
+      {
+       "block_id": "bf63c4adf8d7",
+       "end": 139,
+       "prefix": "",
+       "quote": "This funding is for upgrading roads in the Gold Coast and Hinterland urban centres (Surfers Paradise, Southport, Upper Coomera and Robina).",
+       "start": 0,
+       "suffix": " [All the places are listed, so "
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Includes 'etc.' at the end of a list introduced by 'for example'.",
+     "parts": [
+      {
+       "block_id": "fc407ab955b5",
+       "end": 127,
+       "prefix": "",
+       "quote": "This funding is for upgrading roads in Gold Coast and Hinterland urban centres (for example, Surfers Paradise, Southport etc.).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of 'etc.' or '&c.', especially when redundant in lists introduced by 'for example', 'such as', or 'including'"
+   },
+   "when": [
+    "Particularly prohibited in lists introduced by expressions showing incompleteness ('for example', 'such as', 'including')."
+   ],
+   "why": "Specific imperative prohibition against 'etc.', supported by dedicated examples."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4540,
+  "output_tokens": 2070,
+  "reasoning_tokens": 0
+ }
+}

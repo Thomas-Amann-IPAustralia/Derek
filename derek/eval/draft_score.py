@@ -105,6 +105,52 @@ def _overlap(a: tuple[str, int, int], b: tuple[str, int, int]) -> int:
     return max(0, min(a[2], b[2]) - max(a[1], b[1]))
 
 
+_LABELS = {"example", "examples", "correct", "incorrect", "write this", "not this"}
+
+
+def _directly_under(heading, body) -> bool:
+    """``body`` is prose under ``heading`` and under no other heading but a label.
+
+    The manual states most rules twice: as a heading, and again as the first
+    sentence beneath it. A human or a model may mark either, and either is the
+    rule, so the two count as one.
+    """
+    if heading.kind != "heading" or body.kind == "heading":
+        return False
+    hp, bp = tuple(heading.heading_path), tuple(body.heading_path)
+    if bp == hp:
+        return True
+    return len(bp) == len(hp) + 1 and bp[:-1] == hp and bp[-1].strip().lower() in _LABELS
+
+
+def pair_score(by_id: dict, a: tuple, b: tuple) -> float:
+    """How strongly two marked rules are the same rule; 0 when they are not.
+
+    Each side is ``((block_id, start, end), quote, example_keys)``. In order of
+    strength: characters in common in one block; a heading and the sentence
+    directly under it; the same manual example attached to both; the same
+    section with most of the same words. One function, so the scorer and the
+    two-model consensus (ADR-027) agree on what "the same rule" means.
+    """
+    (ka, qa, ea), (kb, qb, eb) = a, b
+    ov = _overlap(ka, kb)
+    if ov:
+        return 3.0 + ov
+    ba, bb = by_id.get(ka[0]), by_id.get(kb[0])
+    if ba is None or bb is None:
+        return 0.0
+    wa, wb = _words(qa), _words(qb)
+    jac = len(wa & wb) / len(wa | wb) if wa | wb else 0.0
+    if _directly_under(ba, bb) or _directly_under(bb, ba):
+        return 2.0 + jac
+    shared = set(ea) & set(eb)
+    if shared:
+        return 1.5 + min(len(shared), 49) / 100
+    if _same_section(ba.heading_path, bb.heading_path) and jac >= 0.5:
+        return jac
+    return 0.0
+
+
 def score_page(rel: str, draft: dict, golden, blind: bool) -> PageScore:
     text = NormalisedPage(rel, (PAGES / rel).read_text(encoding="utf-8")).text
     blocks = parse_blocks(rel, text)
@@ -125,37 +171,38 @@ def score_page(rel: str, draft: dict, golden, blind: bool) -> PageScore:
     d_rules = draft.get("rules", [])
     s.golden, s.drafted = len(g_rules), len(d_rules)
 
-    # One-to-one matching: character overlap in the same block first, then a
-    # rule marked on the same heading's body with most of the same words (the
-    # "right place, other extent" case, which is agreement about the rule).
-    free = set(range(len(d_rules)))
-    pairs = []
-    for g in g_rules:
-        gk = (g.block.id, g.span.start, g.span.end)
-        best, best_score = None, 0.0
-        for i in free:
-            a = d_rules[i]["anchor"]
-            ov = _overlap(gk, (a["block_id"], a["start"], a["end"]))
-            if ov:
-                score = 1.0 + ov
-            else:
-                db = by_id.get(a["block_id"])
-                if db is None or not _same_section(db.heading_path, g.block.heading_path):
-                    continue
-                gw, dw = _words(g.text), _words(a["quote"])
-                j = len(gw & dw) / len(gw | dw) if gw | dw else 0.0
-                if j < 0.5:
-                    continue
-                score = j
-            if score > best_score:
-                best, best_score = i, score
-        if best is None:
-            s.missed.append(g.text[:120])
+    # One-to-one matching, strongest pairs first (``pair_score``), so a weak
+    # match never takes a rule a strong one needed.
+    kids_by_rule: dict[str, set] = {}
+    for r in resolved.values():
+        if r.span.kind in EXAMPLE_KINDS:
+            kids_by_rule.setdefault(r.span.of, set()).add((r.block.id, r.span.start, r.span.end))
+    scored = []
+    for gi, g in enumerate(g_rules):
+        ga = ((g.block.id, g.span.start, g.span.end), g.text,
+              kids_by_rule.get(g.span.span_id, set()))
+        for di, d in enumerate(d_rules):
+            a = d["anchor"]
+            da = ((a["block_id"], a["start"], a["end"]), a["quote"],
+                  {(p["block_id"], p["start"], p["end"])
+                   for ex in d.get("examples", []) for p in ex["parts"]})
+            sc = pair_score(by_id, ga, da)
+            if sc:
+                scored.append((sc, gi, di))
+    scored.sort(key=lambda t: (-t[0], t[1], t[2]))
+    used_g, free, pairs = set(), set(range(len(d_rules))), []
+    for _, gi, di in scored:
+        if gi in used_g or di not in free:
             continue
-        free.discard(best)
-        pairs.append((g, d_rules[best]))
-        a = d_rules[best]["anchor"]
-        if gk == (a["block_id"], a["start"], a["end"]):
+        used_g.add(gi)
+        free.discard(di)
+        pairs.append((g_rules[gi], d_rules[di]))
+    for gi, g in enumerate(g_rules):
+        if gi not in used_g:
+            s.missed.append(g.text[:120])
+    for g, d in pairs:
+        a = d["anchor"]
+        if (g.block.id, g.span.start, g.span.end) == (a["block_id"], a["start"], a["end"]):
             s.exact_extent += 1
     s.matched = len(pairs)
     s.extra = [d_rules[i]["anchor"]["quote"][:120] for i in sorted(free)]

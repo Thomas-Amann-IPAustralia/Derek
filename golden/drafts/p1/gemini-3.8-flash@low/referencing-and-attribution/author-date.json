@@ -1,0 +1,2123 @@
+{
+ "effort": "low",
+ "input_sha256": "0196b4e8f471e632c261d9f25a408d0f4d7a72f505ea1bf24d7448e6324e29bd",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "53495fbc1f4a",
+    "end": 60,
+    "prefix": "",
+    "quote": "Include author and date in text, and list full details later",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level summary heading grouping in-text citations and reference list sections (G-1).",
+   "reason": "section",
+   "seed_uid": "03d05e3aeed088a0"
+  },
+  {
+   "anchor": {
+    "block_id": "9c4164ec4866",
+    "end": 17,
+    "prefix": "",
+    "quote": "In-text citations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping child rules for in-text citation formatting (G-1).",
+   "reason": "section",
+   "seed_uid": "1217ed8b4667fd86"
+  },
+  {
+   "anchor": {
+    "block_id": "4a93026924d7",
+    "end": 42,
+    "prefix": "",
+    "quote": "Shortened forms and abbreviations of names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping rules on shortened forms (G-1).",
+   "reason": "section",
+   "seed_uid": "c8aa1006a93585f7"
+  },
+  {
+   "anchor": {
+    "block_id": "6b0ee1f3099f",
+    "end": 15,
+    "prefix": "",
+    "quote": "Reference lists",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping reference list rules (G-1).",
+   "reason": "section",
+   "seed_uid": "b6b8edb995b6cac4"
+  },
+  {
+   "anchor": {
+    "block_id": "00c6137d88e0",
+    "end": 51,
+    "prefix": "",
+    "quote": "Order the elements of each item in a reference list",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading introducing reference item components and ordering (G-1).",
+   "reason": "section",
+   "seed_uid": "3c8015791ffd56c8"
+  },
+  {
+   "anchor": {
+    "block_id": "793a0a6ea95c",
+    "end": 21,
+    "prefix": "",
+    "quote": "Personal author names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading for author name formatting (G-1).",
+   "reason": "section",
+   "seed_uid": "55718fe117167b30"
+  },
+  {
+   "anchor": {
+    "block_id": "aacc53c2977f",
+    "end": 26,
+    "prefix": "",
+    "quote": "Works by 2 or more authors",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "cfa852f712957ea1"
+  },
+  {
+   "anchor": {
+    "block_id": "23f6eed3b178",
+    "end": 57,
+    "prefix": "",
+    "quote": "Shortened forms and abbreviations of organisations’ names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "0e0456abf187714c"
+  },
+  {
+   "anchor": {
+    "block_id": "86ea460ef321",
+    "end": 44,
+    "prefix": "",
+    "quote": "Works that need the full date of publication",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading; the rule is stated in the body sentence (G-1, G-4).",
+   "reason": "section",
+   "seed_uid": "5a284d5f040d752c"
+  },
+  {
+   "anchor": {
+    "block_id": "2466ef02b989",
+    "end": 43,
+    "prefix": "",
+    "quote": "Alphabetise the reference items in the list",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restatement of basic alphabetical reference ordering covered under general reference list construction (G-4).",
+   "reason": "restatement",
+   "seed_uid": "0e4ca79c5224cec2"
+  },
+  {
+   "anchor": {
+    "block_id": "deb244e7024c",
+    "end": 50,
+    "prefix": "",
+    "quote": "Specify details for government sources and reports",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping source-specific citation templates (G-1).",
+   "reason": "section",
+   "seed_uid": "790829ab2710dfb0"
+  },
+  {
+   "anchor": {
+    "block_id": "cc9b63f3fd32",
+    "end": 41,
+    "prefix": "",
+    "quote": "Report by an Australian government agency",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Template section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "42b351a46fc1c3dd"
+  },
+  {
+   "anchor": {
+    "block_id": "4dd4e57549ab",
+    "end": 31,
+    "prefix": "",
+    "quote": "Report that is part of a series",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Template section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "858435537afdf6eb"
+  },
+  {
+   "anchor": {
+    "block_id": "87baa1e1ab56",
+    "end": 41,
+    "prefix": "",
+    "quote": "Report to an Australian government agency",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Template section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "59957913e02621a5"
+  },
+  {
+   "anchor": {
+    "block_id": "ec71f5204e2d",
+    "end": 29,
+    "prefix": "",
+    "quote": "Report known by a short title",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "d4bfeded4dcc5455"
+  },
+  {
+   "anchor": {
+    "block_id": "a938066a619d",
+    "end": 39,
+    "prefix": "",
+    "quote": "Sequence the elements of online sources",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping rules and templates for online sources (G-1).",
+   "reason": "section",
+   "seed_uid": "cae7084059966041"
+  },
+  {
+   "anchor": {
+    "block_id": "9865b0097ec0",
+    "end": 35,
+    "prefix": "",
+    "quote": "Post or article with authors listed",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Template section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "c7c79de2bdb64c8e"
+  },
+  {
+   "anchor": {
+    "block_id": "d31f53e24709",
+    "end": 37,
+    "prefix": "",
+    "quote": "Post or article with no author listed",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Template section heading (G-1).",
+   "reason": "section",
+   "seed_uid": "a303517c2fd30863"
+  },
+  {
+   "anchor": {
+    "block_id": "2d354aee84b4",
+    "end": 69,
+    "prefix": "",
+    "quote": "Give particulars for books, formal publications and printed documents",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping book citation templates (G-1).",
+   "reason": "section",
+   "seed_uid": "16d824829222b20d"
+  },
+  {
+   "anchor": {
+    "block_id": "db6051e24001",
+    "end": 30,
+    "prefix": "",
+    "quote": "Place of publication of a book",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading introducing permissions/advice regarding place of publication (G-1, G-3).",
+   "reason": "section",
+   "seed_uid": "6f3fbd95953a386e"
+  },
+  {
+   "anchor": {
+    "block_id": "fa603b384764",
+    "end": 108,
+    "prefix": "",
+    "quote": "If the place of publication doesn’t add useful information for the user, you can omit it from your citation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Permission to omit publication location (G-3).",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e0a262ccff63",
+    "end": 94,
+    "prefix": "",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Advice/action directed at the writer rather than a property of the text (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "referencing-and-attribution/author-date.md",
+ "page_sha256": "54354a520d78dc2ad09fa740ddb0b6fefd4c3506c6d6457f60baf0ebe82544f8",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "53495fbc1f4a",
+    "note": "High-level summary heading grouping in-text citations and reference list sections (G-1).",
+    "quote": "Include author and date in text, and list full details later",
+    "reason": "section"
+   },
+   {
+    "block_id": "9c4164ec4866",
+    "note": "Section heading grouping child rules for in-text citation formatting (G-1).",
+    "quote": "In-text citations",
+    "reason": "section"
+   },
+   {
+    "block_id": "4a93026924d7",
+    "note": "Section heading grouping rules on shortened forms (G-1).",
+    "quote": "Shortened forms and abbreviations of names",
+    "reason": "section"
+   },
+   {
+    "block_id": "6b0ee1f3099f",
+    "note": "Section heading grouping reference list rules (G-1).",
+    "quote": "Reference lists",
+    "reason": "section"
+   },
+   {
+    "block_id": "00c6137d88e0",
+    "note": "Section heading introducing reference item components and ordering (G-1).",
+    "quote": "Order the elements of each item in a reference list",
+    "reason": "section"
+   },
+   {
+    "block_id": "793a0a6ea95c",
+    "note": "Section heading for author name formatting (G-1).",
+    "quote": "Personal author names",
+    "reason": "section"
+   },
+   {
+    "block_id": "aacc53c2977f",
+    "note": "Section heading (G-1).",
+    "quote": "Works by 2 or more authors",
+    "reason": "section"
+   },
+   {
+    "block_id": "23f6eed3b178",
+    "note": "Section heading (G-1).",
+    "quote": "Shortened forms and abbreviations of organisations’ names",
+    "reason": "section"
+   },
+   {
+    "block_id": "86ea460ef321",
+    "note": "Section heading; the rule is stated in the body sentence (G-1, G-4).",
+    "quote": "Works that need the full date of publication",
+    "reason": "section"
+   },
+   {
+    "block_id": "2466ef02b989",
+    "note": "Restatement of basic alphabetical reference ordering covered under general reference list construction (G-4).",
+    "quote": "Alphabetise the reference items in the list",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "deb244e7024c",
+    "note": "Section heading grouping source-specific citation templates (G-1).",
+    "quote": "Specify details for government sources and reports",
+    "reason": "section"
+   },
+   {
+    "block_id": "cc9b63f3fd32",
+    "note": "Template section heading (G-1).",
+    "quote": "Report by an Australian government agency",
+    "reason": "section"
+   },
+   {
+    "block_id": "4dd4e57549ab",
+    "note": "Template section heading (G-1).",
+    "quote": "Report that is part of a series",
+    "reason": "section"
+   },
+   {
+    "block_id": "87baa1e1ab56",
+    "note": "Template section heading (G-1).",
+    "quote": "Report to an Australian government agency",
+    "reason": "section"
+   },
+   {
+    "block_id": "ec71f5204e2d",
+    "note": "Section heading (G-1).",
+    "quote": "Report known by a short title",
+    "reason": "section"
+   },
+   {
+    "block_id": "a938066a619d",
+    "note": "Section heading grouping rules and templates for online sources (G-1).",
+    "quote": "Sequence the elements of online sources",
+    "reason": "section"
+   },
+   {
+    "block_id": "9865b0097ec0",
+    "note": "Template section heading (G-1).",
+    "quote": "Post or article with authors listed",
+    "reason": "section"
+   },
+   {
+    "block_id": "d31f53e24709",
+    "note": "Template section heading (G-1).",
+    "quote": "Post or article with no author listed",
+    "reason": "section"
+   },
+   {
+    "block_id": "2d354aee84b4",
+    "note": "Section heading grouping book citation templates (G-1).",
+    "quote": "Give particulars for books, formal publications and printed documents",
+    "reason": "section"
+   },
+   {
+    "block_id": "db6051e24001",
+    "note": "Section heading introducing permissions/advice regarding place of publication (G-1, G-3).",
+    "quote": "Place of publication of a book",
+    "reason": "section"
+   },
+   {
+    "block_id": "fa603b384764",
+    "note": "Permission to omit publication location (G-3).",
+    "quote": "If the place of publication doesn’t add useful information for the user, you can omit it from your citation.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "e0a262ccff63",
+    "note": "Advice/action directed at the writer rather than a property of the text (G-5).",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "035e4091d814",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "035e4091d814",
+      "quote": "Always include the date in parentheses."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Author and date separated by space without comma.",
+      "parts": [
+       {
+        "block_id": "599ef6eb0e9f",
+        "quote": "Other results were similar (Jones 2017)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t separate the name and date with a comma.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an in-text citation that places a comma between the author name and the publication date",
+    "when": [
+     "applies to author-date in-text citations inside or outside parentheses"
+    ],
+    "why": "G-2 (parenthesis rule and comma prohibition govern basic in-text author-date citation syntax)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1253d2c120d3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1253d2c120d3",
+      "quote": "Don’t use italics for ‘et al.’."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Correct use of 'et al.' without italics.",
+      "parts": [
+       {
+        "block_id": "37f1199afcdf",
+        "quote": "Other researchers reported similar results (Watson et al. 2017)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Listing all 4 authors instead of 'et al.'.",
+      "parts": [
+       {
+        "block_id": "08fbcd133480",
+        "quote": "Other researchers reported similar results (Watson, Black, Jones and Abaza 2017)."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "For a work by 3 or more authors, use the first author’s name plus the Latin term ‘et al.’ (meaning ‘and others’).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an in-text citation for a work by 3 or more authors listing all authors instead of using 'et al.', or italicising 'et al.'",
+    "when": [
+     "when citing a work by 3 or more authors in text"
+    ],
+    "why": "G-2 (covers formatting and usage of 'et al.' for works with 3+ authors in text)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "96bd5b22e74c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uses 'and' inside parentheses.",
+      "parts": [
+       {
+        "block_id": "40c033fc8da0",
+        "quote": "Other researchers reported similar results (Black and Jones 2017)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses '&' inside parentheses.",
+      "parts": [
+       {
+        "block_id": "817d056eddec",
+        "quote": "Other researchers reported similar results (Black & Jones 2017)."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Use the word ‘and’ between names outside and inside parentheses. Don’t use the ampersand (‘&’).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an ampersand ('&') used between author names in an in-text citation instead of the word 'and'",
+    "when": [
+     "applies to in-text citations with multiple authors, both inside and outside parentheses"
+    ],
+    "why": "Specific, actionable mechanical rule prohibiting ampersand between author names."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "90d4bdf73ff5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Direct quote with colon separating year and page numbers.",
+      "parts": [
+       {
+        "block_id": "c0ea8e4efff7",
+        "quote": "‘These were identical results’ (White and Jones 2019:23–24)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Include page numbers in the in-text citation only when the work has page numbers and you’re including a direct quotation. Use a colon between the date and page numbers.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "page numbers included without a direct quotation, or page numbers separated from the date by punctuation other than a colon (such as a comma or space)",
+    "when": [
+     "when citing page numbers in an in-text citation"
+    ],
+    "why": "G-2 (combines precondition for page numbers with colon formatting requirement)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "34b17e688314",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1a24c3c858ee",
+      "quote": "Arrange the works alphabetically by author name."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Works separated by semicolons and ordered alphabetically.",
+      "parts": [
+       {
+        "block_id": "b3a8a1d9886a",
+        "quote": "Other researchers reported similar results (Abaza 2019; Pratt 2013; White and Jones 2017)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "To cite multiple works in the same in-text citation, use semicolons between each work.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple works cited in the same parentheses without semicolon delimiters, or not ordered alphabetically by author name",
+    "when": [
+     "when multiple works are cited in a single in-text parenthetical citation"
+    ],
+    "why": "G-2 (semicolon separation and alphabetical ordering of multiple works in one citation)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4da557ca289a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5d2b45d72faf",
+      "quote": "Arrange the dates chronologically, starting with the earliest date."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Chronological dates separated by commas.",
+      "parts": [
+       {
+        "block_id": "f00cfcb8a775",
+        "quote": "Published analyses of registration data show a steady increase in the size of private vehicles on Australian roads (Vehicular Australia 2021, 2023, 2025)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "To cite multiple works published by the same author in different years, write the author’s name. Follow the name with each date of publication separated by a comma.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple publication dates for the same author not separated by commas or not ordered chronologically starting with the earliest date",
+    "when": [
+     "when citing multiple works by the same author in different years in one in-text citation"
+    ],
+    "why": "G-2 (covers comma separation and chronological ordering for same-author multi-year citations)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "542a7d23c6c5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e45aa0d5aae6",
+      "quote": "To cite multiple works by the same author in the same year, put a letter after the date of each citation. Put an ‘a’ after the date of the first work you cite and a ‘b’ after the date of the second one, and so on."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Dates have 'a' and 'b' suffixes.",
+      "parts": [
+       {
+        "block_id": "ee9ec98aa86b",
+        "quote": "She has written extensively on Australia – New Zealand relations (Dobell 2018a, 2018b)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "To cite multiple works by the same author in the same year, put a letter after the date of each citation. Put an ‘a’ after the date of the first work you cite, then a ‘b’ after the date of the second, and so on.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple works by the same author in the same year cited without distinguishing letters ('a', 'b', etc.) attached to the year",
+    "when": [
+     "when citing multiple works published by the same author in the same year"
+    ],
+    "why": "G-4 (applies to both in-text citation and reference list entry)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "912ea51b666d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "18f3b0ccb64d",
+      "quote": "For works without a date, write ‘n.d.’ instead of the date of publication."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Uses 'n.d.' in citation.",
+      "parts": [
+       {
+        "block_id": "1db7254362e7",
+        "quote": "Other researchers reported similar results (White and Jones n.d.)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "For works without a date, write ‘n.d.’ (for ‘no date’) instead of the year of publication.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a work without a publication date referenced without using 'n.d.' in place of the year",
+    "when": [
+     "when the work being cited or listed has no date of publication"
+    ],
+    "why": "G-4 (identical rule stated under in-text citations and reference lists)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "67acc4140f96",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Use the heading ‘References’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a reference list heading using text other than 'References' (such as 'Bibliography' or 'Works Cited')",
+    "when": [
+     "applies to the heading of an author-date reference list"
+    ],
+    "why": "Prescriptive style requirement for reference list heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8c4c5680be05",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "54a7ad30eb27",
+      "quote": "Don’t separate the family name from the initials with a comma. Don’t separate initials with full stops."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Family name followed by initials without comma or full stops.",
+      "parts": [
+       {
+        "block_id": "63c92bd526be",
+        "quote": "Smith AB"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Comma separating family name and initials.",
+      "parts": [
+       {
+        "block_id": "a2b15938d2a6",
+        "quote": "Smith, AB"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Full stops separating initials.",
+      "parts": [
+       {
+        "block_id": "564dbe5211cd",
+        "quote": "Smith A.B."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Write the family name of the authors, editors or translators before writing their initials.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an author, editor or translator name in a reference list where the given initials precede the family name, or where initials have full stops, or where a comma separates the family name from initials",
+    "when": [
+     "when formatting personal author, editor, or translator names in a reference list"
+    ],
+    "why": "G-2 (covers name order and punctuation rules for author names in reference lists)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1a75b014465d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "All authors listed in reference entry.",
+      "parts": [
+       {
+        "block_id": "99b1395db89a",
+        "quote": "Jackson D, Li X and Chandran P (2018) ‘Safety and equity’, Psychological Science Australia, 2(4):223–240."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Using 'et al.' in reference list entry.",
+      "parts": [
+       {
+        "block_id": "502253b0ec10",
+        "quote": "Jackson D et al. (2018) ‘Safety and equity’, Psychological Science Australia, 2(4):223–240."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Unlike for in-text citations, include all of the authors’ names in a reference list.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "use of 'et al.' in a reference list entry instead of listing all authors' names",
+    "when": [
+     "when listing works with multiple authors in a reference list"
+    ],
+    "why": "Direct contrast rule with clear compliant and violating examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "76772c08f201",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Full date (24 May 2018) included.",
+      "parts": [
+       {
+        "block_id": "84554ba52076",
+        "quote": "Richardson A (24 May 2018) ‘Australia imports almost all of its oil, and there are pitfalls all over the globe’, The Conversation, accessed 29 January 2020."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Only the year is provided.",
+      "parts": [
+       {
+        "block_id": "87082874de3e",
+        "quote": "Richardson A (2018) ‘Australia imports almost all of its oil, and there are pitfalls all over the globe’, The Conversation, accessed 29 January 2020."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "For works like newspaper articles and social media posts, include the full date – not just the year – in the reference list.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a reference list entry for a newspaper article, blog post, or social media post containing only the year instead of the full date",
+    "when": [
+     "when referencing works like newspaper articles, magazine articles, blog posts, and social media posts"
+    ],
+    "why": "Clear rule with Write this / Not this examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "37b534dfed7e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3e10e10909c5",
+      "quote": "Don't use italics if the reference is:"
+     },
+     {
+      "block_id": "fb73dc127277",
+      "quote": "If it’s part of a publication, use single quotation marks around the title and use italics for the name of the series, book or periodical."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Complete published work in italics.",
+      "parts": [
+       {
+        "block_id": "daf4da835671",
+        "quote": "Mackenzie J (2011) The editor’s companion, 2nd edn, Cambridge University Press, Melbourne."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Use italics for the formal title of a complete published work.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the formal title of a complete published work not italicised, or italics used for part of a publication (such as an article or chapter)",
+    "when": [
+     "in reference lists"
+    ],
+    "why": "G-2 (covers title typography: complete works vs parts of publications)."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "61da6d918e5e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "52b2cf39a8a9",
+      "quote": "You don’t need to include the URL in references in digital content."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Unless the source is behind a paywall, hyperlink the title of works available online.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the title of an online work not hyperlinked in digital content, when not behind a paywall",
+    "when": [
+     "when citing online sources in digital content, unless behind a paywall"
+    ],
+    "why": "G-2 (hyperlink rule with digital URL omission permission)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fa4c89a9c2ce",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ae8080513683",
+      "quote": "Always include the date you accessed the site at the end of the reference."
+     },
+     {
+      "block_id": "21d37fef2255",
+      "quote": "Always include the date you accessed the site at the end of the reference."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Include the date you accessed the work.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a citation for an online work that omits the accessed date",
+    "when": [
+     "when referencing online sources"
+    ],
+    "why": "Mandatory element for online citations repeated across several sections."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "da50d94bf1f4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Includes doi: at the end.",
+      "parts": [
+       {
+        "block_id": "5fd8e912e74d",
+        "quote": "Kelleher T (2009) ‘Conversational voice’,Journal of Communication, 59(1):172–188, doi:10.1111/j.1460-2466.2008.01410.x."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "If the document has a DOI, include it in the citation in the reference list. Put it at the end of the citation and include the shortened form ‘doi’ in lower case before it.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a reference list citation with a DOI that fails to place it at the end or does not prefix it with lower case 'doi:'",
+    "when": [
+     "when a referenced work has a Digital Object Identifier (DOI)"
+    ],
+    "why": "Specific, actionable syntax rule for formatting DOIs."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "22403bcbe566",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Follows 2(4):223–240 format.",
+      "parts": [
+       {
+        "block_id": "1aefc1dc0867",
+        "quote": "Jackson D, Li X and Chandran P (2018) ‘Safety and equity’, Psychological Science Australia, 2(4):223–240."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "If a citation has a volume number, an issue number and page numbers, follow the format: volume(issue):page–page.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a journal citation with volume, issue, and page numbers formatted other than 'volume(issue):page–page'",
+    "when": [
+     "when citing journal articles or periodicals with volume, issue, and page numbers"
+    ],
+    "why": "Explicit syntax specification for journal volumes, issues, and pages."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5a69e2901990",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "In-text citation for personal communication.",
+      "parts": [
+       {
+        "block_id": "35eaa7d753bc",
+        "quote": "Susannah Bishop (personal communication, 5 February 2020) wrote ..."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "For emails and personal communication, only include an in-text citation. Don’t include a citation in the reference list.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an email or personal communication listed in the reference list",
+    "when": [
+     "when citing emails and personal communications"
+    ],
+    "why": "Negative constraint prohibiting personal communication from reference lists."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "71508a031fe2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Cited only in-text.",
+      "parts": [
+       {
+        "block_id": "35eac6dd0420",
+        "quote": "The Australian concise Oxford dictionary (ACOD) (2017) defines it as ..."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "For dictionaries and encyclopedias, only include an in-text citation. Don’t include a citation in the reference list.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a dictionary or encyclopedia entry included in the reference list",
+    "when": [
+     "when citing dictionaries and encyclopedias"
+    ],
+    "why": "Negative constraint prohibiting reference list entries for dictionaries and encyclopedias."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "035e4091d814",
+    "end": 255,
+    "prefix": "nclude the date in parentheses. ",
+    "quote": "Don’t separate the name and date with a comma.",
+    "start": 209,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "035e4091d814",
+     "end": 208,
+     "prefix": "o in parentheses with the date. ",
+     "quote": "Always include the date in parentheses.",
+     "start": 169,
+     "suffix": " Don’t separate the name and dat"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Author and date separated by space without comma.",
+     "parts": [
+      {
+       "block_id": "599ef6eb0e9f",
+       "end": 40,
+       "prefix": "",
+       "quote": "Other results were similar (Jones 2017).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an in-text citation that places a comma between the author name and the publication date"
+   },
+   "when": [
+    "applies to author-date in-text citations inside or outside parentheses"
+   ],
+   "why": "G-2 (parenthesis rule and comma prohibition govern basic in-text author-date citation syntax)."
+  },
+  {
+   "anchor": {
+    "block_id": "1253d2c120d3",
+    "end": 113,
+    "prefix": "",
+    "quote": "For a work by 3 or more authors, use the first author’s name plus the Latin term ‘et al.’ (meaning ‘and others’).",
+    "start": 0,
+    "suffix": " Don’t use italics for ‘et al.’."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1253d2c120d3",
+     "end": 145,
+     "prefix": "et al.’ (meaning ‘and others’). ",
+     "quote": "Don’t use italics for ‘et al.’.",
+     "start": 114,
+     "suffix": " All authors’ names are included"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Correct use of 'et al.' without italics.",
+     "parts": [
+      {
+       "block_id": "37f1199afcdf",
+       "end": 64,
+       "prefix": "",
+       "quote": "Other researchers reported similar results (Watson et al. 2017).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Listing all 4 authors instead of 'et al.'.",
+     "parts": [
+      {
+       "block_id": "08fbcd133480",
+       "end": 81,
+       "prefix": "",
+       "quote": "Other researchers reported similar results (Watson, Black, Jones and Abaza 2017).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an in-text citation for a work by 3 or more authors listing all authors instead of using 'et al.', or italicising 'et al.'"
+   },
+   "when": [
+    "when citing a work by 3 or more authors in text"
+   ],
+   "why": "G-2 (covers formatting and usage of 'et al.' for works with 3+ authors in text)."
+  },
+  {
+   "anchor": {
+    "block_id": "96bd5b22e74c",
+    "end": 95,
+    "prefix": "",
+    "quote": "Use the word ‘and’ between names outside and inside parentheses. Don’t use the ampersand (‘&’).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses 'and' inside parentheses.",
+     "parts": [
+      {
+       "block_id": "40c033fc8da0",
+       "end": 66,
+       "prefix": "",
+       "quote": "Other researchers reported similar results (Black and Jones 2017).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses '&' inside parentheses.",
+     "parts": [
+      {
+       "block_id": "817d056eddec",
+       "end": 64,
+       "prefix": "",
+       "quote": "Other researchers reported similar results (Black & Jones 2017).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an ampersand ('&') used between author names in an in-text citation instead of the word 'and'"
+   },
+   "when": [
+    "applies to in-text citations with multiple authors, both inside and outside parentheses"
+   ],
+   "why": "Specific, actionable mechanical rule prohibiting ampersand between author names."
+  },
+  {
+   "anchor": {
+    "block_id": "90d4bdf73ff5",
+    "end": 168,
+    "prefix": "",
+    "quote": "Include page numbers in the in-text citation only when the work has page numbers and you’re including a direct quotation. Use a colon between the date and page numbers.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Direct quote with colon separating year and page numbers.",
+     "parts": [
+      {
+       "block_id": "c0ea8e4efff7",
+       "end": 60,
+       "prefix": "",
+       "quote": "‘These were identical results’ (White and Jones 2019:23–24).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "page numbers included without a direct quotation, or page numbers separated from the date by punctuation other than a colon (such as a comma or space)"
+   },
+   "when": [
+    "when citing page numbers in an in-text citation"
+   ],
+   "why": "G-2 (combines precondition for page numbers with colon formatting requirement)."
+  },
+  {
+   "anchor": {
+    "block_id": "34b17e688314",
+    "end": 86,
+    "prefix": "",
+    "quote": "To cite multiple works in the same in-text citation, use semicolons between each work.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1a24c3c858ee",
+     "end": 48,
+     "prefix": "",
+     "quote": "Arrange the works alphabetically by author name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Works separated by semicolons and ordered alphabetically.",
+     "parts": [
+      {
+       "block_id": "b3a8a1d9886a",
+       "end": 90,
+       "prefix": "",
+       "quote": "Other researchers reported similar results (Abaza 2019; Pratt 2013; White and Jones 2017).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple works cited in the same parentheses without semicolon delimiters, or not ordered alphabetically by author name"
+   },
+   "when": [
+    "when multiple works are cited in a single in-text parenthetical citation"
+   ],
+   "why": "G-2 (semicolon separation and alphabetical ordering of multiple works in one citation)."
+  },
+  {
+   "anchor": {
+    "block_id": "4da557ca289a",
+    "end": 164,
+    "prefix": "",
+    "quote": "To cite multiple works published by the same author in different years, write the author’s name. Follow the name with each date of publication separated by a comma.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5d2b45d72faf",
+     "end": 67,
+     "prefix": "",
+     "quote": "Arrange the dates chronologically, starting with the earliest date.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Chronological dates separated by commas.",
+     "parts": [
+      {
+       "block_id": "f00cfcb8a775",
+       "end": 154,
+       "prefix": "",
+       "quote": "Published analyses of registration data show a steady increase in the size of private vehicles on Australian roads (Vehicular Australia 2021, 2023, 2025).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple publication dates for the same author not separated by commas or not ordered chronologically starting with the earliest date"
+   },
+   "when": [
+    "when citing multiple works by the same author in different years in one in-text citation"
+   ],
+   "why": "G-2 (covers comma separation and chronological ordering for same-author multi-year citations)."
+  },
+  {
+   "anchor": {
+    "block_id": "542a7d23c6c5",
+    "end": 211,
+    "prefix": "",
+    "quote": "To cite multiple works by the same author in the same year, put a letter after the date of each citation. Put an ‘a’ after the date of the first work you cite, then a ‘b’ after the date of the second, and so on.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e45aa0d5aae6",
+     "end": 213,
+     "prefix": "",
+     "quote": "To cite multiple works by the same author in the same year, put a letter after the date of each citation. Put an ‘a’ after the date of the first work you cite and a ‘b’ after the date of the second one, and so on.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Dates have 'a' and 'b' suffixes.",
+     "parts": [
+      {
+       "block_id": "ee9ec98aa86b",
+       "end": 87,
+       "prefix": "",
+       "quote": "She has written extensively on Australia – New Zealand relations (Dobell 2018a, 2018b).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple works by the same author in the same year cited without distinguishing letters ('a', 'b', etc.) attached to the year"
+   },
+   "when": [
+    "when citing multiple works published by the same author in the same year"
+   ],
+   "why": "G-4 (applies to both in-text citation and reference list entry)."
+  },
+  {
+   "anchor": {
+    "block_id": "912ea51b666d",
+    "end": 90,
+    "prefix": "",
+    "quote": "For works without a date, write ‘n.d.’ (for ‘no date’) instead of the year of publication.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "18f3b0ccb64d",
+     "end": 74,
+     "prefix": "",
+     "quote": "For works without a date, write ‘n.d.’ instead of the date of publication.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses 'n.d.' in citation.",
+     "parts": [
+      {
+       "block_id": "1db7254362e7",
+       "end": 66,
+       "prefix": "",
+       "quote": "Other researchers reported similar results (White and Jones n.d.).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a work without a publication date referenced without using 'n.d.' in place of the year"
+   },
+   "when": [
+    "when the work being cited or listed has no date of publication"
+   ],
+   "why": "G-4 (identical rule stated under in-text citations and reference lists)."
+  },
+  {
+   "anchor": {
+    "block_id": "67acc4140f96",
+    "end": 93,
+    "prefix": "ll details of every cited work. ",
+    "quote": "Use the heading ‘References’.",
+    "start": 64,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a reference list heading using text other than 'References' (such as 'Bibliography' or 'Works Cited')"
+   },
+   "when": [
+    "applies to the heading of an author-date reference list"
+   ],
+   "why": "Prescriptive style requirement for reference list heading."
+  },
+  {
+   "anchor": {
+    "block_id": "8c4c5680be05",
+    "end": 91,
+    "prefix": "",
+    "quote": "Write the family name of the authors, editors or translators before writing their initials.",
+    "start": 0,
+    "suffix": " Use the original spelling for a"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "54a7ad30eb27",
+     "end": 103,
+     "prefix": "",
+     "quote": "Don’t separate the family name from the initials with a comma. Don’t separate initials with full stops.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Family name followed by initials without comma or full stops.",
+     "parts": [
+      {
+       "block_id": "63c92bd526be",
+       "end": 8,
+       "prefix": "",
+       "quote": "Smith AB",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Comma separating family name and initials.",
+     "parts": [
+      {
+       "block_id": "a2b15938d2a6",
+       "end": 9,
+       "prefix": "",
+       "quote": "Smith, AB",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Full stops separating initials.",
+     "parts": [
+      {
+       "block_id": "564dbe5211cd",
+       "end": 10,
+       "prefix": "",
+       "quote": "Smith A.B.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an author, editor or translator name in a reference list where the given initials precede the family name, or where initials have full stops, or where a comma separates the family name from initials"
+   },
+   "when": [
+    "when formatting personal author, editor, or translator names in a reference list"
+   ],
+   "why": "G-2 (covers name order and punctuation rules for author names in reference lists)."
+  },
+  {
+   "anchor": {
+    "block_id": "1a75b014465d",
+    "end": 84,
+    "prefix": "",
+    "quote": "Unlike for in-text citations, include all of the authors’ names in a reference list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "All authors listed in reference entry.",
+     "parts": [
+      {
+       "block_id": "99b1395db89a",
+       "end": 105,
+       "prefix": "",
+       "quote": "Jackson D, Li X and Chandran P (2018) ‘Safety and equity’, Psychological Science Australia, 2(4):223–240.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Using 'et al.' in reference list entry.",
+     "parts": [
+      {
+       "block_id": "502253b0ec10",
+       "end": 91,
+       "prefix": "",
+       "quote": "Jackson D et al. (2018) ‘Safety and equity’, Psychological Science Australia, 2(4):223–240.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "use of 'et al.' in a reference list entry instead of listing all authors' names"
+   },
+   "when": [
+    "when listing works with multiple authors in a reference list"
+   ],
+   "why": "Direct contrast rule with clear compliant and violating examples."
+  },
+  {
+   "anchor": {
+    "block_id": "76772c08f201",
+    "end": 124,
+    "prefix": "",
+    "quote": "For works like newspaper articles and social media posts, include the full date – not just the year – in the reference list.",
+    "start": 0,
+    "suffix": " It makes it easier for users to"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Full date (24 May 2018) included.",
+     "parts": [
+      {
+       "block_id": "84554ba52076",
+       "end": 156,
+       "prefix": "",
+       "quote": "Richardson A (24 May 2018) ‘Australia imports almost all of its oil, and there are pitfalls all over the globe’, The Conversation, accessed 29 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Only the year is provided.",
+     "parts": [
+      {
+       "block_id": "87082874de3e",
+       "end": 149,
+       "prefix": "",
+       "quote": "Richardson A (2018) ‘Australia imports almost all of its oil, and there are pitfalls all over the globe’, The Conversation, accessed 29 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a reference list entry for a newspaper article, blog post, or social media post containing only the year instead of the full date"
+   },
+   "when": [
+    "when referencing works like newspaper articles, magazine articles, blog posts, and social media posts"
+   ],
+   "why": "Clear rule with Write this / Not this examples."
+  },
+  {
+   "anchor": {
+    "block_id": "37b534dfed7e",
+    "end": 62,
+    "prefix": "",
+    "quote": "Use italics for the formal title of a complete published work.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3e10e10909c5",
+     "end": 38,
+     "prefix": "",
+     "quote": "Don't use italics if the reference is:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fb73dc127277",
+     "end": 138,
+     "prefix": "",
+     "quote": "If it’s part of a publication, use single quotation marks around the title and use italics for the name of the series, book or periodical.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Complete published work in italics.",
+     "parts": [
+      {
+       "block_id": "daf4da835671",
+       "end": 90,
+       "prefix": "",
+       "quote": "Mackenzie J (2011) The editor’s companion, 2nd edn, Cambridge University Press, Melbourne.",
+       "start": 0,
+       "suffix": " [The italicised title is for a "
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the formal title of a complete published work not italicised, or italics used for part of a publication (such as an article or chapter)"
+   },
+   "when": [
+    "in reference lists"
+   ],
+   "why": "G-2 (covers title typography: complete works vs parts of publications)."
+  },
+  {
+   "anchor": {
+    "block_id": "61da6d918e5e",
+    "end": 85,
+    "prefix": "",
+    "quote": "Unless the source is behind a paywall, hyperlink the title of works available online.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "52b2cf39a8a9",
+     "end": 67,
+     "prefix": "",
+     "quote": "You don’t need to include the URL in references in digital content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the title of an online work not hyperlinked in digital content, when not behind a paywall"
+   },
+   "when": [
+    "when citing online sources in digital content, unless behind a paywall"
+   ],
+   "why": "G-2 (hyperlink rule with digital URL omission permission)."
+  },
+  {
+   "anchor": {
+    "block_id": "fa4c89a9c2ce",
+    "end": 39,
+    "prefix": "",
+    "quote": "Include the date you accessed the work.",
+    "start": 0,
+    "suffix": " This is important because onlin"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ae8080513683",
+     "end": 74,
+     "prefix": "",
+     "quote": "Always include the date you accessed the site at the end of the reference.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "21d37fef2255",
+     "end": 74,
+     "prefix": "",
+     "quote": "Always include the date you accessed the site at the end of the reference.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a citation for an online work that omits the accessed date"
+   },
+   "when": [
+    "when referencing online sources"
+   ],
+   "why": "Mandatory element for online citations repeated across several sections."
+  },
+  {
+   "anchor": {
+    "block_id": "da50d94bf1f4",
+    "end": 172,
+    "prefix": "",
+    "quote": "If the document has a DOI, include it in the citation in the reference list. Put it at the end of the citation and include the shortened form ‘doi’ in lower case before it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Includes doi: at the end.",
+     "parts": [
+      {
+       "block_id": "5fd8e912e74d",
+       "end": 119,
+       "prefix": "",
+       "quote": "Kelleher T (2009) ‘Conversational voice’,Journal of Communication, 59(1):172–188, doi:10.1111/j.1460-2466.2008.01410.x.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a reference list citation with a DOI that fails to place it at the end or does not prefix it with lower case 'doi:'"
+   },
+   "when": [
+    "when a referenced work has a Digital Object Identifier (DOI)"
+   ],
+   "why": "Specific, actionable syntax rule for formatting DOIs."
+  },
+  {
+   "anchor": {
+    "block_id": "22403bcbe566",
+    "end": 112,
+    "prefix": "",
+    "quote": "If a citation has a volume number, an issue number and page numbers, follow the format: volume(issue):page–page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Follows 2(4):223–240 format.",
+     "parts": [
+      {
+       "block_id": "1aefc1dc0867",
+       "end": 105,
+       "prefix": "",
+       "quote": "Jackson D, Li X and Chandran P (2018) ‘Safety and equity’, Psychological Science Australia, 2(4):223–240.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a journal citation with volume, issue, and page numbers formatted other than 'volume(issue):page–page'"
+   },
+   "when": [
+    "when citing journal articles or periodicals with volume, issue, and page numbers"
+   ],
+   "why": "Explicit syntax specification for journal volumes, issues, and pages."
+  },
+  {
+   "anchor": {
+    "block_id": "5a69e2901990",
+    "end": 120,
+    "prefix": "",
+    "quote": "For emails and personal communication, only include an in-text citation. Don’t include a citation in the reference list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "In-text citation for personal communication.",
+     "parts": [
+      {
+       "block_id": "35eaa7d753bc",
+       "end": 67,
+       "prefix": "",
+       "quote": "Susannah Bishop (personal communication, 5 February 2020) wrote ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an email or personal communication listed in the reference list"
+   },
+   "when": [
+    "when citing emails and personal communications"
+   ],
+   "why": "Negative constraint prohibiting personal communication from reference lists."
+  },
+  {
+   "anchor": {
+    "block_id": "71508a031fe2",
+    "end": 117,
+    "prefix": "",
+    "quote": "For dictionaries and encyclopedias, only include an in-text citation. Don’t include a citation in the reference list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Cited only in-text.",
+     "parts": [
+      {
+       "block_id": "35eac6dd0420",
+       "end": 72,
+       "prefix": "",
+       "quote": "The Australian concise Oxford dictionary (ACOD) (2017) defines it as ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a dictionary or encyclopedia entry included in the reference list"
+   },
+   "when": [
+    "when citing dictionaries and encyclopedias"
+   ],
+   "why": "Negative constraint prohibiting reference list entries for dictionaries and encyclopedias."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 21143,
+  "output_tokens": 8341,
+  "reasoning_tokens": 0
+ }
+}

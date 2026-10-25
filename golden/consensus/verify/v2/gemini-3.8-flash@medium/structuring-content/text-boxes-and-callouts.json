@@ -1,0 +1,48 @@
+{
+ "effort": "medium",
+ "input_sha256": "bd93abf79945141bac51ee876884cb01f88023cce7a3aa05c5f349cdbe516633",
+ "model": "gemini-3.8-flash",
+ "page_path": "structuring-content/text-boxes-and-callouts.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3968,
+  "output_tokens": 307,
+  "reasoning_tokens": 1900
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "G-1: An H2 heading that groups subordinate subsections and paragraphs is a section, not a rule.",
+   "restates": "",
+   "verdict": "section"
+  },
+  {
+   "id": "C2",
+   "note": "G-5: Advice regarding the writer's editorial rationale rather than a testable property of the text.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C3",
+   "note": "G-1: An H2 heading that groups child rules and paragraphs is a section, not a rule.",
+   "restates": "",
+   "verdict": "section"
+  },
+  {
+   "id": "C4",
+   "note": "A distinct, testable rule requiring recurring text boxes to be numbered; A2 covers cross-referencing them.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C5",
+   "note": "G-5: Broad editorial advice on structuring content that cannot be objectively tested as a text rule.",
+   "restates": "",
+   "verdict": "advice"
+  }
+ ],
+ "version": "v2"
+}

@@ -1,0 +1,724 @@
+{
+ "effort": "high",
+ "input_sha256": "3e136c25551d28848c84d9a402a40ff53b1f2095f82b034bc469f962e885808b",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "77d1a7eae84d",
+    "end": 42,
+    "prefix": "",
+    "quote": "Choose between a decimal value or fraction",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific instructions about notation and choosing an appropriate level of precision.",
+   "reason": "section",
+   "seed_uid": "c6f36914fffe8a50"
+  },
+  {
+   "anchor": {
+    "block_id": "d3e11447461e",
+    "end": 71,
+    "prefix": "",
+    "quote": "You can express a less-than-whole number as a decimal or as a fraction.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits both representations without independently defining a violation.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "935788e02fa7",
+    "end": 65,
+    "prefix": "",
+    "quote": "Decimal values less than one have a ‘0’ before the decimal point.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the leading-zero rule stated in the heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/fractions-and-decimals.md",
+ "page_sha256": "102c014bc9deab4f92b504a39d49736b8f1facf53540fbc93cf7dced1476770c",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "77d1a7eae84d",
+    "note": "G-1: groups the specific instructions about notation and choosing an appropriate level of precision.",
+    "quote": "Choose between a decimal value or fraction",
+    "reason": "section"
+   },
+   {
+    "block_id": "d3e11447461e",
+    "note": "G-3: permits both representations without independently defining a violation.",
+    "quote": "You can express a less-than-whole number as a decimal or as a fraction.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "935788e02fa7",
+    "note": "G-4: absorbed into the leading-zero rule stated in the heading.",
+    "quote": "Decimal values less than one have a ‘0’ before the decimal point.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "12405be7123e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Decimal example.",
+      "parts": [
+       {
+        "block_id": "389ae7f80a0f",
+        "quote": "0.5"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "In text, write decimal values as numerals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A decimal value in text is written in words rather than numerals.",
+    "when": [
+     "In text."
+    ],
+    "why": "G-1 and G-4: select the actionable body sentence, not the grouping heading; decimal notation and fraction notation are distinct checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "12405be7123e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Fraction example.",
+      "parts": [
+       {
+        "block_id": "4155baf69f12",
+        "quote": "half"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write fractions as words.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A fraction in text is written using numerals or a fraction symbol rather than words.",
+    "when": [
+     "In text."
+    ],
+    "why": "G-1: select the specific body instruction rather than the grouping heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bf4c80a6c0d2",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "b01234c303ff",
+      "quote": "Decimals are useful when people need a precise value."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Precise decimal value.",
+      "parts": [
+       {
+        "block_id": "d45ee42349a6",
+        "quote": "They had 7.5 full-time equivalent staff in the section."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Precise decimal value.",
+      "parts": [
+       {
+        "block_id": "3e26e7870bf2",
+        "quote": "Australia received 412.8 mm of rainfall this year."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use decimals when you need to be precise.",
+    "specification": "Whether precision is needed depends on the intended use and audience. The page does not supply an objective test for that need.",
+    "unit": "sentence",
+    "violation_condition": "A fraction is used instead of a decimal value where the intended use requires precision.",
+    "when": [
+     "When choosing between a decimal value and a fraction.",
+     "When a precise value is needed."
+    ],
+    "why": "G-4: the opening description supports the later actionable instruction; it is not a second rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "78ff427d8188",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "afad51343f2f",
+      "quote": "an exact number is not important"
+     },
+     {
+      "block_id": "c9747bb05c7d",
+      "quote": "the user needs only a general idea of the values."
+     },
+     {
+      "block_id": "b01234c303ff",
+      "quote": "Fractions are useful when an exact value is not important."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "General fractional value.",
+      "parts": [
+       {
+        "block_id": "7cfaa9531a79",
+        "quote": "About two-thirds of staff attended last week's meeting."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "General fractional value.",
+      "parts": [
+       {
+        "block_id": "40f26f974ad7",
+        "quote": "The dam was three-quarters full."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use fractions when:",
+    "specification": "Whether an exact number matters or a general indication is sufficient depends on the intended use and audience.",
+    "unit": "sentence",
+    "violation_condition": "A decimal value is used instead of a fraction where an exact number is unimportant or the user needs only a general idea of the value.",
+    "when": [
+     "When choosing between a decimal value and a fraction.",
+     "When an exact number is not important or the user needs only a general idea of the values."
+    ],
+    "why": "G-2: the two listed circumstances are conditions on one fraction-choice rule. G-4: absorb the opening description."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2a7e3e1e743d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "935788e02fa7",
+      "quote": "Decimal values less than one have a ‘0’ before the decimal point."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Correct example.",
+      "parts": [
+       {
+        "block_id": "e17eb8994bb3",
+        "quote": "0.59"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Incorrect example.",
+      "parts": [
+       {
+        "block_id": "77ba4fe5a51b",
+        "quote": ".59"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use ‘0’ before a decimal point for values less than one",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A decimal value less than one is written without a zero before its decimal point.",
+    "when": [
+     "For decimal values less than one."
+    ],
+    "why": "G-4: the heading and body state the same leading-zero requirement, so retain one rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "04764393c857",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "04764393c857",
+      "quote": "This is the style for Australian content."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Correct example.",
+      "parts": [
+       {
+        "block_id": "caeda3ce042b",
+        "quote": "2.5687"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Incorrect example.",
+      "parts": [
+       {
+        "block_id": "f819cd769309",
+        "quote": "2,5687"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use a full stop, not a comma, for the decimal point.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A decimal value uses a comma rather than a full stop as its decimal separator.",
+    "when": [
+     "For Australian content."
+    ],
+    "why": "G-4 and E-2: the prose after the example states a separate decimal-separator rule, tested by the following Correct/Incorrect pair."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "12405be7123e",
+    "end": 42,
+    "prefix": "",
+    "quote": "In text, write decimal values as numerals.",
+    "start": 0,
+    "suffix": " Write fractions as words."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Decimal example.",
+     "parts": [
+      {
+       "block_id": "389ae7f80a0f",
+       "end": 3,
+       "prefix": "",
+       "quote": "0.5",
+       "start": 0,
+       "suffix": " [Decimal value]"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A decimal value in text is written in words rather than numerals."
+   },
+   "when": [
+    "In text."
+   ],
+   "why": "G-1 and G-4: select the actionable body sentence, not the grouping heading; decimal notation and fraction notation are distinct checks."
+  },
+  {
+   "anchor": {
+    "block_id": "12405be7123e",
+    "end": 68,
+    "prefix": "ite decimal values as numerals. ",
+    "quote": "Write fractions as words.",
+    "start": 43,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Fraction example.",
+     "parts": [
+      {
+       "block_id": "4155baf69f12",
+       "end": 4,
+       "prefix": "",
+       "quote": "half",
+       "start": 0,
+       "suffix": " [Fraction]"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A fraction in text is written using numerals or a fraction symbol rather than words."
+   },
+   "when": [
+    "In text."
+   ],
+   "why": "G-1: select the specific body instruction rather than the grouping heading."
+  },
+  {
+   "anchor": {
+    "block_id": "bf4c80a6c0d2",
+    "end": 41,
+    "prefix": "",
+    "quote": "Use decimals when you need to be precise.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "b01234c303ff",
+     "end": 53,
+     "prefix": "",
+     "quote": "Decimals are useful when people need a precise value.",
+     "start": 0,
+     "suffix": " Fractions are useful when an ex"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Precise decimal value.",
+     "parts": [
+      {
+       "block_id": "d45ee42349a6",
+       "end": 55,
+       "prefix": "",
+       "quote": "They had 7.5 full-time equivalent staff in the section.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Precise decimal value.",
+     "parts": [
+      {
+       "block_id": "3e26e7870bf2",
+       "end": 50,
+       "prefix": "",
+       "quote": "Australia received 412.8 mm of rainfall this year.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Whether precision is needed depends on the intended use and audience. The page does not supply an objective test for that need.",
+    "unit": "sentence",
+    "violation_condition": "A fraction is used instead of a decimal value where the intended use requires precision."
+   },
+   "when": [
+    "When choosing between a decimal value and a fraction.",
+    "When a precise value is needed."
+   ],
+   "why": "G-4: the opening description supports the later actionable instruction; it is not a second rule."
+  },
+  {
+   "anchor": {
+    "block_id": "78ff427d8188",
+    "end": 19,
+    "prefix": "",
+    "quote": "Use fractions when:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "afad51343f2f",
+     "end": 32,
+     "prefix": "",
+     "quote": "an exact number is not important",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c9747bb05c7d",
+     "end": 49,
+     "prefix": "",
+     "quote": "the user needs only a general idea of the values.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b01234c303ff",
+     "end": 112,
+     "prefix": "en people need a precise value. ",
+     "quote": "Fractions are useful when an exact value is not important.",
+     "start": 54,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "General fractional value.",
+     "parts": [
+      {
+       "block_id": "7cfaa9531a79",
+       "end": 55,
+       "prefix": "",
+       "quote": "About two-thirds of staff attended last week's meeting.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "General fractional value.",
+     "parts": [
+      {
+       "block_id": "40f26f974ad7",
+       "end": 32,
+       "prefix": "",
+       "quote": "The dam was three-quarters full.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Whether an exact number matters or a general indication is sufficient depends on the intended use and audience.",
+    "unit": "sentence",
+    "violation_condition": "A decimal value is used instead of a fraction where an exact number is unimportant or the user needs only a general idea of the value."
+   },
+   "when": [
+    "When choosing between a decimal value and a fraction.",
+    "When an exact number is not important or the user needs only a general idea of the values."
+   ],
+   "why": "G-2: the two listed circumstances are conditions on one fraction-choice rule. G-4: absorb the opening description."
+  },
+  {
+   "anchor": {
+    "block_id": "2a7e3e1e743d",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use ‘0’ before a decimal point for values less than one",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "935788e02fa7",
+     "end": 65,
+     "prefix": "",
+     "quote": "Decimal values less than one have a ‘0’ before the decimal point.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Correct example.",
+     "parts": [
+      {
+       "block_id": "e17eb8994bb3",
+       "end": 4,
+       "prefix": "",
+       "quote": "0.59",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Incorrect example.",
+     "parts": [
+      {
+       "block_id": "77ba4fe5a51b",
+       "end": 3,
+       "prefix": "",
+       "quote": ".59",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "be62c2d938fb1e6a",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A decimal value less than one is written without a zero before its decimal point."
+   },
+   "when": [
+    "For decimal values less than one."
+   ],
+   "why": "G-4: the heading and body state the same leading-zero requirement, so retain one rule."
+  },
+  {
+   "anchor": {
+    "block_id": "04764393c857",
+    "end": 59,
+    "prefix": "",
+    "quote": "Always use a full stop, not a comma, for the decimal point.",
+    "start": 0,
+    "suffix": " This is the style for Australia"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "04764393c857",
+     "end": 101,
+     "prefix": "a comma, for the decimal point. ",
+     "quote": "This is the style for Australian content.",
+     "start": 60,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Correct example.",
+     "parts": [
+      {
+       "block_id": "caeda3ce042b",
+       "end": 6,
+       "prefix": "",
+       "quote": "2.5687",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Incorrect example.",
+     "parts": [
+      {
+       "block_id": "f819cd769309",
+       "end": 6,
+       "prefix": "",
+       "quote": "2,5687",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A decimal value uses a comma rather than a full stop as its decimal separator."
+   },
+   "when": [
+    "For Australian content."
+   ],
+   "why": "G-4 and E-2: the prose after the example states a separate decimal-separator rule, tested by the following Correct/Incorrect pair."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3709,
+  "output_tokens": 5253,
+  "reasoning_tokens": 3106
+ }
+}

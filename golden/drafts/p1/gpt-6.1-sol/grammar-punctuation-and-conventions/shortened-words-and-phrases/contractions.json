@@ -1,0 +1,1126 @@
+{
+ "effort": "high",
+ "input_sha256": "a2bb7f2f9704de1cde42fc555f4c497ac21d8fa8dd91a7d46832d9815ead5b3c",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "9bea9ac91546",
+    "end": 54,
+    "prefix": "",
+    "quote": "Shorten single words and grammatical phrases with care",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups the definitions and more specific guidance on using contractions; ‘with care’ supplies no separate text-level check.",
+   "reason": "section",
+   "seed_uid": "0c00d243e0c039b4"
+  },
+  {
+   "anchor": {
+    "block_id": "10833791f801",
+    "end": 182,
+    "prefix": "ions use specific contractions. ",
+    "quote": "Look at examples of existing content to see whether you can use grammatical contractions.",
+    "start": 93,
+    "suffix": " Don’t use them if you’re unsure"
+   },
+   "note": "G-5: describes the writer's research process, not a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "10833791f801",
+    "end": 215,
+    "prefix": "n use grammatical contractions. ",
+    "quote": "Don’t use them if you’re unsure.",
+    "start": 183,
+    "suffix": ""
+   },
+   "note": "G-5: depends on the writer's uncertainty, which cannot be established from the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9e4c26d189f0",
+    "end": 53,
+    "prefix": "",
+    "quote": "Find out if the user will understand the contractions",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to investigate users' understanding rather than stating a separately testable textual requirement.",
+   "reason": "advice",
+   "seed_uid": "1dcb77af30cb1d56"
+  },
+  {
+   "anchor": {
+    "block_id": "cd227f6da8e8",
+    "end": 88,
+    "prefix": "",
+    "quote": "Look at existing agency content to see whether grammatical contractions are appropriate.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an instruction to consult existing content.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "eae407022ea6",
+    "end": 80,
+    "prefix": "",
+    "quote": "If developing a new publication or communication channel, conduct user research.",
+    "start": 0,
+    "suffix": " This will help you understand h"
+   },
+   "note": "G-5: a research activity, not a property a text checker can inspect.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6658cda45a2f",
+    "end": 88,
+    "prefix": "",
+    "quote": "This contraction is not a standard symbol for numbers expressed as units of measurement.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the contraction's status; it does not state a separate instruction or specify a replacement measurement symbol.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/shortened-words-and-phrases/contractions.md",
+ "page_sha256": "0bf7b9bd47660a005ce281df1745cbaa12ed8820c86f9aec86008d28f9563783",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "9bea9ac91546",
+    "note": "Groups the definitions and more specific guidance on using contractions; ‘with care’ supplies no separate text-level check.",
+    "quote": "Shorten single words and grammatical phrases with care",
+    "reason": "section"
+   },
+   {
+    "block_id": "10833791f801",
+    "note": "G-5: describes the writer's research process, not a property of the resulting text.",
+    "quote": "Look at examples of existing content to see whether you can use grammatical contractions.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "10833791f801",
+    "note": "G-5: depends on the writer's uncertainty, which cannot be established from the text.",
+    "quote": "Don’t use them if you’re unsure.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9e4c26d189f0",
+    "note": "G-5: asks the writer to investigate users' understanding rather than stating a separately testable textual requirement.",
+    "quote": "Find out if the user will understand the contractions",
+    "reason": "advice"
+   },
+   {
+    "block_id": "cd227f6da8e8",
+    "note": "G-5: an instruction to consult existing content.",
+    "quote": "Look at existing agency content to see whether grammatical contractions are appropriate.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "eae407022ea6",
+    "note": "G-5: a research activity, not a property a text checker can inspect.",
+    "quote": "If developing a new publication or communication channel, conduct user research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6658cda45a2f",
+    "note": "Describes the contraction's status; it does not state a separate instruction or specify a replacement measurement symbol.",
+    "quote": "This contraction is not a standard symbol for numbers expressed as units of measurement.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3dd0c5d0eb8a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "10833791f801",
+      "quote": "Legal documents and many specialist and professional publications use specific contractions."
+     },
+     {
+      "block_id": "eb856fe3c5c7",
+      "quote": "Avoid using contractions of single words in more formal content such as high-level briefing and responses to official inquiries."
+     },
+     {
+      "block_id": "eb856fe3c5c7",
+      "quote": "The exceptions are contractions used in formal writing, such as ‘Dr’ and other titles."
+     },
+     {
+      "block_id": "27d0384006de",
+      "quote": "Grammatical contractions are not generally used in formal content."
+     },
+     {
+      "block_id": "27d0384006de",
+      "quote": "You can use them in less formal content which aims to create:"
+     },
+     {
+      "block_id": "d8be51fbd54f",
+      "quote": "a conversational tone (for example, in a newsletter)"
+     },
+     {
+      "block_id": "69cb7acf65c6",
+      "quote": "a friendly or collaborative tone (for example, in brochures and manuals)."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Presented as formal content.",
+      "parts": [
+       {
+        "block_id": "e0b9c9cd9128",
+        "quote": "The department has not breached its staffing cap."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Presented as less formal content.",
+      "parts": [
+       {
+        "block_id": "8cb332fc4a7d",
+        "quote": "The department hasn’t breached its staffing cap."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Presented as friendly and conversational content.",
+      "parts": [
+       {
+        "block_id": "32934eb4c325",
+        "quote": "We appreciate that the new rules weren’t advertised widely. We’re now contacting everyone who might be affected. Please don’t hesitate to contact us if you have any questions."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid them in formal content.",
+    "specification": "Assess formality from the document's purpose and context. High-level briefings and responses to official inquiries are explicit formal cases. The page does not provide an exhaustive list of contractions accepted in formal writing.",
+    "unit": "document",
+    "violation_condition": "Formal content contains contractions other than established contractions accepted in formal writing.",
+    "when": [
+     "Applies to both single-word and grammatical contractions in formal content.",
+     "Contractions conventionally used in formal writing, such as ‘Dr’ and other titles, are exceptions.",
+     "Legal documents and specialist and professional publications use specific contractions.",
+     "Grammatical contractions are permitted in less formal content intended to create a conversational, friendly or collaborative tone."
+    ],
+    "why": "G-2 and G-4 combine the formal-content restriction and its restatements; G-3 records accepted formal forms and informal uses as exceptions rather than separate rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "43e5371a0687",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d6c727d12e37",
+      "quote": "Don’t place a full stop after contractions."
+     },
+     {
+      "block_id": "d6c727d12e37",
+      "quote": "The exception is when the contraction ends a sentence and isn’t followed by another punctuation mark."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No full stop after the contraction.",
+      "parts": [
+       {
+        "block_id": "0b08cee578dc",
+        "quote": "Tempo Australia Ltd hired him last year."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The full stop ends the sentence.",
+      "parts": [
+       {
+        "block_id": "aa1f25f78d06",
+        "quote": "He is currently working for Tempo Australia Ltd."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Another punctuation mark ends the sentence.",
+      "parts": [
+       {
+        "block_id": "a8630252098d",
+        "quote": "They said they can’t!"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t end contractions with full stops",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A contraction is followed by a full stop that is not needed to end its sentence, including an additional full stop when another punctuation mark ends the sentence.",
+    "when": [
+     "A full stop is permitted when the contraction ends a sentence and is not followed by another punctuation mark."
+    ],
+    "why": "G-4 treats the body instruction as a restatement; G-2 and G-3 retain sentence-ending punctuation as a condition on the same check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "367b143a1f99",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use an apostrophe to show missing letters in a contraction of a single word (‘Dr’, ‘Ltd’).",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A single-word contraction contains an apostrophe marking omitted letters.",
+    "when": [
+     "Applies to contractions of single words, not grammatical contractions joining two words.",
+     "Concerns apostrophes marking omitted letters, not apostrophes serving another grammatical function."
+    ],
+    "why": "The single-word prohibition is a distinct check from the apostrophe-count rule for grammatical contractions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "367b143a1f99",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The manual labels this Correct.",
+      "parts": [
+       {
+        "block_id": "ee04ba024c5f",
+        "quote": "shan’t"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual labels this Incorrect.",
+      "parts": [
+       {
+        "block_id": "d5934791e5c9",
+        "quote": "sha’n’t"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Grammatical contractions use only one apostrophe, even if the contraction leaves out letters from more than one place.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A grammatical contraction contains more than one apostrophe to mark omitted letters.",
+    "when": [
+     "Applies to grammatical contractions joining two words.",
+     "Omission of letters from multiple places does not justify additional apostrophes."
+    ],
+    "why": "G-2 keeps multiple omission sites within one apostrophe-count check; E-2 attaches the Correct/Incorrect pair to this nearest rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6482d3308ac3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1e26bddcd1d1",
+      "quote": "Use the capitalisation that you would use for the uncontracted word."
+     },
+     {
+      "block_id": "1e26bddcd1d1",
+      "quote": "Capitalisation of the uncontracted word depends on the context."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The contraction is part of the event name.",
+      "parts": [
+       {
+        "block_id": "fa80e472f5ab",
+        "quote": "The Cth Games"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The contraction is generic.",
+      "parts": [
+       {
+        "block_id": "7c95e44b0ff0",
+        "quote": "A cth is a term for a political community."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Capitalise contractions in the same way as the full word",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A contraction has capitalisation different from that required for its uncontracted form in the same context.",
+    "when": [
+     "Determine the capitalisation of the full word in its actual context, including whether it is part of a name or is generic."
+    ],
+    "why": "G-4 consolidates the heading and body restatement; E-1 keeps both contextual capitalisation examples compliant."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e578f31d8967",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5823caaafeba",
+      "quote": "Write out the contracted term in full unless it’s a grammatical contraction."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The initial word is written in full.",
+      "parts": [
+       {
+        "block_id": "92005abdeaec",
+        "quote": "Commonwealth resources are available."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The initial contraction is grammatical.",
+      "parts": [
+       {
+        "block_id": "cd1321b786c7",
+        "quote": "Don’t forget your notes for the meeting."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the full word at start of the sentence (except for grammatical contractions)",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence begins with a contracted term that is not a grammatical contraction.",
+    "when": [
+     "Applies at the start of a sentence.",
+     "Grammatical contractions may start a sentence."
+    ],
+    "why": "G-4 keeps the body restatement with its heading, which supplies the sentence-start scope; G-3 treats grammatical contractions as an exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "04e61dd3b94e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a988be7915e5",
+      "quote": "Only use the contraction ‘no’ when immediately followed by a numeral."
+     },
+     {
+      "block_id": "a988be7915e5",
+      "quote": "In all other instances, write the word out in full so it isn’t confused with the negation ‘no’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The contraction immediately precedes a numeral.",
+      "parts": [
+       {
+        "block_id": "f17de416c392",
+        "quote": "Archive box no 152 has been found in the basement."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The word is written in full.",
+      "parts": [
+       {
+        "block_id": "176387a259a8",
+        "quote": "I won’t be able to get their manager’s number until tomorrow."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The word is written in full.",
+      "parts": [
+       {
+        "block_id": "cbf0bf4ad063",
+        "quote": "There are a number of options available to us."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual labels this Not this.",
+      "parts": [
+       {
+        "block_id": "0dc9c41264c8",
+        "quote": "I won’t be able to get their manager’s no until tomorrow."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The manual labels this Not this.",
+      "parts": [
+       {
+        "block_id": "e715742e1da1",
+        "quote": "There are a no of options available to us."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Only use the contraction ‘no’ with numerals",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The contraction ‘no’ meaning ‘number’ is not immediately followed by a numeral.",
+    "when": [
+     "Applies to ‘no’ used as a contraction meaning ‘number’, not to the negation ‘no’.",
+     "The numeral must immediately follow the contraction."
+    ],
+    "why": "G-2 and G-4 combine the numeral restriction and its complementary full-word instruction into one check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "3dd0c5d0eb8a",
+    "end": 128,
+    "prefix": "hem depending on their context. ",
+    "quote": "Avoid them in formal content.",
+    "start": 99,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "10833791f801",
+     "end": 92,
+     "prefix": "",
+     "quote": "Legal documents and many specialist and professional publications use specific contractions.",
+     "start": 0,
+     "suffix": " Look at examples of existing co"
+    },
+    {
+     "block_id": "eb856fe3c5c7",
+     "end": 128,
+     "prefix": "",
+     "quote": "Avoid using contractions of single words in more formal content such as high-level briefing and responses to official inquiries.",
+     "start": 0,
+     "suffix": " The exceptions are contractions"
+    },
+    {
+     "block_id": "eb856fe3c5c7",
+     "end": 215,
+     "prefix": "esponses to official inquiries. ",
+     "quote": "The exceptions are contractions used in formal writing, such as ‘Dr’ and other titles.",
+     "start": 129,
+     "suffix": ""
+    },
+    {
+     "block_id": "27d0384006de",
+     "end": 66,
+     "prefix": "",
+     "quote": "Grammatical contractions are not generally used in formal content.",
+     "start": 0,
+     "suffix": " You can use them in less formal"
+    },
+    {
+     "block_id": "27d0384006de",
+     "end": 128,
+     "prefix": "nerally used in formal content. ",
+     "quote": "You can use them in less formal content which aims to create:",
+     "start": 67,
+     "suffix": ""
+    },
+    {
+     "block_id": "d8be51fbd54f",
+     "end": 52,
+     "prefix": "",
+     "quote": "a conversational tone (for example, in a newsletter)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "69cb7acf65c6",
+     "end": 73,
+     "prefix": "",
+     "quote": "a friendly or collaborative tone (for example, in brochures and manuals).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Presented as formal content.",
+     "parts": [
+      {
+       "block_id": "e0b9c9cd9128",
+       "end": 49,
+       "prefix": "",
+       "quote": "The department has not breached its staffing cap.",
+       "start": 0,
+       "suffix": "[Formal high-level briefing or a"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Presented as less formal content.",
+     "parts": [
+      {
+       "block_id": "8cb332fc4a7d",
+       "end": 48,
+       "prefix": "",
+       "quote": "The department hasn’t breached its staffing cap.",
+       "start": 0,
+       "suffix": " [Less formal briefing or other "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Presented as friendly and conversational content.",
+     "parts": [
+      {
+       "block_id": "32934eb4c325",
+       "end": 175,
+       "prefix": "",
+       "quote": "We appreciate that the new rules weren’t advertised widely. We’re now contacting everyone who might be affected. Please don’t hesitate to contact us if you have any questions.",
+       "start": 0,
+       "suffix": " [Friendly and conversational co"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Assess formality from the document's purpose and context. High-level briefings and responses to official inquiries are explicit formal cases. The page does not provide an exhaustive list of contractions accepted in formal writing.",
+    "unit": "document",
+    "violation_condition": "Formal content contains contractions other than established contractions accepted in formal writing."
+   },
+   "when": [
+    "Applies to both single-word and grammatical contractions in formal content.",
+    "Contractions conventionally used in formal writing, such as ‘Dr’ and other titles, are exceptions.",
+    "Legal documents and specialist and professional publications use specific contractions.",
+    "Grammatical contractions are permitted in less formal content intended to create a conversational, friendly or collaborative tone."
+   ],
+   "why": "G-2 and G-4 combine the formal-content restriction and its restatements; G-3 records accepted formal forms and informal uses as exceptions rather than separate rules."
+  },
+  {
+   "anchor": {
+    "block_id": "43e5371a0687",
+    "end": 38,
+    "prefix": "",
+    "quote": "Don’t end contractions with full stops",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d6c727d12e37",
+     "end": 43,
+     "prefix": "",
+     "quote": "Don’t place a full stop after contractions.",
+     "start": 0,
+     "suffix": " The exception is when the contr"
+    },
+    {
+     "block_id": "d6c727d12e37",
+     "end": 145,
+     "prefix": "a full stop after contractions. ",
+     "quote": "The exception is when the contraction ends a sentence and isn’t followed by another punctuation mark.",
+     "start": 44,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No full stop after the contraction.",
+     "parts": [
+      {
+       "block_id": "0b08cee578dc",
+       "end": 40,
+       "prefix": "",
+       "quote": "Tempo Australia Ltd hired him last year.",
+       "start": 0,
+       "suffix": " [No full stop after the contrac"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The full stop ends the sentence.",
+     "parts": [
+      {
+       "block_id": "aa1f25f78d06",
+       "end": 48,
+       "prefix": "",
+       "quote": "He is currently working for Tempo Australia Ltd.",
+       "start": 0,
+       "suffix": " [A full stop after the contract"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Another punctuation mark ends the sentence.",
+     "parts": [
+      {
+       "block_id": "a8630252098d",
+       "end": 21,
+       "prefix": "",
+       "quote": "They said they can’t!",
+       "start": 0,
+       "suffix": " [No full stop after the contrac"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "741ae57d4b66b271",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A contraction is followed by a full stop that is not needed to end its sentence, including an additional full stop when another punctuation mark ends the sentence."
+   },
+   "when": [
+    "A full stop is permitted when the contraction ends a sentence and is not followed by another punctuation mark."
+   ],
+   "why": "G-4 treats the body instruction as a restatement; G-2 and G-3 retain sentence-ending punctuation as a condition on the same check."
+  },
+  {
+   "anchor": {
+    "block_id": "367b143a1f99",
+    "end": 96,
+    "prefix": "",
+    "quote": "Don’t use an apostrophe to show missing letters in a contraction of a single word (‘Dr’, ‘Ltd’).",
+    "start": 0,
+    "suffix": " Grammatical contractions use on"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A single-word contraction contains an apostrophe marking omitted letters."
+   },
+   "when": [
+    "Applies to contractions of single words, not grammatical contractions joining two words.",
+    "Concerns apostrophes marking omitted letters, not apostrophes serving another grammatical function."
+   ],
+   "why": "The single-word prohibition is a distinct check from the apostrophe-count rule for grammatical contractions."
+  },
+  {
+   "anchor": {
+    "block_id": "367b143a1f99",
+    "end": 215,
+    "prefix": "of a single word (‘Dr’, ‘Ltd’). ",
+    "quote": "Grammatical contractions use only one apostrophe, even if the contraction leaves out letters from more than one place.",
+    "start": 97,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The manual labels this Correct.",
+     "parts": [
+      {
+       "block_id": "ee04ba024c5f",
+       "end": 6,
+       "prefix": "",
+       "quote": "shan’t",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual labels this Incorrect.",
+     "parts": [
+      {
+       "block_id": "d5934791e5c9",
+       "end": 7,
+       "prefix": "",
+       "quote": "sha’n’t",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A grammatical contraction contains more than one apostrophe to mark omitted letters."
+   },
+   "when": [
+    "Applies to grammatical contractions joining two words.",
+    "Omission of letters from multiple places does not justify additional apostrophes."
+   ],
+   "why": "G-2 keeps multiple omission sites within one apostrophe-count check; E-2 attaches the Correct/Incorrect pair to this nearest rule."
+  },
+  {
+   "anchor": {
+    "block_id": "6482d3308ac3",
+    "end": 56,
+    "prefix": "",
+    "quote": "Capitalise contractions in the same way as the full word",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1e26bddcd1d1",
+     "end": 68,
+     "prefix": "",
+     "quote": "Use the capitalisation that you would use for the uncontracted word.",
+     "start": 0,
+     "suffix": " Capitalisation of the uncontrac"
+    },
+    {
+     "block_id": "1e26bddcd1d1",
+     "end": 132,
+     "prefix": " use for the uncontracted word. ",
+     "quote": "Capitalisation of the uncontracted word depends on the context.",
+     "start": 69,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The contraction is part of the event name.",
+     "parts": [
+      {
+       "block_id": "fa80e472f5ab",
+       "end": 13,
+       "prefix": "",
+       "quote": "The Cth Games",
+       "start": 0,
+       "suffix": " [The contraction ‘Cth’ is capit"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The contraction is generic.",
+     "parts": [
+      {
+       "block_id": "7c95e44b0ff0",
+       "end": 42,
+       "prefix": "",
+       "quote": "A cth is a term for a political community.",
+       "start": 0,
+       "suffix": " [Here, ‘cth’ isn’t capitalised "
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "0e49af4900d46e71",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A contraction has capitalisation different from that required for its uncontracted form in the same context."
+   },
+   "when": [
+    "Determine the capitalisation of the full word in its actual context, including whether it is part of a name or is generic."
+   ],
+   "why": "G-4 consolidates the heading and body restatement; E-1 keeps both contextual capitalisation examples compliant."
+  },
+  {
+   "anchor": {
+    "block_id": "e578f31d8967",
+    "end": 80,
+    "prefix": "",
+    "quote": "Use the full word at start of the sentence (except for grammatical contractions)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5823caaafeba",
+     "end": 76,
+     "prefix": "",
+     "quote": "Write out the contracted term in full unless it’s a grammatical contraction.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The initial word is written in full.",
+     "parts": [
+      {
+       "block_id": "92005abdeaec",
+       "end": 37,
+       "prefix": "",
+       "quote": "Commonwealth resources are available.",
+       "start": 0,
+       "suffix": " [The word begins a sentence, so"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The initial contraction is grammatical.",
+     "parts": [
+      {
+       "block_id": "cd1321b786c7",
+       "end": 40,
+       "prefix": "",
+       "quote": "Don’t forget your notes for the meeting.",
+       "start": 0,
+       "suffix": " [Grammatical contractions can s"
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "2341a03a72f38a74",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence begins with a contracted term that is not a grammatical contraction."
+   },
+   "when": [
+    "Applies at the start of a sentence.",
+    "Grammatical contractions may start a sentence."
+   ],
+   "why": "G-4 keeps the body restatement with its heading, which supplies the sentence-start scope; G-3 treats grammatical contractions as an exception."
+  },
+  {
+   "anchor": {
+    "block_id": "04e61dd3b94e",
+    "end": 43,
+    "prefix": "",
+    "quote": "Only use the contraction ‘no’ with numerals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a988be7915e5",
+     "end": 69,
+     "prefix": "",
+     "quote": "Only use the contraction ‘no’ when immediately followed by a numeral.",
+     "start": 0,
+     "suffix": " In all other instances, write t"
+    },
+    {
+     "block_id": "a988be7915e5",
+     "end": 165,
+     "prefix": "ediately followed by a numeral. ",
+     "quote": "In all other instances, write the word out in full so it isn’t confused with the negation ‘no’.",
+     "start": 70,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The contraction immediately precedes a numeral.",
+     "parts": [
+      {
+       "block_id": "f17de416c392",
+       "end": 50,
+       "prefix": "",
+       "quote": "Archive box no 152 has been found in the basement.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The word is written in full.",
+     "parts": [
+      {
+       "block_id": "176387a259a8",
+       "end": 61,
+       "prefix": "",
+       "quote": "I won’t be able to get their manager’s number until tomorrow.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The word is written in full.",
+     "parts": [
+      {
+       "block_id": "cbf0bf4ad063",
+       "end": 46,
+       "prefix": "",
+       "quote": "There are a number of options available to us.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual labels this Not this.",
+     "parts": [
+      {
+       "block_id": "0dc9c41264c8",
+       "end": 57,
+       "prefix": "",
+       "quote": "I won’t be able to get their manager’s no until tomorrow.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual labels this Not this.",
+     "parts": [
+      {
+       "block_id": "e715742e1da1",
+       "end": 42,
+       "prefix": "",
+       "quote": "There are a no of options available to us.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "f0240876306db20f",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The contraction ‘no’ meaning ‘number’ is not immediately followed by a numeral."
+   },
+   "when": [
+    "Applies to ‘no’ used as a contraction meaning ‘number’, not to the negation ‘no’.",
+    "The numeral must immediately follow the contraction."
+   ],
+   "why": "G-2 and G-4 combine the numeral restriction and its complementary full-word instruction into one check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4771,
+  "output_tokens": 7282,
+  "reasoning_tokens": 3624
+ }
+}

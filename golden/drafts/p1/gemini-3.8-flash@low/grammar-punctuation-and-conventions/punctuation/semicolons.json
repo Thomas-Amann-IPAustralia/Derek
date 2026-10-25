@@ -1,0 +1,754 @@
+{
+ "effort": "low",
+ "input_sha256": "3c8d7348e822f9a415fa2fade7d536003769464a765b5217f9e6395864b020d8",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "c0490f6af4a4",
+    "end": 73,
+    "prefix": "",
+    "quote": "Use a bullet or numbered list instead of semicolons in a complex sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Stylistic preference/advice to reformat text into a bullet/numbered list; G-5.",
+   "reason": "advice",
+   "seed_uid": "e50393fa1ceab909"
+  },
+  {
+   "anchor": {
+    "block_id": "263e5e1209ac",
+    "end": 108,
+    "prefix": "",
+    "quote": "It is almost always better to break a complex list into a bullet or numbered list to make it easier to read.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Advice to the writer recommending list structure over complex sentence; G-5.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7674fb0bd3d6",
+    "end": 60,
+    "prefix": "",
+    "quote": "commas if the list is simple, such as a list of single words",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Rule on commas in lists belongs to the commas page; G-6.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af0ecd652cba",
+    "end": 217,
+    "prefix": "entence is too long or complex. ",
+    "quote": "Try to rewrite into shorter, clearer sentences.",
+    "start": 170,
+    "suffix": ""
+   },
+   "note": "General writing advice on punctuation clutter; G-5.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f5c57a9e2728",
+    "end": 88,
+    "prefix": "",
+    "quote": "Semicolons can create a break that is stronger than a comma but weaker than a full stop.",
+    "start": 0,
+    "suffix": " They can link 2 sentences that "
+   },
+   "note": "Descriptive explanation of what semicolons do in English grammar; G-5.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/semicolons.md",
+ "page_sha256": "f614037ebe61ec34a382ef5780810be59cf6ae9c78cbdcb523a74066faade258",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "c0490f6af4a4",
+    "note": "Stylistic preference/advice to reformat text into a bullet/numbered list; G-5.",
+    "quote": "Use a bullet or numbered list instead of semicolons in a complex sentence",
+    "reason": "advice"
+   },
+   {
+    "block_id": "263e5e1209ac",
+    "note": "Advice to the writer recommending list structure over complex sentence; G-5.",
+    "quote": "It is almost always better to break a complex list into a bullet or numbered list to make it easier to read.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7674fb0bd3d6",
+    "note": "Rule on commas in lists belongs to the commas page; G-6.",
+    "quote": "commas if the list is simple, such as a list of single words",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "af0ecd652cba",
+    "note": "General writing advice on punctuation clutter; G-5.",
+    "quote": "Try to rewrite into shorter, clearer sentences.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f5c57a9e2728",
+    "note": "Descriptive explanation of what semicolons do in English grammar; G-5.",
+    "quote": "Semicolons can create a break that is stronger than a comma but weaker than a full stop.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3107978d7da7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "d252a0ee65e2",
+      "quote": "Don’t use a semicolon if all it does is make your sentence longer."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Separate sentences preferred over linking with a semicolon.",
+      "parts": [
+       {
+        "block_id": "1cd6de66306a",
+        "quote": "Find out if it’s optional or compulsory before you start. Ask someone to help you if you don’t know the difference."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Using a semicolon to link two sentences.",
+      "parts": [
+       {
+        "block_id": "97003bdc95fa",
+        "quote": "Find out if it’s optional or compulsory before you start; ask someone to help you if you don’t know the difference."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using a semicolon to link sentences",
+    "specification": "Prefer two sentences or a coordinating conjunction instead of joining clauses with a semicolon, especially if it makes the sentence exceed 25 words.",
+    "unit": "sentence",
+    "violation_condition": "a semicolon used to link two independent clauses or sentences where separate sentences or a comma with conjunction could be used",
+    "when": [
+     "Semicolons may link 2 sentences that share or develop an idea if the information is closely related.",
+     "Don’t use a semicolon if all it does is make your sentence longer."
+    ],
+    "why": "G-1/G-4: Primary guideline on avoiding semicolons to join sentences, covering length advice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ed52acc0c61d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ed52acc0c61d",
+      "quote": "Other than in some sentence lists, it’s incorrect to have a sentence fragment on one side of the semicolon."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Full independent clauses on both sides of the semicolon.",
+      "parts": [
+       {
+        "block_id": "91db25a4a068",
+        "quote": "Staff can leave at any time; they don’t need a work schedule."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Sentence fragment following the semicolon.",
+      "parts": [
+       {
+        "block_id": "e618bd043179",
+        "quote": "Staff can leave at any time; no work schedule."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "If you have to use a semicolon, on both sides of the semicolon write full sentences.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence fragment on either side of a semicolon (outside of sentence lists)",
+    "when": [
+     "Does not apply to complex sentence lists where semicolons separate list items."
+    ],
+    "why": "Specific grammatical constraint on semicolon usage between clauses; G-2, G-4."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "75c25f253c86",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "988a0c61c956",
+      "quote": "Do not use them at the end of bullet and numbered list items."
+     },
+     {
+      "block_id": "87892b01c819",
+      "quote": "You don’t need a semicolon at the end of each list item for bullet and numbered lists."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "List items without terminal semicolons.",
+      "parts": [
+       {
+        "block_id": "cc4ddedd9f40",
+        "quote": "The successful applicant will demonstrate:"
+       },
+       {
+        "block_id": "a7c571600a5d",
+        "quote": "integrity, persistence and good judgement"
+       },
+       {
+        "block_id": "680a71d031c3",
+        "quote": "experience in projects of this type"
+       },
+       {
+        "block_id": "dff7b4960fbc",
+        "quote": "a sound understanding of interdepartmental relationships."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "List items ending with semicolons.",
+      "parts": [
+       {
+        "block_id": "97f1dae760db",
+        "quote": "The successful applicant will demonstrate:"
+       },
+       {
+        "block_id": "45e841d8e45d",
+        "quote": "integrity, persistence and good judgement;"
+       },
+       {
+        "block_id": "6562d456c366",
+        "quote": "experience in projects of this type; and"
+       },
+       {
+        "block_id": "2849ea43356a",
+        "quote": "a sound understanding of interdepartmental relationships."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t end bullet and numbered list items with semicolons",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a semicolon at the end of a bullet or numbered list item",
+    "when": [],
+    "why": "Clear structural punctuation prohibition on list items; absorbs intro and body restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8c3312dc9f4e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f1ef031e3e65",
+      "quote": "Separate in-text references with semicolons"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Multiple in-text citations separated by semicolons.",
+      "parts": [
+       {
+        "block_id": "e6990cbf5030",
+        "quote": "Effective leaders are adaptable (Nicoll 2019; Taylor 2018; Weir 2020)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Use a semicolon between each reference when you have more than one in-text reference in brackets.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple in-text references within the same bracketed citation not separated by a semicolon",
+    "when": [
+     "When you have more than one in-text reference inside brackets."
+    ],
+    "why": "G-4: Uses body sentence as rule quote with heading absorbed."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c66738d446dc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "358df84f5137",
+      "quote": "In complex lists, you need semicolons to show what goes with what."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Items containing internal commas separated by semicolons.",
+      "parts": [
+       {
+        "block_id": "9c28730bb1e4",
+        "quote": "The successful applicant will demonstrate integrity, persistence and confidence; experience in projects of this type; and a sound understanding of interdepartmental relationships."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Items containing internal commas separated by semicolons.",
+      "parts": [
+       {
+        "block_id": "582c56472c7b",
+        "quote": "The project will go ahead in Rose Bay, Tasmania; West End, Queensland; and Fitzroy North, Victoria."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "semicolons if the list is complex, such as a list of items that already contain commas or conjunctions.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "items in a complex in-sentence list (where items contain internal commas or conjunctions) separated by commas instead of semicolons",
+    "when": [
+     "Applies when a bullet or numbered list cannot be used and the in-sentence list items already contain commas or conjunctions."
+    ],
+    "why": "G-2/G-4: Rule specifying when semicolons are required in in-sentence lists."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "3107978d7da7",
+    "end": 41,
+    "prefix": "",
+    "quote": "Avoid using a semicolon to link sentences",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "d252a0ee65e2",
+     "end": 133,
+     "prefix": "ge and no longer than 25 words. ",
+     "quote": "Don’t use a semicolon if all it does is make your sentence longer.",
+     "start": 67,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Separate sentences preferred over linking with a semicolon.",
+     "parts": [
+      {
+       "block_id": "1cd6de66306a",
+       "end": 115,
+       "prefix": "",
+       "quote": "Find out if it’s optional or compulsory before you start. Ask someone to help you if you don’t know the difference.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Using a semicolon to link two sentences.",
+     "parts": [
+      {
+       "block_id": "97003bdc95fa",
+       "end": 115,
+       "prefix": "",
+       "quote": "Find out if it’s optional or compulsory before you start; ask someone to help you if you don’t know the difference.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "977b920f0c6f2d12",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Prefer two sentences or a coordinating conjunction instead of joining clauses with a semicolon, especially if it makes the sentence exceed 25 words.",
+    "unit": "sentence",
+    "violation_condition": "a semicolon used to link two independent clauses or sentences where separate sentences or a comma with conjunction could be used"
+   },
+   "when": [
+    "Semicolons may link 2 sentences that share or develop an idea if the information is closely related.",
+    "Don’t use a semicolon if all it does is make your sentence longer."
+   ],
+   "why": "G-1/G-4: Primary guideline on avoiding semicolons to join sentences, covering length advice."
+  },
+  {
+   "anchor": {
+    "block_id": "ed52acc0c61d",
+    "end": 84,
+    "prefix": "",
+    "quote": "If you have to use a semicolon, on both sides of the semicolon write full sentences.",
+    "start": 0,
+    "suffix": " Other than in some sentence lis"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ed52acc0c61d",
+     "end": 192,
+     "prefix": "semicolon write full sentences. ",
+     "quote": "Other than in some sentence lists, it’s incorrect to have a sentence fragment on one side of the semicolon.",
+     "start": 85,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Full independent clauses on both sides of the semicolon.",
+     "parts": [
+      {
+       "block_id": "91db25a4a068",
+       "end": 61,
+       "prefix": "",
+       "quote": "Staff can leave at any time; they don’t need a work schedule.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Sentence fragment following the semicolon.",
+     "parts": [
+      {
+       "block_id": "e618bd043179",
+       "end": 46,
+       "prefix": "",
+       "quote": "Staff can leave at any time; no work schedule.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence fragment on either side of a semicolon (outside of sentence lists)"
+   },
+   "when": [
+    "Does not apply to complex sentence lists where semicolons separate list items."
+   ],
+   "why": "Specific grammatical constraint on semicolon usage between clauses; G-2, G-4."
+  },
+  {
+   "anchor": {
+    "block_id": "75c25f253c86",
+    "end": 56,
+    "prefix": "",
+    "quote": "Don’t end bullet and numbered list items with semicolons",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "988a0c61c956",
+     "end": 137,
+     "prefix": "entences for users if overused. ",
+     "quote": "Do not use them at the end of bullet and numbered list items.",
+     "start": 76,
+     "suffix": ""
+    },
+    {
+     "block_id": "87892b01c819",
+     "end": 86,
+     "prefix": "",
+     "quote": "You don’t need a semicolon at the end of each list item for bullet and numbered lists.",
+     "start": 0,
+     "suffix": " It clutters the list and makes "
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "List items without terminal semicolons.",
+     "parts": [
+      {
+       "block_id": "cc4ddedd9f40",
+       "end": 42,
+       "prefix": "",
+       "quote": "The successful applicant will demonstrate:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a7c571600a5d",
+       "end": 41,
+       "prefix": "",
+       "quote": "integrity, persistence and good judgement",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "680a71d031c3",
+       "end": 35,
+       "prefix": "",
+       "quote": "experience in projects of this type",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "dff7b4960fbc",
+       "end": 57,
+       "prefix": "",
+       "quote": "a sound understanding of interdepartmental relationships.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "List items ending with semicolons.",
+     "parts": [
+      {
+       "block_id": "97f1dae760db",
+       "end": 42,
+       "prefix": "",
+       "quote": "The successful applicant will demonstrate:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "45e841d8e45d",
+       "end": 42,
+       "prefix": "",
+       "quote": "integrity, persistence and good judgement;",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "6562d456c366",
+       "end": 40,
+       "prefix": "",
+       "quote": "experience in projects of this type; and",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "2849ea43356a",
+       "end": 57,
+       "prefix": "",
+       "quote": "a sound understanding of interdepartmental relationships.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "0a2aecb033baee5d",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a semicolon at the end of a bullet or numbered list item"
+   },
+   "when": [],
+   "why": "Clear structural punctuation prohibition on list items; absorbs intro and body restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "8c3312dc9f4e",
+    "end": 97,
+    "prefix": "",
+    "quote": "Use a semicolon between each reference when you have more than one in-text reference in brackets.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f1ef031e3e65",
+     "end": 43,
+     "prefix": "",
+     "quote": "Separate in-text references with semicolons",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Multiple in-text citations separated by semicolons.",
+     "parts": [
+      {
+       "block_id": "e6990cbf5030",
+       "end": 70,
+       "prefix": "",
+       "quote": "Effective leaders are adaptable (Nicoll 2019; Taylor 2018; Weir 2020).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "multiple in-text references within the same bracketed citation not separated by a semicolon"
+   },
+   "when": [
+    "When you have more than one in-text reference inside brackets."
+   ],
+   "why": "G-4: Uses body sentence as rule quote with heading absorbed."
+  },
+  {
+   "anchor": {
+    "block_id": "c66738d446dc",
+    "end": 103,
+    "prefix": "",
+    "quote": "semicolons if the list is complex, such as a list of items that already contain commas or conjunctions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "358df84f5137",
+     "end": 66,
+     "prefix": "",
+     "quote": "In complex lists, you need semicolons to show what goes with what.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Items containing internal commas separated by semicolons.",
+     "parts": [
+      {
+       "block_id": "9c28730bb1e4",
+       "end": 179,
+       "prefix": "",
+       "quote": "The successful applicant will demonstrate integrity, persistence and confidence; experience in projects of this type; and a sound understanding of interdepartmental relationships.",
+       "start": 0,
+       "suffix": " [Semicolons are needed, as some"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Items containing internal commas separated by semicolons.",
+     "parts": [
+      {
+       "block_id": "582c56472c7b",
+       "end": 99,
+       "prefix": "",
+       "quote": "The project will go ahead in Rose Bay, Tasmania; West End, Queensland; and Fitzroy North, Victoria.",
+       "start": 0,
+       "suffix": " [Semicolons are needed, as some"
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "items in a complex in-sentence list (where items contain internal commas or conjunctions) separated by commas instead of semicolons"
+   },
+   "when": [
+    "Applies when a bullet or numbered list cannot be used and the in-sentence list items already contain commas or conjunctions."
+   ],
+   "why": "G-2/G-4: Rule specifying when semicolons are required in in-sentence lists."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4447,
+  "output_tokens": 2831,
+  "reasoning_tokens": 0
+ }
+}

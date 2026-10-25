@@ -1,0 +1,1075 @@
+{
+ "effort": "low",
+ "input_sha256": "63a74ac008286a9e52b50773d6e58fcc3d5358dede8d4ac84e82bb4b6134f6ce",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "22e4201a0658",
+    "end": 66,
+    "prefix": "",
+    "quote": "Brackets and quotation marks change the position of question marks",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: Section header introducing specific bracket/quote placement rules.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f5b67ab21708",
+    "end": 44,
+    "prefix": "",
+    "quote": "Inserted question marks can show uncertainty",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: Permissive ('can show uncertainty', 'can express doubt'); does not create a violation or actionable rule.",
+   "reason": "permission",
+   "seed_uid": "5e5efb49d1b73d2b"
+  },
+  {
+   "anchor": {
+    "block_id": "56808f68b567",
+    "end": 87,
+    "prefix": "",
+    "quote": "Question marks can express doubt and uncertainty about dates or other specific details.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: Expresses an optional usage/permission.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ba62601362bf",
+    "end": 98,
+    "prefix": "",
+    "quote": "Guidance in this manual recommends to avoid questions as headings, except for Easy Read materials.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: Duplicate/cross-reference to headings guidance.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "17d5b1bda9d3",
+    "end": 169,
+    "prefix": "",
+    "quote": "Spellcheckers often recommend that you change indirect questions to end with a question mark. This isn’t always correct. It depends on whether you are asking a question.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: Advisory text addressing spellchecker suggestions.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ed368c297b7c",
+    "end": 63,
+    "prefix": "",
+    "quote": "Rhetorical questions end in a question mark or exclamation mark",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: Explains permissible endings ('can end in a question mark or an exclamation mark'), not establishing a violation distinct from direct questions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0e16a231b3e7",
+    "end": 180,
+    "prefix": "",
+    "quote": "Depending on the context, a rhetorical question can end in a question mark or an exclamation mark. Exclamation marks add emphasis – this can make a rhetorical question sound blunt.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: Descriptive permission and stylistic advice.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a25bf36957b2",
+    "end": 57,
+    "prefix": "",
+    "quote": "To turn indirect questions into direct questions you can:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: How-to advice for rewriting sentences.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/question-marks.md",
+ "page_sha256": "fe8b2e58b00bae6722e144df629e3aa46444f9e0b82ac202e064b6775825063e",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "22e4201a0658",
+    "note": "G-1: Section header introducing specific bracket/quote placement rules.",
+    "quote": "Brackets and quotation marks change the position of question marks",
+    "reason": "section"
+   },
+   {
+    "block_id": "f5b67ab21708",
+    "note": "G-3: Permissive ('can show uncertainty', 'can express doubt'); does not create a violation or actionable rule.",
+    "quote": "Inserted question marks can show uncertainty",
+    "reason": "permission"
+   },
+   {
+    "block_id": "56808f68b567",
+    "note": "G-3: Expresses an optional usage/permission.",
+    "quote": "Question marks can express doubt and uncertainty about dates or other specific details.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "ba62601362bf",
+    "note": "G-6: Duplicate/cross-reference to headings guidance.",
+    "quote": "Guidance in this manual recommends to avoid questions as headings, except for Easy Read materials.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "17d5b1bda9d3",
+    "note": "G-5: Advisory text addressing spellchecker suggestions.",
+    "quote": "Spellcheckers often recommend that you change indirect questions to end with a question mark. This isn’t always correct. It depends on whether you are asking a question.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ed368c297b7c",
+    "note": "G-3: Explains permissible endings ('can end in a question mark or an exclamation mark'), not establishing a violation distinct from direct questions.",
+    "quote": "Rhetorical questions end in a question mark or exclamation mark",
+    "reason": "permission"
+   },
+   {
+    "block_id": "0e16a231b3e7",
+    "note": "G-3: Descriptive permission and stylistic advice.",
+    "quote": "Depending on the context, a rhetorical question can end in a question mark or an exclamation mark. Exclamation marks add emphasis – this can make a rhetorical question sound blunt.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a25bf36957b2",
+    "note": "G-5: How-to advice for rewriting sentences.",
+    "quote": "To turn indirect questions into direct questions you can:",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "37da261b2ca9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "525045981ea7",
+      "quote": "Question marks usually go after the last letter in a sentence"
+     },
+     {
+      "block_id": "37da261b2ca9",
+      "quote": "Like other punctuation marks, question marks stay with the text they refer to."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Usually, this is immediately after the last letter of the last word of the sentence.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a question mark placed with a preceding space before it rather than immediately after the last letter of the sentence or enclosed text",
+    "when": [
+     "unless brackets or quotation marks dictate its relative placement"
+    ],
+    "why": "G-1, G-4: The heading and first sentence state the general placement of question marks immediately following the text."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4236ae3b803c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8b912bed6c66",
+      "quote": "For brackets and quotation marks, place the question mark:"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Question mark inside quotation marks because the question is the quoted text.",
+      "parts": [
+       {
+        "block_id": "274df7bfba00",
+        "quote": "She asked, ‘Is the report due on Tuesday?’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Question mark inside parentheses because the question is the parenthetical text.",
+      "parts": [
+       {
+        "block_id": "305c04a1c24a",
+        "quote": "They decided (and why wouldn’t they?) to cancel the program."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "before a closing bracket or quotation mark if the question is part of the text in the brackets or quotation marks",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a question mark placed outside a closing bracket or quotation mark when the question belongs to the enclosed text",
+    "when": [
+     "the question is part of the text in the brackets or quotation marks"
+    ],
+    "why": "G-1, G-2: Specific positioning rule for question marks inside brackets/quotes."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3bc4c7dcc494",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Question mark outside quotation mark because the surrounding sentence is the question.",
+      "parts": [
+       {
+        "block_id": "ff10ec8b1346",
+        "quote": "What did she mean by ‘the report is due ASAP’?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Question mark outside bracket because the surrounding sentence is the question.",
+      "parts": [
+       {
+        "block_id": "fb475f3135e8",
+        "quote": "Did they decide to cancel the program (the EDTA program)?"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "after the closing bracket or quotation mark if the question is part of the surrounding text.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a question mark placed inside a closing bracket or quotation mark when the question belongs to the surrounding sentence",
+    "when": [
+     "the question is part of the surrounding text"
+    ],
+    "why": "G-1, G-2: Specific positioning rule for question marks outside brackets/quotes."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9d0ddd605b0b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "be20b366fff7",
+      "quote": "Direct questions and requests end in a question mark"
+     },
+     {
+      "block_id": "0ab67f8fc9b1",
+      "quote": "Users expect direct questions and requests to end with a question mark."
+     },
+     {
+      "block_id": "b99a7e8c19d3",
+      "quote": "Requests are often framed as questions."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Interrogative direct question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "75a46e7b04bf",
+        "quote": "Who will attend the meeting next week?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Interrogative direct question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "4b1f6cfcc4d4",
+        "quote": "Whose turn is it to take the minutes?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Interrogative direct question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "6752ebdf2e49",
+        "quote": "Are you ready to start the meeting?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Interrogative direct question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "f55306452a2f",
+        "quote": "Have they finished voting?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Interrogative direct question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "f5bb496d6920",
+        "quote": "Did you attend the meeting?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Interrogative direct question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "d2168cec158f",
+        "quote": "Will the new government deliver a budget surplus?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Interrogative request ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "c93bfffbb425",
+        "quote": "Could you please make your changes by tomorrow?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Direct question not starting with an interrogative word.",
+      "parts": [
+       {
+        "block_id": "8d0d21efabd1",
+        "quote": "That’s your proposal?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Tag question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "71c2f3c67854",
+        "quote": "They would say that, wouldn’t they?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Request framed as a question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "e75208035f56",
+        "quote": "Can you consider who your future colleagues might be?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Request framed as a question ending in a question mark.",
+      "parts": [
+       {
+        "block_id": "a5ed927c1455",
+        "quote": "Can you please upload your edits?"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Direct questions end with a question mark.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a direct question ending with punctuation other than a question mark",
+    "when": [
+     "direct questions and requests framed as questions",
+     "tag questions at the end of a clause",
+     "questions that do not begin with interrogative words (e.g. statement questions)"
+    ],
+    "why": "G-1, G-2, G-4: Covers direct questions, requests framed as questions, tag questions, and statements used as questions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2f4f899b7d34",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3ad305134543",
+      "quote": "Indirect questions and commands don’t use a question mark"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Indirect question properly ending in a full stop.",
+      "parts": [
+       {
+        "block_id": "25566aeea0db",
+        "quote": "He asked who will attend the meeting next week."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Indirect question in a heading without a question mark (trailing bracket gloss omitted per E-1).",
+      "parts": [
+       {
+        "block_id": "bed08778dcf0",
+        "quote": "Who we are"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Indirect question in a heading without a question mark (trailing bracket gloss omitted per E-1).",
+      "parts": [
+       {
+        "block_id": "3c32219923dd",
+        "quote": "How to submit a claim"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Indirect questions don’t end with question marks, even if they include a word such as ‘who’ or ‘does’.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an indirect question ending with a question mark",
+    "when": [],
+    "why": "G-1, G-2: Rule prohibiting question marks on indirect questions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "19a2e8e0dfc3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d30577de5734",
+      "quote": "Commands and instructions don’t suggest that people have a choice."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Command ending with a full stop.",
+      "parts": [
+       {
+        "block_id": "f5d2835110e3",
+        "quote": "Consider who your future colleagues might be."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Instruction ending with a full stop.",
+      "parts": [
+       {
+        "block_id": "9e2e9cf5dfc1",
+        "quote": "Please upload your edits."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Instructions and commands aren’t framed as questions. They don’t start with words such as ‘what’, ‘are’ or ‘does’,and don’t end with a question mark.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an instruction or command ending with a question mark",
+    "when": [],
+    "why": "G-1, G-2: Prohibition against ending instructions and commands with a question mark."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "37da261b2ca9",
+    "end": 163,
+    "prefix": "ay with the text they refer to. ",
+    "quote": "Usually, this is immediately after the last letter of the last word of the sentence.",
+    "start": 79,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "525045981ea7",
+     "end": 61,
+     "prefix": "",
+     "quote": "Question marks usually go after the last letter in a sentence",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "37da261b2ca9",
+     "end": 78,
+     "prefix": "",
+     "quote": "Like other punctuation marks, question marks stay with the text they refer to.",
+     "start": 0,
+     "suffix": " Usually, this is immediately af"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a question mark placed with a preceding space before it rather than immediately after the last letter of the sentence or enclosed text"
+   },
+   "when": [
+    "unless brackets or quotation marks dictate its relative placement"
+   ],
+   "why": "G-1, G-4: The heading and first sentence state the general placement of question marks immediately following the text."
+  },
+  {
+   "anchor": {
+    "block_id": "4236ae3b803c",
+    "end": 113,
+    "prefix": "",
+    "quote": "before a closing bracket or quotation mark if the question is part of the text in the brackets or quotation marks",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8b912bed6c66",
+     "end": 58,
+     "prefix": "",
+     "quote": "For brackets and quotation marks, place the question mark:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Question mark inside quotation marks because the question is the quoted text.",
+     "parts": [
+      {
+       "block_id": "274df7bfba00",
+       "end": 42,
+       "prefix": "",
+       "quote": "She asked, ‘Is the report due on Tuesday?’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Question mark inside parentheses because the question is the parenthetical text.",
+     "parts": [
+      {
+       "block_id": "305c04a1c24a",
+       "end": 60,
+       "prefix": "",
+       "quote": "They decided (and why wouldn’t they?) to cancel the program.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a question mark placed outside a closing bracket or quotation mark when the question belongs to the enclosed text"
+   },
+   "when": [
+    "the question is part of the text in the brackets or quotation marks"
+   ],
+   "why": "G-1, G-2: Specific positioning rule for question marks inside brackets/quotes."
+  },
+  {
+   "anchor": {
+    "block_id": "3bc4c7dcc494",
+    "end": 92,
+    "prefix": "",
+    "quote": "after the closing bracket or quotation mark if the question is part of the surrounding text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Question mark outside quotation mark because the surrounding sentence is the question.",
+     "parts": [
+      {
+       "block_id": "ff10ec8b1346",
+       "end": 46,
+       "prefix": "",
+       "quote": "What did she mean by ‘the report is due ASAP’?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Question mark outside bracket because the surrounding sentence is the question.",
+     "parts": [
+      {
+       "block_id": "fb475f3135e8",
+       "end": 57,
+       "prefix": "",
+       "quote": "Did they decide to cancel the program (the EDTA program)?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a question mark placed inside a closing bracket or quotation mark when the question belongs to the surrounding sentence"
+   },
+   "when": [
+    "the question is part of the surrounding text"
+   ],
+   "why": "G-1, G-2: Specific positioning rule for question marks outside brackets/quotes."
+  },
+  {
+   "anchor": {
+    "block_id": "9d0ddd605b0b",
+    "end": 42,
+    "prefix": "",
+    "quote": "Direct questions end with a question mark.",
+    "start": 0,
+    "suffix": " Most begin with one of these wo"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "be20b366fff7",
+     "end": 52,
+     "prefix": "",
+     "quote": "Direct questions and requests end in a question mark",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0ab67f8fc9b1",
+     "end": 71,
+     "prefix": "",
+     "quote": "Users expect direct questions and requests to end with a question mark.",
+     "start": 0,
+     "suffix": " Indirect questions, commands an"
+    },
+    {
+     "block_id": "b99a7e8c19d3",
+     "end": 39,
+     "prefix": "",
+     "quote": "Requests are often framed as questions.",
+     "start": 0,
+     "suffix": " Requests suggest that people ha"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Interrogative direct question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "75a46e7b04bf",
+       "end": 38,
+       "prefix": "",
+       "quote": "Who will attend the meeting next week?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Interrogative direct question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "4b1f6cfcc4d4",
+       "end": 37,
+       "prefix": "",
+       "quote": "Whose turn is it to take the minutes?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Interrogative direct question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "6752ebdf2e49",
+       "end": 35,
+       "prefix": "",
+       "quote": "Are you ready to start the meeting?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Interrogative direct question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "f55306452a2f",
+       "end": 26,
+       "prefix": "",
+       "quote": "Have they finished voting?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Interrogative direct question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "f5bb496d6920",
+       "end": 27,
+       "prefix": "",
+       "quote": "Did you attend the meeting?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Interrogative direct question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "d2168cec158f",
+       "end": 49,
+       "prefix": "",
+       "quote": "Will the new government deliver a budget surplus?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Interrogative request ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "c93bfffbb425",
+       "end": 47,
+       "prefix": "",
+       "quote": "Could you please make your changes by tomorrow?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Direct question not starting with an interrogative word.",
+     "parts": [
+      {
+       "block_id": "8d0d21efabd1",
+       "end": 21,
+       "prefix": "",
+       "quote": "That’s your proposal?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Tag question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "71c2f3c67854",
+       "end": 35,
+       "prefix": "",
+       "quote": "They would say that, wouldn’t they?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Request framed as a question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "e75208035f56",
+       "end": 53,
+       "prefix": "",
+       "quote": "Can you consider who your future colleagues might be?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Request framed as a question ending in a question mark.",
+     "parts": [
+      {
+       "block_id": "a5ed927c1455",
+       "end": 33,
+       "prefix": "",
+       "quote": "Can you please upload your edits?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a direct question ending with punctuation other than a question mark"
+   },
+   "when": [
+    "direct questions and requests framed as questions",
+    "tag questions at the end of a clause",
+    "questions that do not begin with interrogative words (e.g. statement questions)"
+   ],
+   "why": "G-1, G-2, G-4: Covers direct questions, requests framed as questions, tag questions, and statements used as questions."
+  },
+  {
+   "anchor": {
+    "block_id": "2f4f899b7d34",
+    "end": 102,
+    "prefix": "",
+    "quote": "Indirect questions don’t end with question marks, even if they include a word such as ‘who’ or ‘does’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3ad305134543",
+     "end": 57,
+     "prefix": "",
+     "quote": "Indirect questions and commands don’t use a question mark",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Indirect question properly ending in a full stop.",
+     "parts": [
+      {
+       "block_id": "25566aeea0db",
+       "end": 47,
+       "prefix": "",
+       "quote": "He asked who will attend the meeting next week.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Indirect question in a heading without a question mark (trailing bracket gloss omitted per E-1).",
+     "parts": [
+      {
+       "block_id": "bed08778dcf0",
+       "end": 10,
+       "prefix": "",
+       "quote": "Who we are",
+       "start": 0,
+       "suffix": " [Heading]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Indirect question in a heading without a question mark (trailing bracket gloss omitted per E-1).",
+     "parts": [
+      {
+       "block_id": "3c32219923dd",
+       "end": 21,
+       "prefix": "",
+       "quote": "How to submit a claim",
+       "start": 0,
+       "suffix": " [Heading]"
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an indirect question ending with a question mark"
+   },
+   "when": [],
+   "why": "G-1, G-2: Rule prohibiting question marks on indirect questions."
+  },
+  {
+   "anchor": {
+    "block_id": "19a2e8e0dfc3",
+    "end": 149,
+    "prefix": "",
+    "quote": "Instructions and commands aren’t framed as questions. They don’t start with words such as ‘what’, ‘are’ or ‘does’,and don’t end with a question mark.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d30577de5734",
+     "end": 66,
+     "prefix": "",
+     "quote": "Commands and instructions don’t suggest that people have a choice.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Command ending with a full stop.",
+     "parts": [
+      {
+       "block_id": "f5d2835110e3",
+       "end": 45,
+       "prefix": "",
+       "quote": "Consider who your future colleagues might be.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Instruction ending with a full stop.",
+     "parts": [
+      {
+       "block_id": "9e2e9cf5dfc1",
+       "end": 25,
+       "prefix": "",
+       "quote": "Please upload your edits.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an instruction or command ending with a question mark"
+   },
+   "when": [],
+   "why": "G-1, G-2: Prohibition against ending instructions and commands with a question mark."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4861,
+  "output_tokens": 3864,
+  "reasoning_tokens": 0
+ }
+}

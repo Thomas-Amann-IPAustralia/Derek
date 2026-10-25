@@ -1,0 +1,412 @@
+{
+ "effort": "high",
+ "input_sha256": "3b2eaa5be00bd419e869da8c169444454c43cd6238476b76fc557539e9dbbe28",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "33865366dddc",
+    "end": 102,
+    "prefix": "",
+    "quote": "To decide which form of the verb you need, find its subject and ask ‘who’ or ‘what’ is doing the verb.",
+    "start": 0,
+    "suffix": " Using the first example:"
+   },
+   "note": "G-5: a method for checking agreement, not an additional property the resulting text must have.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b6328c5d1582",
+    "end": 48,
+    "prefix": "",
+    "quote": "Sentences contain at least a subject and a verb.",
+    "start": 0,
+    "suffix": " Keep the relationship between t"
+   },
+   "note": "Describes sentence structure; it does not independently instruct writers to include explicit subjects and verbs.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a6f96722f040",
+    "end": 42,
+    "prefix": "",
+    "quote": "Some verbs need an object to have meaning.",
+    "start": 0,
+    "suffix": " For example, you don’t just nee"
+   },
+   "note": "Introduces the grammatical category of transitive verbs rather than stating a separate writing instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8308362ee0cb",
+    "end": 83,
+    "prefix": "",
+    "quote": "You can use verbs to describe a fact, express a wish, or make a command or request.",
+    "start": 0,
+    "suffix": " The term for this use is ‘mood’"
+   },
+   "note": "Explains the functions of verb moods; it does not require any particular mood.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1e7fb2cf24c4",
+    "end": 113,
+    "prefix": "The imperative mood is direct. ",
+    "quote": "It works well for instructions and where there is limited space, such as in forms.",
+    "start": 31,
+    "suffix": ""
+   },
+   "note": "Describes suitable uses of the imperative mood without requiring it or preferring it over a named alternative.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cf7229d94be6",
+    "end": 57,
+    "prefix": "",
+    "quote": "Be deliberate about the tone the content needs to convey.",
+    "start": 0,
+    "suffix": " Imperative commands can seem bl"
+   },
+   "note": "G-5: asks the writer to consider tone but supplies no textual condition that constitutes a violation.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9f2861baccce",
+    "end": 137,
+    "prefix": "w the mood, only the main verb. ",
+    "quote": "Recommendations can follow this formula.",
+    "start": 97,
+    "suffix": ""
+   },
+   "note": "G-3: permits a subjunctive construction for recommendations without requiring that construction.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "00ea4f469927",
+    "end": 85,
+    "prefix": "",
+    "quote": "You can use auxiliary verbs to convey ability, possibility, permission or obligation.",
+    "start": 0,
+    "suffix": " This affects the tone of your w"
+   },
+   "note": "Explains what auxiliary verbs can convey rather than prescribing their use.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "378bf19b2fee",
+    "end": 42,
+    "prefix": "",
+    "quote": "Phrasal verbs need a preposition or adverb",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the grammatical composition of phrasal verbs rather than issuing a separate instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9b2a66d5f4d5",
+    "end": 166,
+    "prefix": "hey can also go with an adverb. ",
+    "quote": "Check the dictionary entry for the verb to use the correct combination.",
+    "start": 95,
+    "suffix": ""
+   },
+   "note": "G-5: consulting a dictionary is a writer action, not a property that can be checked in the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ace65243f617",
+    "end": 94,
+    "prefix": "",
+    "quote": "When phrasal verbs need an object, you can put the object between the verb and its other part.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: allows an alternative object position; neither illustrated position is presented as wrong.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/verbs.md",
+ "page_sha256": "a1d73e2e33b445cf44570c0a0352b9efb540e71ab1aeebf3064c1964cef8143b",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "33865366dddc",
+    "note": "G-5: a method for checking agreement, not an additional property the resulting text must have.",
+    "quote": "To decide which form of the verb you need, find its subject and ask ‘who’ or ‘what’ is doing the verb.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b6328c5d1582",
+    "note": "Describes sentence structure; it does not independently instruct writers to include explicit subjects and verbs.",
+    "quote": "Sentences contain at least a subject and a verb.",
+    "reason": "description"
+   },
+   {
+    "block_id": "a6f96722f040",
+    "note": "Introduces the grammatical category of transitive verbs rather than stating a separate writing instruction.",
+    "quote": "Some verbs need an object to have meaning.",
+    "reason": "description"
+   },
+   {
+    "block_id": "8308362ee0cb",
+    "note": "Explains the functions of verb moods; it does not require any particular mood.",
+    "quote": "You can use verbs to describe a fact, express a wish, or make a command or request.",
+    "reason": "description"
+   },
+   {
+    "block_id": "1e7fb2cf24c4",
+    "note": "Describes suitable uses of the imperative mood without requiring it or preferring it over a named alternative.",
+    "quote": "It works well for instructions and where there is limited space, such as in forms.",
+    "reason": "description"
+   },
+   {
+    "block_id": "cf7229d94be6",
+    "note": "G-5: asks the writer to consider tone but supplies no textual condition that constitutes a violation.",
+    "quote": "Be deliberate about the tone the content needs to convey.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9f2861baccce",
+    "note": "G-3: permits a subjunctive construction for recommendations without requiring that construction.",
+    "quote": "Recommendations can follow this formula.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "00ea4f469927",
+    "note": "Explains what auxiliary verbs can convey rather than prescribing their use.",
+    "quote": "You can use auxiliary verbs to convey ability, possibility, permission or obligation.",
+    "reason": "description"
+   },
+   {
+    "block_id": "378bf19b2fee",
+    "note": "Describes the grammatical composition of phrasal verbs rather than issuing a separate instruction.",
+    "quote": "Phrasal verbs need a preposition or adverb",
+    "reason": "description"
+   },
+   {
+    "block_id": "9b2a66d5f4d5",
+    "note": "G-5: consulting a dictionary is a writer action, not a property that can be checked in the resulting text.",
+    "quote": "Check the dictionary entry for the verb to use the correct combination.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ace65243f617",
+    "note": "G-3: allows an alternative object position; neither illustrated position is presented as wrong.",
+    "quote": "When phrasal verbs need an object, you can put the object between the verb and its other part.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ada85dd5f779",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bc9c228aa0a9",
+      "quote": "The form of the verb changes to show whether the subject is singular or plural (the number)."
+     },
+     {
+      "block_id": "c45f2f5f59d9",
+      "quote": "For example, a common mistake is to use the plural form of a verb with a collective noun."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c66409fa5ddf",
+        "quote": "The analyst works in the office on Mondays."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "751591799d28",
+        "quote": "Jan work in the office on Mondays."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Verbs must ‘agree’ with the subject",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A verb has a singular or plural form that does not agree with its grammatical subject.",
+    "when": [
+     "Agreement depends on the grammatical subject, including when the subject is a collective noun."
+    ],
+    "why": "G-4 combines the heading and its explanation; G-2 keeps collective-noun agreement within the same check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b6328c5d1582",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep the relationship between the grammatical subject and the verb clear to users.",
+    "specification": "The page does not define an operational test for ‘clear to users’. This concerns an obscured subject–verb relationship, rather than simply incorrect number agreement.",
+    "unit": "sentence",
+    "violation_condition": "A sentence's wording obscures which grammatical subject belongs to a verb.",
+    "when": [],
+    "why": "This is an instruction about a property of the text, not G-5 process advice; obscured relationships are distinct from incorrect agreement."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "ada85dd5f779",
+    "end": 35,
+    "prefix": "",
+    "quote": "Verbs must ‘agree’ with the subject",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bc9c228aa0a9",
+     "end": 92,
+     "prefix": "",
+     "quote": "The form of the verb changes to show whether the subject is singular or plural (the number).",
+     "start": 0,
+     "suffix": " This is called ‘subject–verb ag"
+    },
+    {
+     "block_id": "c45f2f5f59d9",
+     "end": 173,
+     "prefix": "eement is not always intuitive. ",
+     "quote": "For example, a common mistake is to use the plural form of a verb with a collective noun.",
+     "start": 84,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c66409fa5ddf",
+       "end": 43,
+       "prefix": "",
+       "quote": "The analyst works in the office on Mondays.",
+       "start": 0,
+       "suffix": " [There is one specific analyst,"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "751591799d28",
+       "end": 34,
+       "prefix": "",
+       "quote": "Jan work in the office on Mondays.",
+       "start": 0,
+       "suffix": " [There is one person, Jan, so t"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "45f17035050d6698",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A verb has a singular or plural form that does not agree with its grammatical subject."
+   },
+   "when": [
+    "Agreement depends on the grammatical subject, including when the subject is a collective noun."
+   ],
+   "why": "G-4 combines the heading and its explanation; G-2 keeps collective-noun agreement within the same check."
+  },
+  {
+   "anchor": {
+    "block_id": "b6328c5d1582",
+    "end": 131,
+    "prefix": " at least a subject and a verb. ",
+    "quote": "Keep the relationship between the grammatical subject and the verb clear to users.",
+    "start": 49,
+    "suffix": " This relationship is the basis "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define an operational test for ‘clear to users’. This concerns an obscured subject–verb relationship, rather than simply incorrect number agreement.",
+    "unit": "sentence",
+    "violation_condition": "A sentence's wording obscures which grammatical subject belongs to a verb."
+   },
+   "when": [],
+   "why": "This is an instruction about a property of the text, not G-5 process advice; obscured relationships are distinct from incorrect agreement."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5919,
+  "output_tokens": 3802,
+  "reasoning_tokens": 2439
+ }
+}

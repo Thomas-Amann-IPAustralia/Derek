@@ -1,0 +1,1875 @@
+{
+ "effort": "high",
+ "input_sha256": "bb7182fa3462c1818d9827f3805aaab8eccfc5f58b42768a6793351214711d47",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a583c062c5c2",
+    "end": 160,
+    "prefix": "ographic terms in your content. ",
+    "quote": "Refer to landmark features, regions and compass points correctly.",
+    "start": 95,
+    "suffix": ""
+   },
+   "note": "General introductory advice; the actionable requirements appear below.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "055cca8401a5",
+    "end": 52,
+    "prefix": "",
+    "quote": "Check official place names and style them correctly.",
+    "start": 0,
+    "suffix": " You can check the spelling of a"
+   },
+   "note": "G-5: checking and following the correct style are writer actions, not independently detectable text properties.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "055cca8401a5",
+    "end": 141,
+    "prefix": "names and style them correctly. ",
+    "quote": "You can check the spelling of an official name using the Australian Place Names dataset.",
+    "start": 53,
+    "suffix": ""
+   },
+   "note": "G-5: identifies a checking resource rather than a separate textual requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e6faa2dc7159",
+    "end": 108,
+    "prefix": "",
+    "quote": "The full names of mountains, rivers, valleys, bays, islands and other features always take initial capitals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the official-name capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "79e7f0769e83",
+    "end": 33,
+    "prefix": "",
+    "quote": "Write generic terms in lower case",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body sentence supplies the selected wording of the generic-term rule.",
+   "reason": "restatement",
+   "seed_uid": "692a996d07d6543d"
+  },
+  {
+   "anchor": {
+    "block_id": "a710b14b582e",
+    "end": 111,
+    "prefix": "",
+    "quote": "When using the same generic term for 2 or more names in the same sentence, use lower case for the generic term.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: a shared generic term is a condition of the generic-capitalisation check, not a separate violation.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d94bf6f016ae",
+    "end": 108,
+    "prefix": "",
+    "quote": "Keep the initial capital when the general term is a well-recognised abbreviation and works as a proper name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: absorbed into proper-name capitalisation and recorded as an exception to generic lower case.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a9e4bdddea2e",
+    "end": 73,
+    "prefix": "",
+    "quote": "Don’t use an initial capital if you’re using the noun in a generic sense.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the generic-term capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4931f9c057a3",
+    "end": 23,
+    "prefix": "",
+    "quote": "Limit abbreviated names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the distinct requirements for ‘Mt’ consistency, justified abbreviation and authorised forms.",
+   "reason": "section",
+   "seed_uid": "520763af29a9f8b2"
+  },
+  {
+   "anchor": {
+    "block_id": "d33632beca74",
+    "end": 138,
+    "prefix": "ion consistently in content and ",
+    "quote": "use initial capitals.",
+    "start": 117,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: absorbed into the capitalisation check for topographic names and their accepted shortened forms.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fdbc85ab8c1c",
+    "end": 61,
+    "prefix": "",
+    "quote": "Spell out the names of other topographic features if you can.",
+    "start": 0,
+    "suffix": " Use the abbreviated form only w"
+   },
+   "note": "G-2 and G-4: consolidated with the following sentence specifying when abbreviation is justified.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6dc3c3493898",
+    "end": 68,
+    "prefix": "",
+    "quote": "Don’t use an apostrophe for topographic terms involving possessives.",
+    "start": 0,
+    "suffix": " Official place names are not po"
+   },
+   "note": "G-4: repeats the selected heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6dc3c3493898",
+    "end": 148,
+    "prefix": "ic terms involving possessives. ",
+    "quote": "Official place names are not possessive and do not usually include punctuation.",
+    "start": 69,
+    "suffix": ""
+   },
+   "note": "Explains the apostrophe rule; ‘do not usually’ does not establish a separate blanket prohibition on punctuation.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "87a9826548d3",
+    "end": 52,
+    "prefix": "",
+    "quote": "Refer to related guidance on Australian place names.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: navigation to related guidance is not a property of the checked text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "35ad7bf6fc64",
+    "end": 31,
+    "prefix": "",
+    "quote": "Spell the plural form correctly",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body provides the actionable requirement to add ‘s’ or ‘es’.",
+   "reason": "restatement",
+   "seed_uid": "923fe12af71086d8"
+  },
+  {
+   "anchor": {
+    "block_id": "bff1b27fdf50",
+    "end": 53,
+    "prefix": "",
+    "quote": "In text, write the points of a compass in lower case.",
+    "start": 0,
+    "suffix": " Use hyphens for points such as "
+   },
+   "note": "G-4: repeats the selected compass-point capitalisation heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "423855651df3",
+    "end": 75,
+    "prefix": "",
+    "quote": "You can use initialisms in tables, illustrations and some specialist works.",
+    "start": 0,
+    "suffix": " Always use capital letters with"
+   },
+   "note": "G-3: recorded as an exception and as context for the initialism-formatting rules; not independently enforceable.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e0bb227fb920",
+    "end": 67,
+    "prefix": "",
+    "quote": "Initialisms often identify the points on a compass in illustrations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes an illustration context; it is neither a further instruction nor a textual example of an initialism.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/topographic-terms.md",
+ "page_sha256": "e8a3dce5f3bef244e028e18c7b30b22f69504683d5cb092b6bdc633c0ab992b3",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a583c062c5c2",
+    "note": "General introductory advice; the actionable requirements appear below.",
+    "quote": "Refer to landmark features, regions and compass points correctly.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "055cca8401a5",
+    "note": "G-5: checking and following the correct style are writer actions, not independently detectable text properties.",
+    "quote": "Check official place names and style them correctly.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "055cca8401a5",
+    "note": "G-5: identifies a checking resource rather than a separate textual requirement.",
+    "quote": "You can check the spelling of an official name using the Australian Place Names dataset.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e6faa2dc7159",
+    "note": "G-4: absorbed into the official-name capitalisation rule.",
+    "quote": "The full names of mountains, rivers, valleys, bays, islands and other features always take initial capitals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "79e7f0769e83",
+    "note": "G-4: the body sentence supplies the selected wording of the generic-term rule.",
+    "quote": "Write generic terms in lower case",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a710b14b582e",
+    "note": "G-2: a shared generic term is a condition of the generic-capitalisation check, not a separate violation.",
+    "quote": "When using the same generic term for 2 or more names in the same sentence, use lower case for the generic term.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d94bf6f016ae",
+    "note": "G-2: absorbed into proper-name capitalisation and recorded as an exception to generic lower case.",
+    "quote": "Keep the initial capital when the general term is a well-recognised abbreviation and works as a proper name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a9e4bdddea2e",
+    "note": "G-4: repeats the generic-term capitalisation rule.",
+    "quote": "Don’t use an initial capital if you’re using the noun in a generic sense.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4931f9c057a3",
+    "note": "G-1: groups the distinct requirements for ‘Mt’ consistency, justified abbreviation and authorised forms.",
+    "quote": "Limit abbreviated names",
+    "reason": "section"
+   },
+   {
+    "block_id": "d33632beca74",
+    "note": "G-2 and G-4: absorbed into the capitalisation check for topographic names and their accepted shortened forms.",
+    "quote": "use initial capitals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "fdbc85ab8c1c",
+    "note": "G-2 and G-4: consolidated with the following sentence specifying when abbreviation is justified.",
+    "quote": "Spell out the names of other topographic features if you can.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6dc3c3493898",
+    "note": "G-4: repeats the selected heading.",
+    "quote": "Don’t use an apostrophe for topographic terms involving possessives.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6dc3c3493898",
+    "note": "Explains the apostrophe rule; ‘do not usually’ does not establish a separate blanket prohibition on punctuation.",
+    "quote": "Official place names are not possessive and do not usually include punctuation.",
+    "reason": "description"
+   },
+   {
+    "block_id": "87a9826548d3",
+    "note": "G-5: navigation to related guidance is not a property of the checked text.",
+    "quote": "Refer to related guidance on Australian place names.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "35ad7bf6fc64",
+    "note": "G-4: the body provides the actionable requirement to add ‘s’ or ‘es’.",
+    "quote": "Spell the plural form correctly",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bff1b27fdf50",
+    "note": "G-4: repeats the selected compass-point capitalisation heading.",
+    "quote": "In text, write the points of a compass in lower case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "423855651df3",
+    "note": "G-3: recorded as an exception and as context for the initialism-formatting rules; not independently enforceable.",
+    "quote": "You can use initialisms in tables, illustrations and some specialist works.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "e0bb227fb920",
+    "note": "Describes an illustration context; it is neither a further instruction nor a textual example of an initialism.",
+    "quote": "Initialisms often identify the points on a compass in illustrations",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "738bf9ea92fc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e6faa2dc7159",
+      "quote": "The full names of mountains, rivers, valleys, bays, islands and other features always take initial capitals."
+     },
+     {
+      "block_id": "39ae94927f5a",
+      "quote": "Some shortened forms that are popular names or nicknames are also capitalised."
+     },
+     {
+      "block_id": "d94bf6f016ae",
+      "quote": "Keep the initial capital when the general term is a well-recognised abbreviation and works as a proper name."
+     },
+     {
+      "block_id": "d33632beca74",
+      "quote": "use initial capitals."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9160e30c3f58",
+        "quote": "the Hunter Valley"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8b41251af252",
+        "quote": "the Three Sisters"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "907fbd645dd5",
+        "quote": "the Paroo River"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7d0114052b1e",
+        "quote": "The Snowy Mountains can also be called the ‘Snowies’."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "36476b41c362",
+        "quote": "The northern part of the Northern Territory is known as the ‘Top End’."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d53162ed7c6a",
+        "quote": "The Great Barrier Reef is also called ‘the Reef’."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "33f75e2ede51",
+        "quote": "The Gulf of Carpentaria is also known as ‘the Gulf’."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7e0d5f2d2660",
+        "quote": "Mt Tennent is part of Namadgi National Park."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Write official names with capitals",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An official topographic name or an established proper-name shortened form lacks its required initial capitals.",
+    "when": [
+     "Applies to the full names of mountains, rivers, valleys, bays, islands and other topographic features.",
+     "Also applies to established popular names and nicknames that are capitalised as proper names.",
+     "A well-recognised shortened generic term retains its capital when it works as a proper name, such as ‘the Reef’.",
+     "The mountain abbreviation ‘Mt’ takes an initial capital."
+    ],
+    "why": "G-2 consolidates the full-name and established shortened-name cases into one capitalisation check; G-4 absorbs their restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ab171d04d503",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "79e7f0769e83",
+      "quote": "Write generic terms in lower case"
+     },
+     {
+      "block_id": "a710b14b582e",
+      "quote": "When using the same generic term for 2 or more names in the same sentence, use lower case for the generic term."
+     },
+     {
+      "block_id": "a9e4bdddea2e",
+      "quote": "Don’t use an initial capital if you’re using the noun in a generic sense."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e894d22e457a",
+        "quote": "I paddled a kayak 200 km down the Balonne River. The river was in flood for some of the trip."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a7b7460a7f0a",
+        "quote": "The Barossa and Hunter valleys are important winemaking areas."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "511238bc05f8",
+        "quote": "The Barossa Valley is in South Australia and the Hunter Valley is in New South Wales."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2ae66911993e",
+        "quote": "The Amazon rainforest is vital to the health of our planet."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "In most cases, don’t use initial capitals when you use the name as a generic term.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A topographic term has an initial capital even though it is used generically rather than as part of a proper name.",
+    "when": [
+     "Includes a generic reference back to a named feature, such as ‘the river’.",
+     "Includes a generic term shared by 2 or more names in the same sentence.",
+     "Includes a generic noun following a name when that noun is not part of the official name.",
+     "Does not apply when the term is a well-recognised shortened form functioning as a proper name.",
+     "Does not remove capitals from a term that remains part of each separately written proper name."
+    ],
+    "why": "G-2 treats generic references, shared generic terms and unofficial descriptors as cases of the same check; the proper-name exception limits that check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d33632beca74",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7e0d5f2d2660",
+        "quote": "Mt Tennent is part of Namadgi National Park."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the abbreviation consistently in content",
+    "specification": "Interpret consistency as using the same choice, ‘Mt’ or ‘Mount’, for mountain names throughout a content item once the abbreviation is adopted. The page does not explicitly define the scope of consistency.",
+    "unit": "document",
+    "violation_condition": "Content uses ‘Mt’ for mountain names but inconsistently switches between abbreviated ‘Mt’ and spelled-out ‘Mount’.",
+    "when": [
+     "Applies when the content uses the mountain abbreviation ‘Mt’.",
+     "The sentence specifically discusses ‘Mt’; it does not explicitly establish a consistency rule for every topographic abbreviation."
+    ],
+    "why": "The consistency requirement is distinct from capitalisation; G-4 keeps the latter with the existing capitalisation rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fdbc85ab8c1c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "fdbc85ab8c1c",
+      "quote": "Spell out the names of other topographic features if you can."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the abbreviated form only where there’s limited space or a lot of repetition, such as in tables and maps.",
+    "specification": "The page does not define how much repetition is ‘a lot’ or how to establish that space is limited. Those conditions require editorial judgement.",
+    "unit": "document",
+    "violation_condition": "A topographic feature other than a mountain is abbreviated where neither limited space nor substantial repetition justifies the abbreviation.",
+    "when": [
+     "Applies to topographic features other than mountains using ‘Mt’.",
+     "Abbreviation is permitted where space is limited or there is a lot of repetition.",
+     "Tables and maps are examples of contexts that may justify abbreviation, not an exhaustive list."
+    ],
+    "why": "G-2 combines the spelling-out instruction with its limited-space and repetition exceptions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "33a2b0ff7808",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2a9c0d17c6fa",
+        "quote": "C Tribulation"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "77915dbc9263",
+        "quote": "L Burley Griffin"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6a4ab9bc572d",
+        "quote": "Murray R"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2af06a00b039",
+        "quote": "Green Is"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1693d30dce33",
+        "quote": "Keppel Bay Is"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use Geoscience Australia’s authorised abbreviations.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An abbreviated topographic feature term uses a form that is not authorised by Geoscience Australia.",
+    "when": [
+     "Applies when a topographic feature term is abbreviated."
+    ],
+    "why": "The authorised form is a separate lookup check from whether abbreviation is justified."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8e60d9472bbd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6dc3c3493898",
+      "quote": "Don’t use an apostrophe for topographic terms involving possessives."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6da83b5da14f",
+        "quote": "Careys Peak"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "84bcb0190b28",
+        "quote": "Carey’s Peak"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use an apostrophe for possessive names",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A topographic name contains an apostrophe inserted to mark an apparent possessive.",
+    "when": [
+     "Applies to possessive-looking elements within topographic names.",
+     "The explanatory statement that place names do not usually include punctuation is not a blanket prohibition on every punctuation mark."
+    ],
+    "why": "G-4 combines the heading and body instruction; E-2 attaches the explicit Correct/Incorrect pair to this prohibition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "260c19f0fbaf",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "35ad7bf6fc64",
+      "quote": "Spell the plural form correctly"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5dfd2efd341f",
+        "quote": "There are 4 Mount Wellingtons in Australia but only one Mount Coot-tha."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c50d0b242153",
+        "quote": "There are 3 Mount Jameses in Australia. There is one in Queensland, one in South Australia and one in Western Australia."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The plural of any topographic name is formed simply by adding ‘s’ or ‘es’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A plural topographic name is formed by something other than adding the appropriate ‘s’ or ‘es’ ending to the name.",
+    "when": [
+     "Applies when referring to multiple places bearing the same topographic name."
+    ],
+    "why": "G-4 selects the actionable body wording rather than the vague heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0c0664d4d321",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bff1b27fdf50",
+      "quote": "In text, write the points of a compass in lower case."
+     },
+     {
+      "block_id": "423855651df3",
+      "quote": "You can use initialisms in tables, illustrations and some specialist works."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "502d2a0a96b5",
+        "quote": "south"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e88caae98bfd",
+        "quote": "north-east"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1022da3da63d",
+        "quote": "west-north-west"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "adbb0275615c",
+        "quote": "A north-westerly wind was blowing the fire towards the town."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a2f12e3e85bf",
+        "quote": "The car was 30 degrees east of where it should have been."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e45a7aaa99ba",
+        "quote": "A cool change was coming from the south."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write compass points in lower case",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A spelled-out compass point used as a direction has an unnecessary capital letter.",
+    "when": [
+     "Applies to spelled-out compass directions in text, including directional forms such as ‘north-westerly’.",
+     "Does not apply to compass-point initialisms used in tables, illustrations and some specialist works.",
+     "Does not treat the capitalisation of an official geographic name as directional capitalisation.",
+     "An ordinary sentence-initial capital is not an unnecessary compass-point capital."
+    ],
+    "why": "G-4 combines the heading and restatement; G-3 records the initialism permission as an exception rather than a separate rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bff1b27fdf50",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e88caae98bfd",
+        "quote": "north-east"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1022da3da63d",
+        "quote": "west-north-west"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "adbb0275615c",
+        "quote": "A north-westerly wind was blowing the fire towards the town."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use hyphens for points such as ‘north-east’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A spelled-out compound compass point lacks a hyphen between its directional components.",
+    "when": [
+     "Applies to compound compass points and their directional forms, such as ‘north-east’, ‘west-north-west’ and ‘north-westerly’.",
+     "Does not apply to compass-point initialisms, which have no hyphens."
+    ],
+    "why": "Missing hyphens are a distinct violation from unnecessary capitals, so the two instructions are separate checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "423855651df3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always use capital letters",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A compass-point initialism contains a lowercase letter instead of the required capital letter.",
+    "when": [
+     "Applies to compass-point initialisms.",
+     "The page permits these initialisms in tables, illustrations and some specialist works."
+    ],
+    "why": "The capital-letter requirement is separate from the punctuation prohibition; G-3 keeps the permission as context."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "423855651df3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "no full stops or hyphens.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A compass-point initialism contains a full stop or hyphen.",
+    "when": [
+     "Applies to compass-point initialisms.",
+     "The page permits these initialisms in tables, illustrations and some specialist works.",
+     "A sentence-ending full stop after an initialism is not punctuation within the initialism."
+    ],
+    "why": "Full stops and hyphens are cases of the same internal-punctuation prohibition, distinct from letter case."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "738bf9ea92fc",
+    "end": 34,
+    "prefix": "",
+    "quote": "Write official names with capitals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e6faa2dc7159",
+     "end": 108,
+     "prefix": "",
+     "quote": "The full names of mountains, rivers, valleys, bays, islands and other features always take initial capitals.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "39ae94927f5a",
+     "end": 78,
+     "prefix": "",
+     "quote": "Some shortened forms that are popular names or nicknames are also capitalised.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d94bf6f016ae",
+     "end": 108,
+     "prefix": "",
+     "quote": "Keep the initial capital when the general term is a well-recognised abbreviation and works as a proper name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d33632beca74",
+     "end": 138,
+     "prefix": "ion consistently in content and ",
+     "quote": "use initial capitals.",
+     "start": 117,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9160e30c3f58",
+       "end": 17,
+       "prefix": "",
+       "quote": "the Hunter Valley",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8b41251af252",
+       "end": 17,
+       "prefix": "",
+       "quote": "the Three Sisters",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "907fbd645dd5",
+       "end": 15,
+       "prefix": "",
+       "quote": "the Paroo River",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7d0114052b1e",
+       "end": 53,
+       "prefix": "",
+       "quote": "The Snowy Mountains can also be called the ‘Snowies’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "36476b41c362",
+       "end": 70,
+       "prefix": "",
+       "quote": "The northern part of the Northern Territory is known as the ‘Top End’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d53162ed7c6a",
+       "end": 49,
+       "prefix": "",
+       "quote": "The Great Barrier Reef is also called ‘the Reef’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "33f75e2ede51",
+       "end": 52,
+       "prefix": "",
+       "quote": "The Gulf of Carpentaria is also known as ‘the Gulf’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7e0d5f2d2660",
+       "end": 44,
+       "prefix": "",
+       "quote": "Mt Tennent is part of Namadgi National Park.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "44bace7ecfc89eba",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An official topographic name or an established proper-name shortened form lacks its required initial capitals."
+   },
+   "when": [
+    "Applies to the full names of mountains, rivers, valleys, bays, islands and other topographic features.",
+    "Also applies to established popular names and nicknames that are capitalised as proper names.",
+    "A well-recognised shortened generic term retains its capital when it works as a proper name, such as ‘the Reef’.",
+    "The mountain abbreviation ‘Mt’ takes an initial capital."
+   ],
+   "why": "G-2 consolidates the full-name and established shortened-name cases into one capitalisation check; G-4 absorbs their restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "ab171d04d503",
+    "end": 82,
+    "prefix": "",
+    "quote": "In most cases, don’t use initial capitals when you use the name as a generic term.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "79e7f0769e83",
+     "end": 33,
+     "prefix": "",
+     "quote": "Write generic terms in lower case",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a710b14b582e",
+     "end": 111,
+     "prefix": "",
+     "quote": "When using the same generic term for 2 or more names in the same sentence, use lower case for the generic term.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a9e4bdddea2e",
+     "end": 73,
+     "prefix": "",
+     "quote": "Don’t use an initial capital if you’re using the noun in a generic sense.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e894d22e457a",
+       "end": 93,
+       "prefix": "",
+       "quote": "I paddled a kayak 200 km down the Balonne River. The river was in flood for some of the trip.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a7b7460a7f0a",
+       "end": 62,
+       "prefix": "",
+       "quote": "The Barossa and Hunter valleys are important winemaking areas.",
+       "start": 0,
+       "suffix": " [The word ‘valley’ refers to bo"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "511238bc05f8",
+       "end": 85,
+       "prefix": "",
+       "quote": "The Barossa Valley is in South Australia and the Hunter Valley is in New South Wales.",
+       "start": 0,
+       "suffix": " [The word ‘valley’ is part of t"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2ae66911993e",
+       "end": 59,
+       "prefix": "",
+       "quote": "The Amazon rainforest is vital to the health of our planet.",
+       "start": 0,
+       "suffix": " [The ‘Amazon rainforest’ is not"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A topographic term has an initial capital even though it is used generically rather than as part of a proper name."
+   },
+   "when": [
+    "Includes a generic reference back to a named feature, such as ‘the river’.",
+    "Includes a generic term shared by 2 or more names in the same sentence.",
+    "Includes a generic noun following a name when that noun is not part of the official name.",
+    "Does not apply when the term is a well-recognised shortened form functioning as a proper name.",
+    "Does not remove capitals from a term that remains part of each separately written proper name."
+   ],
+   "why": "G-2 treats generic references, shared generic terms and unofficial descriptors as cases of the same check; the proper-name exception limits that check."
+  },
+  {
+   "anchor": {
+    "block_id": "d33632beca74",
+    "end": 112,
+    "prefix": "ble abbreviation for mountains. ",
+    "quote": "Use the abbreviation consistently in content",
+    "start": 68,
+    "suffix": " and use initial capitals."
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7e0d5f2d2660",
+       "end": 44,
+       "prefix": "",
+       "quote": "Mt Tennent is part of Namadgi National Park.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret consistency as using the same choice, ‘Mt’ or ‘Mount’, for mountain names throughout a content item once the abbreviation is adopted. The page does not explicitly define the scope of consistency.",
+    "unit": "document",
+    "violation_condition": "Content uses ‘Mt’ for mountain names but inconsistently switches between abbreviated ‘Mt’ and spelled-out ‘Mount’."
+   },
+   "when": [
+    "Applies when the content uses the mountain abbreviation ‘Mt’.",
+    "The sentence specifically discusses ‘Mt’; it does not explicitly establish a consistency rule for every topographic abbreviation."
+   ],
+   "why": "The consistency requirement is distinct from capitalisation; G-4 keeps the latter with the existing capitalisation rule."
+  },
+  {
+   "anchor": {
+    "block_id": "fdbc85ab8c1c",
+    "end": 171,
+    "prefix": "opographic features if you can. ",
+    "quote": "Use the abbreviated form only where there’s limited space or a lot of repetition, such as in tables and maps.",
+    "start": 62,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "fdbc85ab8c1c",
+     "end": 61,
+     "prefix": "",
+     "quote": "Spell out the names of other topographic features if you can.",
+     "start": 0,
+     "suffix": " Use the abbreviated form only w"
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define how much repetition is ‘a lot’ or how to establish that space is limited. Those conditions require editorial judgement.",
+    "unit": "document",
+    "violation_condition": "A topographic feature other than a mountain is abbreviated where neither limited space nor substantial repetition justifies the abbreviation."
+   },
+   "when": [
+    "Applies to topographic features other than mountains using ‘Mt’.",
+    "Abbreviation is permitted where space is limited or there is a lot of repetition.",
+    "Tables and maps are examples of contexts that may justify abbreviation, not an exhaustive list."
+   ],
+   "why": "G-2 combines the spelling-out instruction with its limited-space and repetition exceptions."
+  },
+  {
+   "anchor": {
+    "block_id": "33a2b0ff7808",
+    "end": 52,
+    "prefix": "",
+    "quote": "Use Geoscience Australia’s authorised abbreviations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2a9c0d17c6fa",
+       "end": 13,
+       "prefix": "",
+       "quote": "C Tribulation",
+       "start": 0,
+       "suffix": " [Cape]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "77915dbc9263",
+       "end": 16,
+       "prefix": "",
+       "quote": "L Burley Griffin",
+       "start": 0,
+       "suffix": " [Lake]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6a4ab9bc572d",
+       "end": 8,
+       "prefix": "",
+       "quote": "Murray R",
+       "start": 0,
+       "suffix": " [River]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2af06a00b039",
+       "end": 8,
+       "prefix": "",
+       "quote": "Green Is",
+       "start": 0,
+       "suffix": " [Island]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1693d30dce33",
+       "end": 13,
+       "prefix": "",
+       "quote": "Keppel Bay Is",
+       "start": 0,
+       "suffix": " [Islands]"
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An abbreviated topographic feature term uses a form that is not authorised by Geoscience Australia."
+   },
+   "when": [
+    "Applies when a topographic feature term is abbreviated."
+   ],
+   "why": "The authorised form is a separate lookup check from whether abbreviation is justified."
+  },
+  {
+   "anchor": {
+    "block_id": "8e60d9472bbd",
+    "end": 44,
+    "prefix": "",
+    "quote": "Don’t use an apostrophe for possessive names",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6dc3c3493898",
+     "end": 68,
+     "prefix": "",
+     "quote": "Don’t use an apostrophe for topographic terms involving possessives.",
+     "start": 0,
+     "suffix": " Official place names are not po"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6da83b5da14f",
+       "end": 11,
+       "prefix": "",
+       "quote": "Careys Peak",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "84bcb0190b28",
+       "end": 12,
+       "prefix": "",
+       "quote": "Carey’s Peak",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "33e1b1d457c484c8",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A topographic name contains an apostrophe inserted to mark an apparent possessive."
+   },
+   "when": [
+    "Applies to possessive-looking elements within topographic names.",
+    "The explanatory statement that place names do not usually include punctuation is not a blanket prohibition on every punctuation mark."
+   ],
+   "why": "G-4 combines the heading and body instruction; E-2 attaches the explicit Correct/Incorrect pair to this prohibition."
+  },
+  {
+   "anchor": {
+    "block_id": "260c19f0fbaf",
+    "end": 74,
+    "prefix": "",
+    "quote": "The plural of any topographic name is formed simply by adding ‘s’ or ‘es’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "35ad7bf6fc64",
+     "end": 31,
+     "prefix": "",
+     "quote": "Spell the plural form correctly",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5dfd2efd341f",
+       "end": 71,
+       "prefix": "",
+       "quote": "There are 4 Mount Wellingtons in Australia but only one Mount Coot-tha.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c50d0b242153",
+       "end": 120,
+       "prefix": "",
+       "quote": "There are 3 Mount Jameses in Australia. There is one in Queensland, one in South Australia and one in Western Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A plural topographic name is formed by something other than adding the appropriate ‘s’ or ‘es’ ending to the name."
+   },
+   "when": [
+    "Applies when referring to multiple places bearing the same topographic name."
+   ],
+   "why": "G-4 selects the actionable body wording rather than the vague heading."
+  },
+  {
+   "anchor": {
+    "block_id": "0c0664d4d321",
+    "end": 34,
+    "prefix": "",
+    "quote": "Write compass points in lower case",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bff1b27fdf50",
+     "end": 53,
+     "prefix": "",
+     "quote": "In text, write the points of a compass in lower case.",
+     "start": 0,
+     "suffix": " Use hyphens for points such as "
+    },
+    {
+     "block_id": "423855651df3",
+     "end": 75,
+     "prefix": "",
+     "quote": "You can use initialisms in tables, illustrations and some specialist works.",
+     "start": 0,
+     "suffix": " Always use capital letters with"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "502d2a0a96b5",
+       "end": 5,
+       "prefix": "",
+       "quote": "south",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e88caae98bfd",
+       "end": 10,
+       "prefix": "",
+       "quote": "north-east",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1022da3da63d",
+       "end": 15,
+       "prefix": "",
+       "quote": "west-north-west",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "adbb0275615c",
+       "end": 60,
+       "prefix": "",
+       "quote": "A north-westerly wind was blowing the fire towards the town.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a2f12e3e85bf",
+       "end": 57,
+       "prefix": "",
+       "quote": "The car was 30 degrees east of where it should have been.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e45a7aaa99ba",
+       "end": 40,
+       "prefix": "",
+       "quote": "A cool change was coming from the south.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "b75189d72fbb8b88",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A spelled-out compass point used as a direction has an unnecessary capital letter."
+   },
+   "when": [
+    "Applies to spelled-out compass directions in text, including directional forms such as ‘north-westerly’.",
+    "Does not apply to compass-point initialisms used in tables, illustrations and some specialist works.",
+    "Does not treat the capitalisation of an official geographic name as directional capitalisation.",
+    "An ordinary sentence-initial capital is not an unnecessary compass-point capital."
+   ],
+   "why": "G-4 combines the heading and restatement; G-3 records the initialism permission as an exception rather than a separate rule."
+  },
+  {
+   "anchor": {
+    "block_id": "bff1b27fdf50",
+    "end": 98,
+    "prefix": "nts of a compass in lower case. ",
+    "quote": "Use hyphens for points such as ‘north-east’.",
+    "start": 54,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e88caae98bfd",
+       "end": 10,
+       "prefix": "",
+       "quote": "north-east",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1022da3da63d",
+       "end": 15,
+       "prefix": "",
+       "quote": "west-north-west",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "adbb0275615c",
+       "end": 60,
+       "prefix": "",
+       "quote": "A north-westerly wind was blowing the fire towards the town.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A spelled-out compound compass point lacks a hyphen between its directional components."
+   },
+   "when": [
+    "Applies to compound compass points and their directional forms, such as ‘north-east’, ‘west-north-west’ and ‘north-westerly’.",
+    "Does not apply to compass-point initialisms, which have no hyphens."
+   ],
+   "why": "Missing hyphens are a distinct violation from unnecessary capitals, so the two instructions are separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "423855651df3",
+    "end": 102,
+    "prefix": "ions and some specialist works. ",
+    "quote": "Always use capital letters",
+    "start": 76,
+    "suffix": " with no full stops or hyphens."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A compass-point initialism contains a lowercase letter instead of the required capital letter."
+   },
+   "when": [
+    "Applies to compass-point initialisms.",
+    "The page permits these initialisms in tables, illustrations and some specialist works."
+   ],
+   "why": "The capital-letter requirement is separate from the punctuation prohibition; G-3 keeps the permission as context."
+  },
+  {
+   "anchor": {
+    "block_id": "423855651df3",
+    "end": 133,
+    "prefix": "Always use capital letters with ",
+    "quote": "no full stops or hyphens.",
+    "start": 108,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A compass-point initialism contains a full stop or hyphen."
+   },
+   "when": [
+    "Applies to compass-point initialisms.",
+    "The page permits these initialisms in tables, illustrations and some specialist works.",
+    "A sentence-ending full stop after an initialism is not punctuation within the initialism."
+   ],
+   "why": "Full stops and hyphens are cases of the same internal-punctuation prohibition, distinct from letter case."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4717,
+  "output_tokens": 11158,
+  "reasoning_tokens": 5178
+ }
+}

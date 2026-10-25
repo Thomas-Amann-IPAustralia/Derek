@@ -1,0 +1,2455 @@
+{
+ "effort": "high",
+ "input_sha256": "faac946f9e4cc0da21cb8a8e9ac3ccaed2b903c7bedc2015104cee520aa75716",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "2d3391c72952",
+    "end": 34,
+    "prefix": "",
+    "quote": "Create Easy Read to broaden access",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recommends creating a content format for an accessibility purpose; it does not identify a violation within text.",
+   "reason": "advice",
+   "seed_uid": "c236dc1cbe420579"
+  },
+  {
+   "anchor": {
+    "block_id": "33a499107da2",
+    "end": 19,
+    "prefix": "",
+    "quote": "Identify user needs",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "User-research activity rather than a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": "f0685466bf952aa3"
+  },
+  {
+   "anchor": {
+    "block_id": "6e58c5c89e6b",
+    "end": 84,
+    "prefix": "",
+    "quote": "Before starting, make sure you do research with people who will use the information.",
+    "start": 0,
+    "suffix": " Find out how they will access t"
+   },
+   "note": "G-5: instruction about the research process.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6e58c5c89e6b",
+    "end": 176,
+    "prefix": "e who will use the information. ",
+    "quote": "Find out how they will access the materials – in print, online or with support from others.",
+    "start": 85,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to investigate users' access needs.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9417d997659b",
+    "end": 84,
+    "prefix": "one will find Easy Read useful: ",
+    "quote": "check the findings from your user research.",
+    "start": 41,
+    "suffix": " You might find people prefer ot"
+   },
+   "note": "G-5: reviewing research is not a property a text checker can verify.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9a74d298a2d7",
+    "end": 24,
+    "prefix": "",
+    "quote": "Engage Easy Read experts",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: commissioning expert help is a production activity.",
+   "reason": "advice",
+   "seed_uid": "336447be142a3968"
+  },
+  {
+   "anchor": {
+    "block_id": "dc8721bcd799",
+    "end": 39,
+    "prefix": "",
+    "quote": "It is best to engage Easy Read experts.",
+    "start": 0,
+    "suffix": " They will know how to research "
+   },
+   "note": "Recommends expert involvement rather than prescribing a textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "054fa5f2bf07",
+    "end": 40,
+    "prefix": "",
+    "quote": "Design and publish materials to download",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups publishing, print and accessibility considerations; the actionable text requirements are marked separately.",
+   "reason": "section",
+   "seed_uid": "03c172b917666404"
+  },
+  {
+   "anchor": {
+    "block_id": "43d12d805607",
+    "end": 95,
+    "prefix": "",
+    "quote": "Design your Easy Read materials as a printed handout to be used by people in several scenarios.",
+    "start": 0,
+    "suffix": " For example, employers, support"
+   },
+   "note": "Concerns the physical presentation and intended use of the materials.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "756048c235f4",
+    "end": 92,
+    "prefix": "",
+    "quote": "Make Easy Read materials available in addition to any source material they are derived from.",
+    "start": 0,
+    "suffix": " Publish them in HTML and as an "
+   },
+   "note": "Availability of separate published materials is not a property of their words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "756048c235f4",
+    "end": 179,
+    "prefix": "material they are derived from. ",
+    "quote": "Publish them in HTML and as an accessible PDF at the same time as the source material.",
+    "start": 93,
+    "suffix": ""
+   },
+   "note": "Specifies file formats and publication timing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8ce1dc751772",
+    "end": 107,
+    "prefix": "",
+    "quote": "Users need to be able to print or download the Easy Read version from the same site as the source material.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns website availability and print/download functionality.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "811436a7de24",
+    "end": 58,
+    "prefix": "provide clear link text and ",
+    "quote": "make sure it looks like a link",
+    "start": 28,
+    "suffix": ""
+   },
+   "note": "Visual styling of a link is distinct from the marked requirement for clear link wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4ff1932741bd",
+    "end": 96,
+    "prefix": "",
+    "quote": "Follow W3C updates on making content usable for people with cognitive and learning disabilities.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to follow an external source of guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "142f97ac2684",
+    "end": 111,
+    "prefix": "",
+    "quote": "Make the structure of Easy Read PDFs accessible to help people who will need to download them from the website.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns PDF document structure and accessibility metadata rather than wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3fed70b4466f",
+    "end": 65,
+    "prefix": "",
+    "quote": "Make all government content accessible to people with disability.",
+    "start": 0,
+    "suffix": " This includes providing informa"
+   },
+   "note": "A general accessibility direction; this sentence does not specify an independently checkable textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3fed70b4466f",
+    "end": 195,
+    "prefix": "ible to people with disability. ",
+    "quote": "This includes providing information that is timely, which is part of Australian law under the Disability Discrimination Act 1992.",
+    "start": 66,
+    "suffix": ""
+   },
+   "note": "Timely provision of information concerns service delivery and publication, not the words themselves.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c5699931bbaf",
+    "end": 18,
+    "prefix": "",
+    "quote": "Plan the structure",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups planning advice and the specific requirement for explanatory examples.",
+   "reason": "section",
+   "seed_uid": "75e1601e7bd98215"
+  },
+  {
+   "anchor": {
+    "block_id": "0fa56f594698",
+    "end": 67,
+    "prefix": "",
+    "quote": "Think of the Easy Read version as a summary of the source material.",
+    "start": 0,
+    "suffix": " This helps you plan the structu"
+   },
+   "note": "G-5: frames the planning task rather than supplying a separate check for a summary's completeness or length.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "612e8df80f6a",
+    "end": 65,
+    "prefix": "",
+    "quote": "Identify the main points to cover and decide how to explain them.",
+    "start": 0,
+    "suffix": " Include examples throughout to "
+   },
+   "note": "G-5: planning actions; the following sentence supplies the independently checkable examples requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "efa1541e7ce3",
+    "end": 142,
+    "prefix": " you decide if you need images. ",
+    "quote": "Ask your Easy Read expert to help you choose images users can relate to and understand.",
+    "start": 55,
+    "suffix": " Users will be drawn to the imag"
+   },
+   "note": "G-5: asks the writer to obtain expert assistance with image selection.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1f8a8070d773",
+    "end": 16,
+    "prefix": "",
+    "quote": "Keep text simple",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups reading level, simple language, difficult-word handling and questions; those checks are marked separately.",
+   "reason": "section",
+   "seed_uid": "22e62179a508749c"
+  },
+  {
+   "anchor": {
+    "block_id": "b13538302262",
+    "end": 45,
+    "prefix": "",
+    "quote": "Only use questions in headings for Easy Read.",
+    "start": 0,
+    "suffix": " Questions in the text can make "
+   },
+   "note": "G-4: absorbed into ‘Avoid questions in the text’; headings are the permitted location.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8f5d81d803f9",
+    "end": 176,
+    "prefix": " so people know how to respond. ",
+    "quote": "Ask your Easy Read professional to help you design these materials.",
+    "start": 109,
+    "suffix": ""
+   },
+   "note": "G-5: instruction to seek professional assistance, not a requirement for the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9c05e9252127",
+    "end": 27,
+    "prefix": "",
+    "quote": "Involve others as you draft",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes a collaborative drafting process.",
+   "reason": "advice",
+   "seed_uid": "2c5c02b25d8f5908"
+  },
+  {
+   "anchor": {
+    "block_id": "1c997eb1faf8",
+    "end": 87,
+    "prefix": "",
+    "quote": "Involve people from your target user group as you write, design and test the materials.",
+    "start": 0,
+    "suffix": " They can help you to choose ima"
+   },
+   "note": "G-5: user participation cannot be established from the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a07be25016ca",
+    "end": 86,
+    "prefix": "",
+    "quote": "Ask your Easy Read professional to help you find or create images that convey meaning.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to obtain assistance with images.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e7e6fe5a7f38",
+    "end": 98,
+    "prefix": "",
+    "quote": "When you finish the draft, check with the original author to make sure you have the meaning right.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: specifies a review activity rather than a directly checkable textual requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "77ea34aaf815",
+    "end": 162,
+    "prefix": "ssible for complex information. ",
+    "quote": "In that case, think about whether you can divide the content into a few documents.",
+    "start": 80,
+    "suffix": " Check if this decision will mee"
+   },
+   "note": "G-5: suggests considering an alternative document structure; it does not require splitting the content.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "77ea34aaf815",
+    "end": 207,
+    "prefix": "e content into a few documents. ",
+    "quote": "Check if this decision will meet user needs.",
+    "start": 163,
+    "suffix": ""
+   },
+   "note": "G-5: instruction to evaluate a production decision.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1422febce891",
+    "end": 74,
+    "prefix": "",
+    "quote": "Managing and disposing of records is required under the Archives Act 1983.",
+    "start": 0,
+    "suffix": " For guidance, visit the Nationa"
+   },
+   "note": "Records-management obligations concern organisational handling and disposal, not wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1422febce891",
+    "end": 165,
+    "prefix": "ed under the Archives Act 1983. ",
+    "quote": "For guidance, visit the National Archives of Australia’s information management standards.",
+    "start": 75,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to an external guidance source.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "12041e8345d1",
+    "end": 34,
+    "prefix": "",
+    "quote": "Follow a standard Easy Read layout",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups layout, presentation and text-formatting instructions; no additional catch-all layout rule is needed.",
+   "reason": "section",
+   "seed_uid": "0b4771bbfbce33ef"
+  },
+  {
+   "anchor": {
+    "block_id": "bb70acbaef87",
+    "end": 94,
+    "prefix": "",
+    "quote": "Use a consistent layout and minimum design elements so it’s easy for people to use or explain.",
+    "start": 0,
+    "suffix": " Your agency might have an Easy "
+   },
+   "note": "Concerns visual layout and design rather than words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bb70acbaef87",
+    "end": 213,
+    "prefix": " Easy Read publishing template. ",
+    "quote": "Find out before using a table grid to format images and text.",
+    "start": 152,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to investigate whether an agency template exists.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3cdae6ca4c5e",
+    "end": 101,
+    "prefix": "help to align images and words. ",
+    "quote": "If you use them, follow accessibility requirements for tables.",
+    "start": 39,
+    "suffix": " When designing the Easy Read ma"
+   },
+   "note": "Concerns table accessibility implementation rather than wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3cdae6ca4c5e",
+    "end": 193,
+    "prefix": "bility requirements for tables. ",
+    "quote": "When designing the Easy Read material, code tables using the role=\"presentation\" attribute.",
+    "start": 102,
+    "suffix": ""
+   },
+   "note": "Specifies markup for layout tables.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b6ff2d12d25c",
+    "end": 73,
+    "prefix": "",
+    "quote": "Use wide margins and plenty of white space to make the text easy to read.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Page layout and spacing settings.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b34f713dcbf3",
+    "end": 30,
+    "prefix": "",
+    "quote": "Use at least 1.5 line spacing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Line-spacing setting rather than a property of the words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e0d041b1e6dd",
+    "end": 83,
+    "prefix": "",
+    "quote": "If you’re using images, place them on the left to align with the text on the right.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Image placement and page layout.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2f37a99cd141",
+    "end": 46,
+    "prefix": "",
+    "quote": "Don’t put images above the text or vice versa.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Relative positioning of images and text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6127942e0e38",
+    "end": 20,
+    "prefix": "",
+    "quote": "Left-align the text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Text-alignment setting rather than wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7015710051be",
+    "end": 66,
+    "prefix": "",
+    "quote": "Use at least size 14 font for text and a larger size for headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Typography settings rather than textual content.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "85309103b166",
+    "end": 101,
+    "prefix": "",
+    "quote": "Be careful using text effects – any change to the shape of letters makes them more difficult to read.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: cautions the designer without specifying a prohibited text effect or a checkable limit.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9a33bda37d00",
+    "end": 92,
+    "prefix": "",
+    "quote": "Use colour and contrast to make words stand out, but don’t rely on colour to convey meaning.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns visual presentation and colour-dependent design.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c52511c1a4b8",
+    "end": 77,
+    "prefix": "",
+    "quote": "Don’t split paragraphs and sentences across pages in print and PDF documents.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Pagination and page-break behaviour, not sentence or paragraph wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "301e8f745306",
+    "end": 83,
+    "prefix": "",
+    "quote": "Insert page numbers in print and PDF documents, in the same font size as your text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Page numbering and typography settings.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4c94b7e429a8",
+    "end": 53,
+    "prefix": "",
+    "quote": "Use matte paper stock: it reduces glare off the page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Physical printing material.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "175759991bdc",
+    "end": 62,
+    "prefix": "",
+    "quote": "Include your agency or department logo on the cover page only.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Placement of a graphic on a page.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "82e0b375557e",
+    "end": 15,
+    "prefix": "",
+    "quote": "Provide context",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups distinct beginning- and end-of-content requirements, which are marked individually.",
+   "reason": "section",
+   "seed_uid": "15dd7e4a34cb8d05"
+  },
+  {
+   "anchor": {
+    "block_id": "7ec87f5f9fd6",
+    "end": 16,
+    "prefix": "",
+    "quote": "At the end, add:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "List lead-in supplies the location for the three child requirements, not another independently flaggable rule.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "605830bac459",
+    "end": 49,
+    "prefix": "",
+    "quote": "a word list if there are a lot of difficult words",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: consolidated with the earlier requirement for a glossary at the end.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cac118d183c8",
+    "end": 14,
+    "prefix": "",
+    "quote": "You might add:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: introduces optional additions, not required content.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b83e8b926fb7",
+    "end": 12,
+    "prefix": "",
+    "quote": "a word count",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Optional under ‘You might add’; its absence cannot produce a finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cd55dd4bd1d0",
+    "end": 32,
+    "prefix": "",
+    "quote": "information about other services",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Optional under ‘You might add’; its absence cannot produce a finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "45391711cf31",
+    "end": 16,
+    "prefix": "",
+    "quote": "other resources.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Optional under ‘You might add’; its absence cannot produce a finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/easy-read.md",
+ "page_sha256": "902e7f1a4d94b9f5dd7c0b240a0cccd717065a1507734f5933eb904c1a4f69e2",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "2d3391c72952",
+    "note": "Recommends creating a content format for an accessibility purpose; it does not identify a violation within text.",
+    "quote": "Create Easy Read to broaden access",
+    "reason": "advice"
+   },
+   {
+    "block_id": "33a499107da2",
+    "note": "User-research activity rather than a property of the resulting text.",
+    "quote": "Identify user needs",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6e58c5c89e6b",
+    "note": "G-5: instruction about the research process.",
+    "quote": "Before starting, make sure you do research with people who will use the information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6e58c5c89e6b",
+    "note": "G-5: asks the writer to investigate users' access needs.",
+    "quote": "Find out how they will access the materials – in print, online or with support from others.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9417d997659b",
+    "note": "G-5: reviewing research is not a property a text checker can verify.",
+    "quote": "check the findings from your user research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9a74d298a2d7",
+    "note": "G-5: commissioning expert help is a production activity.",
+    "quote": "Engage Easy Read experts",
+    "reason": "advice"
+   },
+   {
+    "block_id": "dc8721bcd799",
+    "note": "Recommends expert involvement rather than prescribing a textual property.",
+    "quote": "It is best to engage Easy Read experts.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "054fa5f2bf07",
+    "note": "G-1: groups publishing, print and accessibility considerations; the actionable text requirements are marked separately.",
+    "quote": "Design and publish materials to download",
+    "reason": "section"
+   },
+   {
+    "block_id": "43d12d805607",
+    "note": "Concerns the physical presentation and intended use of the materials.",
+    "quote": "Design your Easy Read materials as a printed handout to be used by people in several scenarios.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "756048c235f4",
+    "note": "Availability of separate published materials is not a property of their words.",
+    "quote": "Make Easy Read materials available in addition to any source material they are derived from.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "756048c235f4",
+    "note": "Specifies file formats and publication timing.",
+    "quote": "Publish them in HTML and as an accessible PDF at the same time as the source material.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "8ce1dc751772",
+    "note": "Concerns website availability and print/download functionality.",
+    "quote": "Users need to be able to print or download the Easy Read version from the same site as the source material.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "811436a7de24",
+    "note": "Visual styling of a link is distinct from the marked requirement for clear link wording.",
+    "quote": "make sure it looks like a link",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4ff1932741bd",
+    "note": "G-5: asks the writer to follow an external source of guidance.",
+    "quote": "Follow W3C updates on making content usable for people with cognitive and learning disabilities.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "142f97ac2684",
+    "note": "Concerns PDF document structure and accessibility metadata rather than wording.",
+    "quote": "Make the structure of Easy Read PDFs accessible to help people who will need to download them from the website.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "3fed70b4466f",
+    "note": "A general accessibility direction; this sentence does not specify an independently checkable textual property.",
+    "quote": "Make all government content accessible to people with disability.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3fed70b4466f",
+    "note": "Timely provision of information concerns service delivery and publication, not the words themselves.",
+    "quote": "This includes providing information that is timely, which is part of Australian law under the Disability Discrimination Act 1992.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c5699931bbaf",
+    "note": "G-1: groups planning advice and the specific requirement for explanatory examples.",
+    "quote": "Plan the structure",
+    "reason": "section"
+   },
+   {
+    "block_id": "0fa56f594698",
+    "note": "G-5: frames the planning task rather than supplying a separate check for a summary's completeness or length.",
+    "quote": "Think of the Easy Read version as a summary of the source material.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "612e8df80f6a",
+    "note": "G-5: planning actions; the following sentence supplies the independently checkable examples requirement.",
+    "quote": "Identify the main points to cover and decide how to explain them.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "efa1541e7ce3",
+    "note": "G-5: asks the writer to obtain expert assistance with image selection.",
+    "quote": "Ask your Easy Read expert to help you choose images users can relate to and understand.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1f8a8070d773",
+    "note": "G-1: groups reading level, simple language, difficult-word handling and questions; those checks are marked separately.",
+    "quote": "Keep text simple",
+    "reason": "section"
+   },
+   {
+    "block_id": "b13538302262",
+    "note": "G-4: absorbed into ‘Avoid questions in the text’; headings are the permitted location.",
+    "quote": "Only use questions in headings for Easy Read.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8f5d81d803f9",
+    "note": "G-5: instruction to seek professional assistance, not a requirement for the text.",
+    "quote": "Ask your Easy Read professional to help you design these materials.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9c05e9252127",
+    "note": "G-5: describes a collaborative drafting process.",
+    "quote": "Involve others as you draft",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1c997eb1faf8",
+    "note": "G-5: user participation cannot be established from the resulting text.",
+    "quote": "Involve people from your target user group as you write, design and test the materials.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a07be25016ca",
+    "note": "G-5: asks the writer to obtain assistance with images.",
+    "quote": "Ask your Easy Read professional to help you find or create images that convey meaning.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e7e6fe5a7f38",
+    "note": "G-5: specifies a review activity rather than a directly checkable textual requirement.",
+    "quote": "When you finish the draft, check with the original author to make sure you have the meaning right.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "77ea34aaf815",
+    "note": "G-5: suggests considering an alternative document structure; it does not require splitting the content.",
+    "quote": "In that case, think about whether you can divide the content into a few documents.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "77ea34aaf815",
+    "note": "G-5: instruction to evaluate a production decision.",
+    "quote": "Check if this decision will meet user needs.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1422febce891",
+    "note": "Records-management obligations concern organisational handling and disposal, not wording.",
+    "quote": "Managing and disposing of records is required under the Archives Act 1983.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "1422febce891",
+    "note": "G-5: directs the writer to an external guidance source.",
+    "quote": "For guidance, visit the National Archives of Australia’s information management standards.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "12041e8345d1",
+    "note": "G-1: groups layout, presentation and text-formatting instructions; no additional catch-all layout rule is needed.",
+    "quote": "Follow a standard Easy Read layout",
+    "reason": "section"
+   },
+   {
+    "block_id": "bb70acbaef87",
+    "note": "Concerns visual layout and design rather than words.",
+    "quote": "Use a consistent layout and minimum design elements so it’s easy for people to use or explain.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "bb70acbaef87",
+    "note": "G-5: asks the writer to investigate whether an agency template exists.",
+    "quote": "Find out before using a table grid to format images and text.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3cdae6ca4c5e",
+    "note": "Concerns table accessibility implementation rather than wording.",
+    "quote": "If you use them, follow accessibility requirements for tables.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "3cdae6ca4c5e",
+    "note": "Specifies markup for layout tables.",
+    "quote": "When designing the Easy Read material, code tables using the role=\"presentation\" attribute.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b6ff2d12d25c",
+    "note": "Page layout and spacing settings.",
+    "quote": "Use wide margins and plenty of white space to make the text easy to read.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b34f713dcbf3",
+    "note": "Line-spacing setting rather than a property of the words.",
+    "quote": "Use at least 1.5 line spacing.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e0d041b1e6dd",
+    "note": "Image placement and page layout.",
+    "quote": "If you’re using images, place them on the left to align with the text on the right.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "2f37a99cd141",
+    "note": "Relative positioning of images and text.",
+    "quote": "Don’t put images above the text or vice versa.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "6127942e0e38",
+    "note": "Text-alignment setting rather than wording.",
+    "quote": "Left-align the text.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "7015710051be",
+    "note": "Typography settings rather than textual content.",
+    "quote": "Use at least size 14 font for text and a larger size for headings.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "85309103b166",
+    "note": "G-5: cautions the designer without specifying a prohibited text effect or a checkable limit.",
+    "quote": "Be careful using text effects – any change to the shape of letters makes them more difficult to read.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9a33bda37d00",
+    "note": "Concerns visual presentation and colour-dependent design.",
+    "quote": "Use colour and contrast to make words stand out, but don’t rely on colour to convey meaning.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c52511c1a4b8",
+    "note": "Pagination and page-break behaviour, not sentence or paragraph wording.",
+    "quote": "Don’t split paragraphs and sentences across pages in print and PDF documents.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "301e8f745306",
+    "note": "Page numbering and typography settings.",
+    "quote": "Insert page numbers in print and PDF documents, in the same font size as your text.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4c94b7e429a8",
+    "note": "Physical printing material.",
+    "quote": "Use matte paper stock: it reduces glare off the page.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "175759991bdc",
+    "note": "Placement of a graphic on a page.",
+    "quote": "Include your agency or department logo on the cover page only.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "82e0b375557e",
+    "note": "G-1: groups distinct beginning- and end-of-content requirements, which are marked individually.",
+    "quote": "Provide context",
+    "reason": "section"
+   },
+   {
+    "block_id": "7ec87f5f9fd6",
+    "note": "List lead-in supplies the location for the three child requirements, not another independently flaggable rule.",
+    "quote": "At the end, add:",
+    "reason": "section"
+   },
+   {
+    "block_id": "605830bac459",
+    "note": "G-2 and G-4: consolidated with the earlier requirement for a glossary at the end.",
+    "quote": "a word list if there are a lot of difficult words",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cac118d183c8",
+    "note": "G-3: introduces optional additions, not required content.",
+    "quote": "You might add:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b83e8b926fb7",
+    "note": "Optional under ‘You might add’; its absence cannot produce a finding.",
+    "quote": "a word count",
+    "reason": "permission"
+   },
+   {
+    "block_id": "cd55dd4bd1d0",
+    "note": "Optional under ‘You might add’; its absence cannot produce a finding.",
+    "quote": "information about other services",
+    "reason": "permission"
+   },
+   {
+    "block_id": "45391711cf31",
+    "note": "Optional under ‘You might add’; its absence cannot produce a finding.",
+    "quote": "other resources.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "811436a7de24",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "45999164435c",
+      "quote": "When you have links in the materials, you need to:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "provide clear link text",
+    "specification": "Assess whether the intended users can understand the link's purpose or destination from its wording and context. The page does not prescribe particular link labels.",
+    "unit": "phrase",
+    "violation_condition": "A link has text that does not make its purpose or destination understandable in context.",
+    "when": [
+     "Applies when Easy Read materials contain links."
+    ],
+    "why": "G-1 separates this textual requirement from the publishing section; link clarity and visual link styling are different checks."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "8c77c7addff9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "45999164435c",
+      "quote": "When you have links in the materials, you need to:"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "spell out the URL next to the linked text.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Linked text appears without its URL written out next to it.",
+    "when": [
+     "Applies when Easy Read materials contain links."
+    ],
+    "why": "G-1: the missing written URL is independently flaggable, rather than part of a general publishing rule."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "612e8df80f6a",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include examples throughout to help explain ideas and concepts.",
+    "specification": "The page does not define how frequently examples must appear or which concepts require them. Do not invent a numerical quota.",
+    "unit": "document",
+    "violation_condition": "Ideas and concepts are presented without explanatory examples distributed through the material.",
+    "when": [],
+    "why": "G-5 distinguishes the surrounding planning advice from this observable requirement for explanatory content."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "2c6264fc8c90",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Check your content reads between a year 4 to year 6 reading level.",
+    "specification": "The required range is stated, but no reading-level assessment method is specified. A checker needs an agreed method rather than silently choosing a formula.",
+    "unit": "document",
+    "violation_condition": "The content has a reading level outside the year 4 to year 6 range.",
+    "when": [],
+    "why": "This states a property of the resulting text, not merely a proofreading activity under G-5."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "2c6264fc8c90",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use simple words and grammar",
+    "specification": "Assess simplicity for the intended users. Necessary difficult words are permitted, subject to the separate bolding and definition requirements; syllable count alone does not determine a violation.",
+    "unit": "sentence",
+    "violation_condition": "The text uses words or grammatical constructions that are unnecessarily difficult for its intended Easy Read users.",
+    "when": [
+     "Important difficult words may be retained when needed."
+    ],
+    "why": "G-2 preserves the necessary-difficult-word case; simple language and adult-appropriate language produce different findings."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "2c6264fc8c90",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "don’t use childish language if the users are adults.",
+    "specification": "Distinguish language that addresses adults as children from language that is simply easy to understand.",
+    "unit": "sentence",
+    "violation_condition": "Material intended for adults uses childish language.",
+    "when": [
+     "Applies when the intended users are adults."
+    ],
+    "why": "G-2 records the audience condition; childish tone is a separate failure from linguistic complexity."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "72e8f27590b0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "707e7b07c6f7",
+      "quote": "A difficult word might have 3 or more syllables."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The supplied text extraction does not preserve any bold formatting, so this example cannot establish which words are bold.",
+      "parts": [
+       {
+        "block_id": "a94937b5685c",
+        "quote": "Immunisation protects your baby from some diseases. Immunisation means a doctor or nurse gives your baby a needle with a vaccineinside. The vaccine is the medicine that protects your baby from some diseases."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If you need to use a difficult word, write it in bold.",
+    "specification": "An agreed criterion for difficulty is needed. Three or more syllables is a possible indicator, not a categorical definition of a difficult word.",
+    "unit": "sentence",
+    "violation_condition": "A necessary difficult word is not in bold.",
+    "when": [
+     "Applies when a difficult word needs to be retained."
+    ],
+    "why": "G-2 keeps the necessary-word condition with the bolding check; bolding and defining a word are separate requirements."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "aa3e2b9992ea",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "This is the manual's example as supplied, including the apparent missing space in ‘vaccineinside’.",
+      "parts": [
+       {
+        "block_id": "a94937b5685c",
+        "quote": "Immunisation protects your baby from some diseases. Immunisation means a doctor or nurse gives your baby a needle with a vaccineinside. The vaccine is the medicine that protects your baby from some diseases."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Define the difficult word in the next sentence or phrase.",
+    "specification": "The placement requirement is explicit, but identifying difficult words requires an agreed audience-sensitive criterion.",
+    "unit": "paragraph",
+    "violation_condition": "A difficult word is not defined in the next sentence or phrase.",
+    "when": [
+     "Applies when a difficult word is used."
+    ],
+    "why": "The missing or misplaced definition is independently flaggable from missing bold formatting."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "2611a03fb915",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "605830bac459",
+      "quote": "a word list if there are a lot of difficult words"
+     },
+     {
+      "block_id": "7ec87f5f9fd6",
+      "quote": "At the end, add:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you have defined a lot of words, include a glossary at the end of your document.",
+    "specification": "The page does not quantify ‘a lot’. An agreed threshold is needed before implementing a count-based check.",
+    "unit": "document",
+    "violation_condition": "A document with many defined or difficult words has no word list at the end.",
+    "when": [
+     "Applies when a lot of words have been defined or a lot of difficult words are used."
+    ],
+    "why": "G-2 and G-4 consolidate the two statements requiring the same end-of-document word list."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "2611a03fb915",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Call it a word list.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The glossary is labelled with a name other than ‘word list’.",
+    "when": [
+     "Applies when the document contains a glossary."
+    ],
+    "why": "Naming an existing glossary incorrectly is a different finding from omitting the required word list."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "9e7df6ae7c7f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b13538302262",
+      "quote": "Only use questions in headings for Easy Read."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid questions in the text",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A question appears in the body text rather than in a heading.",
+    "when": [
+     "Questions in headings are permitted."
+    ],
+    "why": "G-3 records the heading permission as a limit; G-4 absorbs the body's restatement."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "8f5d81d803f9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you need information from people, follow questions with practical examples so people know how to respond.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A question seeking information from the reader is not followed by practical examples showing how to respond.",
+    "when": [
+     "Applies to questions used to obtain information from people."
+    ],
+    "why": "G-2 keeps the information-gathering condition with this check; missing response examples are distinct from a question's location."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "77ea34aaf815",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "77ea34aaf815",
+      "quote": "This is not always possible for complex information."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep your Easy Read brief.",
+    "specification": "No word or page limit is supplied. A checker must distinguish avoidable length from length needed for complex information.",
+    "unit": "document",
+    "violation_condition": "The Easy Read material is unnecessarily long, beyond what is needed to explain its information.",
+    "when": [
+     "Complex information may make brevity impractical."
+    ],
+    "why": "G-2 retains the complexity exception; G-5 excludes the subsequent advice about considering separate documents."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "a98736bb7014",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Only use bold for headings and difficult words.",
+    "specification": "Heading status is identifiable, but determining whether other bold text consists of difficult words requires an agreed difficulty criterion.",
+    "unit": "block",
+    "violation_condition": "Bold formatting is applied to text that is neither a heading nor a difficult word.",
+    "when": [
+     "Bold is permitted for headings and difficult words."
+    ],
+    "why": "G-2 and G-3 keep both allowed uses within one check for inappropriate bold."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "cc65510fcf14",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7be19e95f323",
+      "quote": "At the beginning of the content:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "introduce your organisation",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content does not introduce the organisation.",
+    "when": [
+     "The introduction belongs at the beginning of the content."
+    ],
+    "why": "G-1: this required introductory content is a child rule, not part of a catch-all context rule."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "febc11c73886",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7be19e95f323",
+      "quote": "At the beginning of the content:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "explain how to use it – images with text, difficult words and links",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content does not explain how to use its images with text, difficult words and links.",
+    "when": [
+     "The explanation belongs at the beginning of the content.",
+     "Explain the listed features that the material uses."
+    ],
+    "why": "G-1 separates the usage explanation from the other independently required introductory content."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "103db1e5986b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7be19e95f323",
+      "quote": "At the beginning of the content:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "add words to reassure people that it’s okay to ask someone else to help them read it",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content lacks reassurance that readers can ask someone else to help them read it.",
+    "when": [
+     "The reassurance belongs at the beginning of the content."
+    ],
+    "why": "G-1: reassurance about reading assistance is an independently checkable content requirement."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "cc6fa8d1aaf6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7be19e95f323",
+      "quote": "At the beginning of the content:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "explain how the Easy Read relates to other content – as a summary or guide",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content does not explain how the Easy Read relates to the other content it summarises or guides readers through.",
+    "when": [
+     "Applies where the Easy Read relates to other content.",
+     "The explanation belongs at the beginning of the content."
+    ],
+    "why": "G-1 separates the explanation of the material's relationship to other content from other context requirements."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "21875543eeef",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7be19e95f323",
+      "quote": "At the beginning of the content:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "provide a URL or a hyperlink to the standard version (for digital content)",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Digital Easy Read content lacks a URL or hyperlink to the standard version at the beginning.",
+    "when": [
+     "Applies to digital content.",
+     "The URL or hyperlink belongs at the beginning of the content."
+    ],
+    "why": "G-2 keeps the digital-content condition with the single requirement to link to the standard version."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "35529875a5cd",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "7be19e95f323",
+      "quote": "At the beginning of the content:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "include a list of contents if there are several pages.",
+    "specification": "The page does not quantify ‘several pages’. An agreed page-count threshold is needed.",
+    "unit": "document",
+    "violation_condition": "An Easy Read document with several pages lacks a list of contents at the beginning.",
+    "when": [
+     "Applies when the document has several pages.",
+     "The list of contents belongs at the beginning."
+    ],
+    "why": "G-2 retains the length condition; E-4 prevents an invented page threshold being presented as the manual's wording."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "9918246792c3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7ec87f5f9fd6",
+      "quote": "At the end, add:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "where people can find more information",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The end of the content does not tell readers where to find more information.",
+    "when": [
+     "The information belongs at the end of the content."
+    ],
+    "why": "G-1 separates this required closing information from the word-list and contact-information requirements."
+   },
+   {
+    "applies_to": [
+     "easy_read"
+    ],
+    "block_id": "a56d12a8f0c5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7ec87f5f9fd6",
+      "quote": "At the end, add:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "‘contact us’ information.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The end of the content lacks contact information.",
+    "when": [
+     "The contact information belongs at the end of the content."
+    ],
+    "why": "G-1: missing contact details are independently flaggable; the instruction does not require a literal ‘contact us’ heading."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "811436a7de24",
+    "end": 23,
+    "prefix": "",
+    "quote": "provide clear link text",
+    "start": 0,
+    "suffix": " and make sure it looks like a l"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "45999164435c",
+     "end": 120,
+     "prefix": " may be read online or printed. ",
+     "quote": "When you have links in the materials, you need to:",
+     "start": 70,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Assess whether the intended users can understand the link's purpose or destination from its wording and context. The page does not prescribe particular link labels.",
+    "unit": "phrase",
+    "violation_condition": "A link has text that does not make its purpose or destination understandable in context."
+   },
+   "when": [
+    "Applies when Easy Read materials contain links."
+   ],
+   "why": "G-1 separates this textual requirement from the publishing section; link clarity and visual link styling are different checks."
+  },
+  {
+   "anchor": {
+    "block_id": "8c77c7addff9",
+    "end": 42,
+    "prefix": "",
+    "quote": "spell out the URL next to the linked text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "45999164435c",
+     "end": 120,
+     "prefix": " may be read online or printed. ",
+     "quote": "When you have links in the materials, you need to:",
+     "start": 70,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Linked text appears without its URL written out next to it."
+   },
+   "when": [
+    "Applies when Easy Read materials contain links."
+   ],
+   "why": "G-1: the missing written URL is independently flaggable, rather than part of a general publishing rule."
+  },
+  {
+   "anchor": {
+    "block_id": "612e8df80f6a",
+    "end": 129,
+    "prefix": "and decide how to explain them. ",
+    "quote": "Include examples throughout to help explain ideas and concepts.",
+    "start": 66,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define how frequently examples must appear or which concepts require them. Do not invent a numerical quota.",
+    "unit": "document",
+    "violation_condition": "Ideas and concepts are presented without explanatory examples distributed through the material."
+   },
+   "when": [],
+   "why": "G-5 distinguishes the surrounding planning advice from this observable requirement for explanatory content."
+  },
+  {
+   "anchor": {
+    "block_id": "2c6264fc8c90",
+    "end": 66,
+    "prefix": "",
+    "quote": "Check your content reads between a year 4 to year 6 reading level.",
+    "start": 0,
+    "suffix": " Use simple words and grammar, b"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The required range is stated, but no reading-level assessment method is specified. A checker needs an agreed method rather than silently choosing a formula.",
+    "unit": "document",
+    "violation_condition": "The content has a reading level outside the year 4 to year 6 range."
+   },
+   "when": [],
+   "why": "This states a property of the resulting text, not merely a proofreading activity under G-5."
+  },
+  {
+   "anchor": {
+    "block_id": "2c6264fc8c90",
+    "end": 95,
+    "prefix": "year 4 to year 6 reading level. ",
+    "quote": "Use simple words and grammar",
+    "start": 67,
+    "suffix": ", but don’t use childish languag"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess simplicity for the intended users. Necessary difficult words are permitted, subject to the separate bolding and definition requirements; syllable count alone does not determine a violation.",
+    "unit": "sentence",
+    "violation_condition": "The text uses words or grammatical constructions that are unnecessarily difficult for its intended Easy Read users."
+   },
+   "when": [
+    "Important difficult words may be retained when needed."
+   ],
+   "why": "G-2 preserves the necessary-difficult-word case; simple language and adult-appropriate language produce different findings."
+  },
+  {
+   "anchor": {
+    "block_id": "2c6264fc8c90",
+    "end": 153,
+    "prefix": "e simple words and grammar, but ",
+    "quote": "don’t use childish language if the users are adults.",
+    "start": 101,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Distinguish language that addresses adults as children from language that is simply easy to understand.",
+    "unit": "sentence",
+    "violation_condition": "Material intended for adults uses childish language."
+   },
+   "when": [
+    "Applies when the intended users are adults."
+   ],
+   "why": "G-2 records the audience condition; childish tone is a separate failure from linguistic complexity."
+  },
+  {
+   "anchor": {
+    "block_id": "72e8f27590b0",
+    "end": 54,
+    "prefix": "",
+    "quote": "If you need to use a difficult word, write it in bold.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "707e7b07c6f7",
+     "end": 118,
+     "prefix": " people to read and understand. ",
+     "quote": "A difficult word might have 3 or more syllables.",
+     "start": 70,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The supplied text extraction does not preserve any bold formatting, so this example cannot establish which words are bold.",
+     "parts": [
+      {
+       "block_id": "a94937b5685c",
+       "end": 207,
+       "prefix": "",
+       "quote": "Immunisation protects your baby from some diseases. Immunisation means a doctor or nurse gives your baby a needle with a vaccineinside. The vaccine is the medicine that protects your baby from some diseases.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "An agreed criterion for difficulty is needed. Three or more syllables is a possible indicator, not a categorical definition of a difficult word.",
+    "unit": "sentence",
+    "violation_condition": "A necessary difficult word is not in bold."
+   },
+   "when": [
+    "Applies when a difficult word needs to be retained."
+   ],
+   "why": "G-2 keeps the necessary-word condition with the bolding check; bolding and defining a word are separate requirements."
+  },
+  {
+   "anchor": {
+    "block_id": "aa3e2b9992ea",
+    "end": 57,
+    "prefix": "",
+    "quote": "Define the difficult word in the next sentence or phrase.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "This is the manual's example as supplied, including the apparent missing space in ‘vaccineinside’.",
+     "parts": [
+      {
+       "block_id": "a94937b5685c",
+       "end": 207,
+       "prefix": "",
+       "quote": "Immunisation protects your baby from some diseases. Immunisation means a doctor or nurse gives your baby a needle with a vaccineinside. The vaccine is the medicine that protects your baby from some diseases.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The placement requirement is explicit, but identifying difficult words requires an agreed audience-sensitive criterion.",
+    "unit": "paragraph",
+    "violation_condition": "A difficult word is not defined in the next sentence or phrase."
+   },
+   "when": [
+    "Applies when a difficult word is used."
+   ],
+   "why": "The missing or misplaced definition is independently flaggable from missing bold formatting."
+  },
+  {
+   "anchor": {
+    "block_id": "2611a03fb915",
+    "end": 83,
+    "prefix": "",
+    "quote": "If you have defined a lot of words, include a glossary at the end of your document.",
+    "start": 0,
+    "suffix": " Call it a word list."
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "605830bac459",
+     "end": 49,
+     "prefix": "",
+     "quote": "a word list if there are a lot of difficult words",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "7ec87f5f9fd6",
+     "end": 16,
+     "prefix": "",
+     "quote": "At the end, add:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not quantify ‘a lot’. An agreed threshold is needed before implementing a count-based check.",
+    "unit": "document",
+    "violation_condition": "A document with many defined or difficult words has no word list at the end."
+   },
+   "when": [
+    "Applies when a lot of words have been defined or a lot of difficult words are used."
+   ],
+   "why": "G-2 and G-4 consolidate the two statements requiring the same end-of-document word list."
+  },
+  {
+   "anchor": {
+    "block_id": "2611a03fb915",
+    "end": 104,
+    "prefix": "ry at the end of your document. ",
+    "quote": "Call it a word list.",
+    "start": 84,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The glossary is labelled with a name other than ‘word list’."
+   },
+   "when": [
+    "Applies when the document contains a glossary."
+   ],
+   "why": "Naming an existing glossary incorrectly is a different finding from omitting the required word list."
+  },
+  {
+   "anchor": {
+    "block_id": "9e7df6ae7c7f",
+    "end": 27,
+    "prefix": "",
+    "quote": "Avoid questions in the text",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b13538302262",
+     "end": 45,
+     "prefix": "",
+     "quote": "Only use questions in headings for Easy Read.",
+     "start": 0,
+     "suffix": " Questions in the text can make "
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "05bf87d4150e54f8",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A question appears in the body text rather than in a heading."
+   },
+   "when": [
+    "Questions in headings are permitted."
+   ],
+   "why": "G-3 records the heading permission as a limit; G-4 absorbs the body's restatement."
+  },
+  {
+   "anchor": {
+    "block_id": "8f5d81d803f9",
+    "end": 108,
+    "prefix": "",
+    "quote": "If you need information from people, follow questions with practical examples so people know how to respond.",
+    "start": 0,
+    "suffix": " Ask your Easy Read professional"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A question seeking information from the reader is not followed by practical examples showing how to respond."
+   },
+   "when": [
+    "Applies to questions used to obtain information from people."
+   ],
+   "why": "G-2 keeps the information-gathering condition with this check; missing response examples are distinct from a question's location."
+  },
+  {
+   "anchor": {
+    "block_id": "77ea34aaf815",
+    "end": 26,
+    "prefix": "",
+    "quote": "Keep your Easy Read brief.",
+    "start": 0,
+    "suffix": " This is not always possible for"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "77ea34aaf815",
+     "end": 79,
+     "prefix": "Keep your Easy Read brief. ",
+     "quote": "This is not always possible for complex information.",
+     "start": 27,
+     "suffix": " In that case, think about wheth"
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "No word or page limit is supplied. A checker must distinguish avoidable length from length needed for complex information.",
+    "unit": "document",
+    "violation_condition": "The Easy Read material is unnecessarily long, beyond what is needed to explain its information."
+   },
+   "when": [
+    "Complex information may make brevity impractical."
+   ],
+   "why": "G-2 retains the complexity exception; G-5 excludes the subsequent advice about considering separate documents."
+  },
+  {
+   "anchor": {
+    "block_id": "a98736bb7014",
+    "end": 47,
+    "prefix": "",
+    "quote": "Only use bold for headings and difficult words.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Heading status is identifiable, but determining whether other bold text consists of difficult words requires an agreed difficulty criterion.",
+    "unit": "block",
+    "violation_condition": "Bold formatting is applied to text that is neither a heading nor a difficult word."
+   },
+   "when": [
+    "Bold is permitted for headings and difficult words."
+   ],
+   "why": "G-2 and G-3 keep both allowed uses within one check for inappropriate bold."
+  },
+  {
+   "anchor": {
+    "block_id": "cc65510fcf14",
+    "end": 27,
+    "prefix": "",
+    "quote": "introduce your organisation",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7be19e95f323",
+     "end": 32,
+     "prefix": "",
+     "quote": "At the beginning of the content:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content does not introduce the organisation."
+   },
+   "when": [
+    "The introduction belongs at the beginning of the content."
+   ],
+   "why": "G-1: this required introductory content is a child rule, not part of a catch-all context rule."
+  },
+  {
+   "anchor": {
+    "block_id": "febc11c73886",
+    "end": 67,
+    "prefix": "",
+    "quote": "explain how to use it – images with text, difficult words and links",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7be19e95f323",
+     "end": 32,
+     "prefix": "",
+     "quote": "At the beginning of the content:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content does not explain how to use its images with text, difficult words and links."
+   },
+   "when": [
+    "The explanation belongs at the beginning of the content.",
+    "Explain the listed features that the material uses."
+   ],
+   "why": "G-1 separates the usage explanation from the other independently required introductory content."
+  },
+  {
+   "anchor": {
+    "block_id": "103db1e5986b",
+    "end": 84,
+    "prefix": "",
+    "quote": "add words to reassure people that it’s okay to ask someone else to help them read it",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7be19e95f323",
+     "end": 32,
+     "prefix": "",
+     "quote": "At the beginning of the content:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content lacks reassurance that readers can ask someone else to help them read it."
+   },
+   "when": [
+    "The reassurance belongs at the beginning of the content."
+   ],
+   "why": "G-1: reassurance about reading assistance is an independently checkable content requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "cc6fa8d1aaf6",
+    "end": 74,
+    "prefix": "",
+    "quote": "explain how the Easy Read relates to other content – as a summary or guide",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7be19e95f323",
+     "end": 32,
+     "prefix": "",
+     "quote": "At the beginning of the content:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The beginning of the content does not explain how the Easy Read relates to the other content it summarises or guides readers through."
+   },
+   "when": [
+    "Applies where the Easy Read relates to other content.",
+    "The explanation belongs at the beginning of the content."
+   ],
+   "why": "G-1 separates the explanation of the material's relationship to other content from other context requirements."
+  },
+  {
+   "anchor": {
+    "block_id": "21875543eeef",
+    "end": 74,
+    "prefix": "",
+    "quote": "provide a URL or a hyperlink to the standard version (for digital content)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7be19e95f323",
+     "end": 32,
+     "prefix": "",
+     "quote": "At the beginning of the content:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Digital Easy Read content lacks a URL or hyperlink to the standard version at the beginning."
+   },
+   "when": [
+    "Applies to digital content.",
+    "The URL or hyperlink belongs at the beginning of the content."
+   ],
+   "why": "G-2 keeps the digital-content condition with the single requirement to link to the standard version."
+  },
+  {
+   "anchor": {
+    "block_id": "35529875a5cd",
+    "end": 54,
+    "prefix": "",
+    "quote": "include a list of contents if there are several pages.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "7be19e95f323",
+     "end": 32,
+     "prefix": "",
+     "quote": "At the beginning of the content:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not quantify ‘several pages’. An agreed page-count threshold is needed.",
+    "unit": "document",
+    "violation_condition": "An Easy Read document with several pages lacks a list of contents at the beginning."
+   },
+   "when": [
+    "Applies when the document has several pages.",
+    "The list of contents belongs at the beginning."
+   ],
+   "why": "G-2 retains the length condition; E-4 prevents an invented page threshold being presented as the manual's wording."
+  },
+  {
+   "anchor": {
+    "block_id": "9918246792c3",
+    "end": 38,
+    "prefix": "",
+    "quote": "where people can find more information",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7ec87f5f9fd6",
+     "end": 16,
+     "prefix": "",
+     "quote": "At the end, add:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The end of the content does not tell readers where to find more information."
+   },
+   "when": [
+    "The information belongs at the end of the content."
+   ],
+   "why": "G-1 separates this required closing information from the word-list and contact-information requirements."
+  },
+  {
+   "anchor": {
+    "block_id": "a56d12a8f0c5",
+    "end": 25,
+    "prefix": "",
+    "quote": "‘contact us’ information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7ec87f5f9fd6",
+     "end": 16,
+     "prefix": "",
+     "quote": "At the end, add:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "easy_read"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The end of the content lacks contact information."
+   },
+   "when": [
+    "The contact information belongs at the end of the content."
+   ],
+   "why": "G-1: missing contact details are independently flaggable; the instruction does not require a literal ‘contact us’ heading."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 6027,
+  "output_tokens": 14997,
+  "reasoning_tokens": 6732
+ }
+}

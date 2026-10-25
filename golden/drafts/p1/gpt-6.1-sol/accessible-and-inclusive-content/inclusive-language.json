@@ -1,0 +1,172 @@
+{
+ "effort": "high",
+ "input_sha256": "f9df16b9a2af8f7bec8537930ba328c789b80e7413f70c1333a8e3137eff1947",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "157fce7e274f",
+    "end": 104,
+    "prefix": "",
+    "quote": "Use culturally appropriate and respectful language when writing with, for or about First Nations people.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: topic-specific guidance belongs on the Aboriginal and Torres Strait Islander peoples page rather than this overview.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b4f3ec179398",
+    "end": 102,
+    "prefix": "",
+    "quote": "Refer to age only if it is necessary. Use respectful language and consistent style if age is relevant.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: the age-relevance, respectful-language and consistent-style guidance belongs on the Age diversity page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a24bdaea58a3",
+    "end": 126,
+    "prefix": "ounds and speak many languages. ",
+    "quote": "Use inclusive language that respects this diversity.",
+    "start": 74,
+    "suffix": ""
+   },
+   "note": "G-6: topic-specific guidance belongs on the Cultural and linguistic diversity page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ec19b82d71e3",
+    "end": 162,
+    "prefix": "",
+    "quote": "Inclusive language conveys gender equality and is gender neutral. Respect people’s gender and sexual identity with pronoun choice, job titles and personal titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: guidance on gender-neutral language and respectful pronoun and title choices belongs on the Gender and sexual diversity page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dbe54ba00a24",
+    "end": 146,
+    "prefix": "atural part of human diversity. ",
+    "quote": "Use inclusive language that respects diversity.",
+    "start": 99,
+    "suffix": ""
+   },
+   "note": "G-6: topic-specific guidance belongs on the Disability and neurodiversity page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/inclusive-language.md",
+ "page_sha256": "0d5fe98090886ddd0d0dad5c1344aa794a7b22a562729e12811f34fb0ee0038d",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "157fce7e274f",
+    "note": "G-6: topic-specific guidance belongs on the Aboriginal and Torres Strait Islander peoples page rather than this overview.",
+    "quote": "Use culturally appropriate and respectful language when writing with, for or about First Nations people.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "b4f3ec179398",
+    "note": "G-6: the age-relevance, respectful-language and consistent-style guidance belongs on the Age diversity page.",
+    "quote": "Refer to age only if it is necessary. Use respectful language and consistent style if age is relevant.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "a24bdaea58a3",
+    "note": "G-6: topic-specific guidance belongs on the Cultural and linguistic diversity page.",
+    "quote": "Use inclusive language that respects this diversity.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "ec19b82d71e3",
+    "note": "G-6: guidance on gender-neutral language and respectful pronoun and title choices belongs on the Gender and sexual diversity page.",
+    "quote": "Inclusive language conveys gender equality and is gender neutral. Respect people’s gender and sexual identity with pronoun choice, job titles and personal titles.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "dbe54ba00a24",
+    "note": "G-6: topic-specific guidance belongs on the Disability and neurodiversity page.",
+    "quote": "Use inclusive language that respects diversity.",
+    "reason": "duplicate"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9bb35e83c397",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use language that is culturally appropriate and respectful of the diversity of Australia’s peoples.",
+    "specification": "This is a general inclusive-language requirement. The page does not define which expressions are culturally inappropriate or disrespectful; operational criteria require the topic-specific guidance and relevant cultural context.",
+    "unit": "sentence",
+    "violation_condition": "Wording is culturally inappropriate or expresses disrespect for the diversity of Australia’s peoples.",
+    "when": [],
+    "why": "Retains the general requirement; G-6 assigns the topic-specific summaries to their respective subject pages."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "9bb35e83c397",
+    "end": 99,
+    "prefix": "",
+    "quote": "Use language that is culturally appropriate and respectful of the diversity of Australia’s peoples.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This is a general inclusive-language requirement. The page does not define which expressions are culturally inappropriate or disrespectful; operational criteria require the topic-specific guidance and relevant cultural context.",
+    "unit": "sentence",
+    "violation_condition": "Wording is culturally inappropriate or expresses disrespect for the diversity of Australia’s peoples."
+   },
+   "when": [],
+   "why": "Retains the general requirement; G-6 assigns the topic-specific summaries to their respective subject pages."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3354,
+  "output_tokens": 3678,
+  "reasoning_tokens": 3094
+ }
+}

@@ -1,0 +1,2899 @@
+{
+ "effort": "high",
+ "input_sha256": "3fdb2651d57e10e2a7e46071b58cd295b5bdb64b597c87a4e600f483cfa685a7",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a240209061c3",
+    "end": 148,
+    "prefix": "pport readability and accuracy. ",
+    "quote": "Express precise values for users by combining numerals with the correct unit symbol.",
+    "start": 64,
+    "suffix": ""
+   },
+   "note": "Introductory summary of the numeral and unit-symbol checks developed below; not an additional combined finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff5cf09a385b",
+    "end": 37,
+    "prefix": "",
+    "quote": "Use the standard units of measurement",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific unit-form, punctuation, capitalisation, spacing and accessibility instructions. The explicit non-standard-unit prohibition is inventoried separately.",
+   "reason": "section",
+   "seed_uid": "b66effe649fa44bc"
+  },
+  {
+   "anchor": {
+    "block_id": "03a97e12a8a5",
+    "end": 74,
+    "prefix": "",
+    "quote": "Don’t use the non-SI legal units of measurement for international content.",
+    "start": 0,
+    "suffix": " The exception is when you have "
+   },
+   "note": "Consolidated into the non-SI-unit rule as its international-content condition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "03a97e12a8a5",
+    "end": 157,
+    "prefix": "ment for international content. ",
+    "quote": "The exception is when you have checked that users will understand and accept them.",
+    "start": 75,
+    "suffix": ""
+   },
+   "note": "G-3: recorded as the international exception to the non-SI-unit rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b51a270ddf0d",
+    "end": 66,
+    "prefix": "",
+    "quote": "Spacing: use a non-breaking space between the number and the unit.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Same separator check as the dedicated non-breaking-space section.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f813cf8691f8",
+    "end": 50,
+    "prefix": "",
+    "quote": "Insert symbols and superscript with tools such as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns accessible encoding and authoring technology, not a property of the supplied words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3bfda4c6b631",
+    "end": 93,
+    "prefix": "",
+    "quote": "Ensure both symbols and superscript can be enlarged without loss of content or functionality.",
+    "start": 0,
+    "suffix": " Don't use images of symbols or "
+   },
+   "note": "Requires checking rendering, scaling and functionality rather than text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3bfda4c6b631",
+    "end": 137,
+    "prefix": "ss of content or functionality. ",
+    "quote": "Don't use images of symbols or superscript.",
+    "start": 94,
+    "suffix": ""
+   },
+   "note": "Concerns the use of images rather than words or textual symbols.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7cbf5f295665",
+    "end": 85,
+    "prefix": "",
+    "quote": "Use numerals, not words, for numbers when you are referring to a unit of measurement:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Same numeral check as the section heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "53cbf5292926",
+    "end": 50,
+    "prefix": "",
+    "quote": "Always use numerals next to a unit of measurement.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Same numeral check; ‘Always’ is retained in its modality.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "83db126584a8",
+    "end": 61,
+    "prefix": "",
+    "quote": "Include a non-breaking space between the number and the unit.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the dedicated non-breaking-space rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a8012b338ade",
+    "end": 131,
+    "prefix": "",
+    "quote": "You don’t need to spell out units of measurement, even for the first use, if they’re well known and users will know what they mean.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: exception to first-use expansion, not a separate finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a70d099d6a02",
+    "end": 131,
+    "prefix": "’t immediately understand them. ",
+    "quote": "After that, use the symbols.",
+    "start": 103,
+    "suffix": ""
+   },
+   "note": "Consolidated into the symbol-choice rule as the subsequent-mention case.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "192b9f0f87ad",
+    "end": 42,
+    "prefix": "",
+    "quote": "SI prefixes for large and small quantities",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The heading names the topic; the following body paragraph supplies the instruction to use accepted prefixes.",
+   "reason": "description",
+   "seed_uid": "31f3d6b64188f7f8"
+  },
+  {
+   "anchor": {
+    "block_id": "d21c62f50ea6",
+    "end": 77,
+    "prefix": "",
+    "quote": "Use symbols for units that are derived from time measurements, such as speed.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: consolidated as another trigger for the symbol-choice check, avoiding duplicate findings on spelled-out speed units.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "12a83a7c7f66",
+    "end": 181,
+    "prefix": " the 2 components sit together. ",
+    "quote": "To do this, use a non-breaking space between numbers and their units of measurement.",
+    "start": 97,
+    "suffix": ""
+   },
+   "note": "Same separator check as the heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a3b14bef641b",
+    "end": 84,
+    "prefix": "",
+    "quote": "By convention, some industries don’t have a space between the quantity and the unit.",
+    "start": 0,
+    "suffix": " Many 750 mL bottles of wine, fo"
+   },
+   "note": "Describes specialist practice and informs the spacing rule’s scope; it is not a general instruction to omit spaces.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a10227dc27a1",
+    "end": 74,
+    "prefix": "",
+    "quote": "Check the preferred style if you are writing for a specialist application.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an action for the writer, not a directly observable textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4f16a57fc71c",
+    "end": 30,
+    "prefix": "",
+    "quote": "Don’t add ‘s’ for plural forms",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the earlier instruction that unit symbols have no plural or possessive form.",
+   "reason": "restatement",
+   "seed_uid": "6376ebc56af0efd8"
+  },
+  {
+   "anchor": {
+    "block_id": "6d7edc0054de",
+    "end": 142,
+    "prefix": " singular and the plural forms. ",
+    "quote": "Don’t use an ‘s’ to show plural with the symbols for units.",
+    "start": 83,
+    "suffix": ""
+   },
+   "note": "Same invariant-symbol check, not an additional plural finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d046b7a7dd1a",
+    "end": 45,
+    "prefix": "",
+    "quote": "Make it easy for users to compare quantities.",
+    "start": 0,
+    "suffix": " Use the same:"
+   },
+   "note": "The actionable text properties are supplied by the following unit/prefix and decimal-place instructions.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d046b7a7dd1a",
+    "end": 59,
+    "prefix": "or users to compare quantities. ",
+    "quote": "Use the same:",
+    "start": 46,
+    "suffix": ""
+   },
+   "note": "Shared lead-in incorporated into the two distinct comparison checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1ffb40529928",
+    "end": 110,
+    "prefix": "ally accepted in every country. ",
+    "quote": "Use them only if users will understand them.",
+    "start": 66,
+    "suffix": " Some units, such as the nautica"
+   },
+   "note": "Same audience-understanding condition as the non-SI heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1ffb40529928",
+    "end": 180,
+    "prefix": " if users will understand them. ",
+    "quote": "Some units, such as the nautical mile, are for use only in Australia.",
+    "start": 111,
+    "suffix": " Table 2 details common examples"
+   },
+   "note": "Consolidated as a jurisdictional condition on the non-SI-unit check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "495037e87372",
+    "end": 106,
+    "prefix": "Note: ",
+    "quote": "‘litre’ can be represented as ‘L’ or ‘l’, depending on the type of content and who will be using it.",
+    "start": 6,
+    "suffix": " Most government content should "
+   },
+   "note": "G-3: qualifies the preference for uppercase ‘L’; neither representation is universally prohibited.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a8b16958aedf",
+    "end": 96,
+    "prefix": "",
+    "quote": "Don’t use imperial units of measurement in Australia unless you have a specific reason, such as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Body wording and exceptions are consolidated into the imperial-unit rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/measurement-and-units.md",
+ "page_sha256": "890b661fc121dbb1387faadf9c1ec18f5d2bdf787ab458c4f6b4a2156441b201",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a240209061c3",
+    "note": "Introductory summary of the numeral and unit-symbol checks developed below; not an additional combined finding.",
+    "quote": "Express precise values for users by combining numerals with the correct unit symbol.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ff5cf09a385b",
+    "note": "G-1: groups the specific unit-form, punctuation, capitalisation, spacing and accessibility instructions. The explicit non-standard-unit prohibition is inventoried separately.",
+    "quote": "Use the standard units of measurement",
+    "reason": "section"
+   },
+   {
+    "block_id": "03a97e12a8a5",
+    "note": "Consolidated into the non-SI-unit rule as its international-content condition.",
+    "quote": "Don’t use the non-SI legal units of measurement for international content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "03a97e12a8a5",
+    "note": "G-3: recorded as the international exception to the non-SI-unit rule.",
+    "quote": "The exception is when you have checked that users will understand and accept them.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b51a270ddf0d",
+    "note": "Same separator check as the dedicated non-breaking-space section.",
+    "quote": "Spacing: use a non-breaking space between the number and the unit.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f813cf8691f8",
+    "note": "Concerns accessible encoding and authoring technology, not a property of the supplied words.",
+    "quote": "Insert symbols and superscript with tools such as:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "3bfda4c6b631",
+    "note": "Requires checking rendering, scaling and functionality rather than text.",
+    "quote": "Ensure both symbols and superscript can be enlarged without loss of content or functionality.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "3bfda4c6b631",
+    "note": "Concerns the use of images rather than words or textual symbols.",
+    "quote": "Don't use images of symbols or superscript.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "7cbf5f295665",
+    "note": "Same numeral check as the section heading.",
+    "quote": "Use numerals, not words, for numbers when you are referring to a unit of measurement:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "53cbf5292926",
+    "note": "Same numeral check; ‘Always’ is retained in its modality.",
+    "quote": "Always use numerals next to a unit of measurement.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "83db126584a8",
+    "note": "Consolidated into the dedicated non-breaking-space rule.",
+    "quote": "Include a non-breaking space between the number and the unit.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a8012b338ade",
+    "note": "G-3: exception to first-use expansion, not a separate finding.",
+    "quote": "You don’t need to spell out units of measurement, even for the first use, if they’re well known and users will know what they mean.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a70d099d6a02",
+    "note": "Consolidated into the symbol-choice rule as the subsequent-mention case.",
+    "quote": "After that, use the symbols.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "192b9f0f87ad",
+    "note": "The heading names the topic; the following body paragraph supplies the instruction to use accepted prefixes.",
+    "quote": "SI prefixes for large and small quantities",
+    "reason": "description"
+   },
+   {
+    "block_id": "d21c62f50ea6",
+    "note": "G-2: consolidated as another trigger for the symbol-choice check, avoiding duplicate findings on spelled-out speed units.",
+    "quote": "Use symbols for units that are derived from time measurements, such as speed.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "12a83a7c7f66",
+    "note": "Same separator check as the heading.",
+    "quote": "To do this, use a non-breaking space between numbers and their units of measurement.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a3b14bef641b",
+    "note": "Describes specialist practice and informs the spacing rule’s scope; it is not a general instruction to omit spaces.",
+    "quote": "By convention, some industries don’t have a space between the quantity and the unit.",
+    "reason": "description"
+   },
+   {
+    "block_id": "a10227dc27a1",
+    "note": "G-5: an action for the writer, not a directly observable textual property.",
+    "quote": "Check the preferred style if you are writing for a specialist application.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4f16a57fc71c",
+    "note": "Consolidated into the earlier instruction that unit symbols have no plural or possessive form.",
+    "quote": "Don’t add ‘s’ for plural forms",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6d7edc0054de",
+    "note": "Same invariant-symbol check, not an additional plural finding.",
+    "quote": "Don’t use an ‘s’ to show plural with the symbols for units.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d046b7a7dd1a",
+    "note": "The actionable text properties are supplied by the following unit/prefix and decimal-place instructions.",
+    "quote": "Make it easy for users to compare quantities.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d046b7a7dd1a",
+    "note": "Shared lead-in incorporated into the two distinct comparison checks.",
+    "quote": "Use the same:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1ffb40529928",
+    "note": "Same audience-understanding condition as the non-SI heading.",
+    "quote": "Use them only if users will understand them.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1ffb40529928",
+    "note": "Consolidated as a jurisdictional condition on the non-SI-unit check.",
+    "quote": "Some units, such as the nautical mile, are for use only in Australia.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "495037e87372",
+    "note": "G-3: qualifies the preference for uppercase ‘L’; neither representation is universally prohibited.",
+    "quote": "‘litre’ can be represented as ‘L’ or ‘l’, depending on the type of content and who will be using it.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a8b16958aedf",
+    "note": "Body wording and exceptions are consolidated into the imperial-unit rule.",
+    "quote": "Don’t use imperial units of measurement in Australia unless you have a specific reason, such as:",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e8af3ecf3985",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The page presents this as the standard form.",
+      "parts": [
+       {
+        "block_id": "a7fad5a6ad6c",
+        "quote": "There was 5 μg of active ingredient in each capsule."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The page presents this as the standard form.",
+      "parts": [
+       {
+        "block_id": "4f610090038f",
+        "quote": "He measured 50 mL of water."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The page explicitly rejects ‘mcg’.",
+      "parts": [
+       {
+        "block_id": "04eae69ea54c",
+        "quote": "There was 5 mcg of active ingredient in each capsule."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The page explicitly rejects this form.",
+      "parts": [
+       {
+        "block_id": "64970f6900a6",
+        "quote": "He measured 5 dL of water."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use non-standard units.",
+    "specification": "The examples explicitly reject ‘mcg’ and ‘dL’ in favour of ‘μg’ and ‘mL’. The page does not define an exhaustive set of non-standard unit expressions.",
+    "unit": "phrase",
+    "violation_condition": "A measurement uses a non-standard unit expression, including the forms ‘mcg’ and ‘dL’ rejected by this page.",
+    "when": [
+     "Do not treat an Australian legal non-SI unit as non-standard merely because it is not an SI unit.",
+     "Apply the separate conditions for non-SI and imperial units."
+    ],
+    "why": "G-4: use the explicit body instruction, including its own correct and incorrect examples, rather than treating the broad introductory heading as another check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e46b2e10ce70",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "03a97e12a8a5",
+      "quote": "Don’t use the non-SI legal units of measurement for international content. The exception is when you have checked that users will understand and accept them."
+     },
+     {
+      "block_id": "1ffb40529928",
+      "quote": "Use them only if users will understand them."
+     },
+     {
+      "block_id": "1ffb40529928",
+      "quote": "Some units, such as the nautical mile, are for use only in Australia."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Only use non-SI units if the user understands them",
+    "specification": "Audience understanding, acceptance and jurisdiction cannot necessarily be established from the text alone. The page gives no operational test for these conditions.",
+    "unit": "document",
+    "violation_condition": "A non-SI legal unit is used for an audience that will not understand it, or in an international or jurisdictional context where the page’s additional acceptance conditions are not met.",
+    "when": [
+     "Applies to Australian legal units that are not SI units.",
+     "For international content, use these units only after checking that users will understand and accept them.",
+     "Observe country-specific restrictions; the page identifies the nautical mile as an example for use only in Australia."
+    ],
+    "why": "G-2 and G-3: audience, international acceptance and jurisdiction limit the same non-SI-unit check; the international permission is an exception, not another rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "632b05ce61d5",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "don’t place a full stop after a unit of measurement.",
+    "specification": "Interpret this as prohibiting an abbreviation stop after a unit symbol, not the full stop that legitimately ends a sentence containing a measurement.",
+    "unit": "sentence",
+    "violation_condition": "A unit symbol has a full stop added as abbreviation punctuation.",
+    "when": [
+     "Applies to unit symbols.",
+     "Do not flag ordinary sentence-ending punctuation."
+    ],
+    "why": "G-1: retain this independently actionable child instruction rather than a second finding under the general units heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dc79fd9777de",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4eefbf2da0f1",
+        "quote": "‘m’ for metre"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "06ead59b5cb0",
+        "quote": "‘kg’ for kilogram"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "75b13f5171bb",
+        "quote": "‘W’ for watt"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "use capitals only if the unit represents a proper name.",
+    "specification": "The accompanying ‘m’, ‘kg’ and ‘W’ examples establish that this instruction concerns symbol capitalisation, not capitalising spelled-out names such as ‘watt’. The page separately accepts ‘L’ for litre.",
+    "unit": "phrase",
+    "violation_condition": "A unit symbol contains an unjustified capital letter: it is not based on a proper name and is not an expressly accepted case variant such as ‘L’ for litre.",
+    "when": [
+     "Applies to unit symbols.",
+     "Capitals associated with proper names are allowed.",
+     "The page also expressly allows ‘L’ for litre."
+    ],
+    "why": "G-1 and G-2: capitalisation is its own check, with the explicitly accepted litre symbol retained as an exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d04377cb52ff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4f16a57fc71c",
+      "quote": "Don’t add ‘s’ for plural forms"
+     },
+     {
+      "block_id": "6d7edc0054de",
+      "quote": "Symbols for units of measurement represent both the singular and the plural forms. Don’t use an ‘s’ to show plural with the symbols for units."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "46086aa12af6",
+        "quote": "56 km"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3946c6c5cc4d",
+        "quote": "56 kms"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "units don’t have a plural or possessive form.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A unit symbol is inflected to mark a plural or possessive, for example by adding plural ‘s’ or a possessive ending.",
+    "when": [
+     "Applies to unit symbols, not spelled-out unit names.",
+     "The same symbol represents singular and plural quantities."
+    ],
+    "why": "G-2 and G-4: plural and possessive endings are cases of inflecting an invariant symbol; the later plural section restates that check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4283dfc31d5c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Start of a sentence: write out the unit in full.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A unit at the start of a sentence is written as a symbol rather than in full.",
+    "when": [
+     "The unit occurs at the start of a sentence."
+    ],
+    "why": "G-1: sentence-initial unit treatment is an independently actionable child instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e616a73d196d",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "b51a270ddf0d",
+      "quote": "Spacing: use a non-breaking space between the number and the unit."
+     },
+     {
+      "block_id": "83db126584a8",
+      "quote": "Include a non-breaking space between the number and the unit."
+     },
+     {
+      "block_id": "12a83a7c7f66",
+      "quote": "To do this, use a non-breaking space between numbers and their units of measurement."
+     },
+     {
+      "block_id": "a3b14bef641b",
+      "quote": "By convention, some industries don’t have a space between the quantity and the unit."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The following gloss states that the source has a non-breaking space.",
+      "parts": [
+       {
+        "block_id": "1873d5711744",
+        "quote": "The post should be at least 1.5 m tall."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "These two blocks form the manual’s single broken-line example.",
+      "parts": [
+       {
+        "block_id": "0bd02deb6612",
+        "quote": "The post should be at least 1.5"
+       },
+       {
+        "block_id": "c323604e357b",
+        "quote": "m tall."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Put a non-breaking space between numbers and units",
+    "specification": "The default is a non-breaking space. The specialist-industry discussion suggests that an established specialist style can differ, but does not enumerate those exceptions.",
+    "unit": "phrase",
+    "violation_condition": "A number and its unit are not separated by a non-breaking space, leaving either no separator or a separator that permits a line break.",
+    "when": [
+     "Applies to numbers followed by unit symbols or spelled-out unit names.",
+     "For a specialist application, account for a confirmed industry convention that omits the space; the wine-label example is not a general exception."
+    ],
+    "why": "G-2 and G-4: all three spacing instructions and the dedicated section describe one separator check, with specialist conventions considered as limiting cases."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "54d2fc208dde",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7cbf5f295665",
+      "quote": "Use numerals, not words, for numbers when you are referring to a unit of measurement:"
+     },
+     {
+      "block_id": "53cbf5292926",
+      "quote": "Always use numerals next to a unit of measurement."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e55993dbcb0e",
+        "quote": "5 t"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7a3e5c7f02c6",
+        "quote": "5 tonnes"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "73a4c748b716",
+        "quote": "five t"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "277deb078496",
+        "quote": "five tonnes"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Write numerals with units of measurement",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A number referring to a unit of measurement is written in words rather than numerals.",
+    "when": [
+     "The number refers to a unit of measurement.",
+     "Applies whether the unit is a symbol or is spelled out."
+    ],
+    "why": "G-4: the heading, lead-in and ‘Always’ instruction state one numeral check; ‘Always’ supplies the hard modality."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7c0219983a91",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "a70d099d6a02",
+      "quote": "After that, use the symbols."
+     },
+     {
+      "block_id": "d21c62f50ea6",
+      "quote": "Use symbols for units that are derived from time measurements, such as speed."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3255ed4b6045",
+        "quote": "‘mm’ for millimetres"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bb6e5017b467",
+        "quote": "‘cm’ for centimetres"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "29152b59c62b",
+        "quote": "‘km’ for kilometres"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "addc4ccd8b7c",
+        "quote": "‘km/h’ for kilometres per hour"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "31e48308a436",
+        "quote": "The speed limit for urban areas in NSW is 50 km/h."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use symbols for common units of measurement",
+    "specification": "Whether a unit is common and understood depends on the audience. Determining whether an unfamiliar unit has already been introduced can require the preceding document.",
+    "unit": "document",
+    "violation_condition": "A measurement unit is spelled out where the page calls for its symbol: for a common understood unit, after an unfamiliar unit has been introduced, or for a unit derived from time measurements.",
+    "when": [
+     "Use symbols for well-known units users will understand.",
+     "After the first spelled-out use of an unfamiliar unit, use its symbol.",
+     "Use symbols for units derived from time measurements, such as speed.",
+     "The separate instruction requires ordinary days, years, hours and minutes to be spelled out, subject to its table, list and chart exception.",
+     "The separate sentence-start instruction requires a unit at the start of a sentence to be written in full."
+    ],
+    "why": "G-2 and G-4: common units, subsequent mentions and time-derived units change when the same symbol-choice check applies."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a70d099d6a02",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "a8012b338ade",
+      "quote": "You don’t need to spell out units of measurement, even for the first use, if they’re well known and users will know what they mean."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "24ff82a32fbb",
+        "quote": "The noise from the building site was 120 decibels (dB). Workers in the nearby office preferred a limit of only 50 dB."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Spell out units of measurement the first time you use them if users won’t immediately understand them.",
+    "specification": "The page gives no fixed inventory or audience test for units users will immediately understand.",
+    "unit": "document",
+    "violation_condition": "The first use of a unit that users will not immediately understand lacks its spelled-out name.",
+    "when": [
+     "Applies at the first use of an unfamiliar unit.",
+     "Well-known units that users understand do not need to be spelled out, even on first use."
+    ],
+    "why": "G-3: the known-unit permission relaxes first-use expansion. This absence check is distinct from choosing symbols on later mentions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bc3e24b076e8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ed0b5b3c2b4e",
+        "quote": "Queensland is 1,853 million km2 in area."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "83dbf31c8b1a",
+        "quote": "Queensland is 1,853 million square km in area."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t combine symbols and words for units.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A single unit expression mixes spelled-out unit components with symbols, as in ‘square km’.",
+    "when": [
+     "Applies within the unit expression.",
+     "A scale word belonging to the number, such as ‘million’, is not itself a mixed unit component."
+    ],
+    "why": "G-1 and G-4: mixed components within a unit are a separate property from choosing a wholly spelled-out name or a symbol."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a50d1452d604",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "This is a correct equivalence, not a contrast marking the unprefixed quantity as wrong.",
+      "parts": [
+       {
+        "block_id": "84b292a63f76",
+        "quote": "63 megalitres is 63,000,000 litres"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "This is a correct equivalence, not a contrast marking the unprefixed quantity as wrong.",
+      "parts": [
+       {
+        "block_id": "dc078378a366",
+        "quote": "0.001 metre is 1 millimetre"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Internationally accepted prefixes and their symbols make it easier for users to read, understand and compare numbers. Use them in government content.",
+    "specification": "The instruction concerns SI prefixes and their symbols. The page provides examples and a reference table but no magnitude threshold, preferred prefix or criterion for deciding when a prefixed form is required.",
+    "unit": "phrase",
+    "violation_condition": "A large or small measurement quantity lacks an appropriate internationally accepted prefix where the page calls for a prefixed expression.",
+    "when": [
+     "Applies to large and small measurement quantities.",
+     "Data-storage and transfer prefixes follow the separately stated convention."
+    ],
+    "why": "G-4 and E-4: the body supplies the instruction absent from the descriptive heading; no unstated numerical threshold is invented."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3861ddf02ea0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3861ddf02ea0",
+      "quote": "The prefixes for data storage and transfer work differently to those used for SI units."
+     },
+     {
+      "block_id": "7aa97b51aee2",
+      "quote": "‘kilobyte’ for 1,000 B"
+     },
+     {
+      "block_id": "72d4c67b01f2",
+      "quote": "‘megabyte’ for 1,024 kB"
+     },
+     {
+      "block_id": "3e57aec47b74",
+      "quote": "‘gigabyte’ for 1,024 MB"
+     },
+     {
+      "block_id": "4c0959c30ac4",
+      "quote": "‘terabyte’ for 1,024 GB."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For this purpose, use:",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A stated data-storage or transfer equivalence uses ‘kilobyte’, ‘megabyte’, ‘gigabyte’ or ‘terabyte’ with a factor different from the page’s specified mapping.",
+    "when": [
+     "Applies when defining or converting quantities for data storage and transfer.",
+     "The page specifies kilobyte = 1,000 B, megabyte = 1,024 kB, gigabyte = 1,024 MB and terabyte = 1,024 GB."
+    ],
+    "why": "G-2: the four prefix mappings are lookup cases of one data-quantity convention, not four separate checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "52654fa13a7a",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "52654fa13a7a",
+      "quote": "Days, years, hours and minutes measure time."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1ba076a0b2db",
+        "quote": "I have been working in the public service for 12 years."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d92cb44d1a04",
+        "quote": "He started in the new department 20 days ago."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "952ca70d6821",
+        "quote": "They sent the report in the last 15 minutes."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Spell them out in full – unless they’re in a table, list or chart and are easy to understand.",
+    "specification": "The referent is days, years, hours and minutes. Whether an abbreviation is easy to understand in a table, list or chart is audience-dependent and has no stated test.",
+    "unit": "block",
+    "violation_condition": "Days, years, hours or minutes are abbreviated outside an easily understood table, list or chart.",
+    "when": [
+     "Applies to days, years, hours and minutes.",
+     "Abbreviations are allowed in tables, lists and charts when they are easy to understand.",
+     "Units derived from time measurements, such as speed, use symbols instead."
+    ],
+    "why": "G-2 and G-3: time-unit abbreviation is one check with a format-and-understanding exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2e811651ee0b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d046b7a7dd1a",
+      "quote": "Use the same:"
+     },
+     {
+      "block_id": "33f3bfb24095",
+      "quote": "unit and prefix"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4f49ba40d864",
+        "quote": "The Green Wattle Creek fire burnt almost 3,000 km2, of which more than 1,000 km2 was national park."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "15206e868c93",
+        "quote": "The smaller jug held 1.5 L and the bigger jug held 2.0 L."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e4881634f50c",
+        "quote": "The piece of wood was 140 mm by 1,320 mm by 20 mm."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4dbd5df72337",
+        "quote": "The Green Wattle Creek fire burnt almost 300,000 ha, of which more than 1,000 km2 was national park."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bfe9fc9f3128",
+        "quote": "The smaller jug held 1,500 mL and the bigger jug held 2 L."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9c6cf6e5c29f",
+        "quote": "The piece of wood was 14 cm by 1.32 m by 20 mm."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Compare measurements using the same units",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Measurements presented for comparison, including dimensions of one object, use inconsistent units or prefixes.",
+    "when": [
+     "Applies to quantities presented for comparison.",
+     "Includes dimensions of the same object."
+    ],
+    "why": "G-4: the heading and first list item state one unit-consistency check; decimal-place consistency is independently flaggable."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "aea00166fe03",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d046b7a7dd1a",
+      "quote": "Use the same:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "15206e868c93",
+        "quote": "The smaller jug held 1.5 L and the bigger jug held 2.0 L."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The same contrast also demonstrates inconsistent units and prefixes; in litres, the intended comparison is 1.5 L and 2.0 L.",
+      "parts": [
+       {
+        "block_id": "bfe9fc9f3128",
+        "quote": "The smaller jug held 1,500 mL and the bigger jug held 2 L."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "number of decimal places.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Quantities presented for comparison have inconsistent numbers of decimal places.",
+    "when": [
+     "Applies to measurements presented for comparison.",
+     "Compare decimal precision after expressing the quantities using the same unit and prefix."
+    ],
+    "why": "G-1: decimal precision can be wrong even when units and prefixes match, so it is a separate check from unit consistency."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "495037e87372",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "495037e87372",
+      "quote": "‘litre’ can be represented as ‘L’ or ‘l’, depending on the type of content and who will be using it."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "PREFER",
+    "quote": "Most government content should use ‘L’ as it’s clearer to users (‘l’ can be confused with ‘I’ and ‘1’).",
+    "specification": "Prefer ‘L’ by default. Lowercase ‘l’ remains an accepted representation where the content type and audience make it appropriate; this is not an absolute ban.",
+    "unit": "phrase",
+    "violation_condition": "The lowercase litre symbol ‘l’ is used in ordinary government content where the clearer uppercase alternative ‘L’ is preferred.",
+    "when": [
+     "Applies when litre is represented by a symbol.",
+     "The content type and intended users can justify lowercase ‘l’."
+    ],
+    "why": "G-3: the permission to use either symbol qualifies a named preference for ‘L’, rather than creating a second rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e191f69ff2eb",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "a8b16958aedf",
+      "quote": "Don’t use imperial units of measurement in Australia unless you have a specific reason, such as:"
+     },
+     {
+      "block_id": "e4291173df49",
+      "quote": "in quotations from historical documents"
+     },
+     {
+      "block_id": "0d08884998bd",
+      "quote": "when writing for readers in countries (particularly the United States) where imperial measures, or elements of them, still apply."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+      "parts": [
+       {
+        "block_id": "5de4c1c47749",
+        "quote": "gallons for volume of fuel"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+      "parts": [
+       {
+        "block_id": "833a3b09f6d3",
+        "quote": "barrels for volume of oil"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+      "parts": [
+       {
+        "block_id": "67c7b435be31",
+        "quote": "inches for the size of a screen"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+      "parts": [
+       {
+        "block_id": "c610232617bc",
+        "quote": "feet for the altitude of a plane"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid imperial units",
+    "specification": "The page gives examples of specific reasons but no exhaustive test. Audience, quotation status and conventional specialist use may require contextual review.",
+    "unit": "document",
+    "violation_condition": "Imperial measurements are used in Australian content without a specific contextual reason.",
+    "when": [
+     "Applies to content for use in Australia.",
+     "Historical quotations can retain imperial units.",
+     "Imperial units can be appropriate for readers in countries where those measures remain in use.",
+     "The page also presents fuel gallons, oil barrels, screen inches and aircraft-altitude feet as examples in this exception discussion."
+    ],
+    "why": "G-2, G-3 and G-4: the body and exception list qualify one imperial-unit check rather than creating separate prohibitions or permissions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "393a34a27e36",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bfa99a2b542c",
+        "quote": "In the 1970s, the speed limit for highways in many states of Australia was set at 60 miles per hour (97 km/h)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "It’s good practice to also provide the equivalent quantity in SI units when that helps users.",
+    "specification": "The page does not define when an SI equivalent would help users. This requires audience and context assessment rather than an unconditional conversion requirement.",
+    "unit": "block",
+    "violation_condition": "An imperial measurement lacks an equivalent SI quantity in a context where the conversion would help users.",
+    "when": [
+     "An imperial measurement is retained for a specific reason.",
+     "Providing an SI equivalent would help the intended users."
+    ],
+    "why": "G-1: a missing helpful SI equivalent is distinct from unjustified use of imperial units."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "e8af3ecf3985",
+    "end": 29,
+    "prefix": "",
+    "quote": "Don’t use non-standard units.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The page presents this as the standard form.",
+     "parts": [
+      {
+       "block_id": "a7fad5a6ad6c",
+       "end": 52,
+       "prefix": "",
+       "quote": "There was 5 μg of active ingredient in each capsule.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The page presents this as the standard form.",
+     "parts": [
+      {
+       "block_id": "4f610090038f",
+       "end": 27,
+       "prefix": "",
+       "quote": "He measured 50 mL of water.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The page explicitly rejects ‘mcg’.",
+     "parts": [
+      {
+       "block_id": "04eae69ea54c",
+       "end": 53,
+       "prefix": "",
+       "quote": "There was 5 mcg of active ingredient in each capsule.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The page explicitly rejects this form.",
+     "parts": [
+      {
+       "block_id": "64970f6900a6",
+       "end": 26,
+       "prefix": "",
+       "quote": "He measured 5 dL of water.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The examples explicitly reject ‘mcg’ and ‘dL’ in favour of ‘μg’ and ‘mL’. The page does not define an exhaustive set of non-standard unit expressions.",
+    "unit": "phrase",
+    "violation_condition": "A measurement uses a non-standard unit expression, including the forms ‘mcg’ and ‘dL’ rejected by this page."
+   },
+   "when": [
+    "Do not treat an Australian legal non-SI unit as non-standard merely because it is not an SI unit.",
+    "Apply the separate conditions for non-SI and imperial units."
+   ],
+   "why": "G-4: use the explicit body instruction, including its own correct and incorrect examples, rather than treating the broad introductory heading as another check."
+  },
+  {
+   "anchor": {
+    "block_id": "e46b2e10ce70",
+    "end": 50,
+    "prefix": "",
+    "quote": "Only use non-SI units if the user understands them",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "03a97e12a8a5",
+     "end": 157,
+     "prefix": "",
+     "quote": "Don’t use the non-SI legal units of measurement for international content. The exception is when you have checked that users will understand and accept them.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1ffb40529928",
+     "end": 110,
+     "prefix": "ally accepted in every country. ",
+     "quote": "Use them only if users will understand them.",
+     "start": 66,
+     "suffix": " Some units, such as the nautica"
+    },
+    {
+     "block_id": "1ffb40529928",
+     "end": 180,
+     "prefix": " if users will understand them. ",
+     "quote": "Some units, such as the nautical mile, are for use only in Australia.",
+     "start": 111,
+     "suffix": " Table 2 details common examples"
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "ec6297b961fc660a",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Audience understanding, acceptance and jurisdiction cannot necessarily be established from the text alone. The page gives no operational test for these conditions.",
+    "unit": "document",
+    "violation_condition": "A non-SI legal unit is used for an audience that will not understand it, or in an international or jurisdictional context where the page’s additional acceptance conditions are not met."
+   },
+   "when": [
+    "Applies to Australian legal units that are not SI units.",
+    "For international content, use these units only after checking that users will understand and accept them.",
+    "Observe country-specific restrictions; the page identifies the nautical mile as an example for use only in Australia."
+   ],
+   "why": "G-2 and G-3: audience, international acceptance and jurisdiction limit the same non-SI-unit check; the international permission is an exception, not another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "632b05ce61d5",
+    "end": 65,
+    "prefix": "Punctuation: ",
+    "quote": "don’t place a full stop after a unit of measurement.",
+    "start": 13,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Interpret this as prohibiting an abbreviation stop after a unit symbol, not the full stop that legitimately ends a sentence containing a measurement.",
+    "unit": "sentence",
+    "violation_condition": "A unit symbol has a full stop added as abbreviation punctuation."
+   },
+   "when": [
+    "Applies to unit symbols.",
+    "Do not flag ordinary sentence-ending punctuation."
+   ],
+   "why": "G-1: retain this independently actionable child instruction rather than a second finding under the general units heading."
+  },
+  {
+   "anchor": {
+    "block_id": "dc79fd9777de",
+    "end": 71,
+    "prefix": "Capitalisation: ",
+    "quote": "use capitals only if the unit represents a proper name.",
+    "start": 16,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4eefbf2da0f1",
+       "end": 13,
+       "prefix": "",
+       "quote": "‘m’ for metre",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "06ead59b5cb0",
+       "end": 17,
+       "prefix": "",
+       "quote": "‘kg’ for kilogram",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "75b13f5171bb",
+       "end": 12,
+       "prefix": "",
+       "quote": "‘W’ for watt",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The accompanying ‘m’, ‘kg’ and ‘W’ examples establish that this instruction concerns symbol capitalisation, not capitalising spelled-out names such as ‘watt’. The page separately accepts ‘L’ for litre.",
+    "unit": "phrase",
+    "violation_condition": "A unit symbol contains an unjustified capital letter: it is not based on a proper name and is not an expressly accepted case variant such as ‘L’ for litre."
+   },
+   "when": [
+    "Applies to unit symbols.",
+    "Capitals associated with proper names are allowed.",
+    "The page also expressly allows ‘L’ for litre."
+   ],
+   "why": "G-1 and G-2: capitalisation is its own check, with the explicitly accepted litre symbol retained as an exception."
+  },
+  {
+   "anchor": {
+    "block_id": "d04377cb52ff",
+    "end": 68,
+    "prefix": "Plural and possessive: ",
+    "quote": "units don’t have a plural or possessive form.",
+    "start": 23,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4f16a57fc71c",
+     "end": 30,
+     "prefix": "",
+     "quote": "Don’t add ‘s’ for plural forms",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6d7edc0054de",
+     "end": 142,
+     "prefix": "",
+     "quote": "Symbols for units of measurement represent both the singular and the plural forms. Don’t use an ‘s’ to show plural with the symbols for units.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "46086aa12af6",
+       "end": 5,
+       "prefix": "",
+       "quote": "56 km",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3946c6c5cc4d",
+       "end": 6,
+       "prefix": "",
+       "quote": "56 kms",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A unit symbol is inflected to mark a plural or possessive, for example by adding plural ‘s’ or a possessive ending."
+   },
+   "when": [
+    "Applies to unit symbols, not spelled-out unit names.",
+    "The same symbol represents singular and plural quantities."
+   ],
+   "why": "G-2 and G-4: plural and possessive endings are cases of inflecting an invariant symbol; the later plural section restates that check."
+  },
+  {
+   "anchor": {
+    "block_id": "4283dfc31d5c",
+    "end": 48,
+    "prefix": "",
+    "quote": "Start of a sentence: write out the unit in full.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A unit at the start of a sentence is written as a symbol rather than in full."
+   },
+   "when": [
+    "The unit occurs at the start of a sentence."
+   ],
+   "why": "G-1: sentence-initial unit treatment is an independently actionable child instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "e616a73d196d",
+    "end": 50,
+    "prefix": "",
+    "quote": "Put a non-breaking space between numbers and units",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "b51a270ddf0d",
+     "end": 66,
+     "prefix": "",
+     "quote": "Spacing: use a non-breaking space between the number and the unit.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "83db126584a8",
+     "end": 61,
+     "prefix": "",
+     "quote": "Include a non-breaking space between the number and the unit.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "12a83a7c7f66",
+     "end": 181,
+     "prefix": " the 2 components sit together. ",
+     "quote": "To do this, use a non-breaking space between numbers and their units of measurement.",
+     "start": 97,
+     "suffix": ""
+    },
+    {
+     "block_id": "a3b14bef641b",
+     "end": 84,
+     "prefix": "",
+     "quote": "By convention, some industries don’t have a space between the quantity and the unit.",
+     "start": 0,
+     "suffix": " Many 750 mL bottles of wine, fo"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The following gloss states that the source has a non-breaking space.",
+     "parts": [
+      {
+       "block_id": "1873d5711744",
+       "end": 39,
+       "prefix": "",
+       "quote": "The post should be at least 1.5 m tall.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "These two blocks form the manual’s single broken-line example.",
+     "parts": [
+      {
+       "block_id": "0bd02deb6612",
+       "end": 31,
+       "prefix": "",
+       "quote": "The post should be at least 1.5",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c323604e357b",
+       "end": 7,
+       "prefix": "",
+       "quote": "m tall.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "e35db09caa44acff",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The default is a non-breaking space. The specialist-industry discussion suggests that an established specialist style can differ, but does not enumerate those exceptions.",
+    "unit": "phrase",
+    "violation_condition": "A number and its unit are not separated by a non-breaking space, leaving either no separator or a separator that permits a line break."
+   },
+   "when": [
+    "Applies to numbers followed by unit symbols or spelled-out unit names.",
+    "For a specialist application, account for a confirmed industry convention that omits the space; the wine-label example is not a general exception."
+   ],
+   "why": "G-2 and G-4: all three spacing instructions and the dedicated section describe one separator check, with specialist conventions considered as limiting cases."
+  },
+  {
+   "anchor": {
+    "block_id": "54d2fc208dde",
+    "end": 40,
+    "prefix": "",
+    "quote": "Write numerals with units of measurement",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7cbf5f295665",
+     "end": 85,
+     "prefix": "",
+     "quote": "Use numerals, not words, for numbers when you are referring to a unit of measurement:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "53cbf5292926",
+     "end": 50,
+     "prefix": "",
+     "quote": "Always use numerals next to a unit of measurement.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e55993dbcb0e",
+       "end": 3,
+       "prefix": "",
+       "quote": "5 t",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7a3e5c7f02c6",
+       "end": 8,
+       "prefix": "",
+       "quote": "5 tonnes",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "73a4c748b716",
+       "end": 6,
+       "prefix": "",
+       "quote": "five t",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "277deb078496",
+       "end": 11,
+       "prefix": "",
+       "quote": "five tonnes",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "23087ae48d02277f",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A number referring to a unit of measurement is written in words rather than numerals."
+   },
+   "when": [
+    "The number refers to a unit of measurement.",
+    "Applies whether the unit is a symbol or is spelled out."
+   ],
+   "why": "G-4: the heading, lead-in and ‘Always’ instruction state one numeral check; ‘Always’ supplies the hard modality."
+  },
+  {
+   "anchor": {
+    "block_id": "7c0219983a91",
+    "end": 43,
+    "prefix": "",
+    "quote": "Use symbols for common units of measurement",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "a70d099d6a02",
+     "end": 131,
+     "prefix": "’t immediately understand them. ",
+     "quote": "After that, use the symbols.",
+     "start": 103,
+     "suffix": ""
+    },
+    {
+     "block_id": "d21c62f50ea6",
+     "end": 77,
+     "prefix": "",
+     "quote": "Use symbols for units that are derived from time measurements, such as speed.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3255ed4b6045",
+       "end": 20,
+       "prefix": "",
+       "quote": "‘mm’ for millimetres",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bb6e5017b467",
+       "end": 20,
+       "prefix": "",
+       "quote": "‘cm’ for centimetres",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "29152b59c62b",
+       "end": 19,
+       "prefix": "",
+       "quote": "‘km’ for kilometres",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "addc4ccd8b7c",
+       "end": 30,
+       "prefix": "",
+       "quote": "‘km/h’ for kilometres per hour",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "31e48308a436",
+       "end": 50,
+       "prefix": "",
+       "quote": "The speed limit for urban areas in NSW is 50 km/h.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "33c20caf94963f34",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Whether a unit is common and understood depends on the audience. Determining whether an unfamiliar unit has already been introduced can require the preceding document.",
+    "unit": "document",
+    "violation_condition": "A measurement unit is spelled out where the page calls for its symbol: for a common understood unit, after an unfamiliar unit has been introduced, or for a unit derived from time measurements."
+   },
+   "when": [
+    "Use symbols for well-known units users will understand.",
+    "After the first spelled-out use of an unfamiliar unit, use its symbol.",
+    "Use symbols for units derived from time measurements, such as speed.",
+    "The separate instruction requires ordinary days, years, hours and minutes to be spelled out, subject to its table, list and chart exception.",
+    "The separate sentence-start instruction requires a unit at the start of a sentence to be written in full."
+   ],
+   "why": "G-2 and G-4: common units, subsequent mentions and time-derived units change when the same symbol-choice check applies."
+  },
+  {
+   "anchor": {
+    "block_id": "a70d099d6a02",
+    "end": 102,
+    "prefix": "",
+    "quote": "Spell out units of measurement the first time you use them if users won’t immediately understand them.",
+    "start": 0,
+    "suffix": " After that, use the symbols."
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "a8012b338ade",
+     "end": 131,
+     "prefix": "",
+     "quote": "You don’t need to spell out units of measurement, even for the first use, if they’re well known and users will know what they mean.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "24ff82a32fbb",
+       "end": 117,
+       "prefix": "",
+       "quote": "The noise from the building site was 120 decibels (dB). Workers in the nearby office preferred a limit of only 50 dB.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page gives no fixed inventory or audience test for units users will immediately understand.",
+    "unit": "document",
+    "violation_condition": "The first use of a unit that users will not immediately understand lacks its spelled-out name."
+   },
+   "when": [
+    "Applies at the first use of an unfamiliar unit.",
+    "Well-known units that users understand do not need to be spelled out, even on first use."
+   ],
+   "why": "G-3: the known-unit permission relaxes first-use expansion. This absence check is distinct from choosing symbols on later mentions."
+  },
+  {
+   "anchor": {
+    "block_id": "bc3e24b076e8",
+    "end": 42,
+    "prefix": "",
+    "quote": "Don’t combine symbols and words for units.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ed0b5b3c2b4e",
+       "end": 40,
+       "prefix": "",
+       "quote": "Queensland is 1,853 million km2 in area.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "83dbf31c8b1a",
+       "end": 46,
+       "prefix": "",
+       "quote": "Queensland is 1,853 million square km in area.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A single unit expression mixes spelled-out unit components with symbols, as in ‘square km’."
+   },
+   "when": [
+    "Applies within the unit expression.",
+    "A scale word belonging to the number, such as ‘million’, is not itself a mixed unit component."
+   ],
+   "why": "G-1 and G-4: mixed components within a unit are a separate property from choosing a wholly spelled-out name or a symbol."
+  },
+  {
+   "anchor": {
+    "block_id": "a50d1452d604",
+    "end": 149,
+    "prefix": "",
+    "quote": "Internationally accepted prefixes and their symbols make it easier for users to read, understand and compare numbers. Use them in government content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "This is a correct equivalence, not a contrast marking the unprefixed quantity as wrong.",
+     "parts": [
+      {
+       "block_id": "84b292a63f76",
+       "end": 34,
+       "prefix": "",
+       "quote": "63 megalitres is 63,000,000 litres",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "This is a correct equivalence, not a contrast marking the unprefixed quantity as wrong.",
+     "parts": [
+      {
+       "block_id": "dc078378a366",
+       "end": 27,
+       "prefix": "",
+       "quote": "0.001 metre is 1 millimetre",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The instruction concerns SI prefixes and their symbols. The page provides examples and a reference table but no magnitude threshold, preferred prefix or criterion for deciding when a prefixed form is required.",
+    "unit": "phrase",
+    "violation_condition": "A large or small measurement quantity lacks an appropriate internationally accepted prefix where the page calls for a prefixed expression."
+   },
+   "when": [
+    "Applies to large and small measurement quantities.",
+    "Data-storage and transfer prefixes follow the separately stated convention."
+   ],
+   "why": "G-4 and E-4: the body supplies the instruction absent from the descriptive heading; no unstated numerical threshold is invented."
+  },
+  {
+   "anchor": {
+    "block_id": "3861ddf02ea0",
+    "end": 169,
+    "prefix": "torage and data transfer speed. ",
+    "quote": "For this purpose, use:",
+    "start": 147,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3861ddf02ea0",
+     "end": 87,
+     "prefix": "",
+     "quote": "The prefixes for data storage and transfer work differently to those used for SI units.",
+     "start": 0,
+     "suffix": " ‘Byte’ (B) is the unit of stora"
+    },
+    {
+     "block_id": "7aa97b51aee2",
+     "end": 22,
+     "prefix": "",
+     "quote": "‘kilobyte’ for 1,000 B",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "72d4c67b01f2",
+     "end": 23,
+     "prefix": "",
+     "quote": "‘megabyte’ for 1,024 kB",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3e57aec47b74",
+     "end": 23,
+     "prefix": "",
+     "quote": "‘gigabyte’ for 1,024 MB",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4c0959c30ac4",
+     "end": 24,
+     "prefix": "",
+     "quote": "‘terabyte’ for 1,024 GB.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A stated data-storage or transfer equivalence uses ‘kilobyte’, ‘megabyte’, ‘gigabyte’ or ‘terabyte’ with a factor different from the page’s specified mapping."
+   },
+   "when": [
+    "Applies when defining or converting quantities for data storage and transfer.",
+    "The page specifies kilobyte = 1,000 B, megabyte = 1,024 kB, gigabyte = 1,024 MB and terabyte = 1,024 GB."
+   ],
+   "why": "G-2: the four prefix mappings are lookup cases of one data-quantity convention, not four separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "52654fa13a7a",
+    "end": 162,
+    "prefix": "e time. These are not SI units. ",
+    "quote": "Spell them out in full – unless they’re in a table, list or chart and are easy to understand.",
+    "start": 69,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "52654fa13a7a",
+     "end": 44,
+     "prefix": "",
+     "quote": "Days, years, hours and minutes measure time.",
+     "start": 0,
+     "suffix": " These are not SI units. Spell t"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1ba076a0b2db",
+       "end": 55,
+       "prefix": "",
+       "quote": "I have been working in the public service for 12 years.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d92cb44d1a04",
+       "end": 45,
+       "prefix": "",
+       "quote": "He started in the new department 20 days ago.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "952ca70d6821",
+       "end": 44,
+       "prefix": "",
+       "quote": "They sent the report in the last 15 minutes.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The referent is days, years, hours and minutes. Whether an abbreviation is easy to understand in a table, list or chart is audience-dependent and has no stated test.",
+    "unit": "block",
+    "violation_condition": "Days, years, hours or minutes are abbreviated outside an easily understood table, list or chart."
+   },
+   "when": [
+    "Applies to days, years, hours and minutes.",
+    "Abbreviations are allowed in tables, lists and charts when they are easy to understand.",
+    "Units derived from time measurements, such as speed, use symbols instead."
+   ],
+   "why": "G-2 and G-3: time-unit abbreviation is one check with a format-and-understanding exception."
+  },
+  {
+   "anchor": {
+    "block_id": "2e811651ee0b",
+    "end": 41,
+    "prefix": "",
+    "quote": "Compare measurements using the same units",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d046b7a7dd1a",
+     "end": 59,
+     "prefix": "or users to compare quantities. ",
+     "quote": "Use the same:",
+     "start": 46,
+     "suffix": ""
+    },
+    {
+     "block_id": "33f3bfb24095",
+     "end": 15,
+     "prefix": "",
+     "quote": "unit and prefix",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4f49ba40d864",
+       "end": 99,
+       "prefix": "",
+       "quote": "The Green Wattle Creek fire burnt almost 3,000 km2, of which more than 1,000 km2 was national park.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "15206e868c93",
+       "end": 57,
+       "prefix": "",
+       "quote": "The smaller jug held 1.5 L and the bigger jug held 2.0 L.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e4881634f50c",
+       "end": 50,
+       "prefix": "",
+       "quote": "The piece of wood was 140 mm by 1,320 mm by 20 mm.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4dbd5df72337",
+       "end": 100,
+       "prefix": "",
+       "quote": "The Green Wattle Creek fire burnt almost 300,000 ha, of which more than 1,000 km2 was national park.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bfe9fc9f3128",
+       "end": 58,
+       "prefix": "",
+       "quote": "The smaller jug held 1,500 mL and the bigger jug held 2 L.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9c6cf6e5c29f",
+       "end": 47,
+       "prefix": "",
+       "quote": "The piece of wood was 14 cm by 1.32 m by 20 mm.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "de4ab6910569e5f3",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Measurements presented for comparison, including dimensions of one object, use inconsistent units or prefixes."
+   },
+   "when": [
+    "Applies to quantities presented for comparison.",
+    "Includes dimensions of the same object."
+   ],
+   "why": "G-4: the heading and first list item state one unit-consistency check; decimal-place consistency is independently flaggable."
+  },
+  {
+   "anchor": {
+    "block_id": "aea00166fe03",
+    "end": 25,
+    "prefix": "",
+    "quote": "number of decimal places.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d046b7a7dd1a",
+     "end": 59,
+     "prefix": "or users to compare quantities. ",
+     "quote": "Use the same:",
+     "start": 46,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "15206e868c93",
+       "end": 57,
+       "prefix": "",
+       "quote": "The smaller jug held 1.5 L and the bigger jug held 2.0 L.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The same contrast also demonstrates inconsistent units and prefixes; in litres, the intended comparison is 1.5 L and 2.0 L.",
+     "parts": [
+      {
+       "block_id": "bfe9fc9f3128",
+       "end": 58,
+       "prefix": "",
+       "quote": "The smaller jug held 1,500 mL and the bigger jug held 2 L.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Quantities presented for comparison have inconsistent numbers of decimal places."
+   },
+   "when": [
+    "Applies to measurements presented for comparison.",
+    "Compare decimal precision after expressing the quantities using the same unit and prefix."
+   ],
+   "why": "G-1: decimal precision can be wrong even when units and prefixes match, so it is a separate check from unit consistency."
+  },
+  {
+   "anchor": {
+    "block_id": "495037e87372",
+    "end": 210,
+    "prefix": "ntent and who will be using it. ",
+    "quote": "Most government content should use ‘L’ as it’s clearer to users (‘l’ can be confused with ‘I’ and ‘1’).",
+    "start": 107,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "495037e87372",
+     "end": 106,
+     "prefix": "Note: ",
+     "quote": "‘litre’ can be represented as ‘L’ or ‘l’, depending on the type of content and who will be using it.",
+     "start": 6,
+     "suffix": " Most government content should "
+    }
+   ],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "Prefer ‘L’ by default. Lowercase ‘l’ remains an accepted representation where the content type and audience make it appropriate; this is not an absolute ban.",
+    "unit": "phrase",
+    "violation_condition": "The lowercase litre symbol ‘l’ is used in ordinary government content where the clearer uppercase alternative ‘L’ is preferred."
+   },
+   "when": [
+    "Applies when litre is represented by a symbol.",
+    "The content type and intended users can justify lowercase ‘l’."
+   ],
+   "why": "G-3: the permission to use either symbol qualifies a named preference for ‘L’, rather than creating a second rule."
+  },
+  {
+   "anchor": {
+    "block_id": "e191f69ff2eb",
+    "end": 20,
+    "prefix": "",
+    "quote": "Avoid imperial units",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "a8b16958aedf",
+     "end": 96,
+     "prefix": "",
+     "quote": "Don’t use imperial units of measurement in Australia unless you have a specific reason, such as:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e4291173df49",
+     "end": 39,
+     "prefix": "",
+     "quote": "in quotations from historical documents",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0d08884998bd",
+     "end": 129,
+     "prefix": "",
+     "quote": "when writing for readers in countries (particularly the United States) where imperial measures, or elements of them, still apply.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+     "parts": [
+      {
+       "block_id": "5de4c1c47749",
+       "end": 26,
+       "prefix": "",
+       "quote": "gallons for volume of fuel",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+     "parts": [
+      {
+       "block_id": "833a3b09f6d3",
+       "end": 25,
+       "prefix": "",
+       "quote": "barrels for volume of oil",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+     "parts": [
+      {
+       "block_id": "67c7b435be31",
+       "end": 31,
+       "prefix": "",
+       "quote": "inches for the size of a screen",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "An example in the discussion of contextual reasons, not an example labelled wrong.",
+     "parts": [
+      {
+       "block_id": "c610232617bc",
+       "end": 32,
+       "prefix": "",
+       "quote": "feet for the altitude of a plane",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 17,
+   "seed_uid": "95f96ff6c718708d",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page gives examples of specific reasons but no exhaustive test. Audience, quotation status and conventional specialist use may require contextual review.",
+    "unit": "document",
+    "violation_condition": "Imperial measurements are used in Australian content without a specific contextual reason."
+   },
+   "when": [
+    "Applies to content for use in Australia.",
+    "Historical quotations can retain imperial units.",
+    "Imperial units can be appropriate for readers in countries where those measures remain in use.",
+    "The page also presents fuel gallons, oil barrels, screen inches and aircraft-altitude feet as examples in this exception discussion."
+   ],
+   "why": "G-2, G-3 and G-4: the body and exception list qualify one imperial-unit check rather than creating separate prohibitions or permissions."
+  },
+  {
+   "anchor": {
+    "block_id": "393a34a27e36",
+    "end": 93,
+    "prefix": "",
+    "quote": "It’s good practice to also provide the equivalent quantity in SI units when that helps users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bfa99a2b542c",
+       "end": 110,
+       "prefix": "",
+       "quote": "In the 1970s, the speed limit for highways in many states of Australia was set at 60 miles per hour (97 km/h).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define when an SI equivalent would help users. This requires audience and context assessment rather than an unconditional conversion requirement.",
+    "unit": "block",
+    "violation_condition": "An imperial measurement lacks an equivalent SI quantity in a context where the conversion would help users."
+   },
+   "when": [
+    "An imperial measurement is retained for a specific reason.",
+    "Providing an SI equivalent would help the intended users."
+   ],
+   "why": "G-1: a missing helpful SI equivalent is distinct from unjustified use of imperial units."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 8101,
+  "output_tokens": 16566,
+  "reasoning_tokens": 6598
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "effort": "medium",
+ "input_sha256": "3a2786fb287bf4be9cd3efca93637ce781d010de89b783168cc7c6de3d9ee4e0",
+ "model": "gemini-3.8-flash",
+ "page_path": "content-types/journals-magazines-and-newspapers.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5031,
+  "output_tokens": 240,
+  "reasoning_tokens": 3260
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "G-1: Heading that groups the descriptive paragraphs and list items below it.",
+   "restates": "",
+   "verdict": "section"
+  },
+  {
+   "id": "C2",
+   "note": "Test: Distinct check specifying the required elements for an online periodical's home page.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C3",
+   "note": "Test: Distinct check for first-page publication details of a volume, separate from the cover in A4.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "Test: Distinct check for required information on page 2 or the back page, separate from the cover in A5.",
+   "restates": "",
+   "verdict": "rule"
+  }
+ ],
+ "version": "v2"
+}

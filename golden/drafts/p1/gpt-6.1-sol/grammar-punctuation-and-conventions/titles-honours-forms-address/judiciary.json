@@ -1,0 +1,1411 @@
+{
+ "effort": "high",
+ "input_sha256": "ec99e7420dddacc778ee031ab02ae9defe055e4245f308ab53f6d099d1d3eb3f",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "c1d71f417f06",
+    "end": 60,
+    "prefix": "",
+    "quote": "Use the correct titles to refer to members of the judiciary.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Page-level introduction to the specific title and address rules, not an additional check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3f2741a76aed",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use the correct form to refer to judges and magistrates",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific court, correspondence and magistrate instructions below it.",
+   "reason": "section",
+   "seed_uid": "2ce0811615212c7a"
+  },
+  {
+   "anchor": {
+    "block_id": "8bec9062ff77",
+    "end": 57,
+    "prefix": "",
+    "quote": "Instructions for addressing judges and registrars are at:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces external resources rather than stating a checkable form of address.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "99a99addb5cd",
+    "end": 75,
+    "prefix": "",
+    "quote": "You can also abbreviate the term ‘Honourable’ to ‘Hon’ without a full stop.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: absorbed as a permitted form under the ‘The Honourable’ rule, including the stated absence of a full stop.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "002af22a2006",
+    "end": 88,
+    "prefix": "",
+    "quote": "Refer to judges of the following courts as ‘Justice’ and use the title ‘The Honourable’:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the judicial-designation and courtesy-title instructions already stated for the wider court list.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f951d4c8b34e",
+    "end": 70,
+    "prefix": "",
+    "quote": "Use the title ‘His Honour’ or ‘Her Honour’ for judges of these courts.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the earlier courtesy-style rule for Division 2, district and county court judges.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8c542a78dd6f",
+    "end": 33,
+    "prefix": "",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: adds the lower-court correspondence scope to the same closing check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "50d808a5a8f0",
+    "end": 79,
+    "prefix": "",
+    "quote": "On subsequent mention, you can use ‘Sir’ or ‘Dame’ and the person’s given name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: relaxes the full knighted-judge form on subsequent mention; retained as an exception.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/titles-honours-forms-address/judiciary.md",
+ "page_sha256": "0f91359f2200ccbeecc875705e0c3c859c97901ce8b5e3f0d5121d9aabb5af31",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "c1d71f417f06",
+    "note": "Page-level introduction to the specific title and address rules, not an additional check.",
+    "quote": "Use the correct titles to refer to members of the judiciary.",
+    "reason": "section"
+   },
+   {
+    "block_id": "3f2741a76aed",
+    "note": "G-1: groups the specific court, correspondence and magistrate instructions below it.",
+    "quote": "Use the correct form to refer to judges and magistrates",
+    "reason": "section"
+   },
+   {
+    "block_id": "8bec9062ff77",
+    "note": "Introduces external resources rather than stating a checkable form of address.",
+    "quote": "Instructions for addressing judges and registrars are at:",
+    "reason": "description"
+   },
+   {
+    "block_id": "99a99addb5cd",
+    "note": "G-3: absorbed as a permitted form under the ‘The Honourable’ rule, including the stated absence of a full stop.",
+    "quote": "You can also abbreviate the term ‘Honourable’ to ‘Hon’ without a full stop.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "002af22a2006",
+    "note": "G-4: repeats the judicial-designation and courtesy-title instructions already stated for the wider court list.",
+    "quote": "Refer to judges of the following courts as ‘Justice’ and use the title ‘The Honourable’:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f951d4c8b34e",
+    "note": "G-4: absorbed into the earlier courtesy-style rule for Division 2, district and county court judges.",
+    "quote": "Use the title ‘His Honour’ or ‘Her Honour’ for judges of these courts.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8c542a78dd6f",
+    "note": "G-2 and G-4: adds the lower-court correspondence scope to the same closing check.",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "50d808a5a8f0",
+    "note": "G-3: relaxes the full knighted-judge form on subsequent mention; retained as an exception.",
+    "quote": "On subsequent mention, you can use ‘Sir’ or ‘Dame’ and the person’s given name.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8db0300710a2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a6e70b49d809",
+      "quote": "High Court"
+     },
+     {
+      "block_id": "9068d0a13034",
+      "quote": "Federal Court"
+     },
+     {
+      "block_id": "19e55a3dead1",
+      "quote": "Federal Circuit and Family Court of Australia (Division 1)"
+     },
+     {
+      "block_id": "25a65373ddd1",
+      "quote": "supreme courts in the states and territories."
+     },
+     {
+      "block_id": "002af22a2006",
+      "quote": "Refer to judges of the following courts as ‘Justice’"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "268000783045",
+        "quote": "The Honourable Justice Christine Mead"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Refer to judges of the following courts as ‘Justice’",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal reference to a serving judge of a listed court lacks the judicial designation ‘Justice’, including as part of ‘Chief Justice’.",
+    "when": [
+     "Applies to judges of the High Court, Federal Court, Federal Circuit and Family Court of Australia (Division 1), and state and territory supreme courts.",
+     "The lifetime retention provisions concern ‘The Honourable’; they do not require retired judges to retain ‘Justice’.",
+     "Email and letter salutations are covered by the separate salutation rule."
+    ],
+    "why": "G-1 excludes the grouping heading; G-4 consolidates the repeated instruction. The judicial designation is distinct from the courtesy title."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8db0300710a2",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "a6e70b49d809",
+      "quote": "High Court"
+     },
+     {
+      "block_id": "9068d0a13034",
+      "quote": "Federal Court"
+     },
+     {
+      "block_id": "19e55a3dead1",
+      "quote": "Federal Circuit and Family Court of Australia (Division 1)"
+     },
+     {
+      "block_id": "25a65373ddd1",
+      "quote": "supreme courts in the states and territories."
+     },
+     {
+      "block_id": "edfcf38e3c6f",
+      "quote": "Judges of these courts retain the title ‘The Honourable’ for life."
+     },
+     {
+      "block_id": "99a99addb5cd",
+      "quote": "You can also abbreviate the term ‘Honourable’ to ‘Hon’ without a full stop."
+     },
+     {
+      "block_id": "002af22a2006",
+      "quote": "use the title ‘The Honourable’"
+     },
+     {
+      "block_id": "5e12e7525c68",
+      "quote": "Judges of the Federal Circuit and Family Court of Australia (Division 1) and chief justices of the supreme courts in states and territories retain the title ‘The Honourable’ for life. Supreme court justices also generally retain the title for life."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f4934c0e1b95",
+        "quote": "The Honourable Chief Justice Stephen Gageler AC"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "180c845b4ba2",
+        "quote": "The Honourable Susan Kiefel AC"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7ffa45dc899b",
+        "quote": "The Hon Justice Penelope Neskovcin"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b3a69cf0111d",
+        "quote": "The Hon Justice Dowling"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "268000783045",
+        "quote": "The Honourable Justice Christine Mead"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9b9d9e5d7e41",
+        "quote": "The Honourable Justice Joshua Wilson"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "use the title ‘The Honourable’",
+    "specification": "The page says supreme court justices ‘generally’ retain the title for life but does not identify the exceptions. Do not assume every retired supreme court justice retains it without verification.",
+    "unit": "phrase",
+    "violation_condition": "A formal reference to a judge entitled to this courtesy title lacks ‘The Honourable’ or the permitted shortened form ‘The Hon’.",
+    "when": [
+     "Applies to judges of the High Court, Federal Court, Federal Circuit and Family Court of Australia (Division 1), and state and territory supreme courts.",
+     "High Court and Federal Court judges retain the title for life.",
+     "Federal Circuit and Family Court of Australia (Division 1) judges and state and territory supreme court chief justices retain the title for life.",
+     "Other supreme court justices generally retain the title for life.",
+     "‘Honourable’ may be abbreviated to ‘Hon’ without a full stop.",
+     "The prescribed ‘Dear Justice’ salutations do not require this courtesy title.",
+     "The separate knighted-judge rule covers ‘The Honourable Sir’, ‘The Honourable Dame’ and permitted subsequent mentions."
+    ],
+    "why": "G-2 keeps lifetime entitlement within the title rule; G-3 records abbreviation as a permission; G-4 absorbs the repeated instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ac21626f440b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "468dea850710",
+      "quote": "Federal Circuit and Family Court of Australia (Division 2)"
+     },
+     {
+      "block_id": "96be1df5146c",
+      "quote": "district courts"
+     },
+     {
+      "block_id": "a420d6ce4c61",
+      "quote": "county courts."
+     },
+     {
+      "block_id": "f951d4c8b34e",
+      "quote": "Use the title ‘His Honour’ or ‘Her Honour’ for judges of these courts."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9d67327bf4af",
+        "quote": "Her Honour Judge Matteo"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "09bb4ea6cdba",
+        "quote": "His Honour Judge Jarro"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the titles ‘Your Honour’, ‘His Honour’ or ‘Her Honour’ for judges of:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal reference to, or direct address of, a judge of a listed court lacks the applicable ‘Your Honour’, ‘His Honour’ or ‘Her Honour’ form.",
+    "when": [
+     "Applies to judges of the Federal Circuit and Family Court of Australia (Division 2), district courts and county courts.",
+     "‘Your Honour’ is the direct-address form; ‘His Honour’ and ‘Her Honour’ are third-person forms.",
+     "Email and letter salutations use the separately prescribed ‘Dear Judge [Family name]’ form."
+    ],
+    "why": "G-2 groups the court cases; G-4 absorbs the later restatement. Courtesy style is distinct from the designation ‘Judge’."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4aa61d81d1f7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "06d3357b71a1",
+      "quote": "Federal Circuit and Family Court of Australia (Division 2)"
+     },
+     {
+      "block_id": "c094713021e6",
+      "quote": "district courts"
+     },
+     {
+      "block_id": "cc0992cb2581",
+      "quote": "county courts."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9d67327bf4af",
+        "quote": "Her Honour Judge Matteo"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "09bb4ea6cdba",
+        "quote": "His Honour Judge Jarro"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address judges of the following courts as ‘Judge’:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal judicial designation for a judge of a listed court omits or replaces ‘Judge’.",
+    "when": [
+     "Applies to judges of the Federal Circuit and Family Court of Australia (Division 2), district courts and county courts.",
+     "The separate courtesy-style rule permits ‘Your Honour’ in direct address.",
+     "Email and letter salutations are covered by the separate salutation rule."
+    ],
+    "why": "G-2 keeps the three court cases together; the required judicial designation is independently checkable from the courtesy style."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "de99a6704452",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1af9d6ca6ca4",
+      "quote": "a justice of the Federal Circuit and Family Court of Australia (Division 1)"
+     },
+     {
+      "block_id": "e986f25698ab",
+      "quote": "a judge of a state or territory supreme court."
+     },
+     {
+      "block_id": "9b40c8adf927",
+      "quote": "In emails and letters:"
+     },
+     {
+      "block_id": "ab833b156ca7",
+      "quote": "Open with ‘Dear Judge [Family name]’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "In emails and letters, use ‘Dear Justice [Family name]’ to address:",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An email or letter to a judge in one of the specified court groups lacks the prescribed ‘Dear Justice [Family name]’ or ‘Dear Judge [Family name]’ salutation for that group.",
+    "when": [
+     "Applies to emails and letters.",
+     "Use ‘Dear Justice [Family name]’ for a justice of the Federal Circuit and Family Court of Australia (Division 1) or a state or territory supreme court judge.",
+     "Use ‘Dear Judge [Family name]’ for a judge of the Federal Circuit and Family Court of Australia (Division 2), a district court or a county court."
+    ],
+    "why": "G-2 treats the court-dependent salutation forms as cases of one salutation check."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "a7d1935a0581",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8c542a78dd6f",
+      "quote": "Conclude with ‘Yours faithfully’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Conclude correspondence with ‘Yours faithfully’.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An email or letter to a judge in one of the specified court groups does not conclude with ‘Yours faithfully’.",
+    "when": [
+     "Applies to emails and letters to judges of the Federal Circuit and Family Court of Australia (Division 1), state and territory supreme courts, the Federal Circuit and Family Court of Australia (Division 2), district courts and county courts."
+    ],
+    "why": "G-2 combines the court scopes; G-4 prevents the repeated closing instruction becoming a second rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6105759a5b24",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Address magistrates in court as ‘Your Honour’.When outside court, address them as ‘Magistrate’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A magistrate is addressed with a form other than ‘Your Honour’ in court or ‘Magistrate’ outside court.",
+    "when": [
+     "The required form depends on whether the address occurs in court or outside court.",
+     "Envelope addressing is governed by the separate envelope rule."
+    ],
+    "why": "G-2 keeps the in-court and outside-court conditions within one magistrate-address check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9d712d07c968",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5de34ac61fbe",
+        "quote": "His Honour Magistrate Smart"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e6a208f93323",
+        "quote": "Her Honour Magistrate Duvnjak"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When addressing an envelope use ‘Her Honour Magistrate’ or ‘His Honour Magistrate’.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An envelope addressed to a magistrate lacks the applicable ‘Her Honour Magistrate’ or ‘His Honour Magistrate’ form.",
+    "when": [
+     "Applies to envelopes addressed to magistrates."
+    ],
+    "why": "The envelope requires a distinct written address form; it is not a second check on ordinary direct address."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c161f41f8d23",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "50d808a5a8f0",
+      "quote": "On subsequent mention, you can use ‘Sir’ or ‘Dame’ and the person’s given name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fb378af7452a",
+        "quote": "The Honourable Sir Ninian Stephen KG AK GCMG GCVO KBE QC"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1e3335139ad6",
+        "quote": "The Honourable Dame Roma Flinders Mitchell AC DBE CVO QC"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "588f03c8f8ce",
+        "quote": "Sir Ninian"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "eaf584ee990b",
+        "quote": "Dame Roma"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address a judge who is a knight or dame as ‘The Honourable Sir’ or ‘The Honourable Dame’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal address of a judge who is a knight or dame lacks the applicable ‘The Honourable Sir’ or ‘The Honourable Dame’ form, other than a permitted subsequent mention.",
+    "when": [
+     "Applies to judges who are knights or dames.",
+     "On subsequent mention, ‘Sir’ or ‘Dame’ followed by the person’s given name is permitted."
+    ],
+    "why": "G-2 combines the knight and dame cases; G-3 records the subsequent-mention permission as an exception."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "8db0300710a2",
+    "end": 52,
+    "prefix": "",
+    "quote": "Refer to judges of the following courts as ‘Justice’",
+    "start": 0,
+    "suffix": " and use the title ‘The Honourab"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a6e70b49d809",
+     "end": 10,
+     "prefix": "",
+     "quote": "High Court",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9068d0a13034",
+     "end": 13,
+     "prefix": "",
+     "quote": "Federal Court",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "19e55a3dead1",
+     "end": 58,
+     "prefix": "",
+     "quote": "Federal Circuit and Family Court of Australia (Division 1)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "25a65373ddd1",
+     "end": 45,
+     "prefix": "",
+     "quote": "supreme courts in the states and territories.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "002af22a2006",
+     "end": 52,
+     "prefix": "",
+     "quote": "Refer to judges of the following courts as ‘Justice’",
+     "start": 0,
+     "suffix": " and use the title ‘The Honourab"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "268000783045",
+       "end": 37,
+       "prefix": "",
+       "quote": "The Honourable Justice Christine Mead",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal reference to a serving judge of a listed court lacks the judicial designation ‘Justice’, including as part of ‘Chief Justice’."
+   },
+   "when": [
+    "Applies to judges of the High Court, Federal Court, Federal Circuit and Family Court of Australia (Division 1), and state and territory supreme courts.",
+    "The lifetime retention provisions concern ‘The Honourable’; they do not require retired judges to retain ‘Justice’.",
+    "Email and letter salutations are covered by the separate salutation rule."
+   ],
+   "why": "G-1 excludes the grouping heading; G-4 consolidates the repeated instruction. The judicial designation is distinct from the courtesy title."
+  },
+  {
+   "anchor": {
+    "block_id": "8db0300710a2",
+    "end": 87,
+    "prefix": "llowing courts as ‘Justice’ and ",
+    "quote": "use the title ‘The Honourable’",
+    "start": 57,
+    "suffix": ":"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "a6e70b49d809",
+     "end": 10,
+     "prefix": "",
+     "quote": "High Court",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9068d0a13034",
+     "end": 13,
+     "prefix": "",
+     "quote": "Federal Court",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "19e55a3dead1",
+     "end": 58,
+     "prefix": "",
+     "quote": "Federal Circuit and Family Court of Australia (Division 1)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "25a65373ddd1",
+     "end": 45,
+     "prefix": "",
+     "quote": "supreme courts in the states and territories.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "edfcf38e3c6f",
+     "end": 66,
+     "prefix": "",
+     "quote": "Judges of these courts retain the title ‘The Honourable’ for life.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "99a99addb5cd",
+     "end": 75,
+     "prefix": "",
+     "quote": "You can also abbreviate the term ‘Honourable’ to ‘Hon’ without a full stop.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "002af22a2006",
+     "end": 87,
+     "prefix": "llowing courts as ‘Justice’ and ",
+     "quote": "use the title ‘The Honourable’",
+     "start": 57,
+     "suffix": ":"
+    },
+    {
+     "block_id": "5e12e7525c68",
+     "end": 248,
+     "prefix": "",
+     "quote": "Judges of the Federal Circuit and Family Court of Australia (Division 1) and chief justices of the supreme courts in states and territories retain the title ‘The Honourable’ for life. Supreme court justices also generally retain the title for life.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f4934c0e1b95",
+       "end": 47,
+       "prefix": "",
+       "quote": "The Honourable Chief Justice Stephen Gageler AC",
+       "start": 0,
+       "suffix": " [Chief Justice]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "180c845b4ba2",
+       "end": 30,
+       "prefix": "",
+       "quote": "The Honourable Susan Kiefel AC",
+       "start": 0,
+       "suffix": " [Retired Chief Justice]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7ffa45dc899b",
+       "end": 34,
+       "prefix": "",
+       "quote": "The Hon Justice Penelope Neskovcin",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b3a69cf0111d",
+       "end": 23,
+       "prefix": "",
+       "quote": "The Hon Justice Dowling",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "268000783045",
+       "end": 37,
+       "prefix": "",
+       "quote": "The Honourable Justice Christine Mead",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9b9d9e5d7e41",
+       "end": 36,
+       "prefix": "",
+       "quote": "The Honourable Justice Joshua Wilson",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page says supreme court justices ‘generally’ retain the title for life but does not identify the exceptions. Do not assume every retired supreme court justice retains it without verification.",
+    "unit": "phrase",
+    "violation_condition": "A formal reference to a judge entitled to this courtesy title lacks ‘The Honourable’ or the permitted shortened form ‘The Hon’."
+   },
+   "when": [
+    "Applies to judges of the High Court, Federal Court, Federal Circuit and Family Court of Australia (Division 1), and state and territory supreme courts.",
+    "High Court and Federal Court judges retain the title for life.",
+    "Federal Circuit and Family Court of Australia (Division 1) judges and state and territory supreme court chief justices retain the title for life.",
+    "Other supreme court justices generally retain the title for life.",
+    "‘Honourable’ may be abbreviated to ‘Hon’ without a full stop.",
+    "The prescribed ‘Dear Justice’ salutations do not require this courtesy title.",
+    "The separate knighted-judge rule covers ‘The Honourable Sir’, ‘The Honourable Dame’ and permitted subsequent mentions."
+   ],
+   "why": "G-2 keeps lifetime entitlement within the title rule; G-3 records abbreviation as a permission; G-4 absorbs the repeated instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "ac21626f440b",
+    "end": 73,
+    "prefix": "",
+    "quote": "Use the titles ‘Your Honour’, ‘His Honour’ or ‘Her Honour’ for judges of:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "468dea850710",
+     "end": 58,
+     "prefix": "",
+     "quote": "Federal Circuit and Family Court of Australia (Division 2)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "96be1df5146c",
+     "end": 15,
+     "prefix": "",
+     "quote": "district courts",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a420d6ce4c61",
+     "end": 14,
+     "prefix": "",
+     "quote": "county courts.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f951d4c8b34e",
+     "end": 70,
+     "prefix": "",
+     "quote": "Use the title ‘His Honour’ or ‘Her Honour’ for judges of these courts.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9d67327bf4af",
+       "end": 23,
+       "prefix": "",
+       "quote": "Her Honour Judge Matteo",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "09bb4ea6cdba",
+       "end": 22,
+       "prefix": "",
+       "quote": "His Honour Judge Jarro",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal reference to, or direct address of, a judge of a listed court lacks the applicable ‘Your Honour’, ‘His Honour’ or ‘Her Honour’ form."
+   },
+   "when": [
+    "Applies to judges of the Federal Circuit and Family Court of Australia (Division 2), district courts and county courts.",
+    "‘Your Honour’ is the direct-address form; ‘His Honour’ and ‘Her Honour’ are third-person forms.",
+    "Email and letter salutations use the separately prescribed ‘Dear Judge [Family name]’ form."
+   ],
+   "why": "G-2 groups the court cases; G-4 absorbs the later restatement. Courtesy style is distinct from the designation ‘Judge’."
+  },
+  {
+   "anchor": {
+    "block_id": "4aa61d81d1f7",
+    "end": 50,
+    "prefix": "",
+    "quote": "Address judges of the following courts as ‘Judge’:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "06d3357b71a1",
+     "end": 58,
+     "prefix": "",
+     "quote": "Federal Circuit and Family Court of Australia (Division 2)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c094713021e6",
+     "end": 15,
+     "prefix": "",
+     "quote": "district courts",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cc0992cb2581",
+     "end": 14,
+     "prefix": "",
+     "quote": "county courts.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9d67327bf4af",
+       "end": 23,
+       "prefix": "",
+       "quote": "Her Honour Judge Matteo",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "09bb4ea6cdba",
+       "end": 22,
+       "prefix": "",
+       "quote": "His Honour Judge Jarro",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal judicial designation for a judge of a listed court omits or replaces ‘Judge’."
+   },
+   "when": [
+    "Applies to judges of the Federal Circuit and Family Court of Australia (Division 2), district courts and county courts.",
+    "The separate courtesy-style rule permits ‘Your Honour’ in direct address.",
+    "Email and letter salutations are covered by the separate salutation rule."
+   ],
+   "why": "G-2 keeps the three court cases together; the required judicial designation is independently checkable from the courtesy style."
+  },
+  {
+   "anchor": {
+    "block_id": "de99a6704452",
+    "end": 67,
+    "prefix": "",
+    "quote": "In emails and letters, use ‘Dear Justice [Family name]’ to address:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1af9d6ca6ca4",
+     "end": 75,
+     "prefix": "",
+     "quote": "a justice of the Federal Circuit and Family Court of Australia (Division 1)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e986f25698ab",
+     "end": 46,
+     "prefix": "",
+     "quote": "a judge of a state or territory supreme court.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9b40c8adf927",
+     "end": 22,
+     "prefix": "",
+     "quote": "In emails and letters:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ab833b156ca7",
+     "end": 37,
+     "prefix": "",
+     "quote": "Open with ‘Dear Judge [Family name]’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An email or letter to a judge in one of the specified court groups lacks the prescribed ‘Dear Justice [Family name]’ or ‘Dear Judge [Family name]’ salutation for that group."
+   },
+   "when": [
+    "Applies to emails and letters.",
+    "Use ‘Dear Justice [Family name]’ for a justice of the Federal Circuit and Family Court of Australia (Division 1) or a state or territory supreme court judge.",
+    "Use ‘Dear Judge [Family name]’ for a judge of the Federal Circuit and Family Court of Australia (Division 2), a district court or a county court."
+   ],
+   "why": "G-2 treats the court-dependent salutation forms as cases of one salutation check."
+  },
+  {
+   "anchor": {
+    "block_id": "a7d1935a0581",
+    "end": 48,
+    "prefix": "",
+    "quote": "Conclude correspondence with ‘Yours faithfully’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8c542a78dd6f",
+     "end": 33,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours faithfully’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An email or letter to a judge in one of the specified court groups does not conclude with ‘Yours faithfully’."
+   },
+   "when": [
+    "Applies to emails and letters to judges of the Federal Circuit and Family Court of Australia (Division 1), state and territory supreme courts, the Federal Circuit and Family Court of Australia (Division 2), district courts and county courts."
+   ],
+   "why": "G-2 combines the court scopes; G-4 prevents the repeated closing instruction becoming a second rule."
+  },
+  {
+   "anchor": {
+    "block_id": "6105759a5b24",
+    "end": 95,
+    "prefix": "",
+    "quote": "Address magistrates in court as ‘Your Honour’.When outside court, address them as ‘Magistrate’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A magistrate is addressed with a form other than ‘Your Honour’ in court or ‘Magistrate’ outside court."
+   },
+   "when": [
+    "The required form depends on whether the address occurs in court or outside court.",
+    "Envelope addressing is governed by the separate envelope rule."
+   ],
+   "why": "G-2 keeps the in-court and outside-court conditions within one magistrate-address check."
+  },
+  {
+   "anchor": {
+    "block_id": "9d712d07c968",
+    "end": 83,
+    "prefix": "",
+    "quote": "When addressing an envelope use ‘Her Honour Magistrate’ or ‘His Honour Magistrate’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5de34ac61fbe",
+       "end": 27,
+       "prefix": "",
+       "quote": "His Honour Magistrate Smart",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e6a208f93323",
+       "end": 29,
+       "prefix": "",
+       "quote": "Her Honour Magistrate Duvnjak",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An envelope addressed to a magistrate lacks the applicable ‘Her Honour Magistrate’ or ‘His Honour Magistrate’ form."
+   },
+   "when": [
+    "Applies to envelopes addressed to magistrates."
+   ],
+   "why": "The envelope requires a distinct written address form; it is not a second check on ordinary direct address."
+  },
+  {
+   "anchor": {
+    "block_id": "c161f41f8d23",
+    "end": 89,
+    "prefix": "",
+    "quote": "Address a judge who is a knight or dame as ‘The Honourable Sir’ or ‘The Honourable Dame’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "50d808a5a8f0",
+     "end": 79,
+     "prefix": "",
+     "quote": "On subsequent mention, you can use ‘Sir’ or ‘Dame’ and the person’s given name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fb378af7452a",
+       "end": 56,
+       "prefix": "",
+       "quote": "The Honourable Sir Ninian Stephen KG AK GCMG GCVO KBE QC",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1e3335139ad6",
+       "end": 56,
+       "prefix": "",
+       "quote": "The Honourable Dame Roma Flinders Mitchell AC DBE CVO QC",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "588f03c8f8ce",
+       "end": 10,
+       "prefix": "",
+       "quote": "Sir Ninian",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "eaf584ee990b",
+       "end": 9,
+       "prefix": "",
+       "quote": "Dame Roma",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A formal address of a judge who is a knight or dame lacks the applicable ‘The Honourable Sir’ or ‘The Honourable Dame’ form, other than a permitted subsequent mention."
+   },
+   "when": [
+    "Applies to judges who are knights or dames.",
+    "On subsequent mention, ‘Sir’ or ‘Dame’ followed by the person’s given name is permitted."
+   ],
+   "why": "G-2 combines the knight and dame cases; G-3 records the subsequent-mention permission as an exception."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4498,
+  "output_tokens": 8511,
+  "reasoning_tokens": 3710
+ }
+}

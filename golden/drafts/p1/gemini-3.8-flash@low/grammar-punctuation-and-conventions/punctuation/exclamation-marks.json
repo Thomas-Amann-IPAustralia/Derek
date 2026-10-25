@@ -1,0 +1,480 @@
+{
+ "effort": "low",
+ "input_sha256": "29f291d0644f0464b7da1f2bff8e0128a058df2e18e86a2a0a5f18b1fc82c8b1",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "90eb89f7fdbc",
+    "end": 51,
+    "prefix": "",
+    "quote": "Exclamation marks show emphasis and convey emotion.",
+    "start": 0,
+    "suffix": " Only use them in informal conte"
+   },
+   "note": "General descriptive statement about what exclamation marks do.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a4f5db1a2a91",
+    "end": 50,
+    "prefix": "",
+    "quote": "Exclamation marks aren’t part of government voice.",
+    "start": 0,
+    "suffix": " Don’t use exclamation marks in "
+   },
+   "note": "Rationale/description of government voice.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d24dc283c005",
+    "end": 48,
+    "prefix": "",
+    "quote": "In general use, exclamation marks can emphasise:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in describing functions of exclamation marks in English.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "65469ada04d6",
+    "end": 95,
+    "prefix": "",
+    "quote": "Exclamation marks often appear ‘as themselves’ in instructions to users of government services.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Factual description of literal character use in technical instructions.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3757d355a895",
+    "end": 101,
+    "prefix": "se exclamation marks too often. ",
+    "quote": "Exclamation marks can lose their emphasis if you use too many.",
+    "start": 39,
+    "suffix": ""
+   },
+   "note": "Explanation of rationale for avoiding overuse.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/exclamation-marks.md",
+ "page_sha256": "6018b073c67da1774ec81897b6b48ccd84e36f8a5e0064acc86cddb360bf6047",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "90eb89f7fdbc",
+    "note": "General descriptive statement about what exclamation marks do.",
+    "quote": "Exclamation marks show emphasis and convey emotion.",
+    "reason": "description"
+   },
+   {
+    "block_id": "a4f5db1a2a91",
+    "note": "Rationale/description of government voice.",
+    "quote": "Exclamation marks aren’t part of government voice.",
+    "reason": "description"
+   },
+   {
+    "block_id": "d24dc283c005",
+    "note": "Lead-in describing functions of exclamation marks in English.",
+    "quote": "In general use, exclamation marks can emphasise:",
+    "reason": "description"
+   },
+   {
+    "block_id": "65469ada04d6",
+    "note": "Factual description of literal character use in technical instructions.",
+    "quote": "Exclamation marks often appear ‘as themselves’ in instructions to users of government services.",
+    "reason": "description"
+   },
+   {
+    "block_id": "3757d355a895",
+    "note": "Explanation of rationale for avoiding overuse.",
+    "quote": "Exclamation marks can lose their emphasis if you use too many.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "policy",
+     "report"
+    ],
+    "block_id": "90eb89f7fdbc",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "6598e7e47ec6",
+      "quote": "Don’t use exclamation marks in general"
+     },
+     {
+      "block_id": "a4f5db1a2a91",
+      "quote": "Don’t use exclamation marks in formal content, such as government reports or briefings."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Only use them in informal content.",
+    "specification": "Do not use exclamation marks in formal content like reports or briefings, unless quoting directly or presenting the character as literal input.",
+    "unit": "character",
+    "violation_condition": "an exclamation mark used in formal government content, such as reports or briefings",
+    "when": [
+     "Except when quoting directly or presenting characters as themselves in technical instructions"
+    ],
+    "why": "G-1, G-4: The heading [6598e7e47ec6] and body [a4f5db1a2a91] state the general restriction on formal content introduced by [90eb89f7fdbc]."
+   },
+   {
+    "applies_to": [
+     "social_post",
+     "web_page",
+     "any"
+    ],
+    "block_id": "9d2a13ff2fd4",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "9d2a13ff2fd4",
+      "quote": "Be aware that exclamation marks can create a sense of panic or stress."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Acceptable celebratory/informal social post",
+      "parts": [
+       {
+        "block_id": "1bf6eeda873a",
+        "quote": "Congratulations to our 2020 Australia Day Award recipients!"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Acceptable greeting in social media post",
+      "parts": [
+       {
+        "block_id": "cbc9a912e032",
+        "quote": "Happy international mother language day! #ourAPS believes in the importance of cultural and linguistic diversity (CALD) for a sustainable and harmonious Australian society."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Creates panic/stress in an emergency announcement",
+      "parts": [
+       {
+        "block_id": "33ecd1f96363",
+        "quote": "A state of emergency has been declared for all areas of the ACT!"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Use them sparingly in less formal content such as promotional material and social media posts.",
+    "specification": "Do not use exclamation marks in urgent alerts, emergency warnings, or content where they create panic or stress.",
+    "unit": "sentence",
+    "violation_condition": "an exclamation mark used in emergency, warning, or stress-inducing content, creating a sense of panic or stress",
+    "when": [
+     "In less formal content such as promotional material and social media posts"
+    ],
+    "why": "E-1, G-2: Combines the rule on informal/sparing use with its specific prohibition on panic-inducing contexts tested by the 'Like this' / 'Not this' pair."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0198b026bcfa",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "192e944c3a8d",
+      "quote": "Write one exclamation mark: don’t overuse them"
+     },
+     {
+      "block_id": "3757d355a895",
+      "quote": "Don’t use exclamation marks too often."
+     },
+     {
+      "block_id": "e02388e478ba",
+      "quote": "Some people use multiple exclamation marks in social media. This is not suitable for government content."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Single exclamation mark",
+      "parts": [
+       {
+        "block_id": "aad1410bd9cf",
+        "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Multiple consecutive exclamation marks",
+      "parts": [
+       {
+        "block_id": "52cddf1badf2",
+        "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!!!"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "At the end of each sentence you want to emphasise, use only one exclamation mark.",
+    "specification": "Never use more than one exclamation mark consecutively at the end of a sentence.",
+    "unit": "token",
+    "violation_condition": "multiple consecutive exclamation marks (e.g. '!!' or '!!!')",
+    "when": [],
+    "why": "G-1, G-4: The heading and surrounding paragraphs restate the rule to use only a single exclamation mark."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "90eb89f7fdbc",
+    "end": 86,
+    "prefix": "ow emphasis and convey emotion. ",
+    "quote": "Only use them in informal content.",
+    "start": 52,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "6598e7e47ec6",
+     "end": 38,
+     "prefix": "",
+     "quote": "Don’t use exclamation marks in general",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a4f5db1a2a91",
+     "end": 138,
+     "prefix": "ren’t part of government voice. ",
+     "quote": "Don’t use exclamation marks in formal content, such as government reports or briefings.",
+     "start": 51,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "policy",
+     "report"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "Do not use exclamation marks in formal content like reports or briefings, unless quoting directly or presenting the character as literal input.",
+    "unit": "character",
+    "violation_condition": "an exclamation mark used in formal government content, such as reports or briefings"
+   },
+   "when": [
+    "Except when quoting directly or presenting characters as themselves in technical instructions"
+   ],
+   "why": "G-1, G-4: The heading [6598e7e47ec6] and body [a4f5db1a2a91] state the general restriction on formal content introduced by [90eb89f7fdbc]."
+  },
+  {
+   "anchor": {
+    "block_id": "9d2a13ff2fd4",
+    "end": 94,
+    "prefix": "",
+    "quote": "Use them sparingly in less formal content such as promotional material and social media posts.",
+    "start": 0,
+    "suffix": " Be aware that exclamation marks"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "9d2a13ff2fd4",
+     "end": 165,
+     "prefix": "aterial and social media posts. ",
+     "quote": "Be aware that exclamation marks can create a sense of panic or stress.",
+     "start": 95,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Acceptable celebratory/informal social post",
+     "parts": [
+      {
+       "block_id": "1bf6eeda873a",
+       "end": 59,
+       "prefix": "",
+       "quote": "Congratulations to our 2020 Australia Day Award recipients!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Acceptable greeting in social media post",
+     "parts": [
+      {
+       "block_id": "cbc9a912e032",
+       "end": 172,
+       "prefix": "",
+       "quote": "Happy international mother language day! #ourAPS believes in the importance of cultural and linguistic diversity (CALD) for a sustainable and harmonious Australian society.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Creates panic/stress in an emergency announcement",
+     "parts": [
+      {
+       "block_id": "33ecd1f96363",
+       "end": 64,
+       "prefix": "",
+       "quote": "A state of emergency has been declared for all areas of the ACT!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "social_post",
+     "web_page",
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Do not use exclamation marks in urgent alerts, emergency warnings, or content where they create panic or stress.",
+    "unit": "sentence",
+    "violation_condition": "an exclamation mark used in emergency, warning, or stress-inducing content, creating a sense of panic or stress"
+   },
+   "when": [
+    "In less formal content such as promotional material and social media posts"
+   ],
+   "why": "E-1, G-2: Combines the rule on informal/sparing use with its specific prohibition on panic-inducing contexts tested by the 'Like this' / 'Not this' pair."
+  },
+  {
+   "anchor": {
+    "block_id": "0198b026bcfa",
+    "end": 81,
+    "prefix": "",
+    "quote": "At the end of each sentence you want to emphasise, use only one exclamation mark.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "192e944c3a8d",
+     "end": 46,
+     "prefix": "",
+     "quote": "Write one exclamation mark: don’t overuse them",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3757d355a895",
+     "end": 38,
+     "prefix": "",
+     "quote": "Don’t use exclamation marks too often.",
+     "start": 0,
+     "suffix": " Exclamation marks can lose thei"
+    },
+    {
+     "block_id": "e02388e478ba",
+     "end": 104,
+     "prefix": "",
+     "quote": "Some people use multiple exclamation marks in social media. This is not suitable for government content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Single exclamation mark",
+     "parts": [
+      {
+       "block_id": "aad1410bd9cf",
+       "end": 79,
+       "prefix": "",
+       "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Multiple consecutive exclamation marks",
+     "parts": [
+      {
+       "block_id": "52cddf1badf2",
+       "end": 81,
+       "prefix": "",
+       "quote": "Were you born overseas or have a parent who was? Nearly half of Australians do!!!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "Never use more than one exclamation mark consecutively at the end of a sentence.",
+    "unit": "token",
+    "violation_condition": "multiple consecutive exclamation marks (e.g. '!!' or '!!!')"
+   },
+   "when": [],
+   "why": "G-1, G-4: The heading and surrounding paragraphs restate the rule to use only a single exclamation mark."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3632,
+  "output_tokens": 1815,
+  "reasoning_tokens": 0
+ }
+}

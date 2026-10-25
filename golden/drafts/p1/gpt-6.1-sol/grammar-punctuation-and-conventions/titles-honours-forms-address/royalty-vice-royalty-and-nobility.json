@@ -1,0 +1,1714 @@
+{
+ "effort": "high",
+ "input_sha256": "343cb49f42c65509f36b362c341ff116345ec9a3634f0ced4ce4b0308ed760fb",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a69a6cf16ff7",
+    "end": 93,
+    "prefix": "",
+    "quote": "Royalty and representatives of the royal family should be addressed with their correct title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introductory summary of the page’s more specific title and address requirements.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16e220c5ec61",
+    "end": 68,
+    "prefix": "",
+    "quote": "Always use capitals for the title of the current Australian monarch.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the current-royals capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "11f879c3ebb9",
+    "end": 176,
+    "prefix": "",
+    "quote": "The full title of the current monarch of Australia is ‘Charles the Third, by the Grace of God King of Australia and His other Realms and Territories, Head of the Commonwealth’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Identifies the monarch’s full title; it does not require that full form on every mention.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "deadf1eb9736",
+    "end": 72,
+    "prefix": "",
+    "quote": "The title of the King’s wife, Queen Camilla, is ‘Her Majesty The Queen’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Reference information identifying a royal title, not an independent instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bfc37c0f7ea6",
+    "end": 77,
+    "prefix": "",
+    "quote": "The title of the late Queen Elizabeth II is ‘Her Majesty Queen Elizabeth II’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Reference information identifying a royal title, not an independent instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d216b4966264",
+    "end": 100,
+    "prefix": "",
+    "quote": "The title of the late Queen’s husband, Prince Philip, is ‘His Royal Highness The Duke of Edinburgh’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Reference information identifying a royal title, not an independent instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9996f3ed2b37",
+    "end": 89,
+    "prefix": "",
+    "quote": "The King’s elder son, Prince William, is titled ‘His Royal Highness The Prince of Wales’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Reference information identifying a royal title, not an independent instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e384fe478add",
+    "end": 87,
+    "prefix": "",
+    "quote": "Prince William’s wife, Catherine, is titled ’Her Royal Highness The Princess of Wales’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Reference information identifying a royal title, not an independent instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7ed6906a8f9f",
+    "end": 133,
+    "prefix": "lliam to his private secretary. ",
+    "quote": "You can use the shortened form for ‘His Royal Highness’ in this instance.",
+    "start": 60,
+    "suffix": ""
+   },
+   "note": "G-3: recorded as an allowed abbreviation for the address to Prince William’s private secretary.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7e15ac582251",
+    "end": 96,
+    "prefix": "",
+    "quote": "Regnal numbers are upper case roman numerals that are used for the titles of monarchs and popes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the term used by the regnal-number rule; retained there as supporting wording.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e5eea5ced7ab",
+    "end": 84,
+    "prefix": "",
+    "quote": "Don’t use digits or ordinal numbers, even though you might pronounce them like that.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: specifies prohibited alternatives within the single regnal-number format rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cc8d0dd9221b",
+    "end": 54,
+    "prefix": "",
+    "quote": "Use a non-breaking space for names with regnal numbers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body sentence states the separator’s position more precisely and is used as the rule quote.",
+   "reason": "restatement",
+   "seed_uid": "40f3ce997319c097"
+  },
+  {
+   "anchor": {
+    "block_id": "37bf2a0495b1",
+    "end": 71,
+    "prefix": "",
+    "quote": "You can insert a non-breaking space using the Unicode character U+00A0.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: implementation guidance for inserting the separator, not another textual requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7a6d23d8df3e",
+    "end": 62,
+    "prefix": "",
+    "quote": "In HTML, use the entity &nbsp; to insert a non-breaking space.",
+    "start": 0,
+    "suffix": " You can also use the keyboard s"
+   },
+   "note": "G-5: explains how to implement the non-breaking-space requirement in HTML, rather than creating a separate encoding check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7a6d23d8df3e",
+    "end": 130,
+    "prefix": "to insert a non-breaking space. ",
+    "quote": "You can also use the keyboard shortcut Ctrl+Shift+Spacebar in Word.",
+    "start": 63,
+    "suffix": ""
+   },
+   "note": "G-5: a keyboard operation cannot be checked from the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "baab058f844a",
+    "end": 74,
+    "prefix": "",
+    "quote": "You can insert a narrow no-break space using the Unicode character U+202F.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: implementation guidance for the print-specific separator.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0800c956333b",
+    "end": 95,
+    "prefix": "",
+    "quote": "You might need to vary the order of the items in the title to suit the titles of the incumbent.",
+    "start": 0,
+    "suffix": " For example, place:"
+   },
+   "note": "G-3: the incumbent-specific variations are recorded under the formal-style rule, not made a separate rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/titles-honours-forms-address/royalty-vice-royalty-and-nobility.md",
+ "page_sha256": "331ca23b4a7d0f26a4b699d1ca5224a9adec528bbba913e5d14d56233999d155",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a69a6cf16ff7",
+    "note": "G-1: introductory summary of the page’s more specific title and address requirements.",
+    "quote": "Royalty and representatives of the royal family should be addressed with their correct title.",
+    "reason": "section"
+   },
+   {
+    "block_id": "16e220c5ec61",
+    "note": "G-4: absorbed into the current-royals capitalisation rule.",
+    "quote": "Always use capitals for the title of the current Australian monarch.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "11f879c3ebb9",
+    "note": "Identifies the monarch’s full title; it does not require that full form on every mention.",
+    "quote": "The full title of the current monarch of Australia is ‘Charles the Third, by the Grace of God King of Australia and His other Realms and Territories, Head of the Commonwealth’.",
+    "reason": "description"
+   },
+   {
+    "block_id": "deadf1eb9736",
+    "note": "Reference information identifying a royal title, not an independent instruction.",
+    "quote": "The title of the King’s wife, Queen Camilla, is ‘Her Majesty The Queen’.",
+    "reason": "description"
+   },
+   {
+    "block_id": "bfc37c0f7ea6",
+    "note": "Reference information identifying a royal title, not an independent instruction.",
+    "quote": "The title of the late Queen Elizabeth II is ‘Her Majesty Queen Elizabeth II’.",
+    "reason": "description"
+   },
+   {
+    "block_id": "d216b4966264",
+    "note": "Reference information identifying a royal title, not an independent instruction.",
+    "quote": "The title of the late Queen’s husband, Prince Philip, is ‘His Royal Highness The Duke of Edinburgh’.",
+    "reason": "description"
+   },
+   {
+    "block_id": "9996f3ed2b37",
+    "note": "Reference information identifying a royal title, not an independent instruction.",
+    "quote": "The King’s elder son, Prince William, is titled ‘His Royal Highness The Prince of Wales’.",
+    "reason": "description"
+   },
+   {
+    "block_id": "e384fe478add",
+    "note": "Reference information identifying a royal title, not an independent instruction.",
+    "quote": "Prince William’s wife, Catherine, is titled ’Her Royal Highness The Princess of Wales’.",
+    "reason": "description"
+   },
+   {
+    "block_id": "7ed6906a8f9f",
+    "note": "G-3: recorded as an allowed abbreviation for the address to Prince William’s private secretary.",
+    "quote": "You can use the shortened form for ‘His Royal Highness’ in this instance.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "7e15ac582251",
+    "note": "Defines the term used by the regnal-number rule; retained there as supporting wording.",
+    "quote": "Regnal numbers are upper case roman numerals that are used for the titles of monarchs and popes.",
+    "reason": "description"
+   },
+   {
+    "block_id": "e5eea5ced7ab",
+    "note": "G-4: specifies prohibited alternatives within the single regnal-number format rule.",
+    "quote": "Don’t use digits or ordinal numbers, even though you might pronounce them like that.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cc8d0dd9221b",
+    "note": "G-4: the body sentence states the separator’s position more precisely and is used as the rule quote.",
+    "quote": "Use a non-breaking space for names with regnal numbers",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "37bf2a0495b1",
+    "note": "G-5: implementation guidance for inserting the separator, not another textual requirement.",
+    "quote": "You can insert a non-breaking space using the Unicode character U+00A0.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7a6d23d8df3e",
+    "note": "G-5: explains how to implement the non-breaking-space requirement in HTML, rather than creating a separate encoding check.",
+    "quote": "In HTML, use the entity &nbsp; to insert a non-breaking space.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7a6d23d8df3e",
+    "note": "G-5: a keyboard operation cannot be checked from the resulting text.",
+    "quote": "You can also use the keyboard shortcut Ctrl+Shift+Spacebar in Word.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "baab058f844a",
+    "note": "G-5: implementation guidance for the print-specific separator.",
+    "quote": "You can insert a narrow no-break space using the Unicode character U+202F.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0800c956333b",
+    "note": "G-3: the incumbent-specific variations are recorded under the formal-style rule, not made a separate rule.",
+    "quote": "You might need to vary the order of the items in the title to suit the titles of the incumbent.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "de824f01374e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "16e220c5ec61",
+      "quote": "Always use capitals for the title of the current Australian monarch."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Title words are capitalised.",
+      "parts": [
+       {
+        "block_id": "0337d56d2776",
+        "quote": "His Majesty The King"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The title word is capitalised in running text.",
+      "parts": [
+       {
+        "block_id": "7a5a5884f5b3",
+        "quote": "Next week, the King will visit Australia."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always capitalise the titles of current royals",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A title referring to a current royal has a lower-case title word, such as ‘king’ or ‘prince’.",
+    "when": [
+     "The title refers to a current royal.",
+     "Capitalisation of the article ‘The’ in formal titles is covered separately."
+    ],
+    "why": "G-4: the monarch-specific sentence restates the heading; the special treatment of the article ‘The’ is a distinct check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6c08ca6be758",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7ed6906a8f9f",
+      "quote": "Address letters to Prince William to his private secretary."
+     },
+     {
+      "block_id": "7ed6906a8f9f",
+      "quote": "You can use the shortened form for ‘His Royal Highness’ in this instance."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The letter is addressed through the private secretary.",
+      "parts": [
+       {
+        "block_id": "1fd8bf639692",
+        "quote": "To the Private Secretary to His Majesty The King"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The letter is addressed through the private secretary, with the permitted abbreviation.",
+      "parts": [
+       {
+        "block_id": "4b0134da66ce",
+        "quote": "To the Private Secretary to HRH The Prince of Wales"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address letters to the King to his private secretary.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A letter intended for the King or Prince William is not addressed to that royal’s private secretary.",
+    "when": [
+     "The letter is intended for the King or Prince William.",
+     "In the address to Prince William’s private secretary, ‘His Royal Highness’ may be shortened to ‘HRH’."
+    ],
+    "why": "G-2 combines the two recipients under the same private-secretary check; G-3 records the abbreviation as a permission."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2237396e02bc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The formal title begins with a capitalised article.",
+      "parts": [
+       {
+        "block_id": "f103a91cf6f3",
+        "quote": "The Prince George"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The formal title begins with a capitalised article.",
+      "parts": [
+       {
+        "block_id": "70a3d60f0048",
+        "quote": "The Princess Royal"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use an initial capital for ‘The’ for the formal titles of the King and his immediate family.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The article ‘the’ has a lower-case initial when it forms part of a formal title of the King or his immediate family.",
+    "when": [
+     "The article forms part of a formal title of the King or his immediate family.",
+     "An ordinary running-text reference such as ‘the King’ does not by itself trigger this rule."
+    ],
+    "why": "G-2: formal-title status limits one article-capitalisation check, distinct from capitalising royal title words."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ade128f2c869",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7e15ac582251",
+      "quote": "Regnal numbers are upper case roman numerals that are used for the titles of monarchs and popes."
+     },
+     {
+      "block_id": "e5eea5ced7ab",
+      "quote": "Don’t use digits or ordinal numbers, even though you might pronounce them like that."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The regnal number uses upper-case roman numerals.",
+      "parts": [
+       {
+        "block_id": "47426d942ec6",
+        "quote": "Margrethe II"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The regnal number uses upper-case roman numerals.",
+      "parts": [
+       {
+        "block_id": "1debf8238bea",
+        "quote": "Rama IX"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The regnal number uses upper-case roman numerals.",
+      "parts": [
+       {
+        "block_id": "fefcb8f8f8f2",
+        "quote": "Gewargis III"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The regnal number is written as an ordinal expression.",
+      "parts": [
+       {
+        "block_id": "bc59b5e4e5ed",
+        "quote": "Margrethe the second"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The regnal number is written as an Arabic numeral.",
+      "parts": [
+       {
+        "block_id": "c58312504bad",
+        "quote": "Rama 9"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The regnal number is written as an ordinal expression.",
+      "parts": [
+       {
+        "block_id": "5733c8e4cd4f",
+        "quote": "Gewargis the 3rd"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use regnal numbers (I, II, V) for titles of monarchs and religious leaders",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A regnal number in a monarch’s or religious leader’s title is written as an Arabic numeral, an ordinal expression or lower-case roman numerals instead of upper-case roman numerals.",
+    "when": [
+     "A number is being written as part of a monarch’s or religious leader’s title.",
+     "Pronouncing the number as an ordinal does not change its written form."
+    ],
+    "why": "G-2 and G-4: the definition and prohibited alternatives specify one regnal-number format check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1b340a844e81",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "cc8d0dd9221b",
+      "quote": "Use a non-breaking space for names with regnal numbers"
+     },
+     {
+      "block_id": "453949cc8b4f",
+      "quote": "Use a narrow no-break space between the name and the regnal number."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Put a non-breaking space between the name and the regnal number.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A name and its regnal number lack the required non-breaking separator, or a print version uses a separator other than a narrow no-break space.",
+    "when": [
+     "A name is followed by a regnal number.",
+     "For print, the separator is a narrow no-break space, U+202F.",
+     "For the general non-print case, the page identifies U+00A0 as a non-breaking space and &nbsp; as its HTML representation."
+    ],
+    "why": "G-2 combines the general separator requirement and its print-specific form; G-4 avoids duplicating the heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "890883a13a31",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "de451f47f9c8",
+      "quote": "When you are referring to the generic term, use lower case ‘governor-general’."
+     },
+     {
+      "block_id": "de451f47f9c8",
+      "quote": "When you are referring to 2 or more people who hold or have held the title, use lower case"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Both generic references use lower case.",
+      "parts": [
+       {
+        "block_id": "19c5ec36d89f",
+        "quote": "Australia has had 28 governors-general. A governor-general’s role is to represent the monarch."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Capitalise ‘Governor-General’ when it’s part of the formal title",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Governor-General’ is lower case within the formal title, or a generic reference to the role or to multiple holders is capitalised.",
+    "when": [
+     "Use title capitals when the expression is part of the formal title.",
+     "Generic references to the role use lower case.",
+     "References to two or more current or former holders use lower case."
+    ],
+    "why": "G-2: formal and generic uses are conditions of one capitalisation check; plural formation is checked separately."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "11a4e9488c14",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f09b422f0360",
+      "quote": "‘His/Her Excellency the Honourable’"
+     },
+     {
+      "block_id": "d2b57aa7158b",
+      "quote": "prefixed titles"
+     },
+     {
+      "block_id": "2e0a2f358c8e",
+      "quote": "given name and family name"
+     },
+     {
+      "block_id": "cf3fdb0cd59d",
+      "quote": "post-nominals"
+     },
+     {
+      "block_id": "cf349498a584",
+      "quote": "‘Governor-General of the Commonwealth of Australia’."
+     },
+     {
+      "block_id": "0800c956333b",
+      "quote": "You might need to vary the order of the items in the title to suit the titles of the incumbent."
+     },
+     {
+      "block_id": "2254004684a6",
+      "quote": "military rank before ‘the Honourable’"
+     },
+     {
+      "block_id": "76f171ecde23",
+      "quote": "‘Sir’ or ‘Dame’ after ‘the Honourable’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Military rank precedes ‘the Honourable’.",
+      "parts": [
+       {
+        "block_id": "4fcfa66278ba",
+        "quote": "His Excellency General the Honourable David Hurley AC DSC (Retd), Governor-General of the Commonwealth of Australia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "‘Dame’ follows ‘the Honourable’.",
+      "parts": [
+       {
+        "block_id": "001a82f798af",
+        "quote": "Her Excellency the Honourable Dame Quentin Bryce AD CVO, Governor-General of the Commonwealth of Australia"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Address the Governor-General of Australia in the following style and order:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The Governor-General’s full formal style omits required elements or places them in an order inconsistent with the specified sequence and incumbent-specific variations.",
+    "when": [
+     "The text gives the Governor-General of Australia’s full formal style of address.",
+     "The base sequence is ‘His/Her Excellency the Honourable’, prefixed titles, given name and family name, post-nominals, then ‘Governor-General of the Commonwealth of Australia’.",
+     "Prefixed titles and post-nominals depend on those held by the incumbent.",
+     "A military rank goes before ‘the Honourable’.",
+     "‘Sir’ or ‘Dame’ goes after ‘the Honourable’.",
+     "The separately prescribed correspondence salutations are not full formal styles of address."
+    ],
+    "why": "G-2: the required sequence and incumbent-specific variations are one formal-style check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "de451f47f9c8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The plural is ‘governors-general’.",
+      "parts": [
+       {
+        "block_id": "19c5ec36d89f",
+        "quote": "Australia has had 28 governors-general. A governor-general’s role is to represent the monarch."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "refer to them as ‘governors-general’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The plural of ‘governor-general’ is formed other than as ‘governors-general’, including leaving the noun singular when it refers to multiple holders.",
+    "when": [
+     "The expression refers to two or more people who hold or have held the title.",
+     "Capitalisation is checked separately."
+    ],
+    "why": "The plural form is a different flag from the capitalisation requirement in the same sentence."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b50cd7271441",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Address correspondence to the Governor-General to the Official Secretary at Government House, Canberra.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Correspondence intended for the Governor-General lacks an address to the Official Secretary at Government House, Canberra.",
+    "when": [
+     "The correspondence is intended for the Governor-General.",
+     "This concerns the delivery address, not the personal salutation."
+    ],
+    "why": "This specifies the correspondence recipient and destination, independently of title style and salutation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "34b0b596abee",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "8a3858c2a715",
+      "quote": "To address the Governor-General personally in formal correspondence:"
+     },
+     {
+      "block_id": "d62dc77e83db",
+      "quote": "In less formal correspondence:"
+     },
+     {
+      "block_id": "510aa0dc904a",
+      "quote": "Open with ‘Dear Governor-General’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Open with ‘Your Excellency’.",
+    "specification": "The page does not define the boundary between formal and less formal correspondence. Determine or supply that classification before applying the corresponding opening.",
+    "unit": "document",
+    "violation_condition": "Correspondence addressed personally to the Governor-General lacks the opening appropriate to its formality: ‘Your Excellency’ for formal correspondence or ‘Dear Governor-General’ for less formal correspondence.",
+    "when": [
+     "The Governor-General is addressed personally in correspondence.",
+     "Formal correspondence opens with ‘Your Excellency’.",
+     "Less formal correspondence opens with ‘Dear Governor-General’."
+    ],
+    "why": "G-2 combines the formal and less formal cases of one opening check; the closing is independently checkable."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fef9fbc4a352",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "8a3858c2a715",
+      "quote": "To address the Governor-General personally in formal correspondence:"
+     },
+     {
+      "block_id": "d62dc77e83db",
+      "quote": "In less formal correspondence:"
+     },
+     {
+      "block_id": "6dcf37597e9e",
+      "quote": "Conclude with ‘Yours sincerely’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "specification": "The page does not define the boundary between formal and less formal correspondence. Determine or supply that classification before applying the corresponding closing.",
+    "unit": "document",
+    "violation_condition": "Correspondence addressed personally to the Governor-General lacks the closing appropriate to its formality: ‘Yours faithfully’ for formal correspondence or ‘Yours sincerely’ for less formal correspondence.",
+    "when": [
+     "The Governor-General is addressed personally in correspondence.",
+     "Formal correspondence concludes with ‘Yours faithfully’.",
+     "Less formal correspondence concludes with ‘Yours sincerely’."
+    ],
+    "why": "G-2 combines the formal and less formal cases of one closing check, separate from the opening."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a3d6b55604cb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "814827392efc",
+      "quote": "For the partner of the Governor-General:"
+     },
+     {
+      "block_id": "39e62c2b3977",
+      "quote": "Address a male partner as ‘His Excellency’ or ‘Your Excellency’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Address a female partner as ‘Her Excellency’ or ‘Your Excellency’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The Governor-General’s partner is addressed with a form other than the specified alternatives: ‘Her Excellency’ or ‘Your Excellency’ for a female partner, and ‘His Excellency’ or ‘Your Excellency’ for a male partner.",
+    "when": [
+     "The person being addressed is the Governor-General’s partner.",
+     "For a female partner, either ‘Her Excellency’ or ‘Your Excellency’ is acceptable.",
+     "For a male partner, either ‘His Excellency’ or ‘Your Excellency’ is acceptable.",
+     "The page provides no further case."
+    ],
+    "why": "G-2: the female and male cases select acceptable forms for one partner-address check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "de824f01374e",
+    "end": 46,
+    "prefix": "",
+    "quote": "Always capitalise the titles of current royals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "16e220c5ec61",
+     "end": 68,
+     "prefix": "",
+     "quote": "Always use capitals for the title of the current Australian monarch.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Title words are capitalised.",
+     "parts": [
+      {
+       "block_id": "0337d56d2776",
+       "end": 20,
+       "prefix": "",
+       "quote": "His Majesty The King",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The title word is capitalised in running text.",
+     "parts": [
+      {
+       "block_id": "7a5a5884f5b3",
+       "end": 41,
+       "prefix": "",
+       "quote": "Next week, the King will visit Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "37b1bcbe8dc4ddc9",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A title referring to a current royal has a lower-case title word, such as ‘king’ or ‘prince’."
+   },
+   "when": [
+    "The title refers to a current royal.",
+    "Capitalisation of the article ‘The’ in formal titles is covered separately."
+   ],
+   "why": "G-4: the monarch-specific sentence restates the heading; the special treatment of the article ‘The’ is a distinct check."
+  },
+  {
+   "anchor": {
+    "block_id": "6c08ca6be758",
+    "end": 53,
+    "prefix": "",
+    "quote": "Address letters to the King to his private secretary.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7ed6906a8f9f",
+     "end": 59,
+     "prefix": "",
+     "quote": "Address letters to Prince William to his private secretary.",
+     "start": 0,
+     "suffix": " You can use the shortened form "
+    },
+    {
+     "block_id": "7ed6906a8f9f",
+     "end": 133,
+     "prefix": "lliam to his private secretary. ",
+     "quote": "You can use the shortened form for ‘His Royal Highness’ in this instance.",
+     "start": 60,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The letter is addressed through the private secretary.",
+     "parts": [
+      {
+       "block_id": "1fd8bf639692",
+       "end": 48,
+       "prefix": "",
+       "quote": "To the Private Secretary to His Majesty The King",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The letter is addressed through the private secretary, with the permitted abbreviation.",
+     "parts": [
+      {
+       "block_id": "4b0134da66ce",
+       "end": 51,
+       "prefix": "",
+       "quote": "To the Private Secretary to HRH The Prince of Wales",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A letter intended for the King or Prince William is not addressed to that royal’s private secretary."
+   },
+   "when": [
+    "The letter is intended for the King or Prince William.",
+    "In the address to Prince William’s private secretary, ‘His Royal Highness’ may be shortened to ‘HRH’."
+   ],
+   "why": "G-2 combines the two recipients under the same private-secretary check; G-3 records the abbreviation as a permission."
+  },
+  {
+   "anchor": {
+    "block_id": "2237396e02bc",
+    "end": 92,
+    "prefix": "",
+    "quote": "Use an initial capital for ‘The’ for the formal titles of the King and his immediate family.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The formal title begins with a capitalised article.",
+     "parts": [
+      {
+       "block_id": "f103a91cf6f3",
+       "end": 17,
+       "prefix": "",
+       "quote": "The Prince George",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The formal title begins with a capitalised article.",
+     "parts": [
+      {
+       "block_id": "70a3d60f0048",
+       "end": 18,
+       "prefix": "",
+       "quote": "The Princess Royal",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The article ‘the’ has a lower-case initial when it forms part of a formal title of the King or his immediate family."
+   },
+   "when": [
+    "The article forms part of a formal title of the King or his immediate family.",
+    "An ordinary running-text reference such as ‘the King’ does not by itself trigger this rule."
+   ],
+   "why": "G-2: formal-title status limits one article-capitalisation check, distinct from capitalising royal title words."
+  },
+  {
+   "anchor": {
+    "block_id": "ade128f2c869",
+    "end": 74,
+    "prefix": "",
+    "quote": "Use regnal numbers (I, II, V) for titles of monarchs and religious leaders",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7e15ac582251",
+     "end": 96,
+     "prefix": "",
+     "quote": "Regnal numbers are upper case roman numerals that are used for the titles of monarchs and popes.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e5eea5ced7ab",
+     "end": 84,
+     "prefix": "",
+     "quote": "Don’t use digits or ordinal numbers, even though you might pronounce them like that.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The regnal number uses upper-case roman numerals.",
+     "parts": [
+      {
+       "block_id": "47426d942ec6",
+       "end": 12,
+       "prefix": "",
+       "quote": "Margrethe II",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The regnal number uses upper-case roman numerals.",
+     "parts": [
+      {
+       "block_id": "1debf8238bea",
+       "end": 7,
+       "prefix": "",
+       "quote": "Rama IX",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The regnal number uses upper-case roman numerals.",
+     "parts": [
+      {
+       "block_id": "fefcb8f8f8f2",
+       "end": 12,
+       "prefix": "",
+       "quote": "Gewargis III",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The regnal number is written as an ordinal expression.",
+     "parts": [
+      {
+       "block_id": "bc59b5e4e5ed",
+       "end": 20,
+       "prefix": "",
+       "quote": "Margrethe the second",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The regnal number is written as an Arabic numeral.",
+     "parts": [
+      {
+       "block_id": "c58312504bad",
+       "end": 6,
+       "prefix": "",
+       "quote": "Rama 9",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The regnal number is written as an ordinal expression.",
+     "parts": [
+      {
+       "block_id": "5733c8e4cd4f",
+       "end": 16,
+       "prefix": "",
+       "quote": "Gewargis the 3rd",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "61fabea7c43acbb6",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A regnal number in a monarch’s or religious leader’s title is written as an Arabic numeral, an ordinal expression or lower-case roman numerals instead of upper-case roman numerals."
+   },
+   "when": [
+    "A number is being written as part of a monarch’s or religious leader’s title.",
+    "Pronouncing the number as an ordinal does not change its written form."
+   ],
+   "why": "G-2 and G-4: the definition and prohibited alternatives specify one regnal-number format check."
+  },
+  {
+   "anchor": {
+    "block_id": "1b340a844e81",
+    "end": 64,
+    "prefix": "",
+    "quote": "Put a non-breaking space between the name and the regnal number.",
+    "start": 0,
+    "suffix": " A non-breaking space means that"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "cc8d0dd9221b",
+     "end": 54,
+     "prefix": "",
+     "quote": "Use a non-breaking space for names with regnal numbers",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "453949cc8b4f",
+     "end": 67,
+     "prefix": "",
+     "quote": "Use a narrow no-break space between the name and the regnal number.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A name and its regnal number lack the required non-breaking separator, or a print version uses a separator other than a narrow no-break space."
+   },
+   "when": [
+    "A name is followed by a regnal number.",
+    "For print, the separator is a narrow no-break space, U+202F.",
+    "For the general non-print case, the page identifies U+00A0 as a non-breaking space and &nbsp; as its HTML representation."
+   ],
+   "why": "G-2 combines the general separator requirement and its print-specific form; G-4 avoids duplicating the heading."
+  },
+  {
+   "anchor": {
+    "block_id": "890883a13a31",
+    "end": 64,
+    "prefix": "",
+    "quote": "Capitalise ‘Governor-General’ when it’s part of the formal title",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "de451f47f9c8",
+     "end": 78,
+     "prefix": "",
+     "quote": "When you are referring to the generic term, use lower case ‘governor-general’.",
+     "start": 0,
+     "suffix": " When you are referring to 2 or "
+    },
+    {
+     "block_id": "de451f47f9c8",
+     "end": 169,
+     "prefix": " lower case ‘governor-general’. ",
+     "quote": "When you are referring to 2 or more people who hold or have held the title, use lower case",
+     "start": 79,
+     "suffix": " and refer to them as ‘governors"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Both generic references use lower case.",
+     "parts": [
+      {
+       "block_id": "19c5ec36d89f",
+       "end": 94,
+       "prefix": "",
+       "quote": "Australia has had 28 governors-general. A governor-general’s role is to represent the monarch.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "56eda32f357ac803",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Governor-General’ is lower case within the formal title, or a generic reference to the role or to multiple holders is capitalised."
+   },
+   "when": [
+    "Use title capitals when the expression is part of the formal title.",
+    "Generic references to the role use lower case.",
+    "References to two or more current or former holders use lower case."
+   ],
+   "why": "G-2: formal and generic uses are conditions of one capitalisation check; plural formation is checked separately."
+  },
+  {
+   "anchor": {
+    "block_id": "11a4e9488c14",
+    "end": 75,
+    "prefix": "",
+    "quote": "Address the Governor-General of Australia in the following style and order:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f09b422f0360",
+     "end": 35,
+     "prefix": "",
+     "quote": "‘His/Her Excellency the Honourable’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d2b57aa7158b",
+     "end": 15,
+     "prefix": "",
+     "quote": "prefixed titles",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2e0a2f358c8e",
+     "end": 26,
+     "prefix": "",
+     "quote": "given name and family name",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cf3fdb0cd59d",
+     "end": 13,
+     "prefix": "",
+     "quote": "post-nominals",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cf349498a584",
+     "end": 52,
+     "prefix": "",
+     "quote": "‘Governor-General of the Commonwealth of Australia’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0800c956333b",
+     "end": 95,
+     "prefix": "",
+     "quote": "You might need to vary the order of the items in the title to suit the titles of the incumbent.",
+     "start": 0,
+     "suffix": " For example, place:"
+    },
+    {
+     "block_id": "2254004684a6",
+     "end": 37,
+     "prefix": "",
+     "quote": "military rank before ‘the Honourable’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "76f171ecde23",
+     "end": 39,
+     "prefix": "",
+     "quote": "‘Sir’ or ‘Dame’ after ‘the Honourable’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Military rank precedes ‘the Honourable’.",
+     "parts": [
+      {
+       "block_id": "4fcfa66278ba",
+       "end": 115,
+       "prefix": "",
+       "quote": "His Excellency General the Honourable David Hurley AC DSC (Retd), Governor-General of the Commonwealth of Australia",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "‘Dame’ follows ‘the Honourable’.",
+     "parts": [
+      {
+       "block_id": "001a82f798af",
+       "end": 106,
+       "prefix": "",
+       "quote": "Her Excellency the Honourable Dame Quentin Bryce AD CVO, Governor-General of the Commonwealth of Australia",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The Governor-General’s full formal style omits required elements or places them in an order inconsistent with the specified sequence and incumbent-specific variations."
+   },
+   "when": [
+    "The text gives the Governor-General of Australia’s full formal style of address.",
+    "The base sequence is ‘His/Her Excellency the Honourable’, prefixed titles, given name and family name, post-nominals, then ‘Governor-General of the Commonwealth of Australia’.",
+    "Prefixed titles and post-nominals depend on those held by the incumbent.",
+    "A military rank goes before ‘the Honourable’.",
+    "‘Sir’ or ‘Dame’ goes after ‘the Honourable’.",
+    "The separately prescribed correspondence salutations are not full formal styles of address."
+   ],
+   "why": "G-2: the required sequence and incumbent-specific variations are one formal-style check."
+  },
+  {
+   "anchor": {
+    "block_id": "de451f47f9c8",
+    "end": 211,
+    "prefix": "d the title, use lower case and ",
+    "quote": "refer to them as ‘governors-general’.",
+    "start": 174,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The plural is ‘governors-general’.",
+     "parts": [
+      {
+       "block_id": "19c5ec36d89f",
+       "end": 94,
+       "prefix": "",
+       "quote": "Australia has had 28 governors-general. A governor-general’s role is to represent the monarch.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The plural of ‘governor-general’ is formed other than as ‘governors-general’, including leaving the noun singular when it refers to multiple holders."
+   },
+   "when": [
+    "The expression refers to two or more people who hold or have held the title.",
+    "Capitalisation is checked separately."
+   ],
+   "why": "The plural form is a different flag from the capitalisation requirement in the same sentence."
+  },
+  {
+   "anchor": {
+    "block_id": "b50cd7271441",
+    "end": 103,
+    "prefix": "",
+    "quote": "Address correspondence to the Governor-General to the Official Secretary at Government House, Canberra.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Correspondence intended for the Governor-General lacks an address to the Official Secretary at Government House, Canberra."
+   },
+   "when": [
+    "The correspondence is intended for the Governor-General.",
+    "This concerns the delivery address, not the personal salutation."
+   ],
+   "why": "This specifies the correspondence recipient and destination, independently of title style and salutation."
+  },
+  {
+   "anchor": {
+    "block_id": "34b0b596abee",
+    "end": 28,
+    "prefix": "",
+    "quote": "Open with ‘Your Excellency’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "8a3858c2a715",
+     "end": 68,
+     "prefix": "",
+     "quote": "To address the Governor-General personally in formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d62dc77e83db",
+     "end": 30,
+     "prefix": "",
+     "quote": "In less formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "510aa0dc904a",
+     "end": 34,
+     "prefix": "",
+     "quote": "Open with ‘Dear Governor-General’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define the boundary between formal and less formal correspondence. Determine or supply that classification before applying the corresponding opening.",
+    "unit": "document",
+    "violation_condition": "Correspondence addressed personally to the Governor-General lacks the opening appropriate to its formality: ‘Your Excellency’ for formal correspondence or ‘Dear Governor-General’ for less formal correspondence."
+   },
+   "when": [
+    "The Governor-General is addressed personally in correspondence.",
+    "Formal correspondence opens with ‘Your Excellency’.",
+    "Less formal correspondence opens with ‘Dear Governor-General’."
+   ],
+   "why": "G-2 combines the formal and less formal cases of one opening check; the closing is independently checkable."
+  },
+  {
+   "anchor": {
+    "block_id": "fef9fbc4a352",
+    "end": 33,
+    "prefix": "",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "8a3858c2a715",
+     "end": 68,
+     "prefix": "",
+     "quote": "To address the Governor-General personally in formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d62dc77e83db",
+     "end": 30,
+     "prefix": "",
+     "quote": "In less formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6dcf37597e9e",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define the boundary between formal and less formal correspondence. Determine or supply that classification before applying the corresponding closing.",
+    "unit": "document",
+    "violation_condition": "Correspondence addressed personally to the Governor-General lacks the closing appropriate to its formality: ‘Yours faithfully’ for formal correspondence or ‘Yours sincerely’ for less formal correspondence."
+   },
+   "when": [
+    "The Governor-General is addressed personally in correspondence.",
+    "Formal correspondence concludes with ‘Yours faithfully’.",
+    "Less formal correspondence concludes with ‘Yours sincerely’."
+   ],
+   "why": "G-2 combines the formal and less formal cases of one closing check, separate from the opening."
+  },
+  {
+   "anchor": {
+    "block_id": "a3d6b55604cb",
+    "end": 66,
+    "prefix": "",
+    "quote": "Address a female partner as ‘Her Excellency’ or ‘Your Excellency’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "814827392efc",
+     "end": 40,
+     "prefix": "",
+     "quote": "For the partner of the Governor-General:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "39e62c2b3977",
+     "end": 64,
+     "prefix": "",
+     "quote": "Address a male partner as ‘His Excellency’ or ‘Your Excellency’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The Governor-General’s partner is addressed with a form other than the specified alternatives: ‘Her Excellency’ or ‘Your Excellency’ for a female partner, and ‘His Excellency’ or ‘Your Excellency’ for a male partner."
+   },
+   "when": [
+    "The person being addressed is the Governor-General’s partner.",
+    "For a female partner, either ‘Her Excellency’ or ‘Your Excellency’ is acceptable.",
+    "For a male partner, either ‘His Excellency’ or ‘Your Excellency’ is acceptable.",
+    "The page provides no further case."
+   ],
+   "why": "G-2: the female and male cases select acceptable forms for one partner-address check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4921,
+  "output_tokens": 12250,
+  "reasoning_tokens": 6214
+ }
+}

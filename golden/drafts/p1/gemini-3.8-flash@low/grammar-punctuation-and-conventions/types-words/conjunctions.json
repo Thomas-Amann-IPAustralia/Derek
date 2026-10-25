@@ -1,0 +1,379 @@
+{
+ "effort": "low",
+ "input_sha256": "b90e971cc1e9346c7c811d0643fae1fde757a98dd8b1647e87c88171c206538f",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "bf6dd57f9650",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use conjunctions to connect words, phrases and clauses.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory pedagogical explanation defining what conjunctions are for, not an actionable constraint on text.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "93ab8710cff0",
+    "end": 57,
+    "prefix": "",
+    "quote": "Coordinating conjunctions join things of equal importance",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Grammatical definition of coordinating conjunctions rather than a testable style rule.",
+   "reason": "description",
+   "seed_uid": "5f3c7e055f8c88c0"
+  },
+  {
+   "anchor": {
+    "block_id": "18768c73bd81",
+    "end": 68,
+    "prefix": "",
+    "quote": "Subordinating conjunctions join clauses and phrases to a main clause",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive definition of subordinating conjunctions.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "10774b8d3be6",
+    "end": 145,
+    "prefix": "",
+    "quote": "Conjunctive adverbs are often not needed. They add nuance to writing, but use them sparingly. You can usually delete them and keep meaning clear.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Vague stylistic advice to use conjunctive adverbs sparingly without an objective, checkable threshold.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/conjunctions.md",
+ "page_sha256": "404c4d3925b4aba1e773dfc554b614e2cc8422457ca5637a166b115fbcb84688",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "bf6dd57f9650",
+    "note": "Introductory pedagogical explanation defining what conjunctions are for, not an actionable constraint on text.",
+    "quote": "Use conjunctions to connect words, phrases and clauses.",
+    "reason": "description"
+   },
+   {
+    "block_id": "93ab8710cff0",
+    "note": "Grammatical definition of coordinating conjunctions rather than a testable style rule.",
+    "quote": "Coordinating conjunctions join things of equal importance",
+    "reason": "description"
+   },
+   {
+    "block_id": "18768c73bd81",
+    "note": "Descriptive definition of subordinating conjunctions.",
+    "quote": "Subordinating conjunctions join clauses and phrases to a main clause",
+    "reason": "description"
+   },
+   {
+    "block_id": "10774b8d3be6",
+    "note": "Vague stylistic advice to use conjunctive adverbs sparingly without an objective, checkable threshold.",
+    "quote": "Conjunctive adverbs are often not needed. They add nuance to writing, but use them sparingly. You can usually delete them and keep meaning clear.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cffd111dcaf6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "72cde07e17fc",
+      "quote": "Some conjunctions are paired"
+     },
+     {
+      "block_id": "cffd111dcaf6",
+      "quote": "Some conjunctions come in pairs, such as ‘whether/or’, 'both/and', ‘either/or’ and ‘neither/nor’."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Both conjunctions are followed by adjectives.",
+      "parts": [
+       {
+        "block_id": "214440ac124d",
+        "quote": "Whether wet or dry, the weather won't stop us going ahead with the team-building exercise."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Both conjunctions are followed by noun phrases.",
+      "parts": [
+       {
+        "block_id": "759252827386",
+        "quote": "My manager and I discussed both my performance review and my career prospects."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Both conjunctions are followed by clauses.",
+      "parts": [
+       {
+        "block_id": "886bce86b280",
+        "quote": "Either we complete the report today, or we work on it tomorrow."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Each conjunction in the pair should appear before the same type of word, phrase or clause.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a paired conjunction (correlative conjunction) where each element of the pair is followed by different grammatical structures (e.g. one followed by a noun phrase and the other by a clause)",
+    "when": [
+     "When using paired (correlative) conjunctions such as 'whether/or', 'both/and', 'either/or', or 'neither/nor'."
+    ],
+    "why": "G-4: Marks the instruction sentence on parallel structure with correlative conjunctions; absorbs the heading and intro."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5c536c9e0b89",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d65caa698862",
+      "quote": "‘With’ is not a conjunction"
+     },
+     {
+      "block_id": "5c536c9e0b89",
+      "quote": "Reword or split the sentence to prevent this misuse."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Split into two sentences rather than joining with 'with'.",
+      "parts": [
+       {
+        "block_id": "2c58961a00b2",
+        "quote": "The lake has had several blue-green algae outbreaks this year. It has been closed to swimming at least once a year since 2002."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'with' to attach an additional clause at the end of the sentence.",
+      "parts": [
+       {
+        "block_id": "90303173ce90",
+        "quote": "The lake has had several blue-green algae outbreaks this year, with the lake closed to swimming at least once a year since 2002."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use ‘with’ to add a clause at the beginning or end of a sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "using 'with' to introduce an absolute clause or pseudo-conjunction clause at the beginning or end of a sentence",
+    "when": [],
+    "why": "G-4: The candidate heading is a grammatical assertion; the second sentence of the body is the actionable rule."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "cffd111dcaf6",
+    "end": 188,
+    "prefix": " ‘either/or’ and ‘neither/nor’. ",
+    "quote": "Each conjunction in the pair should appear before the same type of word, phrase or clause.",
+    "start": 98,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "72cde07e17fc",
+     "end": 28,
+     "prefix": "",
+     "quote": "Some conjunctions are paired",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cffd111dcaf6",
+     "end": 97,
+     "prefix": "",
+     "quote": "Some conjunctions come in pairs, such as ‘whether/or’, 'both/and', ‘either/or’ and ‘neither/nor’.",
+     "start": 0,
+     "suffix": " Each conjunction in the pair sh"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Both conjunctions are followed by adjectives.",
+     "parts": [
+      {
+       "block_id": "214440ac124d",
+       "end": 90,
+       "prefix": "",
+       "quote": "Whether wet or dry, the weather won't stop us going ahead with the team-building exercise.",
+       "start": 0,
+       "suffix": " [Both conjunctions are followed"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Both conjunctions are followed by noun phrases.",
+     "parts": [
+      {
+       "block_id": "759252827386",
+       "end": 78,
+       "prefix": "",
+       "quote": "My manager and I discussed both my performance review and my career prospects.",
+       "start": 0,
+       "suffix": " [Both conjunctions are followed"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Both conjunctions are followed by clauses.",
+     "parts": [
+      {
+       "block_id": "886bce86b280",
+       "end": 63,
+       "prefix": "",
+       "quote": "Either we complete the report today, or we work on it tomorrow.",
+       "start": 0,
+       "suffix": " [Both conjunctions are followed"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a paired conjunction (correlative conjunction) where each element of the pair is followed by different grammatical structures (e.g. one followed by a noun phrase and the other by a clause)"
+   },
+   "when": [
+    "When using paired (correlative) conjunctions such as 'whether/or', 'both/and', 'either/or', or 'neither/nor'."
+   ],
+   "why": "G-4: Marks the instruction sentence on parallel structure with correlative conjunctions; absorbs the heading and intro."
+  },
+  {
+   "anchor": {
+    "block_id": "5c536c9e0b89",
+    "end": 71,
+    "prefix": "",
+    "quote": "Don’t use ‘with’ to add a clause at the beginning or end of a sentence.",
+    "start": 0,
+    "suffix": " Reword or split the sentence to"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d65caa698862",
+     "end": 27,
+     "prefix": "",
+     "quote": "‘With’ is not a conjunction",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5c536c9e0b89",
+     "end": 124,
+     "prefix": "beginning or end of a sentence. ",
+     "quote": "Reword or split the sentence to prevent this misuse.",
+     "start": 72,
+     "suffix": " This helps create shorter, simp"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Split into two sentences rather than joining with 'with'.",
+     "parts": [
+      {
+       "block_id": "2c58961a00b2",
+       "end": 126,
+       "prefix": "",
+       "quote": "The lake has had several blue-green algae outbreaks this year. It has been closed to swimming at least once a year since 2002.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses 'with' to attach an additional clause at the end of the sentence.",
+     "parts": [
+      {
+       "block_id": "90303173ce90",
+       "end": 128,
+       "prefix": "",
+       "quote": "The lake has had several blue-green algae outbreaks this year, with the lake closed to swimming at least once a year since 2002.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "using 'with' to introduce an absolute clause or pseudo-conjunction clause at the beginning or end of a sentence"
+   },
+   "when": [],
+   "why": "G-4: The candidate heading is a grammatical assertion; the second sentence of the body is the actionable rule."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4643,
+  "output_tokens": 1438,
+  "reasoning_tokens": 0
+ }
+}

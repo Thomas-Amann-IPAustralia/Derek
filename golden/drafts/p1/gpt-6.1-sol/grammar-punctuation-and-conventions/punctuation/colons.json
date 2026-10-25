@@ -1,0 +1,1988 @@
+{
+ "effort": "high",
+ "input_sha256": "894d39d4c6a9d04f30fe93bf4cac5a936e322daf2e545ecac0595680f10bcff4",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "4b543cd52eb9",
+    "end": 154,
+    "prefix": " add colons that are essential. ",
+    "quote": "Use them to introduce examples, contrasts, lists and block quotations.",
+    "start": 84,
+    "suffix": ""
+   },
+   "note": "Overview of functions developed by the specific rules below, not an additional umbrella finding.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "174e5eb8c4dc",
+    "end": 15,
+    "prefix": "",
+    "quote": "Limit colon use",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed by the instruction to add only essential colons.",
+   "reason": "restatement",
+   "seed_uid": "bd199ae2b2646bc4"
+  },
+  {
+   "anchor": {
+    "block_id": "3cdd2e55adfa",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use a colon only if you are sure it is needed.",
+    "start": 0,
+    "suffix": " Incorrect use creates confusion"
+   },
+   "note": "Writer-facing restatement of the essential-colon instruction, not a separate check of the writer's confidence.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ba9b77ccc122",
+    "end": 15,
+    "prefix": "",
+    "quote": "Use a colon to:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in to the cases absorbed by the examples-and-contrasts rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7e85ff622ae8",
+    "end": 60,
+    "prefix": "",
+    "quote": "introduce a word, phrase or clause that provides more detail",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A case of the colon-introduction rule, not a separate finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af4fb81726e6",
+    "end": 20,
+    "prefix": "",
+    "quote": "introduce a question",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A case of the colon-introduction rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0f1ad8099646",
+    "end": 15,
+    "prefix": "",
+    "quote": "give an example",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A case of the colon-introduction rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4c4ded3455fb",
+    "end": 48,
+    "prefix": "",
+    "quote": "summarise or contrast with what comes before it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Cases of the colon-introduction rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "61cb0db5247c",
+    "end": 117,
+    "prefix": "",
+    "quote": "A sentence fragment can come before the colon if the fragment can stand alone or if it’s introducing a bulleted list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: retained as a condition on colon introduction, not inverted into a standalone prohibition.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6d4e6e80b649",
+    "end": 61,
+    "prefix": "",
+    "quote": "Use a colon to introduce a list of words, phrases or clauses.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the list-introduction heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6369dc296a82",
+    "end": 61,
+    "prefix": "",
+    "quote": "Include the colon to restructure content into bulleted lists.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Adds the restructuring case to the list-introduction rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6f25ce059c37",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use lower case following a colon in most cases",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body supplies the actionable wording and its exceptions.",
+   "reason": "restatement",
+   "seed_uid": "a9b5e6f7cee7cac3"
+  },
+  {
+   "anchor": {
+    "block_id": "d3d105646424",
+    "end": 82,
+    "prefix": "",
+    "quote": "After a colon, capitalise the first word of questions that are complete sentences.",
+    "start": 0,
+    "suffix": " This makes it clear that the qu"
+   },
+   "note": "Makes the complete-question case of the post-colon capitalisation rule explicit.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0105cdba7c3c",
+    "end": 53,
+    "prefix": "",
+    "quote": "Use a colon before the subtitle of a book or article.",
+    "start": 0,
+    "suffix": " Follow the colon with a lower c"
+   },
+   "note": "Restates the subtitle heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0105cdba7c3c",
+    "end": 123,
+    "prefix": " subtitle of a book or article. ",
+    "quote": "Follow the colon with a lower case letter, unless it’s a proper noun.",
+    "start": 54,
+    "suffix": ""
+   },
+   "note": "Subtitle-specific restatement absorbed into the post-colon case rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "831e412814c2",
+    "end": 75,
+    "prefix": "",
+    "quote": "Do this when writing about a book or article and also when referencing one.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Scope condition for subtitle formatting, not a separate violation.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "995ca9050859",
+    "end": 43,
+    "prefix": "",
+    "quote": "Use a colon to introduce a block quotation.",
+    "start": 0,
+    "suffix": " Block quotations should also be"
+   },
+   "note": "Restates the block-quotation heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "995ca9050859",
+    "end": 117,
+    "prefix": "to introduce a block quotation. ",
+    "quote": "Block quotations should also be coded with the HTML <blockquote> element.",
+    "start": 44,
+    "suffix": ""
+   },
+   "note": "Instruction about HTML markup rather than the words or punctuation of the quotation.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "971500bef4e7",
+    "end": 41,
+    "prefix": "",
+    "quote": "Use a colon to give a mathematical ratio.",
+    "start": 0,
+    "suffix": " Don’t put a space after the col"
+   },
+   "note": "Restates the mathematical-ratio heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/colons.md",
+ "page_sha256": "1a621314f1e8a619463e698a02c27b874a229fba81075d888b6196f11043e8ed",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "4b543cd52eb9",
+    "note": "Overview of functions developed by the specific rules below, not an additional umbrella finding.",
+    "quote": "Use them to introduce examples, contrasts, lists and block quotations.",
+    "reason": "section"
+   },
+   {
+    "block_id": "174e5eb8c4dc",
+    "note": "Absorbed by the instruction to add only essential colons.",
+    "quote": "Limit colon use",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3cdd2e55adfa",
+    "note": "Writer-facing restatement of the essential-colon instruction, not a separate check of the writer's confidence.",
+    "quote": "Use a colon only if you are sure it is needed.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ba9b77ccc122",
+    "note": "Lead-in to the cases absorbed by the examples-and-contrasts rule.",
+    "quote": "Use a colon to:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7e85ff622ae8",
+    "note": "A case of the colon-introduction rule, not a separate finding.",
+    "quote": "introduce a word, phrase or clause that provides more detail",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "af4fb81726e6",
+    "note": "A case of the colon-introduction rule.",
+    "quote": "introduce a question",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0f1ad8099646",
+    "note": "A case of the colon-introduction rule.",
+    "quote": "give an example",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4c4ded3455fb",
+    "note": "Cases of the colon-introduction rule.",
+    "quote": "summarise or contrast with what comes before it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "61cb0db5247c",
+    "note": "G-3: retained as a condition on colon introduction, not inverted into a standalone prohibition.",
+    "quote": "A sentence fragment can come before the colon if the fragment can stand alone or if it’s introducing a bulleted list.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6d4e6e80b649",
+    "note": "Restates the list-introduction heading.",
+    "quote": "Use a colon to introduce a list of words, phrases or clauses.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6369dc296a82",
+    "note": "Adds the restructuring case to the list-introduction rule.",
+    "quote": "Include the colon to restructure content into bulleted lists.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6f25ce059c37",
+    "note": "The body supplies the actionable wording and its exceptions.",
+    "quote": "Use lower case following a colon in most cases",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d3d105646424",
+    "note": "Makes the complete-question case of the post-colon capitalisation rule explicit.",
+    "quote": "After a colon, capitalise the first word of questions that are complete sentences.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0105cdba7c3c",
+    "note": "Restates the subtitle heading.",
+    "quote": "Use a colon before the subtitle of a book or article.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0105cdba7c3c",
+    "note": "Subtitle-specific restatement absorbed into the post-colon case rule.",
+    "quote": "Follow the colon with a lower case letter, unless it’s a proper noun.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "831e412814c2",
+    "note": "Scope condition for subtitle formatting, not a separate violation.",
+    "quote": "Do this when writing about a book or article and also when referencing one.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "995ca9050859",
+    "note": "Restates the block-quotation heading.",
+    "quote": "Use a colon to introduce a block quotation.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "995ca9050859",
+    "note": "Instruction about HTML markup rather than the words or punctuation of the quotation.",
+    "quote": "Block quotations should also be coded with the HTML <blockquote> element.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "971500bef4e7",
+    "note": "Restates the mathematical-ratio heading.",
+    "quote": "Use a colon to give a mathematical ratio.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4b543cd52eb9",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "174e5eb8c4dc",
+      "quote": "Limit colon use"
+     },
+     {
+      "block_id": "3cdd2e55adfa",
+      "quote": "Use a colon only if you are sure it is needed."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Only add colons that are essential.",
+    "specification": "The page does not define an objective test for ‘essential’. Do not equate a grammatically optional colon with an unnecessary one, or generate a second finding for an error covered by a more specific colon rule.",
+    "unit": "sentence",
+    "violation_condition": "A colon is unnecessary in its context.",
+    "when": [],
+    "why": "G-4: the heading and body repeat the same restraint; the undefined necessity criterion remains explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "057d931a74af",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "ba9b77ccc122",
+      "quote": "Use a colon to:"
+     },
+     {
+      "block_id": "7e85ff622ae8",
+      "quote": "introduce a word, phrase or clause that provides more detail"
+     },
+     {
+      "block_id": "af4fb81726e6",
+      "quote": "introduce a question"
+     },
+     {
+      "block_id": "0f1ad8099646",
+      "quote": "give an example"
+     },
+     {
+      "block_id": "4c4ded3455fb",
+      "quote": "summarise or contrast with what comes before it."
+     },
+     {
+      "block_id": "61cb0db5247c",
+      "quote": "A sentence fragment can come before the colon if the fragment can stand alone or if it’s introducing a bulleted list."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "19a74befba18",
+        "quote": "Use correct spelling: check a dictionary if you need to."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "06d2ec3b1e24",
+        "quote": "Our work is about answering this simple question: how?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a0702c28e5f5",
+        "quote": "We’ll have to use a stronger tool: sanctions."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2058f5ab3284",
+        "quote": "This is the guiding principle for our workplace: collaboration."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f987bc57ee27",
+        "quote": "The committee found there was only one possible explanation: fraud."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "82a5837057ec",
+        "quote": "Warning: strong winds forecast for Sydney today."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Introduce examples and contrasts with colons",
+    "specification": "Interpret this as punctuation between a lead-in and the material it introduces, not a requirement to insert a colon into every sentence that provides detail or makes a contrast.",
+    "unit": "sentence",
+    "violation_condition": "A lead-in lacks a colon separating it from following material presented as an elaboration, question, example, summary or contrast.",
+    "when": [
+     "The following material gives more detail, introduces a question, gives an example, or summarises or contrasts with the preceding text.",
+     "A sentence fragment may precede the colon if it can stand alone or introduces a bulleted list.",
+     "List lead-ins, subtitles, block quotations and mathematical ratios have separate, more specific checks."
+    ],
+    "why": "G-2 and G-4: the listed relationships are cases of the same introduction check; G-3 keeps the fragment permission as a condition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "212144e66d05",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6d4e6e80b649",
+      "quote": "Use a colon to introduce a list of words, phrases or clauses."
+     },
+     {
+      "block_id": "6369dc296a82",
+      "quote": "Include the colon to restructure content into bulleted lists."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7297fabb8810",
+        "quote": "Pick any 2 of the 3: low price, high speed, high quality."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c0f0d3c3d295",
+        "quote": "The position has these requirements: strong communication skills and experience across content management platforms."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "aa3788900907",
+        "quote": "We need to:"
+       },
+       {
+        "block_id": "aa64b4e0ea34",
+        "quote": "check Appendix A of the report"
+       },
+       {
+        "block_id": "f864a980be83",
+        "quote": "ask Mary about the final chapter of her book"
+       },
+       {
+        "block_id": "fb87678968ee",
+        "quote": "rewrite our introduction."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "090895c2f85a",
+        "quote": "The requirements for the position are:"
+       },
+       {
+        "block_id": "13a71bcaab80",
+        "quote": "strong communication skills"
+       },
+       {
+        "block_id": "bddb067578ea",
+        "quote": "experience across content management platforms."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Start lists with a colon",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A lead-in introducing a list lacks a colon, other than an inline list that flows on as part of the sentence.",
+    "when": [
+     "The list contains words, phrases or clauses.",
+     "Do not require a colon for an inline list that flows on as part of a full sentence.",
+     "A colon is required when content is restructured as a bulleted list, even if the original inline version did not take one."
+    ],
+    "why": "G-2 and G-4: list types and restructuring into bullets change the conditions of one missing-colon check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "50e053d2976a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7843bceb1f69",
+        "quote": "Pick any 2 of low price, high speed and high quality."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d972b4c757fc",
+        "quote": "The requirements for the position are strong communication skills and experience across content management platforms."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "700b162fef87",
+        "quote": "Pick any 2 of: low price, high speed and high quality."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5c7b225f3b88",
+        "quote": "The requirements for the position are: strong communication skills and experience across content management platforms."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t include a colon when the list flows on as part of a full sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A colon interrupts an inline list that flows on syntactically as part of the surrounding sentence.",
+    "when": [
+     "The list is inline and forms part of a full sentence.",
+     "This prohibition does not apply after restructuring the content as a bulleted list."
+    ],
+    "why": "This flags an intrusive colon, not the missing lead-in colon flagged by the preceding rule; E-2 attaches the Correct/Incorrect pairs here."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ca9c54b7086f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6f25ce059c37",
+      "quote": "Use lower case following a colon in most cases"
+     },
+     {
+      "block_id": "bcb8f42d85f4",
+      "quote": "the word that follows the colon is a proper noun"
+     },
+     {
+      "block_id": "9b10020c0c5e",
+      "quote": "the text after the colon is a question that is a complete sentence."
+     },
+     {
+      "block_id": "d3d105646424",
+      "quote": "After a colon, capitalise the first word of questions that are complete sentences."
+     },
+     {
+      "block_id": "0105cdba7c3c",
+      "quote": "Follow the colon with a lower case letter, unless it’s a proper noun."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "06baa124217b",
+        "quote": "We had to write 66 reports: it took months."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e39e09a32334",
+        "quote": "The commander was confident: Special Air Service Regiment had enough ammunition."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dc86fd5a92be",
+        "quote": "We had to write many reports: It took months."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f6487d8e1b7e",
+        "quote": "The commander was confident: special air service regiment had enough ammunition."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bb34604ab977",
+        "quote": "The election was fought on a simple question: Which party had the best economic credentials?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0d93892a12fa",
+        "quote": "The election was fought on a simple question: which party had the best economic credentials?"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5f3e53e22e5e",
+        "quote": "Teaching in Australia: a deep dive into the education system"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "68480a83f24a",
+        "quote": "Stanovich KE (1986) ‘Matthew effects in reading: some consequences of individual differences in the acquisition of literacy’, Reading Research Quarterly, 21(4):360–407."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Start the word after the colon with a lower case letter unless:",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The first word continuing after a colon has the wrong initial case: an unnecessary capital in ordinary text, a lowercase proper noun, or a lowercase initial in a question that is a complete sentence.",
+    "when": [
+     "Use lower case by default for text continuing after a colon.",
+     "A proper noun retains its capitalisation.",
+     "A question that is a complete sentence starts with a capital letter.",
+     "The lower-case convention also applies after the colon introducing a book or article subtitle, unless the following word is a proper noun."
+    ],
+    "why": "G-2 and G-4: default case, proper nouns, complete questions and the subtitle restatement belong to one post-colon case check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "965b98716413",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "33fb4ea1160c",
+        "quote": "They answered the question:"
+       },
+       {
+        "block_id": "6b3c3e08df0b",
+        "quote": "They wrote 23 reports."
+       },
+       {
+        "block_id": "cbaf99f54b3e",
+        "quote": "Each report took 11 days to write."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the colon introduces a series of sentences or questions, use a lead-in and colon to introduce them in a bulleted or numbered list.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A colon introduces a series of sentences or questions in running text rather than as a bulleted or numbered list.",
+    "when": [
+     "The colon introduces more than one sentence or question.",
+     "The series should be presented as list items following a lead-in ending in a colon.",
+     "A missing colon on an existing list lead-in is handled by the list-introduction rule."
+    ],
+    "why": "This is a distinct list-structure check, not another capitalisation rule or a duplicate missing-colon check; E-3 keeps the lead-in and items together."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "eafde106554a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0105cdba7c3c",
+      "quote": "Use a colon before the subtitle of a book or article."
+     },
+     {
+      "block_id": "831e412814c2",
+      "quote": "Do this when writing about a book or article and also when referencing one."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5f3e53e22e5e",
+        "quote": "Teaching in Australia: a deep dive into the education system"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "68480a83f24a",
+        "quote": "Stanovich KE (1986) ‘Matthew effects in reading: some consequences of individual differences in the acquisition of literacy’, Reading Research Quarterly, 21(4):360–407."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Start subtitles of books and articles with a colon",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A book or article title has a subtitle that is not separated from the main title by a colon.",
+    "when": [
+     "A book or article has a subtitle.",
+     "This applies both when writing about the work and when referencing it.",
+     "Capitalisation after the subtitle colon is handled by the post-colon case rule."
+    ],
+    "why": "G-2 and G-4: prose mentions and references are conditions of the same subtitle-separator check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d8125ff5deff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "995ca9050859",
+      "quote": "Use a colon to introduce a block quotation."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fe35c86ad67e",
+        "quote": "For example, Manthorpe (2019) stated:"
+       },
+       {
+        "block_id": "f7f8d5fad375",
+        "quote": "Short sentences are easier to read because they limit the scope of an idea. But most readers like the variety and rhythm of a mixture of sentence lengths. For most readers, aim for an average sentence length of 15 words per sentence."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Introduce block quotations with colons",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A block quotation's lead-in does not end with a colon.",
+    "when": [
+     "A lead-in introduces a block quotation."
+    ],
+    "why": "G-4 consolidates heading and body; the separate HTML-coding instruction is not a rule about words."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fd0ae5ad9b17",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "971500bef4e7",
+      "quote": "Use a colon to give a mathematical ratio."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c6cdf0b94663",
+        "quote": "The government proposes a 50:50 split."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "95e6fd07c5a8",
+        "quote": "The cost-benefit ratio will be 7.5:1."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write mathematical ratios with a colon",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A mathematical ratio is written without a colon separating its terms.",
+    "when": [
+     "The expression represents a mathematical ratio."
+    ],
+    "why": "G-4 consolidates heading and body; choosing the ratio separator is distinct from spacing it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "971500bef4e7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c6cdf0b94663",
+        "quote": "The government proposes a 50:50 split."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "95e6fd07c5a8",
+        "quote": "The cost-benefit ratio will be 7.5:1."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t put a space after the colon.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A space appears immediately after the colon separating the terms of a mathematical ratio.",
+    "when": [
+     "The colon is the separator in a mathematical ratio."
+    ],
+    "why": "The spacing prohibition produces a different finding from a missing ratio colon and is limited by its mathematical-ratio context."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "4b543cd52eb9",
+    "end": 83,
+    "prefix": "ntion to the text that follows. ",
+    "quote": "Only add colons that are essential.",
+    "start": 48,
+    "suffix": " Use them to introduce examples,"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "174e5eb8c4dc",
+     "end": 15,
+     "prefix": "",
+     "quote": "Limit colon use",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3cdd2e55adfa",
+     "end": 46,
+     "prefix": "",
+     "quote": "Use a colon only if you are sure it is needed.",
+     "start": 0,
+     "suffix": " Incorrect use creates confusion"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page does not define an objective test for ‘essential’. Do not equate a grammatically optional colon with an unnecessary one, or generate a second finding for an error covered by a more specific colon rule.",
+    "unit": "sentence",
+    "violation_condition": "A colon is unnecessary in its context."
+   },
+   "when": [],
+   "why": "G-4: the heading and body repeat the same restraint; the undefined necessity criterion remains explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "057d931a74af",
+    "end": 44,
+    "prefix": "",
+    "quote": "Introduce examples and contrasts with colons",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "ba9b77ccc122",
+     "end": 15,
+     "prefix": "",
+     "quote": "Use a colon to:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "7e85ff622ae8",
+     "end": 60,
+     "prefix": "",
+     "quote": "introduce a word, phrase or clause that provides more detail",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "af4fb81726e6",
+     "end": 20,
+     "prefix": "",
+     "quote": "introduce a question",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0f1ad8099646",
+     "end": 15,
+     "prefix": "",
+     "quote": "give an example",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4c4ded3455fb",
+     "end": 48,
+     "prefix": "",
+     "quote": "summarise or contrast with what comes before it.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "61cb0db5247c",
+     "end": 117,
+     "prefix": "",
+     "quote": "A sentence fragment can come before the colon if the fragment can stand alone or if it’s introducing a bulleted list.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "19a74befba18",
+       "end": 56,
+       "prefix": "",
+       "quote": "Use correct spelling: check a dictionary if you need to.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "06d2ec3b1e24",
+       "end": 54,
+       "prefix": "",
+       "quote": "Our work is about answering this simple question: how?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a0702c28e5f5",
+       "end": 45,
+       "prefix": "",
+       "quote": "We’ll have to use a stronger tool: sanctions.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2058f5ab3284",
+       "end": 63,
+       "prefix": "",
+       "quote": "This is the guiding principle for our workplace: collaboration.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f987bc57ee27",
+       "end": 67,
+       "prefix": "",
+       "quote": "The committee found there was only one possible explanation: fraud.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "82a5837057ec",
+       "end": 48,
+       "prefix": "",
+       "quote": "Warning: strong winds forecast for Sydney today.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "9981e1959732ec82",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Interpret this as punctuation between a lead-in and the material it introduces, not a requirement to insert a colon into every sentence that provides detail or makes a contrast.",
+    "unit": "sentence",
+    "violation_condition": "A lead-in lacks a colon separating it from following material presented as an elaboration, question, example, summary or contrast."
+   },
+   "when": [
+    "The following material gives more detail, introduces a question, gives an example, or summarises or contrasts with the preceding text.",
+    "A sentence fragment may precede the colon if it can stand alone or introduces a bulleted list.",
+    "List lead-ins, subtitles, block quotations and mathematical ratios have separate, more specific checks."
+   ],
+   "why": "G-2 and G-4: the listed relationships are cases of the same introduction check; G-3 keeps the fragment permission as a condition."
+  },
+  {
+   "anchor": {
+    "block_id": "212144e66d05",
+    "end": 24,
+    "prefix": "",
+    "quote": "Start lists with a colon",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6d4e6e80b649",
+     "end": 61,
+     "prefix": "",
+     "quote": "Use a colon to introduce a list of words, phrases or clauses.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6369dc296a82",
+     "end": 61,
+     "prefix": "",
+     "quote": "Include the colon to restructure content into bulleted lists.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7297fabb8810",
+       "end": 57,
+       "prefix": "",
+       "quote": "Pick any 2 of the 3: low price, high speed, high quality.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c0f0d3c3d295",
+       "end": 116,
+       "prefix": "",
+       "quote": "The position has these requirements: strong communication skills and experience across content management platforms.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "aa3788900907",
+       "end": 11,
+       "prefix": "",
+       "quote": "We need to:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "aa64b4e0ea34",
+       "end": 30,
+       "prefix": "",
+       "quote": "check Appendix A of the report",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f864a980be83",
+       "end": 44,
+       "prefix": "",
+       "quote": "ask Mary about the final chapter of her book",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "fb87678968ee",
+       "end": 25,
+       "prefix": "",
+       "quote": "rewrite our introduction.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "090895c2f85a",
+       "end": 38,
+       "prefix": "",
+       "quote": "The requirements for the position are:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "13a71bcaab80",
+       "end": 27,
+       "prefix": "",
+       "quote": "strong communication skills",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "bddb067578ea",
+       "end": 47,
+       "prefix": "",
+       "quote": "experience across content management platforms.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "4e91a188a88b2ccd",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A lead-in introducing a list lacks a colon, other than an inline list that flows on as part of the sentence."
+   },
+   "when": [
+    "The list contains words, phrases or clauses.",
+    "Do not require a colon for an inline list that flows on as part of a full sentence.",
+    "A colon is required when content is restructured as a bulleted list, even if the original inline version did not take one."
+   ],
+   "why": "G-2 and G-4: list types and restructuring into bullets change the conditions of one missing-colon check."
+  },
+  {
+   "anchor": {
+    "block_id": "50e053d2976a",
+    "end": 72,
+    "prefix": "",
+    "quote": "Don’t include a colon when the list flows on as part of a full sentence.",
+    "start": 0,
+    "suffix": " This is a common error."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7843bceb1f69",
+       "end": 53,
+       "prefix": "",
+       "quote": "Pick any 2 of low price, high speed and high quality.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d972b4c757fc",
+       "end": 117,
+       "prefix": "",
+       "quote": "The requirements for the position are strong communication skills and experience across content management platforms.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "700b162fef87",
+       "end": 54,
+       "prefix": "",
+       "quote": "Pick any 2 of: low price, high speed and high quality.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5c7b225f3b88",
+       "end": 118,
+       "prefix": "",
+       "quote": "The requirements for the position are: strong communication skills and experience across content management platforms.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A colon interrupts an inline list that flows on syntactically as part of the surrounding sentence."
+   },
+   "when": [
+    "The list is inline and forms part of a full sentence.",
+    "This prohibition does not apply after restructuring the content as a bulleted list."
+   ],
+   "why": "This flags an intrusive colon, not the missing lead-in colon flagged by the preceding rule; E-2 attaches the Correct/Incorrect pairs here."
+  },
+  {
+   "anchor": {
+    "block_id": "ca9c54b7086f",
+    "end": 63,
+    "prefix": "",
+    "quote": "Start the word after the colon with a lower case letter unless:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6f25ce059c37",
+     "end": 46,
+     "prefix": "",
+     "quote": "Use lower case following a colon in most cases",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bcb8f42d85f4",
+     "end": 48,
+     "prefix": "",
+     "quote": "the word that follows the colon is a proper noun",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9b10020c0c5e",
+     "end": 67,
+     "prefix": "",
+     "quote": "the text after the colon is a question that is a complete sentence.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d3d105646424",
+     "end": 82,
+     "prefix": "",
+     "quote": "After a colon, capitalise the first word of questions that are complete sentences.",
+     "start": 0,
+     "suffix": " This makes it clear that the qu"
+    },
+    {
+     "block_id": "0105cdba7c3c",
+     "end": 123,
+     "prefix": " subtitle of a book or article. ",
+     "quote": "Follow the colon with a lower case letter, unless it’s a proper noun.",
+     "start": 54,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "06baa124217b",
+       "end": 43,
+       "prefix": "",
+       "quote": "We had to write 66 reports: it took months.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e39e09a32334",
+       "end": 80,
+       "prefix": "",
+       "quote": "The commander was confident: Special Air Service Regiment had enough ammunition.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dc86fd5a92be",
+       "end": 45,
+       "prefix": "",
+       "quote": "We had to write many reports: It took months.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f6487d8e1b7e",
+       "end": 80,
+       "prefix": "",
+       "quote": "The commander was confident: special air service regiment had enough ammunition.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bb34604ab977",
+       "end": 92,
+       "prefix": "",
+       "quote": "The election was fought on a simple question: Which party had the best economic credentials?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0d93892a12fa",
+       "end": 92,
+       "prefix": "",
+       "quote": "The election was fought on a simple question: which party had the best economic credentials?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5f3e53e22e5e",
+       "end": 60,
+       "prefix": "",
+       "quote": "Teaching in Australia: a deep dive into the education system",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "68480a83f24a",
+       "end": 168,
+       "prefix": "",
+       "quote": "Stanovich KE (1986) ‘Matthew effects in reading: some consequences of individual differences in the acquisition of literacy’, Reading Research Quarterly, 21(4):360–407.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The first word continuing after a colon has the wrong initial case: an unnecessary capital in ordinary text, a lowercase proper noun, or a lowercase initial in a question that is a complete sentence."
+   },
+   "when": [
+    "Use lower case by default for text continuing after a colon.",
+    "A proper noun retains its capitalisation.",
+    "A question that is a complete sentence starts with a capital letter.",
+    "The lower-case convention also applies after the colon introducing a book or article subtitle, unless the following word is a proper noun."
+   ],
+   "why": "G-2 and G-4: default case, proper nouns, complete questions and the subtitle restatement belong to one post-colon case check."
+  },
+  {
+   "anchor": {
+    "block_id": "965b98716413",
+    "end": 133,
+    "prefix": "",
+    "quote": "If the colon introduces a series of sentences or questions, use a lead-in and colon to introduce them in a bulleted or numbered list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "33fb4ea1160c",
+       "end": 27,
+       "prefix": "",
+       "quote": "They answered the question:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "6b3c3e08df0b",
+       "end": 22,
+       "prefix": "",
+       "quote": "They wrote 23 reports.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "cbaf99f54b3e",
+       "end": 34,
+       "prefix": "",
+       "quote": "Each report took 11 days to write.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A colon introduces a series of sentences or questions in running text rather than as a bulleted or numbered list."
+   },
+   "when": [
+    "The colon introduces more than one sentence or question.",
+    "The series should be presented as list items following a lead-in ending in a colon.",
+    "A missing colon on an existing list lead-in is handled by the list-introduction rule."
+   ],
+   "why": "This is a distinct list-structure check, not another capitalisation rule or a duplicate missing-colon check; E-3 keeps the lead-in and items together."
+  },
+  {
+   "anchor": {
+    "block_id": "eafde106554a",
+    "end": 50,
+    "prefix": "",
+    "quote": "Start subtitles of books and articles with a colon",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0105cdba7c3c",
+     "end": 53,
+     "prefix": "",
+     "quote": "Use a colon before the subtitle of a book or article.",
+     "start": 0,
+     "suffix": " Follow the colon with a lower c"
+    },
+    {
+     "block_id": "831e412814c2",
+     "end": 75,
+     "prefix": "",
+     "quote": "Do this when writing about a book or article and also when referencing one.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5f3e53e22e5e",
+       "end": 60,
+       "prefix": "",
+       "quote": "Teaching in Australia: a deep dive into the education system",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "68480a83f24a",
+       "end": 168,
+       "prefix": "",
+       "quote": "Stanovich KE (1986) ‘Matthew effects in reading: some consequences of individual differences in the acquisition of literacy’, Reading Research Quarterly, 21(4):360–407.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "2c35ca73d8a7eb4a",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A book or article title has a subtitle that is not separated from the main title by a colon."
+   },
+   "when": [
+    "A book or article has a subtitle.",
+    "This applies both when writing about the work and when referencing it.",
+    "Capitalisation after the subtitle colon is handled by the post-colon case rule."
+   ],
+   "why": "G-2 and G-4: prose mentions and references are conditions of the same subtitle-separator check."
+  },
+  {
+   "anchor": {
+    "block_id": "d8125ff5deff",
+    "end": 38,
+    "prefix": "",
+    "quote": "Introduce block quotations with colons",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "995ca9050859",
+     "end": 43,
+     "prefix": "",
+     "quote": "Use a colon to introduce a block quotation.",
+     "start": 0,
+     "suffix": " Block quotations should also be"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fe35c86ad67e",
+       "end": 37,
+       "prefix": "",
+       "quote": "For example, Manthorpe (2019) stated:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f7f8d5fad375",
+       "end": 233,
+       "prefix": "",
+       "quote": "Short sentences are easier to read because they limit the scope of an idea. But most readers like the variety and rhythm of a mixture of sentence lengths. For most readers, aim for an average sentence length of 15 words per sentence.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "f7f1d53b461ad3c4",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A block quotation's lead-in does not end with a colon."
+   },
+   "when": [
+    "A lead-in introduces a block quotation."
+   ],
+   "why": "G-4 consolidates heading and body; the separate HTML-coding instruction is not a rule about words."
+  },
+  {
+   "anchor": {
+    "block_id": "fd0ae5ad9b17",
+    "end": 38,
+    "prefix": "",
+    "quote": "Write mathematical ratios with a colon",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "971500bef4e7",
+     "end": 41,
+     "prefix": "",
+     "quote": "Use a colon to give a mathematical ratio.",
+     "start": 0,
+     "suffix": " Don’t put a space after the col"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c6cdf0b94663",
+       "end": 38,
+       "prefix": "",
+       "quote": "The government proposes a 50:50 split.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "95e6fd07c5a8",
+       "end": 37,
+       "prefix": "",
+       "quote": "The cost-benefit ratio will be 7.5:1.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "0e2b503860cf0ef8",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A mathematical ratio is written without a colon separating its terms."
+   },
+   "when": [
+    "The expression represents a mathematical ratio."
+   ],
+   "why": "G-4 consolidates heading and body; choosing the ratio separator is distinct from spacing it."
+  },
+  {
+   "anchor": {
+    "block_id": "971500bef4e7",
+    "end": 76,
+    "prefix": "n to give a mathematical ratio. ",
+    "quote": "Don’t put a space after the colon.",
+    "start": 42,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c6cdf0b94663",
+       "end": 38,
+       "prefix": "",
+       "quote": "The government proposes a 50:50 split.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "95e6fd07c5a8",
+       "end": 37,
+       "prefix": "",
+       "quote": "The cost-benefit ratio will be 7.5:1.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A space appears immediately after the colon separating the terms of a mathematical ratio."
+   },
+   "when": [
+    "The colon is the separator in a mathematical ratio."
+   ],
+   "why": "The spacing prohibition produces a different finding from a missing ratio colon and is limited by its mathematical-ratio context."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4919,
+  "output_tokens": 14959,
+  "reasoning_tokens": 8804
+ }
+}

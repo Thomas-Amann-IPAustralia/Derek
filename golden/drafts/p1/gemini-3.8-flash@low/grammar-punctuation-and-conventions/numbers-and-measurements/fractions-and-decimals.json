@@ -1,0 +1,490 @@
+{
+ "effort": "low",
+ "input_sha256": "be78c8b443c515709dfffe6b30d4ea6c4bc4cad2ac7f5882ca6fe7ae67da9eab",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "77d1a7eae84d",
+    "end": 42,
+    "prefix": "",
+    "quote": "Choose between a decimal value or fraction",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping guidance on when to choose decimals vs fractions (G-1).",
+   "reason": "section",
+   "seed_uid": "c6f36914fffe8a50"
+  },
+  {
+   "anchor": {
+    "block_id": "bf4c80a6c0d2",
+    "end": 41,
+    "prefix": "",
+    "quote": "Use decimals when you need to be precise.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Guidance on authorial intent and content choice rather than a flaggable syntactic violation (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "78ff427d8188",
+    "end": 19,
+    "prefix": "",
+    "quote": "Use fractions when:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Guidance on authorial intent and content choice rather than a flaggable syntactic violation (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/fractions-and-decimals.md",
+ "page_sha256": "102c014bc9deab4f92b504a39d49736b8f1facf53540fbc93cf7dced1476770c",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "77d1a7eae84d",
+    "note": "Section heading grouping guidance on when to choose decimals vs fractions (G-1).",
+    "quote": "Choose between a decimal value or fraction",
+    "reason": "section"
+   },
+   {
+    "block_id": "bf4c80a6c0d2",
+    "note": "Guidance on authorial intent and content choice rather than a flaggable syntactic violation (G-5).",
+    "quote": "Use decimals when you need to be precise.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "78ff427d8188",
+    "note": "Guidance on authorial intent and content choice rather than a flaggable syntactic violation (G-5).",
+    "quote": "Use fractions when:",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "12405be7123e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Decimal value written as numerals",
+      "parts": [
+       {
+        "block_id": "389ae7f80a0f",
+        "quote": "0.5"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "In text, write decimal values as numerals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a decimal value written in words rather than numerals in running text",
+    "when": [],
+    "why": "G-4: Distinct rule prescribing numerals for decimal values."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "12405be7123e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Fraction written as words",
+      "parts": [
+       {
+        "block_id": "4155baf69f12",
+        "quote": "half"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Fraction written as hyphenated words",
+      "parts": [
+       {
+        "block_id": "7cfaa9531a79",
+        "quote": "About two-thirds of staff attended last week's meeting."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Fraction written as hyphenated words",
+      "parts": [
+       {
+        "block_id": "40f26f974ad7",
+        "quote": "The dam was three-quarters full."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write fractions as words.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a fraction in running text written as numerals or symbols (e.g. 1/2 or ½) rather than words",
+    "when": [],
+    "why": "G-4: Distinct rule prescribing words for fractions in text."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2a7e3e1e743d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "935788e02fa7",
+      "quote": "Decimal values less than one have a ‘0’ before the decimal point."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Leading zero before decimal point",
+      "parts": [
+       {
+        "block_id": "e17eb8994bb3",
+        "quote": "0.59"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Missing leading zero before decimal point",
+      "parts": [
+       {
+        "block_id": "77ba4fe5a51b",
+        "quote": ".59"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Use ‘0’ before a decimal point for values less than one",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a decimal value less than one that starts directly with a decimal point without a leading 0 (e.g. .59)",
+    "when": [
+     "The decimal value is less than one."
+    ],
+    "why": "G-4: Heading states the rule clearly; covers the body restatement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "04764393c857",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Decimal point written with a full stop",
+      "parts": [
+       {
+        "block_id": "caeda3ce042b",
+        "quote": "2.5687"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Decimal point written with a comma",
+      "parts": [
+       {
+        "block_id": "f819cd769309",
+        "quote": "2,5687"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use a full stop, not a comma, for the decimal point.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a comma used instead of a full stop as a decimal separator in a number (e.g. 2,5687)",
+    "when": [],
+    "why": "G-4: Clear imperative requirement for Australian decimal formatting."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "12405be7123e",
+    "end": 42,
+    "prefix": "",
+    "quote": "In text, write decimal values as numerals.",
+    "start": 0,
+    "suffix": " Write fractions as words."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Decimal value written as numerals",
+     "parts": [
+      {
+       "block_id": "389ae7f80a0f",
+       "end": 3,
+       "prefix": "",
+       "quote": "0.5",
+       "start": 0,
+       "suffix": " [Decimal value]"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a decimal value written in words rather than numerals in running text"
+   },
+   "when": [],
+   "why": "G-4: Distinct rule prescribing numerals for decimal values."
+  },
+  {
+   "anchor": {
+    "block_id": "12405be7123e",
+    "end": 68,
+    "prefix": "ite decimal values as numerals. ",
+    "quote": "Write fractions as words.",
+    "start": 43,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Fraction written as words",
+     "parts": [
+      {
+       "block_id": "4155baf69f12",
+       "end": 4,
+       "prefix": "",
+       "quote": "half",
+       "start": 0,
+       "suffix": " [Fraction]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Fraction written as hyphenated words",
+     "parts": [
+      {
+       "block_id": "7cfaa9531a79",
+       "end": 55,
+       "prefix": "",
+       "quote": "About two-thirds of staff attended last week's meeting.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Fraction written as hyphenated words",
+     "parts": [
+      {
+       "block_id": "40f26f974ad7",
+       "end": 32,
+       "prefix": "",
+       "quote": "The dam was three-quarters full.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a fraction in running text written as numerals or symbols (e.g. 1/2 or ½) rather than words"
+   },
+   "when": [],
+   "why": "G-4: Distinct rule prescribing words for fractions in text."
+  },
+  {
+   "anchor": {
+    "block_id": "2a7e3e1e743d",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use ‘0’ before a decimal point for values less than one",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "935788e02fa7",
+     "end": 65,
+     "prefix": "",
+     "quote": "Decimal values less than one have a ‘0’ before the decimal point.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Leading zero before decimal point",
+     "parts": [
+      {
+       "block_id": "e17eb8994bb3",
+       "end": 4,
+       "prefix": "",
+       "quote": "0.59",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Missing leading zero before decimal point",
+     "parts": [
+      {
+       "block_id": "77ba4fe5a51b",
+       "end": 3,
+       "prefix": "",
+       "quote": ".59",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "be62c2d938fb1e6a",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a decimal value less than one that starts directly with a decimal point without a leading 0 (e.g. .59)"
+   },
+   "when": [
+    "The decimal value is less than one."
+   ],
+   "why": "G-4: Heading states the rule clearly; covers the body restatement."
+  },
+  {
+   "anchor": {
+    "block_id": "04764393c857",
+    "end": 59,
+    "prefix": "",
+    "quote": "Always use a full stop, not a comma, for the decimal point.",
+    "start": 0,
+    "suffix": " This is the style for Australia"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Decimal point written with a full stop",
+     "parts": [
+      {
+       "block_id": "caeda3ce042b",
+       "end": 6,
+       "prefix": "",
+       "quote": "2.5687",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Decimal point written with a comma",
+     "parts": [
+      {
+       "block_id": "f819cd769309",
+       "end": 6,
+       "prefix": "",
+       "quote": "2,5687",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a comma used instead of a full stop as a decimal separator in a number (e.g. 2,5687)"
+   },
+   "when": [],
+   "why": "G-4: Clear imperative requirement for Australian decimal formatting."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3557,
+  "output_tokens": 1609,
+  "reasoning_tokens": 0
+ }
+}

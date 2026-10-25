@@ -1,0 +1,612 @@
+{
+ "effort": "low",
+ "input_sha256": "039460305525a448cd5dab9e4b706aa44aa9a102394b64eaa3c7afa5d6d644b2",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "d31ab92c6be6",
+    "end": 113,
+    "prefix": "",
+    "quote": "Post-nominals and titles of status show the awards and honours an individual has. List them in the correct order.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory summary sentence for the page, broken down into post-nominals and pre-name titles below (G-1).",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "136a3b80a02f",
+    "end": 89,
+    "prefix": "",
+    "quote": "Post-nominals are the shortened forms for academic awards and civil and military honours.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Definition of post-nominals.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "98ff0942c58f",
+    "end": 10,
+    "prefix": "",
+    "quote": "Don’t use:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in phrase introducing the negative rules on full stops, spaces, and commas.",
+   "reason": "section",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/titles-honours-forms-address/awards-and-honours.md",
+ "page_sha256": "cf248d78d072880b16787828eb3cb2623c935c1971d4cbd3796ac171f93d7eaf",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "d31ab92c6be6",
+    "note": "Introductory summary sentence for the page, broken down into post-nominals and pre-name titles below (G-1).",
+    "quote": "Post-nominals and titles of status show the awards and honours an individual has. List them in the correct order.",
+    "reason": "section"
+   },
+   {
+    "block_id": "136a3b80a02f",
+    "note": "Definition of post-nominals.",
+    "quote": "Post-nominals are the shortened forms for academic awards and civil and military honours.",
+    "reason": "description"
+   },
+   {
+    "block_id": "98ff0942c58f",
+    "note": "Lead-in phrase introducing the negative rules on full stops, spaces, and commas.",
+    "quote": "Don’t use:",
+    "reason": "section"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "df0eafa7900b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5ee93b8d811a",
+      "quote": "There is an order in which to write the post-nominals."
+     },
+     {
+      "block_id": "4977ba6e2db9",
+      "quote": "In summary, the rule is to write the highest honour first. The order is:"
+     },
+     {
+      "block_id": "6f77b3897082",
+      "quote": "post-nominals for honours and awards"
+     },
+     {
+      "block_id": "0e9fbb1df7cd",
+      "quote": "King’s Counsel (KC) or Senior Counsel (SC) or Justice of the Peace (JP)"
+     },
+     {
+      "block_id": "1a6e65827ad2",
+      "quote": "university degrees and diplomas"
+     },
+     {
+      "block_id": "4dcaa5ce1e6b",
+      "quote": "membership of professional associations"
+     },
+     {
+      "block_id": "d605074b738b",
+      "quote": "membership of parliament."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "AM (honour) precedes FAHMS (professional association membership).",
+      "parts": [
+       {
+        "block_id": "317aa0437edf",
+        "quote": "Professor Fiona Wood AM FAHMS"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "AM (honour) precedes MP (membership of parliament).",
+      "parts": [
+       {
+        "block_id": "21e7d87e8469",
+        "quote": "The Hon Ken Wyatt AM MP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "MP (membership of parliament) listed correctly.",
+      "parts": [
+       {
+        "block_id": "12bb55a4b623",
+        "quote": "The Hon Linda Burney MP"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use post-nominals in the correct order",
+    "specification": "List post-nominals in the order: (1) honours and awards, (2) King's Counsel (KC), Senior Counsel (SC), or Justice of the Peace (JP), (3) university degrees and diplomas, (4) membership of professional associations, (5) membership of parliament.",
+    "unit": "phrase",
+    "violation_condition": "post-nominals listed out of sequence according to the hierarchy of honours/awards, legal appointments, academic qualifications, professional associations, and parliamentary membership",
+    "when": [
+     "Applying to post-nominals following a person's name."
+    ],
+    "why": "G-2 and G-4: Heading is the primary rule statement, with list items specifying the required order."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "79901f7fbc3b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "AM and FAHMS written without interior full stops or spaces.",
+      "parts": [
+       {
+        "block_id": "317aa0437edf",
+        "quote": "Professor Fiona Wood AM FAHMS"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "full stops or spaces within post-nominals",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of full stops or spaces within an individual post-nominal (e.g. 'A.M.' or 'Ph. D.')",
+    "when": [],
+    "why": "Specific punctuation and spacing prohibition for post-nominals under 'Don't use'."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2af7392d05ff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No commas between Wood, AM, and FAHMS.",
+      "parts": [
+       {
+        "block_id": "317aa0437edf",
+        "quote": "Professor Fiona Wood AM FAHMS"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "No commas between Wyatt, AM, and MP.",
+      "parts": [
+       {
+        "block_id": "21e7d87e8469",
+        "quote": "The Hon Ken Wyatt AM MP"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "commas before or between post-nominals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "use of a comma before a post-nominal or between multiple post-nominals",
+    "when": [],
+    "why": "Specific punctuation prohibition under 'Don't use'."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0045fb543481",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7ffaf07f45a9",
+      "quote": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles."
+     },
+     {
+      "block_id": "c4962d8d9418",
+      "quote": "Follow these with any other titles (such as ‘Dame’, ‘Sir’ and ‘Dr’) immediately before a person’s name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "His Excellency and General precede the Honourable and the personal name.",
+      "parts": [
+       {
+        "block_id": "08271e747b74",
+        "quote": "His Excellency General the Honourable David Hurley AC DSC (Retd)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Ecclesiastical title (The Right Reverend) precedes other title (Dr).",
+      "parts": [
+       {
+        "block_id": "9af82b073a27",
+        "quote": "The Right Reverend Dr Sarah Macneil"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Military rank (General) precedes title (Sir).",
+      "parts": [
+       {
+        "block_id": "95758a4e4694",
+        "quote": "General Sir John Wilton KBE CB DSO"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write titles before a person’s name in the correct order",
+    "specification": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks precede other titles, which in turn immediately precede the person's name.",
+    "unit": "phrase",
+    "violation_condition": "titles preceding a person's name placed in an incorrect sequence (e.g. placing titles like Dame/Sir/Dr ahead of vice-regal, ecclesiastical, or ADF titles)",
+    "when": [],
+    "why": "G-2 and G-4: The heading states the overarching rule, while the following two paragraphs detail the exact relative sequence."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "df0eafa7900b",
+    "end": 38,
+    "prefix": "",
+    "quote": "Use post-nominals in the correct order",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5ee93b8d811a",
+     "end": 54,
+     "prefix": "",
+     "quote": "There is an order in which to write the post-nominals.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4977ba6e2db9",
+     "end": 72,
+     "prefix": "",
+     "quote": "In summary, the rule is to write the highest honour first. The order is:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6f77b3897082",
+     "end": 36,
+     "prefix": "",
+     "quote": "post-nominals for honours and awards",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0e9fbb1df7cd",
+     "end": 71,
+     "prefix": "",
+     "quote": "King’s Counsel (KC) or Senior Counsel (SC) or Justice of the Peace (JP)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1a6e65827ad2",
+     "end": 31,
+     "prefix": "",
+     "quote": "university degrees and diplomas",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4dcaa5ce1e6b",
+     "end": 39,
+     "prefix": "",
+     "quote": "membership of professional associations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d605074b738b",
+     "end": 25,
+     "prefix": "",
+     "quote": "membership of parliament.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "AM (honour) precedes FAHMS (professional association membership).",
+     "parts": [
+      {
+       "block_id": "317aa0437edf",
+       "end": 29,
+       "prefix": "",
+       "quote": "Professor Fiona Wood AM FAHMS",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "AM (honour) precedes MP (membership of parliament).",
+     "parts": [
+      {
+       "block_id": "21e7d87e8469",
+       "end": 23,
+       "prefix": "",
+       "quote": "The Hon Ken Wyatt AM MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "MP (membership of parliament) listed correctly.",
+     "parts": [
+      {
+       "block_id": "12bb55a4b623",
+       "end": 23,
+       "prefix": "",
+       "quote": "The Hon Linda Burney MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "afcd9bf26b0eae28",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "List post-nominals in the order: (1) honours and awards, (2) King's Counsel (KC), Senior Counsel (SC), or Justice of the Peace (JP), (3) university degrees and diplomas, (4) membership of professional associations, (5) membership of parliament.",
+    "unit": "phrase",
+    "violation_condition": "post-nominals listed out of sequence according to the hierarchy of honours/awards, legal appointments, academic qualifications, professional associations, and parliamentary membership"
+   },
+   "when": [
+    "Applying to post-nominals following a person's name."
+   ],
+   "why": "G-2 and G-4: Heading is the primary rule statement, with list items specifying the required order."
+  },
+  {
+   "anchor": {
+    "block_id": "79901f7fbc3b",
+    "end": 41,
+    "prefix": "",
+    "quote": "full stops or spaces within post-nominals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "AM and FAHMS written without interior full stops or spaces.",
+     "parts": [
+      {
+       "block_id": "317aa0437edf",
+       "end": 29,
+       "prefix": "",
+       "quote": "Professor Fiona Wood AM FAHMS",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of full stops or spaces within an individual post-nominal (e.g. 'A.M.' or 'Ph. D.')"
+   },
+   "when": [],
+   "why": "Specific punctuation and spacing prohibition for post-nominals under 'Don't use'."
+  },
+  {
+   "anchor": {
+    "block_id": "2af7392d05ff",
+    "end": 39,
+    "prefix": "",
+    "quote": "commas before or between post-nominals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No commas between Wood, AM, and FAHMS.",
+     "parts": [
+      {
+       "block_id": "317aa0437edf",
+       "end": 29,
+       "prefix": "",
+       "quote": "Professor Fiona Wood AM FAHMS",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "No commas between Wyatt, AM, and MP.",
+     "parts": [
+      {
+       "block_id": "21e7d87e8469",
+       "end": 23,
+       "prefix": "",
+       "quote": "The Hon Ken Wyatt AM MP",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "use of a comma before a post-nominal or between multiple post-nominals"
+   },
+   "when": [],
+   "why": "Specific punctuation prohibition under 'Don't use'."
+  },
+  {
+   "anchor": {
+    "block_id": "0045fb543481",
+    "end": 56,
+    "prefix": "",
+    "quote": "Write titles before a person’s name in the correct order",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7ffaf07f45a9",
+     "end": 105,
+     "prefix": "",
+     "quote": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c4962d8d9418",
+     "end": 103,
+     "prefix": "",
+     "quote": "Follow these with any other titles (such as ‘Dame’, ‘Sir’ and ‘Dr’) immediately before a person’s name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "His Excellency and General precede the Honourable and the personal name.",
+     "parts": [
+      {
+       "block_id": "08271e747b74",
+       "end": 64,
+       "prefix": "",
+       "quote": "His Excellency General the Honourable David Hurley AC DSC (Retd)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Ecclesiastical title (The Right Reverend) precedes other title (Dr).",
+     "parts": [
+      {
+       "block_id": "9af82b073a27",
+       "end": 35,
+       "prefix": "",
+       "quote": "The Right Reverend Dr Sarah Macneil",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Military rank (General) precedes title (Sir).",
+     "parts": [
+      {
+       "block_id": "95758a4e4694",
+       "end": 34,
+       "prefix": "",
+       "quote": "General Sir John Wilton KBE CB DSO",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "e6adedaf4e9dccac",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks precede other titles, which in turn immediately precede the person's name.",
+    "unit": "phrase",
+    "violation_condition": "titles preceding a person's name placed in an incorrect sequence (e.g. placing titles like Dame/Sir/Dr ahead of vice-regal, ecclesiastical, or ADF titles)"
+   },
+   "when": [],
+   "why": "G-2 and G-4: The heading states the overarching rule, while the following two paragraphs detail the exact relative sequence."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3490,
+  "output_tokens": 2267,
+  "reasoning_tokens": 0
+ }
+}

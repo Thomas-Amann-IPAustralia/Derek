@@ -1,0 +1,42 @@
+{
+ "effort": "medium",
+ "input_sha256": "f601a4fb40f1d6e23b6197f10de59546691f1f82f7d93940c6ab48b5915e950b",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/ships-aircraft-and-other-vehicles.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3714,
+  "output_tokens": 253,
+  "reasoning_tokens": 2088
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "Body list item restates the agreed rule in the heading (G-4).",
+   "restates": "A1",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C2",
+   "note": "Instructs on HTML semantic markup, which is publication format rather than editorial text (not_text).",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C3",
+   "note": "Prohibiting italics on brand, model and class names is an independent typographic rule not covered by capitalization rule A3.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "States the standard sentence-start exception to the prohibition on capitalizing generic types in A4 (G-2).",
+   "restates": "A4",
+   "verdict": "restatement"
+  }
+ ],
+ "version": "v2"
+}

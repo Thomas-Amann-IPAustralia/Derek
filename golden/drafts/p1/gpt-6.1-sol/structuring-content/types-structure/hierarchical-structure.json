@@ -1,0 +1,352 @@
+{
+ "effort": "high",
+ "input_sha256": "490a1501372638fc938f0fe392aa5969c33280f375e06b072ea95bfef9546080",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "01581d6b9f49",
+    "end": 41,
+    "prefix": "",
+    "quote": "Show how categories relate to one another",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the explanation and steps for hierarchical organisation; retain the concrete textual requirements below.",
+   "reason": "section",
+   "seed_uid": "4ac34af369b4b0fb"
+  },
+  {
+   "anchor": {
+    "block_id": "9b5717c333a6",
+    "end": 18,
+    "prefix": "",
+    "quote": "Plan the headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a planning action, not a property whose absence can be established from the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "130c322037d4",
+    "end": 48,
+    "prefix": "",
+    "quote": "Decide what information fits under each heading.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer's planning process rather than stating a separate test of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "091fa1727cfd",
+    "end": 17,
+    "prefix": "",
+    "quote": "Plan subheadings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a planning action; it does not independently require subheadings in every document.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16befc23f589",
+    "end": 45,
+    "prefix": "",
+    "quote": "Check the headings for consistency and logic.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to perform a check rather than specifying a distinct textual violation.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f98280ca6020",
+    "end": 119,
+    "prefix": "",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "start": 0,
+    "suffix": " Use the same navigation element"
+   },
+   "note": "Requires accessible navigation and reading-order behaviour across technologies, not a property of the words alone.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f98280ca6020",
+    "end": 169,
+    "prefix": "f the technology they're using. ",
+    "quote": "Use the same navigation elements across services.",
+    "start": 120,
+    "suffix": ""
+   },
+   "note": "Concerns consistency of service navigation interfaces rather than a standalone text check.",
+   "reason": "not_text",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/types-structure/hierarchical-structure.md",
+ "page_sha256": "b91695b0714b952d826c4cfdbd1800f8d2f2e60c9e17d19e7aa8f19e97b4f407",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "01581d6b9f49",
+    "note": "G-1: introduces the explanation and steps for hierarchical organisation; retain the concrete textual requirements below.",
+    "quote": "Show how categories relate to one another",
+    "reason": "section"
+   },
+   {
+    "block_id": "9b5717c333a6",
+    "note": "G-5: a planning action, not a property whose absence can be established from the finished text.",
+    "quote": "Plan the headings.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "130c322037d4",
+    "note": "G-5: directs the writer's planning process rather than stating a separate test of the text.",
+    "quote": "Decide what information fits under each heading.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "091fa1727cfd",
+    "note": "G-5: a planning action; it does not independently require subheadings in every document.",
+    "quote": "Plan subheadings.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "16befc23f589",
+    "note": "G-5: asks the writer to perform a check rather than specifying a distinct textual violation.",
+    "quote": "Check the headings for consistency and logic.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f98280ca6020",
+    "note": "Requires accessible navigation and reading-order behaviour across technologies, not a property of the words alone.",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f98280ca6020",
+    "note": "Concerns consistency of service navigation interfaces rather than a standalone text check.",
+    "quote": "Use the same navigation elements across services.",
+    "reason": "not_text"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "33a877b1a131",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep the hierarchy shallow – use no more than 4 heading levels.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Hierarchically structured content uses more than 4 heading levels.",
+    "when": [
+     "When content is structured hierarchically."
+    ],
+    "why": "G-2: keeping the hierarchy shallow and limiting it to 4 heading levels are one check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "457de1e6eeba",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write clear page titles.",
+    "specification": "Interpret a clear title as one whose wording makes the page's subject identifiable. The manual gives no more specific clarity criteria here.",
+    "unit": "phrase",
+    "violation_condition": "A page title has unclear wording that leaves the page's subject difficult to identify.",
+    "when": [],
+    "why": "G-4: retain the instruction; the following sentence explains its accessibility and search benefits."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b369b4bafc1",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Organise content in a clear order using section headings.",
+    "specification": "The manual requires a clear order but does not specify criteria for choosing or assessing that order.",
+    "unit": "document",
+    "violation_condition": "Content lacks a clearly ordered, heading-based section structure.",
+    "when": [],
+    "why": "G-1: retain the concrete requirement for heading-based organisation rather than an additional broad section-level rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b369b4bafc1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Describe the topics or the following section in the headings.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not describe its topic or the section that follows it.",
+    "when": [],
+    "why": "The one-check test separates what a heading describes from how sections are ordered."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "33a877b1a131",
+    "end": 63,
+    "prefix": "",
+    "quote": "Keep the hierarchy shallow – use no more than 4 heading levels.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Hierarchically structured content uses more than 4 heading levels."
+   },
+   "when": [
+    "When content is structured hierarchically."
+   ],
+   "why": "G-2: keeping the hierarchy shallow and limiting it to 4 heading levels are one check."
+  },
+  {
+   "anchor": {
+    "block_id": "457de1e6eeba",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write clear page titles.",
+    "start": 0,
+    "suffix": " The title is the first thing a "
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret a clear title as one whose wording makes the page's subject identifiable. The manual gives no more specific clarity criteria here.",
+    "unit": "phrase",
+    "violation_condition": "A page title has unclear wording that leaves the page's subject difficult to identify."
+   },
+   "when": [],
+   "why": "G-4: retain the instruction; the following sentence explains its accessibility and search benefits."
+  },
+  {
+   "anchor": {
+    "block_id": "7b369b4bafc1",
+    "end": 57,
+    "prefix": "",
+    "quote": "Organise content in a clear order using section headings.",
+    "start": 0,
+    "suffix": " Describe the topics or the foll"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The manual requires a clear order but does not specify criteria for choosing or assessing that order.",
+    "unit": "document",
+    "violation_condition": "Content lacks a clearly ordered, heading-based section structure."
+   },
+   "when": [],
+   "why": "G-1: retain the concrete requirement for heading-based organisation rather than an additional broad section-level rule."
+  },
+  {
+   "anchor": {
+    "block_id": "7b369b4bafc1",
+    "end": 119,
+    "prefix": "r order using section headings. ",
+    "quote": "Describe the topics or the following section in the headings.",
+    "start": 58,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not describe its topic or the section that follows it."
+   },
+   "when": [],
+   "why": "The one-check test separates what a heading describes from how sections are ordered."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3662,
+  "output_tokens": 4246,
+  "reasoning_tokens": 3106
+ }
+}

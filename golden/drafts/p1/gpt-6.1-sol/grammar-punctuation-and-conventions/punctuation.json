@@ -1,0 +1,428 @@
+{
+ "effort": "high",
+ "input_sha256": "f4d80c356b5baa8cec1ccf616d2f53d5b0bf1cbfbd8dd68174b700d55a7d7747",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "8863d63351dd",
+    "end": 64,
+    "prefix": "",
+    "quote": "Use punctuation correctly to help readability and comprehension.",
+    "start": 0,
+    "suffix": " Don't overuse punctuation marks"
+   },
+   "note": "General advice to follow correct usage, not an independently testable text requirement (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8863d63351dd",
+    "end": 97,
+    "prefix": " readability and comprehension. ",
+    "quote": "Don't overuse punctuation marks.",
+    "start": 65,
+    "suffix": " The Style Manual follows the pr"
+   },
+   "note": "Overview of the minimal-punctuation guidance belonging on the Punctuation and capitalisation page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f33a28f96c92",
+    "end": 132,
+    "prefix": "ion have rules for correct use. ",
+    "quote": "Use minimal punctuation and capitalisation to make content more readable.",
+    "start": 59,
+    "suffix": ""
+   },
+   "note": "Summary of the guidance belonging on the Punctuation and capitalisation page; do not inventory it again on this overview page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "645060416c77",
+    "end": 128,
+    "prefix": "ow possession and contractions. ",
+    "quote": "Don’t use them in descriptive phrases or to make nouns and shortened forms plural.",
+    "start": 46,
+    "suffix": ""
+   },
+   "note": "These apostrophe prohibitions belong on the Apostrophes page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "48aafd337b69",
+    "end": 133,
+    "prefix": "lp users scan text more easily. ",
+    "quote": "Only use brackets if you can remove the enclosed text and the meaning does not change.",
+    "start": 47,
+    "suffix": ""
+   },
+   "note": "The condition for using brackets belongs on the Brackets and parentheses page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "84ee18c48750",
+    "end": 83,
+    "prefix": "ntion to the text that follows. ",
+    "quote": "Only add colons that are essential.",
+    "start": 48,
+    "suffix": " Use them to introduce examples,"
+   },
+   "note": "Summary of colon guidance belonging on the Colons page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "84ee18c48750",
+    "end": 154,
+    "prefix": " add colons that are essential. ",
+    "quote": "Use them to introduce examples, contrasts, lists and block quotations.",
+    "start": 84,
+    "suffix": ""
+   },
+   "note": "Guidance about the uses of colons belongs on the Colons page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "939d6b81101e",
+    "end": 109,
+    "prefix": "ntence so the meaning is clear. ",
+    "quote": "Sentence structure determines their correct use.",
+    "start": 61,
+    "suffix": ""
+   },
+   "note": "Explains what determines comma use without specifying a checkable placement rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "390b231b2619",
+    "end": 103,
+    "prefix": "Dashes show a relationship. ",
+    "quote": "Generally, en dashes for spans are less accessible for users than a phrase.",
+    "start": 28,
+    "suffix": " Use spaced en dashes to set off"
+   },
+   "note": "An accessibility comparison, not an explicit instruction or prohibition.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "390b231b2619",
+    "end": 175,
+    "prefix": "ssible for users than a phrase. ",
+    "quote": "Use spaced en dashes to set off non-essential information in sentences.",
+    "start": 104,
+    "suffix": ""
+   },
+   "note": "The rule about parenthetical en dashes belongs on the Dashes page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d8a8c6ae2796",
+    "end": 143,
+    "prefix": "ing from a sentence or a quote. ",
+    "quote": "Don’t use ellipses to change the intent of the original source.",
+    "start": 80,
+    "suffix": ""
+   },
+   "note": "The restriction on omissions belongs on the Ellipses page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "56887e5851ae",
+    "end": 86,
+    "prefix": "ow emphasis and convey emotion. ",
+    "quote": "Only use them in informal content.",
+    "start": 52,
+    "suffix": ""
+   },
+   "note": "The restriction on exclamation marks belongs on the Exclamation marks page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2363915d891b",
+    "end": 167,
+    "prefix": "n a small number of situations. ",
+    "quote": "Users are familiar with them in mathematical expressions, dates, web addresses and in some shortened forms.",
+    "start": 60,
+    "suffix": ""
+   },
+   "note": "Describes familiar uses of forward slashes; it does not impose an exclusive list of permitted uses.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1ef63bc53915",
+    "end": 76,
+    "prefix": "",
+    "quote": "Full stops mark the end of sentences which aren't questions or exclamations.",
+    "start": 0,
+    "suffix": " Users need them to scan text an"
+   },
+   "note": "Describes the function of full stops rather than stating a separate rule for this overview.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a2ba9e6ee32a",
+    "end": 169,
+    "prefix": "d prefixes so meaning is clear. ",
+    "quote": "Refer to your organisation’s preferred dictionary when you are not sure if you need to use a hyphen for spelling.",
+    "start": 56,
+    "suffix": ""
+   },
+   "note": "An instruction to consult a resource, not a property a checker can establish from the resulting text (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bb4874758f2a",
+    "end": 71,
+    "prefix": "",
+    "quote": "Users expect direct questions and requests to end with a question mark.",
+    "start": 0,
+    "suffix": " Indirect questions, commands an"
+   },
+   "note": "The question-mark requirement belongs on the Question marks page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bb4874758f2a",
+    "end": 153,
+    "prefix": "ts to end with a question mark. ",
+    "quote": "Indirect questions, commands and rhetorical questions can take other punctuation.",
+    "start": 72,
+    "suffix": ""
+   },
+   "note": "Allows other punctuation rather than requiring it. Retain as scope or exceptions for the relevant rule on the Question marks page, not as a separate finding (G-3, G-6).",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6cba884d6e38",
+    "end": 126,
+    "prefix": "erence certain kinds of titles. ",
+    "quote": "Write most direct speech in single quote marks.",
+    "start": 79,
+    "suffix": " For long quotes, use block quot"
+   },
+   "note": "The direct-speech quotation-mark rule belongs on the Quotation marks page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6cba884d6e38",
+    "end": 189,
+    "prefix": "t speech in single quote marks. ",
+    "quote": "For long quotes, use block quotations without quotation marks.",
+    "start": 127,
+    "suffix": ""
+   },
+   "note": "The treatment of long quotations belongs on the Quotation marks page (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e1d665d40194",
+    "end": 75,
+    "prefix": "Semicolons link sentences. ",
+    "quote": "They complicate sentences for users if overused.",
+    "start": 27,
+    "suffix": " Do not use them at the end of b"
+   },
+   "note": "Explains a readability consequence of overusing semicolons without stating a separate operational rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e1d665d40194",
+    "end": 137,
+    "prefix": "entences for users if overused. ",
+    "quote": "Do not use them at the end of bullet and numbered list items.",
+    "start": 76,
+    "suffix": ""
+   },
+   "note": "The prohibition on list-final semicolons belongs on the Semicolons page, not this overview (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation.md",
+ "page_sha256": "6277a9ee0c207fe4e630c28cd9b4b36edeac670c1569612842823009e943ba6f",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "8863d63351dd",
+    "note": "General advice to follow correct usage, not an independently testable text requirement (G-5).",
+    "quote": "Use punctuation correctly to help readability and comprehension.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8863d63351dd",
+    "note": "Overview of the minimal-punctuation guidance belonging on the Punctuation and capitalisation page (G-6).",
+    "quote": "Don't overuse punctuation marks.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "f33a28f96c92",
+    "note": "Summary of the guidance belonging on the Punctuation and capitalisation page; do not inventory it again on this overview page (G-6).",
+    "quote": "Use minimal punctuation and capitalisation to make content more readable.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "645060416c77",
+    "note": "These apostrophe prohibitions belong on the Apostrophes page (G-6).",
+    "quote": "Don’t use them in descriptive phrases or to make nouns and shortened forms plural.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "48aafd337b69",
+    "note": "The condition for using brackets belongs on the Brackets and parentheses page (G-6).",
+    "quote": "Only use brackets if you can remove the enclosed text and the meaning does not change.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "84ee18c48750",
+    "note": "Summary of colon guidance belonging on the Colons page (G-6).",
+    "quote": "Only add colons that are essential.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "84ee18c48750",
+    "note": "Guidance about the uses of colons belongs on the Colons page (G-6).",
+    "quote": "Use them to introduce examples, contrasts, lists and block quotations.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "939d6b81101e",
+    "note": "Explains what determines comma use without specifying a checkable placement rule.",
+    "quote": "Sentence structure determines their correct use.",
+    "reason": "description"
+   },
+   {
+    "block_id": "390b231b2619",
+    "note": "An accessibility comparison, not an explicit instruction or prohibition.",
+    "quote": "Generally, en dashes for spans are less accessible for users than a phrase.",
+    "reason": "description"
+   },
+   {
+    "block_id": "390b231b2619",
+    "note": "The rule about parenthetical en dashes belongs on the Dashes page (G-6).",
+    "quote": "Use spaced en dashes to set off non-essential information in sentences.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "d8a8c6ae2796",
+    "note": "The restriction on omissions belongs on the Ellipses page (G-6).",
+    "quote": "Don’t use ellipses to change the intent of the original source.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "56887e5851ae",
+    "note": "The restriction on exclamation marks belongs on the Exclamation marks page (G-6).",
+    "quote": "Only use them in informal content.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "2363915d891b",
+    "note": "Describes familiar uses of forward slashes; it does not impose an exclusive list of permitted uses.",
+    "quote": "Users are familiar with them in mathematical expressions, dates, web addresses and in some shortened forms.",
+    "reason": "description"
+   },
+   {
+    "block_id": "1ef63bc53915",
+    "note": "Describes the function of full stops rather than stating a separate rule for this overview.",
+    "quote": "Full stops mark the end of sentences which aren't questions or exclamations.",
+    "reason": "description"
+   },
+   {
+    "block_id": "a2ba9e6ee32a",
+    "note": "An instruction to consult a resource, not a property a checker can establish from the resulting text (G-5).",
+    "quote": "Refer to your organisation’s preferred dictionary when you are not sure if you need to use a hyphen for spelling.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bb4874758f2a",
+    "note": "The question-mark requirement belongs on the Question marks page (G-6).",
+    "quote": "Users expect direct questions and requests to end with a question mark.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "bb4874758f2a",
+    "note": "Allows other punctuation rather than requiring it. Retain as scope or exceptions for the relevant rule on the Question marks page, not as a separate finding (G-3, G-6).",
+    "quote": "Indirect questions, commands and rhetorical questions can take other punctuation.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6cba884d6e38",
+    "note": "The direct-speech quotation-mark rule belongs on the Quotation marks page (G-6).",
+    "quote": "Write most direct speech in single quote marks.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "6cba884d6e38",
+    "note": "The treatment of long quotations belongs on the Quotation marks page (G-6).",
+    "quote": "For long quotes, use block quotations without quotation marks.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "e1d665d40194",
+    "note": "Explains a readability consequence of overusing semicolons without stating a separate operational rule.",
+    "quote": "They complicate sentences for users if overused.",
+    "reason": "description"
+   },
+   {
+    "block_id": "e1d665d40194",
+    "note": "The prohibition on list-final semicolons belongs on the Semicolons page, not this overview (G-6).",
+    "quote": "Do not use them at the end of bullet and numbered list items.",
+    "reason": "duplicate"
+   }
+  ],
+  "rules": []
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3880,
+  "output_tokens": 3514,
+  "reasoning_tokens": 2070
+ }
+}

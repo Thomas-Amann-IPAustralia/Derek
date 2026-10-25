@@ -1,0 +1,2430 @@
+{
+ "effort": "high",
+ "input_sha256": "929725519e03d7e94d10cbbdffa052d762f9aaaa1b709aad019309cdda74a6c4",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "c5a741e33b00",
+    "end": 49,
+    "prefix": "",
+    "quote": "Spell and punctuate organisation names correctly.",
+    "start": 0,
+    "suffix": " This helps people to understand"
+   },
+   "note": "Summary of the official-name rule, not an additional check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "961451182dd9",
+    "end": 75,
+    "prefix": "",
+    "quote": "Write the name of the organisation the same way the organisation writes it.",
+    "start": 0,
+    "suffix": " This rule applies except in rar"
+   },
+   "note": "Restates the selected official-name heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "961451182dd9",
+    "end": 216,
+    "prefix": "way the organisation writes it. ",
+    "quote": "This rule applies except in rare cases when the organisation name is in all lower case. Use an initial capital for these names in body text.",
+    "start": 76,
+    "suffix": " This helps people identify the "
+   },
+   "note": "A case-specific modification incorporated into the official-name rule under G-2.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9fdb2c3fbd6b",
+    "end": 150,
+    "prefix": " capital (for example, ‘eBay’). ",
+    "quote": "Write the name the same way, including to begin a sentence.",
+    "start": 91,
+    "suffix": " A medial capital is enough to i"
+   },
+   "note": "The medial-capital case is incorporated into the official-name rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "79545c2e15ce",
+    "end": 107,
+    "prefix": "",
+    "quote": "Pay attention to the use of capital letters, punctuation (such as apostrophes) and logograms (such as ‘&’).",
+    "start": 0,
+    "suffix": " Make sure to include all words "
+   },
+   "note": "An instruction to pay attention; the resulting textual property is already covered by matching the official name.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "79545c2e15ce",
+    "end": 179,
+    "prefix": "s) and logograms (such as ‘&’). ",
+    "quote": "Make sure to include all words in the name. Don’t add additional words.",
+    "start": 108,
+    "suffix": ""
+   },
+   "note": "Word inclusion and exclusion are part of reproducing the official name.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "515d0e96a7fe",
+    "end": 41,
+    "prefix": "",
+    "quote": "Check the correct name of an organisation",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: checking sources is a writer action, not a property a text can violate.",
+   "reason": "advice",
+   "seed_uid": "f29684cc04cc0cb6"
+  },
+  {
+   "anchor": {
+    "block_id": "0ed69f5c3fb4",
+    "end": 149,
+    "prefix": "es of organisations can change. ",
+    "quote": "The most efficient way to confirm an organisation’s name is to check its website, annual report or letterhead.",
+    "start": 39,
+    "suffix": " If this is unsuccessful, there "
+   },
+   "note": "Research workflow for establishing the correct name.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a02676ad5fab",
+    "end": 72,
+    "prefix": "",
+    "quote": "For Australian Government entities, use the government online directory.",
+    "start": 0,
+    "suffix": " Directory entries contain links"
+   },
+   "note": "Recommends a research source rather than a textual form.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "915f5fb9c3a5",
+    "end": 33,
+    "prefix": "",
+    "quote": "For non-government entities, use:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces sources to consult, not requirements for the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d010ebf82a33",
+    "end": 53,
+    "prefix": "",
+    "quote": "the Australian Securities Exchange's listed companies",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A research source governed by the preceding ‘use’ lead-in.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "54ae315538ec",
+    "end": 62,
+    "prefix": "",
+    "quote": "the Australian Securities and Investments Commission registers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A research source governed by the preceding ‘use’ lead-in.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cee51c804b78",
+    "end": 22,
+    "prefix": "",
+    "quote": "For all entities, use:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces research sources rather than a checkable property of text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4aa8aa421168",
+    "end": 45,
+    "prefix": "",
+    "quote": "the Australian Business Register's ABN lookup",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A research source governed by the preceding ‘use’ lead-in.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2dd8edf52cf4",
+    "end": 150,
+    "prefix": "",
+    "quote": "a publication that lists organisations such as the Directory of Australian associations or Margaret Gee’s media guide,if your organisation has access.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An optional research source, not a textual requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "43ab14f7f323",
+    "end": 153,
+    "prefix": "ess Register have all capitals. ",
+    "quote": "Our first rule applies: write the name as the organisation does.",
+    "start": 89,
+    "suffix": ""
+   },
+   "note": "Explicitly repeats the official-name rule for registered business names.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "49192035ffe6",
+    "end": 132,
+    "prefix": "",
+    "quote": "Check the organisation's website and publications to find how it capitalises its name and follow the organisation's preferred style.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Following the preferred style is already covered by the official-name rule; checking publications is research advice.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4b699c2b8daf",
+    "end": 27,
+    "prefix": "",
+    "quote": "Shortened forms of the name",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups the established-shortened-form and first-use expansion checks.",
+   "reason": "section",
+   "seed_uid": "a8feebacbc1c2034"
+  },
+  {
+   "anchor": {
+    "block_id": "976d0dae9d51",
+    "end": 156,
+    "prefix": " unless they finish a sentence. ",
+    "quote": "No full stop is the correct Australian Government style for abbreviations.",
+    "start": 82,
+    "suffix": ""
+   },
+   "note": "Explains the preceding full-stop instruction rather than creating another check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d6d3a8ec85d9",
+    "end": 68,
+    "prefix": "",
+    "quote": "Use the organisation’s full title on first mention in a publication.",
+    "start": 0,
+    "suffix": " On subsequent mentions in print"
+   },
+   "note": "Consolidated with the first-mention expansion rule to avoid duplicate completeness findings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d6d3a8ec85d9",
+    "end": 202,
+    "prefix": "first mention in a publication. ",
+    "quote": "On subsequent mentions in print documents, you can omit words like ‘proprietary’ and ‘limited’ and the corresponding shortened forms.",
+    "start": 69,
+    "suffix": ""
+   },
+   "note": "G-3: recorded as a later-print exception, not an independent rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6cc8e1c12de7",
+    "end": 47,
+    "prefix": "",
+    "quote": "Capitalise organisations’ names in 2 situations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups official-name capitalisation, generic references and definite-article treatment; its wording does not supply an additional check.",
+   "reason": "section",
+   "seed_uid": "6d9a508ea6a71c61"
+  },
+  {
+   "anchor": {
+    "block_id": "c2ae5af653d4",
+    "end": 25,
+    "prefix": "",
+    "quote": "Use initial capitals for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The listed official-name and first-mention cases are incorporated into the official-name rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2dc24191c6fc",
+    "end": 141,
+    "prefix": "r name with an initial capital. ",
+    "quote": "Use the full name, including ‘The’, in 2 situations:",
+    "start": 89,
+    "suffix": ""
+   },
+   "note": "Official-article preservation in correspondence and alphabetical lists is incorporated into the official-name rule; ordering is checked separately.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "266a66d158e6",
+    "end": 41,
+    "prefix": "",
+    "quote": "Always use lower case ‘the’ in body text.",
+    "start": 0,
+    "suffix": " This follows the practice of mo"
+   },
+   "note": "Restates the selected definite-article heading and supplies its emphatic modality.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e13344dc8eff",
+    "end": 95,
+    "prefix": "",
+    "quote": "If organisations omit the definite article from their name, don’t use it in emails and letters.",
+    "start": 0,
+    "suffix": " In body text, ‘the’ appears bef"
+   },
+   "note": "The converse official-article case is incorporated into the official-name rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e13344dc8eff",
+    "end": 171,
+    "prefix": "t use it in emails and letters. ",
+    "quote": "In body text, ‘the’ appears before the correct name or isn’t needed at all.",
+    "start": 96,
+    "suffix": ""
+   },
+   "note": "Allows body-text articles according to the sentence; it does not require an article or create a separate finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f9ba0f174686",
+    "end": 62,
+    "prefix": "",
+    "quote": "Put a possessive apostrophe in a name if the organisation does",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Official apostrophe matching is already part of reproducing the organisation’s preferred punctuation.",
+   "reason": "restatement",
+   "seed_uid": "ae94da62ce6646f6"
+  },
+  {
+   "anchor": {
+    "block_id": "799cedd4c6be",
+    "end": 82,
+    "prefix": "",
+    "quote": "Use an apostrophe only when it forms part of the official name of an organisation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed into the official-name punctuation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9488c8d4e4e2",
+    "end": 76,
+    "prefix": "",
+    "quote": "In all other cases for organisation names, don’t use possessive apostrophes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The no-unofficial-apostrophe case of the same official-name punctuation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "21a282e83947",
+    "end": 27,
+    "prefix": "",
+    "quote": "Always use a singular verb.",
+    "start": 0,
+    "suffix": " This applies even if organisati"
+   },
+   "note": "Restates the selected singular-verb heading and makes the requirement emphatic.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/organisation-names.md",
+ "page_sha256": "e21b178b1158454f0af0d94817de4771dff04026d1eb291dd97e42066c825eb2",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "c5a741e33b00",
+    "note": "Summary of the official-name rule, not an additional check.",
+    "quote": "Spell and punctuate organisation names correctly.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "961451182dd9",
+    "note": "Restates the selected official-name heading.",
+    "quote": "Write the name of the organisation the same way the organisation writes it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "961451182dd9",
+    "note": "A case-specific modification incorporated into the official-name rule under G-2.",
+    "quote": "This rule applies except in rare cases when the organisation name is in all lower case. Use an initial capital for these names in body text.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9fdb2c3fbd6b",
+    "note": "The medial-capital case is incorporated into the official-name rule.",
+    "quote": "Write the name the same way, including to begin a sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "79545c2e15ce",
+    "note": "An instruction to pay attention; the resulting textual property is already covered by matching the official name.",
+    "quote": "Pay attention to the use of capital letters, punctuation (such as apostrophes) and logograms (such as ‘&’).",
+    "reason": "advice"
+   },
+   {
+    "block_id": "79545c2e15ce",
+    "note": "Word inclusion and exclusion are part of reproducing the official name.",
+    "quote": "Make sure to include all words in the name. Don’t add additional words.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "515d0e96a7fe",
+    "note": "G-5: checking sources is a writer action, not a property a text can violate.",
+    "quote": "Check the correct name of an organisation",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0ed69f5c3fb4",
+    "note": "Research workflow for establishing the correct name.",
+    "quote": "The most efficient way to confirm an organisation’s name is to check its website, annual report or letterhead.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a02676ad5fab",
+    "note": "Recommends a research source rather than a textual form.",
+    "quote": "For Australian Government entities, use the government online directory.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "915f5fb9c3a5",
+    "note": "Introduces sources to consult, not requirements for the resulting text.",
+    "quote": "For non-government entities, use:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d010ebf82a33",
+    "note": "A research source governed by the preceding ‘use’ lead-in.",
+    "quote": "the Australian Securities Exchange's listed companies",
+    "reason": "advice"
+   },
+   {
+    "block_id": "54ae315538ec",
+    "note": "A research source governed by the preceding ‘use’ lead-in.",
+    "quote": "the Australian Securities and Investments Commission registers",
+    "reason": "advice"
+   },
+   {
+    "block_id": "cee51c804b78",
+    "note": "Introduces research sources rather than a checkable property of text.",
+    "quote": "For all entities, use:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4aa8aa421168",
+    "note": "A research source governed by the preceding ‘use’ lead-in.",
+    "quote": "the Australian Business Register's ABN lookup",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2dd8edf52cf4",
+    "note": "An optional research source, not a textual requirement.",
+    "quote": "a publication that lists organisations such as the Directory of Australian associations or Margaret Gee’s media guide,if your organisation has access.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "43ab14f7f323",
+    "note": "Explicitly repeats the official-name rule for registered business names.",
+    "quote": "Our first rule applies: write the name as the organisation does.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "49192035ffe6",
+    "note": "Following the preferred style is already covered by the official-name rule; checking publications is research advice.",
+    "quote": "Check the organisation's website and publications to find how it capitalises its name and follow the organisation's preferred style.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4b699c2b8daf",
+    "note": "Groups the established-shortened-form and first-use expansion checks.",
+    "quote": "Shortened forms of the name",
+    "reason": "section"
+   },
+   {
+    "block_id": "976d0dae9d51",
+    "note": "Explains the preceding full-stop instruction rather than creating another check.",
+    "quote": "No full stop is the correct Australian Government style for abbreviations.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d6d3a8ec85d9",
+    "note": "Consolidated with the first-mention expansion rule to avoid duplicate completeness findings.",
+    "quote": "Use the organisation’s full title on first mention in a publication.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d6d3a8ec85d9",
+    "note": "G-3: recorded as a later-print exception, not an independent rule.",
+    "quote": "On subsequent mentions in print documents, you can omit words like ‘proprietary’ and ‘limited’ and the corresponding shortened forms.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6cc8e1c12de7",
+    "note": "Groups official-name capitalisation, generic references and definite-article treatment; its wording does not supply an additional check.",
+    "quote": "Capitalise organisations’ names in 2 situations",
+    "reason": "section"
+   },
+   {
+    "block_id": "c2ae5af653d4",
+    "note": "The listed official-name and first-mention cases are incorporated into the official-name rule.",
+    "quote": "Use initial capitals for:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2dc24191c6fc",
+    "note": "Official-article preservation in correspondence and alphabetical lists is incorporated into the official-name rule; ordering is checked separately.",
+    "quote": "Use the full name, including ‘The’, in 2 situations:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "266a66d158e6",
+    "note": "Restates the selected definite-article heading and supplies its emphatic modality.",
+    "quote": "Always use lower case ‘the’ in body text.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e13344dc8eff",
+    "note": "The converse official-article case is incorporated into the official-name rule.",
+    "quote": "If organisations omit the definite article from their name, don’t use it in emails and letters.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e13344dc8eff",
+    "note": "Allows body-text articles according to the sentence; it does not require an article or create a separate finding.",
+    "quote": "In body text, ‘the’ appears before the correct name or isn’t needed at all.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "f9ba0f174686",
+    "note": "Official apostrophe matching is already part of reproducing the organisation’s preferred punctuation.",
+    "quote": "Put a possessive apostrophe in a name if the organisation does",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "799cedd4c6be",
+    "note": "Absorbed into the official-name punctuation check.",
+    "quote": "Use an apostrophe only when it forms part of the official name of an organisation.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9488c8d4e4e2",
+    "note": "The no-unofficial-apostrophe case of the same official-name punctuation check.",
+    "quote": "In all other cases for organisation names, don’t use possessive apostrophes.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "21a282e83947",
+    "note": "Restates the selected singular-verb heading and makes the requirement emphatic.",
+    "quote": "Always use a singular verb.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "47544116e06b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "961451182dd9",
+      "quote": "Write the name of the organisation the same way the organisation writes it."
+     },
+     {
+      "block_id": "961451182dd9",
+      "quote": "This rule applies except in rare cases when the organisation name is in all lower case. Use an initial capital for these names in body text."
+     },
+     {
+      "block_id": "9fdb2c3fbd6b",
+      "quote": "Some names start with a lower case letter but have a medial capital (for example, ‘eBay’). Write the name the same way, including to begin a sentence."
+     },
+     {
+      "block_id": "79545c2e15ce",
+      "quote": "Make sure to include all words in the name. Don’t add additional words."
+     },
+     {
+      "block_id": "43ab14f7f323",
+      "quote": "Our first rule applies: write the name as the organisation does."
+     },
+     {
+      "block_id": "49192035ffe6",
+      "quote": "follow the organisation's preferred style."
+     },
+     {
+      "block_id": "c2ae5af653d4",
+      "quote": "Use initial capitals for:"
+     },
+     {
+      "block_id": "198732ce1492",
+      "quote": "all words capitalised in the full, official names of organisations"
+     },
+     {
+      "block_id": "5561916993d1",
+      "quote": "the first mention of an organisation."
+     },
+     {
+      "block_id": "2dc24191c6fc",
+      "quote": "Use the full name, including ‘The’, in 2 situations:"
+     },
+     {
+      "block_id": "97568c2020ce",
+      "quote": "in emails and letters"
+     },
+     {
+      "block_id": "ae8b65fa7933",
+      "quote": "if the name appears in an alphabetical list"
+     },
+     {
+      "block_id": "e13344dc8eff",
+      "quote": "If organisations omit the definite article from their name, don’t use it in emails and letters."
+     },
+     {
+      "block_id": "e13344dc8eff",
+      "quote": "In body text, ‘the’ appears before the correct name or isn’t needed at all."
+     },
+     {
+      "block_id": "f9ba0f174686",
+      "quote": "Put a possessive apostrophe in a name if the organisation does"
+     },
+     {
+      "block_id": "799cedd4c6be",
+      "quote": "Use an apostrophe only when it forms part of the official name of an organisation."
+     },
+     {
+      "block_id": "9488c8d4e4e2",
+      "quote": "In all other cases for organisation names, don’t use possessive apostrophes."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Preserves a lower-case initial with a medial capital at the beginning of a sentence.",
+      "parts": [
+       {
+        "block_id": "496602376c94",
+        "quote": "eSafety keeps tips on its website topical and up to date."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Preserves the official spelling and absence of an apostrophe.",
+      "parts": [
+       {
+        "block_id": "b14b198a67e4",
+        "quote": "United Nations Educational, Scientific and Cultural Organization"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The ampersand belongs to the initialism, not the spelt-out name.",
+      "parts": [
+       {
+        "block_id": "5eda5d29154a",
+        "quote": "Department of the Prime Minister and Cabinet (PM&C)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Does not add a preposition.",
+      "parts": [
+       {
+        "block_id": "38a904246c96",
+        "quote": "State Library Victoria"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Preserves the ampersand.",
+      "parts": [
+       {
+        "block_id": "704f8754af37",
+        "quote": "Meat & Livestock Australia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses the organisation’s preferred capitalisation.",
+      "parts": [
+       {
+        "block_id": "146402be461b",
+        "quote": "MySA GOV"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses the preferred style rather than the all-capital registered form.",
+      "parts": [
+       {
+        "block_id": "808b1821b267",
+        "quote": "The Smith Family"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The formal name includes ‘The’.",
+      "parts": [
+       {
+        "block_id": "70429d0f7a77",
+        "quote": "The University of Sydney"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The formal name does not include ‘The’.",
+      "parts": [
+       {
+        "block_id": "3ac322f4bd5d",
+        "quote": "Charles Sturt University"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The body-text sentence does not need an article before the name.",
+      "parts": [
+       {
+        "block_id": "9a055b7674ef",
+        "quote": "Research at Charles Sturt University examined whether early Australian wheat varieties caused allergic reactions."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Retains the official apostrophes.",
+      "parts": [
+       {
+        "block_id": "545aad1e6a6c",
+        "quote": "Actors’ and Entertainers’ Benevolent Fund Qld"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Does not add a possessive apostrophe.",
+      "parts": [
+       {
+        "block_id": "0976df9dc799",
+        "quote": "Australian Securities and Investments Commission"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Does not add a possessive apostrophe.",
+      "parts": [
+       {
+        "block_id": "1491f67a0ad5",
+        "quote": "Libraries Board of South Australia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Does not add a possessive apostrophe.",
+      "parts": [
+       {
+        "block_id": "d62c274d5c34",
+        "quote": "Minerals Council of Australia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Does not add a possessive apostrophe.",
+      "parts": [
+       {
+        "block_id": "fac785bd11a5",
+        "quote": "Chief Government Geologists Conference"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Does not add a possessive apostrophe.",
+      "parts": [
+       {
+        "block_id": "093da9aa2962",
+        "quote": "Australian Workers Union"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the name as the organisation writes it",
+    "specification": "For the definite-article provisions, interpret formal-name uses in emails and letters separately from running body text. Apply the explicit lower-case body-text rule to running prose, including correspondence.",
+    "unit": "phrase",
+    "violation_condition": "An organisation name has spelling, capitalisation, punctuation, symbols or words that differ from the organisation’s own preferred form, after allowing the stated exceptions.",
+    "when": [
+     "Check the written form of the chosen full or shortened name. Whether a shortened form is established, and whether the full name must be introduced, are separate checks.",
+     "For a name written entirely in lower case by the organisation, use an initial capital in body text.",
+     "Preserve an initial lower-case letter when the name has a medial capital, including at the beginning of a sentence.",
+     "Use the organisation’s preferred capitalisation rather than assuming an all-capital registered business name is its preferred written form.",
+     "Preserve the words capitalised in the official name, including on first mention. Generic references are governed by the separate generic-term rule.",
+     "In formal-name uses in emails, letters and alphabetical lists, retain an official ‘The’. Do not add it to correspondence names that omit it.",
+     "In body text, an article before the name is not necessarily part of the official name; names that omit the article may appear with or without it as the sentence requires.",
+     "Include possessive apostrophes only where they form part of the official name.",
+     "For a citation to a source published under an earlier organisation name, use the source-name rule rather than requiring the current name.",
+     "Later print mentions may omit legal qualifiers such as ‘proprietary’ and ‘limited’ and their shortened forms.",
+     "Apply the separate Australian Government full-stop rule to ‘Co’ and ‘Inc’."
+    ],
+    "why": "G-2 keeps official-form cases and exceptions together; G-4 absorbs repeated capitalisation, word-inclusion, article and apostrophe instructions rather than creating overlapping name checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9c2398ca9178",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9c2398ca9178",
+      "quote": "This may be the organisation’s or government department's past name."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you cite a source written by an organisation that has since changed its name, use the name that was published in the source.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation identifies an organisational author by its later name rather than the name published in the cited source.",
+    "when": [
+     "The cited source was written by an organisation that has since changed its name.",
+     "The required name may be an organisation’s or government department’s former name."
+    ],
+    "why": "The rule selects the historically appropriate citation name, a distinct check from reproducing the spelling and punctuation of that name."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c692e5433402",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The organisation uses this shortened form.",
+      "parts": [
+       {
+        "block_id": "f13eb9458445",
+        "quote": "For example, the Department of Home Affairs uses ‘Home Affairs’ as the shortened form."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The page explicitly identifies this use as inappropriate.",
+      "parts": [
+       {
+        "block_id": "f13eb9458445",
+        "quote": "‘DHA’ to refer to Home Affairs"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The organisation uses this initialism.",
+      "parts": [
+       {
+        "block_id": "f13eb9458445",
+        "quote": "However, Defence Housing Australia does use the initialism ‘DHA’, so using it to refer to that organisation would be appropriate."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Use the organisation’s shortened form only if the organisation regularly uses it in its own content.",
+    "specification": "The page does not define how frequent or well-established use must be to count as ‘regularly’. An operational evidence standard or an agreed list of established organisation-specific forms is needed.",
+    "unit": "phrase",
+    "violation_condition": "An organisation is referred to by a shortened form that it does not regularly use in its own content.",
+    "when": [
+     "An abbreviated, initialised or otherwise shortened form is used to refer to an organisation.",
+     "Approval depends on the organisation’s own content, not merely on use by other writers."
+    ],
+    "why": "This checks whether a shortened form is established for the organisation, not whether it has been expanded on first use."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4578c8b5f59d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d6d3a8ec85d9",
+      "quote": "Use the organisation’s full title on first mention in a publication."
+     },
+     {
+      "block_id": "d6d3a8ec85d9",
+      "quote": "On subsequent mentions in print documents, you can omit words like ‘proprietary’ and ‘limited’ and the corresponding shortened forms."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The organisation is known only by its shortened form.",
+      "parts": [
+       {
+        "block_id": "67cf5a66f91f",
+        "quote": "Zoning laws allowed IKEA to lease the land."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The first mention spells out the name before using the initialism.",
+      "parts": [
+       {
+        "block_id": "db70034ac21c",
+        "quote": "Defence Housing Australia (DHA) provides housing for Defence members and their families. DHA also provides other related services."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The page marks expansion of this known-only shortened name as incorrect.",
+      "parts": [
+       {
+        "block_id": "f7287b4c647e",
+        "quote": "Zoning laws allowed Ingvar Kamprad Elmtaryd Agunnaryd (IKEA) to lease the land."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The initialism is not introduced by the full name.",
+      "parts": [
+       {
+        "block_id": "a9fa9877336e",
+        "quote": "DHA provides housing for Defence members and their families."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Spell out the shortened form the first time, unless the organisation’s name is known only by the shortened form.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A first mention uses only an unexpanded shortened or incomplete name when the full title is required, or expands a name known only by its shortened form.",
+    "when": [
+     "Assess the first mention of the organisation or introduction of its shortened form.",
+     "Use the full title on first mention in a publication, including legal-name words or their official shortened forms.",
+     "For an organisation known only by its shortened form, retain that form rather than spelling it out, as the IKEA contrast demonstrates.",
+     "On subsequent mentions in print documents, words such as ‘proprietary’ and ‘limited’ and their corresponding shortened forms may be omitted."
+    ],
+    "why": "G-2 combines first-mention completeness cases; G-3 records later-print omissions as permission rather than a separate rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "976d0dae9d51",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "976d0dae9d51",
+      "quote": "No full stop is the correct Australian Government style for abbreviations."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The abbreviation has no full stop.",
+      "parts": [
+       {
+        "block_id": "108c5ab354e1",
+        "quote": "Apple Inc"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don't add a full stop at the end of ‘Co’ and ‘Inc’ unless they finish a sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Co’ or ‘Inc’ has a following full stop when the abbreviation does not finish the sentence.",
+    "when": [
+     "‘Co’ or ‘Inc’ occurs as part of an organisation name.",
+     "A sentence-final full stop is allowed."
+    ],
+    "why": "G-2 keeps the sentence-final exception within the abbreviation full-stop check; the explanatory sentence is not a second rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8b235dafcf3d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c917917a7274",
+      "quote": "generic terms – such as ‘the department’or ‘the agency’ – even if the organisation being referenced capitalises the generic term in its content"
+     },
+     {
+      "block_id": "4b9e30bc77de",
+      "quote": "mentions of several organisations with the same generic name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The generic reference is lower case.",
+      "parts": [
+       {
+        "block_id": "05eccdf971b6",
+        "quote": "Australian Academy of the Humanities – the academy"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The generic reference is lower case.",
+      "parts": [
+       {
+        "block_id": "46ec6f388709",
+        "quote": "Department of Finance – the department"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The shared generic name is lower case.",
+      "parts": [
+       {
+        "block_id": "ad81706d9c72",
+        "quote": "The departments of Health and Finance – the departments"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The generic reference is lower case.",
+      "parts": [
+       {
+        "block_id": "f2eb6268ac9c",
+        "quote": "Western Sydney University – the university"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The generic reference is lower case.",
+      "parts": [
+       {
+        "block_id": "bcc96edd2386",
+        "quote": "Australian Ballet Company – the company"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The generic reference is lower case.",
+      "parts": [
+       {
+        "block_id": "fb13658d7352",
+        "quote": "Royal Commission into Misconduct in the Banking, Superannuation and Financial Services Industry – the royal commission"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Both generic references are lower case.",
+      "parts": [
+       {
+        "block_id": "838060f53bfe",
+        "quote": "Gundagai Shire Council – the shire council/the council"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The generic reference is lower case.",
+      "parts": [
+       {
+        "block_id": "1fc928bc1ab6",
+        "quote": "Regional Australia Summit – the summit"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use an initial capital for:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A generic reference to an organisation, or a shared generic name referring to several organisations, is capitalised as though it were a proper name.",
+    "when": [
+     "The expression is a generic reference such as ‘the department’ or ‘the agency’, rather than the full official name.",
+     "The same lower-case treatment applies when several organisations share the generic name.",
+     "An organisation’s own practice of capitalising its generic reference does not override this rule."
+    ],
+    "why": "G-1 leaves the capitalisation grouping heading as a section; G-2 combines individual and collective generic references into one capitalisation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ce4d0027e392",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "266a66d158e6",
+      "quote": "Always use lower case ‘the’ in body text."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The article is lower case in body text.",
+      "parts": [
+       {
+        "block_id": "084c142db200",
+        "quote": "Next year the University of Sydney will renovate its science buildings."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "In body text, use lower case for the definite article in the names of organisations",
+    "specification": "Interpret this as a rule about name capitalisation, not ordinary sentence-initial capitals. Apply it to running prose in emails and letters, while preserving official ‘The’ in formal-name uses there. These distinctions resolve wording the page does not expressly reconcile.",
+    "unit": "sentence",
+    "violation_condition": "A definite article accompanying an organisation name in running body text has an organisational initial capital rather than lower case.",
+    "when": [
+     "The article accompanies an organisation name in running body text, including where the organisation officially capitalises ‘The’.",
+     "Under the proposed interpretation, a capital required solely because the article begins a sentence is not a violation.",
+     "Formal-name uses in correspondence and alphabetical lists follow the official-name instruction instead."
+    ],
+    "why": "G-4 combines the heading and its emphatic restatement; the proposed interpretation makes the correspondence and sentence-position boundaries explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ae8b65fa7933",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "arrange by ‘The’ as the first word in the name",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An alphabetical list ignores an official initial ‘The’ when ordering an organisation name.",
+    "when": [
+     "The organisation’s official name begins with ‘The’.",
+     "The name appears in an alphabetical list."
+    ],
+    "why": "Alphabetical ordering is a distinct property from including or capitalising the article, so it needs its own finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "55e582feb817",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "21a282e83947",
+      "quote": "Always use a singular verb."
+     },
+     {
+      "block_id": "21a282e83947",
+      "quote": "This applies even if organisation names end in an ‘s’and look plural."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The organisation takes a singular verb.",
+      "parts": [
+       {
+        "block_id": "57c80b2ddf68",
+        "quote": "The Bureau of Meteorology has been quick to respond."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The name ending in ‘s’ takes a singular verb.",
+      "parts": [
+       {
+        "block_id": "e04e3e80cc50",
+        "quote": "Woolworths is advertising its new stock."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The organisation takes a singular verb.",
+      "parts": [
+       {
+        "block_id": "9abf03d27f84",
+        "quote": "The United Nations turns 75 in 2020."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The organisation takes a singular verb.",
+      "parts": [
+       {
+        "block_id": "1a9f92baebe7",
+        "quote": "NT Fisheries has reviewed its policies."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The organisation takes a plural verb.",
+      "parts": [
+       {
+        "block_id": "25c789677498",
+        "quote": "The Bureau of Meteorology have been quick to respond."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The organisation takes a plural verb.",
+      "parts": [
+       {
+        "block_id": "9f3adf71c886",
+        "quote": "Woolworths are advertising their new stock."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The organisation takes a plural verb.",
+      "parts": [
+       {
+        "block_id": "9e9217a7dc43",
+        "quote": "The United Nations turn 75 in 2020."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "The organisation takes a plural verb.",
+      "parts": [
+       {
+        "block_id": "9b028a7bf019",
+        "quote": "NT Fisheries have reviewed their policies."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Use the singular verb with organisation names",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An organisation name used as a grammatical subject takes a plural verb.",
+    "when": [
+     "The subject denotes an organisation as a single entity.",
+     "The rule also applies to organisation names ending in ‘s’ that look plural."
+    ],
+    "why": "G-4 absorbs the body restatement; G-2 keeps plural-looking names as a condition of the same agreement check."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "Charles Sturt University",
+   "what": "example",
+   "why": "not found exactly once in block 3ac322f4bd5d"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "47544116e06b",
+    "end": 44,
+    "prefix": "",
+    "quote": "Write the name as the organisation writes it",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "961451182dd9",
+     "end": 75,
+     "prefix": "",
+     "quote": "Write the name of the organisation the same way the organisation writes it.",
+     "start": 0,
+     "suffix": " This rule applies except in rar"
+    },
+    {
+     "block_id": "961451182dd9",
+     "end": 216,
+     "prefix": "way the organisation writes it. ",
+     "quote": "This rule applies except in rare cases when the organisation name is in all lower case. Use an initial capital for these names in body text.",
+     "start": 76,
+     "suffix": " This helps people identify the "
+    },
+    {
+     "block_id": "9fdb2c3fbd6b",
+     "end": 150,
+     "prefix": "",
+     "quote": "Some names start with a lower case letter but have a medial capital (for example, ‘eBay’). Write the name the same way, including to begin a sentence.",
+     "start": 0,
+     "suffix": " A medial capital is enough to i"
+    },
+    {
+     "block_id": "79545c2e15ce",
+     "end": 179,
+     "prefix": "s) and logograms (such as ‘&’). ",
+     "quote": "Make sure to include all words in the name. Don’t add additional words.",
+     "start": 108,
+     "suffix": ""
+    },
+    {
+     "block_id": "43ab14f7f323",
+     "end": 153,
+     "prefix": "ess Register have all capitals. ",
+     "quote": "Our first rule applies: write the name as the organisation does.",
+     "start": 89,
+     "suffix": ""
+    },
+    {
+     "block_id": "49192035ffe6",
+     "end": 132,
+     "prefix": "how it capitalises its name and ",
+     "quote": "follow the organisation's preferred style.",
+     "start": 90,
+     "suffix": ""
+    },
+    {
+     "block_id": "c2ae5af653d4",
+     "end": 25,
+     "prefix": "",
+     "quote": "Use initial capitals for:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "198732ce1492",
+     "end": 66,
+     "prefix": "",
+     "quote": "all words capitalised in the full, official names of organisations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5561916993d1",
+     "end": 37,
+     "prefix": "",
+     "quote": "the first mention of an organisation.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2dc24191c6fc",
+     "end": 141,
+     "prefix": "r name with an initial capital. ",
+     "quote": "Use the full name, including ‘The’, in 2 situations:",
+     "start": 89,
+     "suffix": ""
+    },
+    {
+     "block_id": "97568c2020ce",
+     "end": 21,
+     "prefix": "",
+     "quote": "in emails and letters",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ae8b65fa7933",
+     "end": 43,
+     "prefix": "",
+     "quote": "if the name appears in an alphabetical list",
+     "start": 0,
+     "suffix": " (arrange by ‘The’ as the first "
+    },
+    {
+     "block_id": "e13344dc8eff",
+     "end": 95,
+     "prefix": "",
+     "quote": "If organisations omit the definite article from their name, don’t use it in emails and letters.",
+     "start": 0,
+     "suffix": " In body text, ‘the’ appears bef"
+    },
+    {
+     "block_id": "e13344dc8eff",
+     "end": 171,
+     "prefix": "t use it in emails and letters. ",
+     "quote": "In body text, ‘the’ appears before the correct name or isn’t needed at all.",
+     "start": 96,
+     "suffix": ""
+    },
+    {
+     "block_id": "f9ba0f174686",
+     "end": 62,
+     "prefix": "",
+     "quote": "Put a possessive apostrophe in a name if the organisation does",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "799cedd4c6be",
+     "end": 82,
+     "prefix": "",
+     "quote": "Use an apostrophe only when it forms part of the official name of an organisation.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9488c8d4e4e2",
+     "end": 76,
+     "prefix": "",
+     "quote": "In all other cases for organisation names, don’t use possessive apostrophes.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Preserves a lower-case initial with a medial capital at the beginning of a sentence.",
+     "parts": [
+      {
+       "block_id": "496602376c94",
+       "end": 57,
+       "prefix": "",
+       "quote": "eSafety keeps tips on its website topical and up to date.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Preserves the official spelling and absence of an apostrophe.",
+     "parts": [
+      {
+       "block_id": "b14b198a67e4",
+       "end": 64,
+       "prefix": "",
+       "quote": "United Nations Educational, Scientific and Cultural Organization",
+       "start": 0,
+       "suffix": " ['United Nations’ doesn't have "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The ampersand belongs to the initialism, not the spelt-out name.",
+     "parts": [
+      {
+       "block_id": "5eda5d29154a",
+       "end": 51,
+       "prefix": "",
+       "quote": "Department of the Prime Minister and Cabinet (PM&C)",
+       "start": 0,
+       "suffix": " [The ampersand is part of the i"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Does not add a preposition.",
+     "parts": [
+      {
+       "block_id": "38a904246c96",
+       "end": 22,
+       "prefix": "",
+       "quote": "State Library Victoria",
+       "start": 0,
+       "suffix": " [The name is not the ‘State Lib"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Preserves the ampersand.",
+     "parts": [
+      {
+       "block_id": "704f8754af37",
+       "end": 26,
+       "prefix": "",
+       "quote": "Meat & Livestock Australia",
+       "start": 0,
+       "suffix": " [The ampersand is part of the n"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses the organisation’s preferred capitalisation.",
+     "parts": [
+      {
+       "block_id": "146402be461b",
+       "end": 8,
+       "prefix": "",
+       "quote": "MySA GOV",
+       "start": 0,
+       "suffix": " [All capitals for 'GOV' is the "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses the preferred style rather than the all-capital registered form.",
+     "parts": [
+      {
+       "block_id": "808b1821b267",
+       "end": 16,
+       "prefix": "",
+       "quote": "The Smith Family",
+       "start": 0,
+       "suffix": " [Initial capitals is the prefer"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The formal name includes ‘The’.",
+     "parts": [
+      {
+       "block_id": "70429d0f7a77",
+       "end": 24,
+       "prefix": "",
+       "quote": "The University of Sydney",
+       "start": 0,
+       "suffix": " [Correct name, not ‘University "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The body-text sentence does not need an article before the name.",
+     "parts": [
+      {
+       "block_id": "9a055b7674ef",
+       "end": 113,
+       "prefix": "",
+       "quote": "Research at Charles Sturt University examined whether early Australian wheat varieties caused allergic reactions.",
+       "start": 0,
+       "suffix": " [Body text does not use ‘the’]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Retains the official apostrophes.",
+     "parts": [
+      {
+       "block_id": "545aad1e6a6c",
+       "end": 45,
+       "prefix": "",
+       "quote": "Actors’ and Entertainers’ Benevolent Fund Qld",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Does not add a possessive apostrophe.",
+     "parts": [
+      {
+       "block_id": "0976df9dc799",
+       "end": 48,
+       "prefix": "",
+       "quote": "Australian Securities and Investments Commission",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Does not add a possessive apostrophe.",
+     "parts": [
+      {
+       "block_id": "1491f67a0ad5",
+       "end": 34,
+       "prefix": "",
+       "quote": "Libraries Board of South Australia",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Does not add a possessive apostrophe.",
+     "parts": [
+      {
+       "block_id": "d62c274d5c34",
+       "end": 29,
+       "prefix": "",
+       "quote": "Minerals Council of Australia",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Does not add a possessive apostrophe.",
+     "parts": [
+      {
+       "block_id": "fac785bd11a5",
+       "end": 38,
+       "prefix": "",
+       "quote": "Chief Government Geologists Conference",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Does not add a possessive apostrophe.",
+     "parts": [
+      {
+       "block_id": "093da9aa2962",
+       "end": 24,
+       "prefix": "",
+       "quote": "Australian Workers Union",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "39bda8748c81df79",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "For the definite-article provisions, interpret formal-name uses in emails and letters separately from running body text. Apply the explicit lower-case body-text rule to running prose, including correspondence.",
+    "unit": "phrase",
+    "violation_condition": "An organisation name has spelling, capitalisation, punctuation, symbols or words that differ from the organisation’s own preferred form, after allowing the stated exceptions."
+   },
+   "when": [
+    "Check the written form of the chosen full or shortened name. Whether a shortened form is established, and whether the full name must be introduced, are separate checks.",
+    "For a name written entirely in lower case by the organisation, use an initial capital in body text.",
+    "Preserve an initial lower-case letter when the name has a medial capital, including at the beginning of a sentence.",
+    "Use the organisation’s preferred capitalisation rather than assuming an all-capital registered business name is its preferred written form.",
+    "Preserve the words capitalised in the official name, including on first mention. Generic references are governed by the separate generic-term rule.",
+    "In formal-name uses in emails, letters and alphabetical lists, retain an official ‘The’. Do not add it to correspondence names that omit it.",
+    "In body text, an article before the name is not necessarily part of the official name; names that omit the article may appear with or without it as the sentence requires.",
+    "Include possessive apostrophes only where they form part of the official name.",
+    "For a citation to a source published under an earlier organisation name, use the source-name rule rather than requiring the current name.",
+    "Later print mentions may omit legal qualifiers such as ‘proprietary’ and ‘limited’ and their shortened forms.",
+    "Apply the separate Australian Government full-stop rule to ‘Co’ and ‘Inc’."
+   ],
+   "why": "G-2 keeps official-form cases and exceptions together; G-4 absorbs repeated capitalisation, word-inclusion, article and apostrophe instructions rather than creating overlapping name checks."
+  },
+  {
+   "anchor": {
+    "block_id": "9c2398ca9178",
+    "end": 127,
+    "prefix": "",
+    "quote": "If you cite a source written by an organisation that has since changed its name, use the name that was published in the source.",
+    "start": 0,
+    "suffix": " This may be the organisation’s "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9c2398ca9178",
+     "end": 196,
+     "prefix": "at was published in the source. ",
+     "quote": "This may be the organisation’s or government department's past name.",
+     "start": 128,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation identifies an organisational author by its later name rather than the name published in the cited source."
+   },
+   "when": [
+    "The cited source was written by an organisation that has since changed its name.",
+    "The required name may be an organisation’s or government department’s former name."
+   ],
+   "why": "The rule selects the historically appropriate citation name, a distinct check from reproducing the spelling and punctuation of that name."
+  },
+  {
+   "anchor": {
+    "block_id": "c692e5433402",
+    "end": 100,
+    "prefix": "",
+    "quote": "Use the organisation’s shortened form only if the organisation regularly uses it in its own content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The organisation uses this shortened form.",
+     "parts": [
+      {
+       "block_id": "f13eb9458445",
+       "end": 86,
+       "prefix": "",
+       "quote": "For example, the Department of Home Affairs uses ‘Home Affairs’ as the shortened form.",
+       "start": 0,
+       "suffix": " It would be inappropriate to us"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The page explicitly identifies this use as inappropriate.",
+     "parts": [
+      {
+       "block_id": "f13eb9458445",
+       "end": 150,
+       "prefix": "t would be inappropriate to use ",
+       "quote": "‘DHA’ to refer to Home Affairs",
+       "start": 120,
+       "suffix": ". However, Defence Housing Austr"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The organisation uses this initialism.",
+     "parts": [
+      {
+       "block_id": "f13eb9458445",
+       "end": 281,
+       "prefix": "‘DHA’ to refer to Home Affairs. ",
+       "quote": "However, Defence Housing Australia does use the initialism ‘DHA’, so using it to refer to that organisation would be appropriate.",
+       "start": 152,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page does not define how frequent or well-established use must be to count as ‘regularly’. An operational evidence standard or an agreed list of established organisation-specific forms is needed.",
+    "unit": "phrase",
+    "violation_condition": "An organisation is referred to by a shortened form that it does not regularly use in its own content."
+   },
+   "when": [
+    "An abbreviated, initialised or otherwise shortened form is used to refer to an organisation.",
+    "Approval depends on the organisation’s own content, not merely on use by other writers."
+   ],
+   "why": "This checks whether a shortened form is established for the organisation, not whether it has been expanded on first use."
+  },
+  {
+   "anchor": {
+    "block_id": "4578c8b5f59d",
+    "end": 112,
+    "prefix": "",
+    "quote": "Spell out the shortened form the first time, unless the organisation’s name is known only by the shortened form.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d6d3a8ec85d9",
+     "end": 68,
+     "prefix": "",
+     "quote": "Use the organisation’s full title on first mention in a publication.",
+     "start": 0,
+     "suffix": " On subsequent mentions in print"
+    },
+    {
+     "block_id": "d6d3a8ec85d9",
+     "end": 202,
+     "prefix": "first mention in a publication. ",
+     "quote": "On subsequent mentions in print documents, you can omit words like ‘proprietary’ and ‘limited’ and the corresponding shortened forms.",
+     "start": 69,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The organisation is known only by its shortened form.",
+     "parts": [
+      {
+       "block_id": "67cf5a66f91f",
+       "end": 43,
+       "prefix": "",
+       "quote": "Zoning laws allowed IKEA to lease the land.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The first mention spells out the name before using the initialism.",
+     "parts": [
+      {
+       "block_id": "db70034ac21c",
+       "end": 130,
+       "prefix": "",
+       "quote": "Defence Housing Australia (DHA) provides housing for Defence members and their families. DHA also provides other related services.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The page marks expansion of this known-only shortened name as incorrect.",
+     "parts": [
+      {
+       "block_id": "f7287b4c647e",
+       "end": 79,
+       "prefix": "",
+       "quote": "Zoning laws allowed Ingvar Kamprad Elmtaryd Agunnaryd (IKEA) to lease the land.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The initialism is not introduced by the full name.",
+     "parts": [
+      {
+       "block_id": "a9fa9877336e",
+       "end": 60,
+       "prefix": "",
+       "quote": "DHA provides housing for Defence members and their families.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A first mention uses only an unexpanded shortened or incomplete name when the full title is required, or expands a name known only by its shortened form."
+   },
+   "when": [
+    "Assess the first mention of the organisation or introduction of its shortened form.",
+    "Use the full title on first mention in a publication, including legal-name words or their official shortened forms.",
+    "For an organisation known only by its shortened form, retain that form rather than spelling it out, as the IKEA contrast demonstrates.",
+    "On subsequent mentions in print documents, words such as ‘proprietary’ and ‘limited’ and their corresponding shortened forms may be omitted."
+   ],
+   "why": "G-2 combines first-mention completeness cases; G-3 records later-print omissions as permission rather than a separate rule."
+  },
+  {
+   "anchor": {
+    "block_id": "976d0dae9d51",
+    "end": 81,
+    "prefix": "",
+    "quote": "Don't add a full stop at the end of ‘Co’ and ‘Inc’ unless they finish a sentence.",
+    "start": 0,
+    "suffix": " No full stop is the correct Aus"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "976d0dae9d51",
+     "end": 156,
+     "prefix": " unless they finish a sentence. ",
+     "quote": "No full stop is the correct Australian Government style for abbreviations.",
+     "start": 82,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The abbreviation has no full stop.",
+     "parts": [
+      {
+       "block_id": "108c5ab354e1",
+       "end": 9,
+       "prefix": "",
+       "quote": "Apple Inc",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘Co’ or ‘Inc’ has a following full stop when the abbreviation does not finish the sentence."
+   },
+   "when": [
+    "‘Co’ or ‘Inc’ occurs as part of an organisation name.",
+    "A sentence-final full stop is allowed."
+   ],
+   "why": "G-2 keeps the sentence-final exception within the abbreviation full-stop check; the explanatory sentence is not a second rule."
+  },
+  {
+   "anchor": {
+    "block_id": "8b235dafcf3d",
+    "end": 33,
+    "prefix": "",
+    "quote": "Don’t use an initial capital for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c917917a7274",
+     "end": 143,
+     "prefix": "",
+     "quote": "generic terms – such as ‘the department’or ‘the agency’ – even if the organisation being referenced capitalises the generic term in its content",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4b9e30bc77de",
+     "end": 61,
+     "prefix": "",
+     "quote": "mentions of several organisations with the same generic name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The generic reference is lower case.",
+     "parts": [
+      {
+       "block_id": "05eccdf971b6",
+       "end": 50,
+       "prefix": "",
+       "quote": "Australian Academy of the Humanities – the academy",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The generic reference is lower case.",
+     "parts": [
+      {
+       "block_id": "46ec6f388709",
+       "end": 38,
+       "prefix": "",
+       "quote": "Department of Finance – the department",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The shared generic name is lower case.",
+     "parts": [
+      {
+       "block_id": "ad81706d9c72",
+       "end": 55,
+       "prefix": "",
+       "quote": "The departments of Health and Finance – the departments",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The generic reference is lower case.",
+     "parts": [
+      {
+       "block_id": "f2eb6268ac9c",
+       "end": 42,
+       "prefix": "",
+       "quote": "Western Sydney University – the university",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The generic reference is lower case.",
+     "parts": [
+      {
+       "block_id": "bcc96edd2386",
+       "end": 39,
+       "prefix": "",
+       "quote": "Australian Ballet Company – the company",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The generic reference is lower case.",
+     "parts": [
+      {
+       "block_id": "fb13658d7352",
+       "end": 118,
+       "prefix": "",
+       "quote": "Royal Commission into Misconduct in the Banking, Superannuation and Financial Services Industry – the royal commission",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Both generic references are lower case.",
+     "parts": [
+      {
+       "block_id": "838060f53bfe",
+       "end": 54,
+       "prefix": "",
+       "quote": "Gundagai Shire Council – the shire council/the council",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The generic reference is lower case.",
+     "parts": [
+      {
+       "block_id": "1fc928bc1ab6",
+       "end": 38,
+       "prefix": "",
+       "quote": "Regional Australia Summit – the summit",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A generic reference to an organisation, or a shared generic name referring to several organisations, is capitalised as though it were a proper name."
+   },
+   "when": [
+    "The expression is a generic reference such as ‘the department’ or ‘the agency’, rather than the full official name.",
+    "The same lower-case treatment applies when several organisations share the generic name.",
+    "An organisation’s own practice of capitalising its generic reference does not override this rule."
+   ],
+   "why": "G-1 leaves the capitalisation grouping heading as a section; G-2 combines individual and collective generic references into one capitalisation check."
+  },
+  {
+   "anchor": {
+    "block_id": "ce4d0027e392",
+    "end": 83,
+    "prefix": "",
+    "quote": "In body text, use lower case for the definite article in the names of organisations",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "266a66d158e6",
+     "end": 41,
+     "prefix": "",
+     "quote": "Always use lower case ‘the’ in body text.",
+     "start": 0,
+     "suffix": " This follows the practice of mo"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The article is lower case in body text.",
+     "parts": [
+      {
+       "block_id": "084c142db200",
+       "end": 71,
+       "prefix": "",
+       "quote": "Next year the University of Sydney will renovate its science buildings.",
+       "start": 0,
+       "suffix": " [Body text uses lower case for "
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "fa03712a17bdb282",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Interpret this as a rule about name capitalisation, not ordinary sentence-initial capitals. Apply it to running prose in emails and letters, while preserving official ‘The’ in formal-name uses there. These distinctions resolve wording the page does not expressly reconcile.",
+    "unit": "sentence",
+    "violation_condition": "A definite article accompanying an organisation name in running body text has an organisational initial capital rather than lower case."
+   },
+   "when": [
+    "The article accompanies an organisation name in running body text, including where the organisation officially capitalises ‘The’.",
+    "Under the proposed interpretation, a capital required solely because the article begins a sentence is not a violation.",
+    "Formal-name uses in correspondence and alphabetical lists follow the official-name instruction instead."
+   ],
+   "why": "G-4 combines the heading and its emphatic restatement; the proposed interpretation makes the correspondence and sentence-position boundaries explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "ae8b65fa7933",
+    "end": 91,
+    "prefix": "ppears in an alphabetical list (",
+    "quote": "arrange by ‘The’ as the first word in the name",
+    "start": 45,
+    "suffix": ")."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An alphabetical list ignores an official initial ‘The’ when ordering an organisation name."
+   },
+   "when": [
+    "The organisation’s official name begins with ‘The’.",
+    "The name appears in an alphabetical list."
+   ],
+   "why": "Alphabetical ordering is a distinct property from including or capitalising the article, so it needs its own finding."
+  },
+  {
+   "anchor": {
+    "block_id": "55e582feb817",
+    "end": 45,
+    "prefix": "",
+    "quote": "Use the singular verb with organisation names",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "21a282e83947",
+     "end": 27,
+     "prefix": "",
+     "quote": "Always use a singular verb.",
+     "start": 0,
+     "suffix": " This applies even if organisati"
+    },
+    {
+     "block_id": "21a282e83947",
+     "end": 97,
+     "prefix": "Always use a singular verb. ",
+     "quote": "This applies even if organisation names end in an ‘s’and look plural.",
+     "start": 28,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The organisation takes a singular verb.",
+     "parts": [
+      {
+       "block_id": "57c80b2ddf68",
+       "end": 52,
+       "prefix": "",
+       "quote": "The Bureau of Meteorology has been quick to respond.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The name ending in ‘s’ takes a singular verb.",
+     "parts": [
+      {
+       "block_id": "e04e3e80cc50",
+       "end": 40,
+       "prefix": "",
+       "quote": "Woolworths is advertising its new stock.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The organisation takes a singular verb.",
+     "parts": [
+      {
+       "block_id": "9abf03d27f84",
+       "end": 36,
+       "prefix": "",
+       "quote": "The United Nations turns 75 in 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The organisation takes a singular verb.",
+     "parts": [
+      {
+       "block_id": "1a9f92baebe7",
+       "end": 39,
+       "prefix": "",
+       "quote": "NT Fisheries has reviewed its policies.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The organisation takes a plural verb.",
+     "parts": [
+      {
+       "block_id": "25c789677498",
+       "end": 53,
+       "prefix": "",
+       "quote": "The Bureau of Meteorology have been quick to respond.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The organisation takes a plural verb.",
+     "parts": [
+      {
+       "block_id": "9f3adf71c886",
+       "end": 43,
+       "prefix": "",
+       "quote": "Woolworths are advertising their new stock.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The organisation takes a plural verb.",
+     "parts": [
+      {
+       "block_id": "9e9217a7dc43",
+       "end": 35,
+       "prefix": "",
+       "quote": "The United Nations turn 75 in 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The organisation takes a plural verb.",
+     "parts": [
+      {
+       "block_id": "9b028a7bf019",
+       "end": 42,
+       "prefix": "",
+       "quote": "NT Fisheries have reviewed their policies.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "1194035541f49f8b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An organisation name used as a grammatical subject takes a plural verb."
+   },
+   "when": [
+    "The subject denotes an organisation as a single entity.",
+    "The rule also applies to organisation names ending in ‘s’ that look plural."
+   ],
+   "why": "G-4 absorbs the body restatement; G-2 keeps plural-looking names as a condition of the same agreement check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5987,
+  "output_tokens": 18540,
+  "reasoning_tokens": 10288
+ }
+}

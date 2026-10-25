@@ -328,10 +328,21 @@ def prompt_sha256() -> str:
     return hashlib.sha256(body.encode("utf-8")).hexdigest()
 
 
-def input_sha256(page: Page) -> str:
+def drafter_id(model: str = MODEL, effort: str = EFFORT) -> str:
+    """The cache directory for one (model, effort). The default effort keeps the
+    bare model name, so the drafts made before effort was a choice stay valid."""
+    return model if effort == EFFORT else f"{model}@{effort}"
+
+
+def split_drafter(drafter: str) -> tuple[str, str]:
+    model, _, effort = drafter.partition("@")
+    return model, effort or EFFORT
+
+
+def input_sha256(page: Page, model: str = MODEL, effort: str = EFFORT) -> str:
     body = json.dumps({
         "prompt_version": PROMPT_VERSION, "prompt_sha256": prompt_sha256(),
-        "model": MODEL, "effort": EFFORT, "user": user_message(page),
+        "model": model, "effort": effort, "user": user_message(page),
     }, sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(body.encode("utf-8")).hexdigest()
 
@@ -487,7 +498,8 @@ def draft_path(rel: str, *, prompt_version: str = PROMPT_VERSION, model: str = M
 
 
 def record(page: Page, raw: dict, resolved: Resolved, *, served_model: str,
-           usage: dict, stop_reason: str) -> dict:
+           usage: dict, stop_reason: str, model: str = MODEL,
+           effort: str = EFFORT) -> dict:
     return {
         "schema_version": SCHEMA_VERSION,
         "page_path": page.path,
@@ -495,10 +507,10 @@ def record(page: Page, raw: dict, resolved: Resolved, *, served_model: str,
         "render_version": RENDER_VERSION,
         "prompt_version": PROMPT_VERSION,
         "prompt_sha256": prompt_sha256(),
-        "input_sha256": input_sha256(page),
-        "model": MODEL,
+        "input_sha256": input_sha256(page, model, effort),
+        "model": model,
         "served_model": served_model,
-        "effort": EFFORT,
+        "effort": effort,
         "stop_reason": stop_reason,
         "usage": usage,
         "rules": resolved.rules,

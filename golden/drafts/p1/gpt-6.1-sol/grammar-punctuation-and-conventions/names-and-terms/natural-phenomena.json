@@ -1,0 +1,1569 @@
+{
+ "effort": "high",
+ "input_sha256": "40a73023951c58ea4a769b2e0ea7d9b3c972a3e73d8aa90973853489184214a2",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "97fc55ec283c",
+    "end": 65,
+    "prefix": "",
+    "quote": "Treat terms for climate and weather events with consistent style.",
+    "start": 0,
+    "suffix": " It helps users scan content for"
+   },
+   "note": "Page-level summary of the specific style rules that follow, not an additional check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5a27fbd40da5",
+    "end": 65,
+    "prefix": "",
+    "quote": "Standard rules of capitalisation apply for most natural phenomena",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the general baseline and its subordinate instructions; it does not add a distinct capitalisation finding.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7126e69989c9",
+    "end": 62,
+    "prefix": "",
+    "quote": "Follow the rules of capitalisation for most natural phenomena:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Directs the writer to follow other rules rather than defining an additional property to check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "699424ff8875",
+    "end": 41,
+    "prefix": "",
+    "quote": "Proper nouns start with a capital letter.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the general proper-noun rule belonging to the capital letters guidance, rather than a natural-phenomena-specific rule.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d9b7f3aa3311",
+    "end": 46,
+    "prefix": "",
+    "quote": "Adjectives and common nouns are in lower case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The baseline is represented by the climate and weather lowercase rule, with the page's named exceptions.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c62cfb647c1a",
+    "end": 36,
+    "prefix": "",
+    "quote": "Most terms are usually in lower case",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body gives the actionable lowercase instruction and its scope.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4f7f026498a8",
+    "end": 54,
+    "prefix": "",
+    "quote": "Terms for specific phenomena can take initial capitals",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Qualified summary of the scientific-proper-name rule. The body specifies when initial capitals are required.",
+   "reason": "restatement",
+   "seed_uid": "f137982bf18cea58"
+  },
+  {
+   "anchor": {
+    "block_id": "12799aa2ee58",
+    "end": 99,
+    "prefix": "",
+    "quote": "Scientific terms for natural phenomena can include common nouns that combine to form a proper noun.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines the class of terms covered by the following capitalisation instruction; retained there as scope.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f2c69d5d0134",
+    "end": 47,
+    "prefix": "",
+    "quote": "Climate and weather events take on proper names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups the event-specific naming and capitalisation rules.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "06dbf19fc726",
+    "end": 141,
+    "prefix": "for climate and weather events. ",
+    "quote": "We follow the style recommended by Australia’s Bureau of Meteorology.",
+    "start": 72,
+    "suffix": ""
+   },
+   "note": "Identifies the source of the house style; the following instructions define the checkable requirements.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5df46607056c",
+    "end": 73,
+    "prefix": "",
+    "quote": "For events not listed here, follow the standard rules for capitalisation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Refers the writer to the general capitalisation rules rather than stating another independent check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "706d162962ff",
+    "end": 41,
+    "prefix": "",
+    "quote": "Cyclones are usually given people’s names",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a naming practice; it does not require every cyclone name to be a person's name.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "abd855906cc6",
+    "end": 51,
+    "prefix": "",
+    "quote": "Check the name is accurate on the bureau’s website.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an instruction about the writer's checking process, not a separately detectable property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3e968a2b2c16",
+    "end": 49,
+    "prefix": "",
+    "quote": "Droughts are usually named after a period in time",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes how names arise; the body supplies the conditional capitalisation rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5c7dc255bf46",
+    "end": 46,
+    "prefix": "",
+    "quote": "Fires are usually named for a time or location",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Does not require every fire name to be based on a time or location.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3d225f65a2a8",
+    "end": 213,
+    "prefix": "ame as well as any proper noun. ",
+    "quote": "Fires leading to substantial loss of life and property are usually named after the worst day or where they started.",
+    "start": 98,
+    "suffix": ""
+   },
+   "note": "Explains naming practices rather than imposing another naming requirement.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f5e8ea37418a",
+    "end": 73,
+    "prefix": "",
+    "quote": "During a fire, authorities usually name a fire based on where it started.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes authorities' usual practice; it does not instruct writers to rename an event.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "13c0ef6b64ac",
+    "end": 70,
+    "prefix": "",
+    "quote": "Floods, earthquakes and tsunamis are named by year, location and event",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The following body sentence states the precise naming convention and is selected as the rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/natural-phenomena.md",
+ "page_sha256": "3f1a11f6bad84e62cd8758877877cf2c46bb6ed469a5b38338204c061a6d6e55",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "97fc55ec283c",
+    "note": "Page-level summary of the specific style rules that follow, not an additional check.",
+    "quote": "Treat terms for climate and weather events with consistent style.",
+    "reason": "section"
+   },
+   {
+    "block_id": "5a27fbd40da5",
+    "note": "Introduces the general baseline and its subordinate instructions; it does not add a distinct capitalisation finding.",
+    "quote": "Standard rules of capitalisation apply for most natural phenomena",
+    "reason": "section"
+   },
+   {
+    "block_id": "7126e69989c9",
+    "note": "Directs the writer to follow other rules rather than defining an additional property to check.",
+    "quote": "Follow the rules of capitalisation for most natural phenomena:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "699424ff8875",
+    "note": "Restates the general proper-noun rule belonging to the capital letters guidance, rather than a natural-phenomena-specific rule.",
+    "quote": "Proper nouns start with a capital letter.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "d9b7f3aa3311",
+    "note": "The baseline is represented by the climate and weather lowercase rule, with the page's named exceptions.",
+    "quote": "Adjectives and common nouns are in lower case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c62cfb647c1a",
+    "note": "The body gives the actionable lowercase instruction and its scope.",
+    "quote": "Most terms are usually in lower case",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4f7f026498a8",
+    "note": "Qualified summary of the scientific-proper-name rule. The body specifies when initial capitals are required.",
+    "quote": "Terms for specific phenomena can take initial capitals",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "12799aa2ee58",
+    "note": "Defines the class of terms covered by the following capitalisation instruction; retained there as scope.",
+    "quote": "Scientific terms for natural phenomena can include common nouns that combine to form a proper noun.",
+    "reason": "description"
+   },
+   {
+    "block_id": "f2c69d5d0134",
+    "note": "Groups the event-specific naming and capitalisation rules.",
+    "quote": "Climate and weather events take on proper names",
+    "reason": "section"
+   },
+   {
+    "block_id": "06dbf19fc726",
+    "note": "Identifies the source of the house style; the following instructions define the checkable requirements.",
+    "quote": "We follow the style recommended by Australia’s Bureau of Meteorology.",
+    "reason": "description"
+   },
+   {
+    "block_id": "5df46607056c",
+    "note": "Refers the writer to the general capitalisation rules rather than stating another independent check.",
+    "quote": "For events not listed here, follow the standard rules for capitalisation.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "706d162962ff",
+    "note": "Describes a naming practice; it does not require every cyclone name to be a person's name.",
+    "quote": "Cyclones are usually given people’s names",
+    "reason": "description"
+   },
+   {
+    "block_id": "abd855906cc6",
+    "note": "G-5: an instruction about the writer's checking process, not a separately detectable property of the text.",
+    "quote": "Check the name is accurate on the bureau’s website.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3e968a2b2c16",
+    "note": "Describes how names arise; the body supplies the conditional capitalisation rule.",
+    "quote": "Droughts are usually named after a period in time",
+    "reason": "description"
+   },
+   {
+    "block_id": "5c7dc255bf46",
+    "note": "Does not require every fire name to be based on a time or location.",
+    "quote": "Fires are usually named for a time or location",
+    "reason": "description"
+   },
+   {
+    "block_id": "3d225f65a2a8",
+    "note": "Explains naming practices rather than imposing another naming requirement.",
+    "quote": "Fires leading to substantial loss of life and property are usually named after the worst day or where they started.",
+    "reason": "description"
+   },
+   {
+    "block_id": "f5e8ea37418a",
+    "note": "Describes authorities' usual practice; it does not instruct writers to rename an event.",
+    "quote": "During a fire, authorities usually name a fire based on where it started.",
+    "reason": "description"
+   },
+   {
+    "block_id": "13c0ef6b64ac",
+    "note": "The following body sentence states the precise naming convention and is selected as the rule.",
+    "quote": "Floods, earthquakes and tsunamis are named by year, location and event",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4ed7ce26f132",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not use italics.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A term for a natural phenomenon is formatted in italics.",
+    "when": [
+     "Applies to terms for natural phenomena."
+    ],
+    "why": "This is an independently testable formatting instruction, separate from the surrounding capitalisation rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "805115ec3cea",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d9b7f3aa3311",
+      "quote": "Adjectives and common nouns are in lower case."
+     },
+     {
+      "block_id": "c62cfb647c1a",
+      "quote": "Most terms are usually in lower case"
+     },
+     {
+      "block_id": "805115ec3cea",
+      "quote": "This rule applies to many compound nouns."
+     },
+     {
+      "block_id": "36846ec5cc24",
+      "quote": "Specific terms usually take lower case. For example, this rule applies to scientific names for types of clouds."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3ecce61553dd",
+        "quote": "climate change, global warming, greenhouse gases"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "702dc28a095d",
+        "quote": "cumulonimbus, cirrus and stratus"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write generic terms for climate and weather in lower case.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic climate or weather term, or a specific term normally written in lower case such as a cloud type, has an unwarranted capital letter.",
+    "when": [
+     "Includes compound nouns.",
+     "Includes scientific names for types of clouds.",
+     "Ordinary sentence-initial capitals are not violations.",
+     "Proper nouns and the specifically capitalised names described elsewhere on this page are exceptions."
+    ],
+    "why": "G-2 and G-4: generic terms, compound nouns and specific cloud terms are cases of the same lowercase check, not separate findings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a56f05e8210a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4f7f026498a8",
+      "quote": "Terms for specific phenomena can take initial capitals"
+     },
+     {
+      "block_id": "12799aa2ee58",
+      "quote": "Scientific terms for natural phenomena can include common nouns that combine to form a proper noun."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f81b56eb5ad1",
+        "quote": "Indian Ocean Dipole (IOD)"
+       },
+       {
+        "block_id": "6200da311609",
+        "quote": "Southern Oscillation Index (SOI)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use initial capitals when spelling out this kind of scientific term.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A spelled-out scientific term formed from common nouns that together constitute a proper noun lacks the initial capitals of that proper name.",
+    "when": [
+     "Applies when common nouns combine to form the proper name of a natural phenomenon.",
+     "Does not apply merely because a scientific term is specific; ordinary terms such as cloud types remain lowercase."
+    ],
+    "why": "G-4: the body supplies the actionable instruction; the heading and preceding sentence establish its scope."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a56f05e8210a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f81b56eb5ad1",
+        "quote": "Indian Ocean Dipole (IOD)"
+       },
+       {
+        "block_id": "6200da311609",
+        "quote": "Southern Oscillation Index (SOI)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Common shortened forms are in full capitals.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A common shortened form of a proper scientific term for a natural phenomenon is written partly or wholly in lowercase letters.",
+    "when": [
+     "Applies to common shortened forms of the scientific proper names discussed in this section."
+    ],
+    "why": "The casing of a shortened form is a different check from initial capitals in its spelled-out name."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a56f05e8210a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Any non-English names retain the spelling of the original.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A non-English name for a natural phenomenon is written with spelling that differs from its original-language spelling.",
+    "when": [
+     "Applies to non-English names for natural phenomena."
+    ],
+    "why": "Retaining original spelling is an independent requirement, not another case of English capitalisation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8149551e8e8e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "df97baed3580",
+      "quote": "Do this for the given name and for the adjectives and common nouns that appear immediately before the given name. The bureau uses ‘Cyclone’, ‘Tropical Cyclone’ and ‘Severe Tropical Cyclone’ as part of the cyclone’s name."
+     },
+     {
+      "block_id": "f69d94cb0e8c",
+      "quote": "Use the same rule for hurricanes and typhoons."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d798a0176b4c",
+        "quote": "Cyclone Yasi"
+       },
+       {
+        "block_id": "a2a18c8ce09a",
+        "quote": "Tropical Cyclone Winifred"
+       },
+       {
+        "block_id": "77732faf98c1",
+        "quote": "Severe Tropical Cyclone Damien"
+       },
+       {
+        "block_id": "b04dbdb52416",
+        "quote": "Hurricane Wilma"
+       },
+       {
+        "block_id": "f221c4ae439e",
+        "quote": "Typhoon Fengshen"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use initial capitals for the names of cyclones.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A cyclone, hurricane or typhoon name has a lowercase initial in its given name or in an adjective or common noun that forms part of the name immediately before the given name.",
+    "when": [
+     "Applies to the given name and the adjectives and common nouns immediately before it that form part of the name.",
+     "Includes ‘Cyclone’, ‘Tropical Cyclone’ and ‘Severe Tropical Cyclone’.",
+     "The same capitalisation rule applies to hurricanes and typhoons."
+    ],
+    "why": "G-2: the name components and the extension to hurricanes and typhoons are cases of one name-capitalisation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "87310565dc71",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b1d75d616e66",
+        "quote": "Hilda was the first cyclone in the Australian region to make landfall in the 2017–18 season."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cdca88c4bc4c",
+        "quote": "Cyclone Hilda made landfall in the 2017–18 season."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always write ‘Cyclone’ as part of the name unless it is clear from the surrounding text that you are referring to a cyclone.",
+    "specification": "The page does not define the extent of surrounding text to inspect or a complete test for contextual clarity. An explicit nearby identification as a cyclone is sufficient in its example.",
+    "unit": "paragraph",
+    "violation_condition": "A cyclone is referred to by its given name without ‘Cyclone’, and the surrounding text does not make clear that the reference is to a cyclone.",
+    "when": [
+     "Applies when referring to a named cyclone.",
+     "‘Cyclone’ may be omitted when the surrounding text makes the type of event clear."
+    ],
+    "why": "G-2 and G-3: including ‘Cyclone’ is one requirement, with a contextual permission to omit it rather than a second rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "77e5a70e9ef9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f3670645cdbc",
+        "quote": "Millennium drought"
+       },
+       {
+        "block_id": "4be789cd7c9e",
+        "quote": "Federation drought"
+       },
+       {
+        "block_id": "2af8a3b4a546",
+        "quote": "the 1982–83 major drought"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the time is a formal period, the name has an initial capital.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The formal-period component of a drought name is written without its initial capital.",
+    "when": [
+     "Applies to drought names based on a formal period.",
+     "A date or informal period does not acquire a capital under this rule.",
+     "The rule does not capitalise the generic word ‘drought’."
+    ],
+    "why": "G-2: whether the period is formal determines when this single capitalisation check applies."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3d225f65a2a8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fb24515797b5",
+        "quote": "State Mine fire (New South Wales, 2013)"
+       },
+       {
+        "block_id": "b4026c2b7961",
+        "quote": "Black Saturday bushfires (Victoria, 2009)"
+       },
+       {
+        "block_id": "2d9d9063de12",
+        "quote": "Ash Wednesday bushfires (Victoria and South Australia, 1983)"
+       },
+       {
+        "block_id": "a4f5a84b7603",
+        "quote": "Black Tuesday bushfires (Tasmania, 1967)"
+       },
+       {
+        "block_id": "75b86c69b350",
+        "quote": "Black Friday bushfires (Victoria and New South Wales, 1939)"
+       },
+       {
+        "block_id": "8b472a4abe43",
+        "quote": "Black Thursday bushfires (Victoria, 1851)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4b6341613405",
+        "quote": "the Taylors Creek Road fire"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Bushfires take initial capitals for the adjectival part of their name as well as any proper noun.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The adjectival part or a proper-noun component of a bushfire name lacks its initial capitals.",
+    "when": [
+     "Applies to the adjectival and proper-noun components of bushfire names.",
+     "Does not require capitals for generic ‘fire’ or ‘bushfires’."
+    ],
+    "why": "G-2: adjectival and proper-noun components are parts of one bushfire-name capitalisation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "34f0c24ae2dc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "13c0ef6b64ac",
+      "quote": "Floods, earthquakes and tsunamis are named by year, location and event"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c939f2d8ce3b",
+        "quote": "1974 Brisbane flood"
+       },
+       {
+        "block_id": "e15055c947e5",
+        "quote": "1989 Newcastle earthquake"
+       },
+       {
+        "block_id": "e3e4028b6980",
+        "quote": "2004 Indian Ocean tsunami"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use ‘year Location event’ as the naming convention for floods, earthquakes and tsunamis.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A flood, earthquake or tsunami name is expressed in a form other than year followed by location followed by event type.",
+    "when": [
+     "Applies when giving a flood, earthquake or tsunami its event name, rather than making a generic reference to an event."
+    ],
+    "why": "G-2 and G-4: three event types share one naming-structure check; the heading restates it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "34f0c24ae2dc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c939f2d8ce3b",
+        "quote": "1974 Brisbane flood"
+       },
+       {
+        "block_id": "e15055c947e5",
+        "quote": "1989 Newcastle earthquake"
+       },
+       {
+        "block_id": "e3e4028b6980",
+        "quote": "2004 Indian Ocean tsunami"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Only the location (the proper noun) has an initial capital.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A flood, earthquake or tsunami name has a lowercase location name or an initial capital on the generic event word.",
+    "when": [
+     "Applies to names of floods, earthquakes and tsunamis using the year–location–event convention."
+    ],
+    "why": "Capitalisation and naming order can fail independently, so they are separate checks under the one-finding test."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "4ed7ce26f132",
+    "end": 19,
+    "prefix": "",
+    "quote": "Do not use italics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A term for a natural phenomenon is formatted in italics."
+   },
+   "when": [
+    "Applies to terms for natural phenomena."
+   ],
+   "why": "This is an independently testable formatting instruction, separate from the surrounding capitalisation rules."
+  },
+  {
+   "anchor": {
+    "block_id": "805115ec3cea",
+    "end": 58,
+    "prefix": "",
+    "quote": "Write generic terms for climate and weather in lower case.",
+    "start": 0,
+    "suffix": " This rule applies to many compo"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d9b7f3aa3311",
+     "end": 46,
+     "prefix": "",
+     "quote": "Adjectives and common nouns are in lower case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c62cfb647c1a",
+     "end": 36,
+     "prefix": "",
+     "quote": "Most terms are usually in lower case",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "805115ec3cea",
+     "end": 100,
+     "prefix": "mate and weather in lower case. ",
+     "quote": "This rule applies to many compound nouns.",
+     "start": 59,
+     "suffix": ""
+    },
+    {
+     "block_id": "36846ec5cc24",
+     "end": 111,
+     "prefix": "",
+     "quote": "Specific terms usually take lower case. For example, this rule applies to scientific names for types of clouds.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3ecce61553dd",
+       "end": 48,
+       "prefix": "",
+       "quote": "climate change, global warming, greenhouse gases",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "702dc28a095d",
+       "end": 32,
+       "prefix": "",
+       "quote": "cumulonimbus, cirrus and stratus",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic climate or weather term, or a specific term normally written in lower case such as a cloud type, has an unwarranted capital letter."
+   },
+   "when": [
+    "Includes compound nouns.",
+    "Includes scientific names for types of clouds.",
+    "Ordinary sentence-initial capitals are not violations.",
+    "Proper nouns and the specifically capitalised names described elsewhere on this page are exceptions."
+   ],
+   "why": "G-2 and G-4: generic terms, compound nouns and specific cloud terms are cases of the same lowercase check, not separate findings."
+  },
+  {
+   "anchor": {
+    "block_id": "a56f05e8210a",
+    "end": 68,
+    "prefix": "",
+    "quote": "Use initial capitals when spelling out this kind of scientific term.",
+    "start": 0,
+    "suffix": " Common shortened forms are in f"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4f7f026498a8",
+     "end": 54,
+     "prefix": "",
+     "quote": "Terms for specific phenomena can take initial capitals",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "12799aa2ee58",
+     "end": 99,
+     "prefix": "",
+     "quote": "Scientific terms for natural phenomena can include common nouns that combine to form a proper noun.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f81b56eb5ad1",
+       "end": 25,
+       "prefix": "",
+       "quote": "Indian Ocean Dipole (IOD)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "6200da311609",
+       "end": 32,
+       "prefix": "",
+       "quote": "Southern Oscillation Index (SOI)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A spelled-out scientific term formed from common nouns that together constitute a proper noun lacks the initial capitals of that proper name."
+   },
+   "when": [
+    "Applies when common nouns combine to form the proper name of a natural phenomenon.",
+    "Does not apply merely because a scientific term is specific; ordinary terms such as cloud types remain lowercase."
+   ],
+   "why": "G-4: the body supplies the actionable instruction; the heading and preceding sentence establish its scope."
+  },
+  {
+   "anchor": {
+    "block_id": "a56f05e8210a",
+    "end": 113,
+    "prefix": "t this kind of scientific term. ",
+    "quote": "Common shortened forms are in full capitals.",
+    "start": 69,
+    "suffix": " Any non-English names retain th"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f81b56eb5ad1",
+       "end": 25,
+       "prefix": "",
+       "quote": "Indian Ocean Dipole (IOD)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "6200da311609",
+       "end": 32,
+       "prefix": "",
+       "quote": "Southern Oscillation Index (SOI)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A common shortened form of a proper scientific term for a natural phenomenon is written partly or wholly in lowercase letters."
+   },
+   "when": [
+    "Applies to common shortened forms of the scientific proper names discussed in this section."
+   ],
+   "why": "The casing of a shortened form is a different check from initial capitals in its spelled-out name."
+  },
+  {
+   "anchor": {
+    "block_id": "a56f05e8210a",
+    "end": 172,
+    "prefix": "ned forms are in full capitals. ",
+    "quote": "Any non-English names retain the spelling of the original.",
+    "start": 114,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A non-English name for a natural phenomenon is written with spelling that differs from its original-language spelling."
+   },
+   "when": [
+    "Applies to non-English names for natural phenomena."
+   ],
+   "why": "Retaining original spelling is an independent requirement, not another case of English capitalisation."
+  },
+  {
+   "anchor": {
+    "block_id": "8149551e8e8e",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use initial capitals for the names of cyclones.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "df97baed3580",
+     "end": 220,
+     "prefix": "",
+     "quote": "Do this for the given name and for the adjectives and common nouns that appear immediately before the given name. The bureau uses ‘Cyclone’, ‘Tropical Cyclone’ and ‘Severe Tropical Cyclone’ as part of the cyclone’s name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f69d94cb0e8c",
+     "end": 46,
+     "prefix": "",
+     "quote": "Use the same rule for hurricanes and typhoons.",
+     "start": 0,
+     "suffix": " These are different terms for t"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d798a0176b4c",
+       "end": 12,
+       "prefix": "",
+       "quote": "Cyclone Yasi",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a2a18c8ce09a",
+       "end": 25,
+       "prefix": "",
+       "quote": "Tropical Cyclone Winifred",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "77732faf98c1",
+       "end": 30,
+       "prefix": "",
+       "quote": "Severe Tropical Cyclone Damien",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b04dbdb52416",
+       "end": 15,
+       "prefix": "",
+       "quote": "Hurricane Wilma",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f221c4ae439e",
+       "end": 16,
+       "prefix": "",
+       "quote": "Typhoon Fengshen",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A cyclone, hurricane or typhoon name has a lowercase initial in its given name or in an adjective or common noun that forms part of the name immediately before the given name."
+   },
+   "when": [
+    "Applies to the given name and the adjectives and common nouns immediately before it that form part of the name.",
+    "Includes ‘Cyclone’, ‘Tropical Cyclone’ and ‘Severe Tropical Cyclone’.",
+    "The same capitalisation rule applies to hurricanes and typhoons."
+   ],
+   "why": "G-2: the name components and the extension to hurricanes and typhoons are cases of one name-capitalisation check."
+  },
+  {
+   "anchor": {
+    "block_id": "87310565dc71",
+    "end": 124,
+    "prefix": "",
+    "quote": "Always write ‘Cyclone’ as part of the name unless it is clear from the surrounding text that you are referring to a cyclone.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b1d75d616e66",
+       "end": 92,
+       "prefix": "",
+       "quote": "Hilda was the first cyclone in the Australian region to make landfall in the 2017–18 season.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cdca88c4bc4c",
+       "end": 50,
+       "prefix": "",
+       "quote": "Cyclone Hilda made landfall in the 2017–18 season.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "The page does not define the extent of surrounding text to inspect or a complete test for contextual clarity. An explicit nearby identification as a cyclone is sufficient in its example.",
+    "unit": "paragraph",
+    "violation_condition": "A cyclone is referred to by its given name without ‘Cyclone’, and the surrounding text does not make clear that the reference is to a cyclone."
+   },
+   "when": [
+    "Applies when referring to a named cyclone.",
+    "‘Cyclone’ may be omitted when the surrounding text makes the type of event clear."
+   ],
+   "why": "G-2 and G-3: including ‘Cyclone’ is one requirement, with a contextual permission to omit it rather than a second rule."
+  },
+  {
+   "anchor": {
+    "block_id": "77e5a70e9ef9",
+    "end": 64,
+    "prefix": "",
+    "quote": "If the time is a formal period, the name has an initial capital.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f3670645cdbc",
+       "end": 18,
+       "prefix": "",
+       "quote": "Millennium drought",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "4be789cd7c9e",
+       "end": 18,
+       "prefix": "",
+       "quote": "Federation drought",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "2af8a3b4a546",
+       "end": 25,
+       "prefix": "",
+       "quote": "the 1982–83 major drought",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The formal-period component of a drought name is written without its initial capital."
+   },
+   "when": [
+    "Applies to drought names based on a formal period.",
+    "A date or informal period does not acquire a capital under this rule.",
+    "The rule does not capitalise the generic word ‘drought’."
+   ],
+   "why": "G-2: whether the period is formal determines when this single capitalisation check applies."
+  },
+  {
+   "anchor": {
+    "block_id": "3d225f65a2a8",
+    "end": 97,
+    "prefix": "",
+    "quote": "Bushfires take initial capitals for the adjectival part of their name as well as any proper noun.",
+    "start": 0,
+    "suffix": " Fires leading to substantial lo"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fb24515797b5",
+       "end": 39,
+       "prefix": "",
+       "quote": "State Mine fire (New South Wales, 2013)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b4026c2b7961",
+       "end": 41,
+       "prefix": "",
+       "quote": "Black Saturday bushfires (Victoria, 2009)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "2d9d9063de12",
+       "end": 60,
+       "prefix": "",
+       "quote": "Ash Wednesday bushfires (Victoria and South Australia, 1983)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a4f5a84b7603",
+       "end": 40,
+       "prefix": "",
+       "quote": "Black Tuesday bushfires (Tasmania, 1967)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "75b86c69b350",
+       "end": 59,
+       "prefix": "",
+       "quote": "Black Friday bushfires (Victoria and New South Wales, 1939)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8b472a4abe43",
+       "end": 41,
+       "prefix": "",
+       "quote": "Black Thursday bushfires (Victoria, 1851)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4b6341613405",
+       "end": 27,
+       "prefix": "",
+       "quote": "the Taylors Creek Road fire",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The adjectival part or a proper-noun component of a bushfire name lacks its initial capitals."
+   },
+   "when": [
+    "Applies to the adjectival and proper-noun components of bushfire names.",
+    "Does not require capitals for generic ‘fire’ or ‘bushfires’."
+   ],
+   "why": "G-2: adjectival and proper-noun components are parts of one bushfire-name capitalisation check."
+  },
+  {
+   "anchor": {
+    "block_id": "34f0c24ae2dc",
+    "end": 88,
+    "prefix": "",
+    "quote": "Use ‘year Location event’ as the naming convention for floods, earthquakes and tsunamis.",
+    "start": 0,
+    "suffix": " Only the location (the proper n"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "13c0ef6b64ac",
+     "end": 70,
+     "prefix": "",
+     "quote": "Floods, earthquakes and tsunamis are named by year, location and event",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c939f2d8ce3b",
+       "end": 19,
+       "prefix": "",
+       "quote": "1974 Brisbane flood",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e15055c947e5",
+       "end": 25,
+       "prefix": "",
+       "quote": "1989 Newcastle earthquake",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e3e4028b6980",
+       "end": 25,
+       "prefix": "",
+       "quote": "2004 Indian Ocean tsunami",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A flood, earthquake or tsunami name is expressed in a form other than year followed by location followed by event type."
+   },
+   "when": [
+    "Applies when giving a flood, earthquake or tsunami its event name, rather than making a generic reference to an event."
+   ],
+   "why": "G-2 and G-4: three event types share one naming-structure check; the heading restates it."
+  },
+  {
+   "anchor": {
+    "block_id": "34f0c24ae2dc",
+    "end": 148,
+    "prefix": "oods, earthquakes and tsunamis. ",
+    "quote": "Only the location (the proper noun) has an initial capital.",
+    "start": 89,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c939f2d8ce3b",
+       "end": 19,
+       "prefix": "",
+       "quote": "1974 Brisbane flood",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e15055c947e5",
+       "end": 25,
+       "prefix": "",
+       "quote": "1989 Newcastle earthquake",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e3e4028b6980",
+       "end": 25,
+       "prefix": "",
+       "quote": "2004 Indian Ocean tsunami",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A flood, earthquake or tsunami name has a lowercase location name or an initial capital on the generic event word."
+   },
+   "when": [
+    "Applies to names of floods, earthquakes and tsunamis using the year–location–event convention."
+   ],
+   "why": "Capitalisation and naming order can fail independently, so they are separate checks under the one-finding test."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4598,
+  "output_tokens": 11934,
+  "reasoning_tokens": 6831
+ }
+}

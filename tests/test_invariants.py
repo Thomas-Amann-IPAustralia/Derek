@@ -165,11 +165,17 @@ def test_unlabelled_example_blocks_are_not_given_a_polarity():
 
 
 def test_corpus_yields_paired_gold_examples():
+    """The manual's own labelled pairs reach the candidates, harvested from a
+    heading's labels or carried by a golden span. Once consensus (ADR-027)
+    swept most pages, nearly every pair arrives the second way, under the
+    golden keys, because the golden rule replaces the heading candidate."""
     cands, _, _ = collect_candidates()
     paired = [
         c for c in cands
-        if (c.examples.get("write this") or c.examples.get("correct"))
-        and (c.examples.get("not this") or c.examples.get("incorrect"))
+        if (c.examples.get("write this") or c.examples.get("correct")
+            or c.examples.get("golden compliant"))
+        and (c.examples.get("not this") or c.examples.get("incorrect")
+             or c.examples.get("golden violating"))
     ]
     assert len(paired) >= 50, "the manual's own labelled example pairs should be harvested"
 

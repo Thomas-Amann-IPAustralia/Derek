@@ -1,0 +1,355 @@
+{
+ "effort": "high",
+ "input_sha256": "3629e772447e169bf13fc2d4200b18c39abfd84b95a8aa8fc137ab191fd0f6f9",
+ "model": "gemini-3.1-pro-preview",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "49a23f5b79c2",
+    "end": 61,
+    "prefix": "",
+    "quote": "A preposition creates relationships between words or phrases.",
+    "start": 0,
+    "suffix": " Some words only work with speci"
+   },
+   "note": "Describes grammar, does not instruct.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "49a23f5b79c2",
+    "end": 163,
+    "prefix": "ork with specific prepositions. ",
+    "quote": "Choose them deliberately to convey meaning to users.",
+    "start": 111,
+    "suffix": ""
+   },
+   "note": "General advice to the writer.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "78171de841b8",
+    "end": 60,
+    "prefix": "",
+    "quote": "A preposition creates relationships between words or phrases",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Heading that describes grammar.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "24aab33e312e",
+    "end": 141,
+    "prefix": "ionship between a noun or verb. ",
+    "quote": "Use prepositions to give information about the time and place of an action or thing.",
+    "start": 57,
+    "suffix": ""
+   },
+   "note": "Phrased as an instruction but describes the grammatical function of prepositions.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "063b373b4099",
+    "end": 232,
+    "prefix": "' or 'from', but not by 'than'. ",
+    "quote": "Check a dictionary if you are not sure.",
+    "start": 193,
+    "suffix": ""
+   },
+   "note": "Advice to the writer on resolving uncertainty.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/prepositions.md",
+ "page_sha256": "e53c86f50d5e52b5ce5721aeb230c2475bd100b08a8b2c86ee5517ed9723166a",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "49a23f5b79c2",
+    "note": "Describes grammar, does not instruct.",
+    "quote": "A preposition creates relationships between words or phrases.",
+    "reason": "description"
+   },
+   {
+    "block_id": "49a23f5b79c2",
+    "note": "General advice to the writer.",
+    "quote": "Choose them deliberately to convey meaning to users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "78171de841b8",
+    "note": "Heading that describes grammar.",
+    "quote": "A preposition creates relationships between words or phrases",
+    "reason": "description"
+   },
+   {
+    "block_id": "24aab33e312e",
+    "note": "Phrased as an instruction but describes the grammatical function of prepositions.",
+    "quote": "Use prepositions to give information about the time and place of an action or thing.",
+    "reason": "description"
+   },
+   {
+    "block_id": "063b373b4099",
+    "note": "Advice to the writer on resolving uncertainty.",
+    "quote": "Check a dictionary if you are not sure.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "063b373b4099",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Demonstrates 'different from'.",
+      "parts": [
+       {
+        "block_id": "596d697cb661",
+        "quote": "This is different from that."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Demonstrates 'different than'.",
+      "parts": [
+       {
+        "block_id": "bfcadabc2a99",
+        "quote": "This is different than that."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "'different' is always followed by 'to' or 'from', but not by 'than'.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the phrase \"different than\"",
+    "when": [],
+    "why": "Specific rule stated in the text with a clear corresponding example pair."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9c0ac856d8d6",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "49a23f5b79c2",
+      "quote": "Some words only work with specific prepositions."
+     },
+     {
+      "block_id": "063b373b4099",
+      "quote": "Not all prepositions work for every word or phrase."
+     },
+     {
+      "block_id": "063b373b4099",
+      "quote": "Some words are always followed by particular prepositions."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Demonstrates the correct preposition 'about' after 'discussion'.",
+      "parts": [
+       {
+        "block_id": "c92226cd783c",
+        "quote": "The discussion about the program is continuing."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Demonstrates the incorrect preposition 'around' after 'discussion'.",
+      "parts": [
+       {
+        "block_id": "b08ef924e54a",
+        "quote": "The discussion around the program is continuing."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Some words only work with specific prepositions",
+    "specification": "use \"discussion about\" instead of \"discussion around\"",
+    "unit": "phrase",
+    "violation_condition": "the phrase \"discussion around\"",
+    "when": [],
+    "why": "The heading establishes the general principle, and the Correct/Incorrect pair establishes a specific prohibition for 'discussion around' which requires a separate check from 'different than'."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "063b373b4099",
+    "end": 192,
+    "prefix": "ular prepositions. For example, ",
+    "quote": "'different' is always followed by 'to' or 'from', but not by 'than'.",
+    "start": 124,
+    "suffix": " Check a dictionary if you are n"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Demonstrates 'different from'.",
+     "parts": [
+      {
+       "block_id": "596d697cb661",
+       "end": 28,
+       "prefix": "",
+       "quote": "This is different from that.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Demonstrates 'different than'.",
+     "parts": [
+      {
+       "block_id": "bfcadabc2a99",
+       "end": 28,
+       "prefix": "",
+       "quote": "This is different than that.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the phrase \"different than\""
+   },
+   "when": [],
+   "why": "Specific rule stated in the text with a clear corresponding example pair."
+  },
+  {
+   "anchor": {
+    "block_id": "9c0ac856d8d6",
+    "end": 47,
+    "prefix": "",
+    "quote": "Some words only work with specific prepositions",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "49a23f5b79c2",
+     "end": 110,
+     "prefix": "ships between words or phrases. ",
+     "quote": "Some words only work with specific prepositions.",
+     "start": 62,
+     "suffix": " Choose them deliberately to con"
+    },
+    {
+     "block_id": "063b373b4099",
+     "end": 51,
+     "prefix": "",
+     "quote": "Not all prepositions work for every word or phrase.",
+     "start": 0,
+     "suffix": " Some words are always followed "
+    },
+    {
+     "block_id": "063b373b4099",
+     "end": 110,
+     "prefix": " work for every word or phrase. ",
+     "quote": "Some words are always followed by particular prepositions.",
+     "start": 52,
+     "suffix": " For example, 'different' is alw"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Demonstrates the correct preposition 'about' after 'discussion'.",
+     "parts": [
+      {
+       "block_id": "c92226cd783c",
+       "end": 47,
+       "prefix": "",
+       "quote": "The discussion about the program is continuing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Demonstrates the incorrect preposition 'around' after 'discussion'.",
+     "parts": [
+      {
+       "block_id": "b08ef924e54a",
+       "end": 48,
+       "prefix": "",
+       "quote": "The discussion around the program is continuing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "d58b1d278249eed8",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "use \"discussion about\" instead of \"discussion around\"",
+    "unit": "phrase",
+    "violation_condition": "the phrase \"discussion around\""
+   },
+   "when": [],
+   "why": "The heading establishes the general principle, and the Correct/Incorrect pair establishes a specific prohibition for 'discussion around' which requires a separate check from 'different than'."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.1-pro-preview",
+ "stop_reason": "STOP",
+ "usage": {
+  "cached_input_tokens": 0,
+  "input_tokens": 3639,
+  "output_tokens": 1169,
+  "reasoning_tokens": 8551
+ }
+}

@@ -1,0 +1,911 @@
+{
+ "effort": "high",
+ "input_sha256": "82b2d59f1453ef01d86fc1be68f341b2ff00062314bd1cfe0c5dfd7098783d9d",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "91c0002f3221",
+    "end": 110,
+    "prefix": " draw attention from body text. ",
+    "quote": "Make sure they are accessible to everyone.",
+    "start": 68,
+    "suffix": ""
+   },
+   "note": "A broad accessibility requirement for the presentation and implementation of boxes and callouts, rather than a specified wording check.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "450607878f5b",
+    "end": 109,
+    "prefix": "",
+    "quote": "You can draw attention to information in content by using text boxes and callouts (pull-quotes and sidebars).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Permits these devices; it does not require their use.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "30c5f3129806",
+    "end": 125,
+    "prefix": "",
+    "quote": "Before you include a text box or callout in your content, consider how it will help people understand or use the information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks the writer to consider a decision; the act of consideration is not a property of the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "62f3f130f9bd",
+    "end": 64,
+    "prefix": "",
+    "quote": "Don’t overuse text boxes or callouts: they become a distraction.",
+    "start": 0,
+    "suffix": " Avoid putting content in a text"
+   },
+   "note": "G-4: absorbed into the rule headed ‘Limit the use of text boxes and callouts’.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "97a6817acce7",
+    "end": 46,
+    "prefix": "",
+    "quote": "Text boxes sit close to the text they support.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the device's placement rather than stating an instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4fa2c8effadd",
+    "end": 95,
+    "prefix": "",
+    "quote": "Text boxes should contain a summary, examples or an expansion of ideas in the body of the text.",
+    "start": 0,
+    "suffix": " This is because people:"
+   },
+   "note": "G-4: absorbed into the supporting-content rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e9386e9e10e3",
+    "end": 57,
+    "prefix": "",
+    "quote": "Use text boxes to set information apart from the content.",
+    "start": 0,
+    "suffix": " You can use text boxes for info"
+   },
+   "note": "G-4: consolidated with the requirement to keep supporting material separate from main text.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e9386e9e10e3",
+    "end": 158,
+    "prefix": "rmation apart from the content. ",
+    "quote": "You can use text boxes for information that is useful but not part of the main content, for example:",
+    "start": 58,
+    "suffix": ""
+   },
+   "note": "G-3: supplies permitted uses under the supporting-content rule, not an additional obligation.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "433ad7b5f284",
+    "end": 149,
+    "prefix": "",
+    "quote": "Use the same presentation for the same type of content. For example, present example text boxes consistently, but differently to summary information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns consistent visual presentation and differentiation of box types, rather than their wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ed1186884c47",
+    "end": 75,
+    "prefix": "",
+    "quote": "Use the same rules for capitalisation, punctuation and lists as other text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs application of existing style rules rather than supplying an independent capitalisation, punctuation or list check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cbedd164ca42",
+    "end": 203,
+    "prefix": "se of the text box at a glance. ",
+    "quote": "Make it distinct from the other headings in the text so you don’t interrupt the heading hierarchy.",
+    "start": 105,
+    "suffix": ""
+   },
+   "note": "Concerns the presentation of a box heading relative to the main heading hierarchy, not the heading's wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "98cac880432a",
+    "end": 177,
+    "prefix": "ed text boxes in the body text. ",
+    "quote": "You can use an appropriate identifier, such as ‘Box 1’ or ‘Case study 1’.",
+    "start": 104,
+    "suffix": ""
+   },
+   "note": "G-3: identifier options are recorded under the numbering rule; these exact labels are not required.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f6a821fa42f1",
+    "end": 34,
+    "prefix": "",
+    "quote": "Make text boxes accessible in HTML",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The candidate heading concerns accessible HTML implementation rather than wording.",
+   "reason": "not_text",
+   "seed_uid": "ce13fe007adcf713"
+  },
+  {
+   "anchor": {
+    "block_id": "507a1b4da834",
+    "end": 61,
+    "prefix": "",
+    "quote": "Make sure boxes are readable by all users and on all devices.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns accessible rendering and device compatibility.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0a81485c10ba",
+    "end": 48,
+    "prefix": "",
+    "quote": "For text boxes in HTML, use the <aside> element.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Specifies HTML markup rather than words in the content.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4a7e624e46ac",
+    "end": 145,
+    "prefix": "",
+    "quote": "You can also use the <role=“complementary”> attribute to define an ARIA complementary landmark. Use this when it sits outside the <main> content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns an optional ARIA implementation and its placement in the HTML structure.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c480c8ce15b3",
+    "end": 131,
+    "prefix": "",
+    "quote": "Alternatively, use the <role=“region”> attribute and assign a name if the content needs to sit within the <main> section of a page.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Specifies HTML and ARIA structure rather than prose.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a81644a5d38e",
+    "end": 104,
+    "prefix": "",
+    "quote": "For more information about formatting, visit the World Wide Web Consortium (W3C) ARIA landmarks example.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to an external resource.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "897b38a9cd59",
+    "end": 99,
+    "prefix": "",
+    "quote": "Choose colours and fonts that are readable. The design must be able to work well on mobile devices.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Both instructions concern visual design or device behaviour, not wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f4b8b2eb8db4",
+    "end": 50,
+    "prefix": "",
+    "quote": "Don’t use text boxes in Microsoft Office documents",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The candidate prohibits an Office document object, not a textual form.",
+   "reason": "not_text",
+   "seed_uid": "0055c90bd764c4bb"
+  },
+  {
+   "anchor": {
+    "block_id": "0c6f30f32ab0",
+    "end": 53,
+    "prefix": "",
+    "quote": "You should not use text boxes in Word and PowerPoint.",
+    "start": 0,
+    "suffix": " They are not accessible for mos"
+   },
+   "note": "Restates the prohibition on an Office document object.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0df1cb942922",
+    "end": 86,
+    "prefix": "",
+    "quote": "Instead of text boxes, use borders and paragraph styles to highlight content visually.",
+    "start": 0,
+    "suffix": " If these styles don't work for "
+   },
+   "note": "Specifies document formatting as an alternative to floating text-box objects.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a59c96848f2c",
+    "end": 141,
+    "prefix": "",
+    "quote": "A one-by-one table is an option. If your document has complex formatting, accessible PDF (Portable Document Format) might be a better option.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: offers optional alternatives without requiring either one.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "24ab48f188db",
+    "end": 120,
+    "prefix": "",
+    "quote": "Complex Office documents require careful design. To ensure accessibility, get advice from an accessibility professional.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: recommends a design process and professional consultation, not a checkable property of the words.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/text-boxes-and-callouts.md",
+ "page_sha256": "2e7f6db8cba57e17072f8b22b3d842ddc1f7573103185ae89c7d1de5d30fd114",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "91c0002f3221",
+    "note": "A broad accessibility requirement for the presentation and implementation of boxes and callouts, rather than a specified wording check.",
+    "quote": "Make sure they are accessible to everyone.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "450607878f5b",
+    "note": "Permits these devices; it does not require their use.",
+    "quote": "You can draw attention to information in content by using text boxes and callouts (pull-quotes and sidebars).",
+    "reason": "permission"
+   },
+   {
+    "block_id": "30c5f3129806",
+    "note": "G-5: asks the writer to consider a decision; the act of consideration is not a property of the finished text.",
+    "quote": "Before you include a text box or callout in your content, consider how it will help people understand or use the information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "62f3f130f9bd",
+    "note": "G-4: absorbed into the rule headed ‘Limit the use of text boxes and callouts’.",
+    "quote": "Don’t overuse text boxes or callouts: they become a distraction.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "97a6817acce7",
+    "note": "Describes the device's placement rather than stating an instruction.",
+    "quote": "Text boxes sit close to the text they support.",
+    "reason": "description"
+   },
+   {
+    "block_id": "4fa2c8effadd",
+    "note": "G-4: absorbed into the supporting-content rule.",
+    "quote": "Text boxes should contain a summary, examples or an expansion of ideas in the body of the text.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e9386e9e10e3",
+    "note": "G-4: consolidated with the requirement to keep supporting material separate from main text.",
+    "quote": "Use text boxes to set information apart from the content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e9386e9e10e3",
+    "note": "G-3: supplies permitted uses under the supporting-content rule, not an additional obligation.",
+    "quote": "You can use text boxes for information that is useful but not part of the main content, for example:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "433ad7b5f284",
+    "note": "Concerns consistent visual presentation and differentiation of box types, rather than their wording.",
+    "quote": "Use the same presentation for the same type of content. For example, present example text boxes consistently, but differently to summary information.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ed1186884c47",
+    "note": "G-5: directs application of existing style rules rather than supplying an independent capitalisation, punctuation or list check.",
+    "quote": "Use the same rules for capitalisation, punctuation and lists as other text.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "cbedd164ca42",
+    "note": "Concerns the presentation of a box heading relative to the main heading hierarchy, not the heading's wording.",
+    "quote": "Make it distinct from the other headings in the text so you don’t interrupt the heading hierarchy.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "98cac880432a",
+    "note": "G-3: identifier options are recorded under the numbering rule; these exact labels are not required.",
+    "quote": "You can use an appropriate identifier, such as ‘Box 1’ or ‘Case study 1’.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "f6a821fa42f1",
+    "note": "The candidate heading concerns accessible HTML implementation rather than wording.",
+    "quote": "Make text boxes accessible in HTML",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "507a1b4da834",
+    "note": "Concerns accessible rendering and device compatibility.",
+    "quote": "Make sure boxes are readable by all users and on all devices.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0a81485c10ba",
+    "note": "Specifies HTML markup rather than words in the content.",
+    "quote": "For text boxes in HTML, use the <aside> element.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4a7e624e46ac",
+    "note": "Concerns an optional ARIA implementation and its placement in the HTML structure.",
+    "quote": "You can also use the <role=“complementary”> attribute to define an ARIA complementary landmark. Use this when it sits outside the <main> content.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c480c8ce15b3",
+    "note": "Specifies HTML and ARIA structure rather than prose.",
+    "quote": "Alternatively, use the <role=“region”> attribute and assign a name if the content needs to sit within the <main> section of a page.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a81644a5d38e",
+    "note": "G-5: directs the writer to an external resource.",
+    "quote": "For more information about formatting, visit the World Wide Web Consortium (W3C) ARIA landmarks example.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "897b38a9cd59",
+    "note": "Both instructions concern visual design or device behaviour, not wording.",
+    "quote": "Choose colours and fonts that are readable. The design must be able to work well on mobile devices.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f4b8b2eb8db4",
+    "note": "The candidate prohibits an Office document object, not a textual form.",
+    "quote": "Don’t use text boxes in Microsoft Office documents",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0c6f30f32ab0",
+    "note": "Restates the prohibition on an Office document object.",
+    "quote": "You should not use text boxes in Word and PowerPoint.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0df1cb942922",
+    "note": "Specifies document formatting as an alternative to floating text-box objects.",
+    "quote": "Instead of text boxes, use borders and paragraph styles to highlight content visually.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a59c96848f2c",
+    "note": "G-3: offers optional alternatives without requiring either one.",
+    "quote": "A one-by-one table is an option. If your document has complex formatting, accessible PDF (Portable Document Format) might be a better option.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "24ab48f188db",
+    "note": "G-5: recommends a design process and professional consultation, not a checkable property of the words.",
+    "quote": "Complex Office documents require careful design. To ensure accessibility, get advice from an accessibility professional.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c611ac854ebd",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "62f3f130f9bd",
+      "quote": "Don’t overuse text boxes or callouts: they become a distraction."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Limit the use of text boxes and callouts",
+    "specification": "The page gives no numerical limit or operational test for when boxes and callouts become a distraction.",
+    "unit": "document",
+    "violation_condition": "Text boxes or callouts occur so frequently that they distract from the body text.",
+    "when": [],
+    "why": "G-4: the body restates the heading's limit; retain one rule rather than flagging excessive use twice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "62f3f130f9bd",
+    "clarity_suggestion": "not_automatable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid putting content in a text box or callout just because you can’t make it fit into the flow of the text.",
+    "specification": "The restriction concerns the reason for placement. That reason cannot reliably be established from the finished text alone.",
+    "unit": "document",
+    "violation_condition": "Content has been placed in a text box or callout solely because it could not be fitted into the flow of the text.",
+    "when": [],
+    "why": "The placement restriction is distinct from excessive frequency and from the requirement that boxes contain supporting material."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d7c93cc8f438",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4fa2c8effadd",
+      "quote": "Text boxes should contain a summary, examples or an expansion of ideas in the body of the text."
+     },
+     {
+      "block_id": "e9386e9e10e3",
+      "quote": "Use text boxes to set information apart from the content."
+     },
+     {
+      "block_id": "e9386e9e10e3",
+      "quote": "You can use text boxes for information that is useful but not part of the main content, for example:"
+     },
+     {
+      "block_id": "4f19888d552c",
+      "quote": "They also make it clear that it shouldn’t be read as part of the main text."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use text boxes for supporting content, not main text",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A text box contains part of the main reading sequence rather than material that supports or supplements it.",
+    "when": [
+     "Supporting material may summarise, exemplify or expand ideas in the body text.",
+     "Permitted uses include summaries, checklists, examples, case studies, quotes, links to related information and definitions."
+    ],
+    "why": "G-2 and G-4: the descriptions and permitted uses elaborate one supporting-versus-main-content distinction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cbedd164ca42",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Longer text boxes should have a heading or title to show people the purpose of the text box at a glance.",
+    "specification": "The page does not define how long a text box must be before this requirement applies.",
+    "unit": "block",
+    "violation_condition": "A longer text box lacks a heading or title identifying its purpose.",
+    "when": [
+     "Applies to longer text boxes, not necessarily every text box."
+    ],
+    "why": "G-2: length limits when the heading requirement applies; no unsupported length threshold has been introduced."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "98cac880432a",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "98cac880432a",
+      "quote": "You can use an appropriate identifier, such as ‘Box 1’ or ‘Case study 1’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Number text boxes if they feature repeatedly in content.",
+    "specification": "The page does not quantify ‘repeatedly’. A recurrence threshold would need to be agreed before implementing an automatic check.",
+    "unit": "document",
+    "violation_condition": "Recurring text boxes lack identifying numbers.",
+    "when": [
+     "Applies when text boxes feature repeatedly in the content.",
+     "An appropriate identifier may be used, such as ‘Box 1’ or ‘Case study 1’; neither label is mandatory."
+    ],
+    "why": "G-2 and G-3: recurrence triggers numbering, while the identifier wording is a permitted implementation rather than another rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "98cac880432a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Refer to numbered text boxes in the body text.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A numbered text box has no reference to it in the body text.",
+    "when": [
+     "Applies to numbered text boxes."
+    ],
+    "why": "The missing body reference is a different finding from a missing box number, so the two instructions remain separate."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "1662c609b6e9",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Organise content in a clear order using section headings.",
+    "specification": "Whether the order is clear requires contextual assessment; the page does not prescribe a particular section sequence.",
+    "unit": "document",
+    "violation_condition": "Web content lacks section-heading structure that makes its organisation and reading order clear.",
+    "when": [
+     "Stated as an accessibility fundamental in the HTML section."
+    ],
+    "why": "This instruction concerns textual organisation through headings, unlike the neighbouring visual-design and device requirements."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "c611ac854ebd",
+    "end": 40,
+    "prefix": "",
+    "quote": "Limit the use of text boxes and callouts",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "62f3f130f9bd",
+     "end": 64,
+     "prefix": "",
+     "quote": "Don’t overuse text boxes or callouts: they become a distraction.",
+     "start": 0,
+     "suffix": " Avoid putting content in a text"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "6cdb044892ad1ecc",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no numerical limit or operational test for when boxes and callouts become a distraction.",
+    "unit": "document",
+    "violation_condition": "Text boxes or callouts occur so frequently that they distract from the body text."
+   },
+   "when": [],
+   "why": "G-4: the body restates the heading's limit; retain one rule rather than flagging excessive use twice."
+  },
+  {
+   "anchor": {
+    "block_id": "62f3f130f9bd",
+    "end": 173,
+    "prefix": "uts: they become a distraction. ",
+    "quote": "Avoid putting content in a text box or callout just because you can’t make it fit into the flow of the text.",
+    "start": 65,
+    "suffix": ""
+   },
+   "clarity_suggestion": "not_automatable",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The restriction concerns the reason for placement. That reason cannot reliably be established from the finished text alone.",
+    "unit": "document",
+    "violation_condition": "Content has been placed in a text box or callout solely because it could not be fitted into the flow of the text."
+   },
+   "when": [],
+   "why": "The placement restriction is distinct from excessive frequency and from the requirement that boxes contain supporting material."
+  },
+  {
+   "anchor": {
+    "block_id": "d7c93cc8f438",
+    "end": 52,
+    "prefix": "",
+    "quote": "Use text boxes for supporting content, not main text",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4fa2c8effadd",
+     "end": 95,
+     "prefix": "",
+     "quote": "Text boxes should contain a summary, examples or an expansion of ideas in the body of the text.",
+     "start": 0,
+     "suffix": " This is because people:"
+    },
+    {
+     "block_id": "e9386e9e10e3",
+     "end": 57,
+     "prefix": "",
+     "quote": "Use text boxes to set information apart from the content.",
+     "start": 0,
+     "suffix": " You can use text boxes for info"
+    },
+    {
+     "block_id": "e9386e9e10e3",
+     "end": 158,
+     "prefix": "rmation apart from the content. ",
+     "quote": "You can use text boxes for information that is useful but not part of the main content, for example:",
+     "start": 58,
+     "suffix": ""
+    },
+    {
+     "block_id": "4f19888d552c",
+     "end": 122,
+     "prefix": "ore than highlight information. ",
+     "quote": "They also make it clear that it shouldn’t be read as part of the main text.",
+     "start": 47,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "8928e7e844612beb",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A text box contains part of the main reading sequence rather than material that supports or supplements it."
+   },
+   "when": [
+    "Supporting material may summarise, exemplify or expand ideas in the body text.",
+    "Permitted uses include summaries, checklists, examples, case studies, quotes, links to related information and definitions."
+   ],
+   "why": "G-2 and G-4: the descriptions and permitted uses elaborate one supporting-versus-main-content distinction."
+  },
+  {
+   "anchor": {
+    "block_id": "cbedd164ca42",
+    "end": 104,
+    "prefix": "",
+    "quote": "Longer text boxes should have a heading or title to show people the purpose of the text box at a glance.",
+    "start": 0,
+    "suffix": " Make it distinct from the other"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define how long a text box must be before this requirement applies.",
+    "unit": "block",
+    "violation_condition": "A longer text box lacks a heading or title identifying its purpose."
+   },
+   "when": [
+    "Applies to longer text boxes, not necessarily every text box."
+   ],
+   "why": "G-2: length limits when the heading requirement applies; no unsupported length threshold has been introduced."
+  },
+  {
+   "anchor": {
+    "block_id": "98cac880432a",
+    "end": 56,
+    "prefix": "",
+    "quote": "Number text boxes if they feature repeatedly in content.",
+    "start": 0,
+    "suffix": " Refer to numbered text boxes in"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "98cac880432a",
+     "end": 177,
+     "prefix": "ed text boxes in the body text. ",
+     "quote": "You can use an appropriate identifier, such as ‘Box 1’ or ‘Case study 1’.",
+     "start": 104,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not quantify ‘repeatedly’. A recurrence threshold would need to be agreed before implementing an automatic check.",
+    "unit": "document",
+    "violation_condition": "Recurring text boxes lack identifying numbers."
+   },
+   "when": [
+    "Applies when text boxes feature repeatedly in the content.",
+    "An appropriate identifier may be used, such as ‘Box 1’ or ‘Case study 1’; neither label is mandatory."
+   ],
+   "why": "G-2 and G-3: recurrence triggers numbering, while the identifier wording is a permitted implementation rather than another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "98cac880432a",
+    "end": 103,
+    "prefix": " feature repeatedly in content. ",
+    "quote": "Refer to numbered text boxes in the body text.",
+    "start": 57,
+    "suffix": " You can use an appropriate iden"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A numbered text box has no reference to it in the body text."
+   },
+   "when": [
+    "Applies to numbered text boxes."
+   ],
+   "why": "The missing body reference is a different finding from a missing box number, so the two instructions remain separate."
+  },
+  {
+   "anchor": {
+    "block_id": "1662c609b6e9",
+    "end": 57,
+    "prefix": "",
+    "quote": "Organise content in a clear order using section headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Whether the order is clear requires contextual assessment; the page does not prescribe a particular section sequence.",
+    "unit": "document",
+    "violation_condition": "Web content lacks section-heading structure that makes its organisation and reading order clear."
+   },
+   "when": [
+    "Stated as an accessibility fundamental in the HTML section."
+   ],
+   "why": "This instruction concerns textual organisation through headings, unlike the neighbouring visual-design and device requirements."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4702,
+  "output_tokens": 9012,
+  "reasoning_tokens": 5696
+ }
+}

@@ -1,0 +1,250 @@
+"""Two-model consensus (ADR-027): agreement is taken, disagreement is adjudicated.
+
+No model runs here. Two fake drafts, written the way ``drafting.resolve`` writes
+real ones, are lined up on a real page; the tests pin what is taken without a
+decision, what is held for one, and what the export refuses to emit.
+"""
+
+from __future__ import annotations
+
+import importlib.util
+import sys
+from pathlib import Path
+
+import pytest
+
+REPO = Path(__file__).resolve().parents[1]
+TOOL = REPO / "tools" / "draft"
+
+
+def _load(name: str):
+    if name in sys.modules:
+        return sys.modules[name]
+    spec = importlib.util.spec_from_file_location(name, TOOL / f"{name}.py")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+drafting = _load("drafting")
+providers = _load("providers")
+consensus = _load("consensus")
+
+FULL_STOPS = "grammar-punctuation-and-conventions/punctuation/full-stops.md"
+A, B = providers.PAIR
+
+
+@pytest.fixture(scope="module")
+def page():
+    return drafting.load_page(FULL_STOPS)
+
+
+@pytest.fixture(autouse=True)
+def no_ledger(tmp_path, monkeypatch):
+    """The fake drafts, not the live ledger's review history, decide these tests."""
+    monkeypatch.setattr(consensus, "LEDGER", tmp_path / "rules.jsonl")
+
+
+def _block(page, prefix):
+    return next(b for b in page.blocks if b.plain.startswith(prefix))
+
+
+def _rule(block, *, examples=(), **tags):
+    base = {"unit": "sentence", "direction": "presence", "modality": "SHOULD",
+            "applies_to": ["any"], "detection_hint": "pattern",
+            "violation_condition": "a sentence with no full stop", "specification": ""}
+    base.update(tags)
+    clarity = base.pop("clarity", "unambiguous")
+    return {
+        "anchor": drafting.anchor(block, 0, len(block.plain)),
+        "seed_uid": "", "tags": base, "clarity_suggestion": clarity, "when": [],
+        "examples": [{"kind": k, "parts": [drafting.anchor(b, 0, len(b.plain))], "note": ""}
+                     for k, b in examples],
+        "covers": [], "why": "",
+    }
+
+
+def _draft(*rules, not_rules=()):
+    return {"rules": list(rules), "not_rules": list(not_rules)}
+
+
+def test_the_pair_is_two_families():
+    """SOP §14.3: the second drafter checks the first only if it is not the same family."""
+    family = lambda drafter: providers.PROVIDERS[drafter.partition("@")[0]]
+    assert family(A) != family(B)
+
+
+def test_agreement_is_taken_without_a_decision(page):
+    b = _block(page, "Complete a sentence with a full stop")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(b)), B: _draft(_rule(b))})
+    [rule] = plan["rules"]
+    assert rule["found_by"] == [A, B] and not rule.get("single")
+    assert not [it for it in plan["items"] if it["rid"] == rule["rid"]]
+
+
+def test_a_rule_only_one_model_found_waits_for_the_adjudicator(page):
+    b = _block(page, "Complete a sentence with a full stop")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(b)), B: _draft()})
+    [item] = [it for it in plan["items"] if it["kind"] == "single"]
+    assert item["found_by"] == A
+    ops, undecided = consensus.export_page(plan, {}, "2026-10-25T00:00:00.000Z")
+    assert not ops and undecided == [item["item_id"]], "nothing exported until decided"
+
+
+def test_a_dropped_single_rule_is_not_exported(page):
+    b = _block(page, "Complete a sentence with a full stop")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(b)), B: _draft()})
+    adj = {it["item_id"]: {"decision": {"keep": False}, "reason": "advice"}
+           for it in plan["items"]}
+    ops, undecided = consensus.export_page(plan, adj, "2026-10-25T00:00:00.000Z")
+    assert not undecided
+    assert not [o for o in ops if o["op"] == "span"]
+    assert ops[-1]["op"] == "page" and ops[-1]["status"] == "complete"
+
+
+def test_conflicting_tags_are_one_item_and_the_decision_wins(page):
+    b = _block(page, "Complete a sentence with a full stop")
+    plan = consensus.page_plan(FULL_STOPS, {
+        A: _draft(_rule(b, direction="absence")), B: _draft(_rule(b, direction="presence"))})
+    [item] = [it for it in plan["items"] if it["kind"] == "tags"]
+    assert set(item["conflicts"]) == {"direction"}
+    adj = {it["item_id"]: {"decision": {"tags": {"direction": "absence"}}, "reason": "r"}
+           for it in plan["items"]}
+    ops, _ = consensus.export_page(plan, adj, "2026-10-25T00:00:00.000Z")
+    [rule] = [o for o in ops if o["op"] == "span" and o["span"]["kind"] == "rule"]
+    assert rule["span"]["tags"]["direction"] == "absence"
+    assert rule["by"] == consensus.BY_ADJUDICATOR
+
+
+def test_an_example_both_models_attached_the_same_way_is_taken(page):
+    rule_b = _block(page, "Complete a sentence with a full stop")
+    ex = next(x for x in page.blocks if x.kind != "heading"
+              and x.heading_path[:2] == rule_b.heading_path[:2] and x.id != rule_b.id)
+    plan = consensus.page_plan(FULL_STOPS, {
+        A: _draft(_rule(rule_b, examples=[("compliant", ex)])),
+        B: _draft(_rule(rule_b, examples=[("compliant", ex)]))})
+    assert not plan["items"]
+    ops, _ = consensus.export_page(plan, {}, "2026-10-25T00:00:00.000Z")
+    kids = [o["span"] for o in ops if o["op"] == "span" and o["span"]["kind"] == "compliant"]
+    assert len(kids) == 1 and kids[0]["of"].startswith(rule_b.id)
+
+
+def test_opposite_polarity_is_never_taken(page):
+    """The Octavius inversion: two models disagreeing on polarity is a decision."""
+    rule_b = _block(page, "Complete a sentence with a full stop")
+    ex = next(x for x in page.blocks if x.kind != "heading"
+              and x.heading_path[:2] == rule_b.heading_path[:2] and x.id != rule_b.id)
+    plan = consensus.page_plan(FULL_STOPS, {
+        A: _draft(_rule(rule_b, examples=[("compliant", ex)])),
+        B: _draft(_rule(rule_b, examples=[("violating", ex)]))})
+    assert [it["kind"] for it in plan["items"]] == ["example"]
+
+
+def test_ambiguous_without_an_interpretation_is_downgraded(page):
+    """server._apply refuses ambiguous_resolvable with no specification (ADR-017)."""
+    b = _block(page, "Complete a sentence with a full stop")
+    r = _rule(b, clarity="ambiguous_resolvable")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(r), B: _draft(r)})
+    ops, _ = consensus.export_page(plan, {}, "2026-10-25T00:00:00.000Z")
+    [rule] = [o for o in ops if o["op"] == "span" and o["span"]["kind"] == "rule"]
+    assert rule["span"]["tags"]["clarity"] == "ambiguous_deferred"
+
+
+def test_the_export_is_deterministic(page):
+    b = _block(page, "Complete a sentence with a full stop")
+    drafts = {A: _draft(_rule(b)), B: _draft(_rule(b))}
+    one = consensus.export_page(consensus.page_plan(FULL_STOPS, drafts), {}, "t")
+    two = consensus.export_page(consensus.page_plan(FULL_STOPS, drafts), {}, "t")
+    assert one == two
+
+
+def test_consensus_never_writes_to_a_human_page():
+    """The pages a human marked are the measurement (ADR-027)."""
+    assert "grammar-punctuation-and-conventions/punctuation/commas.md" in consensus.human_pages()
+
+
+def test_a_bare_instruction_settles_to_should():
+    """ADR-016: MUST only when the statement's own words make it one."""
+    assert consensus.settle_modality("Use italics for titles.", "SHOULD", "MUST") == "SHOULD"
+    assert consensus.settle_modality("Never use double spaces.", "SHOULD_NOT", "MUST_NOT") == "MUST_NOT"
+    assert consensus.settle_modality("Use X.", "PREFER", "MUST") == "", "anything else is adjudicated"
+
+
+def test_unit_and_clarity_settle_towards_caution():
+    assert consensus.settle_unit("", "token", "sentence") == "sentence"
+    assert consensus.settle_clarity("", "unambiguous", "ambiguous_deferred") == "ambiguous_deferred"
+
+
+def test_direction_is_never_settled_by_rule():
+    """ADR-006: presence vs absence decides the detection method, so a person or
+    the adjudicator decides it, never a tie-break."""
+    assert "direction" not in consensus.SETTLE
+
+
+def test_a_rule_in_the_page_introduction_is_not_exported(page, capsys):
+    """It would take level 1, which no candidate may have (ADR-002)."""
+    intro = next(b for b in page.blocks if b.kind != "heading" and len(b.heading_path) == 1)
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(intro)), B: _draft(_rule(intro))})
+    ops, _ = consensus.export_page(plan, {}, "t")
+    assert not [o for o in ops if o["op"] == "span"]
+    assert "page introduction" in capsys.readouterr().err
+
+
+def test_a_heading_restated_by_an_agreed_rule_below_it_is_not_an_item(page, tmp_path, monkeypatch):
+    """Both models marking the sentence under a heading is the rule kept, not
+    the heading dropped: it goes into the sweep's `dropped` with the reason,
+    and nobody is asked about it."""
+    import shutil
+    ledger = tmp_path / "real.jsonl"
+    shutil.copy(REPO / "ledger" / "rules.jsonl", ledger)
+    monkeypatch.setattr(consensus, "LEDGER", ledger)
+    # 'Ensure link text doesn't include a full stop' carries the manual's paired
+    # examples, so a sweep would refuse to drop it silently.
+    body = _block(page, "Use full stops at the end of sentences with link text")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(body)), B: _draft(_rule(body))})
+    assert "7aefaa812fe9f887" not in {it.get("uid") for it in plan["items"]}
+    [restated] = [r for r in plan["restated"] if r["uid"] == "7aefaa812fe9f887"]
+    assert restated["reason"].startswith("G-4")
+    ops, _ = consensus.export_page(plan, {it["item_id"]: {"decision": {"keep": False}, "reason": "r"}
+                                          for it in plan["items"]}, "t")
+    assert "7aefaa812fe9f887" in {d["uid"] for d in ops[-1]["dropped"]}
+
+
+def test_a_single_model_rule_is_not_cover(page, tmp_path, monkeypatch):
+    """The adjudicator may drop a single-model rule, so it cannot stand in for
+    the candidate it sits under."""
+    import shutil
+    ledger = tmp_path / "real.jsonl"
+    shutil.copy(REPO / "ledger" / "rules.jsonl", ledger)
+    monkeypatch.setattr(consensus, "LEDGER", ledger)
+    body = _block(page, "Use full stops at the end of sentences with link text")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(body)), B: _draft()})
+    assert "7aefaa812fe9f887" in {it.get("uid") for it in plan["items"] if it["kind"] == "dropped"}
+
+
+def test_a_prohibition_and_an_instruction_settle_by_the_statements_form():
+    assert consensus.settle_modality("Avoid questions in the text", "SHOULD", "SHOULD_NOT") == "SHOULD_NOT"
+    assert consensus.settle_modality("Use the word as an uncountable noun.", "SHOULD_NOT", "SHOULD") == "SHOULD"
+
+
+def test_a_label_written_as_a_paragraph_counts():
+    """currency.md: 'Not this' is a paragraph under a 'Write this' heading."""
+    p = drafting.load_page("grammar-punctuation-and-conventions/numbers-and-measurements/currency.md")
+    right = next(b for b in p.blocks if b.plain == "9 pounds, 8 shillings and 7 pence")
+    wrong = next(b for b in p.blocks if b.plain == "£9 8s 7d")
+    assert consensus._label_polarity(p, right.id) == "compliant"
+    assert consensus._label_polarity(p, wrong.id) == "violating"
+
+
+def test_dropping_a_single_rule_on_a_heading_tells_the_sweep(page, tmp_path, monkeypatch):
+    """A single-model rule standing on a heading candidate hides the candidate
+    from _dropped_candidates; dropping the rule must list the candidate in the
+    sweep's `dropped`, or apply_spans refuses the page."""
+    h = next(b for b in page.blocks if b.kind == "heading" and b.id in page.seeds)
+    r = _rule(h)
+    r["seed_uid"] = page.seeds[h.id]
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(r), B: _draft()})
+    adj = {it["item_id"]: {"decision": {"keep": False}, "reason": "advice"} for it in plan["items"]}
+    ops, _ = consensus.export_page(plan, adj, "t")
+    assert {"uid": page.seeds[h.id], "reason": "advice"} in ops[-1]["dropped"]

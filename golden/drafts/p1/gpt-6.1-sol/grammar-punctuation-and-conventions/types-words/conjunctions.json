@@ -1,0 +1,511 @@
+{
+ "effort": "high",
+ "input_sha256": "b01802847c0b9aba62d9ff671294e699152a3a28b6ee5ac3387ed316099299b8",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "bf6dd57f9650",
+    "end": 55,
+    "prefix": "",
+    "quote": "Use conjunctions to connect words, phrases and clauses.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An instruction-shaped introduction to the function of conjunctions. It does not identify when a conjunction is required; treating every connection without one as a violation would invent a broader restriction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "93ab8710cff0",
+    "end": 57,
+    "prefix": "",
+    "quote": "Coordinating conjunctions join things of equal importance",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the grammatical function of coordinating conjunctions rather than stating a separate textual requirement.",
+   "reason": "description",
+   "seed_uid": "5f3c7e055f8c88c0"
+  },
+  {
+   "anchor": {
+    "block_id": "05db6001d178",
+    "end": 84,
+    "prefix": "",
+    "quote": "Coordinating conjunctions can also join clauses that could stand alone as sentences.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits a construction without imposing a requirement or relaxing another extracted rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "10774b8d3be6",
+    "end": 145,
+    "prefix": "riting, but use them sparingly. ",
+    "quote": "You can usually delete them and keep meaning clear.",
+    "start": 94,
+    "suffix": ""
+   },
+   "note": "G-5: suggests an editing action supporting the sparing-use rule; it does not require deletion of every conjunctive adverb.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d65caa698862",
+    "end": 27,
+    "prefix": "",
+    "quote": "‘With’ is not a conjunction",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the more precise body instruction about adding clauses with ‘with’.",
+   "reason": "restatement",
+   "seed_uid": "fc6adbd415348667"
+  },
+  {
+   "anchor": {
+    "block_id": "5c536c9e0b89",
+    "end": 124,
+    "prefix": "beginning or end of a sentence. ",
+    "quote": "Reword or split the sentence to prevent this misuse.",
+    "start": 72,
+    "suffix": " This helps create shorter, simp"
+   },
+   "note": "G-5: offers alternative repair methods for the preceding prohibition, not an independent property of the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/conjunctions.md",
+ "page_sha256": "404c4d3925b4aba1e773dfc554b614e2cc8422457ca5637a166b115fbcb84688",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "bf6dd57f9650",
+    "note": "An instruction-shaped introduction to the function of conjunctions. It does not identify when a conjunction is required; treating every connection without one as a violation would invent a broader restriction.",
+    "quote": "Use conjunctions to connect words, phrases and clauses.",
+    "reason": "description"
+   },
+   {
+    "block_id": "93ab8710cff0",
+    "note": "Describes the grammatical function of coordinating conjunctions rather than stating a separate textual requirement.",
+    "quote": "Coordinating conjunctions join things of equal importance",
+    "reason": "description"
+   },
+   {
+    "block_id": "05db6001d178",
+    "note": "G-3: permits a construction without imposing a requirement or relaxing another extracted rule.",
+    "quote": "Coordinating conjunctions can also join clauses that could stand alone as sentences.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "10774b8d3be6",
+    "note": "G-5: suggests an editing action supporting the sparing-use rule; it does not require deletion of every conjunctive adverb.",
+    "quote": "You can usually delete them and keep meaning clear.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d65caa698862",
+    "note": "G-4: absorbed into the more precise body instruction about adding clauses with ‘with’.",
+    "quote": "‘With’ is not a conjunction",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5c536c9e0b89",
+    "note": "G-5: offers alternative repair methods for the preceding prohibition, not an independent property of the finished text.",
+    "quote": "Reword or split the sentence to prevent this misuse.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cffd111dcaf6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "cffd111dcaf6",
+      "quote": "Some conjunctions come in pairs, such as ‘whether/or’, 'both/and', ‘either/or’ and ‘neither/nor’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "214440ac124d",
+        "quote": "Whether wet or dry, the weather won't stop us going ahead with the team-building exercise."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "759252827386",
+        "quote": "My manager and I discussed both my performance review and my career prospects."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "886bce86b280",
+        "quote": "Either we complete the report today, or we work on it tomorrow."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Each conjunction in the pair should appear before the same type of word, phrase or clause.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The members of a paired conjunction introduce different grammatical types, such as a noun phrase after one member and a clause after the other.",
+    "when": [
+     "Applies to paired conjunctions, including whether/or, both/and, either/or and neither/nor."
+    ],
+    "why": "G-2: the different conjunction pairs are cases of one grammatical-parallelism check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "10774b8d3be6",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "10774b8d3be6",
+      "quote": "Conjunctive adverbs are often not needed."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "421fabb9441c",
+        "quote": "The deadline was still weeks away; however, it was going to be tough to meet."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "624d098fb09c",
+        "quote": "The deadline was still weeks away. It was going to be tough to meet."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "They add nuance to writing, but use them sparingly.",
+    "specification": "The instruction concerns conjunctive adverbs. The manual supplies no frequency threshold for ‘sparingly’, so a checker needs an agreed interpretation of excessive use. An individual conjunctive adverb is not automatically a violation.",
+    "unit": "paragraph",
+    "violation_condition": "A passage contains excessive conjunctive adverbs, particularly where they can be omitted without making the meaning unclear.",
+    "when": [
+     "Conjunctive adverbs can add nuance; their presence alone does not establish excessive use."
+    ],
+    "why": "G-4: retain one sparing-use instruction; E-1: both versions in the example are compliant, not a correct/incorrect contrast."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5c536c9e0b89",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d65caa698862",
+      "quote": "‘With’ is not a conjunction"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2c58961a00b2",
+        "quote": "The lake has had several blue-green algae outbreaks this year. It has been closed to swimming at least once a year since 2002."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "90303173ce90",
+        "quote": "The lake has had several blue-green algae outbreaks this year, with the lake closed to swimming at least once a year since 2002."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use ‘with’ to add a clause at the beginning or end of a sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘With’ introduces an added clause at the beginning or end of a sentence as though it were a conjunction.",
+    "when": [
+     "Applies to clause-adding uses of ‘with’ at the beginning or end of a sentence, not ordinary prepositional uses."
+    ],
+    "why": "G-4: the body supplies the actionable restriction behind the descriptive heading; rewording and splitting are remedies, not separate checks."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "cffd111dcaf6",
+    "end": 188,
+    "prefix": " ‘either/or’ and ‘neither/nor’. ",
+    "quote": "Each conjunction in the pair should appear before the same type of word, phrase or clause.",
+    "start": 98,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "cffd111dcaf6",
+     "end": 97,
+     "prefix": "",
+     "quote": "Some conjunctions come in pairs, such as ‘whether/or’, 'both/and', ‘either/or’ and ‘neither/nor’.",
+     "start": 0,
+     "suffix": " Each conjunction in the pair sh"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "214440ac124d",
+       "end": 90,
+       "prefix": "",
+       "quote": "Whether wet or dry, the weather won't stop us going ahead with the team-building exercise.",
+       "start": 0,
+       "suffix": " [Both conjunctions are followed"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "759252827386",
+       "end": 78,
+       "prefix": "",
+       "quote": "My manager and I discussed both my performance review and my career prospects.",
+       "start": 0,
+       "suffix": " [Both conjunctions are followed"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "886bce86b280",
+       "end": 63,
+       "prefix": "",
+       "quote": "Either we complete the report today, or we work on it tomorrow.",
+       "start": 0,
+       "suffix": " [Both conjunctions are followed"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The members of a paired conjunction introduce different grammatical types, such as a noun phrase after one member and a clause after the other."
+   },
+   "when": [
+    "Applies to paired conjunctions, including whether/or, both/and, either/or and neither/nor."
+   ],
+   "why": "G-2: the different conjunction pairs are cases of one grammatical-parallelism check."
+  },
+  {
+   "anchor": {
+    "block_id": "10774b8d3be6",
+    "end": 93,
+    "prefix": "e adverbs are often not needed. ",
+    "quote": "They add nuance to writing, but use them sparingly.",
+    "start": 42,
+    "suffix": " You can usually delete them and"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "10774b8d3be6",
+     "end": 41,
+     "prefix": "",
+     "quote": "Conjunctive adverbs are often not needed.",
+     "start": 0,
+     "suffix": " They add nuance to writing, but"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "421fabb9441c",
+       "end": 77,
+       "prefix": "",
+       "quote": "The deadline was still weeks away; however, it was going to be tough to meet.",
+       "start": 0,
+       "suffix": " [The adverb ‘however’ links 2 m"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "624d098fb09c",
+       "end": 68,
+       "prefix": "",
+       "quote": "The deadline was still weeks away. It was going to be tough to meet.",
+       "start": 0,
+       "suffix": " [No adverb links the 2 main cla"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The instruction concerns conjunctive adverbs. The manual supplies no frequency threshold for ‘sparingly’, so a checker needs an agreed interpretation of excessive use. An individual conjunctive adverb is not automatically a violation.",
+    "unit": "paragraph",
+    "violation_condition": "A passage contains excessive conjunctive adverbs, particularly where they can be omitted without making the meaning unclear."
+   },
+   "when": [
+    "Conjunctive adverbs can add nuance; their presence alone does not establish excessive use."
+   ],
+   "why": "G-4: retain one sparing-use instruction; E-1: both versions in the example are compliant, not a correct/incorrect contrast."
+  },
+  {
+   "anchor": {
+    "block_id": "5c536c9e0b89",
+    "end": 71,
+    "prefix": "",
+    "quote": "Don’t use ‘with’ to add a clause at the beginning or end of a sentence.",
+    "start": 0,
+    "suffix": " Reword or split the sentence to"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d65caa698862",
+     "end": 27,
+     "prefix": "",
+     "quote": "‘With’ is not a conjunction",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2c58961a00b2",
+       "end": 126,
+       "prefix": "",
+       "quote": "The lake has had several blue-green algae outbreaks this year. It has been closed to swimming at least once a year since 2002.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "90303173ce90",
+       "end": 128,
+       "prefix": "",
+       "quote": "The lake has had several blue-green algae outbreaks this year, with the lake closed to swimming at least once a year since 2002.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘With’ introduces an added clause at the beginning or end of a sentence as though it were a conjunction."
+   },
+   "when": [
+    "Applies to clause-adding uses of ‘with’ at the beginning or end of a sentence, not ordinary prepositional uses."
+   ],
+   "why": "G-4: the body supplies the actionable restriction behind the descriptive heading; rewording and splitting are remedies, not separate checks."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4622,
+  "output_tokens": 4735,
+  "reasoning_tokens": 3035
+ }
+}

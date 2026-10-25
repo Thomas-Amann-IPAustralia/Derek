@@ -1,0 +1,933 @@
+{
+ "effort": "low",
+ "input_sha256": "73fd83a2a767db37880443bd7ce6d713a438692dbb8a4097536604118c5c9ef4",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "4b543cd52eb9",
+    "end": 154,
+    "prefix": "",
+    "quote": "Colons draw attention to the text that follows. Only add colons that are essential. Use them to introduce examples, contrasts, lists and block quotations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory summary describing the role of colons.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "174e5eb8c4dc",
+    "end": 15,
+    "prefix": "",
+    "quote": "Limit colon use",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice to the writer; not an automatable property of text.",
+   "reason": "advice",
+   "seed_uid": "bd199ae2b2646bc4"
+  },
+  {
+   "anchor": {
+    "block_id": "3cdd2e55adfa",
+    "end": 89,
+    "prefix": "",
+    "quote": "Use a colon only if you are sure it is needed. Incorrect use creates confusion for users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice to the writer.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "057d931a74af",
+    "end": 44,
+    "prefix": "",
+    "quote": "Introduce examples and contrasts with colons",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping usages of colons.",
+   "reason": "section",
+   "seed_uid": "9981e1959732ec82"
+  },
+  {
+   "anchor": {
+    "block_id": "ba9b77ccc122",
+    "end": 15,
+    "prefix": "",
+    "quote": "Use a colon to:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in for list describing general functional uses of colons.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "61cb0db5247c",
+    "end": 117,
+    "prefix": "",
+    "quote": "A sentence fragment can come before the colon if the fragment can stand alone or if it’s introducing a bulleted list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Expresses permission for sentence fragments before a colon under certain conditions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "212144e66d05",
+    "end": 24,
+    "prefix": "",
+    "quote": "Start lists with a colon",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading introducing rules on colons in lists.",
+   "reason": "section",
+   "seed_uid": "4e91a188a88b2ccd"
+  },
+  {
+   "anchor": {
+    "block_id": "6d4e6e80b649",
+    "end": 61,
+    "prefix": "",
+    "quote": "Use a colon to introduce a list of words, phrases or clauses.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General grammatical guidance on how colons may introduce lists.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6369dc296a82",
+    "end": 61,
+    "prefix": "",
+    "quote": "Include the colon to restructure content into bulleted lists.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Guidance on restructuring text into lists.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "965b98716413",
+    "end": 133,
+    "prefix": "",
+    "quote": "If the colon introduces a series of sentences or questions, use a lead-in and colon to introduce them in a bulleted or numbered list.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Style guidance on structuring series of sentences or questions as lists.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d8125ff5deff",
+    "end": 38,
+    "prefix": "",
+    "quote": "Introduce block quotations with colons",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of quoting/block quotation conventions specified on quotation pages.",
+   "reason": "duplicate",
+   "seed_uid": "f7f1d53b461ad3c4"
+  },
+  {
+   "anchor": {
+    "block_id": "995ca9050859",
+    "end": 117,
+    "prefix": "",
+    "quote": "Use a colon to introduce a block quotation. Block quotations should also be coded with the HTML <blockquote> element.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of quotation rules; the HTML tag instruction is not_text markup advice.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/colons.md",
+ "page_sha256": "1a621314f1e8a619463e698a02c27b874a229fba81075d888b6196f11043e8ed",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "4b543cd52eb9",
+    "note": "Introductory summary describing the role of colons.",
+    "quote": "Colons draw attention to the text that follows. Only add colons that are essential. Use them to introduce examples, contrasts, lists and block quotations.",
+    "reason": "description"
+   },
+   {
+    "block_id": "174e5eb8c4dc",
+    "note": "General advice to the writer; not an automatable property of text.",
+    "quote": "Limit colon use",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3cdd2e55adfa",
+    "note": "General advice to the writer.",
+    "quote": "Use a colon only if you are sure it is needed. Incorrect use creates confusion for users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "057d931a74af",
+    "note": "Section heading grouping usages of colons.",
+    "quote": "Introduce examples and contrasts with colons",
+    "reason": "section"
+   },
+   {
+    "block_id": "ba9b77ccc122",
+    "note": "Lead-in for list describing general functional uses of colons.",
+    "quote": "Use a colon to:",
+    "reason": "section"
+   },
+   {
+    "block_id": "61cb0db5247c",
+    "note": "Expresses permission for sentence fragments before a colon under certain conditions.",
+    "quote": "A sentence fragment can come before the colon if the fragment can stand alone or if it’s introducing a bulleted list.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "212144e66d05",
+    "note": "Section heading introducing rules on colons in lists.",
+    "quote": "Start lists with a colon",
+    "reason": "section"
+   },
+   {
+    "block_id": "6d4e6e80b649",
+    "note": "General grammatical guidance on how colons may introduce lists.",
+    "quote": "Use a colon to introduce a list of words, phrases or clauses.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6369dc296a82",
+    "note": "Guidance on restructuring text into lists.",
+    "quote": "Include the colon to restructure content into bulleted lists.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "965b98716413",
+    "note": "Style guidance on structuring series of sentences or questions as lists.",
+    "quote": "If the colon introduces a series of sentences or questions, use a lead-in and colon to introduce them in a bulleted or numbered list.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d8125ff5deff",
+    "note": "Duplicate of quoting/block quotation conventions specified on quotation pages.",
+    "quote": "Introduce block quotations with colons",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "995ca9050859",
+    "note": "Duplicate of quotation rules; the HTML tag instruction is not_text markup advice.",
+    "quote": "Use a colon to introduce a block quotation. Block quotations should also be coded with the HTML <blockquote> element.",
+    "reason": "duplicate"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "50e053d2976a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "50e053d2976a",
+      "quote": "This is a common error."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Flows on as part of a full sentence without a colon.",
+      "parts": [
+       {
+        "block_id": "7843bceb1f69",
+        "quote": "Pick any 2 of low price, high speed and high quality."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Flows on as part of a full sentence without a colon.",
+      "parts": [
+       {
+        "block_id": "d972b4c757fc",
+        "quote": "The requirements for the position are strong communication skills and experience across content management platforms."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Unnecessary colon after a preposition.",
+      "parts": [
+       {
+        "block_id": "700b162fef87",
+        "quote": "Pick any 2 of: low price, high speed and high quality."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Unnecessary colon after a verb.",
+      "parts": [
+       {
+        "block_id": "5c7b225f3b88",
+        "quote": "The requirements for the position are: strong communication skills and experience across content management platforms."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t include a colon when the list flows on as part of a full sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a colon separating elements of a list that flows directly into a continuous full sentence (e.g. following a preposition or verb without a structural break)",
+    "when": [
+     "Does not apply to bulleted lists with a lead-in clause."
+    ],
+    "why": "Specific, actionable negative rule with explicit Correct/Incorrect contrast pairs."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ca9c54b7086f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6f25ce059c37",
+      "quote": "Use lower case following a colon in most cases"
+     },
+     {
+      "block_id": "bcb8f42d85f4",
+      "quote": "the word that follows the colon is a proper noun"
+     },
+     {
+      "block_id": "9b10020c0c5e",
+      "quote": "the text after the colon is a question that is a complete sentence."
+     },
+     {
+      "block_id": "d3d105646424",
+      "quote": "After a colon, capitalise the first word of questions that are complete sentences. This makes it clear that the question mark applies only to the text after the colon."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Lower case after colon for an independent clause that is not a question or proper noun.",
+      "parts": [
+       {
+        "block_id": "06baa124217b",
+        "quote": "We had to write 66 reports: it took months."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Capitalised after colon because it starts with a proper noun.",
+      "parts": [
+       {
+        "block_id": "e39e09a32334",
+        "quote": "The commander was confident: Special Air Service Regiment had enough ammunition."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Capitalised after colon because it is a complete question sentence.",
+      "parts": [
+       {
+        "block_id": "bb34604ab977",
+        "quote": "The election was fought on a simple question: Which party had the best economic credentials?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Incorrectly capitalised word after colon.",
+      "parts": [
+       {
+        "block_id": "dc86fd5a92be",
+        "quote": "We had to write many reports: It took months."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Incorrectly lower-cased proper noun after colon.",
+      "parts": [
+       {
+        "block_id": "f6487d8e1b7e",
+        "quote": "The commander was confident: special air service regiment had enough ammunition."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Incorrectly lower-cased complete question after colon.",
+      "parts": [
+       {
+        "block_id": "0d93892a12fa",
+        "quote": "The election was fought on a simple question: which party had the best economic credentials?"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Start the word after the colon with a lower case letter unless:",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a word following a colon begins with a capital letter when it is not a proper noun and not the start of a complete question sentence, or begins with a lower-case letter when it is a proper noun or a complete question sentence",
+    "when": [
+     "The word following the colon is a proper noun (must be capitalised).",
+     "The text after the colon is a question that is a complete sentence (must be capitalised)."
+    ],
+    "why": "G-1, G-2: Heading and its two qualification clauses describe a single rule on capitalisation following a colon."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0105cdba7c3c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "eafde106554a",
+      "quote": "Start subtitles of books and articles with a colon"
+     },
+     {
+      "block_id": "0105cdba7c3c",
+      "quote": "Follow the colon with a lower case letter, unless it’s a proper noun."
+     },
+     {
+      "block_id": "831e412814c2",
+      "quote": "Do this when writing about a book or article and also when referencing one."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Colon used before subtitle with lower case initial letter.",
+      "parts": [
+       {
+        "block_id": "5f3e53e22e5e",
+        "quote": "Teaching in Australia: a deep dive into the education system"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Colon used before subtitle in a formal citation.",
+      "parts": [
+       {
+        "block_id": "68480a83f24a",
+        "quote": "Stanovich KE (1986) ‘Matthew effects in reading: some consequences of individual differences in the acquisition of literacy’, Reading Research Quarterly, 21(4):360–407."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a colon before the subtitle of a book or article.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the subtitle of a book or article is attached without a preceding colon",
+    "when": [
+     "Applies when writing about a book or article and when referencing one."
+    ],
+    "why": "Specific punctuation convention for book/article titles and subtitles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "971500bef4e7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "fd0ae5ad9b17",
+      "quote": "Write mathematical ratios with a colon"
+     },
+     {
+      "block_id": "971500bef4e7",
+      "quote": "Use a colon to give a mathematical ratio."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Ratio without space after colon.",
+      "parts": [
+       {
+        "block_id": "c6cdf0b94663",
+        "quote": "The government proposes a 50:50 split."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Ratio without space after colon.",
+      "parts": [
+       {
+        "block_id": "95e6fd07c5a8",
+        "quote": "The cost-benefit ratio will be 7.5:1."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t put a space after the colon.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a colon used in a mathematical ratio followed or preceded by a space",
+    "when": [
+     "In mathematical ratios."
+    ],
+    "why": "G-2, G-4: The instruction to write mathematical ratios with a colon and without a space after it forms one concrete formatting rule."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "50e053d2976a",
+    "end": 72,
+    "prefix": "",
+    "quote": "Don’t include a colon when the list flows on as part of a full sentence.",
+    "start": 0,
+    "suffix": " This is a common error."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "50e053d2976a",
+     "end": 96,
+     "prefix": " on as part of a full sentence. ",
+     "quote": "This is a common error.",
+     "start": 73,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Flows on as part of a full sentence without a colon.",
+     "parts": [
+      {
+       "block_id": "7843bceb1f69",
+       "end": 53,
+       "prefix": "",
+       "quote": "Pick any 2 of low price, high speed and high quality.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Flows on as part of a full sentence without a colon.",
+     "parts": [
+      {
+       "block_id": "d972b4c757fc",
+       "end": 117,
+       "prefix": "",
+       "quote": "The requirements for the position are strong communication skills and experience across content management platforms.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Unnecessary colon after a preposition.",
+     "parts": [
+      {
+       "block_id": "700b162fef87",
+       "end": 54,
+       "prefix": "",
+       "quote": "Pick any 2 of: low price, high speed and high quality.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Unnecessary colon after a verb.",
+     "parts": [
+      {
+       "block_id": "5c7b225f3b88",
+       "end": 118,
+       "prefix": "",
+       "quote": "The requirements for the position are: strong communication skills and experience across content management platforms.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a colon separating elements of a list that flows directly into a continuous full sentence (e.g. following a preposition or verb without a structural break)"
+   },
+   "when": [
+    "Does not apply to bulleted lists with a lead-in clause."
+   ],
+   "why": "Specific, actionable negative rule with explicit Correct/Incorrect contrast pairs."
+  },
+  {
+   "anchor": {
+    "block_id": "ca9c54b7086f",
+    "end": 63,
+    "prefix": "",
+    "quote": "Start the word after the colon with a lower case letter unless:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6f25ce059c37",
+     "end": 46,
+     "prefix": "",
+     "quote": "Use lower case following a colon in most cases",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bcb8f42d85f4",
+     "end": 48,
+     "prefix": "",
+     "quote": "the word that follows the colon is a proper noun",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9b10020c0c5e",
+     "end": 67,
+     "prefix": "",
+     "quote": "the text after the colon is a question that is a complete sentence.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d3d105646424",
+     "end": 167,
+     "prefix": "",
+     "quote": "After a colon, capitalise the first word of questions that are complete sentences. This makes it clear that the question mark applies only to the text after the colon.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Lower case after colon for an independent clause that is not a question or proper noun.",
+     "parts": [
+      {
+       "block_id": "06baa124217b",
+       "end": 43,
+       "prefix": "",
+       "quote": "We had to write 66 reports: it took months.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Capitalised after colon because it starts with a proper noun.",
+     "parts": [
+      {
+       "block_id": "e39e09a32334",
+       "end": 80,
+       "prefix": "",
+       "quote": "The commander was confident: Special Air Service Regiment had enough ammunition.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Capitalised after colon because it is a complete question sentence.",
+     "parts": [
+      {
+       "block_id": "bb34604ab977",
+       "end": 92,
+       "prefix": "",
+       "quote": "The election was fought on a simple question: Which party had the best economic credentials?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Incorrectly capitalised word after colon.",
+     "parts": [
+      {
+       "block_id": "dc86fd5a92be",
+       "end": 45,
+       "prefix": "",
+       "quote": "We had to write many reports: It took months.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Incorrectly lower-cased proper noun after colon.",
+     "parts": [
+      {
+       "block_id": "f6487d8e1b7e",
+       "end": 80,
+       "prefix": "",
+       "quote": "The commander was confident: special air service regiment had enough ammunition.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Incorrectly lower-cased complete question after colon.",
+     "parts": [
+      {
+       "block_id": "0d93892a12fa",
+       "end": 92,
+       "prefix": "",
+       "quote": "The election was fought on a simple question: which party had the best economic credentials?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a word following a colon begins with a capital letter when it is not a proper noun and not the start of a complete question sentence, or begins with a lower-case letter when it is a proper noun or a complete question sentence"
+   },
+   "when": [
+    "The word following the colon is a proper noun (must be capitalised).",
+    "The text after the colon is a question that is a complete sentence (must be capitalised)."
+   ],
+   "why": "G-1, G-2: Heading and its two qualification clauses describe a single rule on capitalisation following a colon."
+  },
+  {
+   "anchor": {
+    "block_id": "0105cdba7c3c",
+    "end": 53,
+    "prefix": "",
+    "quote": "Use a colon before the subtitle of a book or article.",
+    "start": 0,
+    "suffix": " Follow the colon with a lower c"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "eafde106554a",
+     "end": 50,
+     "prefix": "",
+     "quote": "Start subtitles of books and articles with a colon",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0105cdba7c3c",
+     "end": 123,
+     "prefix": " subtitle of a book or article. ",
+     "quote": "Follow the colon with a lower case letter, unless it’s a proper noun.",
+     "start": 54,
+     "suffix": ""
+    },
+    {
+     "block_id": "831e412814c2",
+     "end": 75,
+     "prefix": "",
+     "quote": "Do this when writing about a book or article and also when referencing one.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Colon used before subtitle with lower case initial letter.",
+     "parts": [
+      {
+       "block_id": "5f3e53e22e5e",
+       "end": 60,
+       "prefix": "",
+       "quote": "Teaching in Australia: a deep dive into the education system",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Colon used before subtitle in a formal citation.",
+     "parts": [
+      {
+       "block_id": "68480a83f24a",
+       "end": 168,
+       "prefix": "",
+       "quote": "Stanovich KE (1986) ‘Matthew effects in reading: some consequences of individual differences in the acquisition of literacy’, Reading Research Quarterly, 21(4):360–407.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the subtitle of a book or article is attached without a preceding colon"
+   },
+   "when": [
+    "Applies when writing about a book or article and when referencing one."
+   ],
+   "why": "Specific punctuation convention for book/article titles and subtitles."
+  },
+  {
+   "anchor": {
+    "block_id": "971500bef4e7",
+    "end": 76,
+    "prefix": "n to give a mathematical ratio. ",
+    "quote": "Don’t put a space after the colon.",
+    "start": 42,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "fd0ae5ad9b17",
+     "end": 38,
+     "prefix": "",
+     "quote": "Write mathematical ratios with a colon",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "971500bef4e7",
+     "end": 41,
+     "prefix": "",
+     "quote": "Use a colon to give a mathematical ratio.",
+     "start": 0,
+     "suffix": " Don’t put a space after the col"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Ratio without space after colon.",
+     "parts": [
+      {
+       "block_id": "c6cdf0b94663",
+       "end": 38,
+       "prefix": "",
+       "quote": "The government proposes a 50:50 split.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Ratio without space after colon.",
+     "parts": [
+      {
+       "block_id": "95e6fd07c5a8",
+       "end": 37,
+       "prefix": "",
+       "quote": "The cost-benefit ratio will be 7.5:1.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a colon used in a mathematical ratio followed or preceded by a space"
+   },
+   "when": [
+    "In mathematical ratios."
+   ],
+   "why": "G-2, G-4: The instruction to write mathematical ratios with a colon and without a space after it forms one concrete formatting rule."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4955,
+  "output_tokens": 3440,
+  "reasoning_tokens": 0
+ }
+}

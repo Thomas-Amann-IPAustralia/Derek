@@ -1,0 +1,885 @@
+{
+ "effort": "low",
+ "input_sha256": "64b923a7486179cae92dd7ad3902b5e58bb37e90812f10ee725d760600b8df47",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "3172368e5e2f",
+    "end": 29,
+    "prefix": "",
+    "quote": "Identify the user and purpose",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice on planning correspondence, not a checkable textual rule (G-5).",
+   "reason": "advice",
+   "seed_uid": "28d0823e2d250c4e"
+  },
+  {
+   "anchor": {
+    "block_id": "0effa7785f9e",
+    "end": 48,
+    "prefix": "",
+    "quote": "Assess the formality based on context and policy",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice for writers to assess context before drafting (G-5).",
+   "reason": "advice",
+   "seed_uid": "3dc60a113c2281f5"
+  },
+  {
+   "anchor": {
+    "block_id": "647683c0c938",
+    "end": 45,
+    "prefix": "",
+    "quote": "Write in clear language with appropriate tone",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Broad section heading covering plain language and tone advice (G-1).",
+   "reason": "section",
+   "seed_uid": "7a56533b4070d9e9"
+  },
+  {
+   "anchor": {
+    "block_id": "7aff1d0d7b2e",
+    "end": 31,
+    "prefix": "",
+    "quote": "Always write in plain language.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of core plain language guidance on main plain language pages (G-6).",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a661bd3e5c4f",
+    "end": 49,
+    "prefix": "",
+    "quote": "Confirm privacy rules before you write to someone",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Workflow advice regarding compliance and processes (G-5).",
+   "reason": "advice",
+   "seed_uid": "31c41ae45895575e"
+  },
+  {
+   "anchor": {
+    "block_id": "1c44fc08916f",
+    "end": 40,
+    "prefix": "",
+    "quote": "Use your organisation’s letter templates",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Workflow guidance to use internal organisational templates (G-5).",
+   "reason": "advice",
+   "seed_uid": "90fd5ae2dc7555cf"
+  },
+  {
+   "anchor": {
+    "block_id": "5f8f9495b217",
+    "end": 11,
+    "prefix": "",
+    "quote": "Don’t write",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Heading label for a negative example block.",
+   "reason": "description",
+   "seed_uid": "80f0aa9568c650a2"
+  },
+  {
+   "anchor": {
+    "block_id": "dccc777c50cd",
+    "end": 35,
+    "prefix": "",
+    "quote": "Structure the body to help the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level section grouping structuring and plain-writing guidance (G-1).",
+   "reason": "section",
+   "seed_uid": "6911a24270204c3f"
+  },
+  {
+   "anchor": {
+    "block_id": "22c91bba5b91",
+    "end": 34,
+    "prefix": "",
+    "quote": "Check for style and writing errors",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Proofreading advice to the writer (G-5).",
+   "reason": "advice",
+   "seed_uid": "cafe3559bdbd358d"
+  },
+  {
+   "anchor": {
+    "block_id": "0e415e50b488",
+    "end": 46,
+    "prefix": "",
+    "quote": "Follow your organisation’s rules for archiving",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Administrative guidance on record keeping, not a property of the text (G-5).",
+   "reason": "advice",
+   "seed_uid": "edf42bbd1ddcf284"
+  }
+ ],
+ "page_path": "content-types/emails-and-letters.md",
+ "page_sha256": "21618fb58937a8feaf7ae106f2c6ef8673411b548e0ab1d58057b34d22171f98",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "3172368e5e2f",
+    "note": "General advice on planning correspondence, not a checkable textual rule (G-5).",
+    "quote": "Identify the user and purpose",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0effa7785f9e",
+    "note": "General advice for writers to assess context before drafting (G-5).",
+    "quote": "Assess the formality based on context and policy",
+    "reason": "advice"
+   },
+   {
+    "block_id": "647683c0c938",
+    "note": "Broad section heading covering plain language and tone advice (G-1).",
+    "quote": "Write in clear language with appropriate tone",
+    "reason": "section"
+   },
+   {
+    "block_id": "7aff1d0d7b2e",
+    "note": "Duplicate of core plain language guidance on main plain language pages (G-6).",
+    "quote": "Always write in plain language.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "a661bd3e5c4f",
+    "note": "Workflow advice regarding compliance and processes (G-5).",
+    "quote": "Confirm privacy rules before you write to someone",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1c44fc08916f",
+    "note": "Workflow guidance to use internal organisational templates (G-5).",
+    "quote": "Use your organisation’s letter templates",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5f8f9495b217",
+    "note": "Heading label for a negative example block.",
+    "quote": "Don’t write",
+    "reason": "description"
+   },
+   {
+    "block_id": "dccc777c50cd",
+    "note": "High-level section grouping structuring and plain-writing guidance (G-1).",
+    "quote": "Structure the body to help the user",
+    "reason": "section"
+   },
+   {
+    "block_id": "22c91bba5b91",
+    "note": "Proofreading advice to the writer (G-5).",
+    "quote": "Check for style and writing errors",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0e415e50b488",
+    "note": "Administrative guidance on record keeping, not a property of the text (G-5).",
+    "quote": "Follow your organisation’s rules for archiving",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "8064400c273b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "You must have someone’s explicit permission to add them to a mailing list and you must give them the option to unsubscribe.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "adding a person to a mailing list without explicit permission, or failing to provide an option to unsubscribe",
+    "when": [],
+    "why": "Strict obligation under Spam Act / privacy guidance (G-2)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b51eb5b5cd06",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9f99ef9baefa",
+      "quote": "Address blocks"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include the recipient’s name and postal address at the top of the letter.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "a letter missing the recipient's name and postal address at the top",
+    "when": [
+     "Sending a formal letter."
+    ],
+    "why": "Specific, checkable rule for formatting letter address blocks (G-4)."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "b7af4c76943a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "With emails, explain in the covering text that the email has a letter attached.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an email with an attached letter that does not explain in the covering text that a letter is attached",
+    "when": [
+     "An email has a letter attached."
+    ],
+    "why": "Clear textual instruction for covering emails."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "24678acc4d09",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d61cd011973f",
+      "quote": "Include dates in letters"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include the date you are sending the letter so that the recipient knows when you wrote it.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a letter that omits the date it is sent",
+    "when": [
+     "Writing a letter."
+    ],
+    "why": "Standard formatting requirement for correspondence."
+   },
+   {
+    "applies_to": [
+     "email",
+     "any"
+    ],
+    "block_id": "f264e8c41ccf",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "10164e07af9a",
+      "quote": "Write a clear and concise subject line"
+     },
+     {
+      "block_id": "8f8fa9d50dd0",
+      "quote": "Avoid using expressions and words that make the email look like spam or like a suspicious email."
+     },
+     {
+      "block_id": "cb45bd4c9a11",
+      "quote": "A subject in a letter is like a subject line in an email. It’s what the recipient will read first and must make the purpose of the letter very clear."
+     },
+     {
+      "block_id": "e48729629fca",
+      "quote": "Keep it short but informative."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Concise subject line",
+      "parts": [
+       {
+        "block_id": "867559c954f1",
+        "quote": "Melbourne meeting – June 2020 – proposed agenda"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Overly wordy subject line",
+      "parts": [
+       {
+        "block_id": "d9bb35d413fc",
+        "quote": "Items of interest for possible discussion by the Working Group on Safety in Melbourne next month"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Be clear and concise with the subject line. It should sum up the purpose of the email.",
+    "specification": "Subject lines should put the main idea first, be concise, and avoid spam-like or overly wordy phrasing.",
+    "unit": "phrase",
+    "violation_condition": "an email subject line or letter subject that does not state the purpose clearly and concisely, such as being vague, overly verbose, or looking like spam",
+    "when": [],
+    "why": "Consolidates rules on subject line formatting, conciseness, and clarity across emails and letters (G-1, G-2, G-4)."
+   },
+   {
+    "applies_to": [
+     "email",
+     "any"
+    ],
+    "block_id": "c60176f32946",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "87c5eb537878",
+      "quote": "Use a salutation and sign-off to match the formality"
+     },
+     {
+      "block_id": "ed407843d335",
+      "quote": "The salutation and sign off should match the level of formality."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "At the end of the letter or email, include a sign-off that matches the salutation. Use ‘Yours sincerely’ if you know the person’s name. Use ‘Yours faithfully’ if you do not.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'Yours faithfully' when the recipient's name is known, or 'Yours sincerely' when the recipient's name is not known, or omitting a matching sign-off",
+    "when": [
+     "In letters or emails requiring formal sign-offs."
+    ],
+    "why": "Core sign-off convention rule combining salutation/sign-off correspondence (G-2, G-4)."
+   },
+   {
+    "applies_to": [
+     "email",
+     "web_page"
+    ],
+    "block_id": "699549d6240c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Do not use URLs in emails or letters. Link a word or phrase so the reader is clear about where the link will take them.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a raw URL used as link text in an email or electronic letter instead of linking a descriptive word or phrase",
+    "when": [
+     "In electronic communications (emails or electronic letters). Does not apply to printed letters where URLs must be spelled out."
+    ],
+    "why": "Direct negative command prohibiting raw URLs in digital correspondence (G-2)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2ad1c3304cb2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Spell out the full URL of any links you use in a letter.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "hyperlinked text without the spelled-out full URL in a printed letter",
+    "when": [
+     "In printed letters."
+    ],
+    "why": "Specific rule for print letters contrasting with electronic correspondence (G-2)."
+   },
+   {
+    "applies_to": [
+     "email",
+     "any"
+    ],
+    "block_id": "9b166306bc69",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Never use an emoji in formal correspondence. Use emojis only when you’re sure they are appropriate, and don’t rely on them for meaning.",
+    "specification": "Formal correspondence should contain zero emoji characters.",
+    "unit": "character",
+    "violation_condition": "an emoji used in formal correspondence, or used as the sole conveyor of meaning",
+    "when": [
+     "In formal correspondence."
+    ],
+    "why": "Direct prohibition on emojis in formal writing."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "1281ca8a0afd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8eb45f883cd8",
+      "quote": "Include your signature block"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Every email should include a signature block with information about the sender and their organisation.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an email sent without a signature block containing sender and organisation information",
+    "when": [],
+    "why": "Clear structural requirement for emails (G-4)."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "8064400c273b",
+    "end": 123,
+    "prefix": "",
+    "quote": "You must have someone’s explicit permission to add them to a mailing list and you must give them the option to unsubscribe.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "adding a person to a mailing list without explicit permission, or failing to provide an option to unsubscribe"
+   },
+   "when": [],
+   "why": "Strict obligation under Spam Act / privacy guidance (G-2)."
+  },
+  {
+   "anchor": {
+    "block_id": "b51eb5b5cd06",
+    "end": 73,
+    "prefix": "",
+    "quote": "Include the recipient’s name and postal address at the top of the letter.",
+    "start": 0,
+    "suffix": " Make sure the recipient’s detai"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9f99ef9baefa",
+     "end": 14,
+     "prefix": "",
+     "quote": "Address blocks",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "a letter missing the recipient's name and postal address at the top"
+   },
+   "when": [
+    "Sending a formal letter."
+   ],
+   "why": "Specific, checkable rule for formatting letter address blocks (G-4)."
+  },
+  {
+   "anchor": {
+    "block_id": "b7af4c76943a",
+    "end": 79,
+    "prefix": "",
+    "quote": "With emails, explain in the covering text that the email has a letter attached.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an email with an attached letter that does not explain in the covering text that a letter is attached"
+   },
+   "when": [
+    "An email has a letter attached."
+   ],
+   "why": "Clear textual instruction for covering emails."
+  },
+  {
+   "anchor": {
+    "block_id": "24678acc4d09",
+    "end": 90,
+    "prefix": "",
+    "quote": "Include the date you are sending the letter so that the recipient knows when you wrote it.",
+    "start": 0,
+    "suffix": " This is especially important if"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d61cd011973f",
+     "end": 24,
+     "prefix": "",
+     "quote": "Include dates in letters",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "a letter that omits the date it is sent"
+   },
+   "when": [
+    "Writing a letter."
+   ],
+   "why": "Standard formatting requirement for correspondence."
+  },
+  {
+   "anchor": {
+    "block_id": "f264e8c41ccf",
+    "end": 86,
+    "prefix": "",
+    "quote": "Be clear and concise with the subject line. It should sum up the purpose of the email.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "10164e07af9a",
+     "end": 38,
+     "prefix": "",
+     "quote": "Write a clear and concise subject line",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8f8fa9d50dd0",
+     "end": 96,
+     "prefix": "",
+     "quote": "Avoid using expressions and words that make the email look like spam or like a suspicious email.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cb45bd4c9a11",
+     "end": 149,
+     "prefix": "",
+     "quote": "A subject in a letter is like a subject line in an email. It’s what the recipient will read first and must make the purpose of the letter very clear.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e48729629fca",
+     "end": 30,
+     "prefix": "",
+     "quote": "Keep it short but informative.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Concise subject line",
+     "parts": [
+      {
+       "block_id": "867559c954f1",
+       "end": 47,
+       "prefix": "",
+       "quote": "Melbourne meeting – June 2020 – proposed agenda",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Overly wordy subject line",
+     "parts": [
+      {
+       "block_id": "d9bb35d413fc",
+       "end": 96,
+       "prefix": "",
+       "quote": "Items of interest for possible discussion by the Working Group on Safety in Melbourne next month",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email",
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Subject lines should put the main idea first, be concise, and avoid spam-like or overly wordy phrasing.",
+    "unit": "phrase",
+    "violation_condition": "an email subject line or letter subject that does not state the purpose clearly and concisely, such as being vague, overly verbose, or looking like spam"
+   },
+   "when": [],
+   "why": "Consolidates rules on subject line formatting, conciseness, and clarity across emails and letters (G-1, G-2, G-4)."
+  },
+  {
+   "anchor": {
+    "block_id": "c60176f32946",
+    "end": 173,
+    "prefix": "",
+    "quote": "At the end of the letter or email, include a sign-off that matches the salutation. Use ‘Yours sincerely’ if you know the person’s name. Use ‘Yours faithfully’ if you do not.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "87c5eb537878",
+     "end": 52,
+     "prefix": "",
+     "quote": "Use a salutation and sign-off to match the formality",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ed407843d335",
+     "end": 64,
+     "prefix": "",
+     "quote": "The salutation and sign off should match the level of formality.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email",
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'Yours faithfully' when the recipient's name is known, or 'Yours sincerely' when the recipient's name is not known, or omitting a matching sign-off"
+   },
+   "when": [
+    "In letters or emails requiring formal sign-offs."
+   ],
+   "why": "Core sign-off convention rule combining salutation/sign-off correspondence (G-2, G-4)."
+  },
+  {
+   "anchor": {
+    "block_id": "699549d6240c",
+    "end": 223,
+    "prefix": "accessible and check they work. ",
+    "quote": "Do not use URLs in emails or letters. Link a word or phrase so the reader is clear about where the link will take them.",
+    "start": 104,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email",
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a raw URL used as link text in an email or electronic letter instead of linking a descriptive word or phrase"
+   },
+   "when": [
+    "In electronic communications (emails or electronic letters). Does not apply to printed letters where URLs must be spelled out."
+   ],
+   "why": "Direct negative command prohibiting raw URLs in digital correspondence (G-2)."
+  },
+  {
+   "anchor": {
+    "block_id": "2ad1c3304cb2",
+    "end": 56,
+    "prefix": "",
+    "quote": "Spell out the full URL of any links you use in a letter.",
+    "start": 0,
+    "suffix": " This makes it easier for the re"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "hyperlinked text without the spelled-out full URL in a printed letter"
+   },
+   "when": [
+    "In printed letters."
+   ],
+   "why": "Specific rule for print letters contrasting with electronic correspondence (G-2)."
+  },
+  {
+   "anchor": {
+    "block_id": "9b166306bc69",
+    "end": 135,
+    "prefix": "",
+    "quote": "Never use an emoji in formal correspondence. Use emojis only when you’re sure they are appropriate, and don’t rely on them for meaning.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email",
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "Formal correspondence should contain zero emoji characters.",
+    "unit": "character",
+    "violation_condition": "an emoji used in formal correspondence, or used as the sole conveyor of meaning"
+   },
+   "when": [
+    "In formal correspondence."
+   ],
+   "why": "Direct prohibition on emojis in formal writing."
+  },
+  {
+   "anchor": {
+    "block_id": "1281ca8a0afd",
+    "end": 102,
+    "prefix": "",
+    "quote": "Every email should include a signature block with information about the sender and their organisation.",
+    "start": 0,
+    "suffix": " This could be you or the person"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8eb45f883cd8",
+     "end": 28,
+     "prefix": "",
+     "quote": "Include your signature block",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "an email sent without a signature block containing sender and organisation information"
+   },
+   "when": [],
+   "why": "Clear structural requirement for emails (G-4)."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 7823,
+  "output_tokens": 3286,
+  "reasoning_tokens": 0
+ }
+}

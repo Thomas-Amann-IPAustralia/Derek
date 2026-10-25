@@ -1,0 +1,1009 @@
+{
+ "effort": "high",
+ "input_sha256": "4c925fc9c3ba48b94895f77490a9f06be361b413724f10ffb4546c529ebdb279",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "f97cb57da583",
+    "end": 31,
+    "prefix": "",
+    "quote": "Use a sequential structure for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The following list supplies the content types covered by the sequential-structure rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "376f87708496",
+    "end": 28,
+    "prefix": "",
+    "quote": "Use the right writing style.",
+    "start": 0,
+    "suffix": " For example, instructions and t"
+   },
+   "note": "Generic writer advice under G-5. The following imperative-mood and past-tense guidance supplies the actionable text checks.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d7d059374398",
+    "end": 119,
+    "prefix": "",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "start": 0,
+    "suffix": " Use the same navigation element"
+   },
+   "note": "Requires testing navigation and technology-dependent access, rather than assessing the words alone.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d7d059374398",
+    "end": 169,
+    "prefix": "f the technology they're using. ",
+    "quote": "Use the same navigation elements across services.",
+    "start": 120,
+    "suffix": ""
+   },
+   "note": "Concerns interface navigation elements across services, not a specified textual property.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b2d7c5ff31a5",
+    "end": 97,
+    "prefix": "ce of steps can be challenging. ",
+    "quote": "Create the right number of steps.",
+    "start": 64,
+    "suffix": ""
+   },
+   "note": "Absorbed into the balanced-steps rule, with the following list explaining unsuitable granularity.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b2acb65ea3be",
+    "end": 113,
+    "prefix": "",
+    "quote": "The broad stages can fit into a higher-level sequential structure, or into topics using a hierarchical structure.",
+    "start": 0,
+    "suffix": " This combination of structures "
+   },
+   "note": "Permitted implementations of broader stages; recorded under the complex-process grouping rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dd7b3402f221",
+    "end": 258,
+    "prefix": "ntering their personal details. ",
+    "quote": "Start with the most important information – the course selection – so people don’t waste time trying to find it.",
+    "start": 146,
+    "suffix": ""
+   },
+   "note": "A course-registration application of meaningful user-oriented sequencing, absorbed into that rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5696ee761405",
+    "end": 38,
+    "prefix": "",
+    "quote": "If an explanation is needed, consider:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces considerations for the writer, rather than independently required textual features.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "85514a148617",
+    "end": 40,
+    "prefix": "",
+    "quote": "how you can help people keep their focus",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Part of the preceding ‘consider’ instruction, not a separate text requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a95cf81af223",
+    "end": 41,
+    "prefix": "",
+    "quote": "what the minimum amount of information is",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A writer consideration supporting focused instructions, not a specified minimum or maximum.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "50ab0e83648c",
+    "end": 36,
+    "prefix": "",
+    "quote": "whether a link would be more useful.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Asks the writer to evaluate an alternative; it does not require a link.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d960c9885fa9",
+    "end": 160,
+    "prefix": "lude too much in a single step. ",
+    "quote": "You need to break the task into smaller steps.",
+    "start": 114,
+    "suffix": ""
+   },
+   "note": "Absorbed into the balanced-steps rule with the preceding condition about excessive supporting information.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/types-structure/sequential-structure.md",
+ "page_sha256": "a8c7be99c595b214516585e3225774e21df18a196fbba8eee324dfeae8b1d4ab",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "f97cb57da583",
+    "note": "The following list supplies the content types covered by the sequential-structure rule.",
+    "quote": "Use a sequential structure for:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "376f87708496",
+    "note": "Generic writer advice under G-5. The following imperative-mood and past-tense guidance supplies the actionable text checks.",
+    "quote": "Use the right writing style.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d7d059374398",
+    "note": "Requires testing navigation and technology-dependent access, rather than assessing the words alone.",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d7d059374398",
+    "note": "Concerns interface navigation elements across services, not a specified textual property.",
+    "quote": "Use the same navigation elements across services.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b2d7c5ff31a5",
+    "note": "Absorbed into the balanced-steps rule, with the following list explaining unsuitable granularity.",
+    "quote": "Create the right number of steps.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b2acb65ea3be",
+    "note": "Permitted implementations of broader stages; recorded under the complex-process grouping rule.",
+    "quote": "The broad stages can fit into a higher-level sequential structure, or into topics using a hierarchical structure.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "dd7b3402f221",
+    "note": "A course-registration application of meaningful user-oriented sequencing, absorbed into that rule.",
+    "quote": "Start with the most important information – the course selection – so people don’t waste time trying to find it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5696ee761405",
+    "note": "Introduces considerations for the writer, rather than independently required textual features.",
+    "quote": "If an explanation is needed, consider:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "85514a148617",
+    "note": "Part of the preceding ‘consider’ instruction, not a separate text requirement.",
+    "quote": "how you can help people keep their focus",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a95cf81af223",
+    "note": "A writer consideration supporting focused instructions, not a specified minimum or maximum.",
+    "quote": "what the minimum amount of information is",
+    "reason": "advice"
+   },
+   {
+    "block_id": "50ab0e83648c",
+    "note": "Asks the writer to evaluate an alternative; it does not require a link.",
+    "quote": "whether a link would be more useful.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d960c9885fa9",
+    "note": "Absorbed into the balanced-steps rule with the preceding condition about excessive supporting information.",
+    "quote": "You need to break the task into smaller steps.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5207f51c60be",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f97cb57da583",
+      "quote": "Use a sequential structure for:"
+     },
+     {
+      "block_id": "4bd6b746ef5d",
+      "quote": "instructions – such as how-to guides, recipes and directions"
+     },
+     {
+      "block_id": "2d69f19ceed8",
+      "quote": "step-by-step content formats – such as forms"
+     },
+     {
+      "block_id": "ef10840358ce",
+      "quote": "reports of events – such as incident reports, histories and case studies."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a sequential structure to explain steps or a specific order",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Instructions, step-by-step content or an account of events are organised without the sequence needed to follow the steps or order of events.",
+    "when": [
+     "Applies to instructions, including how-to guides, recipes and directions.",
+     "Applies to step-by-step content formats, including forms.",
+     "Applies to reports of events, including incident reports, histories and case studies."
+    ],
+    "why": "G-2 combines the applicable content types; G-4 consolidates the heading and its restatement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "376f87708496",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For example, instructions and transactions are more direct and use the imperative.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An instruction or transactional action is expressed in a non-imperative form instead of directly telling the user what to do.",
+    "when": [
+     "Applies to instructions and transactional actions, not accompanying explanatory statements."
+    ],
+    "why": "G-4 uses the actionable body wording; imperative instructions and past-tense event reporting are different checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "376f87708496",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Reports of events usually use the past tense of the verb.",
+    "specification": "Treat this as a default for narration of completed events, not a requirement that every verb anywhere in an event report be in the past tense.",
+    "unit": "sentence",
+    "violation_condition": "An account of a completed event uses a non-past tense where there is no contextual reason to depart from past-tense reporting.",
+    "when": [
+     "Applies to reports of events.",
+     "The word ‘usually’ allows contextually appropriate departures from past-tense narration."
+    ],
+    "why": "G-2 retains the qualified scope of ‘usually’; this is distinct from the imperative-mood check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "9738532f213b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write clear page titles.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A webpage title is unclear about the page’s subject or purpose.",
+    "when": [],
+    "why": "The title requirement is an independently flaggable textual property, rather than a rule about sequencing."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "d2c7400f9645",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "dd7b3402f221",
+      "quote": "Start with the most important information – the course selection – so people don’t waste time trying to find it."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Order the content in a sequence that is meaningful for the user.",
+    "specification": "Assess order against the intended task and its dependencies. In the course-registration example, course selection precedes personal details; do not interpret this as requiring importance order instead of chronological or dependency order in every sequence.",
+    "unit": "document",
+    "violation_condition": "Content is ordered in a way that obstructs the user’s task or makes the sequence difficult to understand.",
+    "when": [
+     "Consider the order in which users need information and make decisions.",
+     "In the course-registration example, put course selection before personal details."
+    ],
+    "why": "G-2 treats the course-registration instruction as a specific application of meaningful ordering, not a second ordering finding."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "41d66cc04b88",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Organise content in a clear order using section headings.",
+    "specification": "Check for section headings where content needs sectioning. Do not infer that every short page must contain multiple sections; meaningful sequence is checked separately.",
+    "unit": "document",
+    "violation_condition": "Content requiring division into sections lacks section headings that make its organisation apparent.",
+    "when": [
+     "Applies where the content needs division into sections."
+    ],
+    "why": "The grain test separates missing section structure from unclear heading wording and incorrect content order."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "41d66cc04b88",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Describe the topics or the following section in the headings.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not describe the topic or section that follows it.",
+    "when": [],
+    "why": "The grain test separates a heading’s descriptive accuracy from the requirement to provide section headings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "20d440ca4b7a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "b2d7c5ff31a5",
+      "quote": "Create the right number of steps."
+     },
+     {
+      "block_id": "57eac97c144d",
+      "quote": "Too few steps might mean you have left out important information or grouped too many actions under one heading."
+     },
+     {
+      "block_id": "c9ddb8caca41",
+      "quote": "Too many steps might mean you have divided the process into steps so small they are meaningless."
+     },
+     {
+      "block_id": "d960c9885fa9",
+      "quote": "If users need a lot of extra information to do a task, you might have tried to include too much in a single step. You need to break the task into smaller steps."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Split processes into balanced steps",
+    "specification": "Assess balance using the stated symptoms: omitted information, too many actions under one heading, excessive explanatory burden within a step, or meaningless subdivisions. The page supplies no numerical step-count or length threshold.",
+    "unit": "block",
+    "violation_condition": "A process has steps that omit important information, crowd too many actions or supporting explanations into one step, or subdivide actions into meaningless fragments.",
+    "when": [
+     "Applies to processes divided into steps.",
+     "If users need a lot of extra information for one step, consider whether that step combines too much of the task."
+    ],
+    "why": "G-2 combines symptoms of unsuitable step granularity; G-4 absorbs the repeated instruction to split overloaded steps."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b4603314c73a",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "b2acb65ea3be",
+      "quote": "The broad stages can fit into a higher-level sequential structure, or into topics using a hierarchical structure."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If the process is very complex, group steps into broader stages of the process.",
+    "specification": "The page does not define when a process becomes ‘very complex’. Do not impose a numerical step-count threshold.",
+    "unit": "document",
+    "violation_condition": "A very complex process presents its steps without broader stage groupings.",
+    "when": [
+     "Applies when the process is very complex.",
+     "Broader stages may use a higher-level sequential structure or topics in a hierarchical structure."
+    ],
+    "why": "Stage grouping is distinct from step granularity; G-3 records the permitted higher-level structures as options, not separate rules."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "a98e5b57ee73",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you use a combination of structures, design menu and link items based on how users find their way through the content.",
+    "specification": "Assessment requires an account of users’ intended routes through the content. The page does not specify a menu arrangement or link-label pattern that can be assumed universally.",
+    "unit": "document",
+    "violation_condition": "Menu and link items in content combining structures do not support the routes users need to find their way through that content.",
+    "when": [
+     "Applies when content combines structures."
+    ],
+    "why": "This is a conditional requirement for navigation organisation, distinct from heading consistency."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a98e5b57ee73",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Be consistent in the language, style and design of headings at the same level across the content.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Headings at the same level use inconsistent language, style or design across the content.",
+    "when": [
+     "In this passage, the requirement applies to content combining structures.",
+     "Compare headings at the same level."
+    ],
+    "why": "G-2 keeps the dimensions of same-level heading consistency together as one consistency check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8de28aae4b8e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "da7af712b357",
+      "quote": "For instructional and transactional content, people want to know what they need to do. They don’t need long explanations of the process."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write clear instructions users can follow",
+    "specification": "Read the heading through its immediate explanation: required actions should be apparent, and explanations should be limited to what users need. Necessary explanations are allowed; no numerical length limit is stated.",
+    "unit": "section",
+    "violation_condition": "Instructional or transactional content obscures what users need to do with unnecessary or lengthy explanations of the process.",
+    "when": [
+     "Applies to instructional and transactional content.",
+     "Explanations may be included when users need them."
+    ],
+    "why": "G-4 reads the heading with its explanatory body; G-2 allows necessary explanations, while overloaded step granularity is checked separately."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "5207f51c60be",
+    "end": 63,
+    "prefix": "",
+    "quote": "Use a sequential structure to explain steps or a specific order",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f97cb57da583",
+     "end": 31,
+     "prefix": "",
+     "quote": "Use a sequential structure for:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4bd6b746ef5d",
+     "end": 60,
+     "prefix": "",
+     "quote": "instructions – such as how-to guides, recipes and directions",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2d69f19ceed8",
+     "end": 44,
+     "prefix": "",
+     "quote": "step-by-step content formats – such as forms",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ef10840358ce",
+     "end": 73,
+     "prefix": "",
+     "quote": "reports of events – such as incident reports, histories and case studies.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "fb0c8dcf911b01c4",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Instructions, step-by-step content or an account of events are organised without the sequence needed to follow the steps or order of events."
+   },
+   "when": [
+    "Applies to instructions, including how-to guides, recipes and directions.",
+    "Applies to step-by-step content formats, including forms.",
+    "Applies to reports of events, including incident reports, histories and case studies."
+   ],
+   "why": "G-2 combines the applicable content types; G-4 consolidates the heading and its restatement."
+  },
+  {
+   "anchor": {
+    "block_id": "376f87708496",
+    "end": 111,
+    "prefix": "Use the right writing style. ",
+    "quote": "For example, instructions and transactions are more direct and use the imperative.",
+    "start": 29,
+    "suffix": " Reports of events usually use t"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An instruction or transactional action is expressed in a non-imperative form instead of directly telling the user what to do."
+   },
+   "when": [
+    "Applies to instructions and transactional actions, not accompanying explanatory statements."
+   ],
+   "why": "G-4 uses the actionable body wording; imperative instructions and past-tense event reporting are different checks."
+  },
+  {
+   "anchor": {
+    "block_id": "376f87708496",
+    "end": 169,
+    "prefix": " direct and use the imperative. ",
+    "quote": "Reports of events usually use the past tense of the verb.",
+    "start": 112,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Treat this as a default for narration of completed events, not a requirement that every verb anywhere in an event report be in the past tense.",
+    "unit": "sentence",
+    "violation_condition": "An account of a completed event uses a non-past tense where there is no contextual reason to depart from past-tense reporting."
+   },
+   "when": [
+    "Applies to reports of events.",
+    "The word ‘usually’ allows contextually appropriate departures from past-tense narration."
+   ],
+   "why": "G-2 retains the qualified scope of ‘usually’; this is distinct from the imperative-mood check."
+  },
+  {
+   "anchor": {
+    "block_id": "9738532f213b",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write clear page titles.",
+    "start": 0,
+    "suffix": " The title is the first thing a "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A webpage title is unclear about the page’s subject or purpose."
+   },
+   "when": [],
+   "why": "The title requirement is an independently flaggable textual property, rather than a rule about sequencing."
+  },
+  {
+   "anchor": {
+    "block_id": "d2c7400f9645",
+    "end": 64,
+    "prefix": "",
+    "quote": "Order the content in a sequence that is meaningful for the user.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "dd7b3402f221",
+     "end": 258,
+     "prefix": "ntering their personal details. ",
+     "quote": "Start with the most important information – the course selection – so people don’t waste time trying to find it.",
+     "start": 146,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess order against the intended task and its dependencies. In the course-registration example, course selection precedes personal details; do not interpret this as requiring importance order instead of chronological or dependency order in every sequence.",
+    "unit": "document",
+    "violation_condition": "Content is ordered in a way that obstructs the user’s task or makes the sequence difficult to understand."
+   },
+   "when": [
+    "Consider the order in which users need information and make decisions.",
+    "In the course-registration example, put course selection before personal details."
+   ],
+   "why": "G-2 treats the course-registration instruction as a specific application of meaningful ordering, not a second ordering finding."
+  },
+  {
+   "anchor": {
+    "block_id": "41d66cc04b88",
+    "end": 57,
+    "prefix": "",
+    "quote": "Organise content in a clear order using section headings.",
+    "start": 0,
+    "suffix": " Describe the topics or the foll"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Check for section headings where content needs sectioning. Do not infer that every short page must contain multiple sections; meaningful sequence is checked separately.",
+    "unit": "document",
+    "violation_condition": "Content requiring division into sections lacks section headings that make its organisation apparent."
+   },
+   "when": [
+    "Applies where the content needs division into sections."
+   ],
+   "why": "The grain test separates missing section structure from unclear heading wording and incorrect content order."
+  },
+  {
+   "anchor": {
+    "block_id": "41d66cc04b88",
+    "end": 119,
+    "prefix": "r order using section headings. ",
+    "quote": "Describe the topics or the following section in the headings.",
+    "start": 58,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not describe the topic or section that follows it."
+   },
+   "when": [],
+   "why": "The grain test separates a heading’s descriptive accuracy from the requirement to provide section headings."
+  },
+  {
+   "anchor": {
+    "block_id": "20d440ca4b7a",
+    "end": 35,
+    "prefix": "",
+    "quote": "Split processes into balanced steps",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "b2d7c5ff31a5",
+     "end": 97,
+     "prefix": "ce of steps can be challenging. ",
+     "quote": "Create the right number of steps.",
+     "start": 64,
+     "suffix": ""
+    },
+    {
+     "block_id": "57eac97c144d",
+     "end": 111,
+     "prefix": "",
+     "quote": "Too few steps might mean you have left out important information or grouped too many actions under one heading.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c9ddb8caca41",
+     "end": 96,
+     "prefix": "",
+     "quote": "Too many steps might mean you have divided the process into steps so small they are meaningless.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d960c9885fa9",
+     "end": 160,
+     "prefix": "",
+     "quote": "If users need a lot of extra information to do a task, you might have tried to include too much in a single step. You need to break the task into smaller steps.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "29eef1c1673bdfee",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess balance using the stated symptoms: omitted information, too many actions under one heading, excessive explanatory burden within a step, or meaningless subdivisions. The page supplies no numerical step-count or length threshold.",
+    "unit": "block",
+    "violation_condition": "A process has steps that omit important information, crowd too many actions or supporting explanations into one step, or subdivide actions into meaningless fragments."
+   },
+   "when": [
+    "Applies to processes divided into steps.",
+    "If users need a lot of extra information for one step, consider whether that step combines too much of the task."
+   ],
+   "why": "G-2 combines symptoms of unsuitable step granularity; G-4 absorbs the repeated instruction to split overloaded steps."
+  },
+  {
+   "anchor": {
+    "block_id": "b4603314c73a",
+    "end": 79,
+    "prefix": "",
+    "quote": "If the process is very complex, group steps into broader stages of the process.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "b2acb65ea3be",
+     "end": 113,
+     "prefix": "",
+     "quote": "The broad stages can fit into a higher-level sequential structure, or into topics using a hierarchical structure.",
+     "start": 0,
+     "suffix": " This combination of structures "
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define when a process becomes ‘very complex’. Do not impose a numerical step-count threshold.",
+    "unit": "document",
+    "violation_condition": "A very complex process presents its steps without broader stage groupings."
+   },
+   "when": [
+    "Applies when the process is very complex.",
+    "Broader stages may use a higher-level sequential structure or topics in a hierarchical structure."
+   ],
+   "why": "Stage grouping is distinct from step granularity; G-3 records the permitted higher-level structures as options, not separate rules."
+  },
+  {
+   "anchor": {
+    "block_id": "a98e5b57ee73",
+    "end": 121,
+    "prefix": "",
+    "quote": "If you use a combination of structures, design menu and link items based on how users find their way through the content.",
+    "start": 0,
+    "suffix": " Be consistent in the language, "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assessment requires an account of users’ intended routes through the content. The page does not specify a menu arrangement or link-label pattern that can be assumed universally.",
+    "unit": "document",
+    "violation_condition": "Menu and link items in content combining structures do not support the routes users need to find their way through that content."
+   },
+   "when": [
+    "Applies when content combines structures."
+   ],
+   "why": "This is a conditional requirement for navigation organisation, distinct from heading consistency."
+  },
+  {
+   "anchor": {
+    "block_id": "a98e5b57ee73",
+    "end": 219,
+    "prefix": " their way through the content. ",
+    "quote": "Be consistent in the language, style and design of headings at the same level across the content.",
+    "start": 122,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Headings at the same level use inconsistent language, style or design across the content."
+   },
+   "when": [
+    "In this passage, the requirement applies to content combining structures.",
+    "Compare headings at the same level."
+   ],
+   "why": "G-2 keeps the dimensions of same-level heading consistency together as one consistency check."
+  },
+  {
+   "anchor": {
+    "block_id": "8de28aae4b8e",
+    "end": 41,
+    "prefix": "",
+    "quote": "Write clear instructions users can follow",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "da7af712b357",
+     "end": 136,
+     "prefix": "",
+     "quote": "For instructional and transactional content, people want to know what they need to do. They don’t need long explanations of the process.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "c74d39d184be92ea",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Read the heading through its immediate explanation: required actions should be apparent, and explanations should be limited to what users need. Necessary explanations are allowed; no numerical length limit is stated.",
+    "unit": "section",
+    "violation_condition": "Instructional or transactional content obscures what users need to do with unnecessary or lengthy explanations of the process."
+   },
+   "when": [
+    "Applies to instructional and transactional content.",
+    "Explanations may be included when users need them."
+   ],
+   "why": "G-4 reads the heading with its explanatory body; G-2 allows necessary explanations, while overloaded step granularity is checked separately."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4509,
+  "output_tokens": 6713,
+  "reasoning_tokens": 3019
+ }
+}

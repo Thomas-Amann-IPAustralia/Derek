@@ -1,0 +1,3632 @@
+{
+ "effort": "high",
+ "input_sha256": "697049a3eed1d8f18c8cd82b4c5442fce889e5bc0cc7560470c34db233984155",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a286e3f5cc5e",
+    "end": 74,
+    "prefix": "",
+    "quote": "Users need transcripts, captions and audio descriptions for accessibility.",
+    "start": 0,
+    "suffix": " Work with experts to record and"
+   },
+   "note": "Requires accessibility assets for media rather than a property of their wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a286e3f5cc5e",
+    "end": 117,
+    "prefix": "descriptions for accessibility. ",
+    "quote": "Work with experts to record and mix audio.",
+    "start": 75,
+    "suffix": " Check branding, copyright and p"
+   },
+   "note": "G-5: production workflow.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a286e3f5cc5e",
+    "end": 173,
+    "prefix": "xperts to record and mix audio. ",
+    "quote": "Check branding, copyright and permissions requirements.",
+    "start": 118,
+    "suffix": ""
+   },
+   "note": "G-5: checking requirements is a writer action.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ace31bb50790",
+    "end": 45,
+    "prefix": "",
+    "quote": "Make sure everyone can access audio and video",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the accessibility requirements below.",
+   "reason": "section",
+   "seed_uid": "4ddb32725fb24bcd"
+  },
+  {
+   "anchor": {
+    "block_id": "2eae9d07ef84",
+    "end": 31,
+    "prefix": "",
+    "quote": "Audio-visual content must have:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires accompanying accessibility assets.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "07a0c46344fd",
+    "end": 113,
+    "prefix": "",
+    "quote": "a transcript for people who don’t want to watch the video or listen to the audio – and for search engine indexing",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires an accompanying transcript, not particular transcript wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "218e895e060a",
+    "end": 85,
+    "prefix": "",
+    "quote": "closed captions for people who can’t hear the dialogue and other sounds (symbol [CC])",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires a media accessibility feature.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d9671141ca04",
+    "end": 56,
+    "prefix": "",
+    "quote": "an audio description for people who can’t see the video.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires an additional audio asset.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "20e87face735",
+    "end": 39,
+    "prefix": "",
+    "quote": "Choose an accessible media player that:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Media-player selection and functionality.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f83a0c3e8920",
+    "end": 41,
+    "prefix": "",
+    "quote": "can be operated with a keyboard and mouse",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Media-player functionality.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2cb304794880",
+    "end": 27,
+    "prefix": "",
+    "quote": "can display closed captions",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Media-player functionality.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9d66fa955b39",
+    "end": 55,
+    "prefix": "",
+    "quote": "adapts resolutions to support low bandwidth connections",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Media-player functionality.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9485ef02a212",
+    "end": 37,
+    "prefix": "",
+    "quote": "works in landscape and portrait mode.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Media-player functionality.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f66440bcb069",
+    "end": 41,
+    "prefix": "",
+    "quote": "Don’t set video or animation to autoplay.",
+    "start": 0,
+    "suffix": " Do not include anything that fl"
+   },
+   "note": "Playback setting.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f66440bcb069",
+    "end": 122,
+    "prefix": "video or animation to autoplay. ",
+    "quote": "Do not include anything that flashes more than 3 times in any one second period.",
+    "start": 42,
+    "suffix": ""
+   },
+   "note": "Visual behaviour of media.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "021af97064de",
+    "end": 66,
+    "prefix": "",
+    "quote": "Make sure the colour contrast of text in videos is at least 4.5:1.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Rendered colour contrast, not the words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "713225c841be",
+    "end": 69,
+    "prefix": "",
+    "quote": "Normalise your audio to make sure each recording has the same volume.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Audio level.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9e1d174a5ebf",
+    "end": 109,
+    "prefix": "",
+    "quote": "Remove background sounds or make sure they are at least 20 decibels lower than the foreground speech content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Audio mixing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "092cfda176cd",
+    "end": 52,
+    "prefix": "",
+    "quote": "Include a transcript for audio-visual and audio-only",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires an accompanying accessibility asset.",
+   "reason": "not_text",
+   "seed_uid": "e4cd6e2fbb40cfd0"
+  },
+  {
+   "anchor": {
+    "block_id": "d4431a4ccc31",
+    "end": 93,
+    "prefix": "",
+    "quote": "Time-based media (video and audio) must have a transcript so they are accessible to everyone.",
+    "start": 0,
+    "suffix": " Transcripts are also important "
+   },
+   "note": "Requires the presence of a transcript alongside media.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "08c0ce276fd5",
+    "end": 34,
+    "prefix": "",
+    "quote": "Have a person transcribe the text.",
+    "start": 0,
+    "suffix": " There are many professional ser"
+   },
+   "note": "G-5: specifies who performs transcription.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "08c0ce276fd5",
+    "end": 180,
+    "prefix": "vices that offer transcription. ",
+    "quote": "If you use automated transcribing software, review it for errors and correct them.",
+    "start": 98,
+    "suffix": ""
+   },
+   "note": "G-5: review and correction workflow.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6bf9e3e7ed9e",
+    "end": 51,
+    "prefix": "",
+    "quote": "Format the transcript in plain text or simple HTML.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Transcript delivery format rather than wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "62cb9be9500f",
+    "end": 71,
+    "prefix": "",
+    "quote": "Consider breaking the transcript into headings and adding time markers.",
+    "start": 0,
+    "suffix": " This means that people can easi"
+   },
+   "note": "G-5: asks the writer to consider an option without requiring it.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3a0ebcb1e147",
+    "end": 61,
+    "prefix": "",
+    "quote": "You can place the transcript on the same page as the content.",
+    "start": 0,
+    "suffix": " Alternatively, you can also add"
+   },
+   "note": "G-3: permits a placement option.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3a0ebcb1e147",
+    "end": 159,
+    "prefix": "n the same page as the content. ",
+    "quote": "Alternatively, you can also add a link below or beside the content to a page with the transcript.",
+    "start": 62,
+    "suffix": ""
+   },
+   "note": "G-3: permits an alternative placement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d4569d4b701e",
+    "end": 117,
+    "prefix": "alogue and the speakers’ names. ",
+    "quote": "If there is only one speaker, introduce them by name in the transcript.",
+    "start": 46,
+    "suffix": " You can then leave out their na"
+   },
+   "note": "G-2: the single-speaker case is absorbed into the speaker-identification rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d4569d4b701e",
+    "end": 207,
+    "prefix": "them by name in the transcript. ",
+    "quote": "You can then leave out their name with the dialogue, unless it is crucial to the content.",
+    "start": 118,
+    "suffix": ""
+   },
+   "note": "G-3: exception recorded on the speaker-identification rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f623b90fd503",
+    "end": 39,
+    "prefix": "",
+    "quote": "Include subtitles or captions for video",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires an accompanying media accessibility feature.",
+   "reason": "not_text",
+   "seed_uid": "d34d44d79a6572d5"
+  },
+  {
+   "anchor": {
+    "block_id": "c1fbfe292fa6",
+    "end": 83,
+    "prefix": "",
+    "quote": "If you have a choice, closed captions are preferable to subtitles or open captions.",
+    "start": 0,
+    "suffix": " Some media players also allow f"
+   },
+   "note": "Preference between media accessibility formats, not their wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "670fb661e3b3",
+    "end": 213,
+    "prefix": "nt or intention of the speaker. ",
+    "quote": "Government agencies might use alternative spellings in video content for some overseas audiences.",
+    "start": 116,
+    "suffix": ""
+   },
+   "note": "G-3: audience exception recorded on the Australian spelling and terminology rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8902f0bdb772",
+    "end": 90,
+    "prefix": "",
+    "quote": "Load the closed caption file onto the video platform as a separate file to the video file.",
+    "start": 0,
+    "suffix": " This allows the user to turn th"
+   },
+   "note": "File upload and media configuration.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c50d2ebaf134",
+    "end": 34,
+    "prefix": "",
+    "quote": "You can edit closed caption files.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: describes an available action, not a requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1fb82690a5c3",
+    "end": 53,
+    "prefix": "",
+    "quote": "Time the captions and subtitles to match the dialogue",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Synchronisation with audio.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cf4b8dcddbd0",
+    "end": 108,
+    "prefix": "t 2 lines of text in 2 seconds. ",
+    "quote": "Test that users can read the captions in the time available.",
+    "start": 48,
+    "suffix": ""
+   },
+   "note": "G-5: user-testing action.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1c1bc3b433e9",
+    "end": 39,
+    "prefix": "",
+    "quote": "Don’t leave the captions on the screen:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Caption display timing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7b25297ff0d4",
+    "end": 29,
+    "prefix": "",
+    "quote": "after the speech has finished",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Caption display timing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fbe2c84f6678",
+    "end": 49,
+    "prefix": "",
+    "quote": "across the transition from one scene to the next.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Caption display timing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "37785dfdb03a",
+    "end": 67,
+    "prefix": "",
+    "quote": "Try to ensure a small break of at least 4 frames between subtitles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Frame timing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b676ba7b7e6e",
+    "end": 92,
+    "prefix": "",
+    "quote": "Review and edit the accuracy and synchronised timing of the captions for pre recorded video.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: editing workflow rather than a separately specified textual check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "972f121ccc65",
+    "end": 57,
+    "prefix": "",
+    "quote": "Centre subtitles and captions at the bottom of the screen",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Screen positioning.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0317a99a3711",
+    "end": 97,
+    "prefix": "",
+    "quote": "align each line to the left of the subtitle block so that their left edges stack above each other",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Rendered alignment.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3be455385e14",
+    "end": 43,
+    "prefix": "",
+    "quote": "centre the whole subtitle or caption block.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Screen positioning.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "806318340c56",
+    "end": 58,
+    "prefix": "",
+    "quote": "A hash symbol (#) or a quaver symbol (♪) show song lyrics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the meaning of notation without explicitly requiring either symbol.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "53c058daad3a",
+    "end": 31,
+    "prefix": "",
+    "quote": "Add audio description for video",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires an additional audio asset.",
+   "reason": "not_text",
+   "seed_uid": "5c04f5295d24ec50"
+  },
+  {
+   "anchor": {
+    "block_id": "a82c30e10429",
+    "end": 96,
+    "prefix": "",
+    "quote": "You don’t need an audio description for dialogue delivered straight to camera (‘talking heads’).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: exception to the media asset requirement, not a text rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "76ddc968ab44",
+    "end": 75,
+    "prefix": "",
+    "quote": "For anything else, you need to identify who is speaking in the description.",
+    "start": 0,
+    "suffix": " If location is important, inclu"
+   },
+   "note": "Content of an audio-description track.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "76ddc968ab44",
+    "end": 119,
+    "prefix": "is speaking in the description. ",
+    "quote": "If location is important, include that too.",
+    "start": 76,
+    "suffix": ""
+   },
+   "note": "Content of an audio-description track.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fbf8aa3a315e",
+    "end": 74,
+    "prefix": "",
+    "quote": "Use audio description to give context if it is not obvious from the title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Content of an audio-description track.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4eccea513785",
+    "end": 12,
+    "prefix": "",
+    "quote": "Ensure that:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces requirements for the audio description and its delivery.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "821ae96b01d9",
+    "end": 23,
+    "prefix": "",
+    "quote": "the content is accurate",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Refers to the audio-description track.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "030f5b92488d",
+    "end": 29,
+    "prefix": "",
+    "quote": "the describer speaks clearly.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Spoken delivery.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "60ff35387b68",
+    "end": 41,
+    "prefix": "",
+    "quote": "Include a title, description and metadata",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups required descriptive information and the more specific title and description checks.",
+   "reason": "section",
+   "seed_uid": "83799b538a513599"
+  },
+  {
+   "anchor": {
+    "block_id": "47baf997845e",
+    "end": 33,
+    "prefix": "a title, description and ",
+    "quote": "metadata",
+    "start": 25,
+    "suffix": ""
+   },
+   "note": "The file-metadata component is excluded from the written title and description check.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9af76240ed7d",
+    "end": 25,
+    "prefix": "",
+    "quote": "an appropriate file name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "File naming.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "86d8c3d18db6",
+    "end": 85,
+    "prefix": "ople what the content is about. ",
+    "quote": "Make sure the title:",
+    "start": 65,
+    "suffix": ""
+   },
+   "note": "G-1: the following list supplies the separate title checks.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2d26ebe7a616",
+    "end": 123,
+    "prefix": " people how they can subscribe. ",
+    "quote": "You can also add:",
+    "start": 106,
+    "suffix": ""
+   },
+   "note": "G-3: branding, publication date and related links are optional additions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "08c99b6e0532",
+    "end": 94,
+    "prefix": "lly, such as the creation date. ",
+    "quote": "You’ll have to fill other fields manually.",
+    "start": 52,
+    "suffix": " Search engines use information "
+   },
+   "note": "G-5: metadata-entry workflow, not a specified property of the words.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d265c5f3cdad",
+    "end": 99,
+    "prefix": "",
+    "quote": "You must use the Protective Security Policy Framework (PSPF) when preparing government information.",
+    "start": 0,
+    "suffix": " The PSPF covers how information"
+   },
+   "note": "G-5: directs the writer to an external framework without stating a particular text check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d265c5f3cdad",
+    "end": 302,
+    "prefix": " handling, access and disposal. ",
+    "quote": "Consult the PSPF webpages or your organisation’s protective security policy.",
+    "start": 226,
+    "suffix": ""
+   },
+   "note": "G-5: consultation action.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0b81f8407058",
+    "end": 77,
+    "prefix": "",
+    "quote": "You must also follow your organisation’s information management requirements.",
+    "start": 0,
+    "suffix": " Information (including data) th"
+   },
+   "note": "G-5: general compliance instruction, not a specified property of text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b782868ac24d",
+    "end": 88,
+    "prefix": "",
+    "quote": "Managing and disposing of records properly is a requirement under the Archives Act 1983.",
+    "start": 0,
+    "suffix": " For guidance, visit the Nationa"
+   },
+   "note": "Records handling and disposal.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b782868ac24d",
+    "end": 200,
+    "prefix": "nt under the Archives Act 1983. ",
+    "quote": "For guidance, visit the National Archives of Australia website for content on information management standards.",
+    "start": 89,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e748d2e06ac2",
+    "end": 37,
+    "prefix": "",
+    "quote": "Store video in a standard file format",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Video file format.",
+   "reason": "not_text",
+   "seed_uid": "cfc71dd9db926508"
+  },
+  {
+   "anchor": {
+    "block_id": "e147717a9b07",
+    "end": 85,
+    "prefix": "",
+    "quote": "All video should be in MP4 (MPEG4), a commercial and commonly used video file format.",
+    "start": 0,
+    "suffix": " MP4 is a compressed digital vid"
+   },
+   "note": "Video file format.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c4b46e5f896f",
+    "end": 47,
+    "prefix": "",
+    "quote": "Meet common audio-only technical specifications",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Audio technical properties.",
+   "reason": "not_text",
+   "seed_uid": "9f96a4c306124825"
+  },
+  {
+   "anchor": {
+    "block_id": "7ead785bff08",
+    "end": 107,
+    "prefix": "",
+    "quote": "Audio-only content must meet common technical specifications (specs) for publishing on different platforms:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Audio technical properties and platform requirements.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6cad6ab3d6e6",
+    "end": 32,
+    "prefix": "",
+    "quote": "Use a booth or studio if you can",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recording environment.",
+   "reason": "not_text",
+   "seed_uid": "1e66525bc10372d2"
+  },
+  {
+   "anchor": {
+    "block_id": "ab1bdac1a926",
+    "end": 64,
+    "prefix": "",
+    "quote": "It is best to record audio in a sound booth or recording studio.",
+    "start": 0,
+    "suffix": " If you don’t have access to eit"
+   },
+   "note": "Recording environment.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ab1bdac1a926",
+    "end": 139,
+    "prefix": "ound booth or recording studio. ",
+    "quote": "If you don’t have access to either, choose an environment you can control.",
+    "start": 65,
+    "suffix": ""
+   },
+   "note": "Recording environment.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "33b9f78c9fff",
+    "end": 131,
+    "prefix": "ier to understand the dialogue. ",
+    "quote": "Don’t record in windy conditions and environments with:",
+    "start": 76,
+    "suffix": ""
+   },
+   "note": "Recording environment; the following items specify noise and hard surfaces.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4391e6b689df",
+    "end": 142,
+    "prefix": "to indicate a time progression. ",
+    "quote": "Including this is a job for audio professionals.",
+    "start": 94,
+    "suffix": ""
+   },
+   "note": "G-5: assigns production work to specialists.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "22de2573f709",
+    "end": 143,
+    "prefix": "",
+    "quote": "Don’t record in noisy environments. Instead, record in quiet spaces with soft furnishings such as carpets or fabric, because they absorb sound.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recording environment.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0326dac1ba5c",
+    "end": 37,
+    "prefix": "",
+    "quote": "Get expert help to edit and mix audio",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: staffing and production workflow.",
+   "reason": "advice",
+   "seed_uid": "acee9e3d4bad455e"
+  },
+  {
+   "anchor": {
+    "block_id": "1873d485aefe",
+    "end": 117,
+    "prefix": "",
+    "quote": "Whoever edits the audio must have the technical expertise to meet the accessibility and technical standards required.",
+    "start": 0,
+    "suffix": " They will be familiar with audi"
+   },
+   "note": "G-5: qualifications of the person doing the work.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff03beb8fca8",
+    "end": 112,
+    "prefix": "",
+    "quote": "If the audio includes music or sound effects, you must still be able to hear and understand the person speaking.",
+    "start": 0,
+    "suffix": " If several people are speaking,"
+   },
+   "note": "Audio intelligibility and mixing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff03beb8fca8",
+    "end": 206,
+    "prefix": "understand the person speaking. ",
+    "quote": "If several people are speaking, it should be easy to tell each person’s voice from the other.",
+    "start": 113,
+    "suffix": ""
+   },
+   "note": "Audible distinction between voices.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2f1cff3a0350",
+    "end": 86,
+    "prefix": "",
+    "quote": "Mix historical audio to match the same level of decibels as the rest of the recording.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Audio level.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1ab4d994fc32",
+    "end": 48,
+    "prefix": "",
+    "quote": "Apply government branding to all audio and video",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Broad audiovisual branding requirement; specific wording checks are considered separately.",
+   "reason": "not_text",
+   "seed_uid": "b8174e188db8971e"
+  },
+  {
+   "anchor": {
+    "block_id": "c877a1d3cd6e",
+    "end": 25,
+    "prefix": "",
+    "quote": "Style all text in videos:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces font and contrast requirements, not wording requirements.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "292805f3d420",
+    "end": 67,
+    "prefix": "",
+    "quote": "with clear and simple fonts (sans serif is usually the best choice)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Typography.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "784fb7c432db",
+    "end": 63,
+    "prefix": "",
+    "quote": "to ensure that the text contrasts strongly with the background.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Rendered contrast.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "222a00470513",
+    "end": 50,
+    "prefix": "",
+    "quote": "Avoid effects if they make the text less readable.",
+    "start": 0,
+    "suffix": " Seek expert advice if you plan "
+   },
+   "note": "Visual effects applied to rendered text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "222a00470513",
+    "end": 153,
+    "prefix": "ey make the text less readable. ",
+    "quote": "Seek expert advice if you plan to use text effects (such as drop shadows, outlines and tinted blocks).",
+    "start": 51,
+    "suffix": " If they are well designed, they"
+   },
+   "note": "G-5: consultation action.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3e1a0a528e02",
+    "end": 65,
+    "prefix": "",
+    "quote": "Avoid colours that make the video less accessible for some users.",
+    "start": 0,
+    "suffix": " For example, avoid using red an"
+   },
+   "note": "Use of colour in video.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3e1a0a528e02",
+    "end": 139,
+    "prefix": "less accessible for some users. ",
+    "quote": "For example, avoid using red and green as the only way to convey meaning.",
+    "start": 66,
+    "suffix": ""
+   },
+   "note": "Use of colour to convey meaning.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "10268f0f1040",
+    "end": 97,
+    "prefix": "",
+    "quote": "Use your organisation’s branding guidelines to make sure any video is clearly government content.",
+    "start": 0,
+    "suffix": " Visual branding tells people th"
+   },
+   "note": "G-5: directs the writer to external guidelines.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f3a763d5cded",
+    "end": 74,
+    "prefix": "",
+    "quote": "Check that all text complies with your organisation’s branding guidelines.",
+    "start": 0,
+    "suffix": " This includes text formatting a"
+   },
+   "note": "G-5: checking compliance with unspecified external guidelines does not state an actionable text rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "112e587c8668",
+    "end": 68,
+    "prefix": "",
+    "quote": "Check if your agency has ‘branded’ sounds (also called audio logos).",
+    "start": 0,
+    "suffix": " These help users immediately as"
+   },
+   "note": "G-5: checking available agency resources.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cfd81da97d27",
+    "end": 171,
+    "prefix": "eginning or end of the content. ",
+    "quote": "They need to be short (no longer than 6 seconds) and provide a consistent identity for your organisation.",
+    "start": 66,
+    "suffix": ""
+   },
+   "note": "Duration and identity of branded sounds.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "812c251902e4",
+    "end": 57,
+    "prefix": "",
+    "quote": "Set the video aspect and resolution for the user’s device",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Video dimensions and resolution.",
+   "reason": "not_text",
+   "seed_uid": "064ceaffb3550f62"
+  },
+  {
+   "anchor": {
+    "block_id": "466d7998cb3a",
+    "end": 122,
+    "prefix": "",
+    "quote": "Whether you publish the video on a platform or your agency website, you will need to consider aspect ratio and resolution.",
+    "start": 0,
+    "suffix": " Videos are more usable if they "
+   },
+   "note": "Video dimensions and resolution.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8541cf3f1952",
+    "end": 70,
+    "prefix": "",
+    "quote": "Introduce speakers in the video using text and graphics (lower thirds)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires a graphic overlay in the video; its written content is checked separately.",
+   "reason": "not_text",
+   "seed_uid": "80467ecf80b4db05"
+  },
+  {
+   "anchor": {
+    "block_id": "f914f138a6e1",
+    "end": 141,
+    "prefix": "’s name, organisation and role. ",
+    "quote": "Using lower thirds is mandatory.",
+    "start": 109,
+    "suffix": " They are usually an image file "
+   },
+   "note": "Requires a video overlay.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a274ca71c88e",
+    "end": 81,
+    "prefix": "",
+    "quote": "Despite the name, lower thirds don’t have to be in the lower third of the screen.",
+    "start": 0,
+    "suffix": " Be guided by where the person’s"
+   },
+   "note": "G-3: permits alternative screen placement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a274ca71c88e",
+    "end": 127,
+    "prefix": " the lower third of the screen. ",
+    "quote": "Be guided by where the person’s face appears.",
+    "start": 82,
+    "suffix": " They must appear in the ‘title-"
+   },
+   "note": "G-5: positioning advice to the video editor.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a274ca71c88e",
+    "end": 170,
+    "prefix": "here the person’s face appears. ",
+    "quote": "They must appear in the ‘title-safe’ area.",
+    "start": 128,
+    "suffix": " This is the area within a video"
+   },
+   "note": "Screen positioning.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c0349fcf8062",
+    "end": 100,
+    "prefix": "",
+    "quote": "Be careful when lower thirds appear on the screen: don’t obscure the video’s captions and subtitles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Visual overlap between video elements.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "142f946b7fa6",
+    "end": 98,
+    "prefix": "",
+    "quote": "For interviews or ‘talking heads’, the usual style is to place the speaker’s name on the top line.",
+    "start": 0,
+    "suffix": " Place the speaker’s title and o"
+   },
+   "note": "G-2: absorbed into the lower-third line-order rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "54f469d6e489",
+    "end": 18,
+    "prefix": "",
+    "quote": "Lower thirds must:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces separate content and visual requirements.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ca9b7d78cd9a",
+    "end": 37,
+    "prefix": "",
+    "quote": "be appropriate for government content",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General suitability of the visual overlay; no specific wording requirement is supplied.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9b2571dfa6f2",
+    "end": 50,
+    "prefix": "",
+    "quote": "have a strong contrast with the video’s background",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Rendered contrast.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7ef30111511f",
+    "end": 75,
+    "prefix": "",
+    "quote": "use a text font that is readable at smaller resolutions or when compressed.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Font rendering at different resolutions.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "40b90fa7928a",
+    "end": 89,
+    "prefix": "",
+    "quote": "A sans serif font is the easiest to read, but use your organisation’s branding and style.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: defers typography choices to external organisational guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "22e5edd217c6",
+    "end": 51,
+    "prefix": "",
+    "quote": "Get permissions and licences for copyright material",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: permissions and licensing workflow, not a property of the words.",
+   "reason": "advice",
+   "seed_uid": "6e79d42f479a484a"
+  },
+  {
+   "anchor": {
+    "block_id": "46ebb3fc75b8",
+    "end": 65,
+    "prefix": "",
+    "quote": "You must have a signed release from people who appear in a video.",
+    "start": 0,
+    "suffix": " This includes everyone who is f"
+   },
+   "note": "Requires separate legal documentation.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "46ebb3fc75b8",
+    "end": 220,
+    "prefix": "hose voices have been recorded. ",
+    "quote": "Keep the signed release form and give a copy to the person who signed it.",
+    "start": 147,
+    "suffix": ""
+   },
+   "note": "Handling separate legal documentation.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5aa9604a8423",
+    "end": 142,
+    "prefix": "s possible to identify someone. ",
+    "quote": "Treat things that can or might identify an individual as personal information.",
+    "start": 64,
+    "suffix": " Personal information can includ"
+   },
+   "note": "G-5: information-handling instruction.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "28a3a0251069",
+    "end": 93,
+    "prefix": "",
+    "quote": "When you handle personal information, you must comply with the Australian Privacy Principles.",
+    "start": 0,
+    "suffix": " Personal information is any inf"
+   },
+   "note": "G-5: general compliance instruction without a specified text check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8c8db6c6f867",
+    "end": 152,
+    "prefix": "ns may have restricted its use. ",
+    "quote": "Donors may also need to give written permission before you use material.",
+    "start": 80,
+    "suffix": " Check with the collecting insti"
+   },
+   "note": "Permission documentation for using collection material.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8c8db6c6f867",
+    "end": 191,
+    "prefix": "ission before you use material. ",
+    "quote": "Check with the collecting institution.",
+    "start": 153,
+    "suffix": ""
+   },
+   "note": "G-5: consultation action.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3326101d76a3",
+    "end": 79,
+    "prefix": "",
+    "quote": "Before you use First Nations Australians’ content, you need proper permissions.",
+    "start": 0,
+    "suffix": " Always consult with relevant co"
+   },
+   "note": "G-5: permissions process.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3326101d76a3",
+    "end": 160,
+    "prefix": "t, you need proper permissions. ",
+    "quote": "Always consult with relevant communities (or individuals) and copyright holders.",
+    "start": 80,
+    "suffix": " The permissions process is vita"
+   },
+   "note": "G-5: consultation action.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c30fb9c3888e",
+    "end": 62,
+    "prefix": "",
+    "quote": "You must get permission (a licence) to use copyright material.",
+    "start": 0,
+    "suffix": " This includes text, lyrics, ima"
+   },
+   "note": "G-5: obtaining permission is a workflow requirement, not a wording check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "146fcadf9d41",
+    "end": 57,
+    "prefix": "",
+    "quote": "You must choose a licence to release copyright materials.",
+    "start": 0,
+    "suffix": " If you work in government, use "
+   },
+   "note": "G-5: licensing decision.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "146fcadf9d41",
+    "end": 155,
+    "prefix": "to release copyright materials. ",
+    "quote": "If you work in government, use an open access licence if you can (for example, Creative Commons).",
+    "start": 58,
+    "suffix": ""
+   },
+   "note": "G-5: licensing decision, not the wording of content.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ba39d8cfd9bc",
+    "end": 94,
+    "prefix": "",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to read external guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2b187ed85d3c",
+    "end": 45,
+    "prefix": "",
+    "quote": "Use stock video if it enhances the production",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Choice of video footage.",
+   "reason": "not_text",
+   "seed_uid": "18ecc7575f42ada9"
+  },
+  {
+   "anchor": {
+    "block_id": "d5b145a8c47f",
+    "end": 370,
+    "prefix": "lian life, culture and history. ",
+    "quote": "For research support and usage terms and conditions, contact the respective access teams at the National Film and Sound Archive of Australia and the National Archives of Australia.",
+    "start": 190,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to contact source institutions.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3813b3db55af",
+    "end": 39,
+    "prefix": "",
+    "quote": "Be careful with commercial stock video.",
+    "start": 0,
+    "suffix": " People will identify and dismis"
+   },
+   "note": "G-5: general caution rather than a specified text property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b7639c518d2f",
+    "end": 56,
+    "prefix": "",
+    "quote": "Other than historical material, ensure that stock video:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces footage-quality requirements rather than wording requirements.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e7dd51906fa1",
+    "end": 8,
+    "prefix": "",
+    "quote": "is crisp",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Video image quality.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a48d26f93e10",
+    "end": 19,
+    "prefix": "",
+    "quote": "has natural colours",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Video colour.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6f0c37e773b4",
+    "end": 17,
+    "prefix": "",
+    "quote": "focuses on people",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Subject of video footage.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ea39e15a4e26",
+    "end": 32,
+    "prefix": "",
+    "quote": "meets common technical standards",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Technical properties of video.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f49ad591a832",
+    "end": 22,
+    "prefix": "",
+    "quote": "is visibly Australian.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Visual content of footage.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0927dbcb9435",
+    "end": 65,
+    "prefix": "",
+    "quote": "To use a stock video, you must purchase a licence from its owner.",
+    "start": 0,
+    "suffix": " Some stock video has a Creative"
+   },
+   "note": "G-5: licence procurement, not a property of text.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/video-and-audio/requirements-and-standards-video-and-audio.md",
+ "page_sha256": "0862e6e0b15736cfae8859b0adc2a9c55ab1b77f54d5b620828fd8f64a1a3d52",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a286e3f5cc5e",
+    "note": "Requires accessibility assets for media rather than a property of their wording.",
+    "quote": "Users need transcripts, captions and audio descriptions for accessibility.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a286e3f5cc5e",
+    "note": "G-5: production workflow.",
+    "quote": "Work with experts to record and mix audio.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a286e3f5cc5e",
+    "note": "G-5: checking requirements is a writer action.",
+    "quote": "Check branding, copyright and permissions requirements.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ace31bb50790",
+    "note": "G-1: groups the accessibility requirements below.",
+    "quote": "Make sure everyone can access audio and video",
+    "reason": "section"
+   },
+   {
+    "block_id": "2eae9d07ef84",
+    "note": "Requires accompanying accessibility assets.",
+    "quote": "Audio-visual content must have:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "07a0c46344fd",
+    "note": "Requires an accompanying transcript, not particular transcript wording.",
+    "quote": "a transcript for people who don’t want to watch the video or listen to the audio – and for search engine indexing",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "218e895e060a",
+    "note": "Requires a media accessibility feature.",
+    "quote": "closed captions for people who can’t hear the dialogue and other sounds (symbol [CC])",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d9671141ca04",
+    "note": "Requires an additional audio asset.",
+    "quote": "an audio description for people who can’t see the video.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "20e87face735",
+    "note": "Media-player selection and functionality.",
+    "quote": "Choose an accessible media player that:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f83a0c3e8920",
+    "note": "Media-player functionality.",
+    "quote": "can be operated with a keyboard and mouse",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "2cb304794880",
+    "note": "Media-player functionality.",
+    "quote": "can display closed captions",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9d66fa955b39",
+    "note": "Media-player functionality.",
+    "quote": "adapts resolutions to support low bandwidth connections",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9485ef02a212",
+    "note": "Media-player functionality.",
+    "quote": "works in landscape and portrait mode.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f66440bcb069",
+    "note": "Playback setting.",
+    "quote": "Don’t set video or animation to autoplay.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f66440bcb069",
+    "note": "Visual behaviour of media.",
+    "quote": "Do not include anything that flashes more than 3 times in any one second period.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "021af97064de",
+    "note": "Rendered colour contrast, not the words.",
+    "quote": "Make sure the colour contrast of text in videos is at least 4.5:1.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "713225c841be",
+    "note": "Audio level.",
+    "quote": "Normalise your audio to make sure each recording has the same volume.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9e1d174a5ebf",
+    "note": "Audio mixing.",
+    "quote": "Remove background sounds or make sure they are at least 20 decibels lower than the foreground speech content.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "092cfda176cd",
+    "note": "Requires an accompanying accessibility asset.",
+    "quote": "Include a transcript for audio-visual and audio-only",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d4431a4ccc31",
+    "note": "Requires the presence of a transcript alongside media.",
+    "quote": "Time-based media (video and audio) must have a transcript so they are accessible to everyone.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "08c0ce276fd5",
+    "note": "G-5: specifies who performs transcription.",
+    "quote": "Have a person transcribe the text.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "08c0ce276fd5",
+    "note": "G-5: review and correction workflow.",
+    "quote": "If you use automated transcribing software, review it for errors and correct them.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6bf9e3e7ed9e",
+    "note": "Transcript delivery format rather than wording.",
+    "quote": "Format the transcript in plain text or simple HTML.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "62cb9be9500f",
+    "note": "G-5: asks the writer to consider an option without requiring it.",
+    "quote": "Consider breaking the transcript into headings and adding time markers.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3a0ebcb1e147",
+    "note": "G-3: permits a placement option.",
+    "quote": "You can place the transcript on the same page as the content.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "3a0ebcb1e147",
+    "note": "G-3: permits an alternative placement.",
+    "quote": "Alternatively, you can also add a link below or beside the content to a page with the transcript.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "d4569d4b701e",
+    "note": "G-2: the single-speaker case is absorbed into the speaker-identification rule.",
+    "quote": "If there is only one speaker, introduce them by name in the transcript.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d4569d4b701e",
+    "note": "G-3: exception recorded on the speaker-identification rule.",
+    "quote": "You can then leave out their name with the dialogue, unless it is crucial to the content.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "f623b90fd503",
+    "note": "Requires an accompanying media accessibility feature.",
+    "quote": "Include subtitles or captions for video",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c1fbfe292fa6",
+    "note": "Preference between media accessibility formats, not their wording.",
+    "quote": "If you have a choice, closed captions are preferable to subtitles or open captions.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "670fb661e3b3",
+    "note": "G-3: audience exception recorded on the Australian spelling and terminology rule.",
+    "quote": "Government agencies might use alternative spellings in video content for some overseas audiences.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "8902f0bdb772",
+    "note": "File upload and media configuration.",
+    "quote": "Load the closed caption file onto the video platform as a separate file to the video file.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c50d2ebaf134",
+    "note": "G-3: describes an available action, not a requirement.",
+    "quote": "You can edit closed caption files.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "1fb82690a5c3",
+    "note": "Synchronisation with audio.",
+    "quote": "Time the captions and subtitles to match the dialogue",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "cf4b8dcddbd0",
+    "note": "G-5: user-testing action.",
+    "quote": "Test that users can read the captions in the time available.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1c1bc3b433e9",
+    "note": "Caption display timing.",
+    "quote": "Don’t leave the captions on the screen:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "7b25297ff0d4",
+    "note": "Caption display timing.",
+    "quote": "after the speech has finished",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "fbe2c84f6678",
+    "note": "Caption display timing.",
+    "quote": "across the transition from one scene to the next.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "37785dfdb03a",
+    "note": "Frame timing.",
+    "quote": "Try to ensure a small break of at least 4 frames between subtitles.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b676ba7b7e6e",
+    "note": "G-5: editing workflow rather than a separately specified textual check.",
+    "quote": "Review and edit the accuracy and synchronised timing of the captions for pre recorded video.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "972f121ccc65",
+    "note": "Screen positioning.",
+    "quote": "Centre subtitles and captions at the bottom of the screen",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0317a99a3711",
+    "note": "Rendered alignment.",
+    "quote": "align each line to the left of the subtitle block so that their left edges stack above each other",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "3be455385e14",
+    "note": "Screen positioning.",
+    "quote": "centre the whole subtitle or caption block.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "806318340c56",
+    "note": "Describes the meaning of notation without explicitly requiring either symbol.",
+    "quote": "A hash symbol (#) or a quaver symbol (♪) show song lyrics.",
+    "reason": "description"
+   },
+   {
+    "block_id": "53c058daad3a",
+    "note": "Requires an additional audio asset.",
+    "quote": "Add audio description for video",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a82c30e10429",
+    "note": "G-3: exception to the media asset requirement, not a text rule.",
+    "quote": "You don’t need an audio description for dialogue delivered straight to camera (‘talking heads’).",
+    "reason": "permission"
+   },
+   {
+    "block_id": "76ddc968ab44",
+    "note": "Content of an audio-description track.",
+    "quote": "For anything else, you need to identify who is speaking in the description.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "76ddc968ab44",
+    "note": "Content of an audio-description track.",
+    "quote": "If location is important, include that too.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "fbf8aa3a315e",
+    "note": "Content of an audio-description track.",
+    "quote": "Use audio description to give context if it is not obvious from the title.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4eccea513785",
+    "note": "Introduces requirements for the audio description and its delivery.",
+    "quote": "Ensure that:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "821ae96b01d9",
+    "note": "Refers to the audio-description track.",
+    "quote": "the content is accurate",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "030f5b92488d",
+    "note": "Spoken delivery.",
+    "quote": "the describer speaks clearly.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "60ff35387b68",
+    "note": "G-1: groups required descriptive information and the more specific title and description checks.",
+    "quote": "Include a title, description and metadata",
+    "reason": "section"
+   },
+   {
+    "block_id": "47baf997845e",
+    "note": "The file-metadata component is excluded from the written title and description check.",
+    "quote": "metadata",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9af76240ed7d",
+    "note": "File naming.",
+    "quote": "an appropriate file name.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "86d8c3d18db6",
+    "note": "G-1: the following list supplies the separate title checks.",
+    "quote": "Make sure the title:",
+    "reason": "section"
+   },
+   {
+    "block_id": "2d26ebe7a616",
+    "note": "G-3: branding, publication date and related links are optional additions.",
+    "quote": "You can also add:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "08c99b6e0532",
+    "note": "G-5: metadata-entry workflow, not a specified property of the words.",
+    "quote": "You’ll have to fill other fields manually.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d265c5f3cdad",
+    "note": "G-5: directs the writer to an external framework without stating a particular text check.",
+    "quote": "You must use the Protective Security Policy Framework (PSPF) when preparing government information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d265c5f3cdad",
+    "note": "G-5: consultation action.",
+    "quote": "Consult the PSPF webpages or your organisation’s protective security policy.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0b81f8407058",
+    "note": "G-5: general compliance instruction, not a specified property of text.",
+    "quote": "You must also follow your organisation’s information management requirements.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b782868ac24d",
+    "note": "Records handling and disposal.",
+    "quote": "Managing and disposing of records properly is a requirement under the Archives Act 1983.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b782868ac24d",
+    "note": "G-5: directs the writer to guidance.",
+    "quote": "For guidance, visit the National Archives of Australia website for content on information management standards.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e748d2e06ac2",
+    "note": "Video file format.",
+    "quote": "Store video in a standard file format",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e147717a9b07",
+    "note": "Video file format.",
+    "quote": "All video should be in MP4 (MPEG4), a commercial and commonly used video file format.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c4b46e5f896f",
+    "note": "Audio technical properties.",
+    "quote": "Meet common audio-only technical specifications",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "7ead785bff08",
+    "note": "Audio technical properties and platform requirements.",
+    "quote": "Audio-only content must meet common technical specifications (specs) for publishing on different platforms:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "6cad6ab3d6e6",
+    "note": "Recording environment.",
+    "quote": "Use a booth or studio if you can",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ab1bdac1a926",
+    "note": "Recording environment.",
+    "quote": "It is best to record audio in a sound booth or recording studio.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ab1bdac1a926",
+    "note": "Recording environment.",
+    "quote": "If you don’t have access to either, choose an environment you can control.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "33b9f78c9fff",
+    "note": "Recording environment; the following items specify noise and hard surfaces.",
+    "quote": "Don’t record in windy conditions and environments with:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4391e6b689df",
+    "note": "G-5: assigns production work to specialists.",
+    "quote": "Including this is a job for audio professionals.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "22de2573f709",
+    "note": "Recording environment.",
+    "quote": "Don’t record in noisy environments. Instead, record in quiet spaces with soft furnishings such as carpets or fabric, because they absorb sound.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0326dac1ba5c",
+    "note": "G-5: staffing and production workflow.",
+    "quote": "Get expert help to edit and mix audio",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1873d485aefe",
+    "note": "G-5: qualifications of the person doing the work.",
+    "quote": "Whoever edits the audio must have the technical expertise to meet the accessibility and technical standards required.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ff03beb8fca8",
+    "note": "Audio intelligibility and mixing.",
+    "quote": "If the audio includes music or sound effects, you must still be able to hear and understand the person speaking.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ff03beb8fca8",
+    "note": "Audible distinction between voices.",
+    "quote": "If several people are speaking, it should be easy to tell each person’s voice from the other.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "2f1cff3a0350",
+    "note": "Audio level.",
+    "quote": "Mix historical audio to match the same level of decibels as the rest of the recording.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "1ab4d994fc32",
+    "note": "Broad audiovisual branding requirement; specific wording checks are considered separately.",
+    "quote": "Apply government branding to all audio and video",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c877a1d3cd6e",
+    "note": "Introduces font and contrast requirements, not wording requirements.",
+    "quote": "Style all text in videos:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "292805f3d420",
+    "note": "Typography.",
+    "quote": "with clear and simple fonts (sans serif is usually the best choice)",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "784fb7c432db",
+    "note": "Rendered contrast.",
+    "quote": "to ensure that the text contrasts strongly with the background.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "222a00470513",
+    "note": "Visual effects applied to rendered text.",
+    "quote": "Avoid effects if they make the text less readable.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "222a00470513",
+    "note": "G-5: consultation action.",
+    "quote": "Seek expert advice if you plan to use text effects (such as drop shadows, outlines and tinted blocks).",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3e1a0a528e02",
+    "note": "Use of colour in video.",
+    "quote": "Avoid colours that make the video less accessible for some users.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "3e1a0a528e02",
+    "note": "Use of colour to convey meaning.",
+    "quote": "For example, avoid using red and green as the only way to convey meaning.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "10268f0f1040",
+    "note": "G-5: directs the writer to external guidelines.",
+    "quote": "Use your organisation’s branding guidelines to make sure any video is clearly government content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f3a763d5cded",
+    "note": "G-5: checking compliance with unspecified external guidelines does not state an actionable text rule.",
+    "quote": "Check that all text complies with your organisation’s branding guidelines.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "112e587c8668",
+    "note": "G-5: checking available agency resources.",
+    "quote": "Check if your agency has ‘branded’ sounds (also called audio logos).",
+    "reason": "advice"
+   },
+   {
+    "block_id": "cfd81da97d27",
+    "note": "Duration and identity of branded sounds.",
+    "quote": "They need to be short (no longer than 6 seconds) and provide a consistent identity for your organisation.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "812c251902e4",
+    "note": "Video dimensions and resolution.",
+    "quote": "Set the video aspect and resolution for the user’s device",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "466d7998cb3a",
+    "note": "Video dimensions and resolution.",
+    "quote": "Whether you publish the video on a platform or your agency website, you will need to consider aspect ratio and resolution.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "8541cf3f1952",
+    "note": "Requires a graphic overlay in the video; its written content is checked separately.",
+    "quote": "Introduce speakers in the video using text and graphics (lower thirds)",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f914f138a6e1",
+    "note": "Requires a video overlay.",
+    "quote": "Using lower thirds is mandatory.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a274ca71c88e",
+    "note": "G-3: permits alternative screen placement.",
+    "quote": "Despite the name, lower thirds don’t have to be in the lower third of the screen.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a274ca71c88e",
+    "note": "G-5: positioning advice to the video editor.",
+    "quote": "Be guided by where the person’s face appears.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a274ca71c88e",
+    "note": "Screen positioning.",
+    "quote": "They must appear in the ‘title-safe’ area.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c0349fcf8062",
+    "note": "Visual overlap between video elements.",
+    "quote": "Be careful when lower thirds appear on the screen: don’t obscure the video’s captions and subtitles.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "142f946b7fa6",
+    "note": "G-2: absorbed into the lower-third line-order rule.",
+    "quote": "For interviews or ‘talking heads’, the usual style is to place the speaker’s name on the top line.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "54f469d6e489",
+    "note": "G-1: introduces separate content and visual requirements.",
+    "quote": "Lower thirds must:",
+    "reason": "section"
+   },
+   {
+    "block_id": "ca9b7d78cd9a",
+    "note": "General suitability of the visual overlay; no specific wording requirement is supplied.",
+    "quote": "be appropriate for government content",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9b2571dfa6f2",
+    "note": "Rendered contrast.",
+    "quote": "have a strong contrast with the video’s background",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "7ef30111511f",
+    "note": "Font rendering at different resolutions.",
+    "quote": "use a text font that is readable at smaller resolutions or when compressed.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "40b90fa7928a",
+    "note": "G-5: defers typography choices to external organisational guidance.",
+    "quote": "A sans serif font is the easiest to read, but use your organisation’s branding and style.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "22e5edd217c6",
+    "note": "G-5: permissions and licensing workflow, not a property of the words.",
+    "quote": "Get permissions and licences for copyright material",
+    "reason": "advice"
+   },
+   {
+    "block_id": "46ebb3fc75b8",
+    "note": "Requires separate legal documentation.",
+    "quote": "You must have a signed release from people who appear in a video.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "46ebb3fc75b8",
+    "note": "Handling separate legal documentation.",
+    "quote": "Keep the signed release form and give a copy to the person who signed it.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "5aa9604a8423",
+    "note": "G-5: information-handling instruction.",
+    "quote": "Treat things that can or might identify an individual as personal information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "28a3a0251069",
+    "note": "G-5: general compliance instruction without a specified text check.",
+    "quote": "When you handle personal information, you must comply with the Australian Privacy Principles.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8c8db6c6f867",
+    "note": "Permission documentation for using collection material.",
+    "quote": "Donors may also need to give written permission before you use material.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "8c8db6c6f867",
+    "note": "G-5: consultation action.",
+    "quote": "Check with the collecting institution.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3326101d76a3",
+    "note": "G-5: permissions process.",
+    "quote": "Before you use First Nations Australians’ content, you need proper permissions.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3326101d76a3",
+    "note": "G-5: consultation action.",
+    "quote": "Always consult with relevant communities (or individuals) and copyright holders.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c30fb9c3888e",
+    "note": "G-5: obtaining permission is a workflow requirement, not a wording check.",
+    "quote": "You must get permission (a licence) to use copyright material.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "146fcadf9d41",
+    "note": "G-5: licensing decision.",
+    "quote": "You must choose a licence to release copyright materials.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "146fcadf9d41",
+    "note": "G-5: licensing decision, not the wording of content.",
+    "quote": "If you work in government, use an open access licence if you can (for example, Creative Commons).",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ba39d8cfd9bc",
+    "note": "G-5: directs the writer to read external guidance.",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2b187ed85d3c",
+    "note": "Choice of video footage.",
+    "quote": "Use stock video if it enhances the production",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d5b145a8c47f",
+    "note": "G-5: directs the writer to contact source institutions.",
+    "quote": "For research support and usage terms and conditions, contact the respective access teams at the National Film and Sound Archive of Australia and the National Archives of Australia.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3813b3db55af",
+    "note": "G-5: general caution rather than a specified text property.",
+    "quote": "Be careful with commercial stock video.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b7639c518d2f",
+    "note": "Introduces footage-quality requirements rather than wording requirements.",
+    "quote": "Other than historical material, ensure that stock video:",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e7dd51906fa1",
+    "note": "Video image quality.",
+    "quote": "is crisp",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a48d26f93e10",
+    "note": "Video colour.",
+    "quote": "has natural colours",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "6f0c37e773b4",
+    "note": "Subject of video footage.",
+    "quote": "focuses on people",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ea39e15a4e26",
+    "note": "Technical properties of video.",
+    "quote": "meets common technical standards",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "f49ad591a832",
+    "note": "Visual content of footage.",
+    "quote": "is visibly Australian.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0927dbcb9435",
+    "note": "G-5: licence procurement, not a property of text.",
+    "quote": "To use a stock video, you must purchase a licence from its owner.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "d4569d4b701e",
+    "clarity_suggestion": "not_automatable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include all dialogue",
+    "specification": "Completeness requires comparison with the source recording; the transcript alone cannot establish whether dialogue is missing.",
+    "unit": "document",
+    "violation_condition": "A transcript omits dialogue from the source recording.",
+    "when": [
+     "The text is a transcript of video or audio."
+    ],
+    "why": "G-1: dialogue completeness is distinct from identifying the speakers."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "d4569d4b701e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d4569d4b701e",
+      "quote": "If there is only one speaker, introduce them by name in the transcript."
+     },
+     {
+      "block_id": "d4569d4b701e",
+      "quote": "You can then leave out their name with the dialogue, unless it is crucial to the content."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include all dialogue and the speakers’ names.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A transcript fails to identify its speakers by name, or fails to name its sole speaker at the beginning.",
+    "when": [
+     "The text is a transcript.",
+     "With only one speaker, an initial introduction by name is sufficient.",
+     "Repeat a sole speaker’s name with the dialogue only when it is crucial to the content."
+    ],
+    "why": "G-2 and G-3: the single-speaker instructions are conditions and an exception to the speaker-identification check."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "47bfe461cee8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The requested examples field is not available in the response schema.",
+      "parts": [
+       {
+        "block_id": "525d0295ee93",
+        "quote": "‘… to get to the other side [laughing].’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write non-verbal information in square brackets.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Non-verbal information in a transcript is not enclosed in square brackets.",
+    "when": [
+     "The text is a transcript and includes non-verbal information."
+    ],
+    "why": "G-1: this is a distinct notation check for non-verbal information."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "04e4eb2634dd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "End the transcript with ‘End of transcript’.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A transcript does not end with the words ‘End of transcript’.",
+    "when": [
+     "The text is a transcript."
+    ],
+    "why": "G-4: ordinary prose following the example states a new rule."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "670fb661e3b3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "670fb661e3b3",
+      "quote": "Government agencies might use alternative spellings in video content for some overseas audiences."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use Australian terms and spelling for an Australian audience, regardless of the accent or intention of the speaker.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Captions or subtitles intended for an Australian audience use non-Australian terms or spelling merely to reproduce the speaker’s accent or intended spelling.",
+    "when": [
+     "The text is captions or subtitles for an Australian audience.",
+     "Alternative spellings may be used in government video content for some overseas audiences."
+    ],
+    "why": "G-2 and G-3: the audience determines when the spelling and terminology check applies."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "8b4b85f1009f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep captions and subtitles short: no more than 2 lines, with no more than 42 characters per line.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A caption or subtitle has more than 2 lines, or a line contains more than 42 characters.",
+    "when": [
+     "The text is a caption or subtitle block."
+    ],
+    "why": "G-1: the sentence defines one caption-length check with explicit line and character limits."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "8b4b85f1009f",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Make line breaks where there is a natural break in the sentence (for example, after a comma).",
+    "specification": "The manual gives a comma as an example but does not define all acceptable natural breaks.",
+    "unit": "sentence",
+    "violation_condition": "A caption or subtitle line break interrupts a syntactic unit rather than falling at a natural break in the sentence.",
+    "when": [
+     "The text is captions or subtitles split across lines."
+    ],
+    "why": "G-1: placement of a line break is separate from the length limits."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "467999373343",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "fd8272fd14aa",
+      "quote": "If there are 2 speakers:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "give each speaker a separate line",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A caption or subtitle containing 2 speakers places both speakers’ dialogue on the same line.",
+    "when": [
+     "A caption or subtitle block contains 2 speakers."
+    ],
+    "why": "G-1 and G-2: speaker separation is one check, conditional on there being 2 speakers."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "467999373343",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "fd8272fd14aa",
+      "quote": "If there are 2 speakers:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "start each line with a dash",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A speaker’s line in a caption or subtitle with 2 speakers does not start with a dash.",
+    "when": [
+     "A caption or subtitle block contains 2 speakers."
+    ],
+    "why": "G-1: the missing speaker dash is distinct from failing to separate the speakers onto different lines."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "c786ffdff91f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a full stop at the end of subtitles.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A subtitle ends with a full stop.",
+    "when": [
+     "The text is a subtitle.",
+     "An ellipsis indicating trailing or unfinished speech is not a terminal full stop."
+    ],
+    "why": "G-1: terminal full stops are a separate punctuation check from indicating unfinished speech."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "c786ffdff91f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use an ellipsis to indicate the end of a sentence where speech trails off or where a sentence remains unfinished.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A subtitle does not use an ellipsis to mark speech that trails off or a sentence that remains unfinished.",
+    "when": [
+     "The subtitle represents speech that trails off or remains unfinished."
+    ],
+    "why": "G-2: trailing off and remaining unfinished are two triggers for the same ellipsis check."
+   },
+   {
+    "applies_to": [
+     "transcript"
+    ],
+    "block_id": "66ce2029433a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e3368191052c",
+      "quote": "foreign words and phrases"
+     },
+     {
+      "block_id": "a69504740cac",
+      "quote": "dialogue that is not on the screen, such as a public announcement or dialogue from a television program."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use italics for:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A foreign word or phrase, or dialogue from an off-screen source, is not italicised in captions or subtitles.",
+    "when": [
+     "The text is captions or subtitles.",
+     "The text is a foreign word or phrase, or dialogue from an off-screen source such as a public announcement or television program."
+    ],
+    "why": "G-2: both listed cases trigger the same missing-italics check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a0308de5911d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "47baf997845e",
+      "quote": "a title, description and metadata"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Any video or audio content you publish must have:",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Published video or audio content lacks a written title or description.",
+    "when": [
+     "Video or audio content is published.",
+     "This check concerns the written title and description, not the file’s metadata or file name."
+    ],
+    "why": "G-1: required descriptive text is distinct from the later checks on its wording; file properties are excluded."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dd1d390e4424",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "86d8c3d18db6",
+      "quote": "Make sure the title:"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "has 70 characters or fewer so that search engines can find it",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title of video or audio content contains more than 70 characters.",
+    "when": [
+     "The text is the title of video or audio content."
+    ],
+    "why": "G-1: title length is a specific child check, not a second copy of the section heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "46fc9b040ca5",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "includes keywords",
+    "specification": "The page does not identify required keywords or define how they should be selected. A checker needs the content’s subject and intended search terms.",
+    "unit": "document",
+    "violation_condition": "The title of video or audio content lacks relevant keywords.",
+    "when": [
+     "The text is the title of video or audio content."
+    ],
+    "why": "G-1: keyword inclusion is distinct from title length and general descriptiveness."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "18b5e712b5ae",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "is descriptive, telling users what the content is about.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The title does not tell users what the video or audio content is about.",
+    "when": [
+     "The text is the title of video or audio content."
+    ],
+    "why": "G-1: a title can satisfy the length and keyword checks without adequately describing the content."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2d26ebe7a616",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the description to explain if the content is part of a series and tell people how they can subscribe.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "The description of content in a series does not explain its series membership or how people can subscribe.",
+    "when": [
+     "The video or audio content is part of a series."
+    ],
+    "why": "G-2: series membership is the condition for the series-information check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "142f946b7fa6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "142f946b7fa6",
+      "quote": "For interviews or ‘talking heads’, the usual style is to place the speaker’s name on the top line."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Place the speaker’s title and organisation on the second line.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An interview or talking-head lower third does not put the speaker’s name on the top line and their title and organisation on the second line.",
+    "when": [
+     "The text is a lower third for an interview or talking-head video."
+    ],
+    "why": "G-2: both lines form one ordering convention for the speaker-identification block."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1c8a7bb5521f",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "54f469d6e489",
+      "quote": "Lower thirds must:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "be correct",
+    "specification": "Apply this to the accuracy of the written name, title and organisation. Verification requires an authoritative source.",
+    "unit": "block",
+    "violation_condition": "A lower third contains incorrect speaker-identification information.",
+    "when": [
+     "The text is a lower third in a video."
+    ],
+    "why": "G-1: accuracy of the words is a separate check from the overlay’s visual properties."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b94bdf30b24e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "be as short as possible",
+    "specification": "Interpret brevity as omitting unnecessary wording while retaining the information needed to identify the speaker; the manual gives no numerical limit.",
+    "unit": "block",
+    "violation_condition": "A lower third contains wording that can be removed without losing necessary speaker-identification information.",
+    "when": [
+     "The text is a lower third in a video."
+    ],
+    "why": "G-1 and E-4: brevity is distinct from correctness, and its operational interpretation is made explicit."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "d4569d4b701e",
+    "end": 20,
+    "prefix": "",
+    "quote": "Include all dialogue",
+    "start": 0,
+    "suffix": " and the speakers’ names. If the"
+   },
+   "clarity_suggestion": "not_automatable",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Completeness requires comparison with the source recording; the transcript alone cannot establish whether dialogue is missing.",
+    "unit": "document",
+    "violation_condition": "A transcript omits dialogue from the source recording."
+   },
+   "when": [
+    "The text is a transcript of video or audio."
+   ],
+   "why": "G-1: dialogue completeness is distinct from identifying the speakers."
+  },
+  {
+   "anchor": {
+    "block_id": "d4569d4b701e",
+    "end": 45,
+    "prefix": "",
+    "quote": "Include all dialogue and the speakers’ names.",
+    "start": 0,
+    "suffix": " If there is only one speaker, i"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d4569d4b701e",
+     "end": 117,
+     "prefix": "alogue and the speakers’ names. ",
+     "quote": "If there is only one speaker, introduce them by name in the transcript.",
+     "start": 46,
+     "suffix": " You can then leave out their na"
+    },
+    {
+     "block_id": "d4569d4b701e",
+     "end": 207,
+     "prefix": "them by name in the transcript. ",
+     "quote": "You can then leave out their name with the dialogue, unless it is crucial to the content.",
+     "start": 118,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A transcript fails to identify its speakers by name, or fails to name its sole speaker at the beginning."
+   },
+   "when": [
+    "The text is a transcript.",
+    "With only one speaker, an initial introduction by name is sufficient.",
+    "Repeat a sole speaker’s name with the dialogue only when it is crucial to the content."
+   ],
+   "why": "G-2 and G-3: the single-speaker instructions are conditions and an exception to the speaker-identification check."
+  },
+  {
+   "anchor": {
+    "block_id": "47bfe461cee8",
+    "end": 48,
+    "prefix": "",
+    "quote": "Write non-verbal information in square brackets.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The requested examples field is not available in the response schema.",
+     "parts": [
+      {
+       "block_id": "525d0295ee93",
+       "end": 40,
+       "prefix": "",
+       "quote": "‘… to get to the other side [laughing].’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Non-verbal information in a transcript is not enclosed in square brackets."
+   },
+   "when": [
+    "The text is a transcript and includes non-verbal information."
+   ],
+   "why": "G-1: this is a distinct notation check for non-verbal information."
+  },
+  {
+   "anchor": {
+    "block_id": "04e4eb2634dd",
+    "end": 44,
+    "prefix": "",
+    "quote": "End the transcript with ‘End of transcript’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A transcript does not end with the words ‘End of transcript’."
+   },
+   "when": [
+    "The text is a transcript."
+   ],
+   "why": "G-4: ordinary prose following the example states a new rule."
+  },
+  {
+   "anchor": {
+    "block_id": "670fb661e3b3",
+    "end": 115,
+    "prefix": "",
+    "quote": "Use Australian terms and spelling for an Australian audience, regardless of the accent or intention of the speaker.",
+    "start": 0,
+    "suffix": " Government agencies might use a"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "670fb661e3b3",
+     "end": 213,
+     "prefix": "nt or intention of the speaker. ",
+     "quote": "Government agencies might use alternative spellings in video content for some overseas audiences.",
+     "start": 116,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Captions or subtitles intended for an Australian audience use non-Australian terms or spelling merely to reproduce the speaker’s accent or intended spelling."
+   },
+   "when": [
+    "The text is captions or subtitles for an Australian audience.",
+    "Alternative spellings may be used in government video content for some overseas audiences."
+   ],
+   "why": "G-2 and G-3: the audience determines when the spelling and terminology check applies."
+  },
+  {
+   "anchor": {
+    "block_id": "8b4b85f1009f",
+    "end": 98,
+    "prefix": "",
+    "quote": "Keep captions and subtitles short: no more than 2 lines, with no more than 42 characters per line.",
+    "start": 0,
+    "suffix": " Make line breaks where there is"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A caption or subtitle has more than 2 lines, or a line contains more than 42 characters."
+   },
+   "when": [
+    "The text is a caption or subtitle block."
+   ],
+   "why": "G-1: the sentence defines one caption-length check with explicit line and character limits."
+  },
+  {
+   "anchor": {
+    "block_id": "8b4b85f1009f",
+    "end": 192,
+    "prefix": "re than 42 characters per line. ",
+    "quote": "Make line breaks where there is a natural break in the sentence (for example, after a comma).",
+    "start": 99,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The manual gives a comma as an example but does not define all acceptable natural breaks.",
+    "unit": "sentence",
+    "violation_condition": "A caption or subtitle line break interrupts a syntactic unit rather than falling at a natural break in the sentence."
+   },
+   "when": [
+    "The text is captions or subtitles split across lines."
+   ],
+   "why": "G-1: placement of a line break is separate from the length limits."
+  },
+  {
+   "anchor": {
+    "block_id": "467999373343",
+    "end": 33,
+    "prefix": "",
+    "quote": "give each speaker a separate line",
+    "start": 0,
+    "suffix": " and start each line with a dash"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "fd8272fd14aa",
+     "end": 24,
+     "prefix": "",
+     "quote": "If there are 2 speakers:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A caption or subtitle containing 2 speakers places both speakers’ dialogue on the same line."
+   },
+   "when": [
+    "A caption or subtitle block contains 2 speakers."
+   ],
+   "why": "G-1 and G-2: speaker separation is one check, conditional on there being 2 speakers."
+  },
+  {
+   "anchor": {
+    "block_id": "467999373343",
+    "end": 65,
+    "prefix": "ach speaker a separate line and ",
+    "quote": "start each line with a dash",
+    "start": 38,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "fd8272fd14aa",
+     "end": 24,
+     "prefix": "",
+     "quote": "If there are 2 speakers:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A speaker’s line in a caption or subtitle with 2 speakers does not start with a dash."
+   },
+   "when": [
+    "A caption or subtitle block contains 2 speakers."
+   ],
+   "why": "G-1: the missing speaker dash is distinct from failing to separate the speakers onto different lines."
+  },
+  {
+   "anchor": {
+    "block_id": "c786ffdff91f",
+    "end": 46,
+    "prefix": "",
+    "quote": "Don’t use a full stop at the end of subtitles.",
+    "start": 0,
+    "suffix": " Use an ellipsis to indicate the"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A subtitle ends with a full stop."
+   },
+   "when": [
+    "The text is a subtitle.",
+    "An ellipsis indicating trailing or unfinished speech is not a terminal full stop."
+   ],
+   "why": "G-1: terminal full stops are a separate punctuation check from indicating unfinished speech."
+  },
+  {
+   "anchor": {
+    "block_id": "c786ffdff91f",
+    "end": 160,
+    "prefix": "l stop at the end of subtitles. ",
+    "quote": "Use an ellipsis to indicate the end of a sentence where speech trails off or where a sentence remains unfinished.",
+    "start": 47,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A subtitle does not use an ellipsis to mark speech that trails off or a sentence that remains unfinished."
+   },
+   "when": [
+    "The subtitle represents speech that trails off or remains unfinished."
+   ],
+   "why": "G-2: trailing off and remaining unfinished are two triggers for the same ellipsis check."
+  },
+  {
+   "anchor": {
+    "block_id": "66ce2029433a",
+    "end": 16,
+    "prefix": "",
+    "quote": "Use italics for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e3368191052c",
+     "end": 25,
+     "prefix": "",
+     "quote": "foreign words and phrases",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a69504740cac",
+     "end": 104,
+     "prefix": "",
+     "quote": "dialogue that is not on the screen, such as a public announcement or dialogue from a television program.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "transcript"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A foreign word or phrase, or dialogue from an off-screen source, is not italicised in captions or subtitles."
+   },
+   "when": [
+    "The text is captions or subtitles.",
+    "The text is a foreign word or phrase, or dialogue from an off-screen source such as a public announcement or television program."
+   ],
+   "why": "G-2: both listed cases trigger the same missing-italics check."
+  },
+  {
+   "anchor": {
+    "block_id": "a0308de5911d",
+    "end": 49,
+    "prefix": "",
+    "quote": "Any video or audio content you publish must have:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "47baf997845e",
+     "end": 33,
+     "prefix": "",
+     "quote": "a title, description and metadata",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Published video or audio content lacks a written title or description."
+   },
+   "when": [
+    "Video or audio content is published.",
+    "This check concerns the written title and description, not the file’s metadata or file name."
+   ],
+   "why": "G-1: required descriptive text is distinct from the later checks on its wording; file properties are excluded."
+  },
+  {
+   "anchor": {
+    "block_id": "dd1d390e4424",
+    "end": 61,
+    "prefix": "",
+    "quote": "has 70 characters or fewer so that search engines can find it",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "86d8c3d18db6",
+     "end": 85,
+     "prefix": "ople what the content is about. ",
+     "quote": "Make sure the title:",
+     "start": 65,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title of video or audio content contains more than 70 characters."
+   },
+   "when": [
+    "The text is the title of video or audio content."
+   ],
+   "why": "G-1: title length is a specific child check, not a second copy of the section heading."
+  },
+  {
+   "anchor": {
+    "block_id": "46fc9b040ca5",
+    "end": 17,
+    "prefix": "",
+    "quote": "includes keywords",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not identify required keywords or define how they should be selected. A checker needs the content’s subject and intended search terms.",
+    "unit": "document",
+    "violation_condition": "The title of video or audio content lacks relevant keywords."
+   },
+   "when": [
+    "The text is the title of video or audio content."
+   ],
+   "why": "G-1: keyword inclusion is distinct from title length and general descriptiveness."
+  },
+  {
+   "anchor": {
+    "block_id": "18b5e712b5ae",
+    "end": 56,
+    "prefix": "",
+    "quote": "is descriptive, telling users what the content is about.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The title does not tell users what the video or audio content is about."
+   },
+   "when": [
+    "The text is the title of video or audio content."
+   ],
+   "why": "G-1: a title can satisfy the length and keyword checks without adequately describing the content."
+  },
+  {
+   "anchor": {
+    "block_id": "2d26ebe7a616",
+    "end": 105,
+    "prefix": "",
+    "quote": "Use the description to explain if the content is part of a series and tell people how they can subscribe.",
+    "start": 0,
+    "suffix": " You can also add:"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "The description of content in a series does not explain its series membership or how people can subscribe."
+   },
+   "when": [
+    "The video or audio content is part of a series."
+   ],
+   "why": "G-2: series membership is the condition for the series-information check."
+  },
+  {
+   "anchor": {
+    "block_id": "142f946b7fa6",
+    "end": 161,
+    "prefix": "speaker’s name on the top line. ",
+    "quote": "Place the speaker’s title and organisation on the second line.",
+    "start": 99,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "142f946b7fa6",
+     "end": 98,
+     "prefix": "",
+     "quote": "For interviews or ‘talking heads’, the usual style is to place the speaker’s name on the top line.",
+     "start": 0,
+     "suffix": " Place the speaker’s title and o"
+    }
+   ],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An interview or talking-head lower third does not put the speaker’s name on the top line and their title and organisation on the second line."
+   },
+   "when": [
+    "The text is a lower third for an interview or talking-head video."
+   ],
+   "why": "G-2: both lines form one ordering convention for the speaker-identification block."
+  },
+  {
+   "anchor": {
+    "block_id": "1c8a7bb5521f",
+    "end": 10,
+    "prefix": "",
+    "quote": "be correct",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "54f469d6e489",
+     "end": 18,
+     "prefix": "",
+     "quote": "Lower thirds must:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Apply this to the accuracy of the written name, title and organisation. Verification requires an authoritative source.",
+    "unit": "block",
+    "violation_condition": "A lower third contains incorrect speaker-identification information."
+   },
+   "when": [
+    "The text is a lower third in a video."
+   ],
+   "why": "G-1: accuracy of the words is a separate check from the overlay’s visual properties."
+  },
+  {
+   "anchor": {
+    "block_id": "b94bdf30b24e",
+    "end": 23,
+    "prefix": "",
+    "quote": "be as short as possible",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Interpret brevity as omitting unnecessary wording while retaining the information needed to identify the speaker; the manual gives no numerical limit.",
+    "unit": "block",
+    "violation_condition": "A lower third contains wording that can be removed without losing necessary speaker-identification information."
+   },
+   "when": [
+    "The text is a lower third in a video."
+   ],
+   "why": "G-1 and E-4: brevity is distinct from correctness, and its operational interpretation is made explicit."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 9187,
+  "output_tokens": 16507,
+  "reasoning_tokens": 5178
+ }
+}
