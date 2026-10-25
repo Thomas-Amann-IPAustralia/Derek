@@ -1,0 +1,105 @@
+{
+ "effort": "high",
+ "input_sha256": "eac66e9245c621fa78c628d6196454e1f160d9a08cd465fdc3268b64eca52c9a",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "1751c881fac3",
+    "end": 30,
+    "prefix": "",
+    "quote": "Apply accessibility principles",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Page-level heading introducing accessibility principles and guidance, not a separate checkable requirement.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ce81e430e5d5",
+    "end": 38,
+    "prefix": "",
+    "quote": "Use WCAG principles to meet user needs",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups summaries of WCAG principles and user needs. The summaries describe accessibility outcomes, not specific requirements for wording; do not derive additional text rules from them.",
+   "reason": "section",
+   "seed_uid": "18e55ab07100a65f"
+  },
+  {
+   "anchor": {
+    "block_id": "272e57695e90",
+    "end": 58,
+    "prefix": "",
+    "quote": "Follow Style Manual guidance on accessibility requirements",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs writers to consult and follow guidance elsewhere rather than stating a property of text that this page's checker could flag.",
+   "reason": "advice",
+   "seed_uid": "ff54677f3e558feb"
+  },
+  {
+   "anchor": {
+    "block_id": "8f67775bfc79",
+    "end": 79,
+    "prefix": "",
+    "quote": "Look for accessibility requirements as you check guidance for different topics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes the writer's checking process, not a requirement observable in the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/apply-accessibility-principles.md",
+ "page_sha256": "d54c27c06cb4f9df67622430c8388471fa4bcbed21d6f51ed42568b241198ce3",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "1751c881fac3",
+    "note": "Page-level heading introducing accessibility principles and guidance, not a separate checkable requirement.",
+    "quote": "Apply accessibility principles",
+    "reason": "section"
+   },
+   {
+    "block_id": "ce81e430e5d5",
+    "note": "G-1: groups summaries of WCAG principles and user needs. The summaries describe accessibility outcomes, not specific requirements for wording; do not derive additional text rules from them.",
+    "quote": "Use WCAG principles to meet user needs",
+    "reason": "section"
+   },
+   {
+    "block_id": "272e57695e90",
+    "note": "G-5: directs writers to consult and follow guidance elsewhere rather than stating a property of text that this page's checker could flag.",
+    "quote": "Follow Style Manual guidance on accessibility requirements",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8f67775bfc79",
+    "note": "G-5: describes the writer's checking process, not a requirement observable in the resulting text.",
+    "quote": "Look for accessibility requirements as you check guidance for different topics.",
+    "reason": "advice"
+   }
+  ],
+  "rules": []
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4009,
+  "output_tokens": 992,
+  "reasoning_tokens": 696
+ }
+}

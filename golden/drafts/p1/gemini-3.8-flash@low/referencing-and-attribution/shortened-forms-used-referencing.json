@@ -1,0 +1,344 @@
+{
+ "effort": "low",
+ "input_sha256": "957a7300d5ca45a82b59f6db2fdaed1ca78d549af181dbfc56a7543e21a85c0f",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "978ba69ac752",
+    "end": 156,
+    "prefix": "",
+    "quote": "Shortened forms are used in referencing to help people quickly identify sources. Unlike other shortened forms, some Latin shortened forms retain full stops.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive background on referencing conventions.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f627380056eb",
+    "end": 59,
+    "prefix": "",
+    "quote": "Only some Latin shortened forms and ‘n.d.’ take full stops.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive observation introducing the table of forms and full stop usage.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2bdd0604ff84",
+    "end": 135,
+    "prefix": "",
+    "quote": "The terms ‘ibid.’, ‘op. cit.’, ‘loc. cit.’ and ‘id.’ are sometimes used in the documentary–note system and other styles of referencing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive context preceding the recommendation to avoid these terms.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "061c938b8b8a",
+    "end": 144,
+    "prefix": "",
+    "quote": "The term ‘ibid.’ refers users to the same publication that was cited immediately before it. It can refer to the same page or to a different one.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the definition and meaning of 'ibid.'.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b52c74f7e4f8",
+    "end": 249,
+    "prefix": "",
+    "quote": "The term ‘op. cit.’ refers users back to information from different pages in the same publication. The difference between ‘ibid.’ and ‘op. cit.’ is that there can be several references between the first mention of the publication and later mentions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the definition and meaning of 'op. cit.'.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "476445b5df7d",
+    "end": 92,
+    "prefix": "",
+    "quote": "The term ‘loc. cit.’ refers the reader back to the same page of a publication already cited.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the definition and meaning of 'loc. cit.'.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2bb0d0b91ffa",
+    "end": 110,
+    "prefix": "",
+    "quote": "The term ‘id.’ signifies that the work in the second note is by the same author as the work in the first note.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the definition and meaning of 'id.'.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "referencing-and-attribution/shortened-forms-used-referencing.md",
+ "page_sha256": "f46eac3d4aafba36a1fa61450ad11c6b4aaa825e26339e0c4265bce665121e5d",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "978ba69ac752",
+    "note": "Descriptive background on referencing conventions.",
+    "quote": "Shortened forms are used in referencing to help people quickly identify sources. Unlike other shortened forms, some Latin shortened forms retain full stops.",
+    "reason": "description"
+   },
+   {
+    "block_id": "f627380056eb",
+    "note": "Descriptive observation introducing the table of forms and full stop usage.",
+    "quote": "Only some Latin shortened forms and ‘n.d.’ take full stops.",
+    "reason": "description"
+   },
+   {
+    "block_id": "2bdd0604ff84",
+    "note": "Descriptive context preceding the recommendation to avoid these terms.",
+    "quote": "The terms ‘ibid.’, ‘op. cit.’, ‘loc. cit.’ and ‘id.’ are sometimes used in the documentary–note system and other styles of referencing.",
+    "reason": "description"
+   },
+   {
+    "block_id": "061c938b8b8a",
+    "note": "Explains the definition and meaning of 'ibid.'.",
+    "quote": "The term ‘ibid.’ refers users to the same publication that was cited immediately before it. It can refer to the same page or to a different one.",
+    "reason": "description"
+   },
+   {
+    "block_id": "b52c74f7e4f8",
+    "note": "Explains the definition and meaning of 'op. cit.'.",
+    "quote": "The term ‘op. cit.’ refers users back to information from different pages in the same publication. The difference between ‘ibid.’ and ‘op. cit.’ is that there can be several references between the first mention of the publication and later mentions.",
+    "reason": "description"
+   },
+   {
+    "block_id": "476445b5df7d",
+    "note": "Explains the definition and meaning of 'loc. cit.'.",
+    "quote": "The term ‘loc. cit.’ refers the reader back to the same page of a publication already cited.",
+    "reason": "description"
+   },
+   {
+    "block_id": "2bb0d0b91ffa",
+    "note": "Explains the definition and meaning of 'id.'.",
+    "quote": "The term ‘id.’ signifies that the work in the second note is by the same author as the work in the first note.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cfdac4287eb4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2024cb50175e",
+      "quote": "Use roman type, not italics"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "In referencing, present shortened forms in roman type (not italics).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a referencing shortened form formatted in italics rather than roman type",
+    "when": [
+     "In referencing citations, notes, or reference lists."
+    ],
+    "why": "G-4: body states instruction directly; heading absorbed into covers."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cfdac4287eb4",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always start them with a lower case letter, even when they are derived from Latin words.",
+    "specification": "Applies to standard referencing shortened forms (such as ed., p., vol., ibid., etc.); note that MS/MSS is capitalized in the reference table.",
+    "unit": "token",
+    "violation_condition": "a shortened form used in referencing that begins with a capital letter (except MS/MSS)",
+    "when": [
+     "In referencing citations and notes."
+    ],
+    "why": "G-2: distinct requirement regarding capitalization of referencing abbreviations."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "44ec5601266d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "56e9148de7ce",
+      "quote": "Avoid Latin shortened forms in referencing systems"
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "These terms should be avoided unless they are required by a publisher.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of Latin referencing abbreviations 'ibid.', 'op. cit.', 'loc. cit.', or 'id.' in citations or notes",
+    "when": [
+     "In citations, references, or footnotes/endnotes.",
+     "Unless specifically required by a publisher."
+    ],
+    "why": "G-4: body sentence provides the actionable instruction with its exception; heading absorbed."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "cfdac4287eb4",
+    "end": 68,
+    "prefix": "",
+    "quote": "In referencing, present shortened forms in roman type (not italics).",
+    "start": 0,
+    "suffix": " Always start them with a lower "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2024cb50175e",
+     "end": 27,
+     "prefix": "",
+     "quote": "Use roman type, not italics",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a referencing shortened form formatted in italics rather than roman type"
+   },
+   "when": [
+    "In referencing citations, notes, or reference lists."
+   ],
+   "why": "G-4: body states instruction directly; heading absorbed into covers."
+  },
+  {
+   "anchor": {
+    "block_id": "cfdac4287eb4",
+    "end": 157,
+    "prefix": "ms in roman type (not italics). ",
+    "quote": "Always start them with a lower case letter, even when they are derived from Latin words.",
+    "start": 69,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Applies to standard referencing shortened forms (such as ed., p., vol., ibid., etc.); note that MS/MSS is capitalized in the reference table.",
+    "unit": "token",
+    "violation_condition": "a shortened form used in referencing that begins with a capital letter (except MS/MSS)"
+   },
+   "when": [
+    "In referencing citations and notes."
+   ],
+   "why": "G-2: distinct requirement regarding capitalization of referencing abbreviations."
+  },
+  {
+   "anchor": {
+    "block_id": "44ec5601266d",
+    "end": 102,
+    "prefix": "This is no longer common usage. ",
+    "quote": "These terms should be avoided unless they are required by a publisher.",
+    "start": 32,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "56e9148de7ce",
+     "end": 50,
+     "prefix": "",
+     "quote": "Avoid Latin shortened forms in referencing systems",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "use of Latin referencing abbreviations 'ibid.', 'op. cit.', 'loc. cit.', or 'id.' in citations or notes"
+   },
+   "when": [
+    "In citations, references, or footnotes/endnotes.",
+    "Unless specifically required by a publisher."
+   ],
+   "why": "G-4: body sentence provides the actionable instruction with its exception; heading absorbed."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5606,
+  "output_tokens": 1323,
+  "reasoning_tokens": 0
+ }
+}

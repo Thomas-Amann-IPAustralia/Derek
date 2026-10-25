@@ -1,0 +1,747 @@
+{
+ "effort": "high",
+ "input_sha256": "f32544d17c52b1487047109dacbfa81c9759983a6753b41b3d035511cdd8ee8d",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "3a2bca535ab3",
+    "end": 34,
+    "prefix": "",
+    "quote": "Determiners always go with a noun.",
+    "start": 0,
+    "suffix": " They tell people something spec"
+   },
+   "note": "Describes the grammatical category rather than giving a separate editing instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f2a9810ca793",
+    "end": 45,
+    "prefix": "",
+    "quote": "Determiners are ‘articles’ that go with nouns",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An explanatory heading, not a separate text requirement.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7b949a99fd85",
+    "end": 53,
+    "prefix": "",
+    "quote": "Definite articles refer to a specific thing or things",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the function of definite articles; the actionable restriction is stated in the body.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f66e4310bc80",
+    "end": 83,
+    "prefix": "",
+    "quote": "You can use ‘the’ for a group of things, but only if you refer to a specific group.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recorded with the rule against ‘the’ in generalisations, including its specific-group condition.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d655e20765a6",
+    "end": 48,
+    "prefix": "",
+    "quote": "Indefinite articles let you make generalisations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the generic-reference instruction and the separate sound-based article-choice instruction.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "834544cf8040",
+    "end": 60,
+    "prefix": "",
+    "quote": "Use ‘a’ if the following word starts with a consonant sound.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "One case of the consolidated sound-based article-choice rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "81cd4948cefd",
+    "end": 57,
+    "prefix": "",
+    "quote": "Use ‘an’ if the following word starts with a vowel sound.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The complementary case of the consolidated sound-based article-choice rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "097918b2241a",
+    "end": 113,
+    "prefix": "",
+    "quote": "The same rule applies to shortened words and phrases (abbreviations, acronyms and initialisms, and contractions).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Extends the same pronunciation check to shortened forms; recorded under its conditions.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "80e299a3a7d9",
+    "end": 22,
+    "prefix": "",
+    "quote": "Say the noun out loud.",
+    "start": 0,
+    "suffix": " If it starts with the hidden ‘y"
+   },
+   "note": "A technique for the writer, not an observable property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "80e299a3a7d9",
+    "end": 71,
+    "prefix": "Say the noun out loud. ",
+    "quote": "If it starts with the hidden ‘y’ sound, use ‘a’.",
+    "start": 23,
+    "suffix": ""
+   },
+   "note": "A consonant-sound case already covered by the sound-based article-choice rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "de63c63c79e2",
+    "end": 84,
+    "prefix": "",
+    "quote": "Use ‘an’ only before words that start with a silent ‘h’, such as ‘honour’ or ‘hour’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An initial-‘h’ case of the same pronunciation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "95eb7e467a35",
+    "end": 102,
+    "prefix": "",
+    "quote": "Use ‘a’ for all other words starting with ‘h’, such as ‘historian’ or 'hotel’, when the ‘h’ is spoken.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The spoken-‘h’ case of the same pronunciation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8f0b9ccbe712",
+    "end": 36,
+    "prefix": "",
+    "quote": "Pronouns can function as determiners",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a grammatical function; it does not prescribe a choice the checker could enforce.",
+   "reason": "description",
+   "seed_uid": "825088ac576543f8"
+  },
+  {
+   "anchor": {
+    "block_id": "ccd32e05a173",
+    "end": 35,
+    "prefix": "",
+    "quote": "Numbers can function as determiners",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a grammatical function; it does not prescribe a choice the checker could enforce.",
+   "reason": "description",
+   "seed_uid": "50cc3ed8dce7293e"
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/determiners.md",
+ "page_sha256": "ff16d934b46c9ccba5ab624149f1ae9e0006483433949c16be148b3f00ad866c",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "3a2bca535ab3",
+    "note": "Describes the grammatical category rather than giving a separate editing instruction.",
+    "quote": "Determiners always go with a noun.",
+    "reason": "description"
+   },
+   {
+    "block_id": "f2a9810ca793",
+    "note": "An explanatory heading, not a separate text requirement.",
+    "quote": "Determiners are ‘articles’ that go with nouns",
+    "reason": "description"
+   },
+   {
+    "block_id": "7b949a99fd85",
+    "note": "Describes the function of definite articles; the actionable restriction is stated in the body.",
+    "quote": "Definite articles refer to a specific thing or things",
+    "reason": "description"
+   },
+   {
+    "block_id": "f66e4310bc80",
+    "note": "Recorded with the rule against ‘the’ in generalisations, including its specific-group condition.",
+    "quote": "You can use ‘the’ for a group of things, but only if you refer to a specific group.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "d655e20765a6",
+    "note": "Introduces the generic-reference instruction and the separate sound-based article-choice instruction.",
+    "quote": "Indefinite articles let you make generalisations",
+    "reason": "section"
+   },
+   {
+    "block_id": "834544cf8040",
+    "note": "One case of the consolidated sound-based article-choice rule.",
+    "quote": "Use ‘a’ if the following word starts with a consonant sound.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "81cd4948cefd",
+    "note": "The complementary case of the consolidated sound-based article-choice rule.",
+    "quote": "Use ‘an’ if the following word starts with a vowel sound.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "097918b2241a",
+    "note": "Extends the same pronunciation check to shortened forms; recorded under its conditions.",
+    "quote": "The same rule applies to shortened words and phrases (abbreviations, acronyms and initialisms, and contractions).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "80e299a3a7d9",
+    "note": "A technique for the writer, not an observable property of the resulting text.",
+    "quote": "Say the noun out loud.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "80e299a3a7d9",
+    "note": "A consonant-sound case already covered by the sound-based article-choice rule.",
+    "quote": "If it starts with the hidden ‘y’ sound, use ‘a’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "de63c63c79e2",
+    "note": "An initial-‘h’ case of the same pronunciation check.",
+    "quote": "Use ‘an’ only before words that start with a silent ‘h’, such as ‘honour’ or ‘hour’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "95eb7e467a35",
+    "note": "The spoken-‘h’ case of the same pronunciation check.",
+    "quote": "Use ‘a’ for all other words starting with ‘h’, such as ‘historian’ or 'hotel’, when the ‘h’ is spoken.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8f0b9ccbe712",
+    "note": "Describes a grammatical function; it does not prescribe a choice the checker could enforce.",
+    "quote": "Pronouns can function as determiners",
+    "reason": "description"
+   },
+   {
+    "block_id": "ccd32e05a173",
+    "note": "Describes a grammatical function; it does not prescribe a choice the checker could enforce.",
+    "quote": "Numbers can function as determiners",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4df9337b1bc6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f66e4310bc80",
+      "quote": "You can use ‘the’ for a group of things, but only if you refer to a specific group."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The report is specific.",
+      "parts": [
+       {
+        "block_id": "3b9643787c29",
+        "quote": "They finished the report on time and on budget."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The employees are a specific group.",
+      "parts": [
+       {
+        "block_id": "a07c095e0ad9",
+        "quote": "The employees were on time for the meeting."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The sentence makes a generalisation without ‘the’.",
+      "parts": [
+       {
+        "block_id": "4addcb63b7f0",
+        "quote": "People work in offices."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use ‘the’ when you make a generalisation.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘The’ introduces a generalisation rather than a reference to a specific thing or group.",
+    "when": [
+     "The reference is a generalisation.",
+     "‘The’ is permitted when referring to a specific group."
+    ],
+    "why": "G-2 and G-3: the specific-group permission limits the same check; it is not a separate rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c9d5d0426ab4",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The school and child are generic references.",
+      "parts": [
+       {
+        "block_id": "478df44f9eac",
+        "quote": "A school should teach a child how to read and write."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The reference could be to any EL2.",
+      "parts": [
+       {
+        "block_id": "c619beca90ff",
+        "quote": "An EL2 usually supervises several staff."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use them when you are referring to a generic thing or idea rather than a specific one.",
+    "specification": "‘Them’ means ‘a’ and ‘an’. Interpret this as requiring an indefinite article for a generic singular count noun that needs an article, not for generic plurals or mass nouns. This grammatical limitation is implicit in the examples rather than expressly stated. A present ‘the’ used for a generalisation is handled by the preceding rule.",
+    "unit": "sentence",
+    "violation_condition": "A generic singular count-noun reference that requires an article has neither ‘a’ nor ‘an’ and has no other determiner.",
+    "when": [
+     "The reference is generic rather than specific.",
+     "The noun is singular and countable and requires an article.",
+     "No other determiner supplies that role."
+    ],
+    "why": "G-4: the body sentence supplies the instruction. Its scope needs explicit interpretation so that generic plurals are not incorrectly flagged."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a9aae0651121",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "834544cf8040",
+      "quote": "Use ‘a’ if the following word starts with a consonant sound."
+     },
+     {
+      "block_id": "81cd4948cefd",
+      "quote": "Use ‘an’ if the following word starts with a vowel sound."
+     },
+     {
+      "block_id": "097918b2241a",
+      "quote": "The same rule applies to shortened words and phrases (abbreviations, acronyms and initialisms, and contractions)."
+     },
+     {
+      "block_id": "80e299a3a7d9",
+      "quote": "If it starts with the hidden ‘y’ sound, use ‘a’."
+     },
+     {
+      "block_id": "de63c63c79e2",
+      "quote": "Use ‘an’ only before words that start with a silent ‘h’, such as ‘honour’ or ‘hour’."
+     },
+     {
+      "block_id": "95eb7e467a35",
+      "quote": "Use ‘a’ for all other words starting with ‘h’, such as ‘historian’ or 'hotel’, when the ‘h’ is spoken."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "‘Error’ begins with a vowel sound.",
+      "parts": [
+       {
+        "block_id": "e9e5316c7d0b",
+        "quote": "It was an error."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "‘Cold’ begins with a consonant sound.",
+      "parts": [
+       {
+        "block_id": "24f566c475c6",
+        "quote": "It was a cold office."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "‘University’ begins with a consonant ‘y’ sound.",
+      "parts": [
+       {
+        "block_id": "3c787ec93aec",
+        "quote": "The job required a university degree."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Choose ‘a’ or ‘an’ according to the sound of the word after it:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘A’ precedes a vowel sound, or ‘an’ precedes a consonant sound, in the pronunciation of the following word or shortened form.",
+    "when": [
+     "An indefinite article immediately precedes a word or shortened form.",
+     "The following consonant sound takes ‘a’; the following vowel sound takes ‘an’.",
+     "Apply the pronunciation test to abbreviations, acronyms, initialisms and contractions too.",
+     "An initial hidden ‘y’ sound is a consonant sound and takes ‘a’.",
+     "An initial silent ‘h’, as in ‘honour’ or ‘hour’, takes ‘an’; a spoken initial ‘h’ takes ‘a’."
+    ],
+    "why": "G-2 and G-4: consonants, vowels, shortened forms, hidden ‘y’ and initial ‘h’ are cases of the same sound-based article-choice check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "4df9337b1bc6",
+    "end": 47,
+    "prefix": "",
+    "quote": "Don’t use ‘the’ when you make a generalisation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f66e4310bc80",
+     "end": 83,
+     "prefix": "",
+     "quote": "You can use ‘the’ for a group of things, but only if you refer to a specific group.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The report is specific.",
+     "parts": [
+      {
+       "block_id": "3b9643787c29",
+       "end": 47,
+       "prefix": "",
+       "quote": "They finished the report on time and on budget.",
+       "start": 0,
+       "suffix": " [This sentence refers to a spec"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The employees are a specific group.",
+     "parts": [
+      {
+       "block_id": "a07c095e0ad9",
+       "end": 43,
+       "prefix": "",
+       "quote": "The employees were on time for the meeting.",
+       "start": 0,
+       "suffix": " [Specific employees were on tim"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The sentence makes a generalisation without ‘the’.",
+     "parts": [
+      {
+       "block_id": "4addcb63b7f0",
+       "end": 23,
+       "prefix": "",
+       "quote": "People work in offices.",
+       "start": 0,
+       "suffix": " [This is a generalisation about"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "‘The’ introduces a generalisation rather than a reference to a specific thing or group."
+   },
+   "when": [
+    "The reference is a generalisation.",
+    "‘The’ is permitted when referring to a specific group."
+   ],
+   "why": "G-2 and G-3: the specific-group permission limits the same check; it is not a separate rule."
+  },
+  {
+   "anchor": {
+    "block_id": "c9d5d0426ab4",
+    "end": 136,
+    "prefix": "‘an’ are ‘indefinite articles’. ",
+    "quote": "Use them when you are referring to a generic thing or idea rather than a specific one.",
+    "start": 50,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The school and child are generic references.",
+     "parts": [
+      {
+       "block_id": "478df44f9eac",
+       "end": 52,
+       "prefix": "",
+       "quote": "A school should teach a child how to read and write.",
+       "start": 0,
+       "suffix": " [This could be any school and a"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The reference could be to any EL2.",
+     "parts": [
+      {
+       "block_id": "c619beca90ff",
+       "end": 40,
+       "prefix": "",
+       "quote": "An EL2 usually supervises several staff.",
+       "start": 0,
+       "suffix": " [This could be any EL2.]"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "‘Them’ means ‘a’ and ‘an’. Interpret this as requiring an indefinite article for a generic singular count noun that needs an article, not for generic plurals or mass nouns. This grammatical limitation is implicit in the examples rather than expressly stated. A present ‘the’ used for a generalisation is handled by the preceding rule.",
+    "unit": "sentence",
+    "violation_condition": "A generic singular count-noun reference that requires an article has neither ‘a’ nor ‘an’ and has no other determiner."
+   },
+   "when": [
+    "The reference is generic rather than specific.",
+    "The noun is singular and countable and requires an article.",
+    "No other determiner supplies that role."
+   ],
+   "why": "G-4: the body sentence supplies the instruction. Its scope needs explicit interpretation so that generic plurals are not incorrectly flagged."
+  },
+  {
+   "anchor": {
+    "block_id": "a9aae0651121",
+    "end": 63,
+    "prefix": "",
+    "quote": "Choose ‘a’ or ‘an’ according to the sound of the word after it:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "834544cf8040",
+     "end": 60,
+     "prefix": "",
+     "quote": "Use ‘a’ if the following word starts with a consonant sound.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "81cd4948cefd",
+     "end": 57,
+     "prefix": "",
+     "quote": "Use ‘an’ if the following word starts with a vowel sound.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "097918b2241a",
+     "end": 113,
+     "prefix": "",
+     "quote": "The same rule applies to shortened words and phrases (abbreviations, acronyms and initialisms, and contractions).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "80e299a3a7d9",
+     "end": 71,
+     "prefix": "Say the noun out loud. ",
+     "quote": "If it starts with the hidden ‘y’ sound, use ‘a’.",
+     "start": 23,
+     "suffix": ""
+    },
+    {
+     "block_id": "de63c63c79e2",
+     "end": 84,
+     "prefix": "",
+     "quote": "Use ‘an’ only before words that start with a silent ‘h’, such as ‘honour’ or ‘hour’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "95eb7e467a35",
+     "end": 102,
+     "prefix": "",
+     "quote": "Use ‘a’ for all other words starting with ‘h’, such as ‘historian’ or 'hotel’, when the ‘h’ is spoken.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "‘Error’ begins with a vowel sound.",
+     "parts": [
+      {
+       "block_id": "e9e5316c7d0b",
+       "end": 16,
+       "prefix": "",
+       "quote": "It was an error.",
+       "start": 0,
+       "suffix": " [The ‘e’ sound in ‘error’ is a "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "‘Cold’ begins with a consonant sound.",
+     "parts": [
+      {
+       "block_id": "24f566c475c6",
+       "end": 21,
+       "prefix": "",
+       "quote": "It was a cold office.",
+       "start": 0,
+       "suffix": " [The ‘c’ sound in ‘cold’ is a c"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "‘University’ begins with a consonant ‘y’ sound.",
+     "parts": [
+      {
+       "block_id": "3c787ec93aec",
+       "end": 37,
+       "prefix": "",
+       "quote": "The job required a university degree.",
+       "start": 0,
+       "suffix": " [The ‘u’ sound in ‘university’ "
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘A’ precedes a vowel sound, or ‘an’ precedes a consonant sound, in the pronunciation of the following word or shortened form."
+   },
+   "when": [
+    "An indefinite article immediately precedes a word or shortened form.",
+    "The following consonant sound takes ‘a’; the following vowel sound takes ‘an’.",
+    "Apply the pronunciation test to abbreviations, acronyms, initialisms and contractions too.",
+    "An initial hidden ‘y’ sound is a consonant sound and takes ‘a’.",
+    "An initial silent ‘h’, as in ‘honour’ or ‘hour’, takes ‘an’; a spoken initial ‘h’ takes ‘a’."
+   ],
+   "why": "G-2 and G-4: consonants, vowels, shortened forms, hidden ‘y’ and initial ‘h’ are cases of the same sound-based article-choice check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4580,
+  "output_tokens": 6103,
+  "reasoning_tokens": 3527
+ }
+}

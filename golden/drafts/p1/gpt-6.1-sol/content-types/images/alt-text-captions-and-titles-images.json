@@ -1,0 +1,3285 @@
+{
+ "effort": "high",
+ "input_sha256": "b4af70000d81dee9c6f172f72b335d2c05dc471a227af8e25104025bbd1cc742",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "5a15dce012c4",
+    "end": 45,
+    "prefix": "",
+    "quote": "Give all users access to the same information",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific checks about hidden information, repeated information and extended descriptions.",
+   "reason": "section",
+   "seed_uid": "6aa1c9eef04a68eb"
+  },
+  {
+   "anchor": {
+    "block_id": "0390aff5d311",
+    "end": 6,
+    "prefix": "",
+    "quote": "Don’t:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The lead-in supplies the negative force for its list items; it is not independently checkable.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e8c2d922b39e",
+    "end": 60,
+    "prefix": "",
+    "quote": "hide information in the alt text, as a user might not see it",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the later self-contained prohibition on information available only through alt text.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "558ca1d0cd37",
+    "end": 55,
+    "prefix": "",
+    "quote": "use the <longdesc> attribute for extended descriptions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by ‘Do not use the <longdesc> attribute.’",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d70abac63f64",
+    "end": 139,
+    "prefix": "s – for all informative images. ",
+    "quote": "Decorative images should have null alt text (alt=\"\").",
+    "start": 86,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the more detailed decorative-image empty-value rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "464f41608faf",
+    "end": 36,
+    "prefix": "",
+    "quote": "Add alternative text for all images.",
+    "start": 0,
+    "suffix": " For help with writing good alt "
+   },
+   "note": "G-4: restates the heading requiring alt text for all images.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "464f41608faf",
+    "end": 100,
+    "prefix": "lternative text for all images. ",
+    "quote": "For help with writing good alt text: the W3C alt decision tree.",
+    "start": 37,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to a resource rather than specifying a property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fddcc2650f42",
+    "end": 158,
+    "prefix": "ation or function of the image. ",
+    "quote": "For help to describe images: the W3C/WAI Web Accessibility Tutorials - Images.",
+    "start": 80,
+    "suffix": ""
+   },
+   "note": "G-5: resource referral.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "519dbeb48f3b",
+    "end": 61,
+    "prefix": "",
+    "quote": "Add captions for all images, unless they are only decorative.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: restates the caption-presence heading and its decorative exception.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "69c617746009",
+    "end": 82,
+    "prefix": "",
+    "quote": "Use captions to acknowledge the creator or copyright holder of images in captions.",
+    "start": 0,
+    "suffix": " Use your organisation’s referen"
+   },
+   "note": "G-4: absorbed by the attribution requirement and its permitted placements; the copyright paragraph also allows attribution following the material.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cd91f7289878",
+    "end": 102,
+    "prefix": "",
+    "quote": "For more instructions about using figure captions, visit Web Accessibility Tutorials – complex images.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: instruction to consult another resource.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d50e5e7a5219",
+    "end": 94,
+    "prefix": "",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: reading a source is a writer action, not a textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2d5a36eb08ab",
+    "end": 58,
+    "prefix": "",
+    "quote": "Write alt text and captions to support the image’s purpose",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific requirements for decorative, informational, functional and complex images.",
+   "reason": "section",
+   "seed_uid": "0cdea4d1269b256e"
+  },
+  {
+   "anchor": {
+    "block_id": "a0959c438056",
+    "end": 205,
+    "prefix": "n marks with no space (alt=\"\"). ",
+    "quote": "In documents, set images as ‘Decorative image’ or ‘Background image’.",
+    "start": 136,
+    "suffix": " The empty value tells screen re"
+   },
+   "note": "Sets an image’s document accessibility property rather than its wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "518c95789b48",
+    "end": 72,
+    "prefix": "",
+    "quote": "Write alt text that conveys the same important information as the image.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the broader information-or-function rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6b99d4ad8844",
+    "end": 64,
+    "prefix": "",
+    "quote": "Don’t repeat the information provided by the image and alt text.",
+    "start": 0,
+    "suffix": " This prevents users of screen r"
+   },
+   "note": "G-4: absorbed into the check against duplicate descriptions across alt text and captions.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a71253def560",
+    "end": 106,
+    "prefix": "",
+    "quote": "If the caption or nearby text already explains the informational image, you might use very brief alt text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: relaxes descriptive detail when nearby text supplies the information; recorded under the descriptive-adequacy rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "40341c266c16",
+    "end": 86,
+    "prefix": "",
+    "quote": "Examples of informative images that might have an empty value in the alt text include:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: the following cases permit empty alt text; they do not require it.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "28ceb2562a47",
+    "end": 197,
+    "prefix": "e link instead of the alt text. ",
+    "quote": "You don’t need to add the name to the link if it is already in the text on the page.",
+    "start": 113,
+    "suffix": ""
+   },
+   "note": "G-3: exception recorded under the linked-logo site-name rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6f8d9c782579",
+    "end": 73,
+    "prefix": "",
+    "quote": "Write different alt text for decorative, informative or functional icons.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the category-specific cases; it does not require every icon to have unique wording.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0d21cd368f6a",
+    "end": 56,
+    "prefix": "",
+    "quote": "Use empty alt text (alt=\"\") to declare it as decorative.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: decorative icons follow the decorative-image empty-value rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af8ee1e270a9",
+    "end": 70,
+    "prefix": "",
+    "quote": "Describe the informational icon so the user can understand what it is.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: informational-icon case of the information-or-function rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1adf876f0c35",
+    "end": 75,
+    "prefix": "",
+    "quote": "State the functional icon’s purpose so the user can understand the outcome.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: functional-icon case of the information-or-function rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "546c48a7c0d8",
+    "end": 55,
+    "prefix": "",
+    "quote": "To make sure people can access the information include:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces separate requirements for alt text, a caption and an extended description.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4b3c92534569",
+    "end": 77,
+    "prefix": "",
+    "quote": "alt text that contains a brief interpretation of the main idea from the image",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: complex-image case of the information-or-function alt-text rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f783751a4d67",
+    "end": 35,
+    "prefix": "",
+    "quote": "a caption that summarises the image",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: specifies what the contextual-caption rule expects for a complex image.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7d98d0ada4e3",
+    "end": 86,
+    "prefix": "",
+    "quote": "Use the extended description to help the user understand the information in the image.",
+    "start": 0,
+    "suffix": " Put most of the interpretation "
+   },
+   "note": "G-4: explains the purpose of the required detailed extended description.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7d98d0ada4e3",
+    "end": 208,
+    "prefix": " of the image in the body text. ",
+    "quote": "If the image is a graph, you might link to a table of data.",
+    "start": 149,
+    "suffix": ""
+   },
+   "note": "G-3: optional way to support understanding, not a requirement for every graph.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c083acdeac40",
+    "end": 38,
+    "prefix": "",
+    "quote": "Extended descriptions usually include:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces typical content, not an unconditional requirement that every description contain every listed statistic or comparison.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8aa94f0b6f7b",
+    "end": 91,
+    "prefix": "",
+    "quote": "For examples of alt text, visit Benetech Initiative’s General image description guidelines.",
+    "start": 0,
+    "suffix": " They also have examples of maps"
+   },
+   "note": "G-5: resource referral.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "46fb6c785bf6",
+    "end": 80,
+    "prefix": "",
+    "quote": "Include alt text and captions for all informative photographs and illustrations.",
+    "start": 0,
+    "suffix": " The information you provide dep"
+   },
+   "note": "G-4: the two requirements are already covered by the alt-text and caption-presence rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8d229d220414",
+    "end": 65,
+    "prefix": "",
+    "quote": "Use consistent formatting and punctuation for captions and titles",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups independent punctuation, wording-consistency and visual-formatting requirements.",
+   "reason": "section",
+   "seed_uid": "fe2d4bf3bda7b802"
+  },
+  {
+   "anchor": {
+    "block_id": "e68a246ed7dd",
+    "end": 38,
+    "prefix": "",
+    "quote": "Align captions and titles to the left.",
+    "start": 0,
+    "suffix": " Place captions for decorative i"
+   },
+   "note": "Visual alignment, not wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e68a246ed7dd",
+    "end": 114,
+    "prefix": "aptions and titles to the left. ",
+    "quote": "Place captions for decorative images, such as photographs, below the image.",
+    "start": 39,
+    "suffix": ""
+   },
+   "note": "Visual placement relative to an image, not wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ee8331a2066c",
+    "end": 57,
+    "prefix": "",
+    "quote": "Titles and captions don’t need to be a complete sentence.",
+    "start": 0,
+    "suffix": " Other grammar and punctuation r"
+   },
+   "note": "G-3: allows fragments; it does not require titles or captions to be incomplete sentences.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6adb4636674f",
+    "end": 45,
+    "prefix": "",
+    "quote": "All titles and captions should have the same:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: the following items specify separate structure, terminology and font checks.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7816eef1aca4",
+    "end": 18,
+    "prefix": "",
+    "quote": "font and typeface.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Visual typography rather than wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9088c68ad9b4",
+    "end": 153,
+    "prefix": "ages is a design consideration. ",
+    "quote": "Consult your organisation’s visual style guide to find out what you need to do.",
+    "start": 74,
+    "suffix": ""
+   },
+   "note": "G-5: instruction to consult a source about print design.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "acd75f8e38fb",
+    "end": 58,
+    "prefix": "",
+    "quote": "Don’t extend titles or captions beyond the edges of image.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Physical layout relative to image boundaries.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4075a017fc59",
+    "end": 158,
+    "prefix": "fer to all images as ‘figures’. ",
+    "quote": "Complex publications with many images can use different categories (such as figures, maps or photographs).",
+    "start": 52,
+    "suffix": ""
+   },
+   "note": "G-3: permits alternative category labels within the image-numbering rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "937df63e3f9c",
+    "end": 78,
+    "prefix": "",
+    "quote": "In long-form content, number titles that go with images using ‘figure labels’.",
+    "start": 0,
+    "suffix": " You don’t need to number images"
+   },
+   "note": "G-4: restates the long-document numbering heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "937df63e3f9c",
+    "end": 194,
+    "prefix": "h images using ‘figure labels’. ",
+    "quote": "You don’t need to number images in a brochure, an infographic or a simple, stand-alone page with only a few images.",
+    "start": 79,
+    "suffix": ""
+   },
+   "note": "G-3: exceptions recorded under the numbering-presence rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6c0d5d96956d",
+    "end": 44,
+    "prefix": "",
+    "quote": "To number an image title in a long document:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces an application workflow, not an additional textual requirement.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4aa0bac90ef9",
+    "end": 68,
+    "prefix": "",
+    "quote": "Use the ‘Insert caption’ function in applications to create a label.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: application workflow; the resulting label can be checked without requiring a particular authoring method.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "94492fdbd990",
+    "end": 87,
+    "prefix": "",
+    "quote": "Select the ‘Figure’ label option, and the option to position the label above the image.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Application settings and visual placement; alternative category labels are expressly permitted elsewhere on the page.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4c50cec19f59",
+    "end": 51,
+    "prefix": "",
+    "quote": "Do not select the ‘Exclude label from caption’ box.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Application checkbox setting; the observable numbered-label requirement is already retained.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "80656ee1c0d3",
+    "end": 101,
+    "prefix": "ly numbered and styled for you. ",
+    "quote": "Check that you:",
+    "start": 86,
+    "suffix": ""
+   },
+   "note": "G-5: checking is a writer action; the checkable outcomes in its list are retained separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "33c14eeebe56",
+    "end": 65,
+    "prefix": "",
+    "quote": "use an initial capital for title text that comes after the colon.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed by the title-and-caption first-word capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0176ad418afd",
+    "end": 111,
+    "prefix": "e a full stop after the number. ",
+    "quote": "If your organisation uses this style, apply it consistently.",
+    "start": 51,
+    "suffix": ""
+   },
+   "note": "G-2: consistency is a condition of the full-stop exception to the numbered-title delimiter rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "db373cb71c84",
+    "end": 92,
+    "prefix": "",
+    "quote": "Use the ‘Cross-reference’ function to insert the reference in the body text of the document.",
+    "start": 0,
+    "suffix": " Select ‘Only label and number’ "
+   },
+   "note": "G-5: authoring workflow; the following sentence’s required reference wording is retained separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/images/alt-text-captions-and-titles-images.md",
+ "page_sha256": "9466c2cbf4cf56c47300c896329e349d8c2adbc6e591f5b0a05eb896c5539960",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "5a15dce012c4",
+    "note": "G-1: groups the specific checks about hidden information, repeated information and extended descriptions.",
+    "quote": "Give all users access to the same information",
+    "reason": "section"
+   },
+   {
+    "block_id": "0390aff5d311",
+    "note": "The lead-in supplies the negative force for its list items; it is not independently checkable.",
+    "quote": "Don’t:",
+    "reason": "section"
+   },
+   {
+    "block_id": "e8c2d922b39e",
+    "note": "G-4: absorbed by the later self-contained prohibition on information available only through alt text.",
+    "quote": "hide information in the alt text, as a user might not see it",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "558ca1d0cd37",
+    "note": "G-4: absorbed by ‘Do not use the <longdesc> attribute.’",
+    "quote": "use the <longdesc> attribute for extended descriptions.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d70abac63f64",
+    "note": "G-4: absorbed by the more detailed decorative-image empty-value rule.",
+    "quote": "Decorative images should have null alt text (alt=\"\").",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "464f41608faf",
+    "note": "G-4: restates the heading requiring alt text for all images.",
+    "quote": "Add alternative text for all images.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "464f41608faf",
+    "note": "G-5: directs the writer to a resource rather than specifying a property of the text.",
+    "quote": "For help with writing good alt text: the W3C alt decision tree.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "fddcc2650f42",
+    "note": "G-5: resource referral.",
+    "quote": "For help to describe images: the W3C/WAI Web Accessibility Tutorials - Images.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "519dbeb48f3b",
+    "note": "G-4: restates the caption-presence heading and its decorative exception.",
+    "quote": "Add captions for all images, unless they are only decorative.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "69c617746009",
+    "note": "G-4: absorbed by the attribution requirement and its permitted placements; the copyright paragraph also allows attribution following the material.",
+    "quote": "Use captions to acknowledge the creator or copyright holder of images in captions.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cd91f7289878",
+    "note": "G-5: instruction to consult another resource.",
+    "quote": "For more instructions about using figure captions, visit Web Accessibility Tutorials – complex images.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d50e5e7a5219",
+    "note": "G-5: reading a source is a writer action, not a textual property.",
+    "quote": "Read the government copyright rules in the Australian Government intellectual property manual.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2d5a36eb08ab",
+    "note": "G-1: groups the specific requirements for decorative, informational, functional and complex images.",
+    "quote": "Write alt text and captions to support the image’s purpose",
+    "reason": "section"
+   },
+   {
+    "block_id": "a0959c438056",
+    "note": "Sets an image’s document accessibility property rather than its wording.",
+    "quote": "In documents, set images as ‘Decorative image’ or ‘Background image’.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "518c95789b48",
+    "note": "G-4: absorbed by the broader information-or-function rule.",
+    "quote": "Write alt text that conveys the same important information as the image.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6b99d4ad8844",
+    "note": "G-4: absorbed into the check against duplicate descriptions across alt text and captions.",
+    "quote": "Don’t repeat the information provided by the image and alt text.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a71253def560",
+    "note": "G-3: relaxes descriptive detail when nearby text supplies the information; recorded under the descriptive-adequacy rule.",
+    "quote": "If the caption or nearby text already explains the informational image, you might use very brief alt text.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "40341c266c16",
+    "note": "G-3: the following cases permit empty alt text; they do not require it.",
+    "quote": "Examples of informative images that might have an empty value in the alt text include:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "28ceb2562a47",
+    "note": "G-3: exception recorded under the linked-logo site-name rule.",
+    "quote": "You don’t need to add the name to the link if it is already in the text on the page.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6f8d9c782579",
+    "note": "G-1: introduces the category-specific cases; it does not require every icon to have unique wording.",
+    "quote": "Write different alt text for decorative, informative or functional icons.",
+    "reason": "section"
+   },
+   {
+    "block_id": "0d21cd368f6a",
+    "note": "G-4: decorative icons follow the decorative-image empty-value rule.",
+    "quote": "Use empty alt text (alt=\"\") to declare it as decorative.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "af8ee1e270a9",
+    "note": "G-2 and G-4: informational-icon case of the information-or-function rule.",
+    "quote": "Describe the informational icon so the user can understand what it is.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1adf876f0c35",
+    "note": "G-2 and G-4: functional-icon case of the information-or-function rule.",
+    "quote": "State the functional icon’s purpose so the user can understand the outcome.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "546c48a7c0d8",
+    "note": "G-1: introduces separate requirements for alt text, a caption and an extended description.",
+    "quote": "To make sure people can access the information include:",
+    "reason": "section"
+   },
+   {
+    "block_id": "4b3c92534569",
+    "note": "G-2: complex-image case of the information-or-function alt-text rule.",
+    "quote": "alt text that contains a brief interpretation of the main idea from the image",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f783751a4d67",
+    "note": "G-2: specifies what the contextual-caption rule expects for a complex image.",
+    "quote": "a caption that summarises the image",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7d98d0ada4e3",
+    "note": "G-4: explains the purpose of the required detailed extended description.",
+    "quote": "Use the extended description to help the user understand the information in the image.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7d98d0ada4e3",
+    "note": "G-3: optional way to support understanding, not a requirement for every graph.",
+    "quote": "If the image is a graph, you might link to a table of data.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "c083acdeac40",
+    "note": "Introduces typical content, not an unconditional requirement that every description contain every listed statistic or comparison.",
+    "quote": "Extended descriptions usually include:",
+    "reason": "description"
+   },
+   {
+    "block_id": "8aa94f0b6f7b",
+    "note": "G-5: resource referral.",
+    "quote": "For examples of alt text, visit Benetech Initiative’s General image description guidelines.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "46fb6c785bf6",
+    "note": "G-4: the two requirements are already covered by the alt-text and caption-presence rules.",
+    "quote": "Include alt text and captions for all informative photographs and illustrations.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8d229d220414",
+    "note": "G-1: groups independent punctuation, wording-consistency and visual-formatting requirements.",
+    "quote": "Use consistent formatting and punctuation for captions and titles",
+    "reason": "section"
+   },
+   {
+    "block_id": "e68a246ed7dd",
+    "note": "Visual alignment, not wording.",
+    "quote": "Align captions and titles to the left.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "e68a246ed7dd",
+    "note": "Visual placement relative to an image, not wording.",
+    "quote": "Place captions for decorative images, such as photographs, below the image.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ee8331a2066c",
+    "note": "G-3: allows fragments; it does not require titles or captions to be incomplete sentences.",
+    "quote": "Titles and captions don’t need to be a complete sentence.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6adb4636674f",
+    "note": "G-1: the following items specify separate structure, terminology and font checks.",
+    "quote": "All titles and captions should have the same:",
+    "reason": "section"
+   },
+   {
+    "block_id": "7816eef1aca4",
+    "note": "Visual typography rather than wording.",
+    "quote": "font and typeface.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9088c68ad9b4",
+    "note": "G-5: instruction to consult a source about print design.",
+    "quote": "Consult your organisation’s visual style guide to find out what you need to do.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "acd75f8e38fb",
+    "note": "Physical layout relative to image boundaries.",
+    "quote": "Don’t extend titles or captions beyond the edges of image.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4075a017fc59",
+    "note": "G-3: permits alternative category labels within the image-numbering rule.",
+    "quote": "Complex publications with many images can use different categories (such as figures, maps or photographs).",
+    "reason": "permission"
+   },
+   {
+    "block_id": "937df63e3f9c",
+    "note": "G-4: restates the long-document numbering heading.",
+    "quote": "In long-form content, number titles that go with images using ‘figure labels’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "937df63e3f9c",
+    "note": "G-3: exceptions recorded under the numbering-presence rule.",
+    "quote": "You don’t need to number images in a brochure, an infographic or a simple, stand-alone page with only a few images.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6c0d5d96956d",
+    "note": "Introduces an application workflow, not an additional textual requirement.",
+    "quote": "To number an image title in a long document:",
+    "reason": "section"
+   },
+   {
+    "block_id": "4aa0bac90ef9",
+    "note": "G-5: application workflow; the resulting label can be checked without requiring a particular authoring method.",
+    "quote": "Use the ‘Insert caption’ function in applications to create a label.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "94492fdbd990",
+    "note": "Application settings and visual placement; alternative category labels are expressly permitted elsewhere on the page.",
+    "quote": "Select the ‘Figure’ label option, and the option to position the label above the image.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4c50cec19f59",
+    "note": "Application checkbox setting; the observable numbered-label requirement is already retained.",
+    "quote": "Do not select the ‘Exclude label from caption’ box.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "80656ee1c0d3",
+    "note": "G-5: checking is a writer action; the checkable outcomes in its list are retained separately.",
+    "quote": "Check that you:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "33c14eeebe56",
+    "note": "G-4: absorbed by the title-and-caption first-word capitalisation rule.",
+    "quote": "use an initial capital for title text that comes after the colon.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0176ad418afd",
+    "note": "G-2: consistency is a condition of the full-stop exception to the numbered-title delimiter rule.",
+    "quote": "If your organisation uses this style, apply it consistently.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "db373cb71c84",
+    "note": "G-5: authoring workflow; the following sentence’s required reference wording is retained separately.",
+    "quote": "Use the ‘Cross-reference’ function to insert the reference in the body text of the document.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5dd3ef10f406",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e8c2d922b39e",
+      "quote": "hide information in the alt text, as a user might not see it"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t write something in the alt text that a user can’t learn from seeing the image or reading the caption or title.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Alt text contains information unavailable to someone viewing the image and reading its caption or title.",
+    "when": [],
+    "why": "G-4: the later sentence states the earlier list prohibition in directly actionable wording."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "98507157e560",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6b99d4ad8844",
+      "quote": "Don’t repeat the information provided by the image and alt text."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "repeat information in the alt text that a user would read in the caption",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image’s alt text duplicates information in its caption, causing the same information to be read twice.",
+    "when": [
+     "Read the quoted list item under its lead-in, ‘Don’t:’.",
+     "A caption that fully describes an image can support empty alt text rather than a duplicate description."
+    ],
+    "why": "G-2 and G-4: repeated descriptions across the image’s text alternatives are one duplication check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "3ad46e44bbe6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "558ca1d0cd37",
+      "quote": "use the <longdesc> attribute for extended descriptions."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Do not use the <longdesc> attribute.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An extended description is supplied through a <longdesc> attribute.",
+    "when": [],
+    "why": "G-4: the two prohibitions are the same check; the later sentence is self-contained."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4c8953bde640",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "464f41608faf",
+      "quote": "Add alternative text for all images."
+     },
+     {
+      "block_id": "46fb6c785bf6",
+      "quote": "Include alt text and captions for all informative photographs and illustrations."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Add alt text to all images",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image has no alt-text provision, including no explicit empty alternative or decorative designation where appropriate.",
+    "when": [
+     "Decorative images require an explicit empty alternative or the document’s decorative-image designation, not a descriptive alternative.",
+     "Informative images can have empty alt text in the stated cases where surrounding text fully supplies their information."
+    ],
+    "why": "G-2 and G-4: image categories change the acceptable alternative, not the requirement to provide one."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d70abac63f64",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include short alt text – less than about 100 characters – for all informative images.",
+    "specification": "Interpret ‘less than about 100 characters’ as fewer than 100 characters: flag 100 or more. Count the decoded alt-text value, including spaces and punctuation, not the surrounding markup. This exact boundary is an implementation choice.",
+    "unit": "block",
+    "violation_condition": "An informative image’s alt text reaches or exceeds the operational character limit.",
+    "when": [
+     "Applies to descriptive alt text for informative images."
+    ],
+    "why": "G-1 and E-4: brevity is distinct from alt-text presence, and the approximate limit needs an explicit interpretation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fddcc2650f42",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "518c95789b48",
+      "quote": "Write alt text that conveys the same important information as the image."
+     },
+     {
+      "block_id": "af8ee1e270a9",
+      "quote": "Describe the informational icon so the user can understand what it is."
+     },
+     {
+      "block_id": "1adf876f0c35",
+      "quote": "State the functional icon’s purpose so the user can understand the outcome."
+     },
+     {
+      "block_id": "4b3c92534569",
+      "quote": "alt text that contains a brief interpretation of the main idea from the image"
+     },
+     {
+      "block_id": "a71253def560",
+      "quote": "If the caption or nearby text already explains the informational image, you might use very brief alt text."
+     },
+     {
+      "block_id": "40341c266c16",
+      "quote": "Examples of informative images that might have an empty value in the alt text include:"
+     },
+     {
+      "block_id": "95ec569ae937",
+      "quote": "a photograph with a caption that is a full description of the content and function of the photograph"
+     },
+     {
+      "block_id": "6dc0cdfc6041",
+      "quote": "a snapshot of a software screen that the text describes"
+     },
+     {
+      "block_id": "67478f838475",
+      "quote": "an illustration of an idea that the text describes."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The example describes the informational icon.",
+      "parts": [
+       {
+        "block_id": "ff9cb0e6a915",
+        "quote": "An informational printer icon: alt=\"Printer icon\""
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The example states the functional icon’s outcome.",
+      "parts": [
+       {
+        "block_id": "2b9b0a7d8de1",
+        "quote": "A functional printer icon: alt=\"Print this page\""
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Read both blocks together: nearby instructions permit very brief alt text.",
+      "parts": [
+       {
+        "block_id": "526d5858e6b0",
+        "quote": "You might use alt=\"Screenshot of dropdown menu and buttons\" if the nearby"
+       },
+       {
+        "block_id": "48811155abf1",
+        "quote": "text (for example, the caption) had this instruction:Select the ‘save’ button between the ‘Tools’ drop-down and the ‘Cancel’ button"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write alternative text that describes the information or function of the image.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Provided alt text fails to convey the image’s important information or intended function.",
+    "when": [
+     "For informative images, convey the same important information as the image.",
+     "For informational icons, describe the icon so the user can understand what it is.",
+     "For functional icons, state the purpose or outcome.",
+     "For complex images, give a brief interpretation of the main idea in alt text; put fuller details in an extended description.",
+     "Alt text can be very brief when the caption or nearby text already explains the image.",
+     "An informative image can have empty alt text when a full caption or surrounding text already describes its content and function."
+    ],
+    "why": "G-2 and G-4: information, function and image complexity change what the same descriptive-adequacy check expects."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3140e5eac480",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "519dbeb48f3b",
+      "quote": "Add captions for all images, unless they are only decorative."
+     },
+     {
+      "block_id": "46fb6c785bf6",
+      "quote": "Include alt text and captions for all informative photographs and illustrations."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include captions for all images that are not decorative",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A non-decorative image has no caption.",
+    "when": [
+     "Decorative images are exempt."
+    ],
+    "why": "G-2 and G-4: the decorative exception and the photograph restatement belong to one caption-presence check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "224665b95e10",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "69c617746009",
+      "quote": "Use captions to acknowledge the creator or copyright holder of images in captions."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "When referencing, you must attribute copyright material.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Referenced copyright material has no attribution.",
+    "when": [
+     "Applies to copyright images and text."
+    ],
+    "why": "G-4: the copyright requirement supplies the explicit mandatory force for attribution."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0b47347a7e47",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "69c617746009",
+      "quote": "Use captions to acknowledge the creator or copyright holder of images in captions."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write the attribution as part of the caption or following the copyright material.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "An attribution is present but is neither in the caption nor following the copyright material.",
+    "when": [
+     "Applies where attribution is required.",
+     "Either placement stated by the manual is acceptable."
+    ],
+    "why": "G-2: caption placement and placement following the material are alternatives within one location check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "69c617746009",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use your organisation’s referencing style.",
+    "specification": "The organisation’s referencing style must be supplied before compliance can be determined.",
+    "unit": "block",
+    "violation_condition": "An image reference or attribution does not follow the organisation’s prescribed referencing style.",
+    "when": [
+     "Applies to image references and attributions in this section."
+    ],
+    "why": "G-5: unlike an instruction to consult a source, this specifies an observable property of references."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "8e73e856159a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The four blocks form one HTML example.",
+      "parts": [
+       {
+        "block_id": "0ee994cd0604",
+        "quote": "<figure>"
+       },
+       {
+        "block_id": "e53885c76d6f",
+        "quote": "<figcaption>Figure 3: Kangaroo numbers in Victoria from 1880 to 1980</figcaption>"
+       },
+       {
+        "block_id": "ed8467517d27",
+        "quote": "<img src=\"kangaroo.svg\" alt= \"Line graph showing a doubling of kangaroo numbers from 1880 to 1980\">"
+       },
+       {
+        "block_id": "e1a8e35ebb65",
+        "quote": "... </figure>"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Include the HTML <figcaption> element to associate the caption with the image.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An HTML image caption is not associated with its image using a <figcaption> element.",
+    "when": [
+     "Applies to image captions in HTML."
+    ],
+    "why": "The required semantic markup is a checkable property of the caption, not visual layout."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a0959c438056",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d70abac63f64",
+      "quote": "Decorative images should have null alt text (alt=\"\")."
+     },
+     {
+      "block_id": "a0959c438056",
+      "quote": "This is 2 double quotation marks with no space (alt=\"\")."
+     },
+     {
+      "block_id": "b85525bc6ae7",
+      "quote": "An image is decorative if you can remove it from the page without losing any meaning or information."
+     },
+     {
+      "block_id": "0d21cd368f6a",
+      "quote": "Use empty alt text (alt=\"\") to declare it as decorative."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The decorative icon has an empty alternative.",
+      "parts": [
+       {
+        "block_id": "3b50239d051e",
+        "quote": "A decorative printer icon: alt=\"\""
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Include an empty value, or null text, for alt text if the image is decorative.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A decorative image has a non-empty alt-text value.",
+    "when": [
+     "An image is decorative if removing it loses no meaning or information.",
+     "An HTML empty value is alt=\"\", with no space between the quotation marks.",
+     "Includes decorative icons.",
+     "For document formats with a decorative-image setting, the page instead directs authors to use that setting."
+    ],
+    "why": "G-2 and G-4: decorative icons are a case of the same empty-value rule; missing alt text is checked separately."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fbc912399602",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include keywords in the surrounding text to support search engines.",
+    "specification": "The page does not identify which keywords are required or how much surrounding text to examine.",
+    "unit": "section",
+    "violation_condition": "The text surrounding an image lacks the relevant keywords needed to make its information discoverable.",
+    "when": [
+     "The instruction appears in the decorative-images discussion, where keywords must not be supplied through descriptive alt text."
+    ],
+    "why": "This specifies surrounding wording, but its keyword and context boundaries need clarification."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fbc912399602",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t create alt text to add keywords.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Alt text is created for keyword insertion rather than to provide an appropriate text alternative.",
+    "when": [
+     "In particular, do not replace decorative images’ empty alternatives with keywords.",
+     "Relevant words occurring naturally in a useful description are not prohibited."
+    ],
+    "why": "The prohibited use of alt text is distinct from the requirement for keywords in surrounding text."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b0157077c258",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "f783751a4d67",
+      "quote": "a caption that summarises the image"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Add captions and titles that give context.",
+    "specification": "Assess whether the caption or title explains the image’s relevance in its surrounding content. For complex images, the page specifies that the caption summarises the image. Do not treat this as a separate requirement to title every image.",
+    "unit": "block",
+    "violation_condition": "An informational image’s caption or title fails to provide context for the image.",
+    "when": [
+     "Applies to informational images.",
+     "For complex images, the caption should summarise the image."
+    ],
+    "why": "G-2: the complex-image summary is a specific case of a contextual caption, not another caption-presence rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e68fb76ae97a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "28ceb2562a47",
+      "quote": "For logos that are functional links to home pages, use the name of the site in the link instead of the alt text."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write the full name of the organisation in the logo alt text.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A non-home-page-link logo’s alt text omits or abbreviates the organisation’s full name.",
+    "when": [
+     "Logos functioning as links to home pages follow the separate site-name-in-link instruction."
+    ],
+    "why": "G-2: the functional-logo case limits the full-organisation-name requirement."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "28ceb2562a47",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "28ceb2562a47",
+      "quote": "You don’t need to add the name to the link if it is already in the text on the page."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For logos that are functional links to home pages, use the name of the site in the link instead of the alt text.",
+    "specification": "The page distinguishes the site name ‘in the link’ from the logo’s alt text but does not specify the required HTML implementation or whether other accessible-name mechanisms qualify.",
+    "unit": "document",
+    "violation_condition": "A logo linking to a home page supplies the site name only in alt text instead of in the link, or omits the required site name from the link when it is not already on the page.",
+    "when": [
+     "Applies only to logos that link to home pages.",
+     "The site name need not be added to the link if it is already in the text on the page."
+    ],
+    "why": "G-2 and G-3: the existing page text is an exception to the link-name requirement, not an independent permission rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "306f25aad79b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7d98d0ada4e3",
+      "quote": "Use the extended description to help the user understand the information in the image."
+     },
+     {
+      "block_id": "61d568d67a82",
+      "quote": "Complex images contain too much information to include in the alt text alone."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The page presents this as an extended-description example.",
+      "parts": [
+       {
+        "block_id": "dda4bf96c351",
+        "quote": "Users are at the centre of the content lifecycle. The cycle starts with intent. It then moves through 6 stages: discover needs; draft; test; approve; publish; maintain. The process is circular. The cycle shows continuous improvement through repetition. Stages can repeat before completing a full cycle."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "an extended description with more details about the data in the image, usually referencing the title or caption of the image.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A complex image lacks an extended description giving fuller details of its data.",
+    "when": [
+     "Read the quoted item under the instruction to include information for complex images.",
+     "Applies to images with too much information for alt text alone.",
+     "Referencing the image title or caption is usual, not an unconditional requirement."
+    ],
+    "why": "G-1 and G-4: this is the extended-description child requirement, distinct from alt text and captions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "60dbde0424dd",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Link in-text references to the image title only if it helps the user.",
+    "specification": "The page does not define what benefit makes such a link helpful; a usefulness criterion is needed.",
+    "unit": "section",
+    "violation_condition": "An in-text reference is linked to an image title without providing a useful benefit to the user.",
+    "when": [
+     "Applies to links from in-text references to image titles."
+    ],
+    "why": "G-3: ‘only if’ restricts links and can produce a finding; it is not merely permission to link."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3ad46e44bbe6",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write the extended description on the same page or, if it is very long, link to it on a separate page.",
+    "specification": "The page does not define ‘very long’; no numerical cutoff is assumed.",
+    "unit": "section",
+    "violation_condition": "An extended description is off-page without a link, or is off-page despite not qualifying as very long.",
+    "when": [
+     "The default location is the same page.",
+     "A very long extended description may instead be linked on a separate page."
+    ],
+    "why": "G-2 and G-3: the separate-page option is an exception within one location-and-access check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7d98d0ada4e3",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Put most of the interpretation of the image in the body text.",
+    "specification": "The page does not specify how to measure the share of interpretation; word count is not assumed to be an adequate measure.",
+    "unit": "section",
+    "violation_condition": "Most interpretation of an image is placed outside the body text, such as in its extended description.",
+    "when": [
+     "Appears in the guidance for complex images and extended descriptions."
+    ],
+    "why": "This checks the distribution of interpretation, not the presence or location of the extended description itself."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cc3a3f859386",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "33c14eeebe56",
+      "quote": "use an initial capital for title text that comes after the colon."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Capitalise the first word and proper nouns only.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A title or caption has an uncapitalised first word or proper noun, or capitalises other words as title case.",
+    "when": [
+     "Applies to image titles and captions.",
+     "In numbered titles, the title text after the label and colon begins with a capital."
+    ],
+    "why": "G-4: capitalising title text after a figure label restates the first-word capitalisation requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "14fd56dd860d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a full stop to end the title or caption, even if it is a complete sentence.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image title or caption ends with a full stop.",
+    "when": [
+     "Applies even when the title or caption is a complete sentence.",
+     "This concerns the ending, not the permitted full stop after a figure number in some organisational styles."
+    ],
+    "why": "G-2: sentence completeness does not change the prohibition; label punctuation is a different position."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7299a370a320",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6adb4636674f",
+      "quote": "All titles and captions should have the same:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "structure (parallel structure)",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Image titles or captions use inconsistent grammatical structures rather than parallel structures.",
+    "when": [
+     "Read the quoted item under ‘All titles and captions should have the same:’."
+    ],
+    "why": "G-1: parallel structure is a distinct child check under the consistency heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "544a636ff831",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6adb4636674f",
+      "quote": "All titles and captions should have the same:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "terms and shortened forms as those used in the rest of the content (such as acronyms)",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An image title or caption uses terms or shortened forms inconsistent with the rest of the content.",
+    "when": [
+     "Read the quoted item under ‘All titles and captions should have the same:’."
+    ],
+    "why": "G-1: terminology consistency is independent of parallel structure and visual formatting."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2cb23830c3b9",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "937df63e3f9c",
+      "quote": "In long-form content, number titles that go with images using ‘figure labels’."
+     },
+     {
+      "block_id": "937df63e3f9c",
+      "quote": "You don’t need to number images in a brochure, an infographic or a simple, stand-alone page with only a few images."
+     },
+     {
+      "block_id": "4075a017fc59",
+      "quote": "Complex publications with many images can use different categories (such as figures, maps or photographs)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Number titles in long documents",
+    "specification": "The page does not define a length or image-count threshold for ‘long-form’ content or ‘only a few images’.",
+    "unit": "document",
+    "violation_condition": "An image title in long-form content lacks a numbered figure label.",
+    "when": [
+     "Applies to image titles in long-form content.",
+     "Images need not be numbered in a brochure, an infographic or a simple, stand-alone page with only a few images.",
+     "Complex publications may use categories such as figures, maps or photographs."
+    ],
+    "why": "G-2 and G-3: document types and alternative category labels limit one numbering-presence check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "437abf2f4377",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Put the number before the main text of the image title.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image title’s figure number appears after or within the main title text rather than before it.",
+    "when": [
+     "Applies to numbered image titles."
+    ],
+    "why": "The position of an existing number is distinct from whether a title is numbered."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b6b5ba8992b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "start the numbering at the beginning of the document",
+    "specification": "Interpret this as starting the image-numbering sequence with the first image requiring a numbered title, using 1 as the initial number, as illustrated by the page’s numbering example.",
+    "unit": "document",
+    "violation_condition": "Image numbering starts partway through the document instead of beginning with its first numbered image.",
+    "when": [
+     "Applies where image titles are numbered in a long document."
+    ],
+    "why": "G-5 and E-4: retain the checkable numbering outcome, not ‘Check that you’; make the interpretation explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a2e4f9258dc6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0176ad418afd",
+      "quote": "Some disciplines use a full stop after the number."
+     },
+     {
+      "block_id": "0176ad418afd",
+      "quote": "If your organisation uses this style, apply it consistently."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "use a colon after the number to separate it from the title text",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A numbered image title lacks a colon between its number and title text, unless it consistently follows an organisational full-stop style.",
+    "when": [
+     "Applies to numbered image titles.",
+     "A full stop after the number is acceptable if the organisation uses that style consistently."
+    ],
+    "why": "G-2 and G-3: the organisational full-stop convention is an exception to the same delimiter check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "db373cb71c84",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Select ‘Only label and number’ so you don’t include the entire title, only the figure label (for example, ‘Figure 1’).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A body-text cross-reference to an image includes the entire image title rather than only its label and number.",
+    "when": [
+     "Applies to image cross-references in the body text of a document."
+    ],
+    "why": "G-5: retain the explicitly stated textual result, while excluding the separate instruction to use an application function."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fd0a227ffc17",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The four entries together demonstrate separate image and table sequences.",
+      "parts": [
+       {
+        "block_id": "c63f42875f9f",
+        "quote": "Table 1: Risk assessment thresholds for Green Trees National Park"
+       },
+       {
+        "block_id": "ca358d1c9eb4",
+        "quote": "Figure 1: Visitor numbers to the Green Trees main walk, 2008 to 2019"
+       },
+       {
+        "block_id": "b60dc12a7537",
+        "quote": "Figure 2: Traffic accident rates at Green Trees Weir, 2009 to 2010"
+       },
+       {
+        "block_id": "b3010ab421d2",
+        "quote": "Table 2: Visitor numbers during March to October 2019"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Number images separately from any numbered tables.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Images and tables share a numbering sequence rather than having separate sequences.",
+    "when": [
+     "Applies when both images and tables are numbered."
+    ],
+    "why": "E-2: the following example tests independent numbering sequences, not a new rule for each title."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "5dd3ef10f406",
+    "end": 116,
+    "prefix": "",
+    "quote": "Don’t write something in the alt text that a user can’t learn from seeing the image or reading the caption or title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e8c2d922b39e",
+     "end": 60,
+     "prefix": "",
+     "quote": "hide information in the alt text, as a user might not see it",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Alt text contains information unavailable to someone viewing the image and reading its caption or title."
+   },
+   "when": [],
+   "why": "G-4: the later sentence states the earlier list prohibition in directly actionable wording."
+  },
+  {
+   "anchor": {
+    "block_id": "98507157e560",
+    "end": 72,
+    "prefix": "",
+    "quote": "repeat information in the alt text that a user would read in the caption",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6b99d4ad8844",
+     "end": 64,
+     "prefix": "",
+     "quote": "Don’t repeat the information provided by the image and alt text.",
+     "start": 0,
+     "suffix": " This prevents users of screen r"
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image’s alt text duplicates information in its caption, causing the same information to be read twice."
+   },
+   "when": [
+    "Read the quoted list item under its lead-in, ‘Don’t:’.",
+    "A caption that fully describes an image can support empty alt text rather than a duplicate description."
+   ],
+   "why": "G-2 and G-4: repeated descriptions across the image’s text alternatives are one duplication check."
+  },
+  {
+   "anchor": {
+    "block_id": "3ad46e44bbe6",
+    "end": 139,
+    "prefix": " link to it on a separate page. ",
+    "quote": "Do not use the <longdesc> attribute.",
+    "start": 103,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "558ca1d0cd37",
+     "end": 55,
+     "prefix": "",
+     "quote": "use the <longdesc> attribute for extended descriptions.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An extended description is supplied through a <longdesc> attribute."
+   },
+   "when": [],
+   "why": "G-4: the two prohibitions are the same check; the later sentence is self-contained."
+  },
+  {
+   "anchor": {
+    "block_id": "4c8953bde640",
+    "end": 26,
+    "prefix": "",
+    "quote": "Add alt text to all images",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "464f41608faf",
+     "end": 36,
+     "prefix": "",
+     "quote": "Add alternative text for all images.",
+     "start": 0,
+     "suffix": " For help with writing good alt "
+    },
+    {
+     "block_id": "46fb6c785bf6",
+     "end": 80,
+     "prefix": "",
+     "quote": "Include alt text and captions for all informative photographs and illustrations.",
+     "start": 0,
+     "suffix": " The information you provide dep"
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "ca8830dbc3599cfd",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image has no alt-text provision, including no explicit empty alternative or decorative designation where appropriate."
+   },
+   "when": [
+    "Decorative images require an explicit empty alternative or the document’s decorative-image designation, not a descriptive alternative.",
+    "Informative images can have empty alt text in the stated cases where surrounding text fully supplies their information."
+   ],
+   "why": "G-2 and G-4: image categories change the acceptable alternative, not the requirement to provide one."
+  },
+  {
+   "anchor": {
+    "block_id": "d70abac63f64",
+    "end": 85,
+    "prefix": "",
+    "quote": "Include short alt text – less than about 100 characters – for all informative images.",
+    "start": 0,
+    "suffix": " Decorative images should have n"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret ‘less than about 100 characters’ as fewer than 100 characters: flag 100 or more. Count the decoded alt-text value, including spaces and punctuation, not the surrounding markup. This exact boundary is an implementation choice.",
+    "unit": "block",
+    "violation_condition": "An informative image’s alt text reaches or exceeds the operational character limit."
+   },
+   "when": [
+    "Applies to descriptive alt text for informative images."
+   ],
+   "why": "G-1 and E-4: brevity is distinct from alt-text presence, and the approximate limit needs an explicit interpretation."
+  },
+  {
+   "anchor": {
+    "block_id": "fddcc2650f42",
+    "end": 79,
+    "prefix": "",
+    "quote": "Write alternative text that describes the information or function of the image.",
+    "start": 0,
+    "suffix": " For help to describe images: th"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "518c95789b48",
+     "end": 72,
+     "prefix": "",
+     "quote": "Write alt text that conveys the same important information as the image.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "af8ee1e270a9",
+     "end": 70,
+     "prefix": "",
+     "quote": "Describe the informational icon so the user can understand what it is.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1adf876f0c35",
+     "end": 75,
+     "prefix": "",
+     "quote": "State the functional icon’s purpose so the user can understand the outcome.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4b3c92534569",
+     "end": 77,
+     "prefix": "",
+     "quote": "alt text that contains a brief interpretation of the main idea from the image",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a71253def560",
+     "end": 106,
+     "prefix": "",
+     "quote": "If the caption or nearby text already explains the informational image, you might use very brief alt text.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "40341c266c16",
+     "end": 86,
+     "prefix": "",
+     "quote": "Examples of informative images that might have an empty value in the alt text include:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "95ec569ae937",
+     "end": 100,
+     "prefix": "",
+     "quote": "a photograph with a caption that is a full description of the content and function of the photograph",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6dc0cdfc6041",
+     "end": 55,
+     "prefix": "",
+     "quote": "a snapshot of a software screen that the text describes",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "67478f838475",
+     "end": 51,
+     "prefix": "",
+     "quote": "an illustration of an idea that the text describes.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The example describes the informational icon.",
+     "parts": [
+      {
+       "block_id": "ff9cb0e6a915",
+       "end": 49,
+       "prefix": "",
+       "quote": "An informational printer icon: alt=\"Printer icon\"",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The example states the functional icon’s outcome.",
+     "parts": [
+      {
+       "block_id": "2b9b0a7d8de1",
+       "end": 48,
+       "prefix": "",
+       "quote": "A functional printer icon: alt=\"Print this page\"",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Read both blocks together: nearby instructions permit very brief alt text.",
+     "parts": [
+      {
+       "block_id": "526d5858e6b0",
+       "end": 73,
+       "prefix": "",
+       "quote": "You might use alt=\"Screenshot of dropdown menu and buttons\" if the nearby",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "48811155abf1",
+       "end": 131,
+       "prefix": "",
+       "quote": "text (for example, the caption) had this instruction:Select the ‘save’ button between the ‘Tools’ drop-down and the ‘Cancel’ button",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Provided alt text fails to convey the image’s important information or intended function."
+   },
+   "when": [
+    "For informative images, convey the same important information as the image.",
+    "For informational icons, describe the icon so the user can understand what it is.",
+    "For functional icons, state the purpose or outcome.",
+    "For complex images, give a brief interpretation of the main idea in alt text; put fuller details in an extended description.",
+    "Alt text can be very brief when the caption or nearby text already explains the image.",
+    "An informative image can have empty alt text when a full caption or surrounding text already describes its content and function."
+   ],
+   "why": "G-2 and G-4: information, function and image complexity change what the same descriptive-adequacy check expects."
+  },
+  {
+   "anchor": {
+    "block_id": "3140e5eac480",
+    "end": 55,
+    "prefix": "",
+    "quote": "Include captions for all images that are not decorative",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "519dbeb48f3b",
+     "end": 61,
+     "prefix": "",
+     "quote": "Add captions for all images, unless they are only decorative.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "46fb6c785bf6",
+     "end": 80,
+     "prefix": "",
+     "quote": "Include alt text and captions for all informative photographs and illustrations.",
+     "start": 0,
+     "suffix": " The information you provide dep"
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "ce32e8d9e4f5e71f",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A non-decorative image has no caption."
+   },
+   "when": [
+    "Decorative images are exempt."
+   ],
+   "why": "G-2 and G-4: the decorative exception and the photograph restatement belong to one caption-presence check."
+  },
+  {
+   "anchor": {
+    "block_id": "224665b95e10",
+    "end": 56,
+    "prefix": "",
+    "quote": "When referencing, you must attribute copyright material.",
+    "start": 0,
+    "suffix": " This includes images and text."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "69c617746009",
+     "end": 82,
+     "prefix": "",
+     "quote": "Use captions to acknowledge the creator or copyright holder of images in captions.",
+     "start": 0,
+     "suffix": " Use your organisation’s referen"
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Referenced copyright material has no attribution."
+   },
+   "when": [
+    "Applies to copyright images and text."
+   ],
+   "why": "G-4: the copyright requirement supplies the explicit mandatory force for attribution."
+  },
+  {
+   "anchor": {
+    "block_id": "0b47347a7e47",
+    "end": 81,
+    "prefix": "",
+    "quote": "Write the attribution as part of the caption or following the copyright material.",
+    "start": 0,
+    "suffix": " Alt text is also licensed under"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "69c617746009",
+     "end": 82,
+     "prefix": "",
+     "quote": "Use captions to acknowledge the creator or copyright holder of images in captions.",
+     "start": 0,
+     "suffix": " Use your organisation’s referen"
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "An attribution is present but is neither in the caption nor following the copyright material."
+   },
+   "when": [
+    "Applies where attribution is required.",
+    "Either placement stated by the manual is acceptable."
+   ],
+   "why": "G-2: caption placement and placement following the material are alternatives within one location check."
+  },
+  {
+   "anchor": {
+    "block_id": "69c617746009",
+    "end": 125,
+    "prefix": "t holder of images in captions. ",
+    "quote": "Use your organisation’s referencing style.",
+    "start": 83,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The organisation’s referencing style must be supplied before compliance can be determined.",
+    "unit": "block",
+    "violation_condition": "An image reference or attribution does not follow the organisation’s prescribed referencing style."
+   },
+   "when": [
+    "Applies to image references and attributions in this section."
+   ],
+   "why": "G-5: unlike an instruction to consult a source, this specifies an observable property of references."
+  },
+  {
+   "anchor": {
+    "block_id": "8e73e856159a",
+    "end": 78,
+    "prefix": "",
+    "quote": "Include the HTML <figcaption> element to associate the caption with the image.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The four blocks form one HTML example.",
+     "parts": [
+      {
+       "block_id": "0ee994cd0604",
+       "end": 8,
+       "prefix": "",
+       "quote": "<figure>",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e53885c76d6f",
+       "end": 81,
+       "prefix": "",
+       "quote": "<figcaption>Figure 3: Kangaroo numbers in Victoria from 1880 to 1980</figcaption>",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "ed8467517d27",
+       "end": 99,
+       "prefix": "",
+       "quote": "<img src=\"kangaroo.svg\" alt= \"Line graph showing a doubling of kangaroo numbers from 1880 to 1980\">",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e1a8e35ebb65",
+       "end": 13,
+       "prefix": "",
+       "quote": "... </figure>",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An HTML image caption is not associated with its image using a <figcaption> element."
+   },
+   "when": [
+    "Applies to image captions in HTML."
+   ],
+   "why": "The required semantic markup is a checkable property of the caption, not visual layout."
+  },
+  {
+   "anchor": {
+    "block_id": "a0959c438056",
+    "end": 78,
+    "prefix": "",
+    "quote": "Include an empty value, or null text, for alt text if the image is decorative.",
+    "start": 0,
+    "suffix": " This is 2 double quotation mark"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d70abac63f64",
+     "end": 139,
+     "prefix": "s – for all informative images. ",
+     "quote": "Decorative images should have null alt text (alt=\"\").",
+     "start": 86,
+     "suffix": ""
+    },
+    {
+     "block_id": "a0959c438056",
+     "end": 135,
+     "prefix": "ext if the image is decorative. ",
+     "quote": "This is 2 double quotation marks with no space (alt=\"\").",
+     "start": 79,
+     "suffix": " In documents, set images as ‘De"
+    },
+    {
+     "block_id": "b85525bc6ae7",
+     "end": 100,
+     "prefix": "",
+     "quote": "An image is decorative if you can remove it from the page without losing any meaning or information.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0d21cd368f6a",
+     "end": 56,
+     "prefix": "",
+     "quote": "Use empty alt text (alt=\"\") to declare it as decorative.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The decorative icon has an empty alternative.",
+     "parts": [
+      {
+       "block_id": "3b50239d051e",
+       "end": 33,
+       "prefix": "",
+       "quote": "A decorative printer icon: alt=\"\"",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A decorative image has a non-empty alt-text value."
+   },
+   "when": [
+    "An image is decorative if removing it loses no meaning or information.",
+    "An HTML empty value is alt=\"\", with no space between the quotation marks.",
+    "Includes decorative icons.",
+    "For document formats with a decorative-image setting, the page instead directs authors to use that setting."
+   ],
+   "why": "G-2 and G-4: decorative icons are a case of the same empty-value rule; missing alt text is checked separately."
+  },
+  {
+   "anchor": {
+    "block_id": "fbc912399602",
+    "end": 67,
+    "prefix": "",
+    "quote": "Include keywords in the surrounding text to support search engines.",
+    "start": 0,
+    "suffix": " Don’t create alt text to add ke"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not identify which keywords are required or how much surrounding text to examine.",
+    "unit": "section",
+    "violation_condition": "The text surrounding an image lacks the relevant keywords needed to make its information discoverable."
+   },
+   "when": [
+    "The instruction appears in the decorative-images discussion, where keywords must not be supplied through descriptive alt text."
+   ],
+   "why": "This specifies surrounding wording, but its keyword and context boundaries need clarification."
+  },
+  {
+   "anchor": {
+    "block_id": "fbc912399602",
+    "end": 106,
+    "prefix": "text to support search engines. ",
+    "quote": "Don’t create alt text to add keywords.",
+    "start": 68,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Alt text is created for keyword insertion rather than to provide an appropriate text alternative."
+   },
+   "when": [
+    "In particular, do not replace decorative images’ empty alternatives with keywords.",
+    "Relevant words occurring naturally in a useful description are not prohibited."
+   ],
+   "why": "The prohibited use of alt text is distinct from the requirement for keywords in surrounding text."
+  },
+  {
+   "anchor": {
+    "block_id": "b0157077c258",
+    "end": 42,
+    "prefix": "",
+    "quote": "Add captions and titles that give context.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "f783751a4d67",
+     "end": 35,
+     "prefix": "",
+     "quote": "a caption that summarises the image",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Assess whether the caption or title explains the image’s relevance in its surrounding content. For complex images, the page specifies that the caption summarises the image. Do not treat this as a separate requirement to title every image.",
+    "unit": "block",
+    "violation_condition": "An informational image’s caption or title fails to provide context for the image."
+   },
+   "when": [
+    "Applies to informational images.",
+    "For complex images, the caption should summarise the image."
+   ],
+   "why": "G-2: the complex-image summary is a specific case of a contextual caption, not another caption-presence rule."
+  },
+  {
+   "anchor": {
+    "block_id": "e68fb76ae97a",
+    "end": 61,
+    "prefix": "",
+    "quote": "Write the full name of the organisation in the logo alt text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "28ceb2562a47",
+     "end": 112,
+     "prefix": "",
+     "quote": "For logos that are functional links to home pages, use the name of the site in the link instead of the alt text.",
+     "start": 0,
+     "suffix": " You don’t need to add the name "
+    }
+   ],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A non-home-page-link logo’s alt text omits or abbreviates the organisation’s full name."
+   },
+   "when": [
+    "Logos functioning as links to home pages follow the separate site-name-in-link instruction."
+   ],
+   "why": "G-2: the functional-logo case limits the full-organisation-name requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "28ceb2562a47",
+    "end": 112,
+    "prefix": "",
+    "quote": "For logos that are functional links to home pages, use the name of the site in the link instead of the alt text.",
+    "start": 0,
+    "suffix": " You don’t need to add the name "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "28ceb2562a47",
+     "end": 197,
+     "prefix": "e link instead of the alt text. ",
+     "quote": "You don’t need to add the name to the link if it is already in the text on the page.",
+     "start": 113,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page distinguishes the site name ‘in the link’ from the logo’s alt text but does not specify the required HTML implementation or whether other accessible-name mechanisms qualify.",
+    "unit": "document",
+    "violation_condition": "A logo linking to a home page supplies the site name only in alt text instead of in the link, or omits the required site name from the link when it is not already on the page."
+   },
+   "when": [
+    "Applies only to logos that link to home pages.",
+    "The site name need not be added to the link if it is already in the text on the page."
+   ],
+   "why": "G-2 and G-3: the existing page text is an exception to the link-name requirement, not an independent permission rule."
+  },
+  {
+   "anchor": {
+    "block_id": "306f25aad79b",
+    "end": 125,
+    "prefix": "",
+    "quote": "an extended description with more details about the data in the image, usually referencing the title or caption of the image.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7d98d0ada4e3",
+     "end": 86,
+     "prefix": "",
+     "quote": "Use the extended description to help the user understand the information in the image.",
+     "start": 0,
+     "suffix": " Put most of the interpretation "
+    },
+    {
+     "block_id": "61d568d67a82",
+     "end": 77,
+     "prefix": "",
+     "quote": "Complex images contain too much information to include in the alt text alone.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The page presents this as an extended-description example.",
+     "parts": [
+      {
+       "block_id": "dda4bf96c351",
+       "end": 302,
+       "prefix": "",
+       "quote": "Users are at the centre of the content lifecycle. The cycle starts with intent. It then moves through 6 stages: discover needs; draft; test; approve; publish; maintain. The process is circular. The cycle shows continuous improvement through repetition. Stages can repeat before completing a full cycle.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A complex image lacks an extended description giving fuller details of its data."
+   },
+   "when": [
+    "Read the quoted item under the instruction to include information for complex images.",
+    "Applies to images with too much information for alt text alone.",
+    "Referencing the image title or caption is usual, not an unconditional requirement."
+   ],
+   "why": "G-1 and G-4: this is the extended-description child requirement, distinct from alt text and captions."
+  },
+  {
+   "anchor": {
+    "block_id": "60dbde0424dd",
+    "end": 69,
+    "prefix": "",
+    "quote": "Link in-text references to the image title only if it helps the user.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page does not define what benefit makes such a link helpful; a usefulness criterion is needed.",
+    "unit": "section",
+    "violation_condition": "An in-text reference is linked to an image title without providing a useful benefit to the user."
+   },
+   "when": [
+    "Applies to links from in-text references to image titles."
+   ],
+   "why": "G-3: ‘only if’ restricts links and can produce a finding; it is not merely permission to link."
+  },
+  {
+   "anchor": {
+    "block_id": "3ad46e44bbe6",
+    "end": 102,
+    "prefix": "",
+    "quote": "Write the extended description on the same page or, if it is very long, link to it on a separate page.",
+    "start": 0,
+    "suffix": " Do not use the <longdesc> attri"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define ‘very long’; no numerical cutoff is assumed.",
+    "unit": "section",
+    "violation_condition": "An extended description is off-page without a link, or is off-page despite not qualifying as very long."
+   },
+   "when": [
+    "The default location is the same page.",
+    "A very long extended description may instead be linked on a separate page."
+   ],
+   "why": "G-2 and G-3: the separate-page option is an exception within one location-and-access check."
+  },
+  {
+   "anchor": {
+    "block_id": "7d98d0ada4e3",
+    "end": 148,
+    "prefix": "d the information in the image. ",
+    "quote": "Put most of the interpretation of the image in the body text.",
+    "start": 87,
+    "suffix": " If the image is a graph, you mi"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not specify how to measure the share of interpretation; word count is not assumed to be an adequate measure.",
+    "unit": "section",
+    "violation_condition": "Most interpretation of an image is placed outside the body text, such as in its extended description."
+   },
+   "when": [
+    "Appears in the guidance for complex images and extended descriptions."
+   ],
+   "why": "This checks the distribution of interpretation, not the presence or location of the extended description itself."
+  },
+  {
+   "anchor": {
+    "block_id": "cc3a3f859386",
+    "end": 48,
+    "prefix": "",
+    "quote": "Capitalise the first word and proper nouns only.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "33c14eeebe56",
+     "end": 65,
+     "prefix": "",
+     "quote": "use an initial capital for title text that comes after the colon.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A title or caption has an uncapitalised first word or proper noun, or capitalises other words as title case."
+   },
+   "when": [
+    "Applies to image titles and captions.",
+    "In numbered titles, the title text after the label and colon begins with a capital."
+   ],
+   "why": "G-4: capitalising title text after a figure label restates the first-word capitalisation requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "14fd56dd860d",
+    "end": 85,
+    "prefix": "",
+    "quote": "Don’t use a full stop to end the title or caption, even if it is a complete sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 22,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image title or caption ends with a full stop."
+   },
+   "when": [
+    "Applies even when the title or caption is a complete sentence.",
+    "This concerns the ending, not the permitted full stop after a figure number in some organisational styles."
+   ],
+   "why": "G-2: sentence completeness does not change the prohibition; label punctuation is a different position."
+  },
+  {
+   "anchor": {
+    "block_id": "7299a370a320",
+    "end": 30,
+    "prefix": "",
+    "quote": "structure (parallel structure)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6adb4636674f",
+     "end": 45,
+     "prefix": "",
+     "quote": "All titles and captions should have the same:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 23,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Image titles or captions use inconsistent grammatical structures rather than parallel structures."
+   },
+   "when": [
+    "Read the quoted item under ‘All titles and captions should have the same:’."
+   ],
+   "why": "G-1: parallel structure is a distinct child check under the consistency heading."
+  },
+  {
+   "anchor": {
+    "block_id": "544a636ff831",
+    "end": 85,
+    "prefix": "",
+    "quote": "terms and shortened forms as those used in the rest of the content (such as acronyms)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6adb4636674f",
+     "end": 45,
+     "prefix": "",
+     "quote": "All titles and captions should have the same:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 24,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An image title or caption uses terms or shortened forms inconsistent with the rest of the content."
+   },
+   "when": [
+    "Read the quoted item under ‘All titles and captions should have the same:’."
+   ],
+   "why": "G-1: terminology consistency is independent of parallel structure and visual formatting."
+  },
+  {
+   "anchor": {
+    "block_id": "2cb23830c3b9",
+    "end": 31,
+    "prefix": "",
+    "quote": "Number titles in long documents",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "937df63e3f9c",
+     "end": 78,
+     "prefix": "",
+     "quote": "In long-form content, number titles that go with images using ‘figure labels’.",
+     "start": 0,
+     "suffix": " You don’t need to number images"
+    },
+    {
+     "block_id": "937df63e3f9c",
+     "end": 194,
+     "prefix": "h images using ‘figure labels’. ",
+     "quote": "You don’t need to number images in a brochure, an infographic or a simple, stand-alone page with only a few images.",
+     "start": 79,
+     "suffix": ""
+    },
+    {
+     "block_id": "4075a017fc59",
+     "end": 158,
+     "prefix": "fer to all images as ‘figures’. ",
+     "quote": "Complex publications with many images can use different categories (such as figures, maps or photographs).",
+     "start": 52,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 25,
+   "seed_uid": "3f117a7efbca981d",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define a length or image-count threshold for ‘long-form’ content or ‘only a few images’.",
+    "unit": "document",
+    "violation_condition": "An image title in long-form content lacks a numbered figure label."
+   },
+   "when": [
+    "Applies to image titles in long-form content.",
+    "Images need not be numbered in a brochure, an infographic or a simple, stand-alone page with only a few images.",
+    "Complex publications may use categories such as figures, maps or photographs."
+   ],
+   "why": "G-2 and G-3: document types and alternative category labels limit one numbering-presence check."
+  },
+  {
+   "anchor": {
+    "block_id": "437abf2f4377",
+    "end": 128,
+    "prefix": "p people find a specific image. ",
+    "quote": "Put the number before the main text of the image title.",
+    "start": 73,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 26,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image title’s figure number appears after or within the main title text rather than before it."
+   },
+   "when": [
+    "Applies to numbered image titles."
+   ],
+   "why": "The position of an existing number is distinct from whether a title is numbered."
+  },
+  {
+   "anchor": {
+    "block_id": "7b6b5ba8992b",
+    "end": 52,
+    "prefix": "",
+    "quote": "start the numbering at the beginning of the document",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 27,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Interpret this as starting the image-numbering sequence with the first image requiring a numbered title, using 1 as the initial number, as illustrated by the page’s numbering example.",
+    "unit": "document",
+    "violation_condition": "Image numbering starts partway through the document instead of beginning with its first numbered image."
+   },
+   "when": [
+    "Applies where image titles are numbered in a long document."
+   ],
+   "why": "G-5 and E-4: retain the checkable numbering outcome, not ‘Check that you’; make the interpretation explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "a2e4f9258dc6",
+    "end": 63,
+    "prefix": "",
+    "quote": "use a colon after the number to separate it from the title text",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0176ad418afd",
+     "end": 50,
+     "prefix": "",
+     "quote": "Some disciplines use a full stop after the number.",
+     "start": 0,
+     "suffix": " If your organisation uses this "
+    },
+    {
+     "block_id": "0176ad418afd",
+     "end": 111,
+     "prefix": "e a full stop after the number. ",
+     "quote": "If your organisation uses this style, apply it consistently.",
+     "start": 51,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 28,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A numbered image title lacks a colon between its number and title text, unless it consistently follows an organisational full-stop style."
+   },
+   "when": [
+    "Applies to numbered image titles.",
+    "A full stop after the number is acceptable if the organisation uses that style consistently."
+   ],
+   "why": "G-2 and G-3: the organisational full-stop convention is an exception to the same delimiter check."
+  },
+  {
+   "anchor": {
+    "block_id": "db373cb71c84",
+    "end": 211,
+    "prefix": " the body text of the document. ",
+    "quote": "Select ‘Only label and number’ so you don’t include the entire title, only the figure label (for example, ‘Figure 1’).",
+    "start": 93,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 29,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A body-text cross-reference to an image includes the entire image title rather than only its label and number."
+   },
+   "when": [
+    "Applies to image cross-references in the body text of a document."
+   ],
+   "why": "G-5: retain the explicitly stated textual result, while excluding the separate instruction to use an application function."
+  },
+  {
+   "anchor": {
+    "block_id": "fd0a227ffc17",
+    "end": 50,
+    "prefix": "",
+    "quote": "Number images separately from any numbered tables.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The four entries together demonstrate separate image and table sequences.",
+     "parts": [
+      {
+       "block_id": "c63f42875f9f",
+       "end": 65,
+       "prefix": "",
+       "quote": "Table 1: Risk assessment thresholds for Green Trees National Park",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "ca358d1c9eb4",
+       "end": 68,
+       "prefix": "",
+       "quote": "Figure 1: Visitor numbers to the Green Trees main walk, 2008 to 2019",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b60dc12a7537",
+       "end": 66,
+       "prefix": "",
+       "quote": "Figure 2: Traffic accident rates at Green Trees Weir, 2009 to 2010",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b3010ab421d2",
+       "end": 53,
+       "prefix": "",
+       "quote": "Table 2: Visitor numbers during March to October 2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 30,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Images and tables share a numbering sequence rather than having separate sequences."
+   },
+   "when": [
+    "Applies when both images and tables are numbered."
+   ],
+   "why": "E-2: the following example tests independent numbering sequences, not a new rule for each title."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 7135,
+  "output_tokens": 16640,
+  "reasoning_tokens": 5029
+ }
+}

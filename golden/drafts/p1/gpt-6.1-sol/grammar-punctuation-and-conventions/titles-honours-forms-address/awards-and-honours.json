@@ -1,0 +1,493 @@
+{
+ "effort": "high",
+ "input_sha256": "c9d31cd08d2ccf775b89f013b6a9186c164b3fe49ed369796227666a8803336d",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "d31ab92c6be6",
+    "end": 113,
+    "prefix": " and honours an individual has. ",
+    "quote": "List them in the correct order.",
+    "start": 82,
+    "suffix": ""
+   },
+   "note": "Opening summary of the ordering rules developed under the two headings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5ee93b8d811a",
+    "end": 54,
+    "prefix": "",
+    "quote": "There is an order in which to write the post-nominals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed into the post-nominal ordering rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4977ba6e2db9",
+    "end": 58,
+    "prefix": "",
+    "quote": "In summary, the rule is to write the highest honour first.",
+    "start": 0,
+    "suffix": " The order is:"
+   },
+   "note": "A condition of the post-nominal ordering rule, not a separate finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "98ff0942c58f",
+    "end": 10,
+    "prefix": "",
+    "quote": "Don’t use:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Shared lead-in to the two punctuation rules; it supplies no independent check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7ffaf07f45a9",
+    "end": 105,
+    "prefix": "",
+    "quote": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Supplies the default precedence for the title-ordering rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c4962d8d9418",
+    "end": 103,
+    "prefix": "",
+    "quote": "Follow these with any other titles (such as ‘Dame’, ‘Sir’ and ‘Dr’) immediately before a person’s name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Completes the sequence covered by the title-ordering rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/titles-honours-forms-address/awards-and-honours.md",
+ "page_sha256": "cf248d78d072880b16787828eb3cb2623c935c1971d4cbd3796ac171f93d7eaf",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "d31ab92c6be6",
+    "note": "Opening summary of the ordering rules developed under the two headings.",
+    "quote": "List them in the correct order.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5ee93b8d811a",
+    "note": "Absorbed into the post-nominal ordering rule.",
+    "quote": "There is an order in which to write the post-nominals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4977ba6e2db9",
+    "note": "A condition of the post-nominal ordering rule, not a separate finding.",
+    "quote": "In summary, the rule is to write the highest honour first.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "98ff0942c58f",
+    "note": "Shared lead-in to the two punctuation rules; it supplies no independent check.",
+    "quote": "Don’t use:",
+    "reason": "section"
+   },
+   {
+    "block_id": "7ffaf07f45a9",
+    "note": "Supplies the default precedence for the title-ordering rule.",
+    "quote": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c4962d8d9418",
+    "note": "Completes the sequence covered by the title-ordering rule.",
+    "quote": "Follow these with any other titles (such as ‘Dame’, ‘Sir’ and ‘Dr’) immediately before a person’s name.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "df0eafa7900b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5ee93b8d811a",
+      "quote": "There is an order in which to write the post-nominals."
+     },
+     {
+      "block_id": "4977ba6e2db9",
+      "quote": "In summary, the rule is to write the highest honour first."
+     },
+     {
+      "block_id": "6f77b3897082",
+      "quote": "post-nominals for honours and awards"
+     },
+     {
+      "block_id": "0e9fbb1df7cd",
+      "quote": "King’s Counsel (KC) or Senior Counsel (SC) or Justice of the Peace (JP)"
+     },
+     {
+      "block_id": "1a6e65827ad2",
+      "quote": "university degrees and diplomas"
+     },
+     {
+      "block_id": "4dcaa5ce1e6b",
+      "quote": "membership of professional associations"
+     },
+     {
+      "block_id": "d605074b738b",
+      "quote": "membership of parliament."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use post-nominals in the correct order",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A person’s post-nominals appear in an order inconsistent with the specified category sequence or place a lower honour before a higher honour.",
+    "when": [
+     "Applies when a person has multiple post-nominals.",
+     "The category sequence is honours and awards; KC, SC or JP; university degrees and diplomas; professional association memberships; parliamentary membership.",
+     "Write the highest honour first."
+    ],
+    "why": "G-2 keeps the category sequence and highest-honour condition in one ordering check; G-4 absorbs the body restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "79901f7fbc3b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "98ff0942c58f",
+      "quote": "Don’t use:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "full stops or spaces within post-nominals",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A post-nominal contains an internal full stop or space.",
+    "when": [
+     "Applies within an individual post-nominal, not to spaces separating distinct post-nominals."
+    ],
+    "why": "The shared prohibition governs internal post-nominal formatting; commas at post-nominal boundaries are a separate check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2af7392d05ff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "98ff0942c58f",
+      "quote": "Don’t use:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "commas before or between post-nominals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma separates a person’s name from their post-nominals or separates adjacent post-nominals.",
+    "when": [
+     "Applies to commas before the post-nominal sequence or between its members."
+    ],
+    "why": "G-2 combines the two prohibited comma positions because they are conditions of the same boundary-punctuation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0045fb543481",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "7ffaf07f45a9",
+      "quote": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles."
+     },
+     {
+      "block_id": "c4962d8d9418",
+      "quote": "Follow these with any other titles (such as ‘Dame’, ‘Sir’ and ‘Dr’) immediately before a person’s name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write titles before a person’s name in the correct order",
+    "specification": "The body specifies a default sequence, qualified by ‘usually’. It does not identify exceptions or specify precedence among vice-regal titles, ecclesiastical titles and Australian Defence Force ranks themselves.",
+    "unit": "phrase",
+    "violation_condition": "Titles before a person’s name depart from the default sequence of vice-regal or ecclesiastical titles and Australian Defence Force ranks before other titles, with those other titles immediately before the name.",
+    "when": [
+     "Applies to titles preceding a person’s name.",
+     "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles.",
+     "Other titles, such as Dame, Sir and Dr, follow these and sit immediately before the person’s name."
+    ],
+    "why": "G-2 treats the title positions as one sequence check; G-4 absorbs the body’s elaboration rather than creating overlapping rules."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "df0eafa7900b",
+    "end": 38,
+    "prefix": "",
+    "quote": "Use post-nominals in the correct order",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5ee93b8d811a",
+     "end": 54,
+     "prefix": "",
+     "quote": "There is an order in which to write the post-nominals.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4977ba6e2db9",
+     "end": 58,
+     "prefix": "",
+     "quote": "In summary, the rule is to write the highest honour first.",
+     "start": 0,
+     "suffix": " The order is:"
+    },
+    {
+     "block_id": "6f77b3897082",
+     "end": 36,
+     "prefix": "",
+     "quote": "post-nominals for honours and awards",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0e9fbb1df7cd",
+     "end": 71,
+     "prefix": "",
+     "quote": "King’s Counsel (KC) or Senior Counsel (SC) or Justice of the Peace (JP)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1a6e65827ad2",
+     "end": 31,
+     "prefix": "",
+     "quote": "university degrees and diplomas",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4dcaa5ce1e6b",
+     "end": 39,
+     "prefix": "",
+     "quote": "membership of professional associations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d605074b738b",
+     "end": 25,
+     "prefix": "",
+     "quote": "membership of parliament.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "afcd9bf26b0eae28",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A person’s post-nominals appear in an order inconsistent with the specified category sequence or place a lower honour before a higher honour."
+   },
+   "when": [
+    "Applies when a person has multiple post-nominals.",
+    "The category sequence is honours and awards; KC, SC or JP; university degrees and diplomas; professional association memberships; parliamentary membership.",
+    "Write the highest honour first."
+   ],
+   "why": "G-2 keeps the category sequence and highest-honour condition in one ordering check; G-4 absorbs the body restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "79901f7fbc3b",
+    "end": 41,
+    "prefix": "",
+    "quote": "full stops or spaces within post-nominals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "98ff0942c58f",
+     "end": 10,
+     "prefix": "",
+     "quote": "Don’t use:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A post-nominal contains an internal full stop or space."
+   },
+   "when": [
+    "Applies within an individual post-nominal, not to spaces separating distinct post-nominals."
+   ],
+   "why": "The shared prohibition governs internal post-nominal formatting; commas at post-nominal boundaries are a separate check."
+  },
+  {
+   "anchor": {
+    "block_id": "2af7392d05ff",
+    "end": 39,
+    "prefix": "",
+    "quote": "commas before or between post-nominals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "98ff0942c58f",
+     "end": 10,
+     "prefix": "",
+     "quote": "Don’t use:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma separates a person’s name from their post-nominals or separates adjacent post-nominals."
+   },
+   "when": [
+    "Applies to commas before the post-nominal sequence or between its members."
+   ],
+   "why": "G-2 combines the two prohibited comma positions because they are conditions of the same boundary-punctuation check."
+  },
+  {
+   "anchor": {
+    "block_id": "0045fb543481",
+    "end": 56,
+    "prefix": "",
+    "quote": "Write titles before a person’s name in the correct order",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "7ffaf07f45a9",
+     "end": 105,
+     "prefix": "",
+     "quote": "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c4962d8d9418",
+     "end": 103,
+     "prefix": "",
+     "quote": "Follow these with any other titles (such as ‘Dame’, ‘Sir’ and ‘Dr’) immediately before a person’s name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "e6adedaf4e9dccac",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The body specifies a default sequence, qualified by ‘usually’. It does not identify exceptions or specify precedence among vice-regal titles, ecclesiastical titles and Australian Defence Force ranks themselves.",
+    "unit": "phrase",
+    "violation_condition": "Titles before a person’s name depart from the default sequence of vice-regal or ecclesiastical titles and Australian Defence Force ranks before other titles, with those other titles immediately before the name."
+   },
+   "when": [
+    "Applies to titles preceding a person’s name.",
+    "Vice-regal and ecclesiastical titles and Australian Defence Force ranks usually precede all other titles.",
+    "Other titles, such as Dame, Sir and Dr, follow these and sit immediately before the person’s name."
+   ],
+   "why": "G-2 treats the title positions as one sequence check; G-4 absorbs the body’s elaboration rather than creating overlapping rules."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3669,
+  "output_tokens": 3074,
+  "reasoning_tokens": 1389
+ }
+}

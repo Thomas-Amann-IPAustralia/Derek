@@ -1,0 +1,1514 @@
+{
+ "effort": "low",
+ "input_sha256": "f1844ea4cb481505d14a4dc1077a680e6e408810c21bf6981f86c349c2a882ea",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "e1aa7a41ca9d",
+    "end": 67,
+    "prefix": "",
+    "quote": "Refer to classification systems to help you name plants and animals",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice to the writer on how to research classifications, not a rule about text.",
+   "reason": "advice",
+   "seed_uid": "09f084505274ab0e"
+  },
+  {
+   "anchor": {
+    "block_id": "c4984431436c",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use specialised resources for more information",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General workflow advice directing writers to external botanical and zoological databases.",
+   "reason": "advice",
+   "seed_uid": "a07ee5950854cf93"
+  },
+  {
+   "anchor": {
+    "block_id": "9820fe075348",
+    "end": 105,
+    "prefix": "",
+    "quote": "The scientific names of plants and animals often derive from Latin. Check the spelling when you use them.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Advice to check spelling.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a8d75531448f",
+    "end": 111,
+    "prefix": "",
+    "quote": "It’s best to check a dictionary or another reputable source to confirm whether the name has an initial capital.",
+    "start": 0,
+    "suffix": " Refer to related guidance on co"
+   },
+   "note": "Advice to check dictionaries.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8cc03201df60",
+    "end": 79,
+    "prefix": "",
+    "quote": "Check the names of plants and animals. Make sure the information is up to date.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Writer workflow advice.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/plants-and-animals.md",
+ "page_sha256": "f124feac1b9f17f3bc4aa314a8118531f13cf9adf61dbdd146551e392e53b065",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "e1aa7a41ca9d",
+    "note": "General advice to the writer on how to research classifications, not a rule about text.",
+    "quote": "Refer to classification systems to help you name plants and animals",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c4984431436c",
+    "note": "General workflow advice directing writers to external botanical and zoological databases.",
+    "quote": "Use specialised resources for more information",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9820fe075348",
+    "note": "Advice to check spelling.",
+    "quote": "The scientific names of plants and animals often derive from Latin. Check the spelling when you use them.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a8d75531448f",
+    "note": "Advice to check dictionaries.",
+    "quote": "It’s best to check a dictionary or another reputable source to confirm whether the name has an initial capital.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8cc03201df60",
+    "note": "Writer workflow advice.",
+    "quote": "Check the names of plants and animals. Make sure the information is up to date.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8cfc77c63f46",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f31804524354",
+      "quote": "Italicise genus and species names"
+     },
+     {
+      "block_id": "45cfe6c742eb",
+      "quote": "Genus and species names are in italics."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Backhousia has an initial capital and is in italics",
+      "parts": [
+       {
+        "block_id": "8aa64a0ec61b",
+        "quote": "Backhousia citriodora is the scientific name of the lemon myrtle."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Ornithorhynchus has an initial capital and is in italics",
+      "parts": [
+       {
+        "block_id": "f3ec2e2edea2",
+        "quote": "Ornithorhynchus anatinus is the scientific name of the platypus."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "the genus is in italics and takes an initial capital",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a genus name written without italics or without an initial capital letter",
+    "when": [
+     "In scientific classification names of plants and animals"
+    ],
+    "why": "G-1 and G-4: The heading covers both genus and species, but genus and species have distinct capitalisation rules, so each list item defines the actionable rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dbf172d92616",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "89a6b415e98e",
+      "quote": "Species names are in lower case."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "citriodora is lowercase and italicised",
+      "parts": [
+       {
+        "block_id": "8aa64a0ec61b",
+        "quote": "Backhousia citriodora is the scientific name of the lemon myrtle."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "anatinus is lowercase and italicised",
+      "parts": [
+       {
+        "block_id": "f3ec2e2edea2",
+        "quote": "Ornithorhynchus anatinus is the scientific name of the platypus."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "the species is in italics and is lower case.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a species epithet/name written without italics or with an initial capital letter",
+    "when": [
+     "In scientific classification names of plants and animals"
+    ],
+    "why": "G-1 and G-4: Formulates the specific requirement for species names."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b9356399a111",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "71db564313fc",
+      "quote": "The abbreviations are in roman type and lower case. The subspecies and varietal names themselves are in italics."
+     },
+     {
+      "block_id": "cf13eb482230",
+      "quote": "For animals, there is only one taxonomic level below that of species: subspecies. By convention, the abbreviation ‘subsp.’ is not used."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "'subsp.' is in roman type with a full stop, while 'hedraia' is italicised",
+      "parts": [
+       {
+        "block_id": "62ab253e8ace",
+        "quote": "Eucalyptus pauciflora subsp. hedraia is a subspecies of snow gum found only in the Mount Bogong and Falls Creek areas of Victoria."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "'var.' is in roman type with a full stop, while 'platyptera' is italicised",
+      "parts": [
+       {
+        "block_id": "bee1e857d8df",
+        "quote": "Acacia alata var. platyptera is a variety of winged wattle that is found only in Western Australia."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Subspecies and the names of varieties are also italicised. In these names, abbreviations for the words ‘subspecies’ and ‘variety’ take a full stop.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "subspecies or variety names written in roman type, or abbreviations for subspecies and variety written without a full stop or in italics",
+    "when": [
+     "Writing botanical or zoological subspecies and varieties",
+     "For animals, the abbreviation 'subsp.' is not used"
+    ],
+    "why": "G-2: Consolidates the formatting of botanical/zoological subcategories and their abbreviations."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "1a511b15a97c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the semantic tag <em> to provide emphasis for italicised names in HTML.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "italicised plant or animal scientific names coded in HTML using styling or tags other than the semantic <em> tag",
+    "when": [
+     "Content authored in HTML"
+    ],
+    "why": "Specific accessibility instruction for web markup."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9034dadc9569",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e71641e5db73",
+      "quote": "Use lower case unless they are also a proper noun, a registered trade mark or in some specialised content such as genetics."
+     },
+     {
+      "block_id": "664f062d5349",
+      "quote": "Do not use italics."
+     },
+     {
+      "block_id": "0fa673abbf52",
+      "quote": "Use initial capitals when the name includes a proper noun."
+     },
+     {
+      "block_id": "449f0560856c",
+      "quote": "Names that have become everyday words are shown in roman type and don’t need a capital letter."
+     },
+     {
+      "block_id": "052ec2a5e893",
+      "quote": "You usually don’t need to use an initial capital for breeds, even if they are derived from a regional name."
+     },
+     {
+      "block_id": "1dee9ee447f8",
+      "quote": "In generalist Australian Government content, use lower case for the names of birds unless the name contains a proper noun."
+     },
+     {
+      "block_id": "6f29659368cb",
+      "quote": "In both generalist and specialist content, use lower case for bird names in a list of common names of plants and animals."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Tasmanian devil retains capital only on proper noun 'Tasmanian'",
+      "parts": [
+       {
+        "block_id": "6a77d542ebdf",
+        "quote": "The Tasmanian devil is named after its home range of Tasmania."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "red kangaroos in lowercase and roman type",
+      "parts": [
+       {
+        "block_id": "fa1615364442",
+        "quote": "The grasslands were home to more than a million red kangaroos."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Capitalised only for the proper noun 'Norfolk Island'",
+      "parts": [
+       {
+        "block_id": "22d59c8cf7b6",
+        "quote": "Norfolk Island pine"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "silver gull in lowercase",
+      "parts": [
+       {
+        "block_id": "c93f429594d8",
+        "quote": "The silver gull (Larus novaehollandiae) is a common gull of the Australian coast."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "All common names in lowercase in a list",
+      "parts": [
+       {
+        "block_id": "2dc52740b239",
+        "quote": "The area was inhabited by green tree frogs, carpet pythons, bush rats and silver gulls."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write common names in lower case and roman type",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a common name of a plant or animal written in italics or with an initial capital letter when it is not a proper noun, registered trade mark, or specialised ornithological/genetic context",
+    "when": [
+     "Unless they include a proper noun (e.g. Tasmanian devil, Norfolk Island pine)",
+     "Unless it is a registered trade mark or cultivar name",
+     "Unless in specialised context such as international ornithology conventions or genetics",
+     "In a list of common names of plants and animals, use lower case even for bird names"
+    ],
+    "why": "G-2 and G-4: The heading concisely states the rule; child bullet points, breeds, everyday names, and bird name rules are specific sub-cases or restatements folded into when."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "059b92ace026",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Cascade is initial capitalised and in single quotation marks",
+      "parts": [
+       {
+        "block_id": "97bed6321e9d",
+        "quote": "Acacia ‘Cascade’ is a registered cultivar derived from Australian native flora."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use an initial capital for names of registered cultivars or breeds.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a registered cultivar or breed name written without an initial capital letter",
+    "when": [
+     "In a sentence, the registered name is sometimes in quotation marks"
+    ],
+    "why": "G-2: Standalone rule for registered trade marks / cultivar names."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a78a0189c738",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Gene Sbe1 is in italics",
+      "parts": [
+       {
+        "block_id": "7f4141b61afe",
+        "quote": "In plants, the gene Sbe1 encodes starch-branching enzyme one, Sbe1."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use italics for the names of genes.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the name of a gene written in roman type instead of italics",
+    "when": [
+     "When using genetic terms for plants and animals"
+    ],
+    "why": "Distinct typographic rule for gene names."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1c7474d7c341",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a0af623f834c",
+      "quote": "Capitalisation varies for the names of genes, but proteins usually take an initial capital only."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Protein Sbe1 is in roman type",
+      "parts": [
+       {
+        "block_id": "7f4141b61afe",
+        "quote": "In plants, the gene Sbe1 encodes starch-branching enzyme one, Sbe1."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use roman type for the names of proteins (enzymes).",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the name of a protein or enzyme written in italics instead of roman type",
+    "when": [
+     "When using genetic terms for plants and animals",
+     "Proteins usually take an initial capital only"
+    ],
+    "why": "Distinct typographic rule for protein names."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "160c539b7967",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3244c7bd842b",
+      "quote": "Include the genus and species at first mention of the common name"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Scientific name Grevillea victoriae follows Royal grevillea in parentheses",
+      "parts": [
+       {
+        "block_id": "eaa69f7cf119",
+        "quote": "Royal grevillea (Grevillea victoriae) is one of more than 350 species in the genus Grevillea."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "include the species name in parentheses when you first mention the common name so it is clear which plant or animal you are writing about.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "the common name of a plant or animal is first mentioned in a text without its scientific/species name in parentheses",
+    "when": [
+     "At first mention of the common name of a plant or animal"
+    ],
+    "why": "G-4: Heading restated in body sentence."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2d747e931286",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "52543068b49a",
+      "quote": "When the genus is repeated, it can be abbreviated"
+     },
+     {
+      "block_id": "52970dc4e89d",
+      "quote": "When there are several genera that start with the same letter, include the second letter in the abbreviation."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Abbreviated to O. anatinus on second mention",
+      "parts": [
+       {
+        "block_id": "23addf59b087",
+        "quote": "Ornithorhynchus anatinus belongs to the Ornithorhynchidae family. The elusive O. anatinus can be spotted in the riparian zone of our freshwater rivers."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Abbreviated to An. and Al. to distinguish genera",
+      "parts": [
+       {
+        "block_id": "f8748beefd7b",
+        "quote": "Anopterus macleayanus and Aleuries moluccana are small Australian trees. Although An. macleayanua is found in cool places, Al. moluccana can tolerate tropical conditions."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If you have already written the full name of the genus, use a shortened form for later mentions.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a genus name written out in full on subsequent mentions after its first full mention, rather than abbreviated to its initial letter (or first two letters if multiple genera share the same initial)",
+    "when": [
+     "The full genus name has already been written earlier in the document",
+     "Shortened form is often the first letter followed by a full stop (e.g. O. anatinus)",
+     "When several genera share the same initial letter, include the second letter (e.g. An. macleayanus, Al. moluccana)"
+    ],
+    "why": "G-2 and G-4: Heading is candidate; body sentence states actionable instruction and incorporates disambiguation condition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "71e39f1d3297",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "31fbda3facc0",
+      "quote": "Names down to genus level start with capital letters."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Myrtaceae is roman type with initial capital",
+      "parts": [
+       {
+        "block_id": "c31140fcb9e9",
+        "quote": "Backhousia citriodora is in the family Myrtaceae."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Monotremata is roman type with initial capital",
+      "parts": [
+       {
+        "block_id": "4a4513040ed9",
+        "quote": "Ornithorhynchus anatinus is in the order Monotremata."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "All classification names above genus level are in roman type and take initial capitals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a taxonomic classification name above genus level (kingdom, phylum, class, order, family) written in italics or with a lowercase initial letter",
+    "when": [
+     "Taxonomic ranks above genus (e.g. family, order, class, phylum, kingdom)"
+    ],
+    "why": "Clear structural formatting rule for taxonomic ranks above genus."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2f67202a37fd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7740446c7e85",
+      "quote": "Scientific names can include the name of a person"
+     },
+     {
+      "block_id": "565e725cbb15",
+      "quote": "Plants and animals are sometimes allocated to a different genus from the one they were given when they were first described. In this case, the name and date appear in parentheses after the genus and species name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "F.Muell. is in roman type",
+      "parts": [
+       {
+        "block_id": "b160b15fcaa8",
+        "quote": "Grevillea victoriae F.Muell. was first described by botanist Ferdinand von Mueller."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "(Walker, 1869) is in roman type inside parentheses",
+      "parts": [
+       {
+        "block_id": "39d6a5bbdef4",
+        "quote": "Robshelfordia circumducta (Walker, 1869)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The name and date, if they are included, appear in roman type.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the author name or publishing date following a scientific species name written in italics rather than roman type",
+    "when": [
+     "In technical content that includes the authority (person who first described the species) and publication date",
+     "If the species has been reallocated to a different genus, the name and date appear in parentheses after the species name"
+    ],
+    "why": "G-2 and G-4: Candidate heading folded into typographic rule for authority citation."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "8cfc77c63f46",
+    "end": 52,
+    "prefix": "",
+    "quote": "the genus is in italics and takes an initial capital",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f31804524354",
+     "end": 33,
+     "prefix": "",
+     "quote": "Italicise genus and species names",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "45cfe6c742eb",
+     "end": 39,
+     "prefix": "",
+     "quote": "Genus and species names are in italics.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Backhousia has an initial capital and is in italics",
+     "parts": [
+      {
+       "block_id": "8aa64a0ec61b",
+       "end": 65,
+       "prefix": "",
+       "quote": "Backhousia citriodora is the scientific name of the lemon myrtle.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Ornithorhynchus has an initial capital and is in italics",
+     "parts": [
+      {
+       "block_id": "f3ec2e2edea2",
+       "end": 64,
+       "prefix": "",
+       "quote": "Ornithorhynchus anatinus is the scientific name of the platypus.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a genus name written without italics or without an initial capital letter"
+   },
+   "when": [
+    "In scientific classification names of plants and animals"
+   ],
+   "why": "G-1 and G-4: The heading covers both genus and species, but genus and species have distinct capitalisation rules, so each list item defines the actionable rule."
+  },
+  {
+   "anchor": {
+    "block_id": "dbf172d92616",
+    "end": 44,
+    "prefix": "",
+    "quote": "the species is in italics and is lower case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "89a6b415e98e",
+     "end": 32,
+     "prefix": "",
+     "quote": "Species names are in lower case.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "citriodora is lowercase and italicised",
+     "parts": [
+      {
+       "block_id": "8aa64a0ec61b",
+       "end": 65,
+       "prefix": "",
+       "quote": "Backhousia citriodora is the scientific name of the lemon myrtle.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "anatinus is lowercase and italicised",
+     "parts": [
+      {
+       "block_id": "f3ec2e2edea2",
+       "end": 64,
+       "prefix": "",
+       "quote": "Ornithorhynchus anatinus is the scientific name of the platypus.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a species epithet/name written without italics or with an initial capital letter"
+   },
+   "when": [
+    "In scientific classification names of plants and animals"
+   ],
+   "why": "G-1 and G-4: Formulates the specific requirement for species names."
+  },
+  {
+   "anchor": {
+    "block_id": "b9356399a111",
+    "end": 147,
+    "prefix": "",
+    "quote": "Subspecies and the names of varieties are also italicised. In these names, abbreviations for the words ‘subspecies’ and ‘variety’ take a full stop.",
+    "start": 0,
+    "suffix": " This is an exception to the gen"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "71db564313fc",
+     "end": 112,
+     "prefix": "",
+     "quote": "The abbreviations are in roman type and lower case. The subspecies and varietal names themselves are in italics.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cf13eb482230",
+     "end": 135,
+     "prefix": "",
+     "quote": "For animals, there is only one taxonomic level below that of species: subspecies. By convention, the abbreviation ‘subsp.’ is not used.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "'subsp.' is in roman type with a full stop, while 'hedraia' is italicised",
+     "parts": [
+      {
+       "block_id": "62ab253e8ace",
+       "end": 130,
+       "prefix": "",
+       "quote": "Eucalyptus pauciflora subsp. hedraia is a subspecies of snow gum found only in the Mount Bogong and Falls Creek areas of Victoria.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "'var.' is in roman type with a full stop, while 'platyptera' is italicised",
+     "parts": [
+      {
+       "block_id": "bee1e857d8df",
+       "end": 99,
+       "prefix": "",
+       "quote": "Acacia alata var. platyptera is a variety of winged wattle that is found only in Western Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "subspecies or variety names written in roman type, or abbreviations for subspecies and variety written without a full stop or in italics"
+   },
+   "when": [
+    "Writing botanical or zoological subspecies and varieties",
+    "For animals, the abbreviation 'subsp.' is not used"
+   ],
+   "why": "G-2: Consolidates the formatting of botanical/zoological subcategories and their abbreviations."
+  },
+  {
+   "anchor": {
+    "block_id": "1a511b15a97c",
+    "end": 115,
+    "prefix": "eaders don’t pronounce italics. ",
+    "quote": "Use the semantic tag <em> to provide emphasis for italicised names in HTML.",
+    "start": 40,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "italicised plant or animal scientific names coded in HTML using styling or tags other than the semantic <em> tag"
+   },
+   "when": [
+    "Content authored in HTML"
+   ],
+   "why": "Specific accessibility instruction for web markup."
+  },
+  {
+   "anchor": {
+    "block_id": "9034dadc9569",
+    "end": 47,
+    "prefix": "",
+    "quote": "Write common names in lower case and roman type",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e71641e5db73",
+     "end": 123,
+     "prefix": "",
+     "quote": "Use lower case unless they are also a proper noun, a registered trade mark or in some specialised content such as genetics.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "664f062d5349",
+     "end": 19,
+     "prefix": "",
+     "quote": "Do not use italics.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0fa673abbf52",
+     "end": 58,
+     "prefix": "",
+     "quote": "Use initial capitals when the name includes a proper noun.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "449f0560856c",
+     "end": 94,
+     "prefix": "",
+     "quote": "Names that have become everyday words are shown in roman type and don’t need a capital letter.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "052ec2a5e893",
+     "end": 107,
+     "prefix": "",
+     "quote": "You usually don’t need to use an initial capital for breeds, even if they are derived from a regional name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1dee9ee447f8",
+     "end": 122,
+     "prefix": "",
+     "quote": "In generalist Australian Government content, use lower case for the names of birds unless the name contains a proper noun.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6f29659368cb",
+     "end": 121,
+     "prefix": "",
+     "quote": "In both generalist and specialist content, use lower case for bird names in a list of common names of plants and animals.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Tasmanian devil retains capital only on proper noun 'Tasmanian'",
+     "parts": [
+      {
+       "block_id": "6a77d542ebdf",
+       "end": 62,
+       "prefix": "",
+       "quote": "The Tasmanian devil is named after its home range of Tasmania.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "red kangaroos in lowercase and roman type",
+     "parts": [
+      {
+       "block_id": "fa1615364442",
+       "end": 62,
+       "prefix": "",
+       "quote": "The grasslands were home to more than a million red kangaroos.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Capitalised only for the proper noun 'Norfolk Island'",
+     "parts": [
+      {
+       "block_id": "22d59c8cf7b6",
+       "end": 19,
+       "prefix": "",
+       "quote": "Norfolk Island pine",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "silver gull in lowercase",
+     "parts": [
+      {
+       "block_id": "c93f429594d8",
+       "end": 81,
+       "prefix": "",
+       "quote": "The silver gull (Larus novaehollandiae) is a common gull of the Australian coast.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "All common names in lowercase in a list",
+     "parts": [
+      {
+       "block_id": "2dc52740b239",
+       "end": 87,
+       "prefix": "",
+       "quote": "The area was inhabited by green tree frogs, carpet pythons, bush rats and silver gulls.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "dbbf235d28bc112a",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a common name of a plant or animal written in italics or with an initial capital letter when it is not a proper noun, registered trade mark, or specialised ornithological/genetic context"
+   },
+   "when": [
+    "Unless they include a proper noun (e.g. Tasmanian devil, Norfolk Island pine)",
+    "Unless it is a registered trade mark or cultivar name",
+    "Unless in specialised context such as international ornithology conventions or genetics",
+    "In a list of common names of plants and animals, use lower case even for bird names"
+   ],
+   "why": "G-2 and G-4: The heading concisely states the rule; child bullet points, breeds, everyday names, and bird name rules are specific sub-cases or restatements folded into when."
+  },
+  {
+   "anchor": {
+    "block_id": "059b92ace026",
+    "end": 67,
+    "prefix": "",
+    "quote": "Use an initial capital for names of registered cultivars or breeds.",
+    "start": 0,
+    "suffix": " In a sentence, the registered n"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Cascade is initial capitalised and in single quotation marks",
+     "parts": [
+      {
+       "block_id": "97bed6321e9d",
+       "end": 79,
+       "prefix": "",
+       "quote": "Acacia ‘Cascade’ is a registered cultivar derived from Australian native flora.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a registered cultivar or breed name written without an initial capital letter"
+   },
+   "when": [
+    "In a sentence, the registered name is sometimes in quotation marks"
+   ],
+   "why": "G-2: Standalone rule for registered trade marks / cultivar names."
+  },
+  {
+   "anchor": {
+    "block_id": "a78a0189c738",
+    "end": 35,
+    "prefix": "",
+    "quote": "Use italics for the names of genes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Gene Sbe1 is in italics",
+     "parts": [
+      {
+       "block_id": "7f4141b61afe",
+       "end": 67,
+       "prefix": "",
+       "quote": "In plants, the gene Sbe1 encodes starch-branching enzyme one, Sbe1.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the name of a gene written in roman type instead of italics"
+   },
+   "when": [
+    "When using genetic terms for plants and animals"
+   ],
+   "why": "Distinct typographic rule for gene names."
+  },
+  {
+   "anchor": {
+    "block_id": "1c7474d7c341",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use roman type for the names of proteins (enzymes).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a0af623f834c",
+     "end": 96,
+     "prefix": "",
+     "quote": "Capitalisation varies for the names of genes, but proteins usually take an initial capital only.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Protein Sbe1 is in roman type",
+     "parts": [
+      {
+       "block_id": "7f4141b61afe",
+       "end": 67,
+       "prefix": "",
+       "quote": "In plants, the gene Sbe1 encodes starch-branching enzyme one, Sbe1.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the name of a protein or enzyme written in italics instead of roman type"
+   },
+   "when": [
+    "When using genetic terms for plants and animals",
+    "Proteins usually take an initial capital only"
+   ],
+   "why": "Distinct typographic rule for protein names."
+  },
+  {
+   "anchor": {
+    "block_id": "160c539b7967",
+    "end": 155,
+    "prefix": "For this reason, ",
+    "quote": "include the species name in parentheses when you first mention the common name so it is clear which plant or animal you are writing about.",
+    "start": 17,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3244c7bd842b",
+     "end": 65,
+     "prefix": "",
+     "quote": "Include the genus and species at first mention of the common name",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Scientific name Grevillea victoriae follows Royal grevillea in parentheses",
+     "parts": [
+      {
+       "block_id": "eaa69f7cf119",
+       "end": 93,
+       "prefix": "",
+       "quote": "Royal grevillea (Grevillea victoriae) is one of more than 350 species in the genus Grevillea.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "the common name of a plant or animal is first mentioned in a text without its scientific/species name in parentheses"
+   },
+   "when": [
+    "At first mention of the common name of a plant or animal"
+   ],
+   "why": "G-4: Heading restated in body sentence."
+  },
+  {
+   "anchor": {
+    "block_id": "2d747e931286",
+    "end": 96,
+    "prefix": "",
+    "quote": "If you have already written the full name of the genus, use a shortened form for later mentions.",
+    "start": 0,
+    "suffix": " This is often just the first le"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "52543068b49a",
+     "end": 49,
+     "prefix": "",
+     "quote": "When the genus is repeated, it can be abbreviated",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "52970dc4e89d",
+     "end": 109,
+     "prefix": "",
+     "quote": "When there are several genera that start with the same letter, include the second letter in the abbreviation.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Abbreviated to O. anatinus on second mention",
+     "parts": [
+      {
+       "block_id": "23addf59b087",
+       "end": 151,
+       "prefix": "",
+       "quote": "Ornithorhynchus anatinus belongs to the Ornithorhynchidae family. The elusive O. anatinus can be spotted in the riparian zone of our freshwater rivers.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Abbreviated to An. and Al. to distinguish genera",
+     "parts": [
+      {
+       "block_id": "f8748beefd7b",
+       "end": 170,
+       "prefix": "",
+       "quote": "Anopterus macleayanus and Aleuries moluccana are small Australian trees. Although An. macleayanua is found in cool places, Al. moluccana can tolerate tropical conditions.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a genus name written out in full on subsequent mentions after its first full mention, rather than abbreviated to its initial letter (or first two letters if multiple genera share the same initial)"
+   },
+   "when": [
+    "The full genus name has already been written earlier in the document",
+    "Shortened form is often the first letter followed by a full stop (e.g. O. anatinus)",
+    "When several genera share the same initial letter, include the second letter (e.g. An. macleayanus, Al. moluccana)"
+   ],
+   "why": "G-2 and G-4: Heading is candidate; body sentence states actionable instruction and incorporates disambiguation condition."
+  },
+  {
+   "anchor": {
+    "block_id": "71e39f1d3297",
+    "end": 87,
+    "prefix": "",
+    "quote": "All classification names above genus level are in roman type and take initial capitals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "31fbda3facc0",
+     "end": 53,
+     "prefix": "",
+     "quote": "Names down to genus level start with capital letters.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Myrtaceae is roman type with initial capital",
+     "parts": [
+      {
+       "block_id": "c31140fcb9e9",
+       "end": 49,
+       "prefix": "",
+       "quote": "Backhousia citriodora is in the family Myrtaceae.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Monotremata is roman type with initial capital",
+     "parts": [
+      {
+       "block_id": "4a4513040ed9",
+       "end": 53,
+       "prefix": "",
+       "quote": "Ornithorhynchus anatinus is in the order Monotremata.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a taxonomic classification name above genus level (kingdom, phylum, class, order, family) written in italics or with a lowercase initial letter"
+   },
+   "when": [
+    "Taxonomic ranks above genus (e.g. family, order, class, phylum, kingdom)"
+   ],
+   "why": "Clear structural formatting rule for taxonomic ranks above genus."
+  },
+  {
+   "anchor": {
+    "block_id": "2f67202a37fd",
+    "end": 62,
+    "prefix": "",
+    "quote": "The name and date, if they are included, appear in roman type.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7740446c7e85",
+     "end": 49,
+     "prefix": "",
+     "quote": "Scientific names can include the name of a person",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "565e725cbb15",
+     "end": 212,
+     "prefix": "",
+     "quote": "Plants and animals are sometimes allocated to a different genus from the one they were given when they were first described. In this case, the name and date appear in parentheses after the genus and species name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "F.Muell. is in roman type",
+     "parts": [
+      {
+       "block_id": "b160b15fcaa8",
+       "end": 83,
+       "prefix": "",
+       "quote": "Grevillea victoriae F.Muell. was first described by botanist Ferdinand von Mueller.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "(Walker, 1869) is in roman type inside parentheses",
+     "parts": [
+      {
+       "block_id": "39d6a5bbdef4",
+       "end": 40,
+       "prefix": "",
+       "quote": "Robshelfordia circumducta (Walker, 1869)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the author name or publishing date following a scientific species name written in italics rather than roman type"
+   },
+   "when": [
+    "In technical content that includes the authority (person who first described the species) and publication date",
+    "If the species has been reallocated to a different genus, the name and date appear in parentheses after the species name"
+   ],
+   "why": "G-2 and G-4: Candidate heading folded into typographic rule for authority citation."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 7724,
+  "output_tokens": 5879,
+  "reasoning_tokens": 0
+ }
+}

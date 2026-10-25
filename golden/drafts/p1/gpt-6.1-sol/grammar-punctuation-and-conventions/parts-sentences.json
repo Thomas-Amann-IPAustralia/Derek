@@ -1,0 +1,482 @@
+{
+ "effort": "high",
+ "input_sha256": "9d39b7862158c0a5b55339894f15872ae59aeb604b668358608ce75f2a75a204",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "ca501baa4aa1",
+    "end": 48,
+    "prefix": "",
+    "quote": "Sentences contain at least a subject and a verb.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains sentence grammar rather than imposing an explicit-subject requirement; the page also illustrates implied subjects.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b035df9d4290",
+    "end": 86,
+    "prefix": "",
+    "quote": "The predicate can sometimes appear as a whole sentence because the subject is implied.",
+    "start": 0,
+    "suffix": " This can depend on the ‘mood’ o"
+   },
+   "note": "Explains how sentences with implied subjects work; it is not an additional instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "006e97108a0f",
+    "end": 66,
+    "prefix": "",
+    "quote": "The subject can be implied by using a verb in the imperative mood.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes imperative sentence structure rather than directing writers to use it.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "56c8d6928cf7",
+    "end": 81,
+    "prefix": "",
+    "quote": "If they have different subjects, use a comma before the coordinating conjunction.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: duplicate of the principal-clause comma rule on commas.md, identified in the supplied policy’s G-2 example.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a4bdbae1a977",
+    "end": 107,
+    "prefix": "bject, don’t repeat the subject ",
+    "quote": "or insert a comma before the conjunction.",
+    "start": 66,
+    "suffix": ""
+   },
+   "note": "In context, ‘don’t’ governs this phrase: it prohibits a comma when the clauses share a subject. This is another condition of the principal-clause comma rule on commas.md. The subject-repetition instruction is retained separately.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d2d7b5fd83c3",
+    "end": 88,
+    "prefix": "",
+    "quote": "You could also write this as 2 short sentences, but this approach can appear repetitive.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits a two-sentence alternative, including repetition of the subject; retained under the subject-repetition rule’s conditions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9b81bfd766cd",
+    "end": 48,
+    "prefix": "",
+    "quote": "You can start the sentence with the main clause.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits one clause order without requiring it.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c2844cef9041",
+    "end": 83,
+    "prefix": "",
+    "quote": "You can also start the sentence with the subordinate clause to change the emphasis.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits an alternative clause order; neither order is presented as inherently wrong.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e1d5ad579bb9",
+    "end": 101,
+    "prefix": "",
+    "quote": "Build most sentences in this order with active voice when using active verbs (doing or action verbs).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: consolidated with the restriction on passive voice at block 700b82600056 rather than creating a second active/passive-voice finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/parts-sentences.md",
+ "page_sha256": "4eaaf9f0672b656358db70f7f51ba8c084dd7a242839f095ddb9055ebb09cc7f",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "ca501baa4aa1",
+    "note": "Explains sentence grammar rather than imposing an explicit-subject requirement; the page also illustrates implied subjects.",
+    "quote": "Sentences contain at least a subject and a verb.",
+    "reason": "description"
+   },
+   {
+    "block_id": "b035df9d4290",
+    "note": "Explains how sentences with implied subjects work; it is not an additional instruction.",
+    "quote": "The predicate can sometimes appear as a whole sentence because the subject is implied.",
+    "reason": "description"
+   },
+   {
+    "block_id": "006e97108a0f",
+    "note": "Describes imperative sentence structure rather than directing writers to use it.",
+    "quote": "The subject can be implied by using a verb in the imperative mood.",
+    "reason": "description"
+   },
+   {
+    "block_id": "56c8d6928cf7",
+    "note": "G-6: duplicate of the principal-clause comma rule on commas.md, identified in the supplied policy’s G-2 example.",
+    "quote": "If they have different subjects, use a comma before the coordinating conjunction.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "a4bdbae1a977",
+    "note": "In context, ‘don’t’ governs this phrase: it prohibits a comma when the clauses share a subject. This is another condition of the principal-clause comma rule on commas.md. The subject-repetition instruction is retained separately.",
+    "quote": "or insert a comma before the conjunction.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "d2d7b5fd83c3",
+    "note": "G-3: permits a two-sentence alternative, including repetition of the subject; retained under the subject-repetition rule’s conditions.",
+    "quote": "You could also write this as 2 short sentences, but this approach can appear repetitive.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "9b81bfd766cd",
+    "note": "G-3: permits one clause order without requiring it.",
+    "quote": "You can start the sentence with the main clause.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "c2844cef9041",
+    "note": "G-3: permits an alternative clause order; neither order is presented as inherently wrong.",
+    "quote": "You can also start the sentence with the subordinate clause to change the emphasis.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "e1d5ad579bb9",
+    "note": "G-4: consolidated with the restriction on passive voice at block 700b82600056 rather than creating a second active/passive-voice finding.",
+    "quote": "Build most sentences in this order with active voice when using active verbs (doing or action verbs).",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3b3bf16d016b",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Structure the parts of a sentence so meaning is easy to understand.",
+    "specification": "The page gives no operational threshold for ‘easy to understand’. The boundary between acceptable structural complexity and unclear sentence structure needs reviewer judgement.",
+    "unit": "sentence",
+    "violation_condition": "The arrangement of a sentence’s parts obscures its meaning or makes the relationships between those parts difficult to understand.",
+    "when": [],
+    "why": "G-5: this instruction concerns an observable property of the text—structural clarity—rather than a writer-side checking action."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a4bdbae1a977",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d2d7b5fd83c3",
+      "quote": "You could also write this as 2 short sentences, but this approach can appear repetitive."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9eb082a153c8",
+        "quote": "The agency planned to start the project next year but ran out of funding."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual permits this alternative; it does not present it as incorrect.",
+      "parts": [
+       {
+        "block_id": "5dc01b9087a8",
+        "quote": "The agency planned to start the project next year. The agency ran out of funding."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "If the 2 clauses share the same subject, don’t repeat the subject",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The subject is explicitly repeated in the second of two coordinated clauses that share a subject.",
+    "when": [
+     "The two clauses are coordinated within one sentence and share a subject.",
+     "Repeating the subject in two separate sentences is permitted."
+    ],
+    "why": "G-2 and G-3: retain the shared-subject condition and the separate-sentences permission; G-6: the comma instruction belongs to the principal-clause rule on commas.md."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "700b82600056",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "e1d5ad579bb9",
+      "quote": "Build most sentences in this order with active voice when using active verbs (doing or action verbs)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1fe1c0a12b7b",
+        "quote": "Computer models produce wind forecasts to show average speeds."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual presents this as an example of justified passive voice.",
+      "parts": [
+       {
+        "block_id": "73fd6332ec3f",
+        "quote": "A formal complaint was made about the use of discriminatory language."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Use passive voice only if there is a good reason – for example, if you can’t say who did the action or because information has to be concealed for ethical or legal reasons.",
+    "specification": "The active-voice instruction and the restriction on passive voice form one check. ‘A good reason’ is not defined exhaustively and requires contextual judgement; ‘most sentences’ does not supply a numerical quota.",
+    "unit": "sentence",
+    "violation_condition": "An action verb is used in passive voice without a good reason for choosing passive rather than active voice.",
+    "when": [
+     "The verb expresses doing or action.",
+     "Passive voice is permitted when there is a good reason.",
+     "Examples of good reasons include being unable to say who did the action and needing to conceal information for ethical or legal reasons."
+    ],
+    "why": "G-2 and G-4: consolidate the active-voice preference and passive-voice restriction into one check, with the stated reasons retained as exceptions."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "3b3bf16d016b",
+    "end": 127,
+    "prefix": "ds that makes sense on its own. ",
+    "quote": "Structure the parts of a sentence so meaning is easy to understand.",
+    "start": 60,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no operational threshold for ‘easy to understand’. The boundary between acceptable structural complexity and unclear sentence structure needs reviewer judgement.",
+    "unit": "sentence",
+    "violation_condition": "The arrangement of a sentence’s parts obscures its meaning or makes the relationships between those parts difficult to understand."
+   },
+   "when": [],
+   "why": "G-5: this instruction concerns an observable property of the text—structural clarity—rather than a writer-side checking action."
+  },
+  {
+   "anchor": {
+    "block_id": "a4bdbae1a977",
+    "end": 65,
+    "prefix": "",
+    "quote": "If the 2 clauses share the same subject, don’t repeat the subject",
+    "start": 0,
+    "suffix": " or insert a comma before the co"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d2d7b5fd83c3",
+     "end": 88,
+     "prefix": "",
+     "quote": "You could also write this as 2 short sentences, but this approach can appear repetitive.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9eb082a153c8",
+       "end": 73,
+       "prefix": "",
+       "quote": "The agency planned to start the project next year but ran out of funding.",
+       "start": 0,
+       "suffix": " [‘The agency’ is the subject of"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The manual permits this alternative; it does not present it as incorrect.",
+     "parts": [
+      {
+       "block_id": "5dc01b9087a8",
+       "end": 81,
+       "prefix": "",
+       "quote": "The agency planned to start the project next year. The agency ran out of funding.",
+       "start": 0,
+       "suffix": " [‘The agency’ is the subject of"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The subject is explicitly repeated in the second of two coordinated clauses that share a subject."
+   },
+   "when": [
+    "The two clauses are coordinated within one sentence and share a subject.",
+    "Repeating the subject in two separate sentences is permitted."
+   ],
+   "why": "G-2 and G-3: retain the shared-subject condition and the separate-sentences permission; G-6: the comma instruction belongs to the principal-clause rule on commas.md."
+  },
+  {
+   "anchor": {
+    "block_id": "700b82600056",
+    "end": 172,
+    "prefix": "",
+    "quote": "Use passive voice only if there is a good reason – for example, if you can’t say who did the action or because information has to be concealed for ethical or legal reasons.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "e1d5ad579bb9",
+     "end": 101,
+     "prefix": "",
+     "quote": "Build most sentences in this order with active voice when using active verbs (doing or action verbs).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1fe1c0a12b7b",
+       "end": 62,
+       "prefix": "",
+       "quote": "Computer models produce wind forecasts to show average speeds.",
+       "start": 0,
+       "suffix": " [Active voice: the subject of t"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The manual presents this as an example of justified passive voice.",
+     "parts": [
+      {
+       "block_id": "73fd6332ec3f",
+       "end": 69,
+       "prefix": "",
+       "quote": "A formal complaint was made about the use of discriminatory language.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The active-voice instruction and the restriction on passive voice form one check. ‘A good reason’ is not defined exhaustively and requires contextual judgement; ‘most sentences’ does not supply a numerical quota.",
+    "unit": "sentence",
+    "violation_condition": "An action verb is used in passive voice without a good reason for choosing passive rather than active voice."
+   },
+   "when": [
+    "The verb expresses doing or action.",
+    "Passive voice is permitted when there is a good reason.",
+    "Examples of good reasons include being unable to say who did the action and needing to conceal information for ethical or legal reasons."
+   ],
+   "why": "G-2 and G-4: consolidate the active-voice preference and passive-voice restriction into one check, with the stated reasons retained as exceptions."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5386,
+  "output_tokens": 8225,
+  "reasoning_tokens": 6469
+ }
+}

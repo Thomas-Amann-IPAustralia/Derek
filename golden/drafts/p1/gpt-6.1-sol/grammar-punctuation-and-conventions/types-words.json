@@ -1,0 +1,422 @@
+{
+ "effort": "high",
+ "input_sha256": "a6b93cca0d8323610225de337ea41a1fcb4df2e7b4597e44f2364ddf778bcebc",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "06e09c016511",
+    "end": 59,
+    "prefix": "",
+    "quote": "Keep the functions of words in mind to write clear content.",
+    "start": 0,
+    "suffix": " Grammar and sentence structure "
+   },
+   "note": "G-5: an instruction about the writer’s thinking, not a detectable property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d744145f3d8d",
+    "end": 134,
+    "prefix": "n a sentence, clause or phrase. ",
+    "quote": "You can group words into different types depending on the way they function.",
+    "start": 58,
+    "suffix": ""
+   },
+   "note": "Explains grammatical classification rather than requiring a property of the writing.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4e5a9bf2ea01",
+    "end": 45,
+    "prefix": "",
+    "quote": "Sentence structure sets the function of words",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The candidate heading describes how English works. The actionable modifier-placement instruction appears later in the body.",
+   "reason": "description",
+   "seed_uid": "3758f889b71a03a9"
+  },
+  {
+   "anchor": {
+    "block_id": "d801731eceb6",
+    "end": 58,
+    "prefix": "",
+    "quote": "You can change the meaning of a sentence by moving a word.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a grammatical possibility; it does not require moving words or prohibit any particular wording.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fb021574c526",
+    "end": 101,
+    "prefix": "d modifier is more complicated. ",
+    "quote": "Sentences with this issue often need some rewriting.",
+    "start": 49,
+    "suffix": ""
+   },
+   "note": "G-5: general advice about correcting misplaced modifiers, not an additional text check.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words.md",
+ "page_sha256": "259bf2a040ac2ebf00666e5889e98ae9b369a40b23f72b978ae63760ac19b4e2",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "06e09c016511",
+    "note": "G-5: an instruction about the writer’s thinking, not a detectable property of the text.",
+    "quote": "Keep the functions of words in mind to write clear content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d744145f3d8d",
+    "note": "Explains grammatical classification rather than requiring a property of the writing.",
+    "quote": "You can group words into different types depending on the way they function.",
+    "reason": "description"
+   },
+   {
+    "block_id": "4e5a9bf2ea01",
+    "note": "The candidate heading describes how English works. The actionable modifier-placement instruction appears later in the body.",
+    "quote": "Sentence structure sets the function of words",
+    "reason": "description"
+   },
+   {
+    "block_id": "d801731eceb6",
+    "note": "Describes a grammatical possibility; it does not require moving words or prohibit any particular wording.",
+    "quote": "You can change the meaning of a sentence by moving a word.",
+    "reason": "description"
+   },
+   {
+    "block_id": "fb021574c526",
+    "note": "G-5: general advice about correcting misplaced modifiers, not an additional text check.",
+    "quote": "Sentences with this issue often need some rewriting.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cd93051a9ebe",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "cd93051a9ebe",
+      "quote": "The same applies to adverbial and adjectival phrases and clauses."
+     },
+     {
+      "block_id": "e55e6ec76664",
+      "quote": "The following sentences are all grammatically correct."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "One of the explicitly grammatically correct meaning contrasts.",
+      "parts": [
+       {
+        "block_id": "cd71964dee57",
+        "quote": "Only Jamilah told Freddie that she respected him."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "One of the explicitly grammatically correct meaning contrasts.",
+      "parts": [
+       {
+        "block_id": "00c5ae6a584f",
+        "quote": "Jamilah only told Freddie that she respected him."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "One of the explicitly grammatically correct meaning contrasts.",
+      "parts": [
+       {
+        "block_id": "94e263c407c3",
+        "quote": "Jamilah told only Freddie that she respected him."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "One of the explicitly grammatically correct meaning contrasts.",
+      "parts": [
+       {
+        "block_id": "29380b244222",
+        "quote": "Jamilah told Freddie only that she respected him."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "One of the explicitly grammatically correct meaning contrasts.",
+      "parts": [
+       {
+        "block_id": "520257f9b23c",
+        "quote": "Jamilah told Freddie that only she respected him."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "One of the explicitly grammatically correct meaning contrasts.",
+      "parts": [
+       {
+        "block_id": "27862ab9bf6c",
+        "quote": "Jamilah told Freddie that she only respected him."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "One of the explicitly grammatically correct meaning contrasts.",
+      "parts": [
+       {
+        "block_id": "401065e0206c",
+        "quote": "Jamilah told Freddie that she respected only him."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual’s Write this example.",
+      "parts": [
+       {
+        "block_id": "f5392dbed97a",
+        "quote": "The report suggested that the drug is beneficial, even though it’s harmful in larger doses."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual’s Not this example.",
+      "parts": [
+       {
+        "block_id": "7f232dea41ae",
+        "quote": "Even though it’s harmful in larger doses, the report suggested the drug is beneficial."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Place modifying words, such as adjectives and adverbs, next to the thing that they’re modifying.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A modifying word, phrase or clause is not next to the word or expression it is intended to modify.",
+    "when": [
+     "Applies to modifying words, including adjectives and adverbs, and to adverbial and adjectival phrases and clauses.",
+     "Moving a modifier can change the meaning without making the sentence incorrect; assess its placement against the intended meaning."
+    ],
+    "why": "G-2 keeps word, phrase and clause placement in one check; G-4 selects the body instruction; E-1 keeps all seven meaning contrasts compliant."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "cd93051a9ebe",
+    "end": 96,
+    "prefix": "",
+    "quote": "Place modifying words, such as adjectives and adverbs, next to the thing that they’re modifying.",
+    "start": 0,
+    "suffix": " The same applies to adverbial a"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "cd93051a9ebe",
+     "end": 162,
+     "prefix": "e thing that they’re modifying. ",
+     "quote": "The same applies to adverbial and adjectival phrases and clauses.",
+     "start": 97,
+     "suffix": ""
+    },
+    {
+     "block_id": "e55e6ec76664",
+     "end": 54,
+     "prefix": "",
+     "quote": "The following sentences are all grammatically correct.",
+     "start": 0,
+     "suffix": " The meaning changes as the modi"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "One of the explicitly grammatically correct meaning contrasts.",
+     "parts": [
+      {
+       "block_id": "cd71964dee57",
+       "end": 49,
+       "prefix": "",
+       "quote": "Only Jamilah told Freddie that she respected him.",
+       "start": 0,
+       "suffix": " [No one else told Freddie.]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "One of the explicitly grammatically correct meaning contrasts.",
+     "parts": [
+      {
+       "block_id": "00c5ae6a584f",
+       "end": 49,
+       "prefix": "",
+       "quote": "Jamilah only told Freddie that she respected him.",
+       "start": 0,
+       "suffix": " [Jamilah didn’t write to Freddi"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "One of the explicitly grammatically correct meaning contrasts.",
+     "parts": [
+      {
+       "block_id": "94e263c407c3",
+       "end": 49,
+       "prefix": "",
+       "quote": "Jamilah told only Freddie that she respected him.",
+       "start": 0,
+       "suffix": " [Jamilah didn’t tell anyone els"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "One of the explicitly grammatically correct meaning contrasts.",
+     "parts": [
+      {
+       "block_id": "29380b244222",
+       "end": 49,
+       "prefix": "",
+       "quote": "Jamilah told Freddie only that she respected him.",
+       "start": 0,
+       "suffix": " [Jamilah didn’t tell Freddie an"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "One of the explicitly grammatically correct meaning contrasts.",
+     "parts": [
+      {
+       "block_id": "520257f9b23c",
+       "end": 49,
+       "prefix": "",
+       "quote": "Jamilah told Freddie that only she respected him.",
+       "start": 0,
+       "suffix": " [No one else respects Freddie.]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "One of the explicitly grammatically correct meaning contrasts.",
+     "parts": [
+      {
+       "block_id": "27862ab9bf6c",
+       "end": 49,
+       "prefix": "",
+       "quote": "Jamilah told Freddie that she only respected him.",
+       "start": 0,
+       "suffix": " [Jamilah doesn’t have any other"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "One of the explicitly grammatically correct meaning contrasts.",
+     "parts": [
+      {
+       "block_id": "401065e0206c",
+       "end": 49,
+       "prefix": "",
+       "quote": "Jamilah told Freddie that she respected only him.",
+       "start": 0,
+       "suffix": " [Jamilah doesn’t respect anyone"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The manual’s Write this example.",
+     "parts": [
+      {
+       "block_id": "f5392dbed97a",
+       "end": 91,
+       "prefix": "",
+       "quote": "The report suggested that the drug is beneficial, even though it’s harmful in larger doses.",
+       "start": 0,
+       "suffix": " [‘It’ in the modifier refers to"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual’s Not this example.",
+     "parts": [
+      {
+       "block_id": "7f232dea41ae",
+       "end": 86,
+       "prefix": "",
+       "quote": "Even though it’s harmful in larger doses, the report suggested the drug is beneficial.",
+       "start": 0,
+       "suffix": " [‘It’ in the modifier could go "
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A modifying word, phrase or clause is not next to the word or expression it is intended to modify."
+   },
+   "when": [
+    "Applies to modifying words, including adjectives and adverbs, and to adverbial and adjectival phrases and clauses.",
+    "Moving a modifier can change the meaning without making the sentence incorrect; assess its placement against the intended meaning."
+   ],
+   "why": "G-2 keeps word, phrase and clause placement in one check; G-4 selects the body instruction; E-1 keeps all seven meaning contrasts compliant."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4100,
+  "output_tokens": 2844,
+  "reasoning_tokens": 1552
+ }
+}

@@ -1,0 +1,592 @@
+{
+ "effort": "high",
+ "input_sha256": "07db1b2e0d5e34e046ed5b1acc9cd8f884864579786e9e8ebfe511f15abd8376",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "23b1a3b97ab4",
+    "end": 43,
+    "prefix": "",
+    "quote": "A main clause can stand alone as a sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a grammatical property of main clauses rather than instructing writers to make every clause a standalone sentence.",
+   "reason": "description",
+   "seed_uid": "0fed6224f797aea6"
+  },
+  {
+   "anchor": {
+    "block_id": "bd414875b6e2",
+    "end": 44,
+    "prefix": "",
+    "quote": "Every sentence has at least one main clause.",
+    "start": 0,
+    "suffix": " The main clause is also known a"
+   },
+   "note": "Part of the explanation of sentence structure, not an explicit instruction governing fragments across all document contexts.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "be1388bf0959",
+    "end": 174,
+    "prefix": "onsist of other types of words. ",
+    "quote": "You can replace a noun clause with ‘it’ and the sentence will still make sense.",
+    "start": 95,
+    "suffix": ""
+   },
+   "note": "A diagnostic for identifying noun clauses, not a requirement to replace them with ‘it’.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f0a69081ed26",
+    "end": 17,
+    "prefix": "",
+    "quote": "Adverbial clauses",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The candidate heading names the topic; the body supplies the actionable removal check.",
+   "reason": "section",
+   "seed_uid": "9e2315b6134addea"
+  },
+  {
+   "anchor": {
+    "block_id": "55756da14109",
+    "end": 111,
+    "prefix": "",
+    "quote": "In the last example, the comma after the adverbial clause helps users find the subject in the sentence (‘she’).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: the comma-after-an-introductory-clause rule belongs on commas.md. This sentence explains its effect.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "53b8e9e3cd3b",
+    "end": 68,
+    "prefix": "",
+    "quote": "In some sentences, the subject isn’t easy to find without the comma.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: the following Correct/Incorrect pair illustrates the introductory-clause comma rule belonging on commas.md, rather than a separate clauses-page check.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d99ae590607f",
+    "end": 122,
+    "prefix": "oth subordinating conjunctions. ",
+    "quote": "They can often be interchangeable, particularly in spoken English.",
+    "start": 56,
+    "suffix": " Yet they have different meaning"
+   },
+   "note": "G-3: retained as a qualification on the conjunction-choice rule, not an independent finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/parts-sentences/clauses.md",
+ "page_sha256": "c9eae1dd0d274866dc7fd3696a9c07327142e050c1c8ead050922802714aeb80",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "23b1a3b97ab4",
+    "note": "Describes a grammatical property of main clauses rather than instructing writers to make every clause a standalone sentence.",
+    "quote": "A main clause can stand alone as a sentence",
+    "reason": "description"
+   },
+   {
+    "block_id": "bd414875b6e2",
+    "note": "Part of the explanation of sentence structure, not an explicit instruction governing fragments across all document contexts.",
+    "quote": "Every sentence has at least one main clause.",
+    "reason": "description"
+   },
+   {
+    "block_id": "be1388bf0959",
+    "note": "A diagnostic for identifying noun clauses, not a requirement to replace them with ‘it’.",
+    "quote": "You can replace a noun clause with ‘it’ and the sentence will still make sense.",
+    "reason": "description"
+   },
+   {
+    "block_id": "f0a69081ed26",
+    "note": "The candidate heading names the topic; the body supplies the actionable removal check.",
+    "quote": "Adverbial clauses",
+    "reason": "section"
+   },
+   {
+    "block_id": "55756da14109",
+    "note": "G-6: the comma-after-an-introductory-clause rule belongs on commas.md. This sentence explains its effect.",
+    "quote": "In the last example, the comma after the adverbial clause helps users find the subject in the sentence (‘she’).",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "53b8e9e3cd3b",
+    "note": "G-6: the following Correct/Incorrect pair illustrates the introductory-clause comma rule belonging on commas.md, rather than a separate clauses-page check.",
+    "quote": "In some sentences, the subject isn’t easy to find without the comma.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "d99ae590607f",
+    "note": "G-3: retained as a qualification on the conjunction-choice rule, not an independent finding.",
+    "quote": "They can often be interchangeable, particularly in spoken English.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "215787939d29",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d9dcabce0b6a",
+        "quote": "The office, which is in the city, closed for the day. / The office closed for the day."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "14dfe58f9092",
+        "quote": "This is the committee that met for 12 hours last Tuesday. / This is the committee."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2be3b7804419",
+        "quote": "The manager, whose staff work hard, often stays back late. / The manager often stays back late."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The sentence should still make sense if you remove the adjectival clause.",
+    "specification": "Interpret ‘make sense’ as leaving a grammatical, intelligible sentence, not preserving every detail of the original meaning. The examples remove both restrictive and non-restrictive adjectival clauses.",
+    "unit": "sentence",
+    "violation_condition": "A sentence containing an adjectival clause does not make sense when that clause is removed.",
+    "when": [
+     "The sentence contains an adjectival clause."
+    ],
+    "why": "G-4: the body sentence states the check; the heading merely names the clause type."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "aad0235d709e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "09aa7882c4b1",
+        "quote": "I always eat breakfast before I go to work. / I always eat breakfast."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The sentence should still make sense if you remove the adverbial clause.",
+    "specification": "Interpret ‘make sense’ as leaving a grammatical, intelligible sentence, not retaining the time, place, condition or other information supplied by the removed clause.",
+    "unit": "sentence",
+    "violation_condition": "A sentence containing an adverbial clause does not make sense when that clause is removed.",
+    "when": [
+     "The sentence contains an adverbial clause."
+    ],
+    "why": "G-1 and G-4: use the actionable body sentence, not the section heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d99ae590607f",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "93a9e0662af1",
+      "quote": "‘If’ is conditional. It defines a condition that needs to exist for the main clause to be true."
+     },
+     {
+      "block_id": "e66c63e2cff9",
+      "quote": "‘Whether’ shows 2 possibilities. Sometimes one of the possibilities can be understood rather than explicitly mentioned."
+     },
+     {
+      "block_id": "d99ae590607f",
+      "quote": "They can often be interchangeable, particularly in spoken English."
+     },
+     {
+      "block_id": "fd903805dc17",
+      "quote": "When there are 2 concrete possibilities, using ‘if’ instead of ‘whether’ can lead to ambiguous sentences."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "752e5837486a",
+        "quote": "We can eat lunch outside if the rain stops."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1ad332e9514c",
+        "quote": "We can choose whether to eat lunch outside or inside."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1cdcd1761c24",
+        "quote": "We asked whether the office was open [or not]."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The question asks which location he was working from.",
+      "parts": [
+       {
+        "block_id": "3def7c4ce03e",
+        "quote": "We asked whether he was working from home or from the office."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual presents this as a different possible meaning, not as incorrect.",
+      "parts": [
+       {
+        "block_id": "52496d6ba413",
+        "quote": "We asked if he was working from home or from the office."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When you’re writing, choose the right one:",
+    "specification": "Assess the conjunction against the meaning supported by context. Do not automatically flag ‘if’ in an indirect question or before explicit alternatives. The final contrast pair illustrates different possible meanings, not an inherently incorrect sentence.",
+    "unit": "sentence",
+    "violation_condition": "‘If’ or ‘whether’ expresses a relationship inconsistent with the intended meaning established by context: a condition governing the main clause versus a choice between possibilities.",
+    "when": [
+     "The words are used as subordinating conjunctions.",
+     "‘If’ introduces a condition needed for the main clause to be true.",
+     "‘Whether’ introduces possibilities; one possibility may be implied.",
+     "The words can often be interchangeable, particularly in spoken English; interchangeability alone is not a violation."
+    ],
+    "why": "G-2 combines the related conjunction choices; G-3 preserves interchangeability; E-1 prevents treating the final meaning contrast as a violation."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "215787939d29",
+    "end": 73,
+    "prefix": "",
+    "quote": "The sentence should still make sense if you remove the adjectival clause.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d9dcabce0b6a",
+       "end": 86,
+       "prefix": "",
+       "quote": "The office, which is in the city, closed for the day. / The office closed for the day.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "14dfe58f9092",
+       "end": 82,
+       "prefix": "",
+       "quote": "This is the committee that met for 12 hours last Tuesday. / This is the committee.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2be3b7804419",
+       "end": 95,
+       "prefix": "",
+       "quote": "The manager, whose staff work hard, often stays back late. / The manager often stays back late.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret ‘make sense’ as leaving a grammatical, intelligible sentence, not preserving every detail of the original meaning. The examples remove both restrictive and non-restrictive adjectival clauses.",
+    "unit": "sentence",
+    "violation_condition": "A sentence containing an adjectival clause does not make sense when that clause is removed."
+   },
+   "when": [
+    "The sentence contains an adjectival clause."
+   ],
+   "why": "G-4: the body sentence states the check; the heading merely names the clause type."
+  },
+  {
+   "anchor": {
+    "block_id": "aad0235d709e",
+    "end": 72,
+    "prefix": "",
+    "quote": "The sentence should still make sense if you remove the adverbial clause.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "09aa7882c4b1",
+       "end": 69,
+       "prefix": "",
+       "quote": "I always eat breakfast before I go to work. / I always eat breakfast.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret ‘make sense’ as leaving a grammatical, intelligible sentence, not retaining the time, place, condition or other information supplied by the removed clause.",
+    "unit": "sentence",
+    "violation_condition": "A sentence containing an adverbial clause does not make sense when that clause is removed."
+   },
+   "when": [
+    "The sentence contains an adverbial clause."
+   ],
+   "why": "G-1 and G-4: use the actionable body sentence, not the section heading."
+  },
+  {
+   "anchor": {
+    "block_id": "d99ae590607f",
+    "end": 199,
+    "prefix": "t they have different meanings. ",
+    "quote": "When you’re writing, choose the right one:",
+    "start": 157,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "93a9e0662af1",
+     "end": 95,
+     "prefix": "",
+     "quote": "‘If’ is conditional. It defines a condition that needs to exist for the main clause to be true.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e66c63e2cff9",
+     "end": 119,
+     "prefix": "",
+     "quote": "‘Whether’ shows 2 possibilities. Sometimes one of the possibilities can be understood rather than explicitly mentioned.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d99ae590607f",
+     "end": 122,
+     "prefix": "oth subordinating conjunctions. ",
+     "quote": "They can often be interchangeable, particularly in spoken English.",
+     "start": 56,
+     "suffix": " Yet they have different meaning"
+    },
+    {
+     "block_id": "fd903805dc17",
+     "end": 105,
+     "prefix": "",
+     "quote": "When there are 2 concrete possibilities, using ‘if’ instead of ‘whether’ can lead to ambiguous sentences.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "752e5837486a",
+       "end": 43,
+       "prefix": "",
+       "quote": "We can eat lunch outside if the rain stops.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1ad332e9514c",
+       "end": 53,
+       "prefix": "",
+       "quote": "We can choose whether to eat lunch outside or inside.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1cdcd1761c24",
+       "end": 46,
+       "prefix": "",
+       "quote": "We asked whether the office was open [or not].",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The question asks which location he was working from.",
+     "parts": [
+      {
+       "block_id": "3def7c4ce03e",
+       "end": 61,
+       "prefix": "",
+       "quote": "We asked whether he was working from home or from the office.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The manual presents this as a different possible meaning, not as incorrect.",
+     "parts": [
+      {
+       "block_id": "52496d6ba413",
+       "end": 56,
+       "prefix": "",
+       "quote": "We asked if he was working from home or from the office.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess the conjunction against the meaning supported by context. Do not automatically flag ‘if’ in an indirect question or before explicit alternatives. The final contrast pair illustrates different possible meanings, not an inherently incorrect sentence.",
+    "unit": "sentence",
+    "violation_condition": "‘If’ or ‘whether’ expresses a relationship inconsistent with the intended meaning established by context: a condition governing the main clause versus a choice between possibilities."
+   },
+   "when": [
+    "The words are used as subordinating conjunctions.",
+    "‘If’ introduces a condition needed for the main clause to be true.",
+    "‘Whether’ introduces possibilities; one possibility may be implied.",
+    "The words can often be interchangeable, particularly in spoken English; interchangeability alone is not a violation."
+   ],
+   "why": "G-2 combines the related conjunction choices; G-3 preserves interchangeability; E-1 prevents treating the final meaning contrast as a violation."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5535,
+  "output_tokens": 6501,
+  "reasoning_tokens": 4512
+ }
+}

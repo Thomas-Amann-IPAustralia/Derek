@@ -1,0 +1,3416 @@
+{
+ "effort": "high",
+ "input_sha256": "77eef3426b8c8e9eea48341b892fac49df91e77d47569f8b7338a515879fca10",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a3097e1706bd",
+    "end": 102,
+    "prefix": "ontent and find what they need. ",
+    "quote": "Organise content using clear heading levels.",
+    "start": 58,
+    "suffix": " Begin each heading with keyword"
+   },
+   "note": "Introductory summary of the section-heading and hierarchy requirements.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a3097e1706bd",
+    "end": 161,
+    "prefix": "ent using clear heading levels. ",
+    "quote": "Begin each heading with keywords and keep it to the point.",
+    "start": 103,
+    "suffix": ""
+   },
+   "note": "Summarises the frontloading and brief-heading rules; not another finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0fec768c679e",
+    "end": 39,
+    "prefix": "",
+    "quote": "Write headings that are clear and short",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the more specific main-point, character-limit and question-form rules.",
+   "reason": "section",
+   "seed_uid": "005ee2c10f0fad8f"
+  },
+  {
+   "anchor": {
+    "block_id": "bc683567cac4",
+    "end": 16,
+    "prefix": "",
+    "quote": "Keep them brief.",
+    "start": 0,
+    "suffix": " They are signposts for people a"
+   },
+   "note": "The later 70-character rule supplies the actionable heading-length limit.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "08c7461e3103",
+    "end": 133,
+    "prefix": "ructure using section headings. ",
+    "quote": "Clearly describe the topics or the following section in the headings.",
+    "start": 64,
+    "suffix": ""
+   },
+   "note": "Absorbed into the main-point and heading–content relevance rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4013ac2cb9bf",
+    "end": 120,
+    "prefix": "",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they are using.",
+    "start": 0,
+    "suffix": " Use the same navigation element"
+   },
+   "note": "Requires evaluating navigation and assistive-technology behaviour, not just the written content.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4013ac2cb9bf",
+    "end": 183,
+    "prefix": " the technology they are using. ",
+    "quote": "Use the same navigation elements consistently across services.",
+    "start": 121,
+    "suffix": ""
+   },
+   "note": "A service-interface navigation requirement, not a property of the words being checked.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "48d20c049152",
+    "end": 66,
+    "prefix": "",
+    "quote": "Write headings that tell the user what is in the content below it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the main-point rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "972f2ee8537b",
+    "end": 37,
+    "prefix": "",
+    "quote": "Headings should state the main point.",
+    "start": 0,
+    "suffix": " This helps users find and use c"
+   },
+   "note": "Restates the selected heading ‘State the main point’.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b3cee9ecc5d1",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use words that accurately describe the content.",
+    "start": 0,
+    "suffix": " Don’t use empty words or phrase"
+   },
+   "note": "Part of the main-point and heading–content relevance check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b3cee9ecc5d1",
+    "end": 128,
+    "prefix": "ccurately describe the content. ",
+    "quote": "Don’t use empty words or phrases (for example, ‘more’ or ‘related information’).",
+    "start": 48,
+    "suffix": ""
+   },
+   "note": "Specifies generic headings that fail the main-point check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "97353478af0e",
+    "end": 72,
+    "prefix": "",
+    "quote": "Only include information in the section that is relevant to the heading.",
+    "start": 0,
+    "suffix": " If the information isn’t releva"
+   },
+   "note": "The content-side formulation of the same heading–content relevance requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "97353478af0e",
+    "end": 139,
+    "prefix": "hat is relevant to the heading. ",
+    "quote": "If the information isn’t relevant, move it or rewrite the heading.",
+    "start": 73,
+    "suffix": ""
+   },
+   "note": "G-5: gives alternative editing remedies for a relevance failure.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8484ad7656da",
+    "end": 70,
+    "prefix": "",
+    "quote": "Write headings that are no more than 70 characters (including spaces).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the selected character-limit heading and clarifies that spaces count.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "55bbf864c948",
+    "end": 83,
+    "prefix": "",
+    "quote": "Start headings and subheadings with keywords that help people to make a connection.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the selected frontloading rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d95e00009cef",
+    "end": 65,
+    "prefix": "",
+    "quote": "The keywords should relate to the main content below the heading.",
+    "start": 0,
+    "suffix": " Pay special attention to the fi"
+   },
+   "note": "Qualifies which keywords should be frontloaded.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d95e00009cef",
+    "end": 114,
+    "prefix": "main content below the heading. ",
+    "quote": "Pay special attention to the first 2 or 3 words.",
+    "start": 66,
+    "suffix": " These might be the only words s"
+   },
+   "note": "G-5: directs the writer’s attention; it does not independently require a fixed number of keywords.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "63567fee437c",
+    "end": 42,
+    "prefix": "",
+    "quote": "Organise heading levels in a logical order",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups specific hierarchy, relationship, depth, spacing, sibling-count and numbering checks.",
+   "reason": "section",
+   "seed_uid": "763be8d94990edb0"
+  },
+  {
+   "anchor": {
+    "block_id": "9459d6fe6db3",
+    "end": 104,
+    "prefix": "Keep each section concise and ",
+    "quote": "use headings to chunk information so it works well on screen for the user.",
+    "start": 30,
+    "suffix": ""
+   },
+   "note": "Absorbed into the section-heading structure rule; section concision is retained separately.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6c42d256728c",
+    "end": 49,
+    "prefix": "",
+    "quote": "Write headings in a complete organised hierarchy.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the no-skipped-levels requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "64ce33c40bb5",
+    "end": 23,
+    "prefix": "",
+    "quote": "Use one level 1 heading",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body is selected because it explicitly limits the rule to one heading per webpage.",
+   "reason": "restatement",
+   "seed_uid": "abf622740cff5055"
+  },
+  {
+   "anchor": {
+    "block_id": "4c4e95f779ae",
+    "end": 106,
+    "prefix": "",
+    "quote": "The level 1 heading is also a good place to include target keywords needed for search engine optimisation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recommends a useful location for target keywords without independently requiring them.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "38fc70e1e7bf",
+    "end": 24,
+    "prefix": "",
+    "quote": "Make the headings relate",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body states the parent-heading relationship more precisely and uses ‘must’.",
+   "reason": "restatement",
+   "seed_uid": "7f3c8adbe766b1e6"
+  },
+  {
+   "anchor": {
+    "block_id": "a30a1ca0290f",
+    "end": 50,
+    "prefix": "",
+    "quote": "Try to use only 3 or 4 heading levels at the most.",
+    "start": 0,
+    "suffix": " A simpler structure is easier t"
+   },
+   "note": "Consolidated with the rule discouraging level 5 and deeper headings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "03c167342f4e",
+    "end": 102,
+    "prefix": "",
+    "quote": "You can use deeper heading levels (level 4 and below) for very complex documents, but try to avoid it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: the complex-document allowance is recorded on the heading-depth rule, with its inconsistent depth boundary exposed.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "26a918f7b79b",
+    "end": 83,
+    "prefix": "",
+    "quote": "Separate each heading from the next one by some text, even if it’s only a sentence.",
+    "start": 0,
+    "suffix": " This helps create a clear disti"
+   },
+   "note": "Defines the selected ‘Space out headings’ rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "47cde1ebb305",
+    "end": 82,
+    "prefix": "",
+    "quote": "Give each heading level in a section at least one other heading at the same level.",
+    "start": 0,
+    "suffix": " This avoids the appearance of s"
+   },
+   "note": "Restates the minimum-two sibling-heading rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "31a85aa76f77",
+    "end": 65,
+    "prefix": "",
+    "quote": "Use numbered headings only when they relate to a series of steps.",
+    "start": 0,
+    "suffix": " Numbered headings can help user"
+   },
+   "note": "Restates the selected steps-only numbering heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "29a9e9a1724b",
+    "end": 83,
+    "prefix": "",
+    "quote": "In print, you can use numbered headings to help people cross-reference information:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: print cross-referencing is an exception to the steps-only numbering rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1dafd4b955e7",
+    "end": 78,
+    "prefix": "",
+    "quote": "Don’t use numbered headings in the preliminary pages or endmatter in a report.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Specific cases of the rule restricting print heading numbers to the body.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e0bac82b1797",
+    "end": 45,
+    "prefix": "",
+    "quote": "All headings in a level should be consistent.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the message-consistency and grammatical-parallelism requirements rather than adding a third consistency check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "198f34015e86",
+    "end": 26,
+    "prefix": "",
+    "quote": "They should have the same:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Normative lead-in to the two specified consistency properties; not independently checkable.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0e8a73679a2d",
+    "end": 60,
+    "prefix": "",
+    "quote": "Format headings so the heading levels are visibly different.",
+    "start": 0,
+    "suffix": " This helps users scan the text."
+   },
+   "note": "Restates the selected unique-formatting rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c9a25e9bc20c",
+    "end": 80,
+    "prefix": "",
+    "quote": "People should be able to tell the difference between heading levels at a glance.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the required result of visibly distinct heading formatting.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "364e3f020569",
+    "end": 22,
+    "prefix": "",
+    "quote": "Don’t add an underline",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body is selected because it explicitly covers headings and other text.",
+   "reason": "restatement",
+   "seed_uid": "b2d0432e36f8eaf9"
+  },
+  {
+   "anchor": {
+    "block_id": "97e91a1f291d",
+    "end": 48,
+    "prefix": "",
+    "quote": "Apply HTML elements, tags and styles to headings",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body supplies the digital-content scope of the semantic heading-markup rule.",
+   "reason": "restatement",
+   "seed_uid": "62aa4f3ad2049efb"
+  },
+  {
+   "anchor": {
+    "block_id": "8e74e658bc96",
+    "end": 92,
+    "prefix": "",
+    "quote": "The reader should see at least one heading on each double-page spread in a printed document.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A printed-page layout requirement dependent on pagination and spreads.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "556637b6ff7d",
+    "end": 70,
+    "prefix": "",
+    "quote": "Don’t leave a heading at the bottom of the page with no text below it.",
+    "start": 0,
+    "suffix": " Send the heading to the top of "
+   },
+   "note": "A pagination requirement rather than a property of the wording or heading hierarchy.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "556637b6ff7d",
+    "end": 154,
+    "prefix": "the page with no text below it. ",
+    "quote": "Send the heading to the top of the next page so it stays with the content below it.",
+    "start": 71,
+    "suffix": ""
+   },
+   "note": "An instruction about page layout and keeping a heading with its following text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "30dd3b2a7c2c",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use the correct HTML element for the heading level.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The HTML-specific case of correctly identifying headings and their levels.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "63abaddbb147",
+    "end": 93,
+    "prefix": "",
+    "quote": "Your content management system should have inbuilt heading styles that you can apply to text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Specifies a capability of the content management system, not a property of the submitted text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dab30187df5f",
+    "end": 105,
+    "prefix": "",
+    "quote": "Apply correct inbuilt heading styles so they can be automatically added to navigation and contents pages.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The built-in-style case of semantic heading identification.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d6481f4ab654",
+    "end": 86,
+    "prefix": "",
+    "quote": "If no guidelines apply, use a ‘Heading 1’ style for the main sections in the document.",
+    "start": 0,
+    "suffix": " The title of a document uses th"
+   },
+   "note": "Repeats the print main-section convention and supplies its default-guideline condition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a2acaf1cd828",
+    "end": 63,
+    "prefix": "",
+    "quote": "Write all headings in sentence case and use minimal punctuation",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the separate capitalisation, terminal-full-stop and shortened-form checks.",
+   "reason": "section",
+   "seed_uid": "4b74a8326cd27c1e"
+  },
+  {
+   "anchor": {
+    "block_id": "6a716d209614",
+    "end": 52,
+    "prefix": "",
+    "quote": "This means you should use a capital letter only for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the cases defining the sentence-case rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2c19956ac562",
+    "end": 73,
+    "prefix": "",
+    "quote": "Don’t write headings in all capital letters as users could misread words.",
+    "start": 0,
+    "suffix": " For example, ‘ACT’ could be ‘ac"
+   },
+   "note": "All-capital headings are a case of violating sentence case, not a second capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "55cbedc8d3d1",
+    "end": 120,
+    "prefix": "",
+    "quote": "If you work for an organisation that uses all capitals for headings, make sure any abbreviations are easy to understand.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recorded as context for the capitalisation exception and as a clarity condition on shortened forms, rather than a separate overlapping abbreviation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c17350527039",
+    "end": 74,
+    "prefix": "",
+    "quote": "Even if the heading is a sentence, it doesn’t need a full stop at the end.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Confirms that the no-terminal-full-stop rule includes complete-sentence headings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "31de245932c7",
+    "end": 118,
+    "prefix": "",
+    "quote": "Don’t use a shortened form in a heading unless it is better known than the full term (for example, ‘DNA’ and ‘CSIRO’).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Qualifies the selected shortened-form heading with its better-known-form exception.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "eee845baf920",
+    "end": 74,
+    "prefix": "",
+    "quote": "To ensure the content works on all devices, use responsive design methods.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A responsive-design implementation requirement rather than a property of the words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "df5af327c538",
+    "end": 136,
+    "prefix": "ccess services and information. ",
+    "quote": "Test content on a mobile device first.",
+    "start": 98,
+    "suffix": ""
+   },
+   "note": "G-5: prescribes a testing action; no text itself can establish whether that action occurred.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/headings.md",
+ "page_sha256": "250ee10a29c07c40bd780c8681004e023fbd90d934450076cfc22f5305335ba9",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a3097e1706bd",
+    "note": "Introductory summary of the section-heading and hierarchy requirements.",
+    "quote": "Organise content using clear heading levels.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a3097e1706bd",
+    "note": "Summarises the frontloading and brief-heading rules; not another finding.",
+    "quote": "Begin each heading with keywords and keep it to the point.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0fec768c679e",
+    "note": "G-1: groups the more specific main-point, character-limit and question-form rules.",
+    "quote": "Write headings that are clear and short",
+    "reason": "section"
+   },
+   {
+    "block_id": "bc683567cac4",
+    "note": "The later 70-character rule supplies the actionable heading-length limit.",
+    "quote": "Keep them brief.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "08c7461e3103",
+    "note": "Absorbed into the main-point and heading–content relevance rule.",
+    "quote": "Clearly describe the topics or the following section in the headings.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4013ac2cb9bf",
+    "note": "Requires evaluating navigation and assistive-technology behaviour, not just the written content.",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they are using.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "4013ac2cb9bf",
+    "note": "A service-interface navigation requirement, not a property of the words being checked.",
+    "quote": "Use the same navigation elements consistently across services.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "48d20c049152",
+    "note": "Restates the main-point rule.",
+    "quote": "Write headings that tell the user what is in the content below it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "972f2ee8537b",
+    "note": "Restates the selected heading ‘State the main point’.",
+    "quote": "Headings should state the main point.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b3cee9ecc5d1",
+    "note": "Part of the main-point and heading–content relevance check.",
+    "quote": "Use words that accurately describe the content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b3cee9ecc5d1",
+    "note": "Specifies generic headings that fail the main-point check.",
+    "quote": "Don’t use empty words or phrases (for example, ‘more’ or ‘related information’).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "97353478af0e",
+    "note": "The content-side formulation of the same heading–content relevance requirement.",
+    "quote": "Only include information in the section that is relevant to the heading.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "97353478af0e",
+    "note": "G-5: gives alternative editing remedies for a relevance failure.",
+    "quote": "If the information isn’t relevant, move it or rewrite the heading.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8484ad7656da",
+    "note": "Restates the selected character-limit heading and clarifies that spaces count.",
+    "quote": "Write headings that are no more than 70 characters (including spaces).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "55bbf864c948",
+    "note": "Restates the selected frontloading rule.",
+    "quote": "Start headings and subheadings with keywords that help people to make a connection.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d95e00009cef",
+    "note": "Qualifies which keywords should be frontloaded.",
+    "quote": "The keywords should relate to the main content below the heading.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d95e00009cef",
+    "note": "G-5: directs the writer’s attention; it does not independently require a fixed number of keywords.",
+    "quote": "Pay special attention to the first 2 or 3 words.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "63567fee437c",
+    "note": "G-1: groups specific hierarchy, relationship, depth, spacing, sibling-count and numbering checks.",
+    "quote": "Organise heading levels in a logical order",
+    "reason": "section"
+   },
+   {
+    "block_id": "9459d6fe6db3",
+    "note": "Absorbed into the section-heading structure rule; section concision is retained separately.",
+    "quote": "use headings to chunk information so it works well on screen for the user.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6c42d256728c",
+    "note": "Restates the no-skipped-levels requirement.",
+    "quote": "Write headings in a complete organised hierarchy.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "64ce33c40bb5",
+    "note": "The body is selected because it explicitly limits the rule to one heading per webpage.",
+    "quote": "Use one level 1 heading",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4c4e95f779ae",
+    "note": "Recommends a useful location for target keywords without independently requiring them.",
+    "quote": "The level 1 heading is also a good place to include target keywords needed for search engine optimisation.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "38fc70e1e7bf",
+    "note": "The body states the parent-heading relationship more precisely and uses ‘must’.",
+    "quote": "Make the headings relate",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a30a1ca0290f",
+    "note": "Consolidated with the rule discouraging level 5 and deeper headings.",
+    "quote": "Try to use only 3 or 4 heading levels at the most.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "03c167342f4e",
+    "note": "G-3: the complex-document allowance is recorded on the heading-depth rule, with its inconsistent depth boundary exposed.",
+    "quote": "You can use deeper heading levels (level 4 and below) for very complex documents, but try to avoid it.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "26a918f7b79b",
+    "note": "Defines the selected ‘Space out headings’ rule.",
+    "quote": "Separate each heading from the next one by some text, even if it’s only a sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "47cde1ebb305",
+    "note": "Restates the minimum-two sibling-heading rule.",
+    "quote": "Give each heading level in a section at least one other heading at the same level.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "31a85aa76f77",
+    "note": "Restates the selected steps-only numbering heading.",
+    "quote": "Use numbered headings only when they relate to a series of steps.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "29a9e9a1724b",
+    "note": "G-3: print cross-referencing is an exception to the steps-only numbering rule.",
+    "quote": "In print, you can use numbered headings to help people cross-reference information:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "1dafd4b955e7",
+    "note": "Specific cases of the rule restricting print heading numbers to the body.",
+    "quote": "Don’t use numbered headings in the preliminary pages or endmatter in a report.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e0bac82b1797",
+    "note": "Introduces the message-consistency and grammatical-parallelism requirements rather than adding a third consistency check.",
+    "quote": "All headings in a level should be consistent.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "198f34015e86",
+    "note": "Normative lead-in to the two specified consistency properties; not independently checkable.",
+    "quote": "They should have the same:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0e8a73679a2d",
+    "note": "Restates the selected unique-formatting rule.",
+    "quote": "Format headings so the heading levels are visibly different.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c9a25e9bc20c",
+    "note": "Describes the required result of visibly distinct heading formatting.",
+    "quote": "People should be able to tell the difference between heading levels at a glance.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "364e3f020569",
+    "note": "The body is selected because it explicitly covers headings and other text.",
+    "quote": "Don’t add an underline",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "97e91a1f291d",
+    "note": "The body supplies the digital-content scope of the semantic heading-markup rule.",
+    "quote": "Apply HTML elements, tags and styles to headings",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8e74e658bc96",
+    "note": "A printed-page layout requirement dependent on pagination and spreads.",
+    "quote": "The reader should see at least one heading on each double-page spread in a printed document.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "556637b6ff7d",
+    "note": "A pagination requirement rather than a property of the wording or heading hierarchy.",
+    "quote": "Don’t leave a heading at the bottom of the page with no text below it.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "556637b6ff7d",
+    "note": "An instruction about page layout and keeping a heading with its following text.",
+    "quote": "Send the heading to the top of the next page so it stays with the content below it.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "30dd3b2a7c2c",
+    "note": "The HTML-specific case of correctly identifying headings and their levels.",
+    "quote": "Use the correct HTML element for the heading level.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "63abaddbb147",
+    "note": "Specifies a capability of the content management system, not a property of the submitted text.",
+    "quote": "Your content management system should have inbuilt heading styles that you can apply to text.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "dab30187df5f",
+    "note": "The built-in-style case of semantic heading identification.",
+    "quote": "Apply correct inbuilt heading styles so they can be automatically added to navigation and contents pages.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d6481f4ab654",
+    "note": "Repeats the print main-section convention and supplies its default-guideline condition.",
+    "quote": "If no guidelines apply, use a ‘Heading 1’ style for the main sections in the document.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a2acaf1cd828",
+    "note": "G-1: groups the separate capitalisation, terminal-full-stop and shortened-form checks.",
+    "quote": "Write all headings in sentence case and use minimal punctuation",
+    "reason": "section"
+   },
+   {
+    "block_id": "6a716d209614",
+    "note": "Introduces the cases defining the sentence-case rule.",
+    "quote": "This means you should use a capital letter only for:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2c19956ac562",
+    "note": "All-capital headings are a case of violating sentence case, not a second capitalisation rule.",
+    "quote": "Don’t write headings in all capital letters as users could misread words.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "55cbedc8d3d1",
+    "note": "Recorded as context for the capitalisation exception and as a clarity condition on shortened forms, rather than a separate overlapping abbreviation rule.",
+    "quote": "If you work for an organisation that uses all capitals for headings, make sure any abbreviations are easy to understand.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c17350527039",
+    "note": "Confirms that the no-terminal-full-stop rule includes complete-sentence headings.",
+    "quote": "Even if the heading is a sentence, it doesn’t need a full stop at the end.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "31de245932c7",
+    "note": "Qualifies the selected shortened-form heading with its better-known-form exception.",
+    "quote": "Don’t use a shortened form in a heading unless it is better known than the full term (for example, ‘DNA’ and ‘CSIRO’).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "eee845baf920",
+    "note": "A responsive-design implementation requirement rather than a property of the words.",
+    "quote": "To ensure the content works on all devices, use responsive design methods.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "df5af327c538",
+    "note": "G-5: prescribes a testing action; no text itself can establish whether that action occurred.",
+    "quote": "Test content on a mobile device first.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "19c95ef49176",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write clear page titles.",
+    "specification": "Interpret clarity as identifying the page’s topic or purpose, rather than imposing an unstated title-length limit.",
+    "unit": "phrase",
+    "violation_condition": "A page title does not clearly identify the page’s topic or purpose.",
+    "when": [],
+    "why": "G-1: title clarity is a distinct textual requirement in the accessibility fundamentals."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "19c95ef49176",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "This is the first topic a screen reader user will hear and should align with the first heading on the page.",
+    "specification": "‘This’ refers to the page title. Interpret ‘align’ as agreement in topic or purpose, not a requirement for identical wording.",
+    "unit": "document",
+    "violation_condition": "The page title and the first heading identify different topics or purposes.",
+    "when": [],
+    "why": "G-1: alignment with the first heading is independent of whether the title itself is clear."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "08c7461e3103",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a3097e1706bd",
+      "quote": "Organise content using clear heading levels."
+     },
+     {
+      "block_id": "9459d6fe6db3",
+      "quote": "use headings to chunk information so it works well on screen for the user."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Organise content with a clear structure using section headings.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content containing distinct sections lacks section headings that expose its structure.",
+    "when": [
+     "Applies where the content has distinct sections to organise."
+    ],
+    "why": "G-4: consolidate the instructions to expose content structure through section headings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "64eeba0cea9b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "31d00ef979f3",
+      "quote": "Clear headings are specific to the topic they describe."
+     },
+     {
+      "block_id": "08c7461e3103",
+      "quote": "Clearly describe the topics or the following section in the headings."
+     },
+     {
+      "block_id": "48d20c049152",
+      "quote": "Write headings that tell the user what is in the content below it."
+     },
+     {
+      "block_id": "972f2ee8537b",
+      "quote": "Headings should state the main point."
+     },
+     {
+      "block_id": "b3cee9ecc5d1",
+      "quote": "Use words that accurately describe the content."
+     },
+     {
+      "block_id": "b3cee9ecc5d1",
+      "quote": "Don’t use empty words or phrases (for example, ‘more’ or ‘related information’)."
+     },
+     {
+      "block_id": "97353478af0e",
+      "quote": "Only include information in the section that is relevant to the heading."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Presented under ‘Like this’.",
+      "parts": [
+       {
+        "block_id": "28b25b0446e6",
+        "quote": "Learn how to drive"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Presented under ‘Not this’.",
+      "parts": [
+       {
+        "block_id": "629603644025",
+        "quote": "More information"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "State the main point",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading is empty or generic, fails to identify the main point of its section, or does not accurately represent the information grouped under it.",
+    "when": [],
+    "why": "G-2 and G-4: specificity, non-empty wording and heading–content relevance are cases of one semantic-fit check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "75fe619f3a56",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bc683567cac4",
+      "quote": "Keep them brief."
+     },
+     {
+      "block_id": "8484ad7656da",
+      "quote": "Write headings that are no more than 70 characters (including spaces)."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use 70 characters or fewer",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A heading contains more than 70 characters, counting spaces.",
+    "when": [
+     "Include spaces in the character count."
+    ],
+    "why": "G-4: the explicit character limit operationalises the instruction to keep headings brief."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fc28faae4c9e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid questions as headings",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A heading is phrased as a question.",
+    "when": [],
+    "why": "G-1: question form is a distinct check; the following paragraphs explain its rationale."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0fc9ee4f9495",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a3097e1706bd",
+      "quote": "Begin each heading with keywords and keep it to the point."
+     },
+     {
+      "block_id": "55bbf864c948",
+      "quote": "Start headings and subheadings with keywords that help people to make a connection."
+     },
+     {
+      "block_id": "d95e00009cef",
+      "quote": "The keywords should relate to the main content below the heading."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Presented under ‘Write this’.",
+      "parts": [
+       {
+        "block_id": "0834dfb504fb",
+        "quote": "Use keywords to start headings"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Presented under ‘Not this’.",
+      "parts": [
+       {
+        "block_id": "b52bb027ae16",
+        "quote": "Write a heading starting with the main keywords"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use keywords to start headings",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The meaningful keywords for the section occur late in its heading rather than at the start.",
+    "when": [
+     "The opening keywords should relate to the main content below the heading.",
+     "The first 2 or 3 words are particularly important."
+    ],
+    "why": "G-2 and G-4: keyword relevance and placement qualify one frontloading check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9459d6fe6db3",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep each section concise",
+    "specification": "The page gives no length threshold for a concise section. The 70-character limit applies to headings, not sections.",
+    "unit": "section",
+    "violation_condition": "A section is unnecessarily long or diffuse rather than concise.",
+    "when": [],
+    "why": "G-1 and E-4: section concision is distinct from heading length; do not invent a numerical section limit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b7d44360e996",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6c42d256728c",
+      "quote": "Write headings in a complete organised hierarchy."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t skip heading levels",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading introduces a deeper subsection without the intervening parent heading level, such as moving directly from level 1 to level 3.",
+    "when": [
+     "Check transitions into deeper heading levels.",
+     "Returning from a deeper level to a higher-level heading does not require intervening headings."
+    ],
+    "why": "G-4: a complete hierarchy and not skipping levels express the same structural check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "36836fc3f0af",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "64ce33c40bb5",
+      "quote": "Use one level 1 heading"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use just one level 1 heading per webpage.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A webpage has a level 1 heading count other than one.",
+    "when": [
+     "The one-heading restriction is for webpages, not the main sections of printed documents."
+    ],
+    "why": "G-2 and G-4: use the body’s explicit webpage scope and keep heading cardinality as one check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "36836fc3f0af",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Make it unique to your site.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A webpage’s level 1 heading duplicates the level 1 heading of another page on the same site.",
+    "when": [
+     "Compare the level 1 heading with those on other pages of the same site."
+    ],
+    "why": "G-1: site-wide uniqueness is independent of the number of level 1 headings on a page."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7aec0ef683d7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d6481f4ab654",
+      "quote": "If no guidelines apply, use a ‘Heading 1’ style for the main sections in the document."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "In documents, use level 1 headings (or ‘Heading 1’ style) for the main sections, such as part titles.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A main section in a printed document is assigned a heading level or style other than level 1 or ‘Heading 1’, without an applicable organisational convention.",
+    "when": [
+     "Applies to printed documents.",
+     "The later print guidance makes this the default when no organisational heading guidelines apply."
+    ],
+    "why": "G-2 and G-4: consolidate the repeated print convention and its organisational-guideline condition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "165449583d2c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "38fc70e1e7bf",
+      "quote": "Make the headings relate"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Every heading and subheading must relate to the heading above it so the grouping of information is logical and clear for users.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A subordinate heading is not logically related to its parent heading.",
+    "when": [
+     "‘The heading above it’ means the parent in the hierarchy, rather than merely the preceding sibling heading."
+    ],
+    "why": "G-4: the body states the relationship requirement and explicitly makes it mandatory."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a3b1b5c1258e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "a30a1ca0290f",
+      "quote": "Try to use only 3 or 4 heading levels at the most."
+     },
+     {
+      "block_id": "03c167342f4e",
+      "quote": "You can use deeper heading levels (level 4 and below) for very complex documents, but try to avoid it."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid level 5 and deeper heading levels",
+    "specification": "Use level 5 as the discouraged-depth boundary, following the heading and the stated maximum of 3 or 4 levels. The following reference to deeper levels beginning at level 4 is not fully consistent with that boundary.",
+    "unit": "document",
+    "violation_condition": "A document uses level 5 or deeper headings without the need for a very complex hierarchy.",
+    "when": [
+     "Very complex documents may use deeper levels, although the page still recommends avoiding them."
+    ],
+    "why": "G-2, G-3 and E-4: keep the depth recommendation and complex-document permission together, exposing the boundary ambiguity."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5a1b466fb777",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "26a918f7b79b",
+      "quote": "Separate each heading from the next one by some text, even if it’s only a sentence."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Space out headings",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Two successive headings have no explanatory text between them.",
+    "when": [
+     "Even a single sentence between headings is sufficient."
+    ],
+    "why": "G-4: the body resolves ‘space out’ as intervening text, not visual spacing."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cfb4340b0e6a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "47cde1ebb305",
+      "quote": "Give each heading level in a section at least one other heading at the same level."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The complete list is one example under ‘Like this’.",
+      "parts": [
+       {
+        "block_id": "787ba86819dc",
+        "quote": "H1: Apply for a drivers licence"
+       },
+       {
+        "block_id": "80013501f3f4",
+        "quote": "H2: Pass the theory test"
+       },
+       {
+        "block_id": "8d584b0223ed",
+        "quote": "H3: Learn the road rules"
+       },
+       {
+        "block_id": "fcbfff4d72b6",
+        "quote": "H3: Book a theory test"
+       },
+       {
+        "block_id": "d3662a55c06d",
+        "quote": "H2: Pass the driving test"
+       },
+       {
+        "block_id": "2eca10f2cc17",
+        "quote": "H3: Practise for the test"
+       },
+       {
+        "block_id": "286e6650eca4",
+        "quote": "H3: Book the driving test"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The complete list is one example under ‘Not this’; it also contains other hierarchy problems.",
+      "parts": [
+       {
+        "block_id": "4cd4ee070c96",
+        "quote": "H1: Pass the driving test"
+       },
+       {
+        "block_id": "986e00a6bdf7",
+        "quote": "H3: Learn the road rules"
+       },
+       {
+        "block_id": "ac50ca8df7c8",
+        "quote": "H4: Pass the theory test"
+       },
+       {
+        "block_id": "7f49c313f260",
+        "quote": "H5: Practise for the test"
+       },
+       {
+        "block_id": "50dbbc8c0429",
+        "quote": "H2: Book theory test"
+       },
+       {
+        "block_id": "eb62113c1a57",
+        "quote": "H2: Pass the driving test"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Create at least 2 headings for each level",
+    "specification": "Count sibling headings within their parent section. Exempt the single level 1 webpage title, consistent with the explicit one-level-1 rule and the compliant example.",
+    "unit": "section",
+    "violation_condition": "A section contains a subordinate heading level with only one heading at that level.",
+    "when": [
+     "Does not require a second level 1 title on a webpage."
+    ],
+    "why": "G-2 and G-4: one sibling-count check, with the single webpage title exception made explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "95ae7b33f098",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "31a85aa76f77",
+      "quote": "Use numbered headings only when they relate to a series of steps."
+     },
+     {
+      "block_id": "29a9e9a1724b",
+      "quote": "In print, you can use numbered headings to help people cross-reference information:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Use numbered headings only for steps",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Numbered headings organise material that is not a series of steps, except where numbering supports cross-references in print.",
+    "when": [
+     "Numbering is appropriate for headings that relate to a series of steps.",
+     "In print, numbered headings may also support cross-references."
+    ],
+    "why": "G-2, G-3 and G-4: the print permission relaxes the steps-only rule rather than creating a separate rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "776be5ef0679",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1dafd4b955e7",
+      "quote": "Don’t use numbered headings in the preliminary pages or endmatter in a report."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "If you use numbered headings, use them only in the body.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A printed document has numbered headings outside its body, including preliminary pages or endmatter.",
+    "when": [
+     "Applies to numbered headings in print."
+    ],
+    "why": "G-2 and G-4: preliminary pages and endmatter are cases of the same outside-the-body prohibition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1cee7c6d4497",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t number more than the first 3 heading levels.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A level 4 or deeper heading in a printed document is numbered.",
+    "when": [
+     "Applies to numbered headings in print."
+    ],
+    "why": "G-1: numbering depth is distinct from whether numbering is appropriate and where it appears."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ca5101a1e740",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "198f34015e86",
+      "quote": "They should have the same:"
+     },
+     {
+      "block_id": "fbac0982fee2",
+      "quote": "grammatical form (called ‘parallel structure’)."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Be consistent: use a parallel structure",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Headings at the same level use inconsistent grammatical forms, such as mixing noun phrases and instructions.",
+    "when": [
+     "Compare headings at the same level."
+    ],
+    "why": "G-1: grammatical parallelism is a distinct check from consistency of the headings’ overall message."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4712dfb0fdaf",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e0bac82b1797",
+      "quote": "All headings in a level should be consistent."
+     },
+     {
+      "block_id": "198f34015e86",
+      "quote": "They should have the same:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "overall message (for example, they are all steps in a process)",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Headings at the same level serve inconsistent kinds of message, rather than a consistent organising purpose.",
+    "when": [
+     "Compare headings at the same level; all being steps in a process is one example of consistency."
+    ],
+    "why": "G-1: the list’s normative lead-in requires message consistency independently of grammatical parallelism."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e1f8e5d58a1b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0e8a73679a2d",
+      "quote": "Format headings so the heading levels are visibly different."
+     },
+     {
+      "block_id": "c9a25e9bc20c",
+      "quote": "People should be able to tell the difference between heading levels at a glance."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use unique formatting for each level of heading",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Different heading levels have formatting that does not make their levels visibly distinguishable.",
+    "when": [],
+    "why": "G-4: consolidate the heading and its two statements of visible differentiation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "32c3197d1f15",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "don’t rely on colour as the only way to differentiate heading levels",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Colour is the sole formatting distinction between heading levels.",
+    "when": [
+     "Colour may supplement other distinctions between heading levels."
+    ],
+    "why": "G-1: colour-only differentiation can violate this rule even when levels look different to some readers."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4e0bd41121c6",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "364e3f020569",
+      "quote": "Don’t add an underline"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t underline headings or any other text.",
+    "specification": "Interpret this as a prohibition on added underline formatting, not on the conventional underline identifying a genuine hyperlink.",
+    "unit": "phrase",
+    "violation_condition": "A heading or other text has added underline formatting.",
+    "when": [],
+    "why": "G-4: use the body because it explicitly extends the prohibition beyond headings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "98bd808945f2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "97e91a1f291d",
+      "quote": "Apply HTML elements, tags and styles to headings"
+     },
+     {
+      "block_id": "30dd3b2a7c2c",
+      "quote": "Use the correct HTML element for the heading level."
+     },
+     {
+      "block_id": "dab30187df5f",
+      "quote": "Apply correct inbuilt heading styles so they can be automatically added to navigation and contents pages."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The lead-in and list form one example of heading-level elements.",
+      "parts": [
+       {
+        "block_id": "713eba02864b",
+        "quote": "A page about paying your tax might use these headings:"
+       },
+       {
+        "block_id": "53b7e2f62f3e",
+        "quote": "H1 = ‘Lodging your tax return’ (the page title)"
+       },
+       {
+        "block_id": "0e35813b2e3a",
+        "quote": "H2 = ‘Individual tax return’ (a heading for a main section)"
+       },
+       {
+        "block_id": "39eb1a616cbc",
+        "quote": "H3 = ‘Lodging online’ (a subheading)"
+       },
+       {
+        "block_id": "9cb99ca36d59",
+        "quote": "H4 = ‘Creating an account’ (a sub-subheading)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use styles, tags and HTML elements to identify headings in digital content.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A digital heading lacks semantic heading markup or a built-in heading style, or its element or style identifies the wrong heading level.",
+    "when": [
+     "Applies to digital content.",
+     "Use the HTML element or built-in heading style appropriate to the heading level."
+    ],
+    "why": "G-2 and G-4: HTML elements and built-in styles are format-specific ways to identify headings and their levels."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1bf99f902996",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If your organisation uses templates, use the template styles.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A document produced under an organisational template uses heading styles other than the template’s styles.",
+    "when": [
+     "Applies when the organisation uses templates."
+    ],
+    "why": "G-2: the organisational-template condition limits a checkable property of the document’s heading styles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d6481f4ab654",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "The title of a document uses the ‘Title’ style.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A printed document’s title uses a style other than ‘Title’ when no organisational heading guidelines apply.",
+    "when": [
+     "Applies to printed documents.",
+     "Use this default when no organisational heading guidelines apply."
+    ],
+    "why": "G-1 and G-2: the title-style convention is distinct from the main-section heading convention and shares its default-style context."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b8e8d28e54cb",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "6a716d209614",
+      "quote": "This means you should use a capital letter only for:"
+     },
+     {
+      "block_id": "979dc3d99ca2",
+      "quote": "the first letter of the first word"
+     },
+     {
+      "block_id": "51bd10475a13",
+      "quote": "the first letter of any proper nouns"
+     },
+     {
+      "block_id": "39270d34ef3c",
+      "quote": "letters in acronyms and initialisms."
+     },
+     {
+      "block_id": "2c19956ac562",
+      "quote": "Don’t write headings in all capital letters as users could misread words."
+     },
+     {
+      "block_id": "55cbedc8d3d1",
+      "quote": "If you work for an organisation that uses all capitals for headings, make sure any abbreviations are easy to understand."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use sentence case for headings to help people read the text more easily.",
+    "specification": "Treat organisation-required all-capital headings as an exception acknowledged by the following paragraph. Otherwise apply sentence case.",
+    "unit": "phrase",
+    "violation_condition": "A heading capitalises ordinary words beyond the first word, including title case or all capitals, without a proper-name, acronym, initialism or acknowledged organisational exception.",
+    "when": [
+     "Capitalise the first letter of the first word.",
+     "Retain capitals required by proper nouns, acronyms and initialisms.",
+     "The page acknowledges organisations that use all capitals for headings."
+    ],
+    "why": "G-2 and G-4: sentence case, capitalisation exceptions and the all-capital warning belong to one capitalisation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "13db58d0a315",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c17350527039",
+      "quote": "Even if the heading is a sentence, it doesn’t need a full stop at the end."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a full stop to end headings",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A heading ends with a sentence-ending full stop.",
+    "when": [
+     "Applies even when the heading is a complete sentence."
+    ],
+    "why": "G-2 and G-4: sentence headings are explicitly included in the same terminal-punctuation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8681e3914ea2",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "31de245932c7",
+      "quote": "Don’t use a shortened form in a heading unless it is better known than the full term (for example, ‘DNA’ and ‘CSIRO’)."
+     },
+     {
+      "block_id": "55cbedc8d3d1",
+      "quote": "If you work for an organisation that uses all capitals for headings, make sure any abbreviations are easy to understand."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using shortened forms in headings",
+    "specification": "Assess familiarity and clarity for the intended audience. The page explicitly permits better-known forms such as DNA and CSIRO and separately requires understandable abbreviations in organisational all-capital headings.",
+    "unit": "phrase",
+    "violation_condition": "A heading contains a shortened form that is not better known than its full term, or an abbreviation whose meaning is unclear in an organisation-required all-capital heading.",
+    "when": [
+     "A shortened form is allowed when it is better known than the full term.",
+     "Abbreviations in organisation-required all-capital headings must remain easy to understand."
+    ],
+    "why": "G-2 and G-4: keep the familiarity exception and all-capital abbreviation condition with the shortened-form check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "19c95ef49176",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write clear page titles.",
+    "start": 0,
+    "suffix": " This is the first topic a scree"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret clarity as identifying the page’s topic or purpose, rather than imposing an unstated title-length limit.",
+    "unit": "phrase",
+    "violation_condition": "A page title does not clearly identify the page’s topic or purpose."
+   },
+   "when": [],
+   "why": "G-1: title clarity is a distinct textual requirement in the accessibility fundamentals."
+  },
+  {
+   "anchor": {
+    "block_id": "19c95ef49176",
+    "end": 132,
+    "prefix": "Write clear page titles. ",
+    "quote": "This is the first topic a screen reader user will hear and should align with the first heading on the page.",
+    "start": 25,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "‘This’ refers to the page title. Interpret ‘align’ as agreement in topic or purpose, not a requirement for identical wording.",
+    "unit": "document",
+    "violation_condition": "The page title and the first heading identify different topics or purposes."
+   },
+   "when": [],
+   "why": "G-1: alignment with the first heading is independent of whether the title itself is clear."
+  },
+  {
+   "anchor": {
+    "block_id": "08c7461e3103",
+    "end": 63,
+    "prefix": "",
+    "quote": "Organise content with a clear structure using section headings.",
+    "start": 0,
+    "suffix": " Clearly describe the topics or "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a3097e1706bd",
+     "end": 102,
+     "prefix": "ontent and find what they need. ",
+     "quote": "Organise content using clear heading levels.",
+     "start": 58,
+     "suffix": " Begin each heading with keyword"
+    },
+    {
+     "block_id": "9459d6fe6db3",
+     "end": 104,
+     "prefix": "Keep each section concise and ",
+     "quote": "use headings to chunk information so it works well on screen for the user.",
+     "start": 30,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content containing distinct sections lacks section headings that expose its structure."
+   },
+   "when": [
+    "Applies where the content has distinct sections to organise."
+   ],
+   "why": "G-4: consolidate the instructions to expose content structure through section headings."
+  },
+  {
+   "anchor": {
+    "block_id": "64eeba0cea9b",
+    "end": 20,
+    "prefix": "",
+    "quote": "State the main point",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "31d00ef979f3",
+     "end": 86,
+     "prefix": "Headings organise information. ",
+     "quote": "Clear headings are specific to the topic they describe.",
+     "start": 31,
+     "suffix": ""
+    },
+    {
+     "block_id": "08c7461e3103",
+     "end": 133,
+     "prefix": "ructure using section headings. ",
+     "quote": "Clearly describe the topics or the following section in the headings.",
+     "start": 64,
+     "suffix": ""
+    },
+    {
+     "block_id": "48d20c049152",
+     "end": 66,
+     "prefix": "",
+     "quote": "Write headings that tell the user what is in the content below it.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "972f2ee8537b",
+     "end": 37,
+     "prefix": "",
+     "quote": "Headings should state the main point.",
+     "start": 0,
+     "suffix": " This helps users find and use c"
+    },
+    {
+     "block_id": "b3cee9ecc5d1",
+     "end": 47,
+     "prefix": "",
+     "quote": "Use words that accurately describe the content.",
+     "start": 0,
+     "suffix": " Don’t use empty words or phrase"
+    },
+    {
+     "block_id": "b3cee9ecc5d1",
+     "end": 128,
+     "prefix": "ccurately describe the content. ",
+     "quote": "Don’t use empty words or phrases (for example, ‘more’ or ‘related information’).",
+     "start": 48,
+     "suffix": ""
+    },
+    {
+     "block_id": "97353478af0e",
+     "end": 72,
+     "prefix": "",
+     "quote": "Only include information in the section that is relevant to the heading.",
+     "start": 0,
+     "suffix": " If the information isn’t releva"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Presented under ‘Like this’.",
+     "parts": [
+      {
+       "block_id": "28b25b0446e6",
+       "end": 18,
+       "prefix": "",
+       "quote": "Learn how to drive",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Presented under ‘Not this’.",
+     "parts": [
+      {
+       "block_id": "629603644025",
+       "end": 16,
+       "prefix": "",
+       "quote": "More information",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "52fadc479f60c051",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading is empty or generic, fails to identify the main point of its section, or does not accurately represent the information grouped under it."
+   },
+   "when": [],
+   "why": "G-2 and G-4: specificity, non-empty wording and heading–content relevance are cases of one semantic-fit check."
+  },
+  {
+   "anchor": {
+    "block_id": "75fe619f3a56",
+    "end": 26,
+    "prefix": "",
+    "quote": "Use 70 characters or fewer",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bc683567cac4",
+     "end": 16,
+     "prefix": "",
+     "quote": "Keep them brief.",
+     "start": 0,
+     "suffix": " They are signposts for people a"
+    },
+    {
+     "block_id": "8484ad7656da",
+     "end": 70,
+     "prefix": "",
+     "quote": "Write headings that are no more than 70 characters (including spaces).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "ca016f6da6fc2d3c",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A heading contains more than 70 characters, counting spaces."
+   },
+   "when": [
+    "Include spaces in the character count."
+   ],
+   "why": "G-4: the explicit character limit operationalises the instruction to keep headings brief."
+  },
+  {
+   "anchor": {
+    "block_id": "fc28faae4c9e",
+    "end": 27,
+    "prefix": "",
+    "quote": "Avoid questions as headings",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "bbc122dcf6bc637d",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A heading is phrased as a question."
+   },
+   "when": [],
+   "why": "G-1: question form is a distinct check; the following paragraphs explain its rationale."
+  },
+  {
+   "anchor": {
+    "block_id": "0fc9ee4f9495",
+    "end": 30,
+    "prefix": "",
+    "quote": "Use keywords to start headings",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a3097e1706bd",
+     "end": 161,
+     "prefix": "ent using clear heading levels. ",
+     "quote": "Begin each heading with keywords and keep it to the point.",
+     "start": 103,
+     "suffix": ""
+    },
+    {
+     "block_id": "55bbf864c948",
+     "end": 83,
+     "prefix": "",
+     "quote": "Start headings and subheadings with keywords that help people to make a connection.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d95e00009cef",
+     "end": 65,
+     "prefix": "",
+     "quote": "The keywords should relate to the main content below the heading.",
+     "start": 0,
+     "suffix": " Pay special attention to the fi"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Presented under ‘Write this’.",
+     "parts": [
+      {
+       "block_id": "0834dfb504fb",
+       "end": 30,
+       "prefix": "",
+       "quote": "Use keywords to start headings",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Presented under ‘Not this’.",
+     "parts": [
+      {
+       "block_id": "b52bb027ae16",
+       "end": 47,
+       "prefix": "",
+       "quote": "Write a heading starting with the main keywords",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "81ff5072df56cff3",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The meaningful keywords for the section occur late in its heading rather than at the start."
+   },
+   "when": [
+    "The opening keywords should relate to the main content below the heading.",
+    "The first 2 or 3 words are particularly important."
+   ],
+   "why": "G-2 and G-4: keyword relevance and placement qualify one frontloading check."
+  },
+  {
+   "anchor": {
+    "block_id": "9459d6fe6db3",
+    "end": 25,
+    "prefix": "",
+    "quote": "Keep each section concise",
+    "start": 0,
+    "suffix": " and use headings to chunk infor"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no length threshold for a concise section. The 70-character limit applies to headings, not sections.",
+    "unit": "section",
+    "violation_condition": "A section is unnecessarily long or diffuse rather than concise."
+   },
+   "when": [],
+   "why": "G-1 and E-4: section concision is distinct from heading length; do not invent a numerical section limit."
+  },
+  {
+   "anchor": {
+    "block_id": "b7d44360e996",
+    "end": 25,
+    "prefix": "",
+    "quote": "Don’t skip heading levels",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6c42d256728c",
+     "end": 49,
+     "prefix": "",
+     "quote": "Write headings in a complete organised hierarchy.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "6ddbf657e614266b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading introduces a deeper subsection without the intervening parent heading level, such as moving directly from level 1 to level 3."
+   },
+   "when": [
+    "Check transitions into deeper heading levels.",
+    "Returning from a deeper level to a higher-level heading does not require intervening headings."
+   ],
+   "why": "G-4: a complete hierarchy and not skipping levels express the same structural check."
+  },
+  {
+   "anchor": {
+    "block_id": "36836fc3f0af",
+    "end": 41,
+    "prefix": "",
+    "quote": "Use just one level 1 heading per webpage.",
+    "start": 0,
+    "suffix": " Make it unique to your site. Th"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "64ce33c40bb5",
+     "end": 23,
+     "prefix": "",
+     "quote": "Use one level 1 heading",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A webpage has a level 1 heading count other than one."
+   },
+   "when": [
+    "The one-heading restriction is for webpages, not the main sections of printed documents."
+   ],
+   "why": "G-2 and G-4: use the body’s explicit webpage scope and keep heading cardinality as one check."
+  },
+  {
+   "anchor": {
+    "block_id": "36836fc3f0af",
+    "end": 70,
+    "prefix": "ne level 1 heading per webpage. ",
+    "quote": "Make it unique to your site.",
+    "start": 42,
+    "suffix": " This helps users understand the"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A webpage’s level 1 heading duplicates the level 1 heading of another page on the same site."
+   },
+   "when": [
+    "Compare the level 1 heading with those on other pages of the same site."
+   ],
+   "why": "G-1: site-wide uniqueness is independent of the number of level 1 headings on a page."
+  },
+  {
+   "anchor": {
+    "block_id": "7aec0ef683d7",
+    "end": 101,
+    "prefix": "",
+    "quote": "In documents, use level 1 headings (or ‘Heading 1’ style) for the main sections, such as part titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d6481f4ab654",
+     "end": 86,
+     "prefix": "",
+     "quote": "If no guidelines apply, use a ‘Heading 1’ style for the main sections in the document.",
+     "start": 0,
+     "suffix": " The title of a document uses th"
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A main section in a printed document is assigned a heading level or style other than level 1 or ‘Heading 1’, without an applicable organisational convention."
+   },
+   "when": [
+    "Applies to printed documents.",
+    "The later print guidance makes this the default when no organisational heading guidelines apply."
+   ],
+   "why": "G-2 and G-4: consolidate the repeated print convention and its organisational-guideline condition."
+  },
+  {
+   "anchor": {
+    "block_id": "165449583d2c",
+    "end": 127,
+    "prefix": "",
+    "quote": "Every heading and subheading must relate to the heading above it so the grouping of information is logical and clear for users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "38fc70e1e7bf",
+     "end": 24,
+     "prefix": "",
+     "quote": "Make the headings relate",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A subordinate heading is not logically related to its parent heading."
+   },
+   "when": [
+    "‘The heading above it’ means the parent in the hierarchy, rather than merely the preceding sibling heading."
+   ],
+   "why": "G-4: the body states the relationship requirement and explicitly makes it mandatory."
+  },
+  {
+   "anchor": {
+    "block_id": "a3b1b5c1258e",
+    "end": 39,
+    "prefix": "",
+    "quote": "Avoid level 5 and deeper heading levels",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "a30a1ca0290f",
+     "end": 50,
+     "prefix": "",
+     "quote": "Try to use only 3 or 4 heading levels at the most.",
+     "start": 0,
+     "suffix": " A simpler structure is easier t"
+    },
+    {
+     "block_id": "03c167342f4e",
+     "end": 102,
+     "prefix": "",
+     "quote": "You can use deeper heading levels (level 4 and below) for very complex documents, but try to avoid it.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "0274342588c6a97f",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Use level 5 as the discouraged-depth boundary, following the heading and the stated maximum of 3 or 4 levels. The following reference to deeper levels beginning at level 4 is not fully consistent with that boundary.",
+    "unit": "document",
+    "violation_condition": "A document uses level 5 or deeper headings without the need for a very complex hierarchy."
+   },
+   "when": [
+    "Very complex documents may use deeper levels, although the page still recommends avoiding them."
+   ],
+   "why": "G-2, G-3 and E-4: keep the depth recommendation and complex-document permission together, exposing the boundary ambiguity."
+  },
+  {
+   "anchor": {
+    "block_id": "5a1b466fb777",
+    "end": 18,
+    "prefix": "",
+    "quote": "Space out headings",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "26a918f7b79b",
+     "end": 83,
+     "prefix": "",
+     "quote": "Separate each heading from the next one by some text, even if it’s only a sentence.",
+     "start": 0,
+     "suffix": " This helps create a clear disti"
+    }
+   ],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "0918f9e3771747ae",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Two successive headings have no explanatory text between them."
+   },
+   "when": [
+    "Even a single sentence between headings is sufficient."
+   ],
+   "why": "G-4: the body resolves ‘space out’ as intervening text, not visual spacing."
+  },
+  {
+   "anchor": {
+    "block_id": "cfb4340b0e6a",
+    "end": 41,
+    "prefix": "",
+    "quote": "Create at least 2 headings for each level",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "47cde1ebb305",
+     "end": 82,
+     "prefix": "",
+     "quote": "Give each heading level in a section at least one other heading at the same level.",
+     "start": 0,
+     "suffix": " This avoids the appearance of s"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The complete list is one example under ‘Like this’.",
+     "parts": [
+      {
+       "block_id": "787ba86819dc",
+       "end": 31,
+       "prefix": "",
+       "quote": "H1: Apply for a drivers licence",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "80013501f3f4",
+       "end": 24,
+       "prefix": "",
+       "quote": "H2: Pass the theory test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8d584b0223ed",
+       "end": 24,
+       "prefix": "",
+       "quote": "H3: Learn the road rules",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "fcbfff4d72b6",
+       "end": 22,
+       "prefix": "",
+       "quote": "H3: Book a theory test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d3662a55c06d",
+       "end": 25,
+       "prefix": "",
+       "quote": "H2: Pass the driving test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "2eca10f2cc17",
+       "end": 25,
+       "prefix": "",
+       "quote": "H3: Practise for the test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "286e6650eca4",
+       "end": 25,
+       "prefix": "",
+       "quote": "H3: Book the driving test",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The complete list is one example under ‘Not this’; it also contains other hierarchy problems.",
+     "parts": [
+      {
+       "block_id": "4cd4ee070c96",
+       "end": 25,
+       "prefix": "",
+       "quote": "H1: Pass the driving test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "986e00a6bdf7",
+       "end": 24,
+       "prefix": "",
+       "quote": "H3: Learn the road rules",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "ac50ca8df7c8",
+       "end": 24,
+       "prefix": "",
+       "quote": "H4: Pass the theory test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7f49c313f260",
+       "end": 25,
+       "prefix": "",
+       "quote": "H5: Practise for the test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "50dbbc8c0429",
+       "end": 20,
+       "prefix": "",
+       "quote": "H2: Book theory test",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "eb62113c1a57",
+       "end": 25,
+       "prefix": "",
+       "quote": "H2: Pass the driving test",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "46025d9d663361ba",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Count sibling headings within their parent section. Exempt the single level 1 webpage title, consistent with the explicit one-level-1 rule and the compliant example.",
+    "unit": "section",
+    "violation_condition": "A section contains a subordinate heading level with only one heading at that level."
+   },
+   "when": [
+    "Does not require a second level 1 title on a webpage."
+   ],
+   "why": "G-2 and G-4: one sibling-count check, with the single webpage title exception made explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "95ae7b33f098",
+    "end": 36,
+    "prefix": "",
+    "quote": "Use numbered headings only for steps",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "31a85aa76f77",
+     "end": 65,
+     "prefix": "",
+     "quote": "Use numbered headings only when they relate to a series of steps.",
+     "start": 0,
+     "suffix": " Numbered headings can help user"
+    },
+    {
+     "block_id": "29a9e9a1724b",
+     "end": 83,
+     "prefix": "",
+     "quote": "In print, you can use numbered headings to help people cross-reference information:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "8ef8386ac9ceb723",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Numbered headings organise material that is not a series of steps, except where numbering supports cross-references in print."
+   },
+   "when": [
+    "Numbering is appropriate for headings that relate to a series of steps.",
+    "In print, numbered headings may also support cross-references."
+   ],
+   "why": "G-2, G-3 and G-4: the print permission relaxes the steps-only rule rather than creating a separate rule."
+  },
+  {
+   "anchor": {
+    "block_id": "776be5ef0679",
+    "end": 56,
+    "prefix": "",
+    "quote": "If you use numbered headings, use them only in the body.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1dafd4b955e7",
+     "end": 78,
+     "prefix": "",
+     "quote": "Don’t use numbered headings in the preliminary pages or endmatter in a report.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A printed document has numbered headings outside its body, including preliminary pages or endmatter."
+   },
+   "when": [
+    "Applies to numbered headings in print."
+   ],
+   "why": "G-2 and G-4: preliminary pages and endmatter are cases of the same outside-the-body prohibition."
+  },
+  {
+   "anchor": {
+    "block_id": "1cee7c6d4497",
+    "end": 50,
+    "prefix": "",
+    "quote": "Don’t number more than the first 3 heading levels.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A level 4 or deeper heading in a printed document is numbered."
+   },
+   "when": [
+    "Applies to numbered headings in print."
+   ],
+   "why": "G-1: numbering depth is distinct from whether numbering is appropriate and where it appears."
+  },
+  {
+   "anchor": {
+    "block_id": "ca5101a1e740",
+    "end": 39,
+    "prefix": "",
+    "quote": "Be consistent: use a parallel structure",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "198f34015e86",
+     "end": 26,
+     "prefix": "",
+     "quote": "They should have the same:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fbac0982fee2",
+     "end": 47,
+     "prefix": "",
+     "quote": "grammatical form (called ‘parallel structure’).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 19,
+   "seed_uid": "e7fd8ee297f7d8e7",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Headings at the same level use inconsistent grammatical forms, such as mixing noun phrases and instructions."
+   },
+   "when": [
+    "Compare headings at the same level."
+   ],
+   "why": "G-1: grammatical parallelism is a distinct check from consistency of the headings’ overall message."
+  },
+  {
+   "anchor": {
+    "block_id": "4712dfb0fdaf",
+    "end": 62,
+    "prefix": "",
+    "quote": "overall message (for example, they are all steps in a process)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e0bac82b1797",
+     "end": 45,
+     "prefix": "",
+     "quote": "All headings in a level should be consistent.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "198f34015e86",
+     "end": 26,
+     "prefix": "",
+     "quote": "They should have the same:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Headings at the same level serve inconsistent kinds of message, rather than a consistent organising purpose."
+   },
+   "when": [
+    "Compare headings at the same level; all being steps in a process is one example of consistency."
+   ],
+   "why": "G-1: the list’s normative lead-in requires message consistency independently of grammatical parallelism."
+  },
+  {
+   "anchor": {
+    "block_id": "e1f8e5d58a1b",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use unique formatting for each level of heading",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0e8a73679a2d",
+     "end": 60,
+     "prefix": "",
+     "quote": "Format headings so the heading levels are visibly different.",
+     "start": 0,
+     "suffix": " This helps users scan the text."
+    },
+    {
+     "block_id": "c9a25e9bc20c",
+     "end": 80,
+     "prefix": "",
+     "quote": "People should be able to tell the difference between heading levels at a glance.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "f72e24b701dd5313",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Different heading levels have formatting that does not make their levels visibly distinguishable."
+   },
+   "when": [],
+   "why": "G-4: consolidate the heading and its two statements of visible differentiation."
+  },
+  {
+   "anchor": {
+    "block_id": "32c3197d1f15",
+    "end": 114,
+    "prefix": " people scan the headings – but ",
+    "quote": "don’t rely on colour as the only way to differentiate heading levels",
+    "start": 46,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 22,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Colour is the sole formatting distinction between heading levels."
+   },
+   "when": [
+    "Colour may supplement other distinctions between heading levels."
+   ],
+   "why": "G-1: colour-only differentiation can violate this rule even when levels look different to some readers."
+  },
+  {
+   "anchor": {
+    "block_id": "4e0bd41121c6",
+    "end": 43,
+    "prefix": "",
+    "quote": "Don’t underline headings or any other text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "364e3f020569",
+     "end": 22,
+     "prefix": "",
+     "quote": "Don’t add an underline",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 23,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Interpret this as a prohibition on added underline formatting, not on the conventional underline identifying a genuine hyperlink.",
+    "unit": "phrase",
+    "violation_condition": "A heading or other text has added underline formatting."
+   },
+   "when": [],
+   "why": "G-4: use the body because it explicitly extends the prohibition beyond headings."
+  },
+  {
+   "anchor": {
+    "block_id": "98bd808945f2",
+    "end": 75,
+    "prefix": "",
+    "quote": "Use styles, tags and HTML elements to identify headings in digital content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "97e91a1f291d",
+     "end": 48,
+     "prefix": "",
+     "quote": "Apply HTML elements, tags and styles to headings",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "30dd3b2a7c2c",
+     "end": 51,
+     "prefix": "",
+     "quote": "Use the correct HTML element for the heading level.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dab30187df5f",
+     "end": 105,
+     "prefix": "",
+     "quote": "Apply correct inbuilt heading styles so they can be automatically added to navigation and contents pages.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The lead-in and list form one example of heading-level elements.",
+     "parts": [
+      {
+       "block_id": "713eba02864b",
+       "end": 54,
+       "prefix": "",
+       "quote": "A page about paying your tax might use these headings:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "53b7e2f62f3e",
+       "end": 47,
+       "prefix": "",
+       "quote": "H1 = ‘Lodging your tax return’ (the page title)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "0e35813b2e3a",
+       "end": 59,
+       "prefix": "",
+       "quote": "H2 = ‘Individual tax return’ (a heading for a main section)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "39eb1a616cbc",
+       "end": 36,
+       "prefix": "",
+       "quote": "H3 = ‘Lodging online’ (a subheading)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "9cb99ca36d59",
+       "end": 45,
+       "prefix": "",
+       "quote": "H4 = ‘Creating an account’ (a sub-subheading)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 24,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A digital heading lacks semantic heading markup or a built-in heading style, or its element or style identifies the wrong heading level."
+   },
+   "when": [
+    "Applies to digital content.",
+    "Use the HTML element or built-in heading style appropriate to the heading level."
+   ],
+   "why": "G-2 and G-4: HTML elements and built-in styles are format-specific ways to identify headings and their levels."
+  },
+  {
+   "anchor": {
+    "block_id": "1bf99f902996",
+    "end": 61,
+    "prefix": "",
+    "quote": "If your organisation uses templates, use the template styles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 25,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A document produced under an organisational template uses heading styles other than the template’s styles."
+   },
+   "when": [
+    "Applies when the organisation uses templates."
+   ],
+   "why": "G-2: the organisational-template condition limits a checkable property of the document’s heading styles."
+  },
+  {
+   "anchor": {
+    "block_id": "d6481f4ab654",
+    "end": 134,
+    "prefix": " main sections in the document. ",
+    "quote": "The title of a document uses the ‘Title’ style.",
+    "start": 87,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 26,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A printed document’s title uses a style other than ‘Title’ when no organisational heading guidelines apply."
+   },
+   "when": [
+    "Applies to printed documents.",
+    "Use this default when no organisational heading guidelines apply."
+   ],
+   "why": "G-1 and G-2: the title-style convention is distinct from the main-section heading convention and shares its default-style context."
+  },
+  {
+   "anchor": {
+    "block_id": "b8e8d28e54cb",
+    "end": 72,
+    "prefix": "",
+    "quote": "Use sentence case for headings to help people read the text more easily.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "6a716d209614",
+     "end": 52,
+     "prefix": "",
+     "quote": "This means you should use a capital letter only for:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "979dc3d99ca2",
+     "end": 34,
+     "prefix": "",
+     "quote": "the first letter of the first word",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "51bd10475a13",
+     "end": 36,
+     "prefix": "",
+     "quote": "the first letter of any proper nouns",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "39270d34ef3c",
+     "end": 36,
+     "prefix": "",
+     "quote": "letters in acronyms and initialisms.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2c19956ac562",
+     "end": 73,
+     "prefix": "",
+     "quote": "Don’t write headings in all capital letters as users could misread words.",
+     "start": 0,
+     "suffix": " For example, ‘ACT’ could be ‘ac"
+    },
+    {
+     "block_id": "55cbedc8d3d1",
+     "end": 120,
+     "prefix": "",
+     "quote": "If you work for an organisation that uses all capitals for headings, make sure any abbreviations are easy to understand.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 27,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Treat organisation-required all-capital headings as an exception acknowledged by the following paragraph. Otherwise apply sentence case.",
+    "unit": "phrase",
+    "violation_condition": "A heading capitalises ordinary words beyond the first word, including title case or all capitals, without a proper-name, acronym, initialism or acknowledged organisational exception."
+   },
+   "when": [
+    "Capitalise the first letter of the first word.",
+    "Retain capitals required by proper nouns, acronyms and initialisms.",
+    "The page acknowledges organisations that use all capitals for headings."
+   ],
+   "why": "G-2 and G-4: sentence case, capitalisation exceptions and the all-capital warning belong to one capitalisation check."
+  },
+  {
+   "anchor": {
+    "block_id": "13db58d0a315",
+    "end": 37,
+    "prefix": "",
+    "quote": "Don’t use a full stop to end headings",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c17350527039",
+     "end": 74,
+     "prefix": "",
+     "quote": "Even if the heading is a sentence, it doesn’t need a full stop at the end.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 28,
+   "seed_uid": "b7a8486ee3dc135b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A heading ends with a sentence-ending full stop."
+   },
+   "when": [
+    "Applies even when the heading is a complete sentence."
+   ],
+   "why": "G-2 and G-4: sentence headings are explicitly included in the same terminal-punctuation check."
+  },
+  {
+   "anchor": {
+    "block_id": "8681e3914ea2",
+    "end": 39,
+    "prefix": "",
+    "quote": "Avoid using shortened forms in headings",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "31de245932c7",
+     "end": 118,
+     "prefix": "",
+     "quote": "Don’t use a shortened form in a heading unless it is better known than the full term (for example, ‘DNA’ and ‘CSIRO’).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "55cbedc8d3d1",
+     "end": 120,
+     "prefix": "",
+     "quote": "If you work for an organisation that uses all capitals for headings, make sure any abbreviations are easy to understand.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 29,
+   "seed_uid": "1584196deb3598bc",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Assess familiarity and clarity for the intended audience. The page explicitly permits better-known forms such as DNA and CSIRO and separately requires understandable abbreviations in organisational all-capital headings.",
+    "unit": "phrase",
+    "violation_condition": "A heading contains a shortened form that is not better known than its full term, or an abbreviation whose meaning is unclear in an organisation-required all-capital heading."
+   },
+   "when": [
+    "A shortened form is allowed when it is better known than the full term.",
+    "Abbreviations in organisation-required all-capital headings must remain easy to understand."
+   ],
+   "why": "G-2 and G-4: keep the familiarity exception and all-capital abbreviation condition with the shortened-form check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 7104,
+  "output_tokens": 20154,
+  "reasoning_tokens": 8795
+ }
+}

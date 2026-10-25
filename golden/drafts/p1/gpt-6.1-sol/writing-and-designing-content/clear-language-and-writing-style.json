@@ -1,0 +1,363 @@
+{
+ "effort": "high",
+ "input_sha256": "9c6d9d517fbbd020c43568b8a8a37e7b23e3f91787f9ed64e376d9bd44949022",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "cdfd2ae02e2e",
+    "end": 94,
+    "prefix": "uage can express complex ideas. ",
+    "quote": "Engage people with words they can understand quickly",
+    "start": 42,
+    "suffix": ": use the list on this page. Cla"
+   },
+   "note": "G-4: absorbed into the plain-language rule as its word-choice elaboration.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cdfd2ae02e2e",
+    "end": 122,
+    "prefix": "ds they can understand quickly: ",
+    "quote": "use the list on this page.",
+    "start": 96,
+    "suffix": " Clarify expressions people migh"
+   },
+   "note": "G-5: directs the writer to consult a resource; the finished text cannot establish whether the writer used it.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/clear-language-and-writing-style.md",
+ "page_sha256": "aa54d9d7edb1bc7427e1b0ab2bdfd023f439b2794121cc0fafd49a3b6673e054",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "cdfd2ae02e2e",
+    "note": "G-4: absorbed into the plain-language rule as its word-choice elaboration.",
+    "quote": "Engage people with words they can understand quickly",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cdfd2ae02e2e",
+    "note": "G-5: directs the writer to consult a resource; the finished text cannot establish whether the writer used it.",
+    "quote": "use the list on this page.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "55d078d8d1eb",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "cdfd2ae02e2e",
+      "quote": "Engage people with words they can understand quickly"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use plain language.",
+    "specification": "Interpret plain language here as understandable word choice, following the page's elaboration. Assess sentence length, sentence simplicity and voice under their separate rules.",
+    "unit": "sentence",
+    "violation_condition": "Word choice is unnecessarily difficult for the intended readers to understand quickly.",
+    "when": [
+     "Assess familiarity and difficulty against the intended readers."
+    ],
+    "why": "G-4: the instruction about understandable words elaborates the plain-language instruction rather than creating a second check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f11a9e0da6e",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "55d078d8d1eb",
+      "quote": "Write short and simple sentences in active voice."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep sentences short to help people scan content.",
+    "specification": "The page supplies no word-count threshold for a short sentence. A numerical cutoff would require a separate interpretation.",
+    "unit": "sentence",
+    "violation_condition": "A sentence is excessively long, making the content difficult to scan.",
+    "when": [],
+    "why": "G-4 consolidates the repeated short-sentence instruction; the simplicity and voice requirements are distinct checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "55d078d8d1eb",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write short and simple sentences in active voice.",
+    "specification": "The page does not define sentence simplicity or establish a complexity threshold.",
+    "unit": "sentence",
+    "violation_condition": "A sentence has unnecessarily complex structure rather than simple structure.",
+    "when": [],
+    "why": "The one-finding test separates structural simplicity from sentence length and grammatical voice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "55d078d8d1eb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write short and simple sentences in active voice.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses passive rather than active voice.",
+    "when": [],
+    "why": "The one-finding test separates grammatical voice from sentence length and simplicity."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cdfd2ae02e2e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Clarify expressions people might be unfamiliar with.",
+    "specification": "Assess familiarity against the intended readers and check whether the document supplies an explanation or otherwise makes the expression's meaning clear.",
+    "unit": "document",
+    "violation_condition": "An expression likely to be unfamiliar to the intended readers is used without clarification.",
+    "when": [
+     "The expression may be unfamiliar to the intended readers."
+    ],
+    "why": "This requires clarification of unfamiliar expressions, a distinct finding from unnecessarily difficult word choice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1fef50a25cba",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Adjust your style to meet user needs.",
+    "specification": "Assessment requires information about the intended users and their needs. This page supplies no specific criteria for a suitable style.",
+    "unit": "document",
+    "violation_condition": "The writing style is unsuitable for the intended users' needs.",
+    "when": [
+     "The intended users and their needs are known."
+    ],
+    "why": "This concerns the resulting text's suitability for users, rather than a checking or research activity under G-5."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "Write short and simple sentences in active voice.",
+   "what": "rule",
+   "why": "the same span was returned twice"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "55d078d8d1eb",
+    "end": 19,
+    "prefix": "",
+    "quote": "Use plain language.",
+    "start": 0,
+    "suffix": " Write short and simple sentence"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "cdfd2ae02e2e",
+     "end": 94,
+     "prefix": "uage can express complex ideas. ",
+     "quote": "Engage people with words they can understand quickly",
+     "start": 42,
+     "suffix": ": use the list on this page. Cla"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret plain language here as understandable word choice, following the page's elaboration. Assess sentence length, sentence simplicity and voice under their separate rules.",
+    "unit": "sentence",
+    "violation_condition": "Word choice is unnecessarily difficult for the intended readers to understand quickly."
+   },
+   "when": [
+    "Assess familiarity and difficulty against the intended readers."
+   ],
+   "why": "G-4: the instruction about understandable words elaborates the plain-language instruction rather than creating a second check."
+  },
+  {
+   "anchor": {
+    "block_id": "1f11a9e0da6e",
+    "end": 102,
+    "prefix": "tive voice improve readability. ",
+    "quote": "Keep sentences short to help people scan content.",
+    "start": 53,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "55d078d8d1eb",
+     "end": 69,
+     "prefix": "Use plain language. ",
+     "quote": "Write short and simple sentences in active voice.",
+     "start": 20,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page supplies no word-count threshold for a short sentence. A numerical cutoff would require a separate interpretation.",
+    "unit": "sentence",
+    "violation_condition": "A sentence is excessively long, making the content difficult to scan."
+   },
+   "when": [],
+   "why": "G-4 consolidates the repeated short-sentence instruction; the simplicity and voice requirements are distinct checks."
+  },
+  {
+   "anchor": {
+    "block_id": "55d078d8d1eb",
+    "end": 69,
+    "prefix": "Use plain language. ",
+    "quote": "Write short and simple sentences in active voice.",
+    "start": 20,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define sentence simplicity or establish a complexity threshold.",
+    "unit": "sentence",
+    "violation_condition": "A sentence has unnecessarily complex structure rather than simple structure."
+   },
+   "when": [],
+   "why": "The one-finding test separates structural simplicity from sentence length and grammatical voice."
+  },
+  {
+   "anchor": {
+    "block_id": "cdfd2ae02e2e",
+    "end": 175,
+    "prefix": "kly: use the list on this page. ",
+    "quote": "Clarify expressions people might be unfamiliar with.",
+    "start": 123,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Assess familiarity against the intended readers and check whether the document supplies an explanation or otherwise makes the expression's meaning clear.",
+    "unit": "document",
+    "violation_condition": "An expression likely to be unfamiliar to the intended readers is used without clarification."
+   },
+   "when": [
+    "The expression may be unfamiliar to the intended readers."
+   ],
+   "why": "This requires clarification of unfamiliar expressions, a distinct finding from unnecessarily difficult word choice."
+  },
+  {
+   "anchor": {
+    "block_id": "1fef50a25cba",
+    "end": 82,
+    "prefix": " is a result of voice and tone. ",
+    "quote": "Adjust your style to meet user needs.",
+    "start": 45,
+    "suffix": " It influences whether and how p"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assessment requires information about the intended users and their needs. This page supplies no specific criteria for a suitable style.",
+    "unit": "document",
+    "violation_condition": "The writing style is unsuitable for the intended users' needs."
+   },
+   "when": [
+    "The intended users and their needs are known."
+   ],
+   "why": "This concerns the resulting text's suitability for users, rather than a checking or research activity under G-5."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3278,
+  "output_tokens": 3284,
+  "reasoning_tokens": 2003
+ }
+}

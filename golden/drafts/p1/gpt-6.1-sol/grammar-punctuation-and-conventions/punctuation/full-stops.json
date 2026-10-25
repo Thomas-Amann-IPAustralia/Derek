@@ -1,0 +1,1495 @@
+{
+ "effort": "high",
+ "input_sha256": "2089e989b2ac6d4d09ade6a1c4ff439875b0236751a9016cee5b398aeb1fb85b",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "68a443b0b678",
+    "end": 79,
+    "prefix": "",
+    "quote": "Full stops mark the end of a sentence that is not a question or an exclamation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Supplies the question and exclamation exclusions for the sentence-ending rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c56e914e2792",
+    "end": 115,
+    "prefix": "",
+    "quote": "Following the same rule, use full stops at the end of the last item in a list that’s made up of sentence fragments.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: absorbed as a list case of the sentence-ending rule, not a second finding for the same missing final stop.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9a37337b7c76",
+    "end": 110,
+    "prefix": "",
+    "quote": "Use the final full stop because this type of list is a sentence presented as points to make it easier to read.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains and repeats the fragment-list case already included in the sentence-ending rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9df78a8648a9",
+    "end": 52,
+    "prefix": "",
+    "quote": "Use full stops with some numbers and shortened forms",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups separate checks for decimal notation, document numbering and shortened forms.",
+   "reason": "section",
+   "seed_uid": "effcdfc8ae466491"
+  },
+  {
+   "anchor": {
+    "block_id": "3484ccdc987c",
+    "end": 20,
+    "prefix": "",
+    "quote": "Also use full stops:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Shared lead-in to the three specific uses in the following list.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0779c1254b2c",
+    "end": 48,
+    "prefix": "",
+    "quote": "Don’t end web or email addresses with full stops",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body is selected because it limits the prohibition to sentence fragments and addresses on a line by themselves.",
+   "reason": "restatement",
+   "seed_uid": "8580e4f0e539c795"
+  },
+  {
+   "anchor": {
+    "block_id": "82091356a779",
+    "end": 106,
+    "prefix": "",
+    "quote": "Use full stops at the end of sentences with link text, but don’t include the full stop in the link itself.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Its two clauses are covered by the general sentence-ending rule and the hyperlink-boundary rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "aa43cad26bf7",
+    "end": 60,
+    "prefix": "",
+    "quote": "Write headings, measurements and captions without full stops",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups display-text punctuation and measurement punctuation, whose sentence-final exception requires a separate check.",
+   "reason": "section",
+   "seed_uid": "dc33d945422ad344"
+  },
+  {
+   "anchor": {
+    "block_id": "7b18785ce76b",
+    "end": 27,
+    "prefix": "",
+    "quote": "Full stops do not go after:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Shared lead-in for the measurement case and the captions-and-titles case; not an additional standalone check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "759a341d96fc",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use correct punctuation in government social media.",
+    "start": 0,
+    "suffix": " You don’t need a full stop if y"
+   },
+   "note": "G-5: general advice to follow punctuation conventions, without a distinct test beyond the specific rules.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "759a341d96fc",
+    "end": 100,
+    "prefix": "ion in government social media. ",
+    "quote": "You don’t need a full stop if your post ends in:",
+    "start": 52,
+    "suffix": ""
+   },
+   "note": "G-3: the following list supplies exceptions to the general sentence-ending requirement. It does not itself prohibit full stops in every listed case.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "92ad30cf0feb",
+    "end": 39,
+    "prefix": "",
+    "quote": "Punctuate text messages (SMS) correctly",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups general advice and the specific SMS terminal-punctuation requirements.",
+   "reason": "section",
+   "seed_uid": "798a8c9f4f5c69b5"
+  },
+  {
+   "anchor": {
+    "block_id": "a708bec5e9d3",
+    "end": 84,
+    "prefix": "",
+    "quote": "In government text messages, use correct punctuation and grammar to avoid ambiguity.",
+    "start": 0,
+    "suffix": " Correct writing shows people th"
+   },
+   "note": "G-5: general correctness advice rather than a distinct check stated on this page.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dabe1be5056d",
+    "end": 80,
+    "prefix": "",
+    "quote": "Include a full stop at the end of a text message if it finishes with a sentence.",
+    "start": 0,
+    "suffix": " Don’t include a full stop if th"
+   },
+   "note": "G-2 and G-4: the SMS case is included in the general sentence-ending rule rather than creating a duplicate finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/full-stops.md",
+ "page_sha256": "a3f81d09bbc219c3ae8709c25deb830cb0af488df5e1c28453e22d42fe9f8ab3",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "68a443b0b678",
+    "note": "Supplies the question and exclamation exclusions for the sentence-ending rule.",
+    "quote": "Full stops mark the end of a sentence that is not a question or an exclamation.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c56e914e2792",
+    "note": "G-2: absorbed as a list case of the sentence-ending rule, not a second finding for the same missing final stop.",
+    "quote": "Following the same rule, use full stops at the end of the last item in a list that’s made up of sentence fragments.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9a37337b7c76",
+    "note": "Explains and repeats the fragment-list case already included in the sentence-ending rule.",
+    "quote": "Use the final full stop because this type of list is a sentence presented as points to make it easier to read.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9df78a8648a9",
+    "note": "G-1: groups separate checks for decimal notation, document numbering and shortened forms.",
+    "quote": "Use full stops with some numbers and shortened forms",
+    "reason": "section"
+   },
+   {
+    "block_id": "3484ccdc987c",
+    "note": "Shared lead-in to the three specific uses in the following list.",
+    "quote": "Also use full stops:",
+    "reason": "section"
+   },
+   {
+    "block_id": "0779c1254b2c",
+    "note": "The body is selected because it limits the prohibition to sentence fragments and addresses on a line by themselves.",
+    "quote": "Don’t end web or email addresses with full stops",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "82091356a779",
+    "note": "Its two clauses are covered by the general sentence-ending rule and the hyperlink-boundary rule.",
+    "quote": "Use full stops at the end of sentences with link text, but don’t include the full stop in the link itself.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "aa43cad26bf7",
+    "note": "G-1: groups display-text punctuation and measurement punctuation, whose sentence-final exception requires a separate check.",
+    "quote": "Write headings, measurements and captions without full stops",
+    "reason": "section"
+   },
+   {
+    "block_id": "7b18785ce76b",
+    "note": "Shared lead-in for the measurement case and the captions-and-titles case; not an additional standalone check.",
+    "quote": "Full stops do not go after:",
+    "reason": "section"
+   },
+   {
+    "block_id": "759a341d96fc",
+    "note": "G-5: general advice to follow punctuation conventions, without a distinct test beyond the specific rules.",
+    "quote": "Use correct punctuation in government social media.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "759a341d96fc",
+    "note": "G-3: the following list supplies exceptions to the general sentence-ending requirement. It does not itself prohibit full stops in every listed case.",
+    "quote": "You don’t need a full stop if your post ends in:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "92ad30cf0feb",
+    "note": "Groups general advice and the specific SMS terminal-punctuation requirements.",
+    "quote": "Punctuate text messages (SMS) correctly",
+    "reason": "section"
+   },
+   {
+    "block_id": "a708bec5e9d3",
+    "note": "G-5: general correctness advice rather than a distinct check stated on this page.",
+    "quote": "In government text messages, use correct punctuation and grammar to avoid ambiguity.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "dabe1be5056d",
+    "note": "G-2 and G-4: the SMS case is included in the general sentence-ending rule rather than creating a duplicate finding.",
+    "quote": "Include a full stop at the end of a text message if it finishes with a sentence.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7e2a0c5e492e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "68a443b0b678",
+      "quote": "Full stops mark the end of a sentence that is not a question or an exclamation."
+     },
+     {
+      "block_id": "c56e914e2792",
+      "quote": "Following the same rule, use full stops at the end of the last item in a list that’s made up of sentence fragments."
+     },
+     {
+      "block_id": "9a37337b7c76",
+      "quote": "Use the final full stop because this type of list is a sentence presented as points to make it easier to read."
+     },
+     {
+      "block_id": "82091356a779",
+      "quote": "Use full stops at the end of sentences with link text"
+     },
+     {
+      "block_id": "759a341d96fc",
+      "quote": "You don’t need a full stop if your post ends in:"
+     },
+     {
+      "block_id": "a25b1c7530f2",
+      "quote": "a web address (URL)"
+     },
+     {
+      "block_id": "acd85bdfa6b4",
+      "quote": "a tag or handle"
+     },
+     {
+      "block_id": "6f320851f74d",
+      "quote": "a hashtag"
+     },
+     {
+      "block_id": "ff227ecaa250",
+      "quote": "an emoji"
+     },
+     {
+      "block_id": "495ea819a92b",
+      "quote": "a sentence fragment."
+     },
+     {
+      "block_id": "dabe1be5056d",
+      "quote": "Include a full stop at the end of a text message if it finishes with a sentence."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The list completes the sentence introduced by ‘It discussed:’.",
+      "parts": [
+       {
+        "block_id": "1e86e2ded14e",
+        "quote": "The committee met yesterday. It discussed:"
+       },
+       {
+        "block_id": "13fd6d808bce",
+        "quote": "office space"
+       },
+       {
+        "block_id": "e705cc037f9f",
+        "quote": "working hours"
+       },
+       {
+        "block_id": "8da726fa3a34",
+        "quote": "managers’ salaries."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The completed sentences have full stops; the final time fragment does not.",
+      "parts": [
+       {
+        "block_id": "7c990da24852",
+        "quote": "Warning: there is a high probability of hail in your area. Please take appropriate precautions and stay safe. Time sent: 4:30 pm AEST"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Complete a sentence with a full stop",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A completed sentence that is neither a question nor an exclamation lacks its final full stop, outside the stated exceptions.",
+    "when": [
+     "Applies to sentences that are not questions or exclamations.",
+     "A list of sentence fragments completing a sentence takes the final full stop after its last item.",
+     "The fragment-list requirement does not apply to stand-alone lists with a heading without a colon.",
+     "Sentences ending in link text still require a final full stop, outside the link.",
+     "In government social media, a full stop is not required when the post ends in a URL, a tag or handle, a hashtag, an emoji or a sentence fragment.",
+     "Government text messages take a final full stop when they finish with a sentence, but not when they finish with a fragment or sign off.",
+     "The page separately excludes full stops from headings, stand-alone lists, page headers or footers, captions and titles."
+    ],
+    "why": "G-2 and G-4: sentence-fragment lists, linked sentence endings and SMS sentences are cases or restatements of the sentence-ending check; G-3: social-media permissions limit it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "380fc3c0a867",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The inline example illustrates the required decimal separator.",
+      "parts": [
+       {
+        "block_id": "380fc3c0a867",
+        "quote": "$3.55"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "as the decimal point in numbers and currency",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A decimal number or currency amount uses a separator other than a full stop between its integer and fractional parts.",
+    "when": [
+     "Applies when a number or currency amount is written with a decimal fractional part."
+    ],
+    "why": "G-1: decimal notation is a distinct check under the heading grouping numbers and shortened forms."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "da59a528768f",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The inline example shows a full stop between numbering components.",
+      "parts": [
+       {
+        "block_id": "da59a528768f",
+        "quote": "Section 7.3"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "in numbering subsections and paragraphs in a document",
+    "specification": "Read this as requiring full stops between components of hierarchical numbering, as illustrated by ‘Section 7.3’, rather than a trailing full stop after every section or paragraph identifier.",
+    "unit": "phrase",
+    "violation_condition": "A multi-part subsection or paragraph number lacks full stops between its numbering components.",
+    "when": [
+     "Applies when subsections or paragraphs use multi-part hierarchical numbering."
+    ],
+    "why": "G-1: document numbering is separate from decimal notation and shortened forms; E-4: the interpretation of the numbering scope is explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ddc0e0df87d0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "in some Latin shortened forms and shortened forms used in referencing.",
+    "specification": "The page does not identify which shortened forms require full stops or their exact punctuation. A list of prescribed forms is needed before this check can be implemented.",
+    "unit": "phrase",
+    "violation_condition": "A Latin shortened form or referencing shortened form that requires full stops is written without them.",
+    "when": [
+     "Applies only to shortened forms conventionally written with full stops, not to all Latin shortened forms or all referencing shortened forms."
+    ],
+    "why": "G-1 and G-2: one required-punctuation check covers the specified subset of shortened forms without extending it to every form."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "176cce3660ba",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use full stops with contractions or most abbreviations.",
+    "specification": "The page does not enumerate the exceptions to ‘most abbreviations’. Checking requires a list distinguishing forms that take full stops from those that do not.",
+    "unit": "token",
+    "violation_condition": "A contraction or abbreviation contains a full stop even though its prescribed form does not take one.",
+    "when": [
+     "Applies to contractions and abbreviations that do not conventionally take full stops.",
+     "Some Latin shortened forms and shortened forms used in referencing are exceptions."
+    ],
+    "why": "G-2: contractions and abbreviations share the prohibited-full-stop check, with the exceptions retained rather than treated as a blanket ban."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "25e7e9abca4e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0779c1254b2c",
+      "quote": "Don’t end web or email addresses with full stops"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No terminal full stop follows the address.",
+      "parts": [
+       {
+        "block_id": "fdf30f478dfc",
+        "quote": "Website: department.gov.au"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "No terminal full stop follows the address.",
+      "parts": [
+       {
+        "block_id": "7dfb208e2659",
+        "quote": "Email: example@department.gov.au"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not use a full stop after a web or email address if it’s part of a sentence fragment or on a line by itself.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A terminal full stop follows a web or email address that is part of a sentence fragment or appears on a line by itself.",
+    "when": [
+     "The address is part of a sentence fragment or is on a line by itself.",
+     "This does not prohibit the full stops within the address."
+    ],
+    "why": "G-4: the body supplies the scope missing from the heading; G-2: fragment and stand-alone-line contexts are cases of one check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1326df88dfd3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The inline example retains the full stops belonging to the address.",
+      "parts": [
+       {
+        "block_id": "1326df88dfd3",
+        "quote": "dfat.gov.au"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write full stops in email and web addresses when you use the full form rather than link text",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A written-out email or web address omits a full stop that is part of the address.",
+    "when": [
+     "Applies when displaying the address itself rather than descriptive link text.",
+     "Concerns full stops within the address, not punctuation added after it."
+    ],
+    "why": "G-4: the prose after the example states a separate rule about address spelling, not terminal sentence punctuation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "85339e8545a9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "82091356a779",
+      "quote": "Use full stops at the end of sentences with link text, but don’t include the full stop in the link itself."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The supplied plain text does not preserve the hyperlink boundary; the manual labels this Correct.",
+      "parts": [
+       {
+        "block_id": "c5f6441082d9",
+        "quote": "The People team manages the add a new employee form."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The supplied plain text does not preserve the hyperlink boundary; the manual labels this Incorrect.",
+      "parts": [
+       {
+        "block_id": "6f1c9fbed28b",
+        "quote": "The People team manages the add a new employee form."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Ensure link text doesn’t include a full stop",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The full stop ending a sentence is included inside the hyperlink rather than outside the linked text.",
+    "when": [
+     "Applies when a sentence ends with linked text.",
+     "Concerns the sentence-ending full stop, not full stops belonging to an address displayed as link text."
+    ],
+    "why": "G-4: heading and body express one hyperlink-boundary check; the requirement to end the sentence is already covered by the general sentence rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bd5a90f941fd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d95a66e2a791",
+      "quote": "headings"
+     },
+     {
+      "block_id": "7fd99e7115e4",
+      "quote": "stand-alone lists (stand-alone lists have a heading without a colon)"
+     },
+     {
+      "block_id": "dfeea78e8994",
+      "quote": "page headers or footers."
+     },
+     {
+      "block_id": "7b18785ce76b",
+      "quote": "Full stops do not go after:"
+     },
+     {
+      "block_id": "d379ac982300",
+      "quote": "captions and titles."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use full stops in:",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A punctuation full stop occurs in a heading, stand-alone list, or page header or footer, or is added after a caption or title.",
+    "when": [
+     "Applies to headings, stand-alone lists, page headers or footers, captions and titles.",
+     "A stand-alone list has a heading without a colon.",
+     "For captions and titles, the prohibition concerns a full stop after them.",
+     "This concerns punctuation full stops, not full stops forming part of a number, address or prescribed shortened form."
+    ],
+    "why": "G-2: these are contexts for one display-text punctuation check; measurement notation is separate because sentence position determines its treatment."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6083605079c0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7b18785ce76b",
+      "quote": "Full stops do not go after:"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "symbols or units of measurement (unless the symbol or unit is also at the end of a sentence)",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A full stop is added after a symbol or unit of measurement where it is not serving as the sentence-ending full stop.",
+    "when": [
+     "Applies after symbols or units of measurement.",
+     "A full stop is allowed when the symbol or unit is at the end of a sentence."
+    ],
+    "why": "G-2 and G-3: sentence-final position is an exception to one measurement-punctuation check, not another rule."
+   },
+   {
+    "applies_to": [
+     "social_post"
+    ],
+    "block_id": "3637e02f5e40",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "acd85bdfa6b4",
+      "quote": "a tag or handle"
+     },
+     {
+      "block_id": "6f320851f74d",
+      "quote": "a hashtag"
+     },
+     {
+      "block_id": "ff227ecaa250",
+      "quote": "an emoji"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t add a full stop after hashtags, emojis or handles",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A government social media post has a terminal full stop after its final tag or handle, hashtag or emoji.",
+    "when": [
+     "Applies when a government social media post ends with a tag or handle, a hashtag or an emoji.",
+     "The body's permission to omit full stops after URLs or sentence fragments does not extend this heading's prohibition to those additional cases."
+    ],
+    "why": "The heading expressly prohibits these terminal full stops; G-3 prevents turning the body's additional permissions into broader prohibitions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dabe1be5056d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The final time fragment has no full stop.",
+      "parts": [
+       {
+        "block_id": "7c990da24852",
+        "quote": "Warning: there is a high probability of hail in your area. Please take appropriate precautions and stay safe. Time sent: 4:30 pm AEST"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t include a full stop if the message ends with a fragment or sign off.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A government text message has a final full stop even though it ends with a sentence fragment or sign off.",
+    "when": [
+     "Applies to government text messages (SMS).",
+     "The message ends with a fragment or sign off rather than a complete sentence."
+    ],
+    "why": "G-1: the SMS heading groups guidance; this body sentence states the specific prohibited-terminal-punctuation check."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "7e2a0c5e492e",
+    "end": 36,
+    "prefix": "",
+    "quote": "Complete a sentence with a full stop",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "68a443b0b678",
+     "end": 79,
+     "prefix": "",
+     "quote": "Full stops mark the end of a sentence that is not a question or an exclamation.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c56e914e2792",
+     "end": 115,
+     "prefix": "",
+     "quote": "Following the same rule, use full stops at the end of the last item in a list that’s made up of sentence fragments.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9a37337b7c76",
+     "end": 110,
+     "prefix": "",
+     "quote": "Use the final full stop because this type of list is a sentence presented as points to make it easier to read.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "82091356a779",
+     "end": 53,
+     "prefix": "",
+     "quote": "Use full stops at the end of sentences with link text",
+     "start": 0,
+     "suffix": ", but don’t include the full sto"
+    },
+    {
+     "block_id": "759a341d96fc",
+     "end": 100,
+     "prefix": "ion in government social media. ",
+     "quote": "You don’t need a full stop if your post ends in:",
+     "start": 52,
+     "suffix": ""
+    },
+    {
+     "block_id": "a25b1c7530f2",
+     "end": 19,
+     "prefix": "",
+     "quote": "a web address (URL)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "acd85bdfa6b4",
+     "end": 15,
+     "prefix": "",
+     "quote": "a tag or handle",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6f320851f74d",
+     "end": 9,
+     "prefix": "",
+     "quote": "a hashtag",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ff227ecaa250",
+     "end": 8,
+     "prefix": "",
+     "quote": "an emoji",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "495ea819a92b",
+     "end": 20,
+     "prefix": "",
+     "quote": "a sentence fragment.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dabe1be5056d",
+     "end": 80,
+     "prefix": "",
+     "quote": "Include a full stop at the end of a text message if it finishes with a sentence.",
+     "start": 0,
+     "suffix": " Don’t include a full stop if th"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The list completes the sentence introduced by ‘It discussed:’.",
+     "parts": [
+      {
+       "block_id": "1e86e2ded14e",
+       "end": 42,
+       "prefix": "",
+       "quote": "The committee met yesterday. It discussed:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "13fd6d808bce",
+       "end": 12,
+       "prefix": "",
+       "quote": "office space",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e705cc037f9f",
+       "end": 13,
+       "prefix": "",
+       "quote": "working hours",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8da726fa3a34",
+       "end": 19,
+       "prefix": "",
+       "quote": "managers’ salaries.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The completed sentences have full stops; the final time fragment does not.",
+     "parts": [
+      {
+       "block_id": "7c990da24852",
+       "end": 133,
+       "prefix": "",
+       "quote": "Warning: there is a high probability of hail in your area. Please take appropriate precautions and stay safe. Time sent: 4:30 pm AEST",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "d43e425ace4171ba",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A completed sentence that is neither a question nor an exclamation lacks its final full stop, outside the stated exceptions."
+   },
+   "when": [
+    "Applies to sentences that are not questions or exclamations.",
+    "A list of sentence fragments completing a sentence takes the final full stop after its last item.",
+    "The fragment-list requirement does not apply to stand-alone lists with a heading without a colon.",
+    "Sentences ending in link text still require a final full stop, outside the link.",
+    "In government social media, a full stop is not required when the post ends in a URL, a tag or handle, a hashtag, an emoji or a sentence fragment.",
+    "Government text messages take a final full stop when they finish with a sentence, but not when they finish with a fragment or sign off.",
+    "The page separately excludes full stops from headings, stand-alone lists, page headers or footers, captions and titles."
+   ],
+   "why": "G-2 and G-4: sentence-fragment lists, linked sentence endings and SMS sentences are cases or restatements of the sentence-ending check; G-3: social-media permissions limit it."
+  },
+  {
+   "anchor": {
+    "block_id": "380fc3c0a867",
+    "end": 44,
+    "prefix": "",
+    "quote": "as the decimal point in numbers and currency",
+    "start": 0,
+    "suffix": " – for example, ‘$3.55’"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The inline example illustrates the required decimal separator.",
+     "parts": [
+      {
+       "block_id": "380fc3c0a867",
+       "end": 66,
+       "prefix": "rs and currency – for example, ‘",
+       "quote": "$3.55",
+       "start": 61,
+       "suffix": "’"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A decimal number or currency amount uses a separator other than a full stop between its integer and fractional parts."
+   },
+   "when": [
+    "Applies when a number or currency amount is written with a decimal fractional part."
+   ],
+   "why": "G-1: decimal notation is a distinct check under the heading grouping numbers and shortened forms."
+  },
+  {
+   "anchor": {
+    "block_id": "da59a528768f",
+    "end": 53,
+    "prefix": "",
+    "quote": "in numbering subsections and paragraphs in a document",
+    "start": 0,
+    "suffix": " – for example, ‘Section 7.3’"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The inline example shows a full stop between numbering components.",
+     "parts": [
+      {
+       "block_id": "da59a528768f",
+       "end": 81,
+       "prefix": "s in a document – for example, ‘",
+       "quote": "Section 7.3",
+       "start": 70,
+       "suffix": "’"
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Read this as requiring full stops between components of hierarchical numbering, as illustrated by ‘Section 7.3’, rather than a trailing full stop after every section or paragraph identifier.",
+    "unit": "phrase",
+    "violation_condition": "A multi-part subsection or paragraph number lacks full stops between its numbering components."
+   },
+   "when": [
+    "Applies when subsections or paragraphs use multi-part hierarchical numbering."
+   ],
+   "why": "G-1: document numbering is separate from decimal notation and shortened forms; E-4: the interpretation of the numbering scope is explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "ddc0e0df87d0",
+    "end": 70,
+    "prefix": "",
+    "quote": "in some Latin shortened forms and shortened forms used in referencing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not identify which shortened forms require full stops or their exact punctuation. A list of prescribed forms is needed before this check can be implemented.",
+    "unit": "phrase",
+    "violation_condition": "A Latin shortened form or referencing shortened form that requires full stops is written without them."
+   },
+   "when": [
+    "Applies only to shortened forms conventionally written with full stops, not to all Latin shortened forms or all referencing shortened forms."
+   ],
+   "why": "G-1 and G-2: one required-punctuation check covers the specified subset of shortened forms without extending it to every form."
+  },
+  {
+   "anchor": {
+    "block_id": "176cce3660ba",
+    "end": 61,
+    "prefix": "",
+    "quote": "Don’t use full stops with contractions or most abbreviations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page does not enumerate the exceptions to ‘most abbreviations’. Checking requires a list distinguishing forms that take full stops from those that do not.",
+    "unit": "token",
+    "violation_condition": "A contraction or abbreviation contains a full stop even though its prescribed form does not take one."
+   },
+   "when": [
+    "Applies to contractions and abbreviations that do not conventionally take full stops.",
+    "Some Latin shortened forms and shortened forms used in referencing are exceptions."
+   ],
+   "why": "G-2: contractions and abbreviations share the prohibited-full-stop check, with the exceptions retained rather than treated as a blanket ban."
+  },
+  {
+   "anchor": {
+    "block_id": "25e7e9abca4e",
+    "end": 111,
+    "prefix": "",
+    "quote": "Do not use a full stop after a web or email address if it’s part of a sentence fragment or on a line by itself.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0779c1254b2c",
+     "end": 48,
+     "prefix": "",
+     "quote": "Don’t end web or email addresses with full stops",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No terminal full stop follows the address.",
+     "parts": [
+      {
+       "block_id": "fdf30f478dfc",
+       "end": 26,
+       "prefix": "",
+       "quote": "Website: department.gov.au",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "No terminal full stop follows the address.",
+     "parts": [
+      {
+       "block_id": "7dfb208e2659",
+       "end": 32,
+       "prefix": "",
+       "quote": "Email: example@department.gov.au",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A terminal full stop follows a web or email address that is part of a sentence fragment or appears on a line by itself."
+   },
+   "when": [
+    "The address is part of a sentence fragment or is on a line by itself.",
+    "This does not prohibit the full stops within the address."
+   ],
+   "why": "G-4: the body supplies the scope missing from the heading; G-2: fragment and stand-alone-line contexts are cases of one check."
+  },
+  {
+   "anchor": {
+    "block_id": "1326df88dfd3",
+    "end": 92,
+    "prefix": "",
+    "quote": "Write full stops in email and web addresses when you use the full form rather than link text",
+    "start": 0,
+    "suffix": " (for example, ‘dfat.gov.au’ ins"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The inline example retains the full stops belonging to the address.",
+     "parts": [
+      {
+       "block_id": "1326df88dfd3",
+       "end": 119,
+       "prefix": "r than link text (for example, ‘",
+       "quote": "dfat.gov.au",
+       "start": 108,
+       "suffix": "’ instead of linking ‘the DFAT w"
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "A written-out email or web address omits a full stop that is part of the address."
+   },
+   "when": [
+    "Applies when displaying the address itself rather than descriptive link text.",
+    "Concerns full stops within the address, not punctuation added after it."
+   ],
+   "why": "G-4: the prose after the example states a separate rule about address spelling, not terminal sentence punctuation."
+  },
+  {
+   "anchor": {
+    "block_id": "85339e8545a9",
+    "end": 44,
+    "prefix": "",
+    "quote": "Ensure link text doesn’t include a full stop",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "82091356a779",
+     "end": 106,
+     "prefix": "",
+     "quote": "Use full stops at the end of sentences with link text, but don’t include the full stop in the link itself.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The supplied plain text does not preserve the hyperlink boundary; the manual labels this Correct.",
+     "parts": [
+      {
+       "block_id": "c5f6441082d9",
+       "end": 52,
+       "prefix": "",
+       "quote": "The People team manages the add a new employee form.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The supplied plain text does not preserve the hyperlink boundary; the manual labels this Incorrect.",
+     "parts": [
+      {
+       "block_id": "6f1c9fbed28b",
+       "end": 52,
+       "prefix": "",
+       "quote": "The People team manages the add a new employee form.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "7aefaa812fe9f887",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The full stop ending a sentence is included inside the hyperlink rather than outside the linked text."
+   },
+   "when": [
+    "Applies when a sentence ends with linked text.",
+    "Concerns the sentence-ending full stop, not full stops belonging to an address displayed as link text."
+   ],
+   "why": "G-4: heading and body express one hyperlink-boundary check; the requirement to end the sentence is already covered by the general sentence rule."
+  },
+  {
+   "anchor": {
+    "block_id": "bd5a90f941fd",
+    "end": 24,
+    "prefix": "",
+    "quote": "Don’t use full stops in:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d95a66e2a791",
+     "end": 8,
+     "prefix": "",
+     "quote": "headings",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "7fd99e7115e4",
+     "end": 68,
+     "prefix": "",
+     "quote": "stand-alone lists (stand-alone lists have a heading without a colon)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dfeea78e8994",
+     "end": 24,
+     "prefix": "",
+     "quote": "page headers or footers.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "7b18785ce76b",
+     "end": 27,
+     "prefix": "",
+     "quote": "Full stops do not go after:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d379ac982300",
+     "end": 20,
+     "prefix": "",
+     "quote": "captions and titles.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A punctuation full stop occurs in a heading, stand-alone list, or page header or footer, or is added after a caption or title."
+   },
+   "when": [
+    "Applies to headings, stand-alone lists, page headers or footers, captions and titles.",
+    "A stand-alone list has a heading without a colon.",
+    "For captions and titles, the prohibition concerns a full stop after them.",
+    "This concerns punctuation full stops, not full stops forming part of a number, address or prescribed shortened form."
+   ],
+   "why": "G-2: these are contexts for one display-text punctuation check; measurement notation is separate because sentence position determines its treatment."
+  },
+  {
+   "anchor": {
+    "block_id": "6083605079c0",
+    "end": 92,
+    "prefix": "",
+    "quote": "symbols or units of measurement (unless the symbol or unit is also at the end of a sentence)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7b18785ce76b",
+     "end": 27,
+     "prefix": "",
+     "quote": "Full stops do not go after:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A full stop is added after a symbol or unit of measurement where it is not serving as the sentence-ending full stop."
+   },
+   "when": [
+    "Applies after symbols or units of measurement.",
+    "A full stop is allowed when the symbol or unit is at the end of a sentence."
+   ],
+   "why": "G-2 and G-3: sentence-final position is an exception to one measurement-punctuation check, not another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "3637e02f5e40",
+    "end": 55,
+    "prefix": "",
+    "quote": "Don’t add a full stop after hashtags, emojis or handles",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "acd85bdfa6b4",
+     "end": 15,
+     "prefix": "",
+     "quote": "a tag or handle",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6f320851f74d",
+     "end": 9,
+     "prefix": "",
+     "quote": "a hashtag",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ff227ecaa250",
+     "end": 8,
+     "prefix": "",
+     "quote": "an emoji",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "83d6b7861dff77c0",
+   "tags": {
+    "applies_to": [
+     "social_post"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A government social media post has a terminal full stop after its final tag or handle, hashtag or emoji."
+   },
+   "when": [
+    "Applies when a government social media post ends with a tag or handle, a hashtag or an emoji.",
+    "The body's permission to omit full stops after URLs or sentence fragments does not extend this heading's prohibition to those additional cases."
+   ],
+   "why": "The heading expressly prohibits these terminal full stops; G-3 prevents turning the body's additional permissions into broader prohibitions."
+  },
+  {
+   "anchor": {
+    "block_id": "dabe1be5056d",
+    "end": 155,
+    "prefix": "if it finishes with a sentence. ",
+    "quote": "Don’t include a full stop if the message ends with a fragment or sign off.",
+    "start": 81,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The final time fragment has no full stop.",
+     "parts": [
+      {
+       "block_id": "7c990da24852",
+       "end": 133,
+       "prefix": "",
+       "quote": "Warning: there is a high probability of hail in your area. Please take appropriate precautions and stay safe. Time sent: 4:30 pm AEST",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A government text message has a final full stop even though it ends with a sentence fragment or sign off."
+   },
+   "when": [
+    "Applies to government text messages (SMS).",
+    "The message ends with a fragment or sign off rather than a complete sentence."
+   ],
+   "why": "G-1: the SMS heading groups guidance; this body sentence states the specific prohibited-terminal-punctuation check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4286,
+  "output_tokens": 13072,
+  "reasoning_tokens": 7768
+ }
+}

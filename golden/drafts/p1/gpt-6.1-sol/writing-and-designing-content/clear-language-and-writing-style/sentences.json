@@ -1,0 +1,2393 @@
+{
+ "effort": "high",
+ "input_sha256": "abf85789cf975d6ad3e0df3725f73356d7cd353a6cb170f7c6bf95508dcbd0c4",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "0ef45684f443",
+    "end": 102,
+    "prefix": "tive voice improve readability. ",
+    "quote": "Keep sentences short to help people scan content.",
+    "start": 53,
+    "suffix": ""
+   },
+   "note": "G-4: the later sentence-length rule supplies the actionable targets.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e8d601ae3bfc",
+    "end": 30,
+    "prefix": "",
+    "quote": "Write plain language sentences",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the concrete sentence-length and accessibility requirements rather than adding another global finding.",
+   "reason": "section",
+   "seed_uid": "1cccd5f60d08ffd1"
+  },
+  {
+   "anchor": {
+    "block_id": "a90036d57423",
+    "end": 66,
+    "prefix": "",
+    "quote": "Standard English sentences are built on subject–verb–object order.",
+    "start": 0,
+    "suffix": " This structure forms the basis "
+   },
+   "note": "Describes a standard structure; it does not prohibit every sentence with a different word order.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff49b17dd612",
+    "end": 107,
+    "prefix": "",
+    "quote": "Sometimes it’s hard to avoid longer sentences – for example, if you have to include a long department name.",
+    "start": 0,
+    "suffix": " Sentences over 25 words can usu"
+   },
+   "note": "G-3: acknowledged unavoidable longer sentences are recorded under the length rule's conditions.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff49b17dd612",
+    "end": 202,
+    "prefix": "include a long department name. ",
+    "quote": "Sentences over 25 words can usually be broken up using different techniques, like using lists.",
+    "start": 108,
+    "suffix": ""
+   },
+   "note": "G-5: suggests a rewriting technique, not a requirement that every long sentence become a list.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c0208a044b9f",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write in plain language.",
+    "start": 0,
+    "suffix": " This helps all users and is ess"
+   },
+   "note": "An overarching accessibility instruction implemented here through concrete language checks; a second global plain-language finding would duplicate those checks.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a51ea5bf26c1",
+    "end": 29,
+    "prefix": "",
+    "quote": "Avoid using double negatives.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: consolidated with the dedicated double-negatives rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6f1eb90cf6d0",
+    "end": 37,
+    "prefix": "",
+    "quote": "Use active rather than passive voice.",
+    "start": 0,
+    "suffix": " Active voice helps users unders"
+   },
+   "note": "G-4: supplies the preference expressed by the selected active-voice heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "034605045961",
+    "end": 58,
+    "prefix": "",
+    "quote": "The subsidy can be accessed by completing the application.",
+    "start": 0,
+    "suffix": " [Passive voice]"
+   },
+   "note": "E-1: an explanatory passive-voice contrast, not a sentence labelled incorrect.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a4a77645e546",
+    "end": 56,
+    "prefix": "Passive voice: ",
+    "quote": "The application was filed by the student.",
+    "start": 15,
+    "suffix": " [‘The application’ is the gramm"
+   },
+   "note": "E-1: illustrates passive voice and grammatical roles; it is not labelled incorrect.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af3d2f1eaeb1",
+    "end": 41,
+    "prefix": "",
+    "quote": "Construct positive, unambiguous sentences",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups distinct ambiguity, positive-framing and double-negation checks.",
+   "reason": "section",
+   "seed_uid": "418c6617fbaef6ec"
+  },
+  {
+   "anchor": {
+    "block_id": "eedc1653d386",
+    "end": 62,
+    "prefix": "",
+    "quote": "Double negatives can lead to misunderstandings, so avoid them.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the selected double-negatives heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5fc06bc56929",
+    "end": 50,
+    "prefix": "",
+    "quote": "Make each word work for its place in the sentence.",
+    "start": 0,
+    "suffix": " Sentence structure is clearer i"
+   },
+   "note": "G-4: repeats the unnecessary-word rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "207d160c785d",
+    "end": 67,
+    "prefix": "",
+    "quote": "It helps to test the combination to know which words are necessary.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: introduces a writer's testing process.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5e6ec74c105a",
+    "end": 61,
+    "prefix": "",
+    "quote": "Keep the words that play a critical function in the sentence.",
+    "start": 0,
+    "suffix": " Remove all the words except the"
+   },
+   "note": "G-4: explains the necessary-word side of the unnecessary-word rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5e6ec74c105a",
+    "end": 135,
+    "prefix": "tical function in the sentence. ",
+    "quote": "Remove all the words except the subject, verb and object (if applicable).",
+    "start": 62,
+    "suffix": ""
+   },
+   "note": "G-5: a temporary editing test, not a requirement that final sentences contain only subject, verb and object.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1973b79e0ade",
+    "end": 79,
+    "prefix": "",
+    "quote": "Check if the sentence is grammatically correct when you remove the other words.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: an action in the editing test, not a separately observable text requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ef2a5fc16b97",
+    "end": 175,
+    "prefix": "",
+    "quote": "Build the sentence back together, leaving out any words that aren’t absolutely necessary. Adverbs and adjectives are usually good candidates to leave out in this kind of test.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: continues the editing test; it does not ban adverbs or adjectives.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5fdb4451c2d2",
+    "end": 155,
+    "prefix": "",
+    "quote": "Check if the basic meaning of the sentence remains, and if it’s grammatical. Then check if the words you’ve removed are really working to keep their place.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: checks performed by the writer during revision.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "99d4be1c4164",
+    "end": 133,
+    "prefix": "",
+    "quote": "Testing combinations as you write will also help create concise and easily understood headings, fragment lists and descriptive links.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes further benefits of the editing technique rather than a new check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2783cbe2c02d",
+    "end": 55,
+    "prefix": "",
+    "quote": "Check guidance about types of words and their function.",
+    "start": 0,
+    "suffix": " This guidance relates closely t"
+   },
+   "note": "G-5: directs the writer to other guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2fe97272ffaa",
+    "end": 10,
+    "prefix": "",
+    "quote": "Be precise",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: its body restates the unnecessary-word rule and gives a specific existential-construction case.",
+   "reason": "restatement",
+   "seed_uid": "9858a0653bbd0bb5"
+  },
+  {
+   "anchor": {
+    "block_id": "5f19dafaed0a",
+    "end": 69,
+    "prefix": "",
+    "quote": "Avoid unnecessary words. Keep the words needed to make meaning clear.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: consolidated with ‘Eliminate unnecessary words’.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9277e69a6227",
+    "end": 86,
+    "prefix": "",
+    "quote": "Avoid using ‘there is’ and ‘there are’ when they only add extra words and not meaning.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: a named case of semantically unnecessary wording, absorbed into that check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bd6ee8122fa9",
+    "end": 49,
+    "prefix": "",
+    "quote": "Vary your sentence structure to suit the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: supplies the content-suitability condition for the selected heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1e96dbee7713",
+    "end": 32,
+    "prefix": "",
+    "quote": "Build simple phrases and clauses",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces explanations and specific construction checks rather than an additional blanket ban on complexity.",
+   "reason": "section",
+   "seed_uid": "268ab7a5fd2c9c80"
+  },
+  {
+   "anchor": {
+    "block_id": "80f8fdf82bcc",
+    "end": 69,
+    "prefix": "",
+    "quote": "For example, use a verb instead of the noun that relates to the verb.",
+    "start": 0,
+    "suffix": " If you use the noun instead, yo"
+   },
+   "note": "G-2: explicitly presented as a case of replacing bureaucratic language; retained in that rule's coverage.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cbdf6137627f",
+    "end": 150,
+    "prefix": "ns are difficult to understand. ",
+    "quote": "Rephrase sentences to break up strings of adjectives or noun trains.",
+    "start": 82,
+    "suffix": ""
+   },
+   "note": "G-4: states the remedy for the selected adjective-string and noun-train rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0a567049c23b",
+    "end": 74,
+    "prefix": "",
+    "quote": "You can often rephrase the string of adjectives or noun train as a clause.",
+    "start": 0,
+    "suffix": " Follow the rule to keep sentenc"
+   },
+   "note": "G-5: suggests a rewriting technique; it does not require a clause as the only remedy.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0a567049c23b",
+    "end": 142,
+    "prefix": "ives or noun train as a clause. ",
+    "quote": "Follow the rule to keep sentences short and their structure simple.",
+    "start": 75,
+    "suffix": ""
+   },
+   "note": "G-4: refers back to existing length and structure requirements rather than creating another check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "94b6a6b4cb9b",
+    "end": 63,
+    "prefix": "",
+    "quote": "Don’t use words such as ‘if’ and ‘unless’ in the same sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: supplies the same-sentence scope of the selected heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "18e7a2118342",
+    "end": 26,
+    "prefix": "",
+    "quote": "Use ‘other than’ carefully",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: its actionable body specifies an exception-scope case of the ambiguity rule.",
+   "reason": "restatement",
+   "seed_uid": "2b6c9b74b9296a7b"
+  },
+  {
+   "anchor": {
+    "block_id": "27b8ea4a1fcc",
+    "end": 90,
+    "prefix": "",
+    "quote": "When you use ‘other than’, make sure it’s clear which words are included in the exception.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: consolidated with the ambiguity check to avoid citing the same unclear exception twice.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c5b49dd03396",
+    "end": 31,
+    "prefix": "",
+    "quote": "Avoid ‘such ... as’ and ‘being’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups two unrelated construction checks, each stated in its own body instruction with its own examples.",
+   "reason": "section",
+   "seed_uid": "a69468dbe8f89706"
+  }
+ ],
+ "page_path": "writing-and-designing-content/clear-language-and-writing-style/sentences.md",
+ "page_sha256": "3da63ae86ab7c8b4b4ad9f5b95ab7e70afc48af8a810e5194dc0cda08de87f19",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "0ef45684f443",
+    "note": "G-4: the later sentence-length rule supplies the actionable targets.",
+    "quote": "Keep sentences short to help people scan content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e8d601ae3bfc",
+    "note": "G-1: groups the concrete sentence-length and accessibility requirements rather than adding another global finding.",
+    "quote": "Write plain language sentences",
+    "reason": "section"
+   },
+   {
+    "block_id": "a90036d57423",
+    "note": "Describes a standard structure; it does not prohibit every sentence with a different word order.",
+    "quote": "Standard English sentences are built on subject–verb–object order.",
+    "reason": "description"
+   },
+   {
+    "block_id": "ff49b17dd612",
+    "note": "G-3: acknowledged unavoidable longer sentences are recorded under the length rule's conditions.",
+    "quote": "Sometimes it’s hard to avoid longer sentences – for example, if you have to include a long department name.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "ff49b17dd612",
+    "note": "G-5: suggests a rewriting technique, not a requirement that every long sentence become a list.",
+    "quote": "Sentences over 25 words can usually be broken up using different techniques, like using lists.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c0208a044b9f",
+    "note": "An overarching accessibility instruction implemented here through concrete language checks; a second global plain-language finding would duplicate those checks.",
+    "quote": "Write in plain language.",
+    "reason": "section"
+   },
+   {
+    "block_id": "a51ea5bf26c1",
+    "note": "G-4: consolidated with the dedicated double-negatives rule.",
+    "quote": "Avoid using double negatives.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6f1eb90cf6d0",
+    "note": "G-4: supplies the preference expressed by the selected active-voice heading.",
+    "quote": "Use active rather than passive voice.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "034605045961",
+    "note": "E-1: an explanatory passive-voice contrast, not a sentence labelled incorrect.",
+    "quote": "The subsidy can be accessed by completing the application.",
+    "reason": "description"
+   },
+   {
+    "block_id": "a4a77645e546",
+    "note": "E-1: illustrates passive voice and grammatical roles; it is not labelled incorrect.",
+    "quote": "The application was filed by the student.",
+    "reason": "description"
+   },
+   {
+    "block_id": "af3d2f1eaeb1",
+    "note": "G-1: groups distinct ambiguity, positive-framing and double-negation checks.",
+    "quote": "Construct positive, unambiguous sentences",
+    "reason": "section"
+   },
+   {
+    "block_id": "eedc1653d386",
+    "note": "G-4: repeats the selected double-negatives heading.",
+    "quote": "Double negatives can lead to misunderstandings, so avoid them.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5fc06bc56929",
+    "note": "G-4: repeats the unnecessary-word rule.",
+    "quote": "Make each word work for its place in the sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "207d160c785d",
+    "note": "G-5: introduces a writer's testing process.",
+    "quote": "It helps to test the combination to know which words are necessary.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5e6ec74c105a",
+    "note": "G-4: explains the necessary-word side of the unnecessary-word rule.",
+    "quote": "Keep the words that play a critical function in the sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5e6ec74c105a",
+    "note": "G-5: a temporary editing test, not a requirement that final sentences contain only subject, verb and object.",
+    "quote": "Remove all the words except the subject, verb and object (if applicable).",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1973b79e0ade",
+    "note": "G-5: an action in the editing test, not a separately observable text requirement.",
+    "quote": "Check if the sentence is grammatically correct when you remove the other words.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ef2a5fc16b97",
+    "note": "G-5: continues the editing test; it does not ban adverbs or adjectives.",
+    "quote": "Build the sentence back together, leaving out any words that aren’t absolutely necessary. Adverbs and adjectives are usually good candidates to leave out in this kind of test.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5fdb4451c2d2",
+    "note": "G-5: checks performed by the writer during revision.",
+    "quote": "Check if the basic meaning of the sentence remains, and if it’s grammatical. Then check if the words you’ve removed are really working to keep their place.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "99d4be1c4164",
+    "note": "G-5: describes further benefits of the editing technique rather than a new check.",
+    "quote": "Testing combinations as you write will also help create concise and easily understood headings, fragment lists and descriptive links.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2783cbe2c02d",
+    "note": "G-5: directs the writer to other guidance.",
+    "quote": "Check guidance about types of words and their function.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2fe97272ffaa",
+    "note": "G-4: its body restates the unnecessary-word rule and gives a specific existential-construction case.",
+    "quote": "Be precise",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5f19dafaed0a",
+    "note": "G-4: consolidated with ‘Eliminate unnecessary words’.",
+    "quote": "Avoid unnecessary words. Keep the words needed to make meaning clear.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9277e69a6227",
+    "note": "G-2: a named case of semantically unnecessary wording, absorbed into that check.",
+    "quote": "Avoid using ‘there is’ and ‘there are’ when they only add extra words and not meaning.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bd6ee8122fa9",
+    "note": "G-4: supplies the content-suitability condition for the selected heading.",
+    "quote": "Vary your sentence structure to suit the content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1e96dbee7713",
+    "note": "G-1: introduces explanations and specific construction checks rather than an additional blanket ban on complexity.",
+    "quote": "Build simple phrases and clauses",
+    "reason": "section"
+   },
+   {
+    "block_id": "80f8fdf82bcc",
+    "note": "G-2: explicitly presented as a case of replacing bureaucratic language; retained in that rule's coverage.",
+    "quote": "For example, use a verb instead of the noun that relates to the verb.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cbdf6137627f",
+    "note": "G-4: states the remedy for the selected adjective-string and noun-train rule.",
+    "quote": "Rephrase sentences to break up strings of adjectives or noun trains.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0a567049c23b",
+    "note": "G-5: suggests a rewriting technique; it does not require a clause as the only remedy.",
+    "quote": "You can often rephrase the string of adjectives or noun train as a clause.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0a567049c23b",
+    "note": "G-4: refers back to existing length and structure requirements rather than creating another check.",
+    "quote": "Follow the rule to keep sentences short and their structure simple.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "94b6a6b4cb9b",
+    "note": "G-4: supplies the same-sentence scope of the selected heading.",
+    "quote": "Don’t use words such as ‘if’ and ‘unless’ in the same sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "18e7a2118342",
+    "note": "G-2: its actionable body specifies an exception-scope case of the ambiguity rule.",
+    "quote": "Use ‘other than’ carefully",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "27b8ea4a1fcc",
+    "note": "G-2: consolidated with the ambiguity check to avoid citing the same unclear exception twice.",
+    "quote": "When you use ‘other than’, make sure it’s clear which words are included in the exception.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c5b49dd03396",
+    "note": "G-1: groups two unrelated construction checks, each stated in its own body instruction with its own examples.",
+    "quote": "Avoid ‘such ... as’ and ‘being’",
+    "reason": "section"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bd5fed60b8a3",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "0ef45684f443",
+      "quote": "Keep sentences short to help people scan content."
+     },
+     {
+      "block_id": "ff49b17dd612",
+      "quote": "Sometimes it’s hard to avoid longer sentences – for example, if you have to include a long department name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep sentences to an average of 15 words and no more than 25 words, especially for digital content.",
+    "specification": "Treat 15 words as an upper average-length target, not a requirement that shorter sentences be lengthened. The page acknowledges unavoidable longer sentences but does not specify an averaging method or a word-counting convention.",
+    "unit": "document",
+    "violation_condition": "A document's sentences exceed the average-length target of 15 words, or an individual sentence exceeds 25 words without an unavoidable reason.",
+    "when": [
+     "Applies especially to digital content, but is not limited to it.",
+     "Longer sentences may be unavoidable, for example when a long department name must be included."
+    ],
+    "why": "G-2 and G-4: consolidate the sentence-length targets, their introductory summary and the acknowledged exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4d1d8fd9ab11",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "specification": "What counts as unusual depends on the intended audience. The page does not define an audience vocabulary or a required location for explanations.",
+    "unit": "document",
+    "violation_condition": "An unusual word, phrase or idiom appears without an explanation that makes it understandable to the intended audience.",
+    "when": [
+     "An unusual expression is acceptable when it is explained."
+    ],
+    "why": "G-2 and G-3: avoiding and explaining are alternative ways to satisfy one check, not separate rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4d1d8fd9ab11",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Expand all acronyms on their first use.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first occurrence of an acronym has no expansion.",
+    "when": [
+     "Check the first use of each acronym."
+    ],
+    "why": "The first-use expansion check is distinct from the neighbouring check for unexplained unusual expressions."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "3a53022ac127",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles (year 7 or between 12 and 14 years old).",
+    "specification": "The page identifies the required education level but supplies no assessment method or readability formula. Do not substitute a particular formula without review.",
+    "unit": "document",
+    "violation_condition": "Web content intended to meet the cited Level AAA criterion requires a reading level above lower secondary education after proper names and titles are excluded.",
+    "when": [
+     "Applies when assessing conformance with the cited WCAG Level AAA reading-level criterion.",
+     "Exclude proper names and titles from the reading-level assessment."
+    ],
+    "why": "G-2: retain the explicit requirement together with its conformance condition and exclusions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "25aa81a58fea",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6f1eb90cf6d0",
+      "quote": "Use active rather than passive voice."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The contrasting passive sentence is explanatory, not labelled incorrect.",
+      "parts": [
+       {
+        "block_id": "d3f1edb47c9f",
+        "quote": "Eligible students can access the subsidy by completing the application."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The contrasting passive sentence is explanatory, not labelled incorrect.",
+      "parts": [
+       {
+        "block_id": "05290ea0ba21",
+        "quote": "The student filed the application."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Use active voice",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses passive voice where active voice is the preferred alternative.",
+    "when": [],
+    "why": "G-4 consolidates heading and body; E-1 avoids treating the explanatory passive-voice contrasts as explicitly incorrect examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "53c72e839033",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "18e7a2118342",
+      "quote": "Use ‘other than’ carefully"
+     },
+     {
+      "block_id": "27b8ea4a1fcc",
+      "quote": "When you use ‘other than’, make sure it’s clear which words are included in the exception."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "10c8596fb04e",
+        "quote": "The graduate with a broken leg sat at the desk."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a2c95449e12d",
+        "quote": "The graduate sat at the desk with a broken leg."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0abc40949c0a",
+        "quote": "A person who is younger than 60, other than a teacher ..."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cf96262de2fb",
+        "quote": "A person other than a teacher who is younger than 60 ..."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write exactly what you mean and construct your sentences so there is no ambiguity.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence permits competing interpretations, including an unclear attachment or unclear scope for an exception introduced by ‘other than’.",
+    "when": [
+     "When ‘other than’ introduces an exception, the words included in the exception must be clear."
+    ],
+    "why": "G-2: unclear exception scope is a specific case of the same ambiguity check, not a second finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5d6979b69de8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dd85bdd89ef2",
+        "quote": "Include these documents when you apply."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "da150de8c72c",
+        "quote": "You can’t submit your application if you don’t include these documents."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Write sentences so they are positive rather than negative.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence frames its message negatively when the same message can be expressed positively.",
+    "when": [],
+    "why": "G-1 and E-2: the body states the positive-framing check and has its own contrast pair; the parent heading also groups other checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "350b5bce087f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a51ea5bf26c1",
+      "quote": "Avoid using double negatives."
+     },
+     {
+      "block_id": "eedc1653d386",
+      "quote": "Double negatives can lead to misunderstandings, so avoid them."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "00545ccef49b",
+        "quote": "It was acceptable …"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "af1a520b9ffe",
+        "quote": "It was not unacceptable …"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid double negatives",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence expresses a proposition through double negation, such as ‘not unacceptable’.",
+    "when": [
+     "The negatives must interact in the same proposition; merely finding two negative words in different clauses is insufficient."
+    ],
+    "why": "G-4: the accessibility item and explanatory body repeat the same double-negation rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bd28d30877e7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "5fc06bc56929",
+      "quote": "Make each word work for its place in the sentence."
+     },
+     {
+      "block_id": "5e6ec74c105a",
+      "quote": "Keep the words that play a critical function in the sentence."
+     },
+     {
+      "block_id": "2fe97272ffaa",
+      "quote": "Be precise"
+     },
+     {
+      "block_id": "5f19dafaed0a",
+      "quote": "Avoid unnecessary words. Keep the words needed to make meaning clear."
+     },
+     {
+      "block_id": "9277e69a6227",
+      "quote": "Avoid using ‘there is’ and ‘there are’ when they only add extra words and not meaning."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "90069ab300da",
+        "quote": "We provide statistics for trade reports. Contact us with trade data requests and we’ll respond within 2 business days."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5976cc81befc",
+        "quote": "Our team will happily provide you with any statistics you might be seeking for the purpose of producing better and more factually accurate trade reports. Let us know if you’re seeking specific trade data and we’ll seek to provide it to you as soon as we can, usually within 2 business days."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "70a531c6f06a",
+        "quote": "Call us if you have any questions."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0ba30fa94266",
+        "quote": "If you were unsure about any of the information or needed more details, you are welcome to telephone our office to acquire what you needed."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "145dd74ac32a",
+        "quote": "If anything doesn’t fit within this framework ..."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6c37657eb5ca",
+        "quote": "If there is anything that doesn’t fit within this framework ..."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Eliminate unnecessary words",
+    "specification": "Assess whether a shorter grammatical formulation preserves the essential meaning. Do not automatically flag adjectives, adverbs or every occurrence of ‘there is’ and ‘there are’.",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains dispensable wording that adds no necessary meaning, including semantically empty ‘there is’ or ‘there are’ constructions.",
+    "when": [
+     "Retain words needed to make the meaning clear.",
+     "Flag ‘there is’ and ‘there are’ only when they add words without adding meaning."
+    ],
+    "why": "G-2 and G-4: ‘Be precise’ repeats the unnecessary-word check, and empty existential constructions are a named case of it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "29f50ff13bb6",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "bd6ee8122fa9",
+      "quote": "Vary your sentence structure to suit the content."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Vary sentence structure",
+    "specification": "The page gives no required mix of structures or repetition threshold. Suitability must be judged against the content; do not require variation for its own sake.",
+    "unit": "paragraph",
+    "violation_condition": "A passage uses unnecessarily uniform sentence structures when variation would better suit its content.",
+    "when": [
+     "Variation must suit the content."
+    ],
+    "why": "G-4: consolidate heading and body; structural variety is distinct from whether an individual sentence is easy to scan."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2739083dd5af",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c4e743aa4286",
+        "quote": "You can delete your application within an hour of applying."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6609ac7d410c",
+        "quote": "You can, within an hour of applying, delete your application."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Sentences should still be easy to scan, even using these structures.",
+    "specification": "The example identifies an inserted modifier that interrupts the main clause. The page supplies no general measurable boundary for scan difficulty; compound or complex structure alone is not a violation.",
+    "unit": "sentence",
+    "violation_condition": "A sentence's clause or modifier arrangement makes it unnecessarily difficult to scan, such as an avoidable interruption of the main clause.",
+    "when": [
+     "Applies to simple, compound and complex sentences.",
+     "Compound and complex sentences may be used for variety and flow."
+    ],
+    "why": "E-2: the scanability instruction, not the broader variety heading, is the nearest rule tested by the modifier-placement contrast."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "54b0ad3dc8cc",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "80f8fdf82bcc",
+      "quote": "For example, use a verb instead of the noun that relates to the verb."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c5570912f961",
+        "quote": "Please apply."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "52db62bf5fd1",
+        "quote": "Please make an application."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Instead of bureaucratic language, use plain language words and terms.",
+    "specification": "Treat the verb-versus-related-noun instruction as a case of replacing bureaucratic constructions. It targets indirect expressions for actions, not every noun derived from a verb.",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses unnecessarily bureaucratic wording where a plain equivalent preserves the meaning, including an indirect action-noun construction replaceable by a direct verb.",
+    "when": [
+     "Prefer a direct verb when a related action noun creates an unnecessarily indirect construction."
+    ],
+    "why": "G-2: the page explicitly introduces the verb-versus-noun construction as an example of replacing bureaucratic language."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4d9dcab4c1f2",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "cbdf6137627f",
+      "quote": "Phrases that combine more than 3 adjectives or nouns are difficult to understand."
+     },
+     {
+      "block_id": "cbdf6137627f",
+      "quote": "Rephrase sentences to break up strings of adjectives or noun trains."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8b8270cd4cf2",
+        "quote": "The goal is to analyse how we can reallocate human resources. The analysis will inform our business plan."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7dc563c48a61",
+        "quote": "The human resource reallocation analysis will inform our business plan."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use fewer than 3 adjectives or nouns at a time",
+    "specification": "Confirm the boundary before enforcing strings of exactly 3: the heading says fewer than 3, while the body says more than 3 are difficult. The violating example contains a four-word noun train.",
+    "unit": "phrase",
+    "violation_condition": "A phrase contains a string of 3 or more adjectives or nouns under the heading's stated limit; the body discusses difficulty only for strings of more than 3.",
+    "when": [
+     "Applies to strings of adjectives and noun trains, not the total number of adjectives or nouns distributed throughout a sentence."
+    ],
+    "why": "G-2 and G-4 consolidate the train-length check; E-4 requires exposing rather than silently resolving the conflicting cutoff."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8c8c482a1244",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "94b6a6b4cb9b",
+      "quote": "Don’t use words such as ‘if’ and ‘unless’ in the same sentence."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7b7e5a1113f7",
+        "quote": "From 1 October, your partner can sign forms on your behalf."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a417352d2a9e",
+        "quote": "If your partner signed the form on your behalf, we can accept it unless they signed it before 1 October."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using ‘if’ and ‘unless’ together",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses both ‘if’ and ‘unless’ to express its conditions.",
+    "when": [
+     "The two conditional words occur in the same sentence."
+    ],
+    "why": "G-4: the body supplies the same-sentence scope for the heading's single conditional-word check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "06fdd19f44b5",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "818c6551b77a",
+        "quote": "Take appropriate steps."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e7d319d2d600",
+        "quote": "Take such steps as are appropriate."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use the ‘such ... as’ form.",
+    "specification": "Interpret the form using the example ‘such steps as are appropriate’. This is not a blanket prohibition on adjacent ‘such as’ introducing examples.",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses the discontinuous ‘such ... as’ construction, such as a noun introduced by ‘such’ and qualified by an ‘as’ clause.",
+    "when": [
+     "Applies to the discontinuous construction illustrated by the manual."
+    ],
+    "why": "G-1: the parent heading groups this construction and the unrelated ‘being’ construction, which need separate checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6001cdacf92b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1a54ad002522",
+        "quote": "A person who is 70 or over and has a driving licence ..."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "08880c9af348",
+        "quote": "A person who is 70 or over, being a person who has a driving licence ..."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Use ‘and’ instead of ‘being’ or ‘not being’.",
+    "specification": "Apply this to the qualifying construction illustrated by ‘being a person who has’. Do not flag every occurrence of ‘being’, including unrelated verb uses or nouns such as ‘human being’.",
+    "unit": "sentence",
+    "violation_condition": "An additional descriptive condition is attached with ‘being’ or ‘not being’ where it could instead be coordinated with ‘and’.",
+    "when": [
+     "The ‘being’ or ‘not being’ construction introduces a condition that can be expressed with ‘and’."
+    ],
+    "why": "G-1 and E-2: this body instruction and its own contrast pair define a separate check from ‘such ... as’."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "bd5fed60b8a3",
+    "end": 99,
+    "prefix": "",
+    "quote": "Keep sentences to an average of 15 words and no more than 25 words, especially for digital content.",
+    "start": 0,
+    "suffix": " Too many words, phrases and cla"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "0ef45684f443",
+     "end": 102,
+     "prefix": "tive voice improve readability. ",
+     "quote": "Keep sentences short to help people scan content.",
+     "start": 53,
+     "suffix": ""
+    },
+    {
+     "block_id": "ff49b17dd612",
+     "end": 107,
+     "prefix": "",
+     "quote": "Sometimes it’s hard to avoid longer sentences – for example, if you have to include a long department name.",
+     "start": 0,
+     "suffix": " Sentences over 25 words can usu"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Treat 15 words as an upper average-length target, not a requirement that shorter sentences be lengthened. The page acknowledges unavoidable longer sentences but does not specify an averaging method or a word-counting convention.",
+    "unit": "document",
+    "violation_condition": "A document's sentences exceed the average-length target of 15 words, or an individual sentence exceeds 25 words without an unavoidable reason."
+   },
+   "when": [
+    "Applies especially to digital content, but is not limited to it.",
+    "Longer sentences may be unavoidable, for example when a long department name must be included."
+   ],
+   "why": "G-2 and G-4: consolidate the sentence-length targets, their introductory summary and the acknowledged exception."
+  },
+  {
+   "anchor": {
+    "block_id": "4d1d8fd9ab11",
+    "end": 60,
+    "prefix": "",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "start": 0,
+    "suffix": " Expand all acronyms on their fi"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "What counts as unusual depends on the intended audience. The page does not define an audience vocabulary or a required location for explanations.",
+    "unit": "document",
+    "violation_condition": "An unusual word, phrase or idiom appears without an explanation that makes it understandable to the intended audience."
+   },
+   "when": [
+    "An unusual expression is acceptable when it is explained."
+   ],
+   "why": "G-2 and G-3: avoiding and explaining are alternative ways to satisfy one check, not separate rules."
+  },
+  {
+   "anchor": {
+    "block_id": "4d1d8fd9ab11",
+    "end": 100,
+    "prefix": "rds, phrases, idioms and so on. ",
+    "quote": "Expand all acronyms on their first use.",
+    "start": 61,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first occurrence of an acronym has no expansion."
+   },
+   "when": [
+    "Check the first use of each acronym."
+   ],
+   "why": "The first-use expansion check is distinct from the neighbouring check for unexplained unusual expressions."
+  },
+  {
+   "anchor": {
+    "block_id": "3a53022ac127",
+    "end": 176,
+    "prefix": ".1.5 Reading level – level AAA. ",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles (year 7 or between 12 and 14 years old).",
+    "start": 33,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "The page identifies the required education level but supplies no assessment method or readability formula. Do not substitute a particular formula without review.",
+    "unit": "document",
+    "violation_condition": "Web content intended to meet the cited Level AAA criterion requires a reading level above lower secondary education after proper names and titles are excluded."
+   },
+   "when": [
+    "Applies when assessing conformance with the cited WCAG Level AAA reading-level criterion.",
+    "Exclude proper names and titles from the reading-level assessment."
+   ],
+   "why": "G-2: retain the explicit requirement together with its conformance condition and exclusions."
+  },
+  {
+   "anchor": {
+    "block_id": "25aa81a58fea",
+    "end": 16,
+    "prefix": "",
+    "quote": "Use active voice",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6f1eb90cf6d0",
+     "end": 37,
+     "prefix": "",
+     "quote": "Use active rather than passive voice.",
+     "start": 0,
+     "suffix": " Active voice helps users unders"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The contrasting passive sentence is explanatory, not labelled incorrect.",
+     "parts": [
+      {
+       "block_id": "d3f1edb47c9f",
+       "end": 71,
+       "prefix": "",
+       "quote": "Eligible students can access the subsidy by completing the application.",
+       "start": 0,
+       "suffix": " [Active voice]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The contrasting passive sentence is explanatory, not labelled incorrect.",
+     "parts": [
+      {
+       "block_id": "05290ea0ba21",
+       "end": 48,
+       "prefix": "Active voice: ",
+       "quote": "The student filed the application.",
+       "start": 14,
+       "suffix": " [‘The student’ is the grammatic"
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "753c19aa8642832c",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses passive voice where active voice is the preferred alternative."
+   },
+   "when": [],
+   "why": "G-4 consolidates heading and body; E-1 avoids treating the explanatory passive-voice contrasts as explicitly incorrect examples."
+  },
+  {
+   "anchor": {
+    "block_id": "53c72e839033",
+    "end": 143,
+    "prefix": "can have more than one meaning. ",
+    "quote": "Write exactly what you mean and construct your sentences so there is no ambiguity.",
+    "start": 61,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "18e7a2118342",
+     "end": 26,
+     "prefix": "",
+     "quote": "Use ‘other than’ carefully",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "27b8ea4a1fcc",
+     "end": 90,
+     "prefix": "",
+     "quote": "When you use ‘other than’, make sure it’s clear which words are included in the exception.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "10c8596fb04e",
+       "end": 47,
+       "prefix": "",
+       "quote": "The graduate with a broken leg sat at the desk.",
+       "start": 0,
+       "suffix": " [The graduate has a broken leg."
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a2c95449e12d",
+       "end": 47,
+       "prefix": "",
+       "quote": "The graduate sat at the desk with a broken leg.",
+       "start": 0,
+       "suffix": " [Either the graduate or the des"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0abc40949c0a",
+       "end": 57,
+       "prefix": "",
+       "quote": "A person who is younger than 60, other than a teacher ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cf96262de2fb",
+       "end": 56,
+       "prefix": "",
+       "quote": "A person other than a teacher who is younger than 60 ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence permits competing interpretations, including an unclear attachment or unclear scope for an exception introduced by ‘other than’."
+   },
+   "when": [
+    "When ‘other than’ introduces an exception, the words included in the exception must be clear."
+   ],
+   "why": "G-2: unclear exception scope is a specific case of the same ambiguity check, not a second finding."
+  },
+  {
+   "anchor": {
+    "block_id": "5d6979b69de8",
+    "end": 58,
+    "prefix": "",
+    "quote": "Write sentences so they are positive rather than negative.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dd85bdd89ef2",
+       "end": 39,
+       "prefix": "",
+       "quote": "Include these documents when you apply.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "da150de8c72c",
+       "end": 71,
+       "prefix": "",
+       "quote": "You can’t submit your application if you don’t include these documents.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence frames its message negatively when the same message can be expressed positively."
+   },
+   "when": [],
+   "why": "G-1 and E-2: the body states the positive-framing check and has its own contrast pair; the parent heading also groups other checks."
+  },
+  {
+   "anchor": {
+    "block_id": "350b5bce087f",
+    "end": 22,
+    "prefix": "",
+    "quote": "Avoid double negatives",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a51ea5bf26c1",
+     "end": 29,
+     "prefix": "",
+     "quote": "Avoid using double negatives.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "eedc1653d386",
+     "end": 62,
+     "prefix": "",
+     "quote": "Double negatives can lead to misunderstandings, so avoid them.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "00545ccef49b",
+       "end": 19,
+       "prefix": "",
+       "quote": "It was acceptable …",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "af1a520b9ffe",
+       "end": 25,
+       "prefix": "",
+       "quote": "It was not unacceptable …",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "49896d9402fca0f3",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence expresses a proposition through double negation, such as ‘not unacceptable’."
+   },
+   "when": [
+    "The negatives must interact in the same proposition; merely finding two negative words in different clauses is insufficient."
+   ],
+   "why": "G-4: the accessibility item and explanatory body repeat the same double-negation rule."
+  },
+  {
+   "anchor": {
+    "block_id": "bd28d30877e7",
+    "end": 27,
+    "prefix": "",
+    "quote": "Eliminate unnecessary words",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "5fc06bc56929",
+     "end": 50,
+     "prefix": "",
+     "quote": "Make each word work for its place in the sentence.",
+     "start": 0,
+     "suffix": " Sentence structure is clearer i"
+    },
+    {
+     "block_id": "5e6ec74c105a",
+     "end": 61,
+     "prefix": "",
+     "quote": "Keep the words that play a critical function in the sentence.",
+     "start": 0,
+     "suffix": " Remove all the words except the"
+    },
+    {
+     "block_id": "2fe97272ffaa",
+     "end": 10,
+     "prefix": "",
+     "quote": "Be precise",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5f19dafaed0a",
+     "end": 69,
+     "prefix": "",
+     "quote": "Avoid unnecessary words. Keep the words needed to make meaning clear.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9277e69a6227",
+     "end": 86,
+     "prefix": "",
+     "quote": "Avoid using ‘there is’ and ‘there are’ when they only add extra words and not meaning.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "90069ab300da",
+       "end": 118,
+       "prefix": "",
+       "quote": "We provide statistics for trade reports. Contact us with trade data requests and we’ll respond within 2 business days.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5976cc81befc",
+       "end": 290,
+       "prefix": "",
+       "quote": "Our team will happily provide you with any statistics you might be seeking for the purpose of producing better and more factually accurate trade reports. Let us know if you’re seeking specific trade data and we’ll seek to provide it to you as soon as we can, usually within 2 business days.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "70a531c6f06a",
+       "end": 34,
+       "prefix": "",
+       "quote": "Call us if you have any questions.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0ba30fa94266",
+       "end": 139,
+       "prefix": "",
+       "quote": "If you were unsure about any of the information or needed more details, you are welcome to telephone our office to acquire what you needed.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "145dd74ac32a",
+       "end": 49,
+       "prefix": "",
+       "quote": "If anything doesn’t fit within this framework ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6c37657eb5ca",
+       "end": 63,
+       "prefix": "",
+       "quote": "If there is anything that doesn’t fit within this framework ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "113a77ae31f79aab",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess whether a shorter grammatical formulation preserves the essential meaning. Do not automatically flag adjectives, adverbs or every occurrence of ‘there is’ and ‘there are’.",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains dispensable wording that adds no necessary meaning, including semantically empty ‘there is’ or ‘there are’ constructions."
+   },
+   "when": [
+    "Retain words needed to make the meaning clear.",
+    "Flag ‘there is’ and ‘there are’ only when they add words without adding meaning."
+   ],
+   "why": "G-2 and G-4: ‘Be precise’ repeats the unnecessary-word check, and empty existential constructions are a named case of it."
+  },
+  {
+   "anchor": {
+    "block_id": "29f50ff13bb6",
+    "end": 23,
+    "prefix": "",
+    "quote": "Vary sentence structure",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "bd6ee8122fa9",
+     "end": 49,
+     "prefix": "",
+     "quote": "Vary your sentence structure to suit the content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "968967a69542e6c8",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no required mix of structures or repetition threshold. Suitability must be judged against the content; do not require variation for its own sake.",
+    "unit": "paragraph",
+    "violation_condition": "A passage uses unnecessarily uniform sentence structures when variation would better suit its content."
+   },
+   "when": [
+    "Variation must suit the content."
+   ],
+   "why": "G-4: consolidate heading and body; structural variety is distinct from whether an individual sentence is easy to scan."
+  },
+  {
+   "anchor": {
+    "block_id": "2739083dd5af",
+    "end": 141,
+    "prefix": "riety and flow to your writing. ",
+    "quote": "Sentences should still be easy to scan, even using these structures.",
+    "start": 73,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c4e743aa4286",
+       "end": 59,
+       "prefix": "",
+       "quote": "You can delete your application within an hour of applying.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6609ac7d410c",
+       "end": 61,
+       "prefix": "",
+       "quote": "You can, within an hour of applying, delete your application.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The example identifies an inserted modifier that interrupts the main clause. The page supplies no general measurable boundary for scan difficulty; compound or complex structure alone is not a violation.",
+    "unit": "sentence",
+    "violation_condition": "A sentence's clause or modifier arrangement makes it unnecessarily difficult to scan, such as an avoidable interruption of the main clause."
+   },
+   "when": [
+    "Applies to simple, compound and complex sentences.",
+    "Compound and complex sentences may be used for variety and flow."
+   ],
+   "why": "E-2: the scanability instruction, not the broader variety heading, is the nearest rule tested by the modifier-placement contrast."
+  },
+  {
+   "anchor": {
+    "block_id": "54b0ad3dc8cc",
+    "end": 69,
+    "prefix": "",
+    "quote": "Instead of bureaucratic language, use plain language words and terms.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "80f8fdf82bcc",
+     "end": 69,
+     "prefix": "",
+     "quote": "For example, use a verb instead of the noun that relates to the verb.",
+     "start": 0,
+     "suffix": " If you use the noun instead, yo"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c5570912f961",
+       "end": 13,
+       "prefix": "",
+       "quote": "Please apply.",
+       "start": 0,
+       "suffix": " [‘Apply’ is the verb.]"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "52db62bf5fd1",
+       "end": 27,
+       "prefix": "",
+       "quote": "Please make an application.",
+       "start": 0,
+       "suffix": " [‘Application’ is the noun that"
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "Treat the verb-versus-related-noun instruction as a case of replacing bureaucratic constructions. It targets indirect expressions for actions, not every noun derived from a verb.",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses unnecessarily bureaucratic wording where a plain equivalent preserves the meaning, including an indirect action-noun construction replaceable by a direct verb."
+   },
+   "when": [
+    "Prefer a direct verb when a related action noun creates an unnecessarily indirect construction."
+   ],
+   "why": "G-2: the page explicitly introduces the verb-versus-noun construction as an example of replacing bureaucratic language."
+  },
+  {
+   "anchor": {
+    "block_id": "4d9dcab4c1f2",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use fewer than 3 adjectives or nouns at a time",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "cbdf6137627f",
+     "end": 81,
+     "prefix": "",
+     "quote": "Phrases that combine more than 3 adjectives or nouns are difficult to understand.",
+     "start": 0,
+     "suffix": " Rephrase sentences to break up "
+    },
+    {
+     "block_id": "cbdf6137627f",
+     "end": 150,
+     "prefix": "ns are difficult to understand. ",
+     "quote": "Rephrase sentences to break up strings of adjectives or noun trains.",
+     "start": 82,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8b8270cd4cf2",
+       "end": 105,
+       "prefix": "",
+       "quote": "The goal is to analyse how we can reallocate human resources. The analysis will inform our business plan.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7dc563c48a61",
+       "end": 71,
+       "prefix": "",
+       "quote": "The human resource reallocation analysis will inform our business plan.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "897e04399740a4f4",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Confirm the boundary before enforcing strings of exactly 3: the heading says fewer than 3, while the body says more than 3 are difficult. The violating example contains a four-word noun train.",
+    "unit": "phrase",
+    "violation_condition": "A phrase contains a string of 3 or more adjectives or nouns under the heading's stated limit; the body discusses difficulty only for strings of more than 3."
+   },
+   "when": [
+    "Applies to strings of adjectives and noun trains, not the total number of adjectives or nouns distributed throughout a sentence."
+   ],
+   "why": "G-2 and G-4 consolidate the train-length check; E-4 requires exposing rather than silently resolving the conflicting cutoff."
+  },
+  {
+   "anchor": {
+    "block_id": "8c8c482a1244",
+    "end": 38,
+    "prefix": "",
+    "quote": "Avoid using ‘if’ and ‘unless’ together",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "94b6a6b4cb9b",
+     "end": 63,
+     "prefix": "",
+     "quote": "Don’t use words such as ‘if’ and ‘unless’ in the same sentence.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7b7e5a1113f7",
+       "end": 59,
+       "prefix": "",
+       "quote": "From 1 October, your partner can sign forms on your behalf.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a417352d2a9e",
+       "end": 104,
+       "prefix": "",
+       "quote": "If your partner signed the form on your behalf, we can accept it unless they signed it before 1 October.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "190abd294f177ec8",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses both ‘if’ and ‘unless’ to express its conditions."
+   },
+   "when": [
+    "The two conditional words occur in the same sentence."
+   ],
+   "why": "G-4: the body supplies the same-sentence scope for the heading's single conditional-word check."
+  },
+  {
+   "anchor": {
+    "block_id": "06fdd19f44b5",
+    "end": 33,
+    "prefix": "",
+    "quote": "Don’t use the ‘such ... as’ form.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "818c6551b77a",
+       "end": 23,
+       "prefix": "",
+       "quote": "Take appropriate steps.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e7d319d2d600",
+       "end": 35,
+       "prefix": "",
+       "quote": "Take such steps as are appropriate.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Interpret the form using the example ‘such steps as are appropriate’. This is not a blanket prohibition on adjacent ‘such as’ introducing examples.",
+    "unit": "sentence",
+    "violation_condition": "A sentence uses the discontinuous ‘such ... as’ construction, such as a noun introduced by ‘such’ and qualified by an ‘as’ clause."
+   },
+   "when": [
+    "Applies to the discontinuous construction illustrated by the manual."
+   ],
+   "why": "G-1: the parent heading groups this construction and the unrelated ‘being’ construction, which need separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "6001cdacf92b",
+    "end": 44,
+    "prefix": "",
+    "quote": "Use ‘and’ instead of ‘being’ or ‘not being’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1a54ad002522",
+       "end": 56,
+       "prefix": "",
+       "quote": "A person who is 70 or over and has a driving licence ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "08880c9af348",
+       "end": 72,
+       "prefix": "",
+       "quote": "A person who is 70 or over, being a person who has a driving licence ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "Apply this to the qualifying construction illustrated by ‘being a person who has’. Do not flag every occurrence of ‘being’, including unrelated verb uses or nouns such as ‘human being’.",
+    "unit": "sentence",
+    "violation_condition": "An additional descriptive condition is attached with ‘being’ or ‘not being’ where it could instead be coordinated with ‘and’."
+   },
+   "when": [
+    "The ‘being’ or ‘not being’ construction introduces a condition that can be expressed with ‘and’."
+   ],
+   "why": "G-1 and E-2: this body instruction and its own contrast pair define a separate check from ‘such ... as’."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 6621,
+  "output_tokens": 15847,
+  "reasoning_tokens": 7768
+ }
+}

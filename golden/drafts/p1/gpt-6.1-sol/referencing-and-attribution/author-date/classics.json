@@ -1,0 +1,2973 @@
+{
+ "effort": "high",
+ "input_sha256": "8f5e0c74c87e66546f69d10352cfd6782b17cf5f0bb0bfac6400487b65073969",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a01ba0cff47b",
+    "end": 100,
+    "prefix": "rom ancient and medieval times. ",
+    "quote": "Cite titles in line with the author–date system.",
+    "start": 52,
+    "suffix": " Use correct attribution to help"
+   },
+   "note": "An introductory summary of the page’s citation guidance, not an additional citation-format check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a01ba0cff47b",
+    "end": 210,
+    "prefix": "ne with the author–date system. ",
+    "quote": "Use correct attribution to help people find the source in its original language or as an English translation.",
+    "start": 101,
+    "suffix": ""
+   },
+   "note": "States the goal of attribution without specifying a separate testable text property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7b22ff6f5140",
+    "end": 28,
+    "prefix": "",
+    "quote": "Cite classics as book titles",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific capitalisation and title-formatting checks.",
+   "reason": "section",
+   "seed_uid": "9e28a348bc741016"
+  },
+  {
+   "anchor": {
+    "block_id": "a9173db126fb",
+    "end": 97,
+    "prefix": "",
+    "quote": "In references and in-text citations, treat the titles of classics as you would other book titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the three specific title-style instructions that follow.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5626249a9903",
+    "end": 286,
+    "prefix": "classics in government content. ",
+    "quote": "If your organisation uses the documentary–note system, change the citation and style of reference list accordingly.",
+    "start": 171,
+    "suffix": ""
+   },
+   "note": "Directs the writer to adapt the examples to another system but supplies no documentary–note forms to check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "df6dc7264262",
+    "end": 29,
+    "prefix": "",
+    "quote": "Use correct in-text citations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific instructions for incomplete information and unknown authors.",
+   "reason": "section",
+   "seed_uid": "4b5c17b18862e1fc"
+  },
+  {
+   "anchor": {
+    "block_id": "ac312a7b6377",
+    "end": 154,
+    "prefix": "",
+    "quote": "If you don’t know the author or the date of a work, use the name of the translator (trans) and the date of publication of the edition you’re working with.",
+    "start": 0,
+    "suffix": " Place the date at the end of th"
+   },
+   "note": "Its translator and edition-date requirements are consolidated into the corresponding reference-entry checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b05c5ad2963a",
+    "end": 76,
+    "prefix": "",
+    "quote": "Use the author’s common name in text, in-text citations and reference lists.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: supplies the scope of the selected common-name heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "019b57786801",
+    "end": 52,
+    "prefix": "",
+    "quote": "Include divisions in in-text citations when possible",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The selected body sentence states the actionable condition: the cited work has divisions.",
+   "reason": "restatement",
+   "seed_uid": "900d28e433818eb3"
+  },
+  {
+   "anchor": {
+    "block_id": "2606333d0434",
+    "end": 56,
+    "prefix": "",
+    "quote": "For subsequent citations, don’t spell out the divisions.",
+    "start": 0,
+    "suffix": " You only need the division numb"
+   },
+   "note": "G-2: the subsequent-citation case belongs to the division-name check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2606333d0434",
+    "end": 92,
+    "prefix": " don’t spell out the divisions. ",
+    "quote": "You only need the division numbers.",
+    "start": 57,
+    "suffix": " Separate divisions with a full "
+   },
+   "note": "Explains the numeric form required by the preceding subsequent-citation instruction.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2606333d0434",
+    "end": 129,
+    "prefix": "only need the division numbers. ",
+    "quote": "Separate divisions with a full stop.",
+    "start": 93,
+    "suffix": " Don’t place a comma between the"
+   },
+   "note": "G-2: the subsequent-citation case of the inter-division separator check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2606333d0434",
+    "end": 205,
+    "prefix": "ate divisions with a full stop. ",
+    "quote": "Don’t place a comma between the title of the work and the division numbers.",
+    "start": 130,
+    "suffix": ""
+   },
+   "note": "G-2: the subsequent-citation case of the title-to-division punctuation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2abe00c0eb4b",
+    "end": 59,
+    "prefix": "",
+    "quote": "If you have only one division to cite, always spell it out.",
+    "start": 0,
+    "suffix": " Place a comma between the title"
+   },
+   "note": "G-2: a single-division exception within the division-name check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2abe00c0eb4b",
+    "end": 109,
+    "prefix": "n to cite, always spell it out. ",
+    "quote": "Place a comma between the title and the division.",
+    "start": 60,
+    "suffix": ""
+   },
+   "note": "G-2: the single-division case of the title-to-division punctuation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "89538be9c0ff",
+    "end": 102,
+    "prefix": "",
+    "quote": "If you’re referring to an edition that doesn’t have divisions, you can refer to specific page numbers.",
+    "start": 0,
+    "suffix": " In these cases, place the date "
+   },
+   "note": "G-3: permits a page locator; its use triggers the following date, page and punctuation requirements.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "498ca15cb5e8",
+    "end": 44,
+    "prefix": "",
+    "quote": "Cite titles in the most appropriate language",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups translated-work and original-language instructions.",
+   "reason": "section",
+   "seed_uid": "73126de6fd1f439a"
+  },
+  {
+   "anchor": {
+    "block_id": "cfbc25d66e3a",
+    "end": 147,
+    "prefix": "",
+    "quote": "If any text should be pronounced in its original language (rather than English), screen readers need to be able to determine what that language is.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns machine-readable language identification for assistive technology, not the wording of a citation.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b64bf5c29c3a",
+    "end": 209,
+    "prefix": "rs on the source you’re citing. ",
+    "quote": "If you include the work in a reference list, use the date of the translation and the name of the translator (‘trans’).",
+    "start": 91,
+    "suffix": ""
+   },
+   "note": "Its two requirements are consolidated into the edition-date and translator-attribution checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "90d655fe86ee",
+    "end": 30,
+    "prefix": "",
+    "quote": "Works in the original language",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Names the subsection’s subject; the following paragraph states the instructions.",
+   "reason": "description",
+   "seed_uid": "62cc48fcff1c35f0"
+  },
+  {
+   "anchor": {
+    "block_id": "bded8d94909e",
+    "end": 35,
+    "prefix": "",
+    "quote": "List classics with other references",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the earlier conditional requirement to include cited classics in a reference list.",
+   "reason": "restatement",
+   "seed_uid": "70f642b4470e1eed"
+  },
+  {
+   "anchor": {
+    "block_id": "ea2e43fcf4c3",
+    "end": 53,
+    "prefix": "",
+    "quote": "You don’t usually need a reference list for classics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: relaxes the need for a reference list; retained with the conditional inclusion rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dde69dadfb31",
+    "end": 118,
+    "prefix": "",
+    "quote": "If you are using a reference list because you’re citing other works as well, then include the classics you have cited.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the earlier reference-list inclusion rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "73a00d2e8cb5",
+    "end": 119,
+    "prefix": "",
+    "quote": "If you include a classics work in the reference list, cite the particular translation and edition you are working with.",
+    "start": 0,
+    "suffix": " Make sure you:"
+   },
+   "note": "Introduces the specific reference-entry requirements that follow; do not add an umbrella finding over those checks.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "73a00d2e8cb5",
+    "end": 134,
+    "prefix": "d edition you are working with. ",
+    "quote": "Make sure you:",
+    "start": 120,
+    "suffix": ""
+   },
+   "note": "A lead-in to the specific requirements, not an independent check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "80266aeacd24",
+    "end": 165,
+    "prefix": "",
+    "quote": "place the date at the end of the reference list entry – this is contrary to author–date style, but it stops possible confusion caused by, for example, ‘Plato (1954)’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: repeats and explains the earlier date-placement instruction.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "referencing-and-attribution/author-date/classics.md",
+ "page_sha256": "3a5664c98a8808b7757055c46ef04ed3f02678b38e0ffe17e329361bd6d4a1df",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a01ba0cff47b",
+    "note": "An introductory summary of the page’s citation guidance, not an additional citation-format check.",
+    "quote": "Cite titles in line with the author–date system.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a01ba0cff47b",
+    "note": "States the goal of attribution without specifying a separate testable text property.",
+    "quote": "Use correct attribution to help people find the source in its original language or as an English translation.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "7b22ff6f5140",
+    "note": "G-1: groups the specific capitalisation and title-formatting checks.",
+    "quote": "Cite classics as book titles",
+    "reason": "section"
+   },
+   {
+    "block_id": "a9173db126fb",
+    "note": "Introduces the three specific title-style instructions that follow.",
+    "quote": "In references and in-text citations, treat the titles of classics as you would other book titles.",
+    "reason": "section"
+   },
+   {
+    "block_id": "5626249a9903",
+    "note": "Directs the writer to adapt the examples to another system but supplies no documentary–note forms to check.",
+    "quote": "If your organisation uses the documentary–note system, change the citation and style of reference list accordingly.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "df6dc7264262",
+    "note": "G-1: groups the specific instructions for incomplete information and unknown authors.",
+    "quote": "Use correct in-text citations",
+    "reason": "section"
+   },
+   {
+    "block_id": "ac312a7b6377",
+    "note": "Its translator and edition-date requirements are consolidated into the corresponding reference-entry checks.",
+    "quote": "If you don’t know the author or the date of a work, use the name of the translator (trans) and the date of publication of the edition you’re working with.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b05c5ad2963a",
+    "note": "G-4: supplies the scope of the selected common-name heading.",
+    "quote": "Use the author’s common name in text, in-text citations and reference lists.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "019b57786801",
+    "note": "The selected body sentence states the actionable condition: the cited work has divisions.",
+    "quote": "Include divisions in in-text citations when possible",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2606333d0434",
+    "note": "G-2: the subsequent-citation case belongs to the division-name check.",
+    "quote": "For subsequent citations, don’t spell out the divisions.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2606333d0434",
+    "note": "Explains the numeric form required by the preceding subsequent-citation instruction.",
+    "quote": "You only need the division numbers.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2606333d0434",
+    "note": "G-2: the subsequent-citation case of the inter-division separator check.",
+    "quote": "Separate divisions with a full stop.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2606333d0434",
+    "note": "G-2: the subsequent-citation case of the title-to-division punctuation check.",
+    "quote": "Don’t place a comma between the title of the work and the division numbers.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2abe00c0eb4b",
+    "note": "G-2: a single-division exception within the division-name check.",
+    "quote": "If you have only one division to cite, always spell it out.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2abe00c0eb4b",
+    "note": "G-2: the single-division case of the title-to-division punctuation check.",
+    "quote": "Place a comma between the title and the division.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "89538be9c0ff",
+    "note": "G-3: permits a page locator; its use triggers the following date, page and punctuation requirements.",
+    "quote": "If you’re referring to an edition that doesn’t have divisions, you can refer to specific page numbers.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "498ca15cb5e8",
+    "note": "G-1: groups translated-work and original-language instructions.",
+    "quote": "Cite titles in the most appropriate language",
+    "reason": "section"
+   },
+   {
+    "block_id": "cfbc25d66e3a",
+    "note": "Concerns machine-readable language identification for assistive technology, not the wording of a citation.",
+    "quote": "If any text should be pronounced in its original language (rather than English), screen readers need to be able to determine what that language is.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b64bf5c29c3a",
+    "note": "Its two requirements are consolidated into the edition-date and translator-attribution checks.",
+    "quote": "If you include the work in a reference list, use the date of the translation and the name of the translator (‘trans’).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "90d655fe86ee",
+    "note": "Names the subsection’s subject; the following paragraph states the instructions.",
+    "quote": "Works in the original language",
+    "reason": "description"
+   },
+   {
+    "block_id": "bded8d94909e",
+    "note": "G-4: repeats the earlier conditional requirement to include cited classics in a reference list.",
+    "quote": "List classics with other references",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ea2e43fcf4c3",
+    "note": "G-3: relaxes the need for a reference list; retained with the conditional inclusion rule.",
+    "quote": "You don’t usually need a reference list for classics.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "dde69dadfb31",
+    "note": "G-4: repeats the earlier reference-list inclusion rule.",
+    "quote": "If you are using a reference list because you’re citing other works as well, then include the classics you have cited.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "73a00d2e8cb5",
+    "note": "Introduces the specific reference-entry requirements that follow; do not add an umbrella finding over those checks.",
+    "quote": "If you include a classics work in the reference list, cite the particular translation and edition you are working with.",
+    "reason": "section"
+   },
+   {
+    "block_id": "73a00d2e8cb5",
+    "note": "A lead-in to the specific requirements, not an independent check.",
+    "quote": "Make sure you:",
+    "reason": "section"
+   },
+   {
+    "block_id": "80266aeacd24",
+    "note": "G-4: repeats and explains the earlier date-placement instruction.",
+    "quote": "place the date at the end of the reference list entry – this is contrary to author–date style, but it stops possible confusion caused by, for example, ‘Plato (1954)’",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "19236b30bf6c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use sentence case – capitalise only the first letter of the title and the first letter of any proper noun.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A classic’s title in a reference or in-text citation has capitals other than those required for its first word and proper nouns, or lacks those required capitals.",
+    "when": [
+     "Applies to titles of classics in references and in-text citations."
+    ],
+    "why": "G-1: title capitalisation is a distinct check beneath the grouping heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "425fd0e3977b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use italics for the titles of books, series and anthologies.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title of a classical book, series or anthology is not italicised in a reference or in-text citation.",
+    "when": [
+     "Applies to titles of classics in references and in-text citations."
+    ],
+    "why": "G-1: whole-work title formatting is a distinct check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "219b090656db",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use quotation marks for the titles of chapters, poems or sections.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A chapter, poem or section title from a classic is not enclosed in quotation marks in a reference or in-text citation.",
+    "when": [
+     "Applies to titles of chapters, poems or sections in references and in-text citations."
+    ],
+    "why": "G-1: component-title formatting is separate from whole-work title formatting."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "455b5e04c0b0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bded8d94909e",
+      "quote": "List classics with other references"
+     },
+     {
+      "block_id": "dde69dadfb31",
+      "quote": "If you are using a reference list because you’re citing other works as well, then include the classics you have cited."
+     },
+     {
+      "block_id": "ea2e43fcf4c3",
+      "quote": "You don’t usually need a reference list for classics."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you’re using a reference list, include any classics that you cite.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A document has a reference list but omits a classic cited in the document from that list.",
+    "when": [
+     "Applies when the document uses a reference list.",
+     "A reference list is not usually required solely for classics."
+    ],
+    "why": "G-2, G-3 and G-4: consolidate repeated inclusion instructions and retain the permission not to have a reference list."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1755ece4944e",
+    "clarity_suggestion": "not_automatable",
+    "covers": [],
+    "detection_hint": "unsure",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include the information that you know in in-text citations.",
+    "specification": "The page does not enumerate the information required by this general instruction. The writer’s knowledge cannot be established from the citation alone.",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation omits identifying information about the classic that is known to the writer.",
+    "when": [
+     "Applies to in-text citations of classics.",
+     "Information such as the author or original publication date may be unavailable."
+    ],
+    "why": "Retain an explicit requirement about citation content, but do not invent required fields or assume the writer knows them."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "72324323ea3f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "214a4fe2afb5",
+        "quote": "Beowulf is the story of a hero who defeats a dragon."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f919de39e132",
+        "quote": "Like Grendel (Beowulf), you seem to suffer with the joy of others."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5ec4b8102658",
+        "quote": "Beowulf (Anon) is the story of a hero who defeats a dragon."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bb4fafd59281",
+        "quote": "Like Grendel (Anonymous Beowulf), you seem to suffer with the joy of others."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "If you don’t know the name of the author, don’t use ‘Anon’,‘unknown’ or ‘Anonymous’ in the in-text citation.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation uses ‘Anon’, ‘unknown’ or ‘Anonymous’ as a substitute for an unknown author’s name.",
+    "when": [
+     "Applies when the author’s name is unknown.",
+     "Applies to in-text citations."
+    ],
+    "why": "G-2: the three prohibited substitutes are cases of one unknown-author check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "640ea23cd31d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ac312a7b6377",
+      "quote": "If you don’t know the author or the date of a work, use the name of the translator (trans) and the date of publication of the edition you’re working with."
+     },
+     {
+      "block_id": "b64bf5c29c3a",
+      "quote": "If you include the work in a reference list, use the date of the translation and the name of the translator (‘trans’)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2614a3a27df1",
+        "quote": "Beowulf (Heaney S, trans), Faber & Faber Ltd, London, 2002."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "02b79a2471eb",
+        "quote": "Euripides, The Trojan women, (Murray G and Allen G, trans), London, 1905; Project Gutenberg, 2011, accessed 30 November 2019."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e2a561c53e87",
+        "quote": "Plato, Phaedo(Tredennick H, trans), Penguin, Harmondsworth, 1954."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dab67fdcb255",
+        "quote": "Dante, The divine comedy (Ruse HR, trans), Holt, Rinehart and Winston, New York, 1954."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "acknowledge the translator (‘trans’)",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A reference-list entry for a translated classic omits the translator’s name or the ‘trans’ designation.",
+    "when": [
+     "Applies to reference-list entries for translated classics.",
+     "Translator attribution is also required in the stated fallback for a work whose author or date is unknown."
+    ],
+    "why": "G-2 and G-4: consolidate repeated translator-attribution requirements rather than flag the same omission several times."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5a20c1888102",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ac312a7b6377",
+      "quote": "If you don’t know the author or the date of a work, use the name of the translator (trans) and the date of publication of the edition you’re working with."
+     },
+     {
+      "block_id": "b64bf5c29c3a",
+      "quote": "If you include the work in a reference list, use the date of the translation and the name of the translator (‘trans’)."
+     },
+     {
+      "block_id": "73a00d2e8cb5",
+      "quote": "If you include a classics work in the reference list, cite the particular translation and edition you are working with."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2614a3a27df1",
+        "quote": "Beowulf (Heaney S, trans), Faber & Faber Ltd, London, 2002."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "02b79a2471eb",
+        "quote": "Euripides, The Trojan women, (Murray G and Allen G, trans), London, 1905; Project Gutenberg, 2011, accessed 30 November 2019."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e2a561c53e87",
+        "quote": "Plato, Phaedo(Tredennick H, trans), Penguin, Harmondsworth, 1954."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dab67fdcb255",
+        "quote": "Dante, The divine comedy (Ruse HR, trans), Holt, Rinehart and Winston, New York, 1954."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "specify the date of the edition, not the date of the creation of the work",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A reference-list entry for a classic lacks the publication date of the edition or translation being cited, including an entry that supplies only the work’s creation date.",
+    "when": [
+     "Applies to classics included in a reference list.",
+     "For a translated work, use the date of the translation being cited.",
+     "This also applies when the original author or date is unknown."
+    ],
+    "why": "G-2 and G-4: the repeated edition-date instructions are one check, distinct from translator attribution and date placement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ac312a7b6377",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "80266aeacd24",
+      "quote": "place the date at the end of the reference list entry – this is contrary to author–date style, but it stops possible confusion caused by, for example, ‘Plato (1954)’"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2614a3a27df1",
+        "quote": "Beowulf (Heaney S, trans), Faber & Faber Ltd, London, 2002."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e2a561c53e87",
+        "quote": "Plato, Phaedo(Tredennick H, trans), Penguin, Harmondsworth, 1954."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dab67fdcb255",
+        "quote": "Dante, The divine comedy (Ruse HR, trans), Holt, Rinehart and Winston, New York, 1954."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Place the date at the end of the reference.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The edition or translation date is placed earlier in a classic’s reference entry rather than at the end.",
+    "when": [
+     "Applies to reference-list entries for classics.",
+     "The later reference-list instruction applies this placement generally, not only when the author or original date is unknown."
+    ],
+    "why": "G-4: the later list item restates the same date-placement check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "84dc9c067739",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b05c5ad2963a",
+      "quote": "Use the author’s common name in text, in-text citations and reference lists."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "922e7c564a85",
+        "quote": "As Cicero expressed it, ‘Is there anything rasher and more unworthy of the dignity and strength of character of a wise man than the holding of a false opinion?’ (On the nature of the gods)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0f77509ffd7a",
+        "quote": "As Marcus Tullius Cicero expressed it, ‘Is there anything rasher and more unworthy of the dignity and strength of character of a wise man than the holding of a false opinion?’ (On the nature of the gods)"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use common names for authors",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An author of a classical or medieval work is identified by an expanded given-name-and-surname form rather than the author’s established common name.",
+    "when": [
+     "Applies in running text, in-text citations and reference lists.",
+     "Use the established common name for the classical or medieval author."
+    ],
+    "why": "G-4: the body supplies the heading’s scope, not a second common-name rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "eafcf438efaf",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a83b62d61a74",
+      "quote": "[In this example, Dante appears in the text as a character in The divine comedy and appears in the citation as author]"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "As with other books, if you mention the author in the sentence, don’t place the author’s name in brackets with the title of the work.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A parenthetical citation repeats the author’s name when the sentence already identifies that person as the author.",
+    "when": [
+     "Applies when the author is mentioned as the author in the sentence.",
+     "A mention of the same person as a character does not replace author attribution in the citation."
+    ],
+    "why": "G-2 and E-1: distinguish author attribution from a character mention so the Dante example is not falsely flagged."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b7909260e5a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "019b57786801",
+      "quote": "Include divisions in in-text citations when possible"
+     },
+     {
+      "block_id": "89538be9c0ff",
+      "quote": "If you’re referring to an edition that doesn’t have divisions, you can refer to specific page numbers."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c9254621101a",
+        "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 65C–66E)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9d42ea92f5cd",
+        "quote": "He ended his retirement speech with Ovid’s ‘Turn loose the swans that drew my poet’s car.’ (The art of love 3.810)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a83b62d61a74",
+        "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought’. (Dante The divine comedy 20.151)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the work you’re citing has divisions, quote them in the in-text citation.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation of a passage from a classic with divisions omits the relevant division locator.",
+    "when": [
+     "Applies when the cited work has divisions, such as books, chapters, sections, lines or verses.",
+     "For an edition without divisions, the page permits specific page numbers instead."
+    ],
+    "why": "G-3 and G-4: use the explicit condition from the body and retain the page-number alternative as an exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b7909260e5a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2606333d0434",
+      "quote": "For subsequent citations, don’t spell out the divisions. You only need the division numbers."
+     },
+     {
+      "block_id": "2abe00c0eb4b",
+      "quote": "If you have only one division to cite, always spell it out."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b566cfedb52e",
+        "quote": "(Ovid The art of love, book 3, line 810)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f032c05304a3",
+        "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (Dante The divine comedy, canto 20, line 151)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9186d1340086",
+        "quote": "(Ovid The art of love3.815)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fc2f1a067d29",
+        "quote": "(Dante The divine comedy 20.151)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "539169132330",
+        "quote": "Virgil and Dante argue over the value of pitying the sinners in their suffering. (Dante The divine comedy, canto 20)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The first time you cite a work, spell out the divisions.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A citation uses bare division numbers where division names are required, or spells out division names in a subsequent citation containing multiple divisions.",
+    "when": [
+     "Spell out division names in the first citation of a work.",
+     "In subsequent citations containing multiple divisions, use division numbers without spelling out the division names.",
+     "If citing only one division, always spell out its name, including in subsequent citations."
+    ],
+    "why": "G-2: first, subsequent and single-division citations are conditions on one division-name check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b7909260e5a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2606333d0434",
+      "quote": "Don’t place a comma between the title of the work and the division numbers."
+     },
+     {
+      "block_id": "2abe00c0eb4b",
+      "quote": "Place a comma between the title and the division."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b566cfedb52e",
+        "quote": "(Ovid The art of love, book 3, line 810)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f032c05304a3",
+        "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (Dante The divine comedy, canto 20, line 151)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9186d1340086",
+        "quote": "(Ovid The art of love3.815)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fc2f1a067d29",
+        "quote": "(Dante The divine comedy 20.151)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "539169132330",
+        "quote": "Virgil and Dante argue over the value of pitying the sinners in their suffering. (Dante The divine comedy, canto 20)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Place a comma between the title of the work and the first division.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The title-to-division boundary lacks a comma when divisions are spelled out, or contains a comma in a subsequent citation using division numbers alone.",
+    "when": [
+     "Use a comma in the first citation of a work.",
+     "Use a comma whenever only one division is cited.",
+     "Do not use a comma in subsequent citations containing multiple division numbers."
+    ],
+    "why": "G-2: the same title-to-locator punctuation check changes with citation context."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7b7909260e5a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2606333d0434",
+      "quote": "Separate divisions with a full stop."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b566cfedb52e",
+        "quote": "(Ovid The art of love, book 3, line 810)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f032c05304a3",
+        "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (Dante The divine comedy, canto 20, line 151)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9186d1340086",
+        "quote": "(Ovid The art of love3.815)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fc2f1a067d29",
+        "quote": "(Dante The divine comedy 20.151)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Separate divisions with a comma.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Multiple divisions are separated with punctuation other than commas in a first citation, or other than full stops in a subsequent numeric citation.",
+    "when": [
+     "Applies when a citation contains multiple divisions.",
+     "Separate spelled-out divisions with commas in the first citation.",
+     "Separate division numbers with full stops in subsequent citations."
+    ],
+    "why": "G-2: commas and full stops are conditional forms of one inter-division separator check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "89538be9c0ff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "89538be9c0ff",
+      "quote": "If you’re referring to an edition that doesn’t have divisions, you can refer to specific page numbers."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a23de35af48e",
+        "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 1954:85)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "276875d6a480",
+        "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (The divine comedy 1954:265)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "In these cases, place the date of the translation – or edition – you’re working with and the page number after the title of the work.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A page-based in-text citation for a classic without divisions does not give the cited translation or edition date followed by the page number after the title.",
+    "when": [
+     "Applies when the cited edition has no divisions and a specific page is cited.",
+     "Using specific page numbers in this situation is permitted, not compulsory."
+    ],
+    "why": "G-3: the optional page locator triggers requirements for its contents and placement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "89538be9c0ff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a23de35af48e",
+        "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 1954:85)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "276875d6a480",
+        "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (The divine comedy 1954:265)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Separate the date from the page numbers with a colon, not a full stop.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A page-based citation has no colon between its edition or translation date and page number, or uses another separator there.",
+    "when": [
+     "Applies to in-text page citations for editions without divisions."
+    ],
+    "why": "The date–page separator is independently checkable from locator contents and spacing."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "89538be9c0ff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a23de35af48e",
+        "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 1954:85)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "276875d6a480",
+        "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (The divine comedy 1954:265)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use spaces around the colon.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A space appears immediately before or after the colon separating a citation’s date and page number.",
+    "when": [
+     "Applies to the date–page colon in in-text page citations for editions without divisions."
+    ],
+    "why": "Colon spacing is a distinct finding from use of the wrong separator."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b64bf5c29c3a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "baccb10a8985",
+        "quote": "The heroism of women is a common motif in the stories of Hecuba, Andromache and Cassandra. (Euripides The Trojan women)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "In in-text citations, refer to the English title that appears on the source you’re citing.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation of a translated classic uses a title other than the English title appearing on the cited source.",
+    "when": [
+     "Applies to in-text citations of translated works."
+    ],
+    "why": "G-1: retain the translated-work instruction beneath the language grouping heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1145f8cf3f4d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "In these cases, cite the title in the original language.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation of a work being used in its original language substitutes a translated title for the original-language title.",
+    "when": [
+     "Applies when citing a work in its original language.",
+     "If that language uses a different alphabet to English, give the original-language title in anglicised spelling."
+    ],
+    "why": "G-1 and G-4: the descriptive subsection heading is replaced by its actionable body instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1145f8cf3f4d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e625f9d112b9",
+        "quote": "Troiades"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6491b186800a",
+        "quote": "Τρῳάδες"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the original language uses a different alphabet to English – ancient Greek for example – use the anglicised spelling.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An original-language title is written in its non-English alphabet rather than in anglicised spelling.",
+    "when": [
+     "Applies when citing a title in its original language and that language uses a different alphabet to English."
+    ],
+    "why": "The script or spelling check is distinct from choosing an original-language rather than translated title."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "92aad055a8d4",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "hyperlink titles in digital content where available.",
+    "specification": "The page does not define which destinations count as available or acceptable link targets.",
+    "unit": "phrase",
+    "violation_condition": "A classic’s title in a digital reference-list entry is not hyperlinked even though a link target is available.",
+    "when": [
+     "Applies to classics in reference lists in digital content.",
+     "Applies only where a link target is available."
+    ],
+    "why": "This is a property of the title text and its link, with an availability condition rather than an unconditional requirement."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "19236b30bf6c",
+    "end": 106,
+    "prefix": "",
+    "quote": "Use sentence case – capitalise only the first letter of the title and the first letter of any proper noun.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A classic’s title in a reference or in-text citation has capitals other than those required for its first word and proper nouns, or lacks those required capitals."
+   },
+   "when": [
+    "Applies to titles of classics in references and in-text citations."
+   ],
+   "why": "G-1: title capitalisation is a distinct check beneath the grouping heading."
+  },
+  {
+   "anchor": {
+    "block_id": "425fd0e3977b",
+    "end": 60,
+    "prefix": "",
+    "quote": "Use italics for the titles of books, series and anthologies.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title of a classical book, series or anthology is not italicised in a reference or in-text citation."
+   },
+   "when": [
+    "Applies to titles of classics in references and in-text citations."
+   ],
+   "why": "G-1: whole-work title formatting is a distinct check."
+  },
+  {
+   "anchor": {
+    "block_id": "219b090656db",
+    "end": 66,
+    "prefix": "",
+    "quote": "Use quotation marks for the titles of chapters, poems or sections.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A chapter, poem or section title from a classic is not enclosed in quotation marks in a reference or in-text citation."
+   },
+   "when": [
+    "Applies to titles of chapters, poems or sections in references and in-text citations."
+   ],
+   "why": "G-1: component-title formatting is separate from whole-work title formatting."
+  },
+  {
+   "anchor": {
+    "block_id": "455b5e04c0b0",
+    "end": 69,
+    "prefix": "",
+    "quote": "If you’re using a reference list, include any classics that you cite.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bded8d94909e",
+     "end": 35,
+     "prefix": "",
+     "quote": "List classics with other references",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dde69dadfb31",
+     "end": 118,
+     "prefix": "",
+     "quote": "If you are using a reference list because you’re citing other works as well, then include the classics you have cited.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ea2e43fcf4c3",
+     "end": 53,
+     "prefix": "",
+     "quote": "You don’t usually need a reference list for classics.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A document has a reference list but omits a classic cited in the document from that list."
+   },
+   "when": [
+    "Applies when the document uses a reference list.",
+    "A reference list is not usually required solely for classics."
+   ],
+   "why": "G-2, G-3 and G-4: consolidate repeated inclusion instructions and retain the permission not to have a reference list."
+  },
+  {
+   "anchor": {
+    "block_id": "1755ece4944e",
+    "end": 59,
+    "prefix": "",
+    "quote": "Include the information that you know in in-text citations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "not_automatable",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "unsure",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not enumerate the information required by this general instruction. The writer’s knowledge cannot be established from the citation alone.",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation omits identifying information about the classic that is known to the writer."
+   },
+   "when": [
+    "Applies to in-text citations of classics.",
+    "Information such as the author or original publication date may be unavailable."
+   ],
+   "why": "Retain an explicit requirement about citation content, but do not invent required fields or assume the writer knows them."
+  },
+  {
+   "anchor": {
+    "block_id": "72324323ea3f",
+    "end": 108,
+    "prefix": "",
+    "quote": "If you don’t know the name of the author, don’t use ‘Anon’,‘unknown’ or ‘Anonymous’ in the in-text citation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "214a4fe2afb5",
+       "end": 52,
+       "prefix": "",
+       "quote": "Beowulf is the story of a hero who defeats a dragon.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f919de39e132",
+       "end": 66,
+       "prefix": "",
+       "quote": "Like Grendel (Beowulf), you seem to suffer with the joy of others.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5ec4b8102658",
+       "end": 59,
+       "prefix": "",
+       "quote": "Beowulf (Anon) is the story of a hero who defeats a dragon.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bb4fafd59281",
+       "end": 76,
+       "prefix": "",
+       "quote": "Like Grendel (Anonymous Beowulf), you seem to suffer with the joy of others.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation uses ‘Anon’, ‘unknown’ or ‘Anonymous’ as a substitute for an unknown author’s name."
+   },
+   "when": [
+    "Applies when the author’s name is unknown.",
+    "Applies to in-text citations."
+   ],
+   "why": "G-2: the three prohibited substitutes are cases of one unknown-author check."
+  },
+  {
+   "anchor": {
+    "block_id": "640ea23cd31d",
+    "end": 36,
+    "prefix": "",
+    "quote": "acknowledge the translator (‘trans’)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ac312a7b6377",
+     "end": 154,
+     "prefix": "",
+     "quote": "If you don’t know the author or the date of a work, use the name of the translator (trans) and the date of publication of the edition you’re working with.",
+     "start": 0,
+     "suffix": " Place the date at the end of th"
+    },
+    {
+     "block_id": "b64bf5c29c3a",
+     "end": 209,
+     "prefix": "rs on the source you’re citing. ",
+     "quote": "If you include the work in a reference list, use the date of the translation and the name of the translator (‘trans’).",
+     "start": 91,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2614a3a27df1",
+       "end": 59,
+       "prefix": "",
+       "quote": "Beowulf (Heaney S, trans), Faber & Faber Ltd, London, 2002.",
+       "start": 0,
+       "suffix": " [Reference-list entry]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "02b79a2471eb",
+       "end": 125,
+       "prefix": "",
+       "quote": "Euripides, The Trojan women, (Murray G and Allen G, trans), London, 1905; Project Gutenberg, 2011, accessed 30 November 2019.",
+       "start": 0,
+       "suffix": " [Reference-list entry: the date"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e2a561c53e87",
+       "end": 65,
+       "prefix": "",
+       "quote": "Plato, Phaedo(Tredennick H, trans), Penguin, Harmondsworth, 1954.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dab67fdcb255",
+       "end": 86,
+       "prefix": "",
+       "quote": "Dante, The divine comedy (Ruse HR, trans), Holt, Rinehart and Winston, New York, 1954.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A reference-list entry for a translated classic omits the translator’s name or the ‘trans’ designation."
+   },
+   "when": [
+    "Applies to reference-list entries for translated classics.",
+    "Translator attribution is also required in the stated fallback for a work whose author or date is unknown."
+   ],
+   "why": "G-2 and G-4: consolidate repeated translator-attribution requirements rather than flag the same omission several times."
+  },
+  {
+   "anchor": {
+    "block_id": "5a20c1888102",
+    "end": 73,
+    "prefix": "",
+    "quote": "specify the date of the edition, not the date of the creation of the work",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ac312a7b6377",
+     "end": 154,
+     "prefix": "",
+     "quote": "If you don’t know the author or the date of a work, use the name of the translator (trans) and the date of publication of the edition you’re working with.",
+     "start": 0,
+     "suffix": " Place the date at the end of th"
+    },
+    {
+     "block_id": "b64bf5c29c3a",
+     "end": 209,
+     "prefix": "rs on the source you’re citing. ",
+     "quote": "If you include the work in a reference list, use the date of the translation and the name of the translator (‘trans’).",
+     "start": 91,
+     "suffix": ""
+    },
+    {
+     "block_id": "73a00d2e8cb5",
+     "end": 119,
+     "prefix": "",
+     "quote": "If you include a classics work in the reference list, cite the particular translation and edition you are working with.",
+     "start": 0,
+     "suffix": " Make sure you:"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2614a3a27df1",
+       "end": 59,
+       "prefix": "",
+       "quote": "Beowulf (Heaney S, trans), Faber & Faber Ltd, London, 2002.",
+       "start": 0,
+       "suffix": " [Reference-list entry]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "02b79a2471eb",
+       "end": 125,
+       "prefix": "",
+       "quote": "Euripides, The Trojan women, (Murray G and Allen G, trans), London, 1905; Project Gutenberg, 2011, accessed 30 November 2019.",
+       "start": 0,
+       "suffix": " [Reference-list entry: the date"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e2a561c53e87",
+       "end": 65,
+       "prefix": "",
+       "quote": "Plato, Phaedo(Tredennick H, trans), Penguin, Harmondsworth, 1954.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dab67fdcb255",
+       "end": 86,
+       "prefix": "",
+       "quote": "Dante, The divine comedy (Ruse HR, trans), Holt, Rinehart and Winston, New York, 1954.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A reference-list entry for a classic lacks the publication date of the edition or translation being cited, including an entry that supplies only the work’s creation date."
+   },
+   "when": [
+    "Applies to classics included in a reference list.",
+    "For a translated work, use the date of the translation being cited.",
+    "This also applies when the original author or date is unknown."
+   ],
+   "why": "G-2 and G-4: the repeated edition-date instructions are one check, distinct from translator attribution and date placement."
+  },
+  {
+   "anchor": {
+    "block_id": "ac312a7b6377",
+    "end": 198,
+    "prefix": "he edition you’re working with. ",
+    "quote": "Place the date at the end of the reference.",
+    "start": 155,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "80266aeacd24",
+     "end": 165,
+     "prefix": "",
+     "quote": "place the date at the end of the reference list entry – this is contrary to author–date style, but it stops possible confusion caused by, for example, ‘Plato (1954)’",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2614a3a27df1",
+       "end": 59,
+       "prefix": "",
+       "quote": "Beowulf (Heaney S, trans), Faber & Faber Ltd, London, 2002.",
+       "start": 0,
+       "suffix": " [Reference-list entry]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e2a561c53e87",
+       "end": 65,
+       "prefix": "",
+       "quote": "Plato, Phaedo(Tredennick H, trans), Penguin, Harmondsworth, 1954.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dab67fdcb255",
+       "end": 86,
+       "prefix": "",
+       "quote": "Dante, The divine comedy (Ruse HR, trans), Holt, Rinehart and Winston, New York, 1954.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The edition or translation date is placed earlier in a classic’s reference entry rather than at the end."
+   },
+   "when": [
+    "Applies to reference-list entries for classics.",
+    "The later reference-list instruction applies this placement generally, not only when the author or original date is unknown."
+   ],
+   "why": "G-4: the later list item restates the same date-placement check."
+  },
+  {
+   "anchor": {
+    "block_id": "84dc9c067739",
+    "end": 28,
+    "prefix": "",
+    "quote": "Use common names for authors",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b05c5ad2963a",
+     "end": 76,
+     "prefix": "",
+     "quote": "Use the author’s common name in text, in-text citations and reference lists.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "922e7c564a85",
+       "end": 188,
+       "prefix": "",
+       "quote": "As Cicero expressed it, ‘Is there anything rasher and more unworthy of the dignity and strength of character of a wise man than the holding of a false opinion?’ (On the nature of the gods)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0f77509ffd7a",
+       "end": 203,
+       "prefix": "",
+       "quote": "As Marcus Tullius Cicero expressed it, ‘Is there anything rasher and more unworthy of the dignity and strength of character of a wise man than the holding of a false opinion?’ (On the nature of the gods)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "c53a5080dc806ab9",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An author of a classical or medieval work is identified by an expanded given-name-and-surname form rather than the author’s established common name."
+   },
+   "when": [
+    "Applies in running text, in-text citations and reference lists.",
+    "Use the established common name for the classical or medieval author."
+   ],
+   "why": "G-4: the body supplies the heading’s scope, not a second common-name rule."
+  },
+  {
+   "anchor": {
+    "block_id": "eafcf438efaf",
+    "end": 133,
+    "prefix": "",
+    "quote": "As with other books, if you mention the author in the sentence, don’t place the author’s name in brackets with the title of the work.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a83b62d61a74",
+     "end": 241,
+     "prefix": "Dante The divine comedy 20.151) ",
+     "quote": "[In this example, Dante appears in the text as a character in The divine comedy and appears in the citation as author]",
+     "start": 123,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A parenthetical citation repeats the author’s name when the sentence already identifies that person as the author."
+   },
+   "when": [
+    "Applies when the author is mentioned as the author in the sentence.",
+    "A mention of the same person as a character does not replace author attribution in the citation."
+   ],
+   "why": "G-2 and E-1: distinguish author attribution from a character mention so the Dante example is not falsely flagged."
+  },
+  {
+   "anchor": {
+    "block_id": "7b7909260e5a",
+    "end": 76,
+    "prefix": "",
+    "quote": "If the work you’re citing has divisions, quote them in the in-text citation.",
+    "start": 0,
+    "suffix": " The first time you cite a work,"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "019b57786801",
+     "end": 52,
+     "prefix": "",
+     "quote": "Include divisions in in-text citations when possible",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "89538be9c0ff",
+     "end": 102,
+     "prefix": "",
+     "quote": "If you’re referring to an edition that doesn’t have divisions, you can refer to specific page numbers.",
+     "start": 0,
+     "suffix": " In these cases, place the date "
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c9254621101a",
+       "end": 119,
+       "prefix": "",
+       "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 65C–66E)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9d42ea92f5cd",
+       "end": 114,
+       "prefix": "",
+       "quote": "He ended his retirement speech with Ovid’s ‘Turn loose the swans that drew my poet’s car.’ (The art of love 3.810)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a83b62d61a74",
+       "end": 122,
+       "prefix": "",
+       "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought’. (Dante The divine comedy 20.151)",
+       "start": 0,
+       "suffix": " [In this example, Dante appears"
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation of a passage from a classic with divisions omits the relevant division locator."
+   },
+   "when": [
+    "Applies when the cited work has divisions, such as books, chapters, sections, lines or verses.",
+    "For an edition without divisions, the page permits specific page numbers instead."
+   ],
+   "why": "G-3 and G-4: use the explicit condition from the body and retain the page-number alternative as an exception."
+  },
+  {
+   "anchor": {
+    "block_id": "7b7909260e5a",
+    "end": 133,
+    "prefix": "e them in the in-text citation. ",
+    "quote": "The first time you cite a work, spell out the divisions.",
+    "start": 77,
+    "suffix": " Place a comma between the title"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2606333d0434",
+     "end": 92,
+     "prefix": "",
+     "quote": "For subsequent citations, don’t spell out the divisions. You only need the division numbers.",
+     "start": 0,
+     "suffix": " Separate divisions with a full "
+    },
+    {
+     "block_id": "2abe00c0eb4b",
+     "end": 59,
+     "prefix": "",
+     "quote": "If you have only one division to cite, always spell it out.",
+     "start": 0,
+     "suffix": " Place a comma between the title"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b566cfedb52e",
+       "end": 40,
+       "prefix": "",
+       "quote": "(Ovid The art of love, book 3, line 810)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f032c05304a3",
+       "end": 135,
+       "prefix": "",
+       "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (Dante The divine comedy, canto 20, line 151)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9186d1340086",
+       "end": 27,
+       "prefix": "",
+       "quote": "(Ovid The art of love3.815)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fc2f1a067d29",
+       "end": 32,
+       "prefix": "",
+       "quote": "(Dante The divine comedy 20.151)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "539169132330",
+       "end": 116,
+       "prefix": "",
+       "quote": "Virgil and Dante argue over the value of pitying the sinners in their suffering. (Dante The divine comedy, canto 20)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A citation uses bare division numbers where division names are required, or spells out division names in a subsequent citation containing multiple divisions."
+   },
+   "when": [
+    "Spell out division names in the first citation of a work.",
+    "In subsequent citations containing multiple divisions, use division numbers without spelling out the division names.",
+    "If citing only one division, always spell out its name, including in subsequent citations."
+   ],
+   "why": "G-2: first, subsequent and single-division citations are conditions on one division-name check."
+  },
+  {
+   "anchor": {
+    "block_id": "7b7909260e5a",
+    "end": 201,
+    "prefix": " work, spell out the divisions. ",
+    "quote": "Place a comma between the title of the work and the first division.",
+    "start": 134,
+    "suffix": " Separate divisions with a comma"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2606333d0434",
+     "end": 205,
+     "prefix": "ate divisions with a full stop. ",
+     "quote": "Don’t place a comma between the title of the work and the division numbers.",
+     "start": 130,
+     "suffix": ""
+    },
+    {
+     "block_id": "2abe00c0eb4b",
+     "end": 109,
+     "prefix": "n to cite, always spell it out. ",
+     "quote": "Place a comma between the title and the division.",
+     "start": 60,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b566cfedb52e",
+       "end": 40,
+       "prefix": "",
+       "quote": "(Ovid The art of love, book 3, line 810)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f032c05304a3",
+       "end": 135,
+       "prefix": "",
+       "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (Dante The divine comedy, canto 20, line 151)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9186d1340086",
+       "end": 27,
+       "prefix": "",
+       "quote": "(Ovid The art of love3.815)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fc2f1a067d29",
+       "end": 32,
+       "prefix": "",
+       "quote": "(Dante The divine comedy 20.151)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "539169132330",
+       "end": 116,
+       "prefix": "",
+       "quote": "Virgil and Dante argue over the value of pitying the sinners in their suffering. (Dante The divine comedy, canto 20)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The title-to-division boundary lacks a comma when divisions are spelled out, or contains a comma in a subsequent citation using division numbers alone."
+   },
+   "when": [
+    "Use a comma in the first citation of a work.",
+    "Use a comma whenever only one division is cited.",
+    "Do not use a comma in subsequent citations containing multiple division numbers."
+   ],
+   "why": "G-2: the same title-to-locator punctuation check changes with citation context."
+  },
+  {
+   "anchor": {
+    "block_id": "7b7909260e5a",
+    "end": 234,
+    "prefix": "he work and the first division. ",
+    "quote": "Separate divisions with a comma.",
+    "start": 202,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2606333d0434",
+     "end": 129,
+     "prefix": "only need the division numbers. ",
+     "quote": "Separate divisions with a full stop.",
+     "start": 93,
+     "suffix": " Don’t place a comma between the"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b566cfedb52e",
+       "end": 40,
+       "prefix": "",
+       "quote": "(Ovid The art of love, book 3, line 810)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f032c05304a3",
+       "end": 135,
+       "prefix": "",
+       "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (Dante The divine comedy, canto 20, line 151)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9186d1340086",
+       "end": 27,
+       "prefix": "",
+       "quote": "(Ovid The art of love3.815)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fc2f1a067d29",
+       "end": 32,
+       "prefix": "",
+       "quote": "(Dante The divine comedy 20.151)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Multiple divisions are separated with punctuation other than commas in a first citation, or other than full stops in a subsequent numeric citation."
+   },
+   "when": [
+    "Applies when a citation contains multiple divisions.",
+    "Separate spelled-out divisions with commas in the first citation.",
+    "Separate division numbers with full stops in subsequent citations."
+   ],
+   "why": "G-2: commas and full stops are conditional forms of one inter-division separator check."
+  },
+  {
+   "anchor": {
+    "block_id": "89538be9c0ff",
+    "end": 236,
+    "prefix": "refer to specific page numbers. ",
+    "quote": "In these cases, place the date of the translation – or edition – you’re working with and the page number after the title of the work.",
+    "start": 103,
+    "suffix": " Separate the date from the page"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "89538be9c0ff",
+     "end": 102,
+     "prefix": "",
+     "quote": "If you’re referring to an edition that doesn’t have divisions, you can refer to specific page numbers.",
+     "start": 0,
+     "suffix": " In these cases, place the date "
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a23de35af48e",
+       "end": 119,
+       "prefix": "",
+       "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 1954:85)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "276875d6a480",
+       "end": 118,
+       "prefix": "",
+       "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (The divine comedy 1954:265)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A page-based in-text citation for a classic without divisions does not give the cited translation or edition date followed by the page number after the title."
+   },
+   "when": [
+    "Applies when the cited edition has no divisions and a specific page is cited.",
+    "Using specific page numbers in this situation is permitted, not compulsory."
+   ],
+   "why": "G-3: the optional page locator triggers requirements for its contents and placement."
+  },
+  {
+   "anchor": {
+    "block_id": "89538be9c0ff",
+    "end": 307,
+    "prefix": "er after the title of the work. ",
+    "quote": "Separate the date from the page numbers with a colon, not a full stop.",
+    "start": 237,
+    "suffix": " Don’t use spaces around the col"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a23de35af48e",
+       "end": 119,
+       "prefix": "",
+       "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 1954:85)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "276875d6a480",
+       "end": 118,
+       "prefix": "",
+       "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (The divine comedy 1954:265)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A page-based citation has no colon between its edition or translation date and page number, or uses another separator there."
+   },
+   "when": [
+    "Applies to in-text page citations for editions without divisions."
+   ],
+   "why": "The date–page separator is independently checkable from locator contents and spacing."
+  },
+  {
+   "anchor": {
+    "block_id": "89538be9c0ff",
+    "end": 342,
+    "prefix": " with a colon, not a full stop. ",
+    "quote": "Don’t use spaces around the colon.",
+    "start": 308,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a23de35af48e",
+       "end": 119,
+       "prefix": "",
+       "quote": "As one of the early philosophers wrote, ‘All wars are undertaken for the acquisition of wealth.’ (Plato Phaedo 1954:85)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "276875d6a480",
+       "end": 118,
+       "prefix": "",
+       "quote": "Josh hesitated at the doorway until, like Dante, he ‘went on, timid and full of thought.’ (The divine comedy 1954:265)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A space appears immediately before or after the colon separating a citation’s date and page number."
+   },
+   "when": [
+    "Applies to the date–page colon in in-text page citations for editions without divisions."
+   ],
+   "why": "Colon spacing is a distinct finding from use of the wrong separator."
+  },
+  {
+   "anchor": {
+    "block_id": "b64bf5c29c3a",
+    "end": 90,
+    "prefix": "",
+    "quote": "In in-text citations, refer to the English title that appears on the source you’re citing.",
+    "start": 0,
+    "suffix": " If you include the work in a re"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "baccb10a8985",
+       "end": 119,
+       "prefix": "",
+       "quote": "The heroism of women is a common motif in the stories of Hecuba, Andromache and Cassandra. (Euripides The Trojan women)",
+       "start": 0,
+       "suffix": " [In-text citation]"
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An in-text citation of a translated classic uses a title other than the English title appearing on the cited source."
+   },
+   "when": [
+    "Applies to in-text citations of translated works."
+   ],
+   "why": "G-1: retain the translated-work instruction beneath the language grouping heading."
+  },
+  {
+   "anchor": {
+    "block_id": "1145f8cf3f4d",
+    "end": 56,
+    "prefix": "",
+    "quote": "In these cases, cite the title in the original language.",
+    "start": 0,
+    "suffix": " If the original language uses a"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation of a work being used in its original language substitutes a translated title for the original-language title."
+   },
+   "when": [
+    "Applies when citing a work in its original language.",
+    "If that language uses a different alphabet to English, give the original-language title in anglicised spelling."
+   ],
+   "why": "G-1 and G-4: the descriptive subsection heading is replaced by its actionable body instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "1145f8cf3f4d",
+    "end": 177,
+    "prefix": "title in the original language. ",
+    "quote": "If the original language uses a different alphabet to English – ancient Greek for example – use the anglicised spelling.",
+    "start": 57,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e625f9d112b9",
+       "end": 8,
+       "prefix": "",
+       "quote": "Troiades",
+       "start": 0,
+       "suffix": " [The ancient Greek name for The"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6491b186800a",
+       "end": 7,
+       "prefix": "",
+       "quote": "Τρῳάδες",
+       "start": 0,
+       "suffix": "[The Greek spelling of Troiades]"
+      }
+     ]
+    }
+   ],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An original-language title is written in its non-English alphabet rather than in anglicised spelling."
+   },
+   "when": [
+    "Applies when citing a title in its original language and that language uses a different alphabet to English."
+   ],
+   "why": "The script or spelling check is distinct from choosing an original-language rather than translated title."
+  },
+  {
+   "anchor": {
+    "block_id": "92aad055a8d4",
+    "end": 52,
+    "prefix": "",
+    "quote": "hyperlink titles in digital content where available.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define which destinations count as available or acceptable link targets.",
+    "unit": "phrase",
+    "violation_condition": "A classic’s title in a digital reference-list entry is not hyperlinked even though a link target is available."
+   },
+   "when": [
+    "Applies to classics in reference lists in digital content.",
+    "Applies only where a link target is available."
+   ],
+   "why": "This is a property of the title text and its link, with an availability condition rather than an unconditional requirement."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5833,
+  "output_tokens": 14330,
+  "reasoning_tokens": 4142
+ }
+}

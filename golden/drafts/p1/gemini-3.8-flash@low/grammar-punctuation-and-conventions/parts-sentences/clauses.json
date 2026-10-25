@@ -1,0 +1,421 @@
+{
+ "effort": "low",
+ "input_sha256": "6141a7a8e0d62664c17e468f221fa2cd22ea5aebbf8cad4b671ad8690be3e278",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "23b1a3b97ab4",
+    "end": 43,
+    "prefix": "",
+    "quote": "A main clause can stand alone as a sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive grammatical definition of what a main clause is, not an actionable drafting rule.",
+   "reason": "description",
+   "seed_uid": "0fed6224f797aea6"
+  },
+  {
+   "anchor": {
+    "block_id": "bd414875b6e2",
+    "end": 78,
+    "prefix": "",
+    "quote": "Every sentence has at least one main clause. The main clause is also known as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive grammatical definition of sentences and clauses.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6579bc613f60",
+    "end": 90,
+    "prefix": "",
+    "quote": "The main clause has at least one complete (finite) verb and can stand alone as a sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Grammatical definition.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f0a69081ed26",
+    "end": 17,
+    "prefix": "",
+    "quote": "Adverbial clauses",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping grammatical explanations and rules under adverbial clauses.",
+   "reason": "section",
+   "seed_uid": "9e2315b6134addea"
+  },
+  {
+   "anchor": {
+    "block_id": "215787939d29",
+    "end": 73,
+    "prefix": "",
+    "quote": "The sentence should still make sense if you remove the adjectival clause.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive test/explanation for identifying an adjectival clause, not a formatting or drafting violation check.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "aad0235d709e",
+    "end": 72,
+    "prefix": "",
+    "quote": "The sentence should still make sense if you remove the adverbial clause.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive test/explanation for identifying an adverbial clause.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/parts-sentences/clauses.md",
+ "page_sha256": "c9eae1dd0d274866dc7fd3696a9c07327142e050c1c8ead050922802714aeb80",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "23b1a3b97ab4",
+    "note": "Descriptive grammatical definition of what a main clause is, not an actionable drafting rule.",
+    "quote": "A main clause can stand alone as a sentence",
+    "reason": "description"
+   },
+   {
+    "block_id": "bd414875b6e2",
+    "note": "Descriptive grammatical definition of sentences and clauses.",
+    "quote": "Every sentence has at least one main clause. The main clause is also known as:",
+    "reason": "description"
+   },
+   {
+    "block_id": "6579bc613f60",
+    "note": "Grammatical definition.",
+    "quote": "The main clause has at least one complete (finite) verb and can stand alone as a sentence.",
+    "reason": "description"
+   },
+   {
+    "block_id": "f0a69081ed26",
+    "note": "Section heading grouping grammatical explanations and rules under adverbial clauses.",
+    "quote": "Adverbial clauses",
+    "reason": "section"
+   },
+   {
+    "block_id": "215787939d29",
+    "note": "Descriptive test/explanation for identifying an adjectival clause, not a formatting or drafting violation check.",
+    "quote": "The sentence should still make sense if you remove the adjectival clause.",
+    "reason": "description"
+   },
+   {
+    "block_id": "aad0235d709e",
+    "note": "Descriptive test/explanation for identifying an adverbial clause.",
+    "quote": "The sentence should still make sense if you remove the adverbial clause.",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "53b8e9e3cd3b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "55756da14109",
+      "quote": "In the last example, the comma after the adverbial clause helps users find the subject in the sentence (‘she’)."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Comma correctly placed after the introductory adverbial clause.",
+      "parts": [
+       {
+        "block_id": "d3a996ebfa40",
+        "quote": "When I met with Eun-jung, Deng met with Evelyn."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Missing comma after introductory adverbial clause obscures the subject 'Deng'.",
+      "parts": [
+       {
+        "block_id": "2bd64bbc2a26",
+        "quote": "When I met with Eun-jung Deng met with Evelyn."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "In some sentences, the subject isn’t easy to find without the comma.",
+    "specification": "Separate an introductory adverbial clause from the main clause with a comma, especially when omitting it obscures the subject of the main clause.",
+    "unit": "sentence",
+    "violation_condition": "an introductory adverbial clause followed by the main clause without a separating comma when the boundary/subject of the main clause is ambiguous",
+    "when": [
+     "The sentence begins with an introductory adverbial clause."
+    ],
+    "why": "G-4, E-2: states the rule tested by the Correct/Incorrect pair directly below it."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d99ae590607f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "93a9e0662af1",
+      "quote": "‘If’ is conditional. It defines a condition that needs to exist for the main clause to be true."
+     },
+     {
+      "block_id": "e66c63e2cff9",
+      "quote": "‘Whether’ shows 2 possibilities. Sometimes one of the possibilities can be understood rather than explicitly mentioned."
+     },
+     {
+      "block_id": "fd903805dc17",
+      "quote": "When there are 2 concrete possibilities, using ‘if’ instead of ‘whether’ can lead to ambiguous sentences."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "'if' used correctly for a condition.",
+      "parts": [
+       {
+        "block_id": "752e5837486a",
+        "quote": "We can eat lunch outside if the rain stops."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "'whether' used correctly for two possibilities.",
+      "parts": [
+       {
+        "block_id": "1ad332e9514c",
+        "quote": "We can choose whether to eat lunch outside or inside."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "'whether' used correctly where 'or not' is implied.",
+      "parts": [
+       {
+        "block_id": "1cdcd1761c24",
+        "quote": "We asked whether the office was open [or not]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When you’re writing, choose the right one:",
+    "specification": "Use 'whether' when showing two possibilities or alternatives (expressed or implied), and reserve 'if' for conditional clauses.",
+    "unit": "sentence",
+    "violation_condition": "using 'if' instead of 'whether' when expressing two possibilities or alternatives",
+    "when": [
+     "The clause introduces two possibilities or alternatives rather than a condition."
+    ],
+    "why": "G-2, G-4: covers the distinction between 'if' and 'whether'."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "53b8e9e3cd3b",
+    "end": 68,
+    "prefix": "",
+    "quote": "In some sentences, the subject isn’t easy to find without the comma.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "55756da14109",
+     "end": 111,
+     "prefix": "",
+     "quote": "In the last example, the comma after the adverbial clause helps users find the subject in the sentence (‘she’).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Comma correctly placed after the introductory adverbial clause.",
+     "parts": [
+      {
+       "block_id": "d3a996ebfa40",
+       "end": 47,
+       "prefix": "",
+       "quote": "When I met with Eun-jung, Deng met with Evelyn.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Missing comma after introductory adverbial clause obscures the subject 'Deng'.",
+     "parts": [
+      {
+       "block_id": "2bd64bbc2a26",
+       "end": 46,
+       "prefix": "",
+       "quote": "When I met with Eun-jung Deng met with Evelyn.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Separate an introductory adverbial clause from the main clause with a comma, especially when omitting it obscures the subject of the main clause.",
+    "unit": "sentence",
+    "violation_condition": "an introductory adverbial clause followed by the main clause without a separating comma when the boundary/subject of the main clause is ambiguous"
+   },
+   "when": [
+    "The sentence begins with an introductory adverbial clause."
+   ],
+   "why": "G-4, E-2: states the rule tested by the Correct/Incorrect pair directly below it."
+  },
+  {
+   "anchor": {
+    "block_id": "d99ae590607f",
+    "end": 199,
+    "prefix": "t they have different meanings. ",
+    "quote": "When you’re writing, choose the right one:",
+    "start": 157,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "93a9e0662af1",
+     "end": 95,
+     "prefix": "",
+     "quote": "‘If’ is conditional. It defines a condition that needs to exist for the main clause to be true.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e66c63e2cff9",
+     "end": 119,
+     "prefix": "",
+     "quote": "‘Whether’ shows 2 possibilities. Sometimes one of the possibilities can be understood rather than explicitly mentioned.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fd903805dc17",
+     "end": 105,
+     "prefix": "",
+     "quote": "When there are 2 concrete possibilities, using ‘if’ instead of ‘whether’ can lead to ambiguous sentences.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "'if' used correctly for a condition.",
+     "parts": [
+      {
+       "block_id": "752e5837486a",
+       "end": 43,
+       "prefix": "",
+       "quote": "We can eat lunch outside if the rain stops.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "'whether' used correctly for two possibilities.",
+     "parts": [
+      {
+       "block_id": "1ad332e9514c",
+       "end": 53,
+       "prefix": "",
+       "quote": "We can choose whether to eat lunch outside or inside.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "'whether' used correctly where 'or not' is implied.",
+     "parts": [
+      {
+       "block_id": "1cdcd1761c24",
+       "end": 46,
+       "prefix": "",
+       "quote": "We asked whether the office was open [or not].",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Use 'whether' when showing two possibilities or alternatives (expressed or implied), and reserve 'if' for conditional clauses.",
+    "unit": "sentence",
+    "violation_condition": "using 'if' instead of 'whether' when expressing two possibilities or alternatives"
+   },
+   "when": [
+    "The clause introduces two possibilities or alternatives rather than a condition."
+   ],
+   "why": "G-2, G-4: covers the distinction between 'if' and 'whether'."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5663,
+  "output_tokens": 1542,
+  "reasoning_tokens": 0
+ }
+}

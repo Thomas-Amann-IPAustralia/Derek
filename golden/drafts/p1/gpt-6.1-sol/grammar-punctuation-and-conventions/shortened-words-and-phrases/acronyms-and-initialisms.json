@@ -1,0 +1,2116 @@
+{
+ "effort": "high",
+ "input_sha256": "ab1012b7c5d533f9e05e110636deb600f6c80df4044a7a34a1180f9f71809db7",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "c83573aaed26",
+    "end": 151,
+    "prefix": "ames and special terms in text. ",
+    "quote": "Use them only if people recognise and understand them.",
+    "start": 97,
+    "suffix": ""
+   },
+   "note": "Absorbed by the audience-recognition rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "afd4b4a717de",
+    "end": 147,
+    "prefix": "",
+    "quote": "When preparing content for well-established publications, such as professional journals, look at the author guidelines and examples of the content.",
+    "start": 0,
+    "suffix": " This will show whether using ac"
+   },
+   "note": "G-5: consulting publication guidance is a writer action, not an independently testable property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "27da5648de04",
+    "end": 45,
+    "prefix": "",
+    "quote": "Explain acronyms and initialisms to all users",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific definition, glossary and later-mention checks.",
+   "reason": "section",
+   "seed_uid": "8dbc7a4b80632f0d"
+  },
+  {
+   "anchor": {
+    "block_id": "fa16d51b1f8f",
+    "end": 50,
+    "prefix": "",
+    "quote": "Define them the first time you use them in content",
+    "start": 0,
+    "suffix": " (unless you’re certain all user"
+   },
+   "note": "Absorbed by the first-use definition rule, including its familiarity exception.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fa16d51b1f8f",
+    "end": 154,
+    "prefix": "and them without a definition – ",
+    "quote": "consult a dictionary first",
+    "start": 128,
+    "suffix": ")."
+   },
+   "note": "G-5: a reference-checking action, not a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dad7910d35bb",
+    "end": 105,
+    "prefix": "",
+    "quote": "If there’s a chance users won’t know the meaning of an acronym or initialism, define it at first mention.",
+    "start": 0,
+    "suffix": " Write the term in full first an"
+   },
+   "note": "The condition is incorporated into the first-use definition rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dad7910d35bb",
+    "end": 192,
+    "prefix": "sm, define it at first mention. ",
+    "quote": "Write the term in full first and follow with the acronym or initialism in parentheses.",
+    "start": 106,
+    "suffix": " Use the shortened form rather t"
+   },
+   "note": "The normal introduction format is incorporated into the first-use definition rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8b021bd01751",
+    "end": 92,
+    "prefix": "",
+    "quote": "Write well-known acronyms or initialisms first and follow with the full term in parentheses.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the well-known-form ordering case is incorporated into the first-use introduction check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c100d54e88a0",
+    "end": 68,
+    "prefix": "",
+    "quote": "You don’t need to define some acronyms and initialisms on first use.",
+    "start": 0,
+    "suffix": " These include:"
+   },
+   "note": "G-3: the following examples are exemptions recorded on the first-use rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6cb29800e4b0",
+    "end": 41,
+    "prefix": "",
+    "quote": "Repeat the full term if the user needs it",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: incorporated as the reader-needed repetition case of the later-mention rule.",
+   "reason": "restatement",
+   "seed_uid": "91009b3887832fcb"
+  },
+  {
+   "anchor": {
+    "block_id": "9a6410d322d2",
+    "end": 119,
+    "prefix": "",
+    "quote": "If you use the shortened form only a few times in long-form content, consider writing out the full term more than once.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: qualifies the preference for shortened later mentions; sparse use does not create an automatic repetition requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f5c7e091b8c6",
+    "end": 61,
+    "prefix": "",
+    "quote": "Check the correct shortened form for government organisations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: tells the writer to check a form. The body’s actionable naming preference is extracted separately.",
+   "reason": "advice",
+   "seed_uid": "2c7a6202fde09373"
+  },
+  {
+   "anchor": {
+    "block_id": "fe486597cbcf",
+    "end": 78,
+    "prefix": "",
+    "quote": "Rather than using acronyms or initialisms, it can be easier for people if you:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Provides the preference and context for the extracted full-name-then-generic-name sequence.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b819456038bd",
+    "end": 61,
+    "prefix": "",
+    "quote": "spell out the agency’s name in full the first time you use it",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The introduction step is incorporated into the government naming preference.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "455178ad5534",
+    "end": 139,
+    "prefix": "",
+    "quote": "For content with many specialised acronyms and initialisms, provide a glossary – a list of terms and their meaning that users can refer to.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: specifies the scope and meaning of the glossary-presence heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f76cda01e4ab",
+    "end": 40,
+    "prefix": "",
+    "quote": "You don’t need to include a glossary if:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: the following conditions form an exemption on the glossary-presence rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0fbcaf06b1b4",
+    "end": 72,
+    "prefix": "",
+    "quote": "The glossary usually appears before the references (with the endmatter).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the usual print position; incorporated as context for end-of-content placement rather than a separate mandatory order.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "44c892f33fe3",
+    "end": 56,
+    "prefix": "",
+    "quote": "Don’t place a full stop after the acronym or initialism.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: restates the full-stop heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7676bccbfa54",
+    "end": 105,
+    "prefix": "",
+    "quote": "Acronyms are usually all capitals, but use lower case for some familiar acronyms (taser, captcha, laser).",
+    "start": 0,
+    "suffix": " Use an initial capital for fami"
+   },
+   "note": "G-2: supplies the normal case and lower-case exceptions for the shortened-form capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7676bccbfa54",
+    "end": 189,
+    "prefix": "ronyms (taser, captcha, laser). ",
+    "quote": "Use an initial capital for familiar acronyms that are proper nouns (Qantas, Anzac).",
+    "start": 106,
+    "suffix": ""
+   },
+   "note": "G-2: another case of the shortened-form capitalisation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ede1a8dd2ef5",
+    "end": 141,
+    "prefix": "but there are exceptions (bpm). ",
+    "quote": "Consult a dictionary if you’re unsure of the capitalisation.",
+    "start": 81,
+    "suffix": ""
+   },
+   "note": "G-5: consultation is a writer action; established capitalisation is checked by the extracted rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4d785713ba46",
+    "end": 134,
+    "prefix": "",
+    "quote": "If the acronym or initialism represents a proper noun, start each word with a capital letter (excluding words such as ‘of’ and ‘and’).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: incorporated as the proper-noun case of full-form capitalisation.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3585f7bb400d",
+    "end": 84,
+    "prefix": "",
+    "quote": "Avoid using the plural or possessive of an acronym or initialism when you define it.",
+    "start": 0,
+    "suffix": " This makes it easy for users to"
+   },
+   "note": "G-4: clarifies that the heading’s restriction concerns the defining use.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "61789d514c7b",
+    "end": 248,
+    "prefix": "manages applications for ABNs. [",
+    "quote": "There’s no need to use an apostrophe before the ’s’ for ABNs as the term is plural, not possessive.",
+    "start": 149,
+    "suffix": "]"
+   },
+   "note": "An explanatory gloss about a later plural, not another restriction on defining forms.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4634785a7fc8",
+    "end": 189,
+    "prefix": "r with its staff and students. [",
+    "quote": "Use an apostrophe before the ’s’ to show that UNSW owns the policy.",
+    "start": 122,
+    "suffix": "]"
+   },
+   "note": "G-6: this is the general possessive-apostrophe convention, belonging on the apostrophes page rather than a separate acronyms check.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "783c19c58782",
+    "end": 58,
+    "prefix": "",
+    "quote": "Quote acronyms and initialisms the same way as the speaker",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the more explicit body sentence is selected for the quotation-fidelity rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1ba57176ae21",
+    "end": 66,
+    "prefix": "",
+    "quote": "When quoting an exact phrase, write exactly what the speaker said.",
+    "start": 0,
+    "suffix": " If they used an acronym or init"
+   },
+   "note": "Incorporated as context for preserving the speaker’s acronym or initialism, not extracted as an additional overlapping quotation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/shortened-words-and-phrases/acronyms-and-initialisms.md",
+ "page_sha256": "f2d0f02425211843abdf48bb049465092a0559d5ee374f7d1d4af91ef52d1fb6",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "c83573aaed26",
+    "note": "Absorbed by the audience-recognition rule.",
+    "quote": "Use them only if people recognise and understand them.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "afd4b4a717de",
+    "note": "G-5: consulting publication guidance is a writer action, not an independently testable property of the text.",
+    "quote": "When preparing content for well-established publications, such as professional journals, look at the author guidelines and examples of the content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "27da5648de04",
+    "note": "G-1: groups the specific definition, glossary and later-mention checks.",
+    "quote": "Explain acronyms and initialisms to all users",
+    "reason": "section"
+   },
+   {
+    "block_id": "fa16d51b1f8f",
+    "note": "Absorbed by the first-use definition rule, including its familiarity exception.",
+    "quote": "Define them the first time you use them in content",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "fa16d51b1f8f",
+    "note": "G-5: a reference-checking action, not a property of the resulting text.",
+    "quote": "consult a dictionary first",
+    "reason": "advice"
+   },
+   {
+    "block_id": "dad7910d35bb",
+    "note": "The condition is incorporated into the first-use definition rule.",
+    "quote": "If there’s a chance users won’t know the meaning of an acronym or initialism, define it at first mention.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "dad7910d35bb",
+    "note": "The normal introduction format is incorporated into the first-use definition rule.",
+    "quote": "Write the term in full first and follow with the acronym or initialism in parentheses.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8b021bd01751",
+    "note": "G-2: the well-known-form ordering case is incorporated into the first-use introduction check.",
+    "quote": "Write well-known acronyms or initialisms first and follow with the full term in parentheses.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c100d54e88a0",
+    "note": "G-3: the following examples are exemptions recorded on the first-use rule.",
+    "quote": "You don’t need to define some acronyms and initialisms on first use.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6cb29800e4b0",
+    "note": "G-2: incorporated as the reader-needed repetition case of the later-mention rule.",
+    "quote": "Repeat the full term if the user needs it",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9a6410d322d2",
+    "note": "G-3: qualifies the preference for shortened later mentions; sparse use does not create an automatic repetition requirement.",
+    "quote": "If you use the shortened form only a few times in long-form content, consider writing out the full term more than once.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "f5c7e091b8c6",
+    "note": "G-5: tells the writer to check a form. The body’s actionable naming preference is extracted separately.",
+    "quote": "Check the correct shortened form for government organisations",
+    "reason": "advice"
+   },
+   {
+    "block_id": "fe486597cbcf",
+    "note": "Provides the preference and context for the extracted full-name-then-generic-name sequence.",
+    "quote": "Rather than using acronyms or initialisms, it can be easier for people if you:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b819456038bd",
+    "note": "The introduction step is incorporated into the government naming preference.",
+    "quote": "spell out the agency’s name in full the first time you use it",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "455178ad5534",
+    "note": "G-4: specifies the scope and meaning of the glossary-presence heading.",
+    "quote": "For content with many specialised acronyms and initialisms, provide a glossary – a list of terms and their meaning that users can refer to.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f76cda01e4ab",
+    "note": "G-3: the following conditions form an exemption on the glossary-presence rule.",
+    "quote": "You don’t need to include a glossary if:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "0fbcaf06b1b4",
+    "note": "Describes the usual print position; incorporated as context for end-of-content placement rather than a separate mandatory order.",
+    "quote": "The glossary usually appears before the references (with the endmatter).",
+    "reason": "description"
+   },
+   {
+    "block_id": "44c892f33fe3",
+    "note": "G-4: restates the full-stop heading.",
+    "quote": "Don’t place a full stop after the acronym or initialism.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7676bccbfa54",
+    "note": "G-2: supplies the normal case and lower-case exceptions for the shortened-form capitalisation rule.",
+    "quote": "Acronyms are usually all capitals, but use lower case for some familiar acronyms (taser, captcha, laser).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7676bccbfa54",
+    "note": "G-2: another case of the shortened-form capitalisation rule.",
+    "quote": "Use an initial capital for familiar acronyms that are proper nouns (Qantas, Anzac).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ede1a8dd2ef5",
+    "note": "G-5: consultation is a writer action; established capitalisation is checked by the extracted rule.",
+    "quote": "Consult a dictionary if you’re unsure of the capitalisation.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4d785713ba46",
+    "note": "G-2: incorporated as the proper-noun case of full-form capitalisation.",
+    "quote": "If the acronym or initialism represents a proper noun, start each word with a capital letter (excluding words such as ‘of’ and ‘and’).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3585f7bb400d",
+    "note": "G-4: clarifies that the heading’s restriction concerns the defining use.",
+    "quote": "Avoid using the plural or possessive of an acronym or initialism when you define it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "61789d514c7b",
+    "note": "An explanatory gloss about a later plural, not another restriction on defining forms.",
+    "quote": "There’s no need to use an apostrophe before the ’s’ for ABNs as the term is plural, not possessive.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "4634785a7fc8",
+    "note": "G-6: this is the general possessive-apostrophe convention, belonging on the apostrophes page rather than a separate acronyms check.",
+    "quote": "Use an apostrophe before the ’s’ to show that UNSW owns the policy.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "783c19c58782",
+    "note": "G-4: the more explicit body sentence is selected for the quotation-fidelity rule.",
+    "quote": "Quote acronyms and initialisms the same way as the speaker",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1ba57176ae21",
+    "note": "Incorporated as context for preserving the speaker’s acronym or initialism, not extracted as an additional overlapping quotation check.",
+    "quote": "When quoting an exact phrase, write exactly what the speaker said.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "be1fecf0d068",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "c83573aaed26",
+      "quote": "Use them only if people recognise and understand them."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Choose acronyms and initialisms people will recognise",
+    "specification": "Recognition depends on the intended users and the explanations available to them. The page supplies no fixed familiarity threshold.",
+    "unit": "document",
+    "violation_condition": "An acronym or initialism is used that the intended users are unlikely to recognise or understand in context, even with the explanation provided.",
+    "when": [
+     "Assess understanding in context; an unfamiliar shortened form can be made understandable by an explanation."
+    ],
+    "why": "G-4: the heading and introductory instruction express one audience-understanding check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "172577680ea6",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "fa16d51b1f8f",
+      "quote": "Define them the first time you use them in content (unless you’re certain all users will understand them without a definition – consult a dictionary first)."
+     },
+     {
+      "block_id": "dad7910d35bb",
+      "quote": "If there’s a chance users won’t know the meaning of an acronym or initialism, define it at first mention."
+     },
+     {
+      "block_id": "dad7910d35bb",
+      "quote": "Write the term in full first and follow with the acronym or initialism in parentheses."
+     },
+     {
+      "block_id": "8b021bd01751",
+      "quote": "Write well-known acronyms or initialisms first and follow with the full term in parentheses."
+     },
+     {
+      "block_id": "c100d54e88a0",
+      "quote": "You don’t need to define some acronyms and initialisms on first use."
+     },
+     {
+      "block_id": "19339a2909ce",
+      "quote": "some place names (NT, ACT)"
+     },
+     {
+      "block_id": "526901e2a44b",
+      "quote": "time of day (am, pm)"
+     },
+     {
+      "block_id": "ed9e9be333f7",
+      "quote": "some organisational names (BHP, Qantas)"
+     },
+     {
+      "block_id": "3af55b94985d",
+      "quote": "terms that began as acronyms but are now words in their own right (radar, scuba, sonar)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The familiar shortened form precedes its expansion.",
+      "parts": [
+       {
+        "block_id": "f81ca9257f97",
+        "quote": "All living organisms have DNA (deoxyribonucleic acid) within their cells. DNA tells cells what proteins to make."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Spell out most acronyms on first use",
+    "specification": "Whether users need a definition depends on audience knowledge. Treat the introduction and its order as one check: normally full term (shortened form), but shortened form (full term) for well-known forms that are explained.",
+    "unit": "document",
+    "violation_condition": "A shortened form needing explanation lacks a definition at first mention, or its introduction lacks the required full-term/shortened-form pairing and parentheses in the appropriate order.",
+    "when": [
+     "Applies to acronyms and initialisms at their first mention.",
+     "Define the shortened form if there is a chance users will not know its meaning.",
+     "A definition is unnecessary if all users will understand the shortened form without one.",
+     "For well-known forms that are explained, put the shortened form first and the full term in parentheses.",
+     "Examples not needing a first-use definition include NT, ACT, am, pm, BHP and Qantas.",
+     "Words in their own right, such as radar, scuba and sonar, do not need first-use definitions."
+    ],
+    "why": "G-2–G-4: first-use definition, ordering cases and exemptions belong to one introduction check; later mentions are separate."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2ed5b6b0c3b8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include them with their spelt-out forms in the glossary.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A shortened form used in the content is missing from an accompanying glossary, or its glossary entry lacks its spelt-out form.",
+    "when": [
+     "Applies where the content has a glossary.",
+     "Particularly important for content containing many specialist shortened forms."
+    ],
+    "why": "G-1: glossary completeness is a specific child check, distinct from whether a glossary must be provided."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dad7910d35bb",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "6cb29800e4b0",
+      "quote": "Repeat the full term if the user needs it"
+     },
+     {
+      "block_id": "9a6410d322d2",
+      "quote": "If you use the shortened form only a few times in long-form content, consider writing out the full term more than once."
+     },
+     {
+      "block_id": "0c3279246f1d",
+      "quote": "People could come across the shortened form without reading the text where it is first defined."
+     },
+     {
+      "block_id": "0c3279246f1d",
+      "quote": "For example, a user might click straight to a section that only includes the shortened form."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The second mention uses the established shortened form.",
+      "parts": [
+       {
+        "block_id": "b6609f54ca20",
+        "quote": "The Department of Social Services (DSS) manages a range of benefits and payments for eligible Australians. DSS helps support communities through a number of programs and services."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Use the shortened form rather than the full term for later mentions.",
+    "specification": "The page does not quantify ‘a few times’ or ‘long-form’, or define exactly when users need a reminder. Sparse use is a reason to consider repetition, not an automatic requirement to repeat at every occurrence.",
+    "unit": "document",
+    "violation_condition": "A later mention unnecessarily repeats the full term instead of the established shortened form, or uses only the shortened form where users need the full term repeated.",
+    "when": [
+     "Applies after the shortened form has been introduced.",
+     "Normally prefer the shortened form for later mentions.",
+     "Repeat the full term where users need it, particularly when a shortened form appears only a few times in long-form content.",
+     "Consider users who enter a section without reading the first definition."
+    ],
+    "why": "G-2–G-3: later-mention choices and reader-needed repetitions are conditional cases of one check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "befdfdb56911",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "fe486597cbcf",
+      "quote": "Rather than using acronyms or initialisms, it can be easier for people if you:"
+     },
+     {
+      "block_id": "b819456038bd",
+      "quote": "spell out the agency’s name in full the first time you use it"
+     },
+     {
+      "block_id": "4dcaf2ceeaa9",
+      "quote": "This is usually more useful to non-specialist users."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "A full name is followed by a generic reference.",
+      "parts": [
+       {
+        "block_id": "9f69608272de",
+        "quote": "The Bureau of Meteorology prepares Australia’s official weather forecasts. The bureau provides its forecasts on its website."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "A full name is followed by a generic reference.",
+      "parts": [
+       {
+        "block_id": "32607917de69",
+        "quote": "The Department of Finance is in Canberra. The department supports government financial management."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "then use the generic name (‘department’, ‘agency’, ‘bureau’) afterwards.",
+    "specification": "This is a readability preference, not a ban on government acronyms. Apply where a generic reference is unambiguous and easier for the intended non-specialist users.",
+    "unit": "document",
+    "violation_condition": "Later references to a government organisation use an acronym or initialism where a generic name would be clearer and more useful to non-specialist users.",
+    "when": [
+     "Introduce the organisation by its full name first.",
+     "The preference is particularly relevant to non-specialist users."
+    ],
+    "why": "G-2: the full-name introduction and subsequent generic references form one preferred naming sequence."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "125e3ad2047c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "455178ad5534",
+      "quote": "For content with many specialised acronyms and initialisms, provide a glossary – a list of terms and their meaning that users can refer to."
+     },
+     {
+      "block_id": "f76cda01e4ab",
+      "quote": "You don’t need to include a glossary if:"
+     },
+     {
+      "block_id": "99ac6f4d01cb",
+      "quote": "there are only a few unfamiliar shortened forms"
+     },
+     {
+      "block_id": "6156baab2a8b",
+      "quote": "each one is only in a very limited section of text"
+     },
+     {
+      "block_id": "6c3cf49d04a3",
+      "quote": "each one is spelt out when first mentioned."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include a list if content relies on many acronyms and initialisms",
+    "specification": "The page gives no numerical thresholds for ‘many’, ‘a few’ or ‘a very limited section’. Read the three exemption conditions together; no numerical cut-off is assumed.",
+    "unit": "document",
+    "violation_condition": "Content containing many specialised acronyms or initialisms has no glossary of their meanings and does not meet the stated exemption.",
+    "when": [
+     "Applies to content with many specialised acronyms and initialisms.",
+     "A glossary is unnecessary when there are only a few unfamiliar shortened forms, each is confined to a very limited section, and each is spelt out at first mention."
+    ],
+    "why": "G-2–G-4: the heading, body instruction and exemption describe one glossary-presence check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "45ec37fcb7cb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0fbcaf06b1b4",
+      "quote": "The glossary usually appears before the references (with the endmatter)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include the glossary at the end of the content or on a separate webpage.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A glossary is placed somewhere other than the end of the content or a separate webpage.",
+    "when": [
+     "Applies where a glossary is provided.",
+     "For print, placement before the references with the endmatter counts as placement at the end."
+    ],
+    "why": "G-2: print placement qualifies one location check; location is distinct from glossary presence."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "45ec37fcb7cb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a hyperlink in the text to help people access the glossary.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Electronic content with a glossary has no in-text hyperlink that gives access to it.",
+    "when": [
+     "Applies where a glossary is provided and the content supports hyperlinks.",
+     "Does not apply to print-only copies."
+    ],
+    "why": "G-1: access by hyperlink is a separate check from glossary provision and placement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c5d250492095",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "44c892f33fe3",
+      "quote": "Don’t place a full stop after the acronym or initialism."
+     },
+     {
+      "block_id": "4142ce765f73",
+      "quote": "The exception is if the shortened form ends a sentence and isn’t followed by another punctuation mark."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "51c315e34929",
+        "quote": "Will you be attending COAG this month?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7f45a0098e41",
+        "quote": "I’m working on a B2B project at the moment."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e0067b056a12",
+        "quote": "She’s now working in FOI."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "89227e7e4985",
+        "quote": "Is the company being investigated by ASIC?"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t end acronyms and initialisms with a full stop",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A full stop follows an acronym or initialism where it is not needed to end the sentence, including where another punctuation mark ends the sentence.",
+    "when": [
+     "A sentence-ending full stop is allowed after the shortened form when no other punctuation mark ends the sentence."
+    ],
+    "why": "G-2–G-4: the body restates the heading, and sentence-ending punctuation is an exception to the same check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2cb5a205ded2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7676bccbfa54",
+      "quote": "Acronyms are usually all capitals, but use lower case for some familiar acronyms (taser, captcha, laser)."
+     },
+     {
+      "block_id": "7676bccbfa54",
+      "quote": "Use an initial capital for familiar acronyms that are proper nouns (Qantas, Anzac)."
+     },
+     {
+      "block_id": "ede1a8dd2ef5",
+      "quote": "Initialisms are often all upper case (VOIP, FOI) but there are exceptions (bpm)."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use capitals for most acronyms and initialisms",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "An acronym or initialism has capitalisation inconsistent with its established form: normally all capitals, but lower case or an initial capital where the established exception requires it.",
+    "when": [
+     "Most acronyms and initialisms use all capitals.",
+     "Use established lower-case forms for familiar acronyms such as taser, captcha and laser.",
+     "Familiar proper-noun acronyms such as Qantas and Anzac take an initial capital.",
+     "Initialisms can have established lower-case exceptions, such as bpm."
+    ],
+    "why": "G-2: upper-case, lower-case and initial-capital forms are cases of one shortened-form capitalisation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c28e095abe9b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4d785713ba46",
+      "quote": "If the acronym or initialism represents a proper noun, start each word with a capital letter (excluding words such as ‘of’ and ‘and’)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "359be41ca325",
+        "quote": "EIS for ‘environmental impact statement’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "cf5892a1a143",
+        "quote": "TB for ‘tuberculosis’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "51a99151065d",
+        "quote": "ASIO [Australian Security Intelligence Organisation]"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f6f514da4548",
+        "quote": "OPC [Office of Parliamentary Counsel]"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "eed3c9695c2c",
+        "quote": "NSW [New South Wales]"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "32d7e788e74b",
+        "quote": "ILSC [Indigenous Land and Sea Corporation]"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the acronym or initialism represents common nouns, don’t begin each word of the full form with a capital letter.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An expanded full form is capitalised as a proper name when it consists of common nouns, or lacks the required word-initial capitals when it is a proper name.",
+    "when": [
+     "Common-noun full forms do not inherit capital letters from their acronyms or initialisms.",
+     "For proper-noun full forms, capitalise each word except connecting words such as ‘of’ and ‘and’.",
+     "Ordinary sentence-initial capitalisation is not an error under the common-noun case."
+    ],
+    "why": "G-2: common-noun and proper-noun expansions are conditional cases of one full-form capitalisation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b56bcf0caf43",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3585f7bb400d",
+      "quote": "Avoid using the plural or possessive of an acronym or initialism when you define it."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "61789d514c7b",
+        "quote": "It’s compulsory for certain businesses to have an Australian Business Number (ABN). The Australian Business Register manages applications for ABNs."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4634785a7fc8",
+        "quote": "The University of New South Wales (UNSW) has a new student policy. UNSW’s policy is popular with its staff and students."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid plural and possessive forms on the first use",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An acronym or initialism is introduced in its defining construction in a plural or possessive form.",
+    "when": [
+     "Applies when the shortened form is defined.",
+     "Plural and possessive forms in later mentions are outside this restriction."
+    ],
+    "why": "G-2–G-4: plural and possessive introductions are cases of one defining-form restriction, restated in the body."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1ba57176ae21",
+    "clarity_suggestion": "not_automatable",
+    "covers": [
+     {
+      "block_id": "783c19c58782",
+      "quote": "Quote acronyms and initialisms the same way as the speaker"
+     },
+     {
+      "block_id": "1ba57176ae21",
+      "quote": "When quoting an exact phrase, write exactly what the speaker said."
+     }
+    ],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If they used an acronym or initialism, quote it.",
+    "specification": "Verifying fidelity requires access to the source quotation or recording; it cannot be established from the finished quotation alone.",
+    "unit": "phrase",
+    "violation_condition": "A direct quotation replaces or otherwise changes an acronym or initialism that the speaker actually used.",
+    "when": [
+     "Applies when quoting an exact phrase.",
+     "An explanatory full term may be added in square brackets without replacing the speaker’s shortened form."
+    ],
+    "why": "G-4: the heading and exact-quotation instruction support one check on preserving the speaker’s shortened form."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1ba57176ae21",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9ea501339b57",
+        "quote": "‘We’re continuing to manage the number of SES [Senior Executive Service] to ensure the Public Service isn’t top heavy,’ he said."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Show the full term in square brackets if users might not recognise the term or if you haven’t already explained it.",
+    "specification": "Audience recognition requires contextual judgement. Preserve the source’s ‘or’: either possible unfamiliarity or the absence of an earlier explanation triggers the bracketed expansion.",
+    "unit": "document",
+    "violation_condition": "An acronym or initialism in a direct quotation lacks its full term in square brackets when users might not recognise it or it has not already been explained.",
+    "when": [
+     "Applies to acronyms and initialisms in exact quotations.",
+     "Add the full term in square brackets if users might not recognise it.",
+     "Also add it if the term has not already been explained."
+    ],
+    "why": "G-2: the two alternative triggers govern one bracketed-expansion check, separate from quotation fidelity."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "be1fecf0d068",
+    "end": 53,
+    "prefix": "",
+    "quote": "Choose acronyms and initialisms people will recognise",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "c83573aaed26",
+     "end": 151,
+     "prefix": "ames and special terms in text. ",
+     "quote": "Use them only if people recognise and understand them.",
+     "start": 97,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "2762c21e09fc7b8c",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Recognition depends on the intended users and the explanations available to them. The page supplies no fixed familiarity threshold.",
+    "unit": "document",
+    "violation_condition": "An acronym or initialism is used that the intended users are unlikely to recognise or understand in context, even with the explanation provided."
+   },
+   "when": [
+    "Assess understanding in context; an unfamiliar shortened form can be made understandable by an explanation."
+   ],
+   "why": "G-4: the heading and introductory instruction express one audience-understanding check."
+  },
+  {
+   "anchor": {
+    "block_id": "172577680ea6",
+    "end": 36,
+    "prefix": "",
+    "quote": "Spell out most acronyms on first use",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "fa16d51b1f8f",
+     "end": 156,
+     "prefix": "",
+     "quote": "Define them the first time you use them in content (unless you’re certain all users will understand them without a definition – consult a dictionary first).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dad7910d35bb",
+     "end": 105,
+     "prefix": "",
+     "quote": "If there’s a chance users won’t know the meaning of an acronym or initialism, define it at first mention.",
+     "start": 0,
+     "suffix": " Write the term in full first an"
+    },
+    {
+     "block_id": "dad7910d35bb",
+     "end": 192,
+     "prefix": "sm, define it at first mention. ",
+     "quote": "Write the term in full first and follow with the acronym or initialism in parentheses.",
+     "start": 106,
+     "suffix": " Use the shortened form rather t"
+    },
+    {
+     "block_id": "8b021bd01751",
+     "end": 92,
+     "prefix": "",
+     "quote": "Write well-known acronyms or initialisms first and follow with the full term in parentheses.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c100d54e88a0",
+     "end": 68,
+     "prefix": "",
+     "quote": "You don’t need to define some acronyms and initialisms on first use.",
+     "start": 0,
+     "suffix": " These include:"
+    },
+    {
+     "block_id": "19339a2909ce",
+     "end": 26,
+     "prefix": "",
+     "quote": "some place names (NT, ACT)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "526901e2a44b",
+     "end": 20,
+     "prefix": "",
+     "quote": "time of day (am, pm)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ed9e9be333f7",
+     "end": 39,
+     "prefix": "",
+     "quote": "some organisational names (BHP, Qantas)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3af55b94985d",
+     "end": 88,
+     "prefix": "",
+     "quote": "terms that began as acronyms but are now words in their own right (radar, scuba, sonar).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The familiar shortened form precedes its expansion.",
+     "parts": [
+      {
+       "block_id": "f81ca9257f97",
+       "end": 112,
+       "prefix": "",
+       "quote": "All living organisms have DNA (deoxyribonucleic acid) within their cells. DNA tells cells what proteins to make.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "dd18e2330be0850e",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Whether users need a definition depends on audience knowledge. Treat the introduction and its order as one check: normally full term (shortened form), but shortened form (full term) for well-known forms that are explained.",
+    "unit": "document",
+    "violation_condition": "A shortened form needing explanation lacks a definition at first mention, or its introduction lacks the required full-term/shortened-form pairing and parentheses in the appropriate order."
+   },
+   "when": [
+    "Applies to acronyms and initialisms at their first mention.",
+    "Define the shortened form if there is a chance users will not know its meaning.",
+    "A definition is unnecessary if all users will understand the shortened form without one.",
+    "For well-known forms that are explained, put the shortened form first and the full term in parentheses.",
+    "Examples not needing a first-use definition include NT, ACT, am, pm, BHP and Qantas.",
+    "Words in their own right, such as radar, scuba and sonar, do not need first-use definitions."
+   ],
+   "why": "G-2–G-4: first-use definition, ordering cases and exemptions belong to one introduction check; later mentions are separate."
+  },
+  {
+   "anchor": {
+    "block_id": "2ed5b6b0c3b8",
+    "end": 56,
+    "prefix": "",
+    "quote": "Include them with their spelt-out forms in the glossary.",
+    "start": 0,
+    "suffix": " This is particularly important "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A shortened form used in the content is missing from an accompanying glossary, or its glossary entry lacks its spelt-out form."
+   },
+   "when": [
+    "Applies where the content has a glossary.",
+    "Particularly important for content containing many specialist shortened forms."
+   ],
+   "why": "G-1: glossary completeness is a specific child check, distinct from whether a glossary must be provided."
+  },
+  {
+   "anchor": {
+    "block_id": "dad7910d35bb",
+    "end": 261,
+    "prefix": "m or initialism in parentheses. ",
+    "quote": "Use the shortened form rather than the full term for later mentions.",
+    "start": 193,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "6cb29800e4b0",
+     "end": 41,
+     "prefix": "",
+     "quote": "Repeat the full term if the user needs it",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9a6410d322d2",
+     "end": 119,
+     "prefix": "",
+     "quote": "If you use the shortened form only a few times in long-form content, consider writing out the full term more than once.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0c3279246f1d",
+     "end": 95,
+     "prefix": "",
+     "quote": "People could come across the shortened form without reading the text where it is first defined.",
+     "start": 0,
+     "suffix": " For example, a user might click"
+    },
+    {
+     "block_id": "0c3279246f1d",
+     "end": 188,
+     "prefix": "text where it is first defined. ",
+     "quote": "For example, a user might click straight to a section that only includes the shortened form.",
+     "start": 96,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The second mention uses the established shortened form.",
+     "parts": [
+      {
+       "block_id": "b6609f54ca20",
+       "end": 179,
+       "prefix": "",
+       "quote": "The Department of Social Services (DSS) manages a range of benefits and payments for eligible Australians. DSS helps support communities through a number of programs and services.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "The page does not quantify ‘a few times’ or ‘long-form’, or define exactly when users need a reminder. Sparse use is a reason to consider repetition, not an automatic requirement to repeat at every occurrence.",
+    "unit": "document",
+    "violation_condition": "A later mention unnecessarily repeats the full term instead of the established shortened form, or uses only the shortened form where users need the full term repeated."
+   },
+   "when": [
+    "Applies after the shortened form has been introduced.",
+    "Normally prefer the shortened form for later mentions.",
+    "Repeat the full term where users need it, particularly when a shortened form appears only a few times in long-form content.",
+    "Consider users who enter a section without reading the first definition."
+   ],
+   "why": "G-2–G-3: later-mention choices and reader-needed repetitions are conditional cases of one check."
+  },
+  {
+   "anchor": {
+    "block_id": "befdfdb56911",
+    "end": 72,
+    "prefix": "",
+    "quote": "then use the generic name (‘department’, ‘agency’, ‘bureau’) afterwards.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "fe486597cbcf",
+     "end": 78,
+     "prefix": "",
+     "quote": "Rather than using acronyms or initialisms, it can be easier for people if you:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b819456038bd",
+     "end": 61,
+     "prefix": "",
+     "quote": "spell out the agency’s name in full the first time you use it",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4dcaf2ceeaa9",
+     "end": 52,
+     "prefix": "",
+     "quote": "This is usually more useful to non-specialist users.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "A full name is followed by a generic reference.",
+     "parts": [
+      {
+       "block_id": "9f69608272de",
+       "end": 124,
+       "prefix": "",
+       "quote": "The Bureau of Meteorology prepares Australia’s official weather forecasts. The bureau provides its forecasts on its website.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "A full name is followed by a generic reference.",
+     "parts": [
+      {
+       "block_id": "32607917de69",
+       "end": 98,
+       "prefix": "",
+       "quote": "The Department of Finance is in Canberra. The department supports government financial management.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "This is a readability preference, not a ban on government acronyms. Apply where a generic reference is unambiguous and easier for the intended non-specialist users.",
+    "unit": "document",
+    "violation_condition": "Later references to a government organisation use an acronym or initialism where a generic name would be clearer and more useful to non-specialist users."
+   },
+   "when": [
+    "Introduce the organisation by its full name first.",
+    "The preference is particularly relevant to non-specialist users."
+   ],
+   "why": "G-2: the full-name introduction and subsequent generic references form one preferred naming sequence."
+  },
+  {
+   "anchor": {
+    "block_id": "125e3ad2047c",
+    "end": 65,
+    "prefix": "",
+    "quote": "Include a list if content relies on many acronyms and initialisms",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "455178ad5534",
+     "end": 139,
+     "prefix": "",
+     "quote": "For content with many specialised acronyms and initialisms, provide a glossary – a list of terms and their meaning that users can refer to.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f76cda01e4ab",
+     "end": 40,
+     "prefix": "",
+     "quote": "You don’t need to include a glossary if:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "99ac6f4d01cb",
+     "end": 47,
+     "prefix": "",
+     "quote": "there are only a few unfamiliar shortened forms",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6156baab2a8b",
+     "end": 50,
+     "prefix": "",
+     "quote": "each one is only in a very limited section of text",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6c3cf49d04a3",
+     "end": 43,
+     "prefix": "",
+     "quote": "each one is spelt out when first mentioned.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "d4be3de798d6b623",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page gives no numerical thresholds for ‘many’, ‘a few’ or ‘a very limited section’. Read the three exemption conditions together; no numerical cut-off is assumed.",
+    "unit": "document",
+    "violation_condition": "Content containing many specialised acronyms or initialisms has no glossary of their meanings and does not meet the stated exemption."
+   },
+   "when": [
+    "Applies to content with many specialised acronyms and initialisms.",
+    "A glossary is unnecessary when there are only a few unfamiliar shortened forms, each is confined to a very limited section, and each is spelt out at first mention."
+   ],
+   "why": "G-2–G-4: the heading, body instruction and exemption describe one glossary-presence check."
+  },
+  {
+   "anchor": {
+    "block_id": "45ec37fcb7cb",
+    "end": 72,
+    "prefix": "",
+    "quote": "Include the glossary at the end of the content or on a separate webpage.",
+    "start": 0,
+    "suffix": " Use a hyperlink in the text to "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0fbcaf06b1b4",
+     "end": 72,
+     "prefix": "",
+     "quote": "The glossary usually appears before the references (with the endmatter).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A glossary is placed somewhere other than the end of the content or a separate webpage."
+   },
+   "when": [
+    "Applies where a glossary is provided.",
+    "For print, placement before the references with the endmatter counts as placement at the end."
+   ],
+   "why": "G-2: print placement qualifies one location check; location is distinct from glossary presence."
+  },
+  {
+   "anchor": {
+    "block_id": "45ec37fcb7cb",
+    "end": 136,
+    "prefix": "ntent or on a separate webpage. ",
+    "quote": "Use a hyperlink in the text to help people access the glossary.",
+    "start": 73,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Electronic content with a glossary has no in-text hyperlink that gives access to it."
+   },
+   "when": [
+    "Applies where a glossary is provided and the content supports hyperlinks.",
+    "Does not apply to print-only copies."
+   ],
+   "why": "G-1: access by hyperlink is a separate check from glossary provision and placement."
+  },
+  {
+   "anchor": {
+    "block_id": "c5d250492095",
+    "end": 51,
+    "prefix": "",
+    "quote": "Don’t end acronyms and initialisms with a full stop",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "44c892f33fe3",
+     "end": 56,
+     "prefix": "",
+     "quote": "Don’t place a full stop after the acronym or initialism.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4142ce765f73",
+     "end": 102,
+     "prefix": "",
+     "quote": "The exception is if the shortened form ends a sentence and isn’t followed by another punctuation mark.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "51c315e34929",
+       "end": 38,
+       "prefix": "",
+       "quote": "Will you be attending COAG this month?",
+       "start": 0,
+       "suffix": " [No full stop after the acronym"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7f45a0098e41",
+       "end": 43,
+       "prefix": "",
+       "quote": "I’m working on a B2B project at the moment.",
+       "start": 0,
+       "suffix": " [No full stop after the initial"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e0067b056a12",
+       "end": 25,
+       "prefix": "",
+       "quote": "She’s now working in FOI.",
+       "start": 0,
+       "suffix": " [A full stop after the initiali"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "89227e7e4985",
+       "end": 42,
+       "prefix": "",
+       "quote": "Is the company being investigated by ASIC?",
+       "start": 0,
+       "suffix": " [No full stop after the acronym"
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "d33610178acc2312",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A full stop follows an acronym or initialism where it is not needed to end the sentence, including where another punctuation mark ends the sentence."
+   },
+   "when": [
+    "A sentence-ending full stop is allowed after the shortened form when no other punctuation mark ends the sentence."
+   ],
+   "why": "G-2–G-4: the body restates the heading, and sentence-ending punctuation is an exception to the same check."
+  },
+  {
+   "anchor": {
+    "block_id": "2cb5a205ded2",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use capitals for most acronyms and initialisms",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7676bccbfa54",
+     "end": 105,
+     "prefix": "",
+     "quote": "Acronyms are usually all capitals, but use lower case for some familiar acronyms (taser, captcha, laser).",
+     "start": 0,
+     "suffix": " Use an initial capital for fami"
+    },
+    {
+     "block_id": "7676bccbfa54",
+     "end": 189,
+     "prefix": "ronyms (taser, captcha, laser). ",
+     "quote": "Use an initial capital for familiar acronyms that are proper nouns (Qantas, Anzac).",
+     "start": 106,
+     "suffix": ""
+    },
+    {
+     "block_id": "ede1a8dd2ef5",
+     "end": 80,
+     "prefix": "",
+     "quote": "Initialisms are often all upper case (VOIP, FOI) but there are exceptions (bpm).",
+     "start": 0,
+     "suffix": " Consult a dictionary if you’re "
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "a57616a44876817a",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "An acronym or initialism has capitalisation inconsistent with its established form: normally all capitals, but lower case or an initial capital where the established exception requires it."
+   },
+   "when": [
+    "Most acronyms and initialisms use all capitals.",
+    "Use established lower-case forms for familiar acronyms such as taser, captcha and laser.",
+    "Familiar proper-noun acronyms such as Qantas and Anzac take an initial capital.",
+    "Initialisms can have established lower-case exceptions, such as bpm."
+   ],
+   "why": "G-2: upper-case, lower-case and initial-capital forms are cases of one shortened-form capitalisation check."
+  },
+  {
+   "anchor": {
+    "block_id": "c28e095abe9b",
+    "end": 115,
+    "prefix": "",
+    "quote": "If the acronym or initialism represents common nouns, don’t begin each word of the full form with a capital letter.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4d785713ba46",
+     "end": 134,
+     "prefix": "",
+     "quote": "If the acronym or initialism represents a proper noun, start each word with a capital letter (excluding words such as ‘of’ and ‘and’).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "359be41ca325",
+       "end": 40,
+       "prefix": "",
+       "quote": "EIS for ‘environmental impact statement’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "cf5892a1a143",
+       "end": 21,
+       "prefix": "",
+       "quote": "TB for ‘tuberculosis’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "51a99151065d",
+       "end": 52,
+       "prefix": "",
+       "quote": "ASIO [Australian Security Intelligence Organisation]",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f6f514da4548",
+       "end": 37,
+       "prefix": "",
+       "quote": "OPC [Office of Parliamentary Counsel]",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "eed3c9695c2c",
+       "end": 21,
+       "prefix": "",
+       "quote": "NSW [New South Wales]",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "32d7e788e74b",
+       "end": 42,
+       "prefix": "",
+       "quote": "ILSC [Indigenous Land and Sea Corporation]",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An expanded full form is capitalised as a proper name when it consists of common nouns, or lacks the required word-initial capitals when it is a proper name."
+   },
+   "when": [
+    "Common-noun full forms do not inherit capital letters from their acronyms or initialisms.",
+    "For proper-noun full forms, capitalise each word except connecting words such as ‘of’ and ‘and’.",
+    "Ordinary sentence-initial capitalisation is not an error under the common-noun case."
+   ],
+   "why": "G-2: common-noun and proper-noun expansions are conditional cases of one full-form capitalisation check."
+  },
+  {
+   "anchor": {
+    "block_id": "b56bcf0caf43",
+    "end": 50,
+    "prefix": "",
+    "quote": "Avoid plural and possessive forms on the first use",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3585f7bb400d",
+     "end": 84,
+     "prefix": "",
+     "quote": "Avoid using the plural or possessive of an acronym or initialism when you define it.",
+     "start": 0,
+     "suffix": " This makes it easy for users to"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "61789d514c7b",
+       "end": 147,
+       "prefix": "",
+       "quote": "It’s compulsory for certain businesses to have an Australian Business Number (ABN). The Australian Business Register manages applications for ABNs.",
+       "start": 0,
+       "suffix": " [There’s no need to use an apos"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4634785a7fc8",
+       "end": 120,
+       "prefix": "",
+       "quote": "The University of New South Wales (UNSW) has a new student policy. UNSW’s policy is popular with its staff and students.",
+       "start": 0,
+       "suffix": " [Use an apostrophe before the ’"
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "3636e56f8996ea3c",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An acronym or initialism is introduced in its defining construction in a plural or possessive form."
+   },
+   "when": [
+    "Applies when the shortened form is defined.",
+    "Plural and possessive forms in later mentions are outside this restriction."
+   ],
+   "why": "G-2–G-4: plural and possessive introductions are cases of one defining-form restriction, restated in the body."
+  },
+  {
+   "anchor": {
+    "block_id": "1ba57176ae21",
+    "end": 115,
+    "prefix": " exactly what the speaker said. ",
+    "quote": "If they used an acronym or initialism, quote it.",
+    "start": 67,
+    "suffix": " Show the full term in square br"
+   },
+   "clarity_suggestion": "not_automatable",
+   "covers": [
+    {
+     "block_id": "783c19c58782",
+     "end": 58,
+     "prefix": "",
+     "quote": "Quote acronyms and initialisms the same way as the speaker",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1ba57176ae21",
+     "end": 66,
+     "prefix": "",
+     "quote": "When quoting an exact phrase, write exactly what the speaker said.",
+     "start": 0,
+     "suffix": " If they used an acronym or init"
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Verifying fidelity requires access to the source quotation or recording; it cannot be established from the finished quotation alone.",
+    "unit": "phrase",
+    "violation_condition": "A direct quotation replaces or otherwise changes an acronym or initialism that the speaker actually used."
+   },
+   "when": [
+    "Applies when quoting an exact phrase.",
+    "An explanatory full term may be added in square brackets without replacing the speaker’s shortened form."
+   ],
+   "why": "G-4: the heading and exact-quotation instruction support one check on preserving the speaker’s shortened form."
+  },
+  {
+   "anchor": {
+    "block_id": "1ba57176ae21",
+    "end": 231,
+    "prefix": "cronym or initialism, quote it. ",
+    "quote": "Show the full term in square brackets if users might not recognise the term or if you haven’t already explained it.",
+    "start": 116,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9ea501339b57",
+       "end": 128,
+       "prefix": "",
+       "quote": "‘We’re continuing to manage the number of SES [Senior Executive Service] to ensure the Public Service isn’t top heavy,’ he said.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Audience recognition requires contextual judgement. Preserve the source’s ‘or’: either possible unfamiliarity or the absence of an earlier explanation triggers the bracketed expansion.",
+    "unit": "document",
+    "violation_condition": "An acronym or initialism in a direct quotation lacks its full term in square brackets when users might not recognise it or it has not already been explained."
+   },
+   "when": [
+    "Applies to acronyms and initialisms in exact quotations.",
+    "Add the full term in square brackets if users might not recognise it.",
+    "Also add it if the term has not already been explained."
+   ],
+   "why": "G-2: the two alternative triggers govern one bracketed-expansion check, separate from quotation fidelity."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5783,
+  "output_tokens": 17900,
+  "reasoning_tokens": 10220
+ }
+}

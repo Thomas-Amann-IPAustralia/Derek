@@ -1,0 +1,284 @@
+{
+ "effort": "low",
+ "input_sha256": "277d6ce60e9c3506f1653650df9c3c6a5a8896b5a209c4d433eee06f76dc6696",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "49a23f5b79c2",
+    "end": 163,
+    "prefix": "ork with specific prepositions. ",
+    "quote": "Choose them deliberately to convey meaning to users.",
+    "start": 111,
+    "suffix": ""
+   },
+   "note": "General writing advice (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "78171de841b8",
+    "end": 60,
+    "prefix": "",
+    "quote": "A preposition creates relationships between words or phrases",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive grammatical explanation, not an actionable rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "24aab33e312e",
+    "end": 141,
+    "prefix": "ionship between a noun or verb. ",
+    "quote": "Use prepositions to give information about the time and place of an action or thing.",
+    "start": 57,
+    "suffix": ""
+   },
+   "note": "General grammatical explanation of the function of prepositions.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "808d7eb1b533",
+    "end": 103,
+    "prefix": "",
+    "quote": "You can use some prepositions as a different type of word, depending on their function in the sentence.",
+    "start": 0,
+    "suffix": " For example, 'down' can be a pr"
+   },
+   "note": "Grammatical permission / descriptive explanation (G-3).",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "063b373b4099",
+    "end": 232,
+    "prefix": "' or 'from', but not by 'than'. ",
+    "quote": "Check a dictionary if you are not sure.",
+    "start": 193,
+    "suffix": ""
+   },
+   "note": "Process advice to the writer (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words/prepositions.md",
+ "page_sha256": "e53c86f50d5e52b5ce5721aeb230c2475bd100b08a8b2c86ee5517ed9723166a",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "49a23f5b79c2",
+    "note": "General writing advice (G-5).",
+    "quote": "Choose them deliberately to convey meaning to users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "78171de841b8",
+    "note": "Descriptive grammatical explanation, not an actionable rule.",
+    "quote": "A preposition creates relationships between words or phrases",
+    "reason": "description"
+   },
+   {
+    "block_id": "24aab33e312e",
+    "note": "General grammatical explanation of the function of prepositions.",
+    "quote": "Use prepositions to give information about the time and place of an action or thing.",
+    "reason": "description"
+   },
+   {
+    "block_id": "808d7eb1b533",
+    "note": "Grammatical permission / descriptive explanation (G-3).",
+    "quote": "You can use some prepositions as a different type of word, depending on their function in the sentence.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "063b373b4099",
+    "note": "Process advice to the writer (G-5).",
+    "quote": "Check a dictionary if you are not sure.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9c0ac856d8d6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "063b373b4099",
+      "quote": "Some words are always followed by particular prepositions. For example, 'different' is always followed by 'to' or 'from', but not by 'than'."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uses 'different from'",
+      "parts": [
+       {
+        "block_id": "596d697cb661",
+        "quote": "This is different from that."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'discussion about'",
+      "parts": [
+       {
+        "block_id": "c92226cd783c",
+        "quote": "The discussion about the program is continuing."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'different than' instead of 'different to' or 'different from'",
+      "parts": [
+       {
+        "block_id": "bfcadabc2a99",
+        "quote": "This is different than that."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Uses 'discussion around' instead of 'discussion about'",
+      "parts": [
+       {
+        "block_id": "b08ef924e54a",
+        "quote": "The discussion around the program is continuing."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Some words only work with specific prepositions",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using an incorrect preposition with a word that requires a specific preposition (such as 'different than' instead of 'different from'/'different to', or 'discussion around' instead of 'discussion about')",
+    "when": [],
+    "why": "G-2, G-4: The heading states the rule regarding dependent prepositions/collocations, illustrated by the Correct/Incorrect pairs."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "9c0ac856d8d6",
+    "end": 47,
+    "prefix": "",
+    "quote": "Some words only work with specific prepositions",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "063b373b4099",
+     "end": 192,
+     "prefix": " work for every word or phrase. ",
+     "quote": "Some words are always followed by particular prepositions. For example, 'different' is always followed by 'to' or 'from', but not by 'than'.",
+     "start": 52,
+     "suffix": " Check a dictionary if you are n"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses 'different from'",
+     "parts": [
+      {
+       "block_id": "596d697cb661",
+       "end": 28,
+       "prefix": "",
+       "quote": "This is different from that.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses 'discussion about'",
+     "parts": [
+      {
+       "block_id": "c92226cd783c",
+       "end": 47,
+       "prefix": "",
+       "quote": "The discussion about the program is continuing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses 'different than' instead of 'different to' or 'different from'",
+     "parts": [
+      {
+       "block_id": "bfcadabc2a99",
+       "end": 28,
+       "prefix": "",
+       "quote": "This is different than that.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses 'discussion around' instead of 'discussion about'",
+     "parts": [
+      {
+       "block_id": "b08ef924e54a",
+       "end": 48,
+       "prefix": "",
+       "quote": "The discussion around the program is continuing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "d58b1d278249eed8",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using an incorrect preposition with a word that requires a specific preposition (such as 'different than' instead of 'different from'/'different to', or 'discussion around' instead of 'discussion about')"
+   },
+   "when": [],
+   "why": "G-2, G-4: The heading states the rule regarding dependent prepositions/collocations, illustrated by the Correct/Incorrect pairs."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3639,
+  "output_tokens": 957,
+  "reasoning_tokens": 0
+ }
+}

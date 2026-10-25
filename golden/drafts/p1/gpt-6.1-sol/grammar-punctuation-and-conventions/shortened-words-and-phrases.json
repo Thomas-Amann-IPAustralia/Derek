@@ -1,0 +1,282 @@
+{
+ "effort": "high",
+ "input_sha256": "75b7d6eddc6506c5ae3218e6a71dbfa7862a2bc97826893766cc53567d77a2a0",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "e90d22a1c0d0",
+    "end": 98,
+    "prefix": "lp the user understand quicker. ",
+    "quote": "Make sure everyone understands them.",
+    "start": 62,
+    "suffix": ""
+   },
+   "note": "Consolidated into the rule about shortened forms helping understanding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1b087d8de47b",
+    "end": 151,
+    "prefix": "ames and special terms in text. ",
+    "quote": "Use them only if people recognise and understand them.",
+    "start": 97,
+    "suffix": ""
+   },
+   "note": "The acronym-and-initialism case is covered by the general intelligibility rule rather than producing an overlapping finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c128f91720f2",
+    "end": 151,
+    "prefix": "ed forms, except in some cases. ",
+    "quote": "People will prefer the English equivalent unless the context requires special use.",
+    "start": 69,
+    "suffix": ""
+   },
+   "note": "Explains the English-over-Latin preference and supplies its contextual exception.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/shortened-words-and-phrases.md",
+ "page_sha256": "d7e1bff1489f7cf6b2b61f11ed2761d5e5512ee522e7f222ca795f4730ddc2c1",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "e90d22a1c0d0",
+    "note": "Consolidated into the rule about shortened forms helping understanding.",
+    "quote": "Make sure everyone understands them.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1b087d8de47b",
+    "note": "The acronym-and-initialism case is covered by the general intelligibility rule rather than producing an overlapping finding.",
+    "quote": "Use them only if people recognise and understand them.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c128f91720f2",
+    "note": "Explains the English-over-Latin preference and supplies its contextual exception.",
+    "quote": "People will prefer the English equivalent unless the context requires special use.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e90d22a1c0d0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "e90d22a1c0d0",
+      "quote": "Make sure everyone understands them."
+     },
+     {
+      "block_id": "1b087d8de47b",
+      "quote": "Use them only if people recognise and understand them."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use shortened forms if they help the user understand quicker.",
+    "specification": "The page provides no operational test for quicker understanding or audience familiarity. These require an audience profile and contextual judgement.",
+    "unit": "sentence",
+    "violation_condition": "A shortened form impedes understanding or is unfamiliar or unintelligible to the intended audience.",
+    "when": [
+     "Applies to shortened words and phrases generally.",
+     "For acronyms and initialisms, people must recognise and understand the shortened form."
+    ],
+    "why": "G-2 and G-4: the general intelligibility instruction and its acronym-specific formulation concern the same problem, so they are consolidated."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ff3bbb81b8e4",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid them in formal content.",
+    "specification": "‘Them’ refers to contractions. The page does not define the boundary between formal and informal content.",
+    "unit": "sentence",
+    "violation_condition": "A contraction appears in formal content.",
+    "when": [
+     "Applies when the content is formal."
+    ],
+    "why": "This is a distinct text property: contractions in formal content, rather than shortened forms that impede understanding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c128f91720f2",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "c128f91720f2",
+      "quote": "People will prefer the English equivalent unless the context requires special use."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "PREFER",
+    "quote": "Use English rather than Latin shortened forms, except in some cases.",
+    "specification": "The page does not identify the exceptional cases or specify which contexts require special use of Latin shortened forms.",
+    "unit": "sentence",
+    "violation_condition": "A Latin shortened form is used instead of its English equivalent where the context does not require the Latin form.",
+    "when": [
+     "An English equivalent is available.",
+     "The preference does not apply when the context requires special use of the Latin shortened form."
+    ],
+    "why": "G-2 and G-3: the contextual exception limits one preference rule; it is not a separate rule."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "e90d22a1c0d0",
+    "end": 61,
+    "prefix": "",
+    "quote": "Use shortened forms if they help the user understand quicker.",
+    "start": 0,
+    "suffix": " Make sure everyone understands "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "e90d22a1c0d0",
+     "end": 98,
+     "prefix": "lp the user understand quicker. ",
+     "quote": "Make sure everyone understands them.",
+     "start": 62,
+     "suffix": ""
+    },
+    {
+     "block_id": "1b087d8de47b",
+     "end": 151,
+     "prefix": "ames and special terms in text. ",
+     "quote": "Use them only if people recognise and understand them.",
+     "start": 97,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page provides no operational test for quicker understanding or audience familiarity. These require an audience profile and contextual judgement.",
+    "unit": "sentence",
+    "violation_condition": "A shortened form impedes understanding or is unfamiliar or unintelligible to the intended audience."
+   },
+   "when": [
+    "Applies to shortened words and phrases generally.",
+    "For acronyms and initialisms, people must recognise and understand the shortened form."
+   ],
+   "why": "G-2 and G-4: the general intelligibility instruction and its acronym-specific formulation concern the same problem, so they are consolidated."
+  },
+  {
+   "anchor": {
+    "block_id": "ff3bbb81b8e4",
+    "end": 128,
+    "prefix": "hem depending on their context. ",
+    "quote": "Avoid them in formal content.",
+    "start": 99,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "‘Them’ refers to contractions. The page does not define the boundary between formal and informal content.",
+    "unit": "sentence",
+    "violation_condition": "A contraction appears in formal content."
+   },
+   "when": [
+    "Applies when the content is formal."
+   ],
+   "why": "This is a distinct text property: contractions in formal content, rather than shortened forms that impede understanding."
+  },
+  {
+   "anchor": {
+    "block_id": "c128f91720f2",
+    "end": 68,
+    "prefix": "",
+    "quote": "Use English rather than Latin shortened forms, except in some cases.",
+    "start": 0,
+    "suffix": " People will prefer the English "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "c128f91720f2",
+     "end": 151,
+     "prefix": "ed forms, except in some cases. ",
+     "quote": "People will prefer the English equivalent unless the context requires special use.",
+     "start": 69,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "The page does not identify the exceptional cases or specify which contexts require special use of Latin shortened forms.",
+    "unit": "sentence",
+    "violation_condition": "A Latin shortened form is used instead of its English equivalent where the context does not require the Latin form."
+   },
+   "when": [
+    "An English equivalent is available.",
+    "The preference does not apply when the context requires special use of the Latin shortened form."
+   ],
+   "why": "G-2 and G-3: the contextual exception limits one preference rule; it is not a separate rule."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3332,
+  "output_tokens": 3011,
+  "reasoning_tokens": 2070
+ }
+}

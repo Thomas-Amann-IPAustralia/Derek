@@ -1,0 +1,278 @@
+{
+ "effort": "low",
+ "input_sha256": "cb3098e1383f12e2757fe07007a1afcf8919197d4ffd9a45ae3434462666912b",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "8d0d4469aff1",
+    "end": 37,
+    "prefix": "",
+    "quote": "Choose one dictionary for consistency",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Organizational and writing workflow advice, not an automatable property of text.",
+   "reason": "advice",
+   "seed_uid": "f717d3d537ffa97c"
+  },
+  {
+   "anchor": {
+    "block_id": "5c0e75b4751c",
+    "end": 76,
+    "prefix": "",
+    "quote": "Government organisations should choose one dictionary of Australian English.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Guidance directed at organizational policy/workflow.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bc46a76d1842",
+    "end": 84,
+    "prefix": "",
+    "quote": "Use your organisation’s preferred dictionary as a spelling reference when you write.",
+    "start": 0,
+    "suffix": " Spelling and word usage can cha"
+   },
+   "note": "Process guidance to writers.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "390f5ea75d12",
+    "end": 154,
+    "prefix": "ings, but there are exceptions. ",
+    "quote": "For Australian spellings, always use an Australian English dictionary.",
+    "start": 84,
+    "suffix": ""
+   },
+   "note": "Reference advice for writers.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c47e1df7fcae",
+    "end": 30,
+    "prefix": "",
+    "quote": "Follow guidance in this manual",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Signposting/advice to check specific Style Manual sections.",
+   "reason": "advice",
+   "seed_uid": "b17bae8352b49d0e"
+  },
+  {
+   "anchor": {
+    "block_id": "ae39c8da7e8c",
+    "end": 24,
+    "prefix": "",
+    "quote": "Follow our guidance for:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Cross-reference signposting to other Style Manual topics.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a6e86e2be2d3",
+    "end": 58,
+    "prefix": "",
+    "quote": "Always follow our guidance for specific terms and phrases.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General meta-guidance reminding writers to consult specific pages.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/spelling.md",
+ "page_sha256": "0c652b98460bc8e8fb1fe23a8f049f0f977fdeb3804321477b04bd34d1bece07",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "8d0d4469aff1",
+    "note": "Organizational and writing workflow advice, not an automatable property of text.",
+    "quote": "Choose one dictionary for consistency",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5c0e75b4751c",
+    "note": "Guidance directed at organizational policy/workflow.",
+    "quote": "Government organisations should choose one dictionary of Australian English.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bc46a76d1842",
+    "note": "Process guidance to writers.",
+    "quote": "Use your organisation’s preferred dictionary as a spelling reference when you write.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "390f5ea75d12",
+    "note": "Reference advice for writers.",
+    "quote": "For Australian spellings, always use an Australian English dictionary.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c47e1df7fcae",
+    "note": "Signposting/advice to check specific Style Manual sections.",
+    "quote": "Follow guidance in this manual",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ae39c8da7e8c",
+    "note": "Cross-reference signposting to other Style Manual topics.",
+    "quote": "Follow our guidance for:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a6e86e2be2d3",
+    "note": "General meta-guidance reminding writers to consult specific pages.",
+    "quote": "Always follow our guidance for specific terms and phrases.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2c8901ce8b85",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "3b0ce4938c4d",
+      "quote": "Only use an alternative spelling listed for a word if you have evidence it will meet a user need."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always use the first entry in the list.",
+    "specification": "When a dictionary offers multiple spellings, use the primary (first listed) entry unless an alternative spelling is explicitly required by user needs or domain convention.",
+    "unit": "token",
+    "violation_condition": "using an alternative spelling from a dictionary entry instead of the first entry, without a demonstrated user need",
+    "when": [
+     "Only use an alternative spelling listed for a word if you have evidence it will meet a user need."
+    ],
+    "why": "G-2 (exceptions/conditions under When) and G-4."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "04268f4f7ae8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "we now write ‘ement’ not ‘ment’ in acknowledgement, lodgement and judgement (but we use ‘judgment’ for legal material).",
+    "specification": "Spell as 'acknowledgement', 'lodgement', and 'judgement', except in legal material where 'judgment' should be used.",
+    "unit": "token",
+    "violation_condition": "spelling acknowledgement, lodgement or judgement as acknowledgment, lodgment or judgment (except 'judgment' in legal contexts)",
+    "when": [
+     "In legal material, use 'judgment'."
+    ],
+    "why": "Specific lexical spelling instruction given directly in the manual."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "2c8901ce8b85",
+    "end": 94,
+    "prefix": "y variable spellings for words. ",
+    "quote": "Always use the first entry in the list.",
+    "start": 55,
+    "suffix": " This helps to ensure words are "
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "3b0ce4938c4d",
+     "end": 97,
+     "prefix": "",
+     "quote": "Only use an alternative spelling listed for a word if you have evidence it will meet a user need.",
+     "start": 0,
+     "suffix": " Record decisions you make about"
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "When a dictionary offers multiple spellings, use the primary (first listed) entry unless an alternative spelling is explicitly required by user needs or domain convention.",
+    "unit": "token",
+    "violation_condition": "using an alternative spelling from a dictionary entry instead of the first entry, without a demonstrated user need"
+   },
+   "when": [
+    "Only use an alternative spelling listed for a word if you have evidence it will meet a user need."
+   ],
+   "why": "G-2 (exceptions/conditions under When) and G-4."
+  },
+  {
+   "anchor": {
+    "block_id": "04268f4f7ae8",
+    "end": 228,
+    "prefix": "the sixth edition. For example, ",
+    "quote": "we now write ‘ement’ not ‘ment’ in acknowledgement, lodgement and judgement (but we use ‘judgment’ for legal material).",
+    "start": 109,
+    "suffix": " This is consistent with current"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Spell as 'acknowledgement', 'lodgement', and 'judgement', except in legal material where 'judgment' should be used.",
+    "unit": "token",
+    "violation_condition": "spelling acknowledgement, lodgement or judgement as acknowledgment, lodgment or judgment (except 'judgment' in legal contexts)"
+   },
+   "when": [
+    "In legal material, use 'judgment'."
+   ],
+   "why": "Specific lexical spelling instruction given directly in the manual."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4199,
+  "output_tokens": 997,
+  "reasoning_tokens": 0
+ }
+}

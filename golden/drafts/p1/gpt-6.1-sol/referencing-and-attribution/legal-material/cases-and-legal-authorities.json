@@ -1,0 +1,4703 @@
+{
+ "effort": "high",
+ "input_sha256": "8d48ce3047cb1b2a1d5bfe1a1e6b726fa7aa40492a12cb6cebf0ec17094ef4bd",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "b3890231a61e",
+    "end": 63,
+    "prefix": "",
+    "quote": "Cite cases, rulings and determinations using the correct style.",
+    "start": 0,
+    "suffix": " Accuracy helps people find the "
+   },
+   "note": "G-5: general advice to follow the correct style does not identify an independently checkable textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bee2a0688c57",
+    "end": 54,
+    "prefix": "",
+    "quote": "Style for case names is title case, not always italics",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the more specific capitalisation, separator, typeface and source-name requirements.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7073605f7175",
+    "end": 65,
+    "prefix": "",
+    "quote": "Use roman type for cases in reference lists and other long lists.",
+    "start": 0,
+    "suffix": " Blocks of italics are difficult"
+   },
+   "note": "G-2: incorporated as the list-context branch of the case-name typeface rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ae51e7c64c54",
+    "end": 35,
+    "prefix": "",
+    "quote": "The abbreviated title is in italics",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body states the requirement more precisely for in-text references.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6912f72c1f2a",
+    "end": 294,
+    "prefix": " case (maximal capitalisation). ",
+    "quote": "You can then use the abbreviated title throughout the content.",
+    "start": 232,
+    "suffix": ""
+   },
+   "note": "G-3: permits abbreviated references after introduction; recorded under the first-mention rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "157374831faf",
+    "end": 102,
+    "prefix": "",
+    "quote": "Citations can be in text or in notes, depending on organisational style and the format of the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: allows alternative citation locations without independently prohibiting either.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dd66aebf4012",
+    "end": 188,
+    "prefix": "e numbers for the whole series. ",
+    "quote": "This means you don’t have to use the year to find the volume on the shelf.",
+    "start": 114,
+    "suffix": ""
+   },
+   "note": "Explains the report-series indexing system; it is not an instruction about citation text.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ad9e557c7a7a",
+    "end": 80,
+    "prefix": "",
+    "quote": "Use square brackets for reported decisions that use the year as a volume number.",
+    "start": 0,
+    "suffix": " This means you must look for th"
+   },
+   "note": "G-2: incorporated as a condition of the citation-year bracket rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ad9e557c7a7a",
+    "end": 157,
+    "prefix": "se the year as a volume number. ",
+    "quote": "This means you must look for the year first, then for volume 1, 2 and so on.",
+    "start": 81,
+    "suffix": " Other years would also have a v"
+   },
+   "note": "G-5: describes how to locate a report, not a property of the writing.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1f86817f7d59",
+    "end": 51,
+    "prefix": "",
+    "quote": "Unreported decisions are always in square brackets.",
+    "start": 0,
+    "suffix": " There is no volume number, as t"
+   },
+   "note": "G-2: incorporated as the unreported-decision branch of the citation-year bracket rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5f8f1269446d",
+    "end": 108,
+    "prefix": "",
+    "quote": "In civil case titles, the ‘v’ is pronounced ‘and’. In criminal case titles, the ‘v’ is pronounced ‘against’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes pronunciation rather than a property a text checker can flag.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "77d0ec48d43b",
+    "end": 121,
+    "prefix": "itations use only family names. ",
+    "quote": "Corporation names are usually given in full, although abbreviations are acceptable.",
+    "start": 38,
+    "suffix": ""
+   },
+   "note": "G-3: both full names and abbreviations are acceptable; incorporated as an exception to the family-name convention.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "45242925b114",
+    "end": 89,
+    "prefix": "",
+    "quote": "Usually, citations use only the name of the first-mentioned party on each side of a case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: qualifies and restates the selected civil-title heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6295467bdd8f",
+    "end": 49,
+    "prefix": "",
+    "quote": "Other parties are sometimes noted by the phrases:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: introduces permitted collective forms, incorporated into the civil-party rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "60b3c5bcd372",
+    "end": 69,
+    "prefix": "",
+    "quote": "In civil cases, use sentence case and italics for ‘Re’ and ‘Ex parte’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body supplies the separate capitalisation and italic-styling checks.",
+   "reason": "restatement",
+   "seed_uid": "e92340ae78f9955a"
+  },
+  {
+   "anchor": {
+    "block_id": "84063a112810",
+    "end": 116,
+    "prefix": "",
+    "quote": "If the Crown is the respondent in a criminal appeal, reverse the parties and write ‘Appellant v The King’ (not ‘R’).",
+    "start": 0,
+    "suffix": " If the Crown is the appellant, "
+   },
+   "note": "G-2: incorporated into the Crown-representation and appeal-party-order rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "74626df28b57",
+    "end": 77,
+    "prefix": "",
+    "quote": "'The King' or 'The Queen' in the title is always retained as first published.",
+    "start": 0,
+    "suffix": " The title does not change when "
+   },
+   "note": "G-2 and G-4: a specific application of preserving the source name.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "74626df28b57",
+    "end": 129,
+    "prefix": "ys retained as first published. ",
+    "quote": "The title does not change when the monarch changes.",
+    "start": 78,
+    "suffix": ""
+   },
+   "note": "G-4: restates retention of the published name; not an additional check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ce1e2d0a8316",
+    "end": 49,
+    "prefix": "",
+    "quote": "Subsequent citations in notes use the first party",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: the body says this shortening is permitted, not mandatory.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "59c4a42505b8",
+    "end": 80,
+    "prefix": "",
+    "quote": "When citing cases using notes, always use a full citation as the first citation.",
+    "start": 0,
+    "suffix": " After that, you can use the nam"
+   },
+   "note": "G-2: incorporated into the full-citation rule as an explicit first-note requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "59c4a42505b8",
+    "end": 164,
+    "prefix": "citation as the first citation. ",
+    "quote": "After that, you can use the name of the first party, followed by the case citation.",
+    "start": 81,
+    "suffix": ""
+   },
+   "note": "G-3: permits shortened subsequent notes; it does not require shortening.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d2d7414df5cb",
+    "end": 58,
+    "prefix": "",
+    "quote": "Pinpoint citations use ‘at’ for page and paragraph numbers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: the body gives separate checks for page notation, paragraph brackets and pinpoint separators.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6852592c7a16",
+    "end": 103,
+    "prefix": "",
+    "quote": "You can follow the page number with the number of the relevant paragraph as it appears in the judgment.",
+    "start": 0,
+    "suffix": " Write the paragraph number in s"
+   },
+   "note": "G-3: paragraph inclusion is optional; the following sentence governs its format when included.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ed5ec8bef727",
+    "end": 50,
+    "prefix": "",
+    "quote": "Decisions can differ between judges or magistrates",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The candidate heading explains the motivation; the body states the attribution requirement.",
+   "reason": "description",
+   "seed_uid": "c1e72bd2ada5b2e3"
+  },
+  {
+   "anchor": {
+    "block_id": "6d52b02f1de7",
+    "end": 133,
+    "prefix": " whose judgment you are citing. ",
+    "quote": "Cite the case fully and add ‘per [name] [judicial office abbreviation]’.",
+    "start": 61,
+    "suffix": ""
+   },
+   "note": "G-4: its full-citation requirement and attribution format are incorporated into their respective rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16b04063809c",
+    "end": 57,
+    "prefix": "",
+    "quote": "Titles for Commonwealth tribunal decisions are in italics",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body directly states the tribunal-title italic requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff6660198199",
+    "end": 65,
+    "prefix": "",
+    "quote": "Find the decision title on the tribunal website or an alternative",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: tells the writer where to search; no text can violate the search instruction.",
+   "reason": "advice",
+   "seed_uid": "6bdbc7e6246b586a"
+  },
+  {
+   "anchor": {
+    "block_id": "bc9136603c86",
+    "end": 85,
+    "prefix": "",
+    "quote": "Always cite the authorised report if it has been published and you have access to it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: consolidated with the earlier authorised-report rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b876e272656e",
+    "end": 73,
+    "prefix": "",
+    "quote": "Specify whether it’s a ruling or determination in all subsequent mentions",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the selected body sentence is more precise and explicitly permits using the number instead.",
+   "reason": "restatement",
+   "seed_uid": "0b44fd67cd8a7ea3"
+  },
+  {
+   "anchor": {
+    "block_id": "b9c08b52694b",
+    "end": 54,
+    "prefix": "",
+    "quote": "In notes, cite the title, source and paragraph numbers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific source, pinpoint and subsequent-note requirements.",
+   "reason": "section",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "referencing-and-attribution/legal-material/cases-and-legal-authorities.md",
+ "page_sha256": "858443aae32d0661b05d7740261fdf1c895f51cc43de02902fb28a9f5ed5b0a7",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "b3890231a61e",
+    "note": "G-5: general advice to follow the correct style does not identify an independently checkable textual property.",
+    "quote": "Cite cases, rulings and determinations using the correct style.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bee2a0688c57",
+    "note": "G-1: groups the more specific capitalisation, separator, typeface and source-name requirements.",
+    "quote": "Style for case names is title case, not always italics",
+    "reason": "section"
+   },
+   {
+    "block_id": "7073605f7175",
+    "note": "G-2: incorporated as the list-context branch of the case-name typeface rule.",
+    "quote": "Use roman type for cases in reference lists and other long lists.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ae51e7c64c54",
+    "note": "G-4: the body states the requirement more precisely for in-text references.",
+    "quote": "The abbreviated title is in italics",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6912f72c1f2a",
+    "note": "G-3: permits abbreviated references after introduction; recorded under the first-mention rule.",
+    "quote": "You can then use the abbreviated title throughout the content.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "157374831faf",
+    "note": "G-3: allows alternative citation locations without independently prohibiting either.",
+    "quote": "Citations can be in text or in notes, depending on organisational style and the format of the content.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "dd66aebf4012",
+    "note": "Explains the report-series indexing system; it is not an instruction about citation text.",
+    "quote": "This means you don’t have to use the year to find the volume on the shelf.",
+    "reason": "description"
+   },
+   {
+    "block_id": "ad9e557c7a7a",
+    "note": "G-2: incorporated as a condition of the citation-year bracket rule.",
+    "quote": "Use square brackets for reported decisions that use the year as a volume number.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ad9e557c7a7a",
+    "note": "G-5: describes how to locate a report, not a property of the writing.",
+    "quote": "This means you must look for the year first, then for volume 1, 2 and so on.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1f86817f7d59",
+    "note": "G-2: incorporated as the unreported-decision branch of the citation-year bracket rule.",
+    "quote": "Unreported decisions are always in square brackets.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5f8f1269446d",
+    "note": "Describes pronunciation rather than a property a text checker can flag.",
+    "quote": "In civil case titles, the ‘v’ is pronounced ‘and’. In criminal case titles, the ‘v’ is pronounced ‘against’.",
+    "reason": "description"
+   },
+   {
+    "block_id": "77d0ec48d43b",
+    "note": "G-3: both full names and abbreviations are acceptable; incorporated as an exception to the family-name convention.",
+    "quote": "Corporation names are usually given in full, although abbreviations are acceptable.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "45242925b114",
+    "note": "G-4: qualifies and restates the selected civil-title heading.",
+    "quote": "Usually, citations use only the name of the first-mentioned party on each side of a case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6295467bdd8f",
+    "note": "G-3: introduces permitted collective forms, incorporated into the civil-party rule.",
+    "quote": "Other parties are sometimes noted by the phrases:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "60b3c5bcd372",
+    "note": "G-4: the body supplies the separate capitalisation and italic-styling checks.",
+    "quote": "In civil cases, use sentence case and italics for ‘Re’ and ‘Ex parte’",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "84063a112810",
+    "note": "G-2: incorporated into the Crown-representation and appeal-party-order rules.",
+    "quote": "If the Crown is the respondent in a criminal appeal, reverse the parties and write ‘Appellant v The King’ (not ‘R’).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "74626df28b57",
+    "note": "G-2 and G-4: a specific application of preserving the source name.",
+    "quote": "'The King' or 'The Queen' in the title is always retained as first published.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "74626df28b57",
+    "note": "G-4: restates retention of the published name; not an additional check.",
+    "quote": "The title does not change when the monarch changes.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ce1e2d0a8316",
+    "note": "G-3: the body says this shortening is permitted, not mandatory.",
+    "quote": "Subsequent citations in notes use the first party",
+    "reason": "permission"
+   },
+   {
+    "block_id": "59c4a42505b8",
+    "note": "G-2: incorporated into the full-citation rule as an explicit first-note requirement.",
+    "quote": "When citing cases using notes, always use a full citation as the first citation.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "59c4a42505b8",
+    "note": "G-3: permits shortened subsequent notes; it does not require shortening.",
+    "quote": "After that, you can use the name of the first party, followed by the case citation.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "d2d7414df5cb",
+    "note": "G-1: the body gives separate checks for page notation, paragraph brackets and pinpoint separators.",
+    "quote": "Pinpoint citations use ‘at’ for page and paragraph numbers",
+    "reason": "section"
+   },
+   {
+    "block_id": "6852592c7a16",
+    "note": "G-3: paragraph inclusion is optional; the following sentence governs its format when included.",
+    "quote": "You can follow the page number with the number of the relevant paragraph as it appears in the judgment.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "ed5ec8bef727",
+    "note": "The candidate heading explains the motivation; the body states the attribution requirement.",
+    "quote": "Decisions can differ between judges or magistrates",
+    "reason": "description"
+   },
+   {
+    "block_id": "6d52b02f1de7",
+    "note": "G-4: its full-citation requirement and attribution format are incorporated into their respective rules.",
+    "quote": "Cite the case fully and add ‘per [name] [judicial office abbreviation]’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "16b04063809c",
+    "note": "G-4: the body directly states the tribunal-title italic requirement.",
+    "quote": "Titles for Commonwealth tribunal decisions are in italics",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ff6660198199",
+    "note": "G-5: tells the writer where to search; no text can violate the search instruction.",
+    "quote": "Find the decision title on the tribunal website or an alternative",
+    "reason": "advice"
+   },
+   {
+    "block_id": "bc9136603c86",
+    "note": "G-2 and G-4: consolidated with the earlier authorised-report rule.",
+    "quote": "Always cite the authorised report if it has been published and you have access to it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b876e272656e",
+    "note": "G-4: the selected body sentence is more precise and explicitly permits using the number instead.",
+    "quote": "Specify whether it’s a ruling or determination in all subsequent mentions",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b9c08b52694b",
+    "note": "G-1: groups the specific source, pinpoint and subsequent-note requirements.",
+    "quote": "In notes, cite the title, source and paragraph numbers",
+    "reason": "section"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b3890231a61e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Specify the law report or online legal authority that hosts the relevant judgment or decision.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation does not identify the law report or online legal authority hosting the judgment or decision.",
+    "when": [
+     "Applies to citations of cases, rulings and determinations."
+    ],
+    "why": "G-5: identifying the source is a property of the citation, unlike the introductory advice to use the correct style."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9fda50f9d444",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Capitalise the names of the parties",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A party name in a case title lacks its required capitalisation.",
+    "when": [
+     "Applies to the names of parties in case titles.",
+     "Preserve the names as they appear in the source."
+    ],
+    "why": "G-1: party-name capitalisation is distinct from the spelling and punctuation of the separator."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9fda50f9d444",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "use a lower case ‘v’ between the party names.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The separator between party names in a case title is an upper-case ‘V’ rather than a lower-case ‘v’.",
+    "when": [
+     "Applies to the separator between parties in a case title."
+    ],
+    "why": "G-1: separator capitalisation is one independently flaggable property."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9fda50f9d444",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "There is no full stop after ‘v’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The ‘v’ between party names in a case title is followed by a full stop.",
+    "when": [
+     "Applies to the separator between parties in a case title."
+    ],
+    "why": "G-1: a full stop after the separator is distinct from incorrect capitalisation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "82330b137eec",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "82330b137eec",
+      "quote": "This rule is for case names that are mentioned briefly in general content."
+     },
+     {
+      "block_id": "7073605f7175",
+      "quote": "Use roman type for cases in reference lists and other long lists."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "3b9e805791af",
+        "quote": "In Commonwealth v Tasmania …"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "e583d3ec4dcd",
+        "quote": "The article discusses an important case in the High Court, Commonwealth v Tasmania."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the name of the case in italics.",
+    "specification": "The required typeface depends on context. The manual does not define how long a list must be to count as a long list.",
+    "unit": "block",
+    "violation_condition": "A briefly mentioned case name in general content is not italicised, or a case name in a reference list or other long list is italicised rather than roman.",
+    "when": [
+     "Use italics for case names mentioned briefly in general content.",
+     "Use roman type for cases in reference lists and other long lists."
+    ],
+    "why": "G-2: brief mentions and long lists change which typeface the same check requires."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d953f37c0c6b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "74626df28b57",
+      "quote": "'The King' or 'The Queen' in the title is always retained as first published."
+     },
+     {
+      "block_id": "74626df28b57",
+      "quote": "The title does not change when the monarch changes."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dacf3380a8ff",
+        "quote": "Chamberlain v The Queen (1984) 153 CLR 521"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e9b5ed6977a9",
+        "quote": "The Queen v Baden-Clay [2016] HCA 35"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8533a1a0ff6f",
+        "quote": "House v The King (1936) 55 CLR 49"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always write the names as they appear in your source.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A case name differs from the source name, including a historical ‘The King’ or ‘The Queen’ changed to match the current monarch.",
+    "when": [
+     "Compare the name with the source being cited.",
+     "Retain ‘The King’ or ‘The Queen’ as first published, regardless of a subsequent change of monarch."
+    ],
+    "why": "G-2 and G-4: retaining the original monarch is a specific application of preserving the source name."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6912f72c1f2a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6912f72c1f2a",
+      "quote": "You can then use the abbreviated title throughout the content."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f4216bb22e4c",
+        "quote": "… the important case in the High Court, Commonwealth v Tasmania(Tasmanian Dam Case). The case saw the Commonwealth …"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d1b76dde92c3",
+        "quote": "… the State of New South Wales v The Commonwealth (Wheat Case). The Wheat Case …"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "On first mention of the case name, follow it with the abbreviated title in parentheses.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first mention of a case that has an abbreviated title omits that title or does not put it after the case name in parentheses.",
+    "when": [
+     "Applies where the case has an abbreviated title.",
+     "After its introduction, the abbreviated title may be used throughout the content."
+    ],
+    "why": "G-2 and G-3: subsequent abbreviated mentions are an exception to introducing the abbreviation, not another requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6912f72c1f2a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ae51e7c64c54",
+      "quote": "The abbreviated title is in italics"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "write this title in italics",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An abbreviated case title in an in-text reference is set in roman rather than italic type.",
+    "when": [
+     "Applies to abbreviated case titles used in in-text references."
+    ],
+    "why": "G-4: the body limits the heading's italic requirement to in-text references."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6912f72c1f2a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "use title case (maximal capitalisation).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An abbreviated case title in an in-text reference is not in title case.",
+    "when": [
+     "Applies to abbreviated case titles used in in-text references."
+    ],
+    "why": "G-1: title capitalisation is independently flaggable from italic styling."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "28a1ce37af08",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f4216bb22e4c",
+        "quote": "The case saw the Commonwealth …"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not capitalise ‘the case’ or ‘this case’.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic reference to ‘the case’ or ‘this case’ has an unnecessary capital, particularly ‘Case’.",
+    "when": [
+     "Applies to generic references, not words forming part of an abbreviated case title.",
+     "Normal sentence-initial capitalisation still applies."
+    ],
+    "why": "G-1: generic references have a separate capitalisation check from named case titles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b5d499407ca3",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "59c4a42505b8",
+      "quote": "When citing cases using notes, always use a full citation as the first citation."
+     },
+     {
+      "block_id": "59c4a42505b8",
+      "quote": "After that, you can use the name of the first party, followed by the case citation."
+     },
+     {
+      "block_id": "157374831faf",
+      "quote": "Citations can be in text or in notes, depending on organisational style and the format of the content."
+     },
+     {
+      "block_id": "6d52b02f1de7",
+      "quote": "Cite the case fully and add ‘per [name] [judicial office abbreviation]’."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "528593e18108",
+        "quote": "1 Steinmetz v Shannon(2019) 99 NSWLR 687."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Permitted abbreviated subsequent note.",
+      "parts": [
+       {
+        "block_id": "1987dcd24c4c",
+        "quote": "8 Steinmetz (2019) 99 NSWLR 687."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Most government writing about cases requires a full citation.",
+    "specification": "The page does not define the exceptions implied by ‘Most’. It explicitly requires a full first citation in notes and a full citation when attributing a judicial officer's judgment. Check absence of a full citation here; specific component-format errors belong to their narrower rules.",
+    "unit": "document",
+    "violation_condition": "Writing about a case has no full citation where one is required, including a first citation in notes.",
+    "when": [
+     "The first citation of a case in notes must be full.",
+     "A citation identifying a judicial officer's judgment is to be full.",
+     "Citations may be in text or notes, depending on organisational style and content format.",
+     "After a full first citation in notes, the first party's name followed by the case citation is permitted."
+    ],
+    "why": "G-2 and G-3: full-citation requirements and permitted subsequent shortening are consolidated rather than duplicated."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "18c4aaded76c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bc9136603c86",
+      "quote": "Always cite the authorised report if it has been published and you have access to it."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always cite an authorised report if it is available.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A decision is cited without its available authorised report.",
+    "when": [
+     "An authorised report must be available.",
+     "For tribunal decisions, the authorised report must have been published and be accessible to the writer."
+    ],
+    "why": "G-2 and G-4: the tribunal instruction repeats the authorised-report rule and makes availability explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dd66aebf4012",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ad9e557c7a7a",
+      "quote": "Use square brackets for reported decisions that use the year as a volume number."
+     },
+     {
+      "block_id": "1f86817f7d59",
+      "quote": "Unreported decisions are always in square brackets."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "884f108e154f",
+        "quote": "Reported decision with consecutive volume numbers for the whole series:"
+       },
+       {
+        "block_id": "64494b862f46",
+        "quote": "name of the case: The State of New South Wales v The Commonwealth"
+       },
+       {
+        "block_id": "d91396832f9a",
+        "quote": "year of decision: (1915)"
+       },
+       {
+        "block_id": "b9258c3e7fb2",
+        "quote": "volume of report series: 20"
+       },
+       {
+        "block_id": "d6a368863386",
+        "quote": "report series abbreviation: CLR"
+       },
+       {
+        "block_id": "b458b584e2bb",
+        "quote": "page number where the report begins: 54"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "38651cf6f3f2",
+        "quote": "Reported decision with the year as a volume number:"
+       },
+       {
+        "block_id": "deaf138d14ed",
+        "quote": "name of the case: Kashemije Stud Pty Ltd v Hawkes"
+       },
+       {
+        "block_id": "df0b05d7dd15",
+        "quote": "year of report: [1978]"
+       },
+       {
+        "block_id": "92c5571abba5",
+        "quote": "volume of report series: 1"
+       },
+       {
+        "block_id": "642522baac39",
+        "quote": "report series abbreviation: NSWLR"
+       },
+       {
+        "block_id": "02d2380e80a6",
+        "quote": "page number where the report begins: 143"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a61db7095838",
+        "quote": "Unreported decision with no volume number:"
+       },
+       {
+        "block_id": "10aaf2de9c5b",
+        "quote": "name of the case: The State of NSW v The Commonwealth"
+       },
+       {
+        "block_id": "b0ed79bb3820",
+        "quote": "year of decision: [1915]"
+       },
+       {
+        "block_id": "7f93814d0d69",
+        "quote": "volume of report series: (not reported in a volume)"
+       },
+       {
+        "block_id": "76eb590d7dbb",
+        "quote": "report series abbreviation: HCA"
+       },
+       {
+        "block_id": "5d22bc57fdcd",
+        "quote": "judgment number [relates to year of decision]: 17"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use parentheses (round brackets) for reported decisions that use consecutive volume numbers for the whole series.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A decision's citation year uses the wrong bracket type for its report series or for an unreported decision.",
+    "when": [
+     "Use round brackets for reported decisions in series with consecutive volume numbers across the whole series.",
+     "Use square brackets for reported decisions whose series uses the year as a volume number.",
+     "Unreported decisions always use square brackets."
+    ],
+    "why": "G-2: report-series type changes the required year brackets, not the nature of the check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f86817f7d59",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "There is no volume number, as the case is not part of an authorised report series.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An unreported-decision citation includes a report-series volume number.",
+    "when": [
+     "Applies to unreported decisions; the judgment number is not a volume number."
+    ],
+    "why": "G-1: an extraneous volume number is a different citation-format error from incorrect year brackets."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5537966182ea",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "45242925b114",
+      "quote": "Usually, citations use only the name of the first-mentioned party on each side of a case."
+     },
+     {
+      "block_id": "6295467bdd8f",
+      "quote": "Other parties are sometimes noted by the phrases:"
+     },
+     {
+      "block_id": "68119af940a8",
+      "quote": "‘and Others’ or ‘& Ors’"
+     },
+     {
+      "block_id": "2bdeccddbbaa",
+      "quote": "‘and Another’ or ‘& Anor’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ffda9a00ecdc",
+        "quote": "Koowarta v Bjelke-Peterson (1982) 153 CLR 168"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b1ef6f7a25c4",
+        "quote": "SZIBU and Another v Minister for Immigration and Citizenship and Another [2007] FCA 108"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "eaf26a8068b0",
+        "quote": "The State of Victoria and Others v The Commonwealth (1926) 38 CLR 399"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4886d2e424fa",
+        "quote": "Cunningham & Ors v Commonwealth of Australia & Anor [2016] HCA 39"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For civil case titles, specify the first plaintiff and defendant",
+    "specification": "The body qualifies the first-party convention with ‘Usually’ but does not identify other exceptions. It explicitly permits collective references to additional parties.",
+    "unit": "phrase",
+    "violation_condition": "A civil case title does not identify the first-mentioned party on each side, or individually names additional parties instead of using the permitted collective forms.",
+    "when": [
+     "Applies to civil case titles.",
+     "Normally name only the first-mentioned party on each side.",
+     "Additional parties may be represented by ‘and Others’, ‘& Ors’, ‘and Another’ or ‘& Anor’."
+    ],
+    "why": "G-2, G-3 and G-4: the body restates the heading and permits collective references to other parties."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "77d0ec48d43b",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "77d0ec48d43b",
+      "quote": "Corporation names are usually given in full, although abbreviations are acceptable."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Most citations use only family names.",
+    "specification": "The page does not define the exceptions implied by ‘Most’ or fully explain their relationship to preserving source names.",
+    "unit": "phrase",
+    "violation_condition": "A civil case citation includes a person's given names where the family-name-only convention applies.",
+    "when": [
+     "This guidance appears in the civil-case section.",
+     "It concerns personal names, not corporation names.",
+     "Corporation names are usually given in full, but abbreviations are acceptable.",
+     "The page also requires names to match the source."
+    ],
+    "why": "G-2 and G-3: corporate names are an exception to personal family-name treatment, not a separate prohibition on abbreviations."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f40ae814a049",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "60b3c5bcd372",
+      "quote": "In civil cases, use sentence case and italics for ‘Re’ and ‘Ex parte’"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "07b1f1ccf162",
+        "quote": "Nduta v Minister for Immigration & Border Protection [2016] FCA 1596; Re Minister for Immigration and Multicultural Affairs; Ex parte Durairajasingham [2000] HCA 1; 74 ALJR 405."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a4eccc9e336c",
+        "quote": "An Ex parte application of Commissioner of the Australian Federal Police ..."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use sentence case",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Re’ or ‘Ex parte’ in a civil case title has capitalisation other than the specified sentence-case form.",
+    "when": [
+     "Applies to the terms ‘Re’ and ‘Ex parte’ in civil case titles."
+    ],
+    "why": "G-1 and G-4: capitalisation and italic styling are independent checks; the body supplies the capitalisation instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f40ae814a049",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "write both in italics.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Re’ or ‘Ex parte’ in a civil case title is not italicised.",
+    "when": [
+     "Applies to the terms ‘Re’ and ‘Ex parte’ in civil case titles."
+    ],
+    "why": "G-1: italic styling is distinct from the capitalisation of these terms."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "80f91a9d5e11",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ad6a96ac02f1",
+        "quote": "R v Bayda, R v Namoa (No 8) [2019] NSWSC 24"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6f32546fc955",
+        "quote": "R v Alice Lynne Chamberlain and Michael Leigh Chamberlain [1982] NTSC"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For criminal case titles, list all defendants",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A criminal case title omits a defendant.",
+    "when": [
+     "Applies to criminal case titles."
+    ],
+    "why": "G-1: completeness of the defendant list is separate from punctuation between defendants."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f4bf9baf1a10",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ad6a96ac02f1",
+        "quote": "R v Bayda, R v Namoa (No 8) [2019] NSWSC 24"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Presented as correct despite using ‘and’ rather than a comma.",
+      "parts": [
+       {
+        "block_id": "6f32546fc955",
+        "quote": "R v Alice Lynne Chamberlain and Michael Leigh Chamberlain [1982] NTSC"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "List the names of all defendants separated by a comma.",
+    "specification": "The prose calls for commas, but the page also presents a compliant example joining two defendants with ‘and’. The scope of that alternative needs review.",
+    "unit": "phrase",
+    "violation_condition": "Multiple defendants in a criminal case title are not separated by commas where the comma-separation instruction applies.",
+    "when": [
+     "Applies to criminal case titles containing multiple defendants."
+    ],
+    "why": "G-1 and E-1: punctuation is a separate check, but the manual's alternative example must not be labelled violating."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4e0d1b4250ee",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "84063a112810",
+      "quote": "If the Crown is the respondent in a criminal appeal, reverse the parties and write ‘Appellant v The King’ (not ‘R’)."
+     },
+     {
+      "block_id": "84063a112810",
+      "quote": "If the Crown is the appellant, ‘The King’ is the first party cited."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ad6a96ac02f1",
+        "quote": "R v Bayda, R v Namoa (No 8) [2019] NSWSC 24"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dacf3380a8ff",
+        "quote": "Chamberlain v The Queen (1984) 153 CLR 521"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e9b5ed6977a9",
+        "quote": "The Queen v Baden-Clay [2016] HCA 35"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8533a1a0ff6f",
+        "quote": "House v The King (1936) 55 CLR 49"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If prosecuting, the Crown is signified by an ‘R’ without a full stop.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The Crown is represented by the wrong form in a criminal case title: not ‘R’ without a full stop in a prosecution, or ‘R’ rather than the published royal title in an appeal.",
+    "when": [
+     "For a prosecution, represent the Crown as ‘R’ without a full stop.",
+     "In a criminal appeal, use ‘The King’, or retain ‘The Queen’ where that is the published title.",
+     "This check concerns the Crown's name, not the order of the parties."
+    ],
+    "why": "G-2: prosecution and appeal change the required representation of the Crown."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "84063a112810",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "84063a112810",
+      "quote": "If the Crown is the respondent in a criminal appeal, reverse the parties and write ‘Appellant v The King’ (not ‘R’)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If the Crown is the appellant, ‘The King’ is the first party cited.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A criminal appeal title puts the respondent before the appellant.",
+    "when": [
+     "If the Crown is the appellant, put the Crown first.",
+     "If the Crown is the respondent, put the other appellant first and the Crown second.",
+     "Retain the published royal title."
+    ],
+    "why": "G-1 and G-2: party order is distinct from Crown naming; the Crown's appeal role changes the required position."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "14706897e246",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "95bcccbbbc2d",
+        "quote": "1Ruddock v Vadarlis (2001) 110 FCR 491 at 1191."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2f17b11a30ab",
+        "quote": "3Gedeon v The Queen (2013) 237 A Crim R 326 at 361–362 [174]–[178]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If you use notes, write pinpoint page numbers for the citation using ‘at [page number]’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A case citation in a note gives a pinpoint page number without preceding it with ‘at’.",
+    "when": [
+     "Applies to pinpoint page references in case citations in notes."
+    ],
+    "why": "G-1: the body states the actionable page-pinpoint format."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6852592c7a16",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6852592c7a16",
+      "quote": "You can follow the page number with the number of the relevant paragraph as it appears in the judgment."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b94e09b64f53",
+        "quote": "2Rojoda Pty Ltd v Commissioner of State Revenue (2018) 368 ALR 734 at 737 [10], 760 [108]."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2f17b11a30ab",
+        "quote": "3Gedeon v The Queen (2013) 237 A Crim R 326 at 361–362 [174]–[178]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the paragraph number in square brackets.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A paragraph number included in a case pinpoint citation is not enclosed in square brackets.",
+    "when": [
+     "Applies when a relevant judgment paragraph is included after a pinpoint page number.",
+     "Including the paragraph number is optional."
+    ],
+    "why": "G-3: optional inclusion does not remove the format requirement when a paragraph number is supplied."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "40b332cb64fd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b94e09b64f53",
+        "quote": "2Rojoda Pty Ltd v Commissioner of State Revenue (2018) 368 ALR 734 at 737 [10], 760 [108]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a comma to list separate pinpoint citations.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Separate pinpoint references in a citation are not separated by commas.",
+    "when": [
+     "Applies to separate pinpoint references, not the endpoints of a continuous range."
+    ],
+    "why": "G-1: separators between pinpoints are distinct from page and paragraph notation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6d52b02f1de7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6d52b02f1de7",
+      "quote": "Cite the case fully and add ‘per [name] [judicial office abbreviation]’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "accc9efa0c97",
+        "quote": "UBS AG v Tyne (2018) 92 ALJR 968 at 979 [45] per Kiefel CJ, Bell and Keane JJ, [61] per Gageler J."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6687ef7aa8ff",
+        "quote": "Mabo v Queensland [No 2] (1992) 175 CLR 1 at 106–107 per Deane and Gaudron JJ."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0d55a73cc471",
+        "quote": "1 Ward v The Queen[2000] WASCA 413; (2000) 23 WAR 254 at 25 per Kennedy J."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Identify the judicial officer whose judgment you are citing.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation of a judicial officer's judgment lacks attribution in the form ‘per [name] [judicial office abbreviation]’.",
+    "when": [
+     "Applies when citing a judicial officer's judgment.",
+     "Add ‘per’, the officer's name and the judicial office abbreviation.",
+     "The accompanying case citation is to be full."
+    ],
+    "why": "G-4: the second sentence supplies the attribution format; the descriptive heading is not the rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "266414bacdf2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0c25c3180fa0",
+      "quote": "J (Justice)"
+     },
+     {
+      "block_id": "6990e1a2bfff",
+      "quote": "JJ (Justices)"
+     },
+     {
+      "block_id": "70d7051f58ba",
+      "quote": "CJ (Chief Justice)"
+     },
+     {
+      "block_id": "1f5f77b5b0bb",
+      "quote": "ACJ (Acting Chief Justice)"
+     },
+     {
+      "block_id": "9657b0c3dc8d",
+      "quote": "FM (Federal Magistrate)"
+     },
+     {
+      "block_id": "153891621676",
+      "quote": "JA (Justice of Appeal)"
+     },
+     {
+      "block_id": "26d15f6b256f",
+      "quote": "DCJ (District Court Judge)."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3c268cb6fe01",
+        "quote": "Chief Justice Kiefel and Bell and Edelman JJ accepted that such agreements would be excluded."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use these abbreviations:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A judicial office in the relevant citation context uses an abbreviation other than the listed form, including an incorrect singular or plural form.",
+    "when": [
+     "Use J for Justice and JJ for Justices.",
+     "Use CJ for Chief Justice, ACJ for Acting Chief Justice, FM for Federal Magistrate, JA for Justice of Appeal and DCJ for District Court Judge."
+    ],
+    "why": "G-2: the listed offices are lookup cases of one abbreviation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "987c73b90b2e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "16b04063809c",
+      "quote": "Titles for Commonwealth tribunal decisions are in italics"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "bb77989c06c2",
+        "quote": "Minister for Home Affairs v AYJ17 [2019] FCA 591; 165 ALD 64"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "38e578cf53aa",
+        "quote": "Application by Flexigroup Limited [2020] ACompT 1"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "f53450849224",
+        "quote": "Application by Isentia Pty Limited [2018] ACopyT 4"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "16e60cf41d6d",
+        "quote": "McCleave v Chief of Navy [2019] ADFDAT 1"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "334ce2637644",
+        "quote": "David Thomas and Frederick (Junior) Faamausili Ailua v Virgin Australia Airlines Pty Ltd t/a Virgin Australia [2019] FWC 4464"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The supplied text does not retain the example's typeface.",
+      "parts": [
+       {
+        "block_id": "639a37d6beaf",
+        "quote": "Kyburra Munda Yalga Aboriginal Corporation RNTBC v Rock Solid Holdings Pty Ltd & Another [2020] NNTTA 31 (11 March 2020)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the title of all tribunal decisions in italics.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A tribunal decision title is not italicised.",
+    "when": [
+     "Applies to tribunal decision titles."
+    ],
+    "why": "G-4: the body directly states the title-format requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e2a3f37ec32c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "977526b06789",
+      "quote": "a ruling or determination type – for example, ‘Goods and Services Tax Ruling’"
+     },
+     {
+      "block_id": "03d180b6af4d",
+      "quote": "a number – for example, ‘GSTR 2019/1’"
+     },
+     {
+      "block_id": "2e10192597f7",
+      "quote": "a title in italics – for example, Goods and services tax: supply of anything other than goods or real property connected with the indirect tax zone (Australia)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7d699568f9e0",
+        "quote": "Goods and Services Tax Ruling GSTR 2019/1 Goods and services tax: supply of anything other than goods or real property connected with the indirect tax zone (Australia)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "560476ed148e",
+        "quote": "Class Ruling CR 2019/19 Income tax: Department for Health and Wellbeing South Australia Early Retirement Program 2019"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e5bc0b83d9f3",
+        "quote": "Taxation Determination TD 2019/13 Income tax: what is an‘employee share trust’?"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The full titles of public rulings have 3 elements that appear in a set order:",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A purported full public-ruling title omits its ruling or determination type, number or title, or puts those elements in the wrong order.",
+    "when": [
+     "Applies to full titles of public tax rulings and determinations.",
+     "The order is ruling or determination type, number, then title.",
+     "Italic styling of the title is checked separately."
+    ],
+    "why": "G-2: the ordered list defines one full-title structure."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2e10192597f7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "a title in italics",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title element of a full public-ruling citation is not italicised.",
+    "when": [
+     "Applies to the title element after the ruling or determination type and number.",
+     "It does not require the type and number themselves to be italicised."
+    ],
+    "why": "G-1: title styling is distinct from the presence and order of citation elements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8296355e2b7a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7d699568f9e0",
+        "quote": "Goods and Services Tax Ruling GSTR 2019/1 Goods and services tax: supply of anything other than goods or real property connected with the indirect tax zone (Australia)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the full title at first mention.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first mention of a public ruling or determination uses only an abbreviated reference rather than its full title.",
+    "when": [
+     "Applies to public tax rulings and determinations.",
+     "This checks whether a full title is supplied at first mention; malformed full titles are checked under the title-structure rule."
+    ],
+    "why": "G-1: introducing a full title is distinct from formatting a title that is already present."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "87ef2f1b22bf",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b876e272656e",
+      "quote": "Specify whether it’s a ruling or determination in all subsequent mentions"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "aec599ce0510",
+        "quote": "Options for subsequent mentions of this Ruling:"
+       },
+       {
+        "block_id": "fe235d96a6e0",
+        "quote": "‘The Class Ruling’"
+       },
+       {
+        "block_id": "e1fbb4ee2e98",
+        "quote": "‘the Ruling’"
+       },
+       {
+        "block_id": "9d72972beb9f",
+        "quote": "‘CR 2019/19’."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The page presents this as an option, although its number differs from the preceding full-title example.",
+      "parts": [
+       {
+        "block_id": "9605125e35d4",
+        "quote": "Options for subsequent mentions of this Determination:"
+       },
+       {
+        "block_id": "67979a24da6b",
+        "quote": "‘The Taxation Determination’"
+       },
+       {
+        "block_id": "28cc83fdcdbd",
+        "quote": "‘the Determination’"
+       },
+       {
+        "block_id": "01724dfcc317",
+        "quote": "‘TD 2019/19’."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For subsequent mentions, write the type of ruling or determination or write the number.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A subsequent reference to a public ruling or determination supplies neither its type nor its identifying number.",
+    "when": [
+     "Applies after the public ruling or determination has been introduced.",
+     "The examples allow references such as ‘the Ruling’ and ‘the Determination’, as well as a more specific type or identifying number.",
+     "Subsequent notes have the more specific requirement to cite the number."
+    ],
+    "why": "G-4: the body is more precise than the heading because it expressly allows the number as an alternative."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d38b9d675a08",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "aec599ce0510",
+        "quote": "Options for subsequent mentions of this Ruling:"
+       },
+       {
+        "block_id": "fe235d96a6e0",
+        "quote": "‘The Class Ruling’"
+       },
+       {
+        "block_id": "e1fbb4ee2e98",
+        "quote": "‘the Ruling’"
+       },
+       {
+        "block_id": "9d72972beb9f",
+        "quote": "‘CR 2019/19’."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9605125e35d4",
+        "quote": "Options for subsequent mentions of this Determination:"
+       },
+       {
+        "block_id": "67979a24da6b",
+        "quote": "‘The Taxation Determination’"
+       },
+       {
+        "block_id": "28cc83fdcdbd",
+        "quote": "‘the Determination’"
+       },
+       {
+        "block_id": "01724dfcc317",
+        "quote": "‘TD 2019/19’."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use an initial capital when you refer to specific rulings.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A reference to a specific ruling or determination uses a lower-case identifying term such as ‘ruling’ or ‘determination’.",
+    "when": [
+     "Applies to specific rulings and determinations, not generic references to their classes."
+    ],
+    "why": "G-1: capitalising a specific reference is separate from choosing its identifying form."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cdf657e9c65b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d6ce1a4c84a1",
+        "quote": "4 Australian Taxation Office, Fuel Tax Determination FTD 2019/1 Fuel tax: fuel tax credits–vehicles and satisfying environmental criteria, ATO Legal Database, para [4]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If you use notes, cite the ATO Legal Database as the source.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A public-ruling citation in notes omits the ATO Legal Database as its source where the full source citation is required.",
+    "when": [
+     "Applies to public tax rulings and determinations cited in notes.",
+     "Subsequent notes for the same ruling may use the number without repeating the source."
+    ],
+    "why": "G-2: the specific tax-note source requirement includes the subsequent-note exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "abb78bb3b1f7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d6ce1a4c84a1",
+        "quote": "4 Australian Taxation Office, Fuel Tax Determination FTD 2019/1 Fuel tax: fuel tax credits–vehicles and satisfying environmental criteria, ATO Legal Database, para [4]."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fe995dc4ae38",
+        "quote": "15 FTD 2019/1, paras [6]–[8]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "For pinpoint citations, use paragraph numbers for public rulings (rather than page numbers).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A public-ruling pinpoint citation identifies pages rather than paragraphs.",
+    "when": [
+     "Applies to pinpoint citations of public tax rulings and determinations."
+    ],
+    "why": "G-1: choosing paragraphs rather than pages is separate from formatting paragraph references."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "abb78bb3b1f7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d6ce1a4c84a1",
+        "quote": "4 Australian Taxation Office, Fuel Tax Determination FTD 2019/1 Fuel tax: fuel tax credits–vehicles and satisfying environmental criteria, ATO Legal Database, para [4]."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fe995dc4ae38",
+        "quote": "15 FTD 2019/1, paras [6]–[8]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write the paragraph number in square brackets preceded by the words ‘para’ or ‘paras’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A public-ruling paragraph pinpoint lacks square brackets or the preceding ‘para’ or ‘paras’ label.",
+    "when": [
+     "Applies when paragraph pinpoints are supplied for public rulings or determinations."
+    ],
+    "why": "G-2: the label and brackets jointly define the prescribed paragraph-reference form."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1c48b17bcc9f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fe995dc4ae38",
+        "quote": "15 FTD 2019/1, paras [6]–[8]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For subsequent notes for the same public ruling, cite the number (and paragraphs for a pinpoint citation).",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A subsequent note for a public ruling omits its identifying number, or a subsequent pinpoint note omits the relevant paragraph reference.",
+    "when": [
+     "Applies to subsequent notes for the same public ruling or determination.",
+     "Paragraph references are required when the subsequent note is a pinpoint citation.",
+     "The full title and source need not be repeated."
+    ],
+    "why": "G-2 and G-3: subsequent notes use one shortened citation form, with paragraphs conditional on a pinpoint."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "b3890231a61e",
+    "end": 206,
+    "prefix": "eople find the source material. ",
+    "quote": "Specify the law report or online legal authority that hosts the relevant judgment or decision.",
+    "start": 112,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation does not identify the law report or online legal authority hosting the judgment or decision."
+   },
+   "when": [
+    "Applies to citations of cases, rulings and determinations."
+   ],
+   "why": "G-5: identifying the source is a property of the citation, unlike the introductory advice to use the correct style."
+  },
+  {
+   "anchor": {
+    "block_id": "9fda50f9d444",
+    "end": 105,
+    "prefix": "he case are known as ‘parties’. ",
+    "quote": "Capitalise the names of the parties",
+    "start": 70,
+    "suffix": " but use a lower case ‘v’ betwee"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A party name in a case title lacks its required capitalisation."
+   },
+   "when": [
+    "Applies to the names of parties in case titles.",
+    "Preserve the names as they appear in the source."
+   ],
+   "why": "G-1: party-name capitalisation is distinct from the spelling and punctuation of the separator."
+  },
+  {
+   "anchor": {
+    "block_id": "9fda50f9d444",
+    "end": 155,
+    "prefix": "se the names of the parties but ",
+    "quote": "use a lower case ‘v’ between the party names.",
+    "start": 110,
+    "suffix": " There is no full stop after ‘v’"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The separator between party names in a case title is an upper-case ‘V’ rather than a lower-case ‘v’."
+   },
+   "when": [
+    "Applies to the separator between parties in a case title."
+   ],
+   "why": "G-1: separator capitalisation is one independently flaggable property."
+  },
+  {
+   "anchor": {
+    "block_id": "9fda50f9d444",
+    "end": 188,
+    "prefix": "se ‘v’ between the party names. ",
+    "quote": "There is no full stop after ‘v’.",
+    "start": 156,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The ‘v’ between party names in a case title is followed by a full stop."
+   },
+   "when": [
+    "Applies to the separator between parties in a case title."
+   ],
+   "why": "G-1: a full stop after the separator is distinct from incorrect capitalisation."
+  },
+  {
+   "anchor": {
+    "block_id": "82330b137eec",
+    "end": 38,
+    "prefix": "",
+    "quote": "Write the name of the case in italics.",
+    "start": 0,
+    "suffix": " This rule is for case names tha"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "82330b137eec",
+     "end": 113,
+     "prefix": "he name of the case in italics. ",
+     "quote": "This rule is for case names that are mentioned briefly in general content.",
+     "start": 39,
+     "suffix": ""
+    },
+    {
+     "block_id": "7073605f7175",
+     "end": 65,
+     "prefix": "",
+     "quote": "Use roman type for cases in reference lists and other long lists.",
+     "start": 0,
+     "suffix": " Blocks of italics are difficult"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "3b9e805791af",
+       "end": 28,
+       "prefix": "",
+       "quote": "In Commonwealth v Tasmania …",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "e583d3ec4dcd",
+       "end": 83,
+       "prefix": "",
+       "quote": "The article discusses an important case in the High Court, Commonwealth v Tasmania.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The required typeface depends on context. The manual does not define how long a list must be to count as a long list.",
+    "unit": "block",
+    "violation_condition": "A briefly mentioned case name in general content is not italicised, or a case name in a reference list or other long list is italicised rather than roman."
+   },
+   "when": [
+    "Use italics for case names mentioned briefly in general content.",
+    "Use roman type for cases in reference lists and other long lists."
+   ],
+   "why": "G-2: brief mentions and long lists change which typeface the same check requires."
+  },
+  {
+   "anchor": {
+    "block_id": "d953f37c0c6b",
+    "end": 53,
+    "prefix": "",
+    "quote": "Always write the names as they appear in your source.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "74626df28b57",
+     "end": 77,
+     "prefix": "",
+     "quote": "'The King' or 'The Queen' in the title is always retained as first published.",
+     "start": 0,
+     "suffix": " The title does not change when "
+    },
+    {
+     "block_id": "74626df28b57",
+     "end": 129,
+     "prefix": "ys retained as first published. ",
+     "quote": "The title does not change when the monarch changes.",
+     "start": 78,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dacf3380a8ff",
+       "end": 42,
+       "prefix": "",
+       "quote": "Chamberlain v The Queen (1984) 153 CLR 521",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e9b5ed6977a9",
+       "end": 36,
+       "prefix": "",
+       "quote": "The Queen v Baden-Clay [2016] HCA 35",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8533a1a0ff6f",
+       "end": 33,
+       "prefix": "",
+       "quote": "House v The King (1936) 55 CLR 49",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A case name differs from the source name, including a historical ‘The King’ or ‘The Queen’ changed to match the current monarch."
+   },
+   "when": [
+    "Compare the name with the source being cited.",
+    "Retain ‘The King’ or ‘The Queen’ as first published, regardless of a subsequent change of monarch."
+   ],
+   "why": "G-2 and G-4: retaining the original monarch is a specific application of preserving the source name."
+  },
+  {
+   "anchor": {
+    "block_id": "6912f72c1f2a",
+    "end": 134,
+    "prefix": " known by an abbreviated title. ",
+    "quote": "On first mention of the case name, follow it with the abbreviated title in parentheses.",
+    "start": 47,
+    "suffix": " For in-text references, write t"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6912f72c1f2a",
+     "end": 294,
+     "prefix": " case (maximal capitalisation). ",
+     "quote": "You can then use the abbreviated title throughout the content.",
+     "start": 232,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f4216bb22e4c",
+       "end": 116,
+       "prefix": "",
+       "quote": "… the important case in the High Court, Commonwealth v Tasmania(Tasmanian Dam Case). The case saw the Commonwealth …",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d1b76dde92c3",
+       "end": 80,
+       "prefix": "",
+       "quote": "… the State of New South Wales v The Commonwealth (Wheat Case). The Wheat Case …",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first mention of a case that has an abbreviated title omits that title or does not put it after the case name in parentheses."
+   },
+   "when": [
+    "Applies where the case has an abbreviated title.",
+    "After its introduction, the abbreviated title may be used throughout the content."
+   ],
+   "why": "G-2 and G-3: subsequent abbreviated mentions are an exception to introducing the abbreviation, not another requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "6912f72c1f2a",
+    "end": 186,
+    "prefix": "theses. For in-text references, ",
+    "quote": "write this title in italics",
+    "start": 159,
+    "suffix": " and use title case (maximal cap"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ae51e7c64c54",
+     "end": 35,
+     "prefix": "",
+     "quote": "The abbreviated title is in italics",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An abbreviated case title in an in-text reference is set in roman rather than italic type."
+   },
+   "when": [
+    "Applies to abbreviated case titles used in in-text references."
+   ],
+   "why": "G-4: the body limits the heading's italic requirement to in-text references."
+  },
+  {
+   "anchor": {
+    "block_id": "6912f72c1f2a",
+    "end": 231,
+    "prefix": "write this title in italics and ",
+    "quote": "use title case (maximal capitalisation).",
+    "start": 191,
+    "suffix": " You can then use the abbreviate"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An abbreviated case title in an in-text reference is not in title case."
+   },
+   "when": [
+    "Applies to abbreviated case titles used in in-text references."
+   ],
+   "why": "G-1: title capitalisation is independently flaggable from italic styling."
+  },
+  {
+   "anchor": {
+    "block_id": "28a1ce37af08",
+    "end": 44,
+    "prefix": "",
+    "quote": "Do not capitalise ‘the case’ or ‘this case’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f4216bb22e4c",
+       "end": 116,
+       "prefix": "v Tasmania(Tasmanian Dam Case). ",
+       "quote": "The case saw the Commonwealth …",
+       "start": 85,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic reference to ‘the case’ or ‘this case’ has an unnecessary capital, particularly ‘Case’."
+   },
+   "when": [
+    "Applies to generic references, not words forming part of an abbreviated case title.",
+    "Normal sentence-initial capitalisation still applies."
+   ],
+   "why": "G-1: generic references have a separate capitalisation check from named case titles."
+  },
+  {
+   "anchor": {
+    "block_id": "b5d499407ca3",
+    "end": 61,
+    "prefix": "",
+    "quote": "Most government writing about cases requires a full citation.",
+    "start": 0,
+    "suffix": " Citations show people where to "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "59c4a42505b8",
+     "end": 80,
+     "prefix": "",
+     "quote": "When citing cases using notes, always use a full citation as the first citation.",
+     "start": 0,
+     "suffix": " After that, you can use the nam"
+    },
+    {
+     "block_id": "59c4a42505b8",
+     "end": 164,
+     "prefix": "citation as the first citation. ",
+     "quote": "After that, you can use the name of the first party, followed by the case citation.",
+     "start": 81,
+     "suffix": ""
+    },
+    {
+     "block_id": "157374831faf",
+     "end": 102,
+     "prefix": "",
+     "quote": "Citations can be in text or in notes, depending on organisational style and the format of the content.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6d52b02f1de7",
+     "end": 133,
+     "prefix": " whose judgment you are citing. ",
+     "quote": "Cite the case fully and add ‘per [name] [judicial office abbreviation]’.",
+     "start": 61,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "528593e18108",
+       "end": 41,
+       "prefix": "",
+       "quote": "1 Steinmetz v Shannon(2019) 99 NSWLR 687.",
+       "start": 0,
+       "suffix": " [The full citation the first ti"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Permitted abbreviated subsequent note.",
+     "parts": [
+      {
+       "block_id": "1987dcd24c4c",
+       "end": 32,
+       "prefix": "",
+       "quote": "8 Steinmetz (2019) 99 NSWLR 687.",
+       "start": 0,
+       "suffix": " [Only the first party to the ca"
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define the exceptions implied by ‘Most’. It explicitly requires a full first citation in notes and a full citation when attributing a judicial officer's judgment. Check absence of a full citation here; specific component-format errors belong to their narrower rules.",
+    "unit": "document",
+    "violation_condition": "Writing about a case has no full citation where one is required, including a first citation in notes."
+   },
+   "when": [
+    "The first citation of a case in notes must be full.",
+    "A citation identifying a judicial officer's judgment is to be full.",
+    "Citations may be in text or notes, depending on organisational style and content format.",
+    "After a full first citation in notes, the first party's name followed by the case citation is permitted."
+   ],
+   "why": "G-2 and G-3: full-citation requirements and permitted subsequent shortening are consolidated rather than duplicated."
+  },
+  {
+   "anchor": {
+    "block_id": "18c4aaded76c",
+    "end": 52,
+    "prefix": "",
+    "quote": "Always cite an authorised report if it is available.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bc9136603c86",
+     "end": 85,
+     "prefix": "",
+     "quote": "Always cite the authorised report if it has been published and you have access to it.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A decision is cited without its available authorised report."
+   },
+   "when": [
+    "An authorised report must be available.",
+    "For tribunal decisions, the authorised report must have been published and be accessible to the writer."
+   ],
+   "why": "G-2 and G-4: the tribunal instruction repeats the authorised-report rule and makes availability explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "dd66aebf4012",
+    "end": 113,
+    "prefix": "",
+    "quote": "Use parentheses (round brackets) for reported decisions that use consecutive volume numbers for the whole series.",
+    "start": 0,
+    "suffix": " This means you don’t have to us"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ad9e557c7a7a",
+     "end": 80,
+     "prefix": "",
+     "quote": "Use square brackets for reported decisions that use the year as a volume number.",
+     "start": 0,
+     "suffix": " This means you must look for th"
+    },
+    {
+     "block_id": "1f86817f7d59",
+     "end": 51,
+     "prefix": "",
+     "quote": "Unreported decisions are always in square brackets.",
+     "start": 0,
+     "suffix": " There is no volume number, as t"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "884f108e154f",
+       "end": 71,
+       "prefix": "",
+       "quote": "Reported decision with consecutive volume numbers for the whole series:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "64494b862f46",
+       "end": 65,
+       "prefix": "",
+       "quote": "name of the case: The State of New South Wales v The Commonwealth",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d91396832f9a",
+       "end": 24,
+       "prefix": "",
+       "quote": "year of decision: (1915)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b9258c3e7fb2",
+       "end": 27,
+       "prefix": "",
+       "quote": "volume of report series: 20",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d6a368863386",
+       "end": 31,
+       "prefix": "",
+       "quote": "report series abbreviation: CLR",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b458b584e2bb",
+       "end": 39,
+       "prefix": "",
+       "quote": "page number where the report begins: 54",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "38651cf6f3f2",
+       "end": 51,
+       "prefix": "",
+       "quote": "Reported decision with the year as a volume number:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "deaf138d14ed",
+       "end": 49,
+       "prefix": "",
+       "quote": "name of the case: Kashemije Stud Pty Ltd v Hawkes",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "df0b05d7dd15",
+       "end": 22,
+       "prefix": "",
+       "quote": "year of report: [1978]",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "92c5571abba5",
+       "end": 26,
+       "prefix": "",
+       "quote": "volume of report series: 1",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "642522baac39",
+       "end": 33,
+       "prefix": "",
+       "quote": "report series abbreviation: NSWLR",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "02d2380e80a6",
+       "end": 40,
+       "prefix": "",
+       "quote": "page number where the report begins: 143",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a61db7095838",
+       "end": 42,
+       "prefix": "",
+       "quote": "Unreported decision with no volume number:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "10aaf2de9c5b",
+       "end": 53,
+       "prefix": "",
+       "quote": "name of the case: The State of NSW v The Commonwealth",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b0ed79bb3820",
+       "end": 24,
+       "prefix": "",
+       "quote": "year of decision: [1915]",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7f93814d0d69",
+       "end": 51,
+       "prefix": "",
+       "quote": "volume of report series: (not reported in a volume)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "76eb590d7dbb",
+       "end": 31,
+       "prefix": "",
+       "quote": "report series abbreviation: HCA",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "5d22bc57fdcd",
+       "end": 49,
+       "prefix": "",
+       "quote": "judgment number [relates to year of decision]: 17",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A decision's citation year uses the wrong bracket type for its report series or for an unreported decision."
+   },
+   "when": [
+    "Use round brackets for reported decisions in series with consecutive volume numbers across the whole series.",
+    "Use square brackets for reported decisions whose series uses the year as a volume number.",
+    "Unreported decisions always use square brackets."
+   ],
+   "why": "G-2: report-series type changes the required year brackets, not the nature of the check."
+  },
+  {
+   "anchor": {
+    "block_id": "1f86817f7d59",
+    "end": 134,
+    "prefix": " are always in square brackets. ",
+    "quote": "There is no volume number, as the case is not part of an authorised report series.",
+    "start": 52,
+    "suffix": " The legal authority publishes t"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An unreported-decision citation includes a report-series volume number."
+   },
+   "when": [
+    "Applies to unreported decisions; the judgment number is not a volume number."
+   ],
+   "why": "G-1: an extraneous volume number is a different citation-format error from incorrect year brackets."
+  },
+  {
+   "anchor": {
+    "block_id": "5537966182ea",
+    "end": 64,
+    "prefix": "",
+    "quote": "For civil case titles, specify the first plaintiff and defendant",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "45242925b114",
+     "end": 89,
+     "prefix": "",
+     "quote": "Usually, citations use only the name of the first-mentioned party on each side of a case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6295467bdd8f",
+     "end": 49,
+     "prefix": "",
+     "quote": "Other parties are sometimes noted by the phrases:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "68119af940a8",
+     "end": 23,
+     "prefix": "",
+     "quote": "‘and Others’ or ‘& Ors’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2bdeccddbbaa",
+     "end": 26,
+     "prefix": "",
+     "quote": "‘and Another’ or ‘& Anor’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ffda9a00ecdc",
+       "end": 45,
+       "prefix": "",
+       "quote": "Koowarta v Bjelke-Peterson (1982) 153 CLR 168",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b1ef6f7a25c4",
+       "end": 87,
+       "prefix": "",
+       "quote": "SZIBU and Another v Minister for Immigration and Citizenship and Another [2007] FCA 108",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "eaf26a8068b0",
+       "end": 69,
+       "prefix": "",
+       "quote": "The State of Victoria and Others v The Commonwealth (1926) 38 CLR 399",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4886d2e424fa",
+       "end": 65,
+       "prefix": "",
+       "quote": "Cunningham & Ors v Commonwealth of Australia & Anor [2016] HCA 39",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "beee6897d407c38b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The body qualifies the first-party convention with ‘Usually’ but does not identify other exceptions. It explicitly permits collective references to additional parties.",
+    "unit": "phrase",
+    "violation_condition": "A civil case title does not identify the first-mentioned party on each side, or individually names additional parties instead of using the permitted collective forms."
+   },
+   "when": [
+    "Applies to civil case titles.",
+    "Normally name only the first-mentioned party on each side.",
+    "Additional parties may be represented by ‘and Others’, ‘& Ors’, ‘and Another’ or ‘& Anor’."
+   ],
+   "why": "G-2, G-3 and G-4: the body restates the heading and permits collective references to other parties."
+  },
+  {
+   "anchor": {
+    "block_id": "77d0ec48d43b",
+    "end": 37,
+    "prefix": "",
+    "quote": "Most citations use only family names.",
+    "start": 0,
+    "suffix": " Corporation names are usually g"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "77d0ec48d43b",
+     "end": 121,
+     "prefix": "itations use only family names. ",
+     "quote": "Corporation names are usually given in full, although abbreviations are acceptable.",
+     "start": 38,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define the exceptions implied by ‘Most’ or fully explain their relationship to preserving source names.",
+    "unit": "phrase",
+    "violation_condition": "A civil case citation includes a person's given names where the family-name-only convention applies."
+   },
+   "when": [
+    "This guidance appears in the civil-case section.",
+    "It concerns personal names, not corporation names.",
+    "Corporation names are usually given in full, but abbreviations are acceptable.",
+    "The page also requires names to match the source."
+   ],
+   "why": "G-2 and G-3: corporate names are an exception to personal family-name treatment, not a separate prohibition on abbreviations."
+  },
+  {
+   "anchor": {
+    "block_id": "f40ae814a049",
+    "end": 85,
+    "prefix": "s the terms ‘Re’ and‘Ex parte’. ",
+    "quote": "Use sentence case",
+    "start": 68,
+    "suffix": " and write both in italics."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "60b3c5bcd372",
+     "end": 69,
+     "prefix": "",
+     "quote": "In civil cases, use sentence case and italics for ‘Re’ and ‘Ex parte’",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "07b1f1ccf162",
+       "end": 177,
+       "prefix": "",
+       "quote": "Nduta v Minister for Immigration & Border Protection [2016] FCA 1596; Re Minister for Immigration and Multicultural Affairs; Ex parte Durairajasingham [2000] HCA 1; 74 ALJR 405.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a4eccc9e336c",
+       "end": 76,
+       "prefix": "",
+       "quote": "An Ex parte application of Commissioner of the Australian Federal Police ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Re’ or ‘Ex parte’ in a civil case title has capitalisation other than the specified sentence-case form."
+   },
+   "when": [
+    "Applies to the terms ‘Re’ and ‘Ex parte’ in civil case titles."
+   ],
+   "why": "G-1 and G-4: capitalisation and italic styling are independent checks; the body supplies the capitalisation instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "f40ae814a049",
+    "end": 112,
+    "prefix": "x parte’. Use sentence case and ",
+    "quote": "write both in italics.",
+    "start": 90,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Re’ or ‘Ex parte’ in a civil case title is not italicised."
+   },
+   "when": [
+    "Applies to the terms ‘Re’ and ‘Ex parte’ in civil case titles."
+   ],
+   "why": "G-1: italic styling is distinct from the capitalisation of these terms."
+  },
+  {
+   "anchor": {
+    "block_id": "80f91a9d5e11",
+    "end": 45,
+    "prefix": "",
+    "quote": "For criminal case titles, list all defendants",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ad6a96ac02f1",
+       "end": 43,
+       "prefix": "",
+       "quote": "R v Bayda, R v Namoa (No 8) [2019] NSWSC 24",
+       "start": 0,
+       "suffix": " [The Crown against Bayda and Na"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6f32546fc955",
+       "end": 69,
+       "prefix": "",
+       "quote": "R v Alice Lynne Chamberlain and Michael Leigh Chamberlain [1982] NTSC",
+       "start": 0,
+       "suffix": " [The Crown against Alice (Lindy"
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A criminal case title omits a defendant."
+   },
+   "when": [
+    "Applies to criminal case titles."
+   ],
+   "why": "G-1: completeness of the defendant list is separate from punctuation between defendants."
+  },
+  {
+   "anchor": {
+    "block_id": "f4bf9baf1a10",
+    "end": 54,
+    "prefix": "",
+    "quote": "List the names of all defendants separated by a comma.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ad6a96ac02f1",
+       "end": 43,
+       "prefix": "",
+       "quote": "R v Bayda, R v Namoa (No 8) [2019] NSWSC 24",
+       "start": 0,
+       "suffix": " [The Crown against Bayda and Na"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Presented as correct despite using ‘and’ rather than a comma.",
+     "parts": [
+      {
+       "block_id": "6f32546fc955",
+       "end": 69,
+       "prefix": "",
+       "quote": "R v Alice Lynne Chamberlain and Michael Leigh Chamberlain [1982] NTSC",
+       "start": 0,
+       "suffix": " [The Crown against Alice (Lindy"
+      }
+     ]
+    }
+   ],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The prose calls for commas, but the page also presents a compliant example joining two defendants with ‘and’. The scope of that alternative needs review.",
+    "unit": "phrase",
+    "violation_condition": "Multiple defendants in a criminal case title are not separated by commas where the comma-separation instruction applies."
+   },
+   "when": [
+    "Applies to criminal case titles containing multiple defendants."
+   ],
+   "why": "G-1 and E-1: punctuation is a separate check, but the manual's alternative example must not be labelled violating."
+  },
+  {
+   "anchor": {
+    "block_id": "4e0d1b4250ee",
+    "end": 69,
+    "prefix": "",
+    "quote": "If prosecuting, the Crown is signified by an ‘R’ without a full stop.",
+    "start": 0,
+    "suffix": " This is a Latin abbreviation fo"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "84063a112810",
+     "end": 116,
+     "prefix": "",
+     "quote": "If the Crown is the respondent in a criminal appeal, reverse the parties and write ‘Appellant v The King’ (not ‘R’).",
+     "start": 0,
+     "suffix": " If the Crown is the appellant, "
+    },
+    {
+     "block_id": "84063a112810",
+     "end": 184,
+     "prefix": "ppellant v The King’ (not ‘R’). ",
+     "quote": "If the Crown is the appellant, ‘The King’ is the first party cited.",
+     "start": 117,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ad6a96ac02f1",
+       "end": 43,
+       "prefix": "",
+       "quote": "R v Bayda, R v Namoa (No 8) [2019] NSWSC 24",
+       "start": 0,
+       "suffix": " [The Crown against Bayda and Na"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dacf3380a8ff",
+       "end": 42,
+       "prefix": "",
+       "quote": "Chamberlain v The Queen (1984) 153 CLR 521",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e9b5ed6977a9",
+       "end": 36,
+       "prefix": "",
+       "quote": "The Queen v Baden-Clay [2016] HCA 35",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8533a1a0ff6f",
+       "end": 33,
+       "prefix": "",
+       "quote": "House v The King (1936) 55 CLR 49",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The Crown is represented by the wrong form in a criminal case title: not ‘R’ without a full stop in a prosecution, or ‘R’ rather than the published royal title in an appeal."
+   },
+   "when": [
+    "For a prosecution, represent the Crown as ‘R’ without a full stop.",
+    "In a criminal appeal, use ‘The King’, or retain ‘The Queen’ where that is the published title.",
+    "This check concerns the Crown's name, not the order of the parties."
+   ],
+   "why": "G-2: prosecution and appeal change the required representation of the Crown."
+  },
+  {
+   "anchor": {
+    "block_id": "84063a112810",
+    "end": 184,
+    "prefix": "ppellant v The King’ (not ‘R’). ",
+    "quote": "If the Crown is the appellant, ‘The King’ is the first party cited.",
+    "start": 117,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "84063a112810",
+     "end": 116,
+     "prefix": "",
+     "quote": "If the Crown is the respondent in a criminal appeal, reverse the parties and write ‘Appellant v The King’ (not ‘R’).",
+     "start": 0,
+     "suffix": " If the Crown is the appellant, "
+    }
+   ],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A criminal appeal title puts the respondent before the appellant."
+   },
+   "when": [
+    "If the Crown is the appellant, put the Crown first.",
+    "If the Crown is the respondent, put the other appellant first and the Crown second.",
+    "Retain the published royal title."
+   ],
+   "why": "G-1 and G-2: party order is distinct from Crown naming; the Crown's appeal role changes the required position."
+  },
+  {
+   "anchor": {
+    "block_id": "14706897e246",
+    "end": 88,
+    "prefix": "",
+    "quote": "If you use notes, write pinpoint page numbers for the citation using ‘at [page number]’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "95bcccbbbc2d",
+       "end": 47,
+       "prefix": "",
+       "quote": "1Ruddock v Vadarlis (2001) 110 FCR 491 at 1191.",
+       "start": 0,
+       "suffix": " [The pinpoint citation is on pa"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2f17b11a30ab",
+       "end": 67,
+       "prefix": "",
+       "quote": "3Gedeon v The Queen (2013) 237 A Crim R 326 at 361–362 [174]–[178].",
+       "start": 0,
+       "suffix": " [The pinpoint citation is for p"
+      }
+     ]
+    }
+   ],
+   "n": 22,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A case citation in a note gives a pinpoint page number without preceding it with ‘at’."
+   },
+   "when": [
+    "Applies to pinpoint page references in case citations in notes."
+   ],
+   "why": "G-1: the body states the actionable page-pinpoint format."
+  },
+  {
+   "anchor": {
+    "block_id": "6852592c7a16",
+    "end": 150,
+    "prefix": " as it appears in the judgment. ",
+    "quote": "Write the paragraph number in square brackets.",
+    "start": 104,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6852592c7a16",
+     "end": 103,
+     "prefix": "",
+     "quote": "You can follow the page number with the number of the relevant paragraph as it appears in the judgment.",
+     "start": 0,
+     "suffix": " Write the paragraph number in s"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b94e09b64f53",
+       "end": 90,
+       "prefix": "",
+       "quote": "2Rojoda Pty Ltd v Commissioner of State Revenue (2018) 368 ALR 734 at 737 [10], 760 [108].",
+       "start": 0,
+       "suffix": " [The pinpoint citations are at "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2f17b11a30ab",
+       "end": 67,
+       "prefix": "",
+       "quote": "3Gedeon v The Queen (2013) 237 A Crim R 326 at 361–362 [174]–[178].",
+       "start": 0,
+       "suffix": " [The pinpoint citation is for p"
+      }
+     ]
+    }
+   ],
+   "n": 23,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A paragraph number included in a case pinpoint citation is not enclosed in square brackets."
+   },
+   "when": [
+    "Applies when a relevant judgment paragraph is included after a pinpoint page number.",
+    "Including the paragraph number is optional."
+   ],
+   "why": "G-3: optional inclusion does not remove the format requirement when a paragraph number is supplied."
+  },
+  {
+   "anchor": {
+    "block_id": "40b332cb64fd",
+    "end": 48,
+    "prefix": "",
+    "quote": "Use a comma to list separate pinpoint citations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b94e09b64f53",
+       "end": 90,
+       "prefix": "",
+       "quote": "2Rojoda Pty Ltd v Commissioner of State Revenue (2018) 368 ALR 734 at 737 [10], 760 [108].",
+       "start": 0,
+       "suffix": " [The pinpoint citations are at "
+      }
+     ]
+    }
+   ],
+   "n": 24,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Separate pinpoint references in a citation are not separated by commas."
+   },
+   "when": [
+    "Applies to separate pinpoint references, not the endpoints of a continuous range."
+   ],
+   "why": "G-1: separators between pinpoints are distinct from page and paragraph notation."
+  },
+  {
+   "anchor": {
+    "block_id": "6d52b02f1de7",
+    "end": 60,
+    "prefix": "",
+    "quote": "Identify the judicial officer whose judgment you are citing.",
+    "start": 0,
+    "suffix": " Cite the case fully and add ‘pe"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6d52b02f1de7",
+     "end": 133,
+     "prefix": " whose judgment you are citing. ",
+     "quote": "Cite the case fully and add ‘per [name] [judicial office abbreviation]’.",
+     "start": 61,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "accc9efa0c97",
+       "end": 98,
+       "prefix": "",
+       "quote": "UBS AG v Tyne (2018) 92 ALJR 968 at 979 [45] per Kiefel CJ, Bell and Keane JJ, [61] per Gageler J.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6687ef7aa8ff",
+       "end": 78,
+       "prefix": "",
+       "quote": "Mabo v Queensland [No 2] (1992) 175 CLR 1 at 106–107 per Deane and Gaudron JJ.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0d55a73cc471",
+       "end": 74,
+       "prefix": "",
+       "quote": "1 Ward v The Queen[2000] WASCA 413; (2000) 23 WAR 254 at 25 per Kennedy J.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 25,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A citation of a judicial officer's judgment lacks attribution in the form ‘per [name] [judicial office abbreviation]’."
+   },
+   "when": [
+    "Applies when citing a judicial officer's judgment.",
+    "Add ‘per’, the officer's name and the judicial office abbreviation.",
+    "The accompanying case citation is to be full."
+   ],
+   "why": "G-4: the second sentence supplies the attribution format; the descriptive heading is not the rule."
+  },
+  {
+   "anchor": {
+    "block_id": "266414bacdf2",
+    "end": 24,
+    "prefix": "",
+    "quote": "Use these abbreviations:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0c25c3180fa0",
+     "end": 11,
+     "prefix": "",
+     "quote": "J (Justice)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6990e1a2bfff",
+     "end": 13,
+     "prefix": "",
+     "quote": "JJ (Justices)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "70d7051f58ba",
+     "end": 18,
+     "prefix": "",
+     "quote": "CJ (Chief Justice)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1f5f77b5b0bb",
+     "end": 26,
+     "prefix": "",
+     "quote": "ACJ (Acting Chief Justice)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9657b0c3dc8d",
+     "end": 23,
+     "prefix": "",
+     "quote": "FM (Federal Magistrate)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "153891621676",
+     "end": 22,
+     "prefix": "",
+     "quote": "JA (Justice of Appeal)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "26d15f6b256f",
+     "end": 27,
+     "prefix": "",
+     "quote": "DCJ (District Court Judge).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3c268cb6fe01",
+       "end": 93,
+       "prefix": "",
+       "quote": "Chief Justice Kiefel and Bell and Edelman JJ accepted that such agreements would be excluded.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 26,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A judicial office in the relevant citation context uses an abbreviation other than the listed form, including an incorrect singular or plural form."
+   },
+   "when": [
+    "Use J for Justice and JJ for Justices.",
+    "Use CJ for Chief Justice, ACJ for Acting Chief Justice, FM for Federal Magistrate, JA for Justice of Appeal and DCJ for District Court Judge."
+   ],
+   "why": "G-2: the listed offices are lookup cases of one abbreviation check."
+  },
+  {
+   "anchor": {
+    "block_id": "987c73b90b2e",
+    "end": 53,
+    "prefix": "",
+    "quote": "Write the title of all tribunal decisions in italics.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "16b04063809c",
+     "end": 57,
+     "prefix": "",
+     "quote": "Titles for Commonwealth tribunal decisions are in italics",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "bb77989c06c2",
+       "end": 60,
+       "prefix": "",
+       "quote": "Minister for Home Affairs v AYJ17 [2019] FCA 591; 165 ALD 64",
+       "start": 0,
+       "suffix": " [Administrative Appeals Tribuna"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "38e578cf53aa",
+       "end": 49,
+       "prefix": "",
+       "quote": "Application by Flexigroup Limited [2020] ACompT 1",
+       "start": 0,
+       "suffix": " [Australian Competition Tribuna"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "f53450849224",
+       "end": 50,
+       "prefix": "",
+       "quote": "Application by Isentia Pty Limited [2018] ACopyT 4",
+       "start": 0,
+       "suffix": " [Copyright Tribunal of Australi"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "16e60cf41d6d",
+       "end": 40,
+       "prefix": "",
+       "quote": "McCleave v Chief of Navy [2019] ADFDAT 1",
+       "start": 0,
+       "suffix": " [Defence Force Discipline Appea"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "334ce2637644",
+       "end": 125,
+       "prefix": "",
+       "quote": "David Thomas and Frederick (Junior) Faamausili Ailua v Virgin Australia Airlines Pty Ltd t/a Virgin Australia [2019] FWC 4464",
+       "start": 0,
+       "suffix": " [Fair Work Commission decision]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The supplied text does not retain the example's typeface.",
+     "parts": [
+      {
+       "block_id": "639a37d6beaf",
+       "end": 120,
+       "prefix": "",
+       "quote": "Kyburra Munda Yalga Aboriginal Corporation RNTBC v Rock Solid Holdings Pty Ltd & Another [2020] NNTTA 31 (11 March 2020)",
+       "start": 0,
+       "suffix": " [National Native Title Tribunal"
+      }
+     ]
+    }
+   ],
+   "n": 27,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A tribunal decision title is not italicised."
+   },
+   "when": [
+    "Applies to tribunal decision titles."
+   ],
+   "why": "G-4: the body directly states the title-format requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "e2a3f37ec32c",
+    "end": 77,
+    "prefix": "",
+    "quote": "The full titles of public rulings have 3 elements that appear in a set order:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "977526b06789",
+     "end": 77,
+     "prefix": "",
+     "quote": "a ruling or determination type – for example, ‘Goods and Services Tax Ruling’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "03d180b6af4d",
+     "end": 37,
+     "prefix": "",
+     "quote": "a number – for example, ‘GSTR 2019/1’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2e10192597f7",
+     "end": 160,
+     "prefix": "",
+     "quote": "a title in italics – for example, Goods and services tax: supply of anything other than goods or real property connected with the indirect tax zone (Australia).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7d699568f9e0",
+       "end": 167,
+       "prefix": "",
+       "quote": "Goods and Services Tax Ruling GSTR 2019/1 Goods and services tax: supply of anything other than goods or real property connected with the indirect tax zone (Australia)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "560476ed148e",
+       "end": 117,
+       "prefix": "",
+       "quote": "Class Ruling CR 2019/19 Income tax: Department for Health and Wellbeing South Australia Early Retirement Program 2019",
+       "start": 0,
+       "suffix": " [A full citation of the title f"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e5bc0b83d9f3",
+       "end": 79,
+       "prefix": "",
+       "quote": "Taxation Determination TD 2019/13 Income tax: what is an‘employee share trust’?",
+       "start": 0,
+       "suffix": "[A full citation of the title fo"
+      }
+     ]
+    }
+   ],
+   "n": 28,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A purported full public-ruling title omits its ruling or determination type, number or title, or puts those elements in the wrong order."
+   },
+   "when": [
+    "Applies to full titles of public tax rulings and determinations.",
+    "The order is ruling or determination type, number, then title.",
+    "Italic styling of the title is checked separately."
+   ],
+   "why": "G-2: the ordered list defines one full-title structure."
+  },
+  {
+   "anchor": {
+    "block_id": "2e10192597f7",
+    "end": 18,
+    "prefix": "",
+    "quote": "a title in italics",
+    "start": 0,
+    "suffix": " – for example, Goods and servic"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 29,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title element of a full public-ruling citation is not italicised."
+   },
+   "when": [
+    "Applies to the title element after the ruling or determination type and number.",
+    "It does not require the type and number themselves to be italicised."
+   ],
+   "why": "G-1: title styling is distinct from the presence and order of citation elements."
+  },
+  {
+   "anchor": {
+    "block_id": "8296355e2b7a",
+    "end": 38,
+    "prefix": "",
+    "quote": "Write the full title at first mention.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7d699568f9e0",
+       "end": 167,
+       "prefix": "",
+       "quote": "Goods and Services Tax Ruling GSTR 2019/1 Goods and services tax: supply of anything other than goods or real property connected with the indirect tax zone (Australia)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 30,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first mention of a public ruling or determination uses only an abbreviated reference rather than its full title."
+   },
+   "when": [
+    "Applies to public tax rulings and determinations.",
+    "This checks whether a full title is supplied at first mention; malformed full titles are checked under the title-structure rule."
+   ],
+   "why": "G-1: introducing a full title is distinct from formatting a title that is already present."
+  },
+  {
+   "anchor": {
+    "block_id": "87ef2f1b22bf",
+    "end": 87,
+    "prefix": "",
+    "quote": "For subsequent mentions, write the type of ruling or determination or write the number.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b876e272656e",
+     "end": 73,
+     "prefix": "",
+     "quote": "Specify whether it’s a ruling or determination in all subsequent mentions",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "aec599ce0510",
+       "end": 47,
+       "prefix": "",
+       "quote": "Options for subsequent mentions of this Ruling:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "fe235d96a6e0",
+       "end": 18,
+       "prefix": "",
+       "quote": "‘The Class Ruling’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e1fbb4ee2e98",
+       "end": 12,
+       "prefix": "",
+       "quote": "‘the Ruling’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "9d72972beb9f",
+       "end": 13,
+       "prefix": "",
+       "quote": "‘CR 2019/19’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The page presents this as an option, although its number differs from the preceding full-title example.",
+     "parts": [
+      {
+       "block_id": "9605125e35d4",
+       "end": 54,
+       "prefix": "",
+       "quote": "Options for subsequent mentions of this Determination:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "67979a24da6b",
+       "end": 28,
+       "prefix": "",
+       "quote": "‘The Taxation Determination’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "28cc83fdcdbd",
+       "end": 19,
+       "prefix": "",
+       "quote": "‘the Determination’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "01724dfcc317",
+       "end": 13,
+       "prefix": "",
+       "quote": "‘TD 2019/19’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 31,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A subsequent reference to a public ruling or determination supplies neither its type nor its identifying number."
+   },
+   "when": [
+    "Applies after the public ruling or determination has been introduced.",
+    "The examples allow references such as ‘the Ruling’ and ‘the Determination’, as well as a more specific type or identifying number.",
+    "Subsequent notes have the more specific requirement to cite the number."
+   ],
+   "why": "G-4: the body is more precise than the heading because it expressly allows the number as an alternative."
+  },
+  {
+   "anchor": {
+    "block_id": "d38b9d675a08",
+    "end": 58,
+    "prefix": "",
+    "quote": "Use an initial capital when you refer to specific rulings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "aec599ce0510",
+       "end": 47,
+       "prefix": "",
+       "quote": "Options for subsequent mentions of this Ruling:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "fe235d96a6e0",
+       "end": 18,
+       "prefix": "",
+       "quote": "‘The Class Ruling’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e1fbb4ee2e98",
+       "end": 12,
+       "prefix": "",
+       "quote": "‘the Ruling’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "9d72972beb9f",
+       "end": 13,
+       "prefix": "",
+       "quote": "‘CR 2019/19’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9605125e35d4",
+       "end": 54,
+       "prefix": "",
+       "quote": "Options for subsequent mentions of this Determination:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "67979a24da6b",
+       "end": 28,
+       "prefix": "",
+       "quote": "‘The Taxation Determination’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "28cc83fdcdbd",
+       "end": 19,
+       "prefix": "",
+       "quote": "‘the Determination’",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "01724dfcc317",
+       "end": 13,
+       "prefix": "",
+       "quote": "‘TD 2019/19’.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 32,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A reference to a specific ruling or determination uses a lower-case identifying term such as ‘ruling’ or ‘determination’."
+   },
+   "when": [
+    "Applies to specific rulings and determinations, not generic references to their classes."
+   ],
+   "why": "G-1: capitalising a specific reference is separate from choosing its identifying form."
+  },
+  {
+   "anchor": {
+    "block_id": "cdf657e9c65b",
+    "end": 60,
+    "prefix": "",
+    "quote": "If you use notes, cite the ATO Legal Database as the source.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d6ce1a4c84a1",
+       "end": 168,
+       "prefix": "",
+       "quote": "4 Australian Taxation Office, Fuel Tax Determination FTD 2019/1 Fuel tax: fuel tax credits–vehicles and satisfying environmental criteria, ATO Legal Database, para [4].",
+       "start": 0,
+       "suffix": " [The full citation the first ti"
+      }
+     ]
+    }
+   ],
+   "n": 33,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A public-ruling citation in notes omits the ATO Legal Database as its source where the full source citation is required."
+   },
+   "when": [
+    "Applies to public tax rulings and determinations cited in notes.",
+    "Subsequent notes for the same ruling may use the number without repeating the source."
+   ],
+   "why": "G-2: the specific tax-note source requirement includes the subsequent-note exception."
+  },
+  {
+   "anchor": {
+    "block_id": "abb78bb3b1f7",
+    "end": 92,
+    "prefix": "",
+    "quote": "For pinpoint citations, use paragraph numbers for public rulings (rather than page numbers).",
+    "start": 0,
+    "suffix": " Write the paragraph number in s"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d6ce1a4c84a1",
+       "end": 168,
+       "prefix": "",
+       "quote": "4 Australian Taxation Office, Fuel Tax Determination FTD 2019/1 Fuel tax: fuel tax credits–vehicles and satisfying environmental criteria, ATO Legal Database, para [4].",
+       "start": 0,
+       "suffix": " [The full citation the first ti"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fe995dc4ae38",
+       "end": 29,
+       "prefix": "",
+       "quote": "15 FTD 2019/1, paras [6]–[8].",
+       "start": 0,
+       "suffix": " [Only the determination number "
+      }
+     ]
+    }
+   ],
+   "n": 34,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A public-ruling pinpoint citation identifies pages rather than paragraphs."
+   },
+   "when": [
+    "Applies to pinpoint citations of public tax rulings and determinations."
+   ],
+   "why": "G-1: choosing paragraphs rather than pages is separate from formatting paragraph references."
+  },
+  {
+   "anchor": {
+    "block_id": "abb78bb3b1f7",
+    "end": 179,
+    "prefix": "ngs (rather than page numbers). ",
+    "quote": "Write the paragraph number in square brackets preceded by the words ‘para’ or ‘paras’.",
+    "start": 93,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d6ce1a4c84a1",
+       "end": 168,
+       "prefix": "",
+       "quote": "4 Australian Taxation Office, Fuel Tax Determination FTD 2019/1 Fuel tax: fuel tax credits–vehicles and satisfying environmental criteria, ATO Legal Database, para [4].",
+       "start": 0,
+       "suffix": " [The full citation the first ti"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fe995dc4ae38",
+       "end": 29,
+       "prefix": "",
+       "quote": "15 FTD 2019/1, paras [6]–[8].",
+       "start": 0,
+       "suffix": " [Only the determination number "
+      }
+     ]
+    }
+   ],
+   "n": 35,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A public-ruling paragraph pinpoint lacks square brackets or the preceding ‘para’ or ‘paras’ label."
+   },
+   "when": [
+    "Applies when paragraph pinpoints are supplied for public rulings or determinations."
+   ],
+   "why": "G-2: the label and brackets jointly define the prescribed paragraph-reference form."
+  },
+  {
+   "anchor": {
+    "block_id": "1c48b17bcc9f",
+    "end": 106,
+    "prefix": "",
+    "quote": "For subsequent notes for the same public ruling, cite the number (and paragraphs for a pinpoint citation).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fe995dc4ae38",
+       "end": 29,
+       "prefix": "",
+       "quote": "15 FTD 2019/1, paras [6]–[8].",
+       "start": 0,
+       "suffix": " [Only the determination number "
+      }
+     ]
+    }
+   ],
+   "n": 36,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A subsequent note for a public ruling omits its identifying number, or a subsequent pinpoint note omits the relevant paragraph reference."
+   },
+   "when": [
+    "Applies to subsequent notes for the same public ruling or determination.",
+    "Paragraph references are required when the subsequent note is a pinpoint citation.",
+    "The full title and source need not be repeated."
+   ],
+   "why": "G-2 and G-3: subsequent notes use one shortened citation form, with paragraphs conditional on a pinpoint."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 8703,
+  "output_tokens": 21413,
+  "reasoning_tokens": 5696
+ }
+}

@@ -1,0 +1,249 @@
+{
+ "effort": "high",
+ "input_sha256": "6e70425f3805e73f869c5f55097df89544f3821b00c8f0afd1ac89840932c19f",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a02340df9662",
+    "end": 80,
+    "prefix": "",
+    "quote": "Write and design content that is easy for the user to find with a search engine.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An overarching findability goal rather than an independently specified text check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "94925549970b",
+    "end": 56,
+    "prefix": "",
+    "quote": "Design content based on the ways users find information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: describes the basis for the writer’s design process without specifying a property a text checker can flag.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6200a9355379",
+    "end": 143,
+    "prefix": "d page structure are important. ",
+    "quote": "Write and design content so users can easily find it with search engines and voice search.",
+    "start": 53,
+    "suffix": ""
+   },
+   "note": "An overarching discovery goal; no separate textual requirements for search engines or voice search are specified.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b8afb18f20f5",
+    "end": 58,
+    "prefix": "",
+    "quote": "Make content easy for people to find using search engines.",
+    "start": 0,
+    "suffix": " Include keywords in URLs, metad"
+   },
+   "note": "General findability advice introducing the more concrete keyword and link instructions.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/findable-content.md",
+ "page_sha256": "657416fe8ddc1d1f9f0c0ccb03edf6cb4a40ce54eecd24cca980dbe117d7e229",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a02340df9662",
+    "note": "An overarching findability goal rather than an independently specified text check.",
+    "quote": "Write and design content that is easy for the user to find with a search engine.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "94925549970b",
+    "note": "G-5: describes the basis for the writer’s design process without specifying a property a text checker can flag.",
+    "quote": "Design content based on the ways users find information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6200a9355379",
+    "note": "An overarching discovery goal; no separate textual requirements for search engines or voice search are specified.",
+    "quote": "Write and design content so users can easily find it with search engines and voice search.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b8afb18f20f5",
+    "note": "General findability advice introducing the more concrete keyword and link instructions.",
+    "quote": "Make content easy for people to find using search engines.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "b8afb18f20f5",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include keywords in URLs, metadata and content.",
+    "specification": "The page identifies three locations for keywords but does not specify a required keyword set, keyword frequency or which metadata fields must contain keywords.",
+    "unit": "document",
+    "violation_condition": "A web page’s URL, metadata or content lacks keywords reflecting the page’s core ideas and topics.",
+    "when": [],
+    "why": "G-2 keeps the locations together as cases of the same missing-keyword check."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "b8afb18f20f5",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Create accessible links",
+    "specification": "This text-checking item concerns accessible link wording. The page does not define accessibility criteria; technical or visual link accessibility is outside this item.",
+    "unit": "phrase",
+    "violation_condition": "A link has wording that is inaccessible to users.",
+    "when": [],
+    "why": "The one-finding test separates link accessibility from the quality of the linked content."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "b8afb18f20f5",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Create accessible links to high-quality content.",
+    "specification": "This item concerns the quality of linked content, not link accessibility. The page supplies no quality criteria, and assessment requires access to the destination content.",
+    "unit": "document",
+    "violation_condition": "A link points to content that is not high quality.",
+    "when": [
+     "When the web page includes links to other content."
+    ],
+    "why": "The one-finding test separates destination quality from link accessibility."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "b8afb18f20f5",
+    "end": 106,
+    "prefix": "e to find using search engines. ",
+    "quote": "Include keywords in URLs, metadata and content.",
+    "start": 59,
+    "suffix": " Create accessible links to high"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page identifies three locations for keywords but does not specify a required keyword set, keyword frequency or which metadata fields must contain keywords.",
+    "unit": "document",
+    "violation_condition": "A web page’s URL, metadata or content lacks keywords reflecting the page’s core ideas and topics."
+   },
+   "when": [],
+   "why": "G-2 keeps the locations together as cases of the same missing-keyword check."
+  },
+  {
+   "anchor": {
+    "block_id": "b8afb18f20f5",
+    "end": 130,
+    "prefix": " in URLs, metadata and content. ",
+    "quote": "Create accessible links",
+    "start": 107,
+    "suffix": " to high-quality content."
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This text-checking item concerns accessible link wording. The page does not define accessibility criteria; technical or visual link accessibility is outside this item.",
+    "unit": "phrase",
+    "violation_condition": "A link has wording that is inaccessible to users."
+   },
+   "when": [],
+   "why": "The one-finding test separates link accessibility from the quality of the linked content."
+  },
+  {
+   "anchor": {
+    "block_id": "b8afb18f20f5",
+    "end": 155,
+    "prefix": " in URLs, metadata and content. ",
+    "quote": "Create accessible links to high-quality content.",
+    "start": 107,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "This item concerns the quality of linked content, not link accessibility. The page supplies no quality criteria, and assessment requires access to the destination content.",
+    "unit": "document",
+    "violation_condition": "A link points to content that is not high quality."
+   },
+   "when": [
+    "When the web page includes links to other content."
+   ],
+   "why": "The one-finding test separates destination quality from link accessibility."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3308,
+  "output_tokens": 3418,
+  "reasoning_tokens": 2588
+ }
+}

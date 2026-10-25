@@ -1,0 +1,1909 @@
+{
+ "effort": "high",
+ "input_sha256": "436ec8fbfb2e628600969dfebe173aa1986d9564f0d9bdaa0a151a70cc73854e",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "2ec0421dd2b9",
+    "end": 97,
+    "prefix": "",
+    "quote": "Spell out ordinal numbers from ‘first’ to ‘ninth’. Use numerals for ordinals from ‘10th’ onwards.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the word-versus-numeral heading rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3d1917844a3b",
+    "end": 62,
+    "prefix": "",
+    "quote": "Use numerals, not words, when writing ordinals with centuries.",
+    "start": 0,
+    "suffix": " This is an exception to the gen"
+   },
+   "note": "G-2: a century-specific override of the same word-versus-numeral check, not a separate finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "64f0c2457df1",
+    "end": 19,
+    "prefix": "",
+    "quote": "Very large ordinals",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive candidate heading. Its body supplies a case absorbed into the word-versus-numeral rule.",
+   "reason": "description",
+   "seed_uid": "9a49124d9cf6979a"
+  },
+  {
+   "anchor": {
+    "block_id": "e94e74efb9ab",
+    "end": 176,
+    "prefix": "lso applies to ordinal numbers. ",
+    "quote": "Spell out the number and include the relevant suffix.",
+    "start": 123,
+    "suffix": ""
+   },
+   "note": "G-2: the very-large-rounded-ordinal case is included in the general representation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "06701812fb00",
+    "end": 77,
+    "prefix": "",
+    "quote": "In reference lists, use numerals with a suffix for editions of a publication.",
+    "start": 0,
+    "suffix": " This is an exception to the rul"
+   },
+   "note": "G-2: the edition exception is absorbed into the representation rule; the suffix requirement is already covered by the numeral-suffix rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "65fd39910c4b",
+    "end": 86,
+    "prefix": "",
+    "quote": "If an organisation’s name includes a numeral, write the name as the organisation does.",
+    "start": 0,
+    "suffix": " This is an exception to the rul"
+   },
+   "note": "G-2: preserving the organisation’s own form overrides the general ordinal representation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4901ada06938",
+    "end": 38,
+    "prefix": "",
+    "quote": "Create a list rather than use ordinals",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body more precisely states the restriction and allows rewording as well as a list.",
+   "reason": "restatement",
+   "seed_uid": "a8613f1cda26868f"
+  },
+  {
+   "anchor": {
+    "block_id": "523b74c7294c",
+    "end": 133,
+    "prefix": "rder points in general content. ",
+    "quote": "Reword the content so it doesn’t need ordinals or use a numbered list instead.",
+    "start": 55,
+    "suffix": " A list can make it easier for p"
+   },
+   "note": "G-4: replacement options for the same ordinal-sequencing error, not another check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e52dcbfda47e",
+    "end": 147,
+    "prefix": "",
+    "quote": "Always use numbered lists rather than ordinals when you’re expressing a series of items or steps – for example, in recommendations or instructions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the mandatory series-of-items-or-steps case is consolidated with the general ordinal-sequencing restriction.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9f39227d936b",
+    "end": 93,
+    "prefix": "",
+    "quote": "Code lists so they are understood correctly. Mark up ordered lists in HTML with the <ol> tag.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requirements about list coding and HTML markup rather than the words of the content.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c955e35e2771",
+    "end": 43,
+    "prefix": "",
+    "quote": "Ordinals in journals and other publications",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the publication context and the distinct pairing and ‘thirdly’ checks.",
+   "reason": "section",
+   "seed_uid": "c2a3862b589a573a"
+  },
+  {
+   "anchor": {
+    "block_id": "24389c5b385d",
+    "end": 96,
+    "prefix": "Don’t use ‘thirdly’. ",
+    "quote": "Instead, omit ordinals and write the points as a run-on list in a sentence.",
+    "start": 21,
+    "suffix": ""
+   },
+   "note": "G-4: supplies the replacement for the immediately preceding ‘thirdly’ prohibition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9fe214bc8c52",
+    "end": 40,
+    "prefix": "",
+    "quote": "Use numerals without a suffix for dates.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the date-ordinal rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a02dd457b79f",
+    "end": 42,
+    "prefix": "",
+    "quote": "Don’t confuse ordinals with regnal numbers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body states the actionable restriction on writing regnals as ordinals.",
+   "reason": "restatement",
+   "seed_uid": "3da36603d8bccdf3"
+  },
+  {
+   "anchor": {
+    "block_id": "be50d7e59e64",
+    "end": 64,
+    "prefix": "",
+    "quote": "Put a non-breaking space between the name and the regnal number.",
+    "start": 0,
+    "suffix": " A non-breaking space means that"
+   },
+   "note": "G-4: absorbed into the non-breaking-space heading rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cc16adaca302",
+    "end": 71,
+    "prefix": "",
+    "quote": "You can insert a non-breaking space using the Unicode character U+00A0.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: an insertion method, not an additional restriction on the text.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7955ceef4108",
+    "end": 62,
+    "prefix": "",
+    "quote": "In HTML, use the entity &nbsp; to insert a non-breaking space.",
+    "start": 0,
+    "suffix": " You can also use the keyboard s"
+   },
+   "note": "An HTML insertion method for the space already required, not a separate wording rule.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7955ceef4108",
+    "end": 130,
+    "prefix": "to insert a non-breaking space. ",
+    "quote": "You can also use the keyboard shortcut Ctrl+Shift+Spacebar in Word.",
+    "start": 63,
+    "suffix": ""
+   },
+   "note": "G-3 and G-5: an optional authoring method that cannot itself be violated by the resulting text.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "250c456e30d3",
+    "end": 67,
+    "prefix": "",
+    "quote": "Use a narrow no-break space between the name and the regnal number.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the print-specific form is a condition on the same regnal-name spacing check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9392ad12cd28",
+    "end": 74,
+    "prefix": "",
+    "quote": "You can insert a narrow no-break space using the Unicode character U+202F.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: an insertion method for the print-specific space, not another rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/ordinal-numbers.md",
+ "page_sha256": "ba15304e00207f91c154c13b9a7623300732d34875c514dcb38203c56c510293",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "2ec0421dd2b9",
+    "note": "G-4: absorbed into the word-versus-numeral heading rule.",
+    "quote": "Spell out ordinal numbers from ‘first’ to ‘ninth’. Use numerals for ordinals from ‘10th’ onwards.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3d1917844a3b",
+    "note": "G-2: a century-specific override of the same word-versus-numeral check, not a separate finding.",
+    "quote": "Use numerals, not words, when writing ordinals with centuries.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "64f0c2457df1",
+    "note": "Descriptive candidate heading. Its body supplies a case absorbed into the word-versus-numeral rule.",
+    "quote": "Very large ordinals",
+    "reason": "description"
+   },
+   {
+    "block_id": "e94e74efb9ab",
+    "note": "G-2: the very-large-rounded-ordinal case is included in the general representation rule.",
+    "quote": "Spell out the number and include the relevant suffix.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "06701812fb00",
+    "note": "G-2: the edition exception is absorbed into the representation rule; the suffix requirement is already covered by the numeral-suffix rule.",
+    "quote": "In reference lists, use numerals with a suffix for editions of a publication.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "65fd39910c4b",
+    "note": "G-2: preserving the organisation’s own form overrides the general ordinal representation rule.",
+    "quote": "If an organisation’s name includes a numeral, write the name as the organisation does.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4901ada06938",
+    "note": "G-4: the body more precisely states the restriction and allows rewording as well as a list.",
+    "quote": "Create a list rather than use ordinals",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "523b74c7294c",
+    "note": "G-4: replacement options for the same ordinal-sequencing error, not another check.",
+    "quote": "Reword the content so it doesn’t need ordinals or use a numbered list instead.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e52dcbfda47e",
+    "note": "G-2: the mandatory series-of-items-or-steps case is consolidated with the general ordinal-sequencing restriction.",
+    "quote": "Always use numbered lists rather than ordinals when you’re expressing a series of items or steps – for example, in recommendations or instructions.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9f39227d936b",
+    "note": "Requirements about list coding and HTML markup rather than the words of the content.",
+    "quote": "Code lists so they are understood correctly. Mark up ordered lists in HTML with the <ol> tag.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c955e35e2771",
+    "note": "G-1: groups the publication context and the distinct pairing and ‘thirdly’ checks.",
+    "quote": "Ordinals in journals and other publications",
+    "reason": "section"
+   },
+   {
+    "block_id": "24389c5b385d",
+    "note": "G-4: supplies the replacement for the immediately preceding ‘thirdly’ prohibition.",
+    "quote": "Instead, omit ordinals and write the points as a run-on list in a sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9fe214bc8c52",
+    "note": "G-4: absorbed into the date-ordinal rule.",
+    "quote": "Use numerals without a suffix for dates.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a02dd457b79f",
+    "note": "G-4: the body states the actionable restriction on writing regnals as ordinals.",
+    "quote": "Don’t confuse ordinals with regnal numbers",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "be50d7e59e64",
+    "note": "G-4: absorbed into the non-breaking-space heading rule.",
+    "quote": "Put a non-breaking space between the name and the regnal number.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cc16adaca302",
+    "note": "G-3: an insertion method, not an additional restriction on the text.",
+    "quote": "You can insert a non-breaking space using the Unicode character U+00A0.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "7955ceef4108",
+    "note": "An HTML insertion method for the space already required, not a separate wording rule.",
+    "quote": "In HTML, use the entity &nbsp; to insert a non-breaking space.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "7955ceef4108",
+    "note": "G-3 and G-5: an optional authoring method that cannot itself be violated by the resulting text.",
+    "quote": "You can also use the keyboard shortcut Ctrl+Shift+Spacebar in Word.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "250c456e30d3",
+    "note": "G-2: the print-specific form is a condition on the same regnal-name spacing check.",
+    "quote": "Use a narrow no-break space between the name and the regnal number.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9392ad12cd28",
+    "note": "G-3: an insertion method for the print-specific space, not another rule.",
+    "quote": "You can insert a narrow no-break space using the Unicode character U+202F.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "587b6d2d25e7",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "2ec0421dd2b9",
+      "quote": "Spell out ordinal numbers from ‘first’ to ‘ninth’. Use numerals for ordinals from ‘10th’ onwards."
+     },
+     {
+      "block_id": "3d1917844a3b",
+      "quote": "Use numerals, not words, when writing ordinals with centuries. This is an exception to the general rule to spell out ‘first’ to ‘ninth’ for ordinals."
+     },
+     {
+      "block_id": "64f0c2457df1",
+      "quote": "Very large ordinals"
+     },
+     {
+      "block_id": "e94e74efb9ab",
+      "quote": "People find very large rounded numbers easier to read in words rather than numerals. This also applies to ordinal numbers. Spell out the number and include the relevant suffix."
+     },
+     {
+      "block_id": "06701812fb00",
+      "quote": "In reference lists, use numerals with a suffix for editions of a publication. This is an exception to the rule to use words for ordinal numbers up to ninth."
+     },
+     {
+      "block_id": "65fd39910c4b",
+      "quote": "If an organisation’s name includes a numeral, write the name as the organisation does. This is an exception to the rule to use words for ordinal numbers up to ninth."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c782c9189919",
+        "quote": "The first item on the agenda was to confirm the agenda. The second item was to review the minutes from the last meeting."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "80444c556859",
+        "quote": "In 2013, Canberra celebrated its 100th anniversary."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1e8c81f98b4a",
+        "quote": "We pause to remember at the 11th hour of the 11th day of the 11th month."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6ef6331a1116",
+        "quote": "This is the department’s 22nd graduate intake."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "98af57d4d69e",
+        "quote": "We expect to receive our 1,000th visitor today."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b289d452ef26",
+        "quote": "They are the 273rd immigrant to join this group."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7bb925435471",
+        "quote": "In the 1st century CE, Tiberius succeeded Augustus Caesar as Roman emperor."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "68c0795dbccf",
+        "quote": "Vikings established a Norse kingdom around Dublin in the 9th century."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "791702383390",
+        "quote": "The gallery bought a 15th-century painting."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3d05c12569eb",
+        "quote": "the millionth visitor"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "464518ada491",
+        "quote": "the 1,000,000th visitor"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f172e45eedaa",
+        "quote": "Brone AZ (2020) Towards a high-performing public service, 2nd edn, Positive Publications, Canberra."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f36004b5155a",
+        "quote": "The 1st Australian Infantry Battalion arrived in Egypt on 2 December 1914."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "46ce4073f9f7",
+        "quote": "MyHealth 1st is a platform that connects patients with local health practitioners."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "be87945befef",
+        "quote": "They searched for Thirteenth Holdings Pty Ltd on the ASIC registers."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use words for ordinals up to ‘ninth’ and numerals for ‘10th’ and above",
+    "specification": "Apply the century, publication-edition, organisation-name and very-large-rounded-number cases as overrides of the general word-versus-numeral rule. The page gives ‘millionth’ as an example but does not define the boundary of ‘very large rounded numbers’; that boundary needs review.",
+    "unit": "sentence",
+    "violation_condition": "An ordinal from first to ninth is written as a numeral, or an ordinal from tenth onwards is written in words, contrary to the applicable general rule or exception.",
+    "when": [
+     "Normally, spell out first to ninth and use numerals from 10th onwards.",
+     "Use numerals for ordinals with centuries, including 1st to 9th.",
+     "In reference lists, use numerals for publication editions, including editions below 10th.",
+     "Preserve an organisation’s own rendering of the ordinal in its name.",
+     "Spell out very large rounded ordinals.",
+     "Dates and regnal numbers have separate rules and are not ordinary ordinal expressions for this check."
+    ],
+    "why": "G-2 consolidates the word-versus-numeral cases and exceptions; G-4 avoids duplicating the heading and body; E-4 leaves the undefined size boundary explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7e00df019220",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a2deb27186d4",
+      "quote": "‘-st’ (‘first’, ‘21st’)"
+     },
+     {
+      "block_id": "0f2695925fae",
+      "quote": "‘-nd’ (‘second’, ‘32nd’)"
+     },
+     {
+      "block_id": "da062bd3e16f",
+      "quote": "‘-rd’ (‘third’, ‘103rd’)"
+     },
+     {
+      "block_id": "b8ef5d22817c",
+      "quote": "‘-th’ (‘fourth’, ‘15th’, ‘55th’ and so on)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Ordinals written as numerals always have a suffix:",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A numeral used as an ordinal lacks its ordinal suffix or has a suffix inconsistent with the intended ordinal.",
+    "when": [
+     "The numeral represents an ordinal, not a cardinal count.",
+     "Dates and regnal numbers are not written as ordinals."
+    ],
+    "why": "G-2 keeps the suffix forms together; suffix omission is distinct from choosing words or numerals."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b25732714dda",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t write suffixes in superscript.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "An ordinal numeral’s suffix is formatted as superscript.",
+    "when": [
+     "Applies to the suffix of an ordinal written as a numeral."
+    ],
+    "why": "The superscript formatting error is a separate finding from missing a suffix or choosing the wrong ordinal representation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6826d54f9e0b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7bb925435471",
+        "quote": "In the 1st century CE, Tiberius succeeded Augustus Caesar as Roman emperor."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "68c0795dbccf",
+        "quote": "Vikings established a Norse kingdom around Dublin in the 9th century."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "791702383390",
+        "quote": "The gallery bought a 15th-century painting."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write ‘century’ and ‘centuries’ in lower case.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The word ‘century’ or ‘centuries’ is capitalised in a century expression.",
+    "when": [
+     "Applies when writing century expressions."
+    ],
+    "why": "Capitalisation is a separate check from the numeral requirement for century ordinals."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "523b74c7294c",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "4901ada06938",
+      "quote": "Create a list rather than use ordinals"
+     },
+     {
+      "block_id": "523b74c7294c",
+      "quote": "Reword the content so it doesn’t need ordinals or use a numbered list instead."
+     },
+     {
+      "block_id": "e52dcbfda47e",
+      "quote": "Always use numbered lists rather than ordinals when you’re expressing a series of items or steps – for example, in recommendations or instructions."
+     },
+     {
+      "block_id": "51c0c6e1e112",
+      "quote": "Ordinals, such as ‘firstly’ and ‘secondly’, are sometimes used in content written for government publications such as journals and reports. In this type of content, they order thoughts without interrupting the flow of the text."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0974ba3c7082",
+        "quote": "To apply for the grant:"
+       },
+       {
+        "block_id": "8b73c4695924",
+        "quote": "complete the eligibility checklist"
+       },
+       {
+        "block_id": "d0d139d88331",
+        "quote": "submit a business case"
+       },
+       {
+        "block_id": "24df367d03f9",
+        "quote": "provide supporting documents."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a31008eb590b",
+        "quote": "If you want to apply for the grant, first complete the eligibility checklist. Second, you must submit a business case; and third, you must provide supporting documents."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use ordinals to order points in general content.",
+    "specification": "Treat this as a restriction on ordinal discourse sequencers, not on descriptions of ordinal position such as ‘the first item’. General content may be reworded to remove the sequencing; for a series of items or steps, the page explicitly requires numbered lists.",
+    "unit": "block",
+    "violation_condition": "Running prose uses ordinal expressions to sequence points, items or steps where the content should instead be reworded or presented as a numbered list.",
+    "when": [
+     "Applies to ordering points in general content.",
+     "For a series of items or steps, such as recommendations or instructions, the numbered-list alternative is mandatory.",
+     "Journal-style content and other government publications may use ordinals to order thoughts without interrupting the flow, subject to the separate pairing and ‘thirdly’ rules."
+    ],
+    "why": "G-2 keeps the general-content restriction, stricter procedural case and publication exception together; G-4 absorbs the heading and alternative formulations."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "658aadd059f5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0dcb3314c981",
+        "quote": "The committee responded in 2 ways. Firstly, they asked for an immediate adjournment of proceedings. Secondly, they sought clarification about their powers to subpoena witnesses."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b10bdbd72603",
+        "quote": "The committee responded in 2 ways. They asked for an immediate adjournment of proceedings. Secondly, they sought clarification about their powers to subpoena witnesses."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "‘Firstly’ and ‘secondly’ work as a pair. Don’t use one without the other.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A thought sequence uses ‘firstly’ without ‘secondly’, or ‘secondly’ without ‘firstly’.",
+    "when": [
+     "Applies where ordinal thought sequencing is used in journals, reports or other government publications.",
+     "The two markers must belong to the same thought sequence; unrelated occurrences elsewhere do not form a pair."
+    ],
+    "why": "G-2 treats the two reciprocal missing-partner cases as one check; E-2 attaches the contrast pair to the nearby pairing instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "24389c5b385d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "24389c5b385d",
+      "quote": "Instead, omit ordinals and write the points as a run-on list in a sentence."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b34a14a8526e",
+        "quote": "The committee took evidence from peak bodies, unions and the department."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ac81a2f9cd36",
+        "quote": "The committee took evidence from, firstly, peak bodies; secondly, unions; and thirdly, the department."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use ‘thirdly’.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "‘Thirdly’ is used to sequence points in the content.",
+    "when": [
+     "Includes journal-style and publication content where ‘firstly’ and ‘secondly’ may otherwise be used."
+    ],
+    "why": "The ban on a third marker is distinct from an incomplete firstly–secondly pair; G-4 absorbs the replacement wording."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "007208ddfbd1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9fe214bc8c52",
+      "quote": "Use numerals without a suffix for dates."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "58bf7440654c",
+        "quote": "12 February 2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dc5558c2b087",
+        "quote": "12th February 2020"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don't use ordinals in dates",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A date contains an ordinal day expression, such as a numeral with an ordinal suffix or a spelled-out ordinal.",
+    "when": [
+     "Applies to date expressions."
+    ],
+    "why": "G-4 keeps the heading and its positive restatement as one date-ordinal check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "efa7579922a3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a02dd457b79f",
+      "quote": "Don’t confuse ordinals with regnal numbers"
+     },
+     {
+      "block_id": "1a538dba14e8",
+      "quote": "Regnal numbers are upper case roman numerals that are used for the titles of monarchs and popes and in family names."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8400291f3150",
+        "quote": "Elizabeth I"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dca5ed4e2df8",
+        "quote": "Elizabeth Ist"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Even though you might pronounce regnals as ordinal numbers, don’t write them like that.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A regnal number is written as an ordinal, including an ordinal suffix attached to a roman numeral.",
+    "when": [
+     "Applies to regnal numbers in the titles of monarchs and popes and in family names."
+    ],
+    "why": "G-4 selects the actionable body instruction rather than the broad heading; the definition supplies its scope."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "28ee78b98bab",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "be50d7e59e64",
+      "quote": "Put a non-breaking space between the name and the regnal number."
+     },
+     {
+      "block_id": "250c456e30d3",
+      "quote": "Use a narrow no-break space between the name and the regnal number."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a non-breaking space for names with regnal numbers",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name and its regnal number are not separated by the required non-breaking space, or a print version lacks the specified narrow no-break space.",
+    "when": [
+     "Put the non-breaking space between the name and the regnal number.",
+     "For print, use a narrow no-break space.",
+     "The page identifies U+00A0 for a non-breaking space and U+202F for a narrow no-break space."
+    ],
+    "why": "G-2 treats print as a condition on the same separator check; G-4 absorbs the body restatement."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "587b6d2d25e7",
+    "end": 70,
+    "prefix": "",
+    "quote": "Use words for ordinals up to ‘ninth’ and numerals for ‘10th’ and above",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "2ec0421dd2b9",
+     "end": 97,
+     "prefix": "",
+     "quote": "Spell out ordinal numbers from ‘first’ to ‘ninth’. Use numerals for ordinals from ‘10th’ onwards.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3d1917844a3b",
+     "end": 149,
+     "prefix": "",
+     "quote": "Use numerals, not words, when writing ordinals with centuries. This is an exception to the general rule to spell out ‘first’ to ‘ninth’ for ordinals.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "64f0c2457df1",
+     "end": 19,
+     "prefix": "",
+     "quote": "Very large ordinals",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e94e74efb9ab",
+     "end": 176,
+     "prefix": "",
+     "quote": "People find very large rounded numbers easier to read in words rather than numerals. This also applies to ordinal numbers. Spell out the number and include the relevant suffix.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "06701812fb00",
+     "end": 156,
+     "prefix": "",
+     "quote": "In reference lists, use numerals with a suffix for editions of a publication. This is an exception to the rule to use words for ordinal numbers up to ninth.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "65fd39910c4b",
+     "end": 165,
+     "prefix": "",
+     "quote": "If an organisation’s name includes a numeral, write the name as the organisation does. This is an exception to the rule to use words for ordinal numbers up to ninth.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c782c9189919",
+       "end": 120,
+       "prefix": "",
+       "quote": "The first item on the agenda was to confirm the agenda. The second item was to review the minutes from the last meeting.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "80444c556859",
+       "end": 51,
+       "prefix": "",
+       "quote": "In 2013, Canberra celebrated its 100th anniversary.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1e8c81f98b4a",
+       "end": 72,
+       "prefix": "",
+       "quote": "We pause to remember at the 11th hour of the 11th day of the 11th month.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6ef6331a1116",
+       "end": 46,
+       "prefix": "",
+       "quote": "This is the department’s 22nd graduate intake.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "98af57d4d69e",
+       "end": 47,
+       "prefix": "",
+       "quote": "We expect to receive our 1,000th visitor today.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b289d452ef26",
+       "end": 48,
+       "prefix": "",
+       "quote": "They are the 273rd immigrant to join this group.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7bb925435471",
+       "end": 75,
+       "prefix": "",
+       "quote": "In the 1st century CE, Tiberius succeeded Augustus Caesar as Roman emperor.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "68c0795dbccf",
+       "end": 69,
+       "prefix": "",
+       "quote": "Vikings established a Norse kingdom around Dublin in the 9th century.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "791702383390",
+       "end": 43,
+       "prefix": "",
+       "quote": "The gallery bought a 15th-century painting.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3d05c12569eb",
+       "end": 21,
+       "prefix": "",
+       "quote": "the millionth visitor",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "464518ada491",
+       "end": 23,
+       "prefix": "",
+       "quote": "the 1,000,000th visitor",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f172e45eedaa",
+       "end": 99,
+       "prefix": "",
+       "quote": "Brone AZ (2020) Towards a high-performing public service, 2nd edn, Positive Publications, Canberra.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f36004b5155a",
+       "end": 74,
+       "prefix": "",
+       "quote": "The 1st Australian Infantry Battalion arrived in Egypt on 2 December 1914.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "46ce4073f9f7",
+       "end": 82,
+       "prefix": "",
+       "quote": "MyHealth 1st is a platform that connects patients with local health practitioners.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "be87945befef",
+       "end": 68,
+       "prefix": "",
+       "quote": "They searched for Thirteenth Holdings Pty Ltd on the ASIC registers.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "e3594dd77f6ecd47",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Apply the century, publication-edition, organisation-name and very-large-rounded-number cases as overrides of the general word-versus-numeral rule. The page gives ‘millionth’ as an example but does not define the boundary of ‘very large rounded numbers’; that boundary needs review.",
+    "unit": "sentence",
+    "violation_condition": "An ordinal from first to ninth is written as a numeral, or an ordinal from tenth onwards is written in words, contrary to the applicable general rule or exception."
+   },
+   "when": [
+    "Normally, spell out first to ninth and use numerals from 10th onwards.",
+    "Use numerals for ordinals with centuries, including 1st to 9th.",
+    "In reference lists, use numerals for publication editions, including editions below 10th.",
+    "Preserve an organisation’s own rendering of the ordinal in its name.",
+    "Spell out very large rounded ordinals.",
+    "Dates and regnal numbers have separate rules and are not ordinary ordinal expressions for this check."
+   ],
+   "why": "G-2 consolidates the word-versus-numeral cases and exceptions; G-4 avoids duplicating the heading and body; E-4 leaves the undefined size boundary explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "7e00df019220",
+    "end": 50,
+    "prefix": "",
+    "quote": "Ordinals written as numerals always have a suffix:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a2deb27186d4",
+     "end": 23,
+     "prefix": "",
+     "quote": "‘-st’ (‘first’, ‘21st’)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0f2695925fae",
+     "end": 24,
+     "prefix": "",
+     "quote": "‘-nd’ (‘second’, ‘32nd’)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "da062bd3e16f",
+     "end": 24,
+     "prefix": "",
+     "quote": "‘-rd’ (‘third’, ‘103rd’)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b8ef5d22817c",
+     "end": 43,
+     "prefix": "",
+     "quote": "‘-th’ (‘fourth’, ‘15th’, ‘55th’ and so on).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A numeral used as an ordinal lacks its ordinal suffix or has a suffix inconsistent with the intended ordinal."
+   },
+   "when": [
+    "The numeral represents an ordinal, not a cardinal count.",
+    "Dates and regnal numbers are not written as ordinals."
+   ],
+   "why": "G-2 keeps the suffix forms together; suffix omission is distinct from choosing words or numerals."
+  },
+  {
+   "anchor": {
+    "block_id": "b25732714dda",
+    "end": 36,
+    "prefix": "",
+    "quote": "Don’t write suffixes in superscript.",
+    "start": 0,
+    "suffix": " Superscript may not be accessib"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "An ordinal numeral’s suffix is formatted as superscript."
+   },
+   "when": [
+    "Applies to the suffix of an ordinal written as a numeral."
+   ],
+   "why": "The superscript formatting error is a separate finding from missing a suffix or choosing the wrong ordinal representation."
+  },
+  {
+   "anchor": {
+    "block_id": "6826d54f9e0b",
+    "end": 46,
+    "prefix": "",
+    "quote": "Write ‘century’ and ‘centuries’ in lower case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7bb925435471",
+       "end": 75,
+       "prefix": "",
+       "quote": "In the 1st century CE, Tiberius succeeded Augustus Caesar as Roman emperor.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "68c0795dbccf",
+       "end": 69,
+       "prefix": "",
+       "quote": "Vikings established a Norse kingdom around Dublin in the 9th century.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "791702383390",
+       "end": 43,
+       "prefix": "",
+       "quote": "The gallery bought a 15th-century painting.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The word ‘century’ or ‘centuries’ is capitalised in a century expression."
+   },
+   "when": [
+    "Applies when writing century expressions."
+   ],
+   "why": "Capitalisation is a separate check from the numeral requirement for century ordinals."
+  },
+  {
+   "anchor": {
+    "block_id": "523b74c7294c",
+    "end": 54,
+    "prefix": "",
+    "quote": "Don’t use ordinals to order points in general content.",
+    "start": 0,
+    "suffix": " Reword the content so it doesn’"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "4901ada06938",
+     "end": 38,
+     "prefix": "",
+     "quote": "Create a list rather than use ordinals",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "523b74c7294c",
+     "end": 133,
+     "prefix": "rder points in general content. ",
+     "quote": "Reword the content so it doesn’t need ordinals or use a numbered list instead.",
+     "start": 55,
+     "suffix": " A list can make it easier for p"
+    },
+    {
+     "block_id": "e52dcbfda47e",
+     "end": 147,
+     "prefix": "",
+     "quote": "Always use numbered lists rather than ordinals when you’re expressing a series of items or steps – for example, in recommendations or instructions.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "51c0c6e1e112",
+     "end": 227,
+     "prefix": "",
+     "quote": "Ordinals, such as ‘firstly’ and ‘secondly’, are sometimes used in content written for government publications such as journals and reports. In this type of content, they order thoughts without interrupting the flow of the text.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0974ba3c7082",
+       "end": 23,
+       "prefix": "",
+       "quote": "To apply for the grant:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8b73c4695924",
+       "end": 34,
+       "prefix": "",
+       "quote": "complete the eligibility checklist",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d0d139d88331",
+       "end": 22,
+       "prefix": "",
+       "quote": "submit a business case",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "24df367d03f9",
+       "end": 29,
+       "prefix": "",
+       "quote": "provide supporting documents.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a31008eb590b",
+       "end": 168,
+       "prefix": "",
+       "quote": "If you want to apply for the grant, first complete the eligibility checklist. Second, you must submit a business case; and third, you must provide supporting documents.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Treat this as a restriction on ordinal discourse sequencers, not on descriptions of ordinal position such as ‘the first item’. General content may be reworded to remove the sequencing; for a series of items or steps, the page explicitly requires numbered lists.",
+    "unit": "block",
+    "violation_condition": "Running prose uses ordinal expressions to sequence points, items or steps where the content should instead be reworded or presented as a numbered list."
+   },
+   "when": [
+    "Applies to ordering points in general content.",
+    "For a series of items or steps, such as recommendations or instructions, the numbered-list alternative is mandatory.",
+    "Journal-style content and other government publications may use ordinals to order thoughts without interrupting the flow, subject to the separate pairing and ‘thirdly’ rules."
+   ],
+   "why": "G-2 keeps the general-content restriction, stricter procedural case and publication exception together; G-4 absorbs the heading and alternative formulations."
+  },
+  {
+   "anchor": {
+    "block_id": "658aadd059f5",
+    "end": 73,
+    "prefix": "",
+    "quote": "‘Firstly’ and ‘secondly’ work as a pair. Don’t use one without the other.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0dcb3314c981",
+       "end": 177,
+       "prefix": "",
+       "quote": "The committee responded in 2 ways. Firstly, they asked for an immediate adjournment of proceedings. Secondly, they sought clarification about their powers to subpoena witnesses.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b10bdbd72603",
+       "end": 168,
+       "prefix": "",
+       "quote": "The committee responded in 2 ways. They asked for an immediate adjournment of proceedings. Secondly, they sought clarification about their powers to subpoena witnesses.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A thought sequence uses ‘firstly’ without ‘secondly’, or ‘secondly’ without ‘firstly’."
+   },
+   "when": [
+    "Applies where ordinal thought sequencing is used in journals, reports or other government publications.",
+    "The two markers must belong to the same thought sequence; unrelated occurrences elsewhere do not form a pair."
+   ],
+   "why": "G-2 treats the two reciprocal missing-partner cases as one check; E-2 attaches the contrast pair to the nearby pairing instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "24389c5b385d",
+    "end": 20,
+    "prefix": "",
+    "quote": "Don’t use ‘thirdly’.",
+    "start": 0,
+    "suffix": " Instead, omit ordinals and writ"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "24389c5b385d",
+     "end": 96,
+     "prefix": "Don’t use ‘thirdly’. ",
+     "quote": "Instead, omit ordinals and write the points as a run-on list in a sentence.",
+     "start": 21,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b34a14a8526e",
+       "end": 72,
+       "prefix": "",
+       "quote": "The committee took evidence from peak bodies, unions and the department.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ac81a2f9cd36",
+       "end": 102,
+       "prefix": "",
+       "quote": "The committee took evidence from, firstly, peak bodies; secondly, unions; and thirdly, the department.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "‘Thirdly’ is used to sequence points in the content."
+   },
+   "when": [
+    "Includes journal-style and publication content where ‘firstly’ and ‘secondly’ may otherwise be used."
+   ],
+   "why": "The ban on a third marker is distinct from an incomplete firstly–secondly pair; G-4 absorbs the replacement wording."
+  },
+  {
+   "anchor": {
+    "block_id": "007208ddfbd1",
+    "end": 27,
+    "prefix": "",
+    "quote": "Don't use ordinals in dates",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9fe214bc8c52",
+     "end": 40,
+     "prefix": "",
+     "quote": "Use numerals without a suffix for dates.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "58bf7440654c",
+       "end": 16,
+       "prefix": "",
+       "quote": "12 February 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dc5558c2b087",
+       "end": 18,
+       "prefix": "",
+       "quote": "12th February 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "047070f5b83524a6",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A date contains an ordinal day expression, such as a numeral with an ordinal suffix or a spelled-out ordinal."
+   },
+   "when": [
+    "Applies to date expressions."
+   ],
+   "why": "G-4 keeps the heading and its positive restatement as one date-ordinal check."
+  },
+  {
+   "anchor": {
+    "block_id": "efa7579922a3",
+    "end": 87,
+    "prefix": "",
+    "quote": "Even though you might pronounce regnals as ordinal numbers, don’t write them like that.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a02dd457b79f",
+     "end": 42,
+     "prefix": "",
+     "quote": "Don’t confuse ordinals with regnal numbers",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1a538dba14e8",
+     "end": 116,
+     "prefix": "",
+     "quote": "Regnal numbers are upper case roman numerals that are used for the titles of monarchs and popes and in family names.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8400291f3150",
+       "end": 11,
+       "prefix": "",
+       "quote": "Elizabeth I",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dca5ed4e2df8",
+       "end": 13,
+       "prefix": "",
+       "quote": "Elizabeth Ist",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A regnal number is written as an ordinal, including an ordinal suffix attached to a roman numeral."
+   },
+   "when": [
+    "Applies to regnal numbers in the titles of monarchs and popes and in family names."
+   ],
+   "why": "G-4 selects the actionable body instruction rather than the broad heading; the definition supplies its scope."
+  },
+  {
+   "anchor": {
+    "block_id": "28ee78b98bab",
+    "end": 54,
+    "prefix": "",
+    "quote": "Use a non-breaking space for names with regnal numbers",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "be50d7e59e64",
+     "end": 64,
+     "prefix": "",
+     "quote": "Put a non-breaking space between the name and the regnal number.",
+     "start": 0,
+     "suffix": " A non-breaking space means that"
+    },
+    {
+     "block_id": "250c456e30d3",
+     "end": 67,
+     "prefix": "",
+     "quote": "Use a narrow no-break space between the name and the regnal number.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "e8605c124ef7c4dc",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The name and its regnal number are not separated by the required non-breaking space, or a print version lacks the specified narrow no-break space."
+   },
+   "when": [
+    "Put the non-breaking space between the name and the regnal number.",
+    "For print, use a narrow no-break space.",
+    "The page identifies U+00A0 for a non-breaking space and U+202F for a narrow no-break space."
+   ],
+   "why": "G-2 treats print as a condition on the same separator check; G-4 absorbs the body restatement."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5462,
+  "output_tokens": 10542,
+  "reasoning_tokens": 4142
+ }
+}

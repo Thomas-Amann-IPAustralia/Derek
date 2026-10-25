@@ -1,0 +1,271 @@
+{
+ "effort": "low",
+ "input_sha256": "c7402da2c9453a4c1b70d57604075fbfdec2cfdd9e9fc26f8f7dae0807b786f5",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "06e09c016511",
+    "end": 59,
+    "prefix": "",
+    "quote": "Keep the functions of words in mind to write clear content.",
+    "start": 0,
+    "suffix": " Grammar and sentence structure "
+   },
+   "note": "General advice to writers rather than a testable textual rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "48df69f89f5b",
+    "end": 29,
+    "prefix": "",
+    "quote": "Words are grouped by function",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading describing linguistic concepts.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4e5a9bf2ea01",
+    "end": 45,
+    "prefix": "",
+    "quote": "Sentence structure sets the function of words",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Candidate heading explaining grammar; does not prescribe a specific testable text property.",
+   "reason": "description",
+   "seed_uid": "3758f889b71a03a9"
+  },
+  {
+   "anchor": {
+    "block_id": "d801731eceb6",
+    "end": 58,
+    "prefix": "",
+    "quote": "You can change the meaning of a sentence by moving a word.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive statement about syntax.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e55e6ec76664",
+    "end": 107,
+    "prefix": "",
+    "quote": "The following sentences are all grammatically correct. The meaning changes as the modifier ‘only’ is moved.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory description of the illustrative examples for 'only'.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fb021574c526",
+    "end": 101,
+    "prefix": "",
+    "quote": "Fixing a misplaced modifier is more complicated. Sentences with this issue often need some rewriting.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explanatory commentary on how to revise misplaced modifiers.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/types-words.md",
+ "page_sha256": "259bf2a040ac2ebf00666e5889e98ae9b369a40b23f72b978ae63760ac19b4e2",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "06e09c016511",
+    "note": "General advice to writers rather than a testable textual rule.",
+    "quote": "Keep the functions of words in mind to write clear content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "48df69f89f5b",
+    "note": "Section heading describing linguistic concepts.",
+    "quote": "Words are grouped by function",
+    "reason": "description"
+   },
+   {
+    "block_id": "4e5a9bf2ea01",
+    "note": "Candidate heading explaining grammar; does not prescribe a specific testable text property.",
+    "quote": "Sentence structure sets the function of words",
+    "reason": "description"
+   },
+   {
+    "block_id": "d801731eceb6",
+    "note": "Descriptive statement about syntax.",
+    "quote": "You can change the meaning of a sentence by moving a word.",
+    "reason": "description"
+   },
+   {
+    "block_id": "e55e6ec76664",
+    "note": "Introductory description of the illustrative examples for 'only'.",
+    "quote": "The following sentences are all grammatically correct. The meaning changes as the modifier ‘only’ is moved.",
+    "reason": "description"
+   },
+   {
+    "block_id": "fb021574c526",
+    "note": "Explanatory commentary on how to revise misplaced modifiers.",
+    "quote": "Fixing a misplaced modifier is more complicated. Sentences with this issue often need some rewriting.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cd93051a9ebe",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "cd93051a9ebe",
+      "quote": "The same applies to adverbial and adjectival phrases and clauses."
+     },
+     {
+      "block_id": "23be7c98b9f3",
+      "quote": "If you don’t put the modifier in the right place, people will find it difficult to understand your content."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The modifier clause is placed adjacent to the clause/word it clarifies, avoiding ambiguity.",
+      "parts": [
+       {
+        "block_id": "f5392dbed97a",
+        "quote": "The report suggested that the drug is beneficial, even though it’s harmful in larger doses."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Misplaced modifier: 'Even though it's harmful in larger doses' appears adjacent to 'the report', creating ambiguity about whether 'it' refers to the report or the drug.",
+      "parts": [
+       {
+        "block_id": "7f232dea41ae",
+        "quote": "Even though it’s harmful in larger doses, the report suggested the drug is beneficial."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Place modifying words, such as adjectives and adverbs, next to the thing that they’re modifying.",
+    "specification": "Modifiers (words, phrases, or clauses) should be positioned adjacent to the word or constituent they modify to prevent unintended ambiguity or misplaced modification.",
+    "unit": "sentence",
+    "violation_condition": "a modifying word, phrase, or clause placed away from the element it modifies (a misplaced or squinting modifier)",
+    "when": [
+     "The rule applies to modifying words as well as adverbial and adjectival phrases and clauses."
+    ],
+    "why": "G-2 (single rule covering words, phrases, and clauses acting as modifiers) and E-1/E-2 (matching Write this / Not this examples to the misplaced modifier rule)."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "cd93051a9ebe",
+    "end": 96,
+    "prefix": "",
+    "quote": "Place modifying words, such as adjectives and adverbs, next to the thing that they’re modifying.",
+    "start": 0,
+    "suffix": " The same applies to adverbial a"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "cd93051a9ebe",
+     "end": 162,
+     "prefix": "e thing that they’re modifying. ",
+     "quote": "The same applies to adverbial and adjectival phrases and clauses.",
+     "start": 97,
+     "suffix": ""
+    },
+    {
+     "block_id": "23be7c98b9f3",
+     "end": 107,
+     "prefix": "",
+     "quote": "If you don’t put the modifier in the right place, people will find it difficult to understand your content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The modifier clause is placed adjacent to the clause/word it clarifies, avoiding ambiguity.",
+     "parts": [
+      {
+       "block_id": "f5392dbed97a",
+       "end": 91,
+       "prefix": "",
+       "quote": "The report suggested that the drug is beneficial, even though it’s harmful in larger doses.",
+       "start": 0,
+       "suffix": " [‘It’ in the modifier refers to"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Misplaced modifier: 'Even though it's harmful in larger doses' appears adjacent to 'the report', creating ambiguity about whether 'it' refers to the report or the drug.",
+     "parts": [
+      {
+       "block_id": "7f232dea41ae",
+       "end": 86,
+       "prefix": "",
+       "quote": "Even though it’s harmful in larger doses, the report suggested the drug is beneficial.",
+       "start": 0,
+       "suffix": " [‘It’ in the modifier could go "
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Modifiers (words, phrases, or clauses) should be positioned adjacent to the word or constituent they modify to prevent unintended ambiguity or misplaced modification.",
+    "unit": "sentence",
+    "violation_condition": "a modifying word, phrase, or clause placed away from the element it modifies (a misplaced or squinting modifier)"
+   },
+   "when": [
+    "The rule applies to modifying words as well as adverbial and adjectival phrases and clauses."
+   ],
+   "why": "G-2 (single rule covering words, phrases, and clauses acting as modifiers) and E-1/E-2 (matching Write this / Not this examples to the misplaced modifier rule)."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4001,
+  "output_tokens": 1026,
+  "reasoning_tokens": 0
+ }
+}

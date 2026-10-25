@@ -1,0 +1,2175 @@
+{
+ "effort": "low",
+ "input_sha256": "96a6f16ab462cd56206dbe5edbee13ce3c42e004714bb47ece037867c24daa19",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "181c96069343",
+    "end": 54,
+    "prefix": "",
+    "quote": "Use words for 2 and above in these specific situations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Grouping heading introducing exceptions (starting a sentence, fractions, proper nouns, figures of speech).",
+   "reason": "section",
+   "seed_uid": "53a29488452bd2b8"
+  },
+  {
+   "anchor": {
+    "block_id": "f0c806559961",
+    "end": 58,
+    "prefix": "",
+    "quote": "Write all numbers as numerals in these specific situations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Grouping heading introducing specific sub-rules (measurements, math, comparisons, tables, dates, series, age).",
+   "reason": "section",
+   "seed_uid": "5798969a8a484e6e"
+  },
+  {
+   "anchor": {
+    "block_id": "8e77d2957fb3",
+    "end": 53,
+    "prefix": "",
+    "quote": "Use ‘1 million’ and ‘one million’ in certain contexts",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Grouping heading explaining that both forms are acceptable in specific contexts.",
+   "reason": "section",
+   "seed_uid": "087692e697dc0c68"
+  },
+  {
+   "anchor": {
+    "block_id": "0e0ff3b84d4b",
+    "end": 23,
+    "prefix": "",
+    "quote": "When to use ‘1 million’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Contextual advice and permission explaining when '1 million' is acceptable; relaxes the general 'write one in words' rule.",
+   "reason": "permission",
+   "seed_uid": "c56ca89a815059e8"
+  },
+  {
+   "anchor": {
+    "block_id": "28a00c7fb317",
+    "end": 25,
+    "prefix": "",
+    "quote": "When to use ‘one million’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Contextual permission explaining situations where writing 'one million' in words is appropriate.",
+   "reason": "permission",
+   "seed_uid": "2dd568e846d32898"
+  },
+  {
+   "anchor": {
+    "block_id": "bd98ef3e6480",
+    "end": 133,
+    "prefix": "",
+    "quote": "Be consistent. Once your style for numerals or words is settled, use the same style throughout the content or series of publications.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General writing advice regarding consistency.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "84fc7e153068",
+    "end": 49,
+    "prefix": "",
+    "quote": "It is sometimes better to rearrange the sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Stylistic writing advice.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/choosing-numerals-or-words.md",
+ "page_sha256": "4abb5d6ca5afd72e19cbb26b65ada02172f3f42bf6348490e238ddf75f8e0c24",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "181c96069343",
+    "note": "Grouping heading introducing exceptions (starting a sentence, fractions, proper nouns, figures of speech).",
+    "quote": "Use words for 2 and above in these specific situations",
+    "reason": "section"
+   },
+   {
+    "block_id": "f0c806559961",
+    "note": "Grouping heading introducing specific sub-rules (measurements, math, comparisons, tables, dates, series, age).",
+    "quote": "Write all numbers as numerals in these specific situations",
+    "reason": "section"
+   },
+   {
+    "block_id": "8e77d2957fb3",
+    "note": "Grouping heading explaining that both forms are acceptable in specific contexts.",
+    "quote": "Use ‘1 million’ and ‘one million’ in certain contexts",
+    "reason": "section"
+   },
+   {
+    "block_id": "0e0ff3b84d4b",
+    "note": "Contextual advice and permission explaining when '1 million' is acceptable; relaxes the general 'write one in words' rule.",
+    "quote": "When to use ‘1 million’",
+    "reason": "permission"
+   },
+   {
+    "block_id": "28a00c7fb317",
+    "note": "Contextual permission explaining situations where writing 'one million' in words is appropriate.",
+    "quote": "When to use ‘one million’",
+    "reason": "permission"
+   },
+   {
+    "block_id": "bd98ef3e6480",
+    "note": "General writing advice regarding consistency.",
+    "quote": "Be consistent. Once your style for numerals or words is settled, use the same style throughout the content or series of publications.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "84fc7e153068",
+    "note": "Stylistic writing advice.",
+    "quote": "It is sometimes better to rearrange the sentence.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0b310f3789c6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d58ef4516ae1",
+      "quote": "Use numerals for ‘2’ and above."
+     },
+     {
+      "block_id": "aded58391ac3",
+      "quote": "Write the numbers ‘zero’ and ‘one’ in words."
+     },
+     {
+      "block_id": "37c8cd281111",
+      "quote": "Follow the same rule for writing numbers in headings and subheadings. Apply exceptions to this general rule in specific situations, explained on this page."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uses word 'one'",
+      "parts": [
+       {
+        "block_id": "591eb253cb12",
+        "quote": "Only one person agreed to it."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses word 'zero'",
+      "parts": [
+       {
+        "block_id": "aedb532a4def",
+        "quote": "Their aim is zero net emissions by 2050."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses numeral '3'",
+      "parts": [
+       {
+        "block_id": "46babacee2d6",
+        "quote": "They were open to discussing 3 options."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses numeral '1' instead of word 'one'",
+      "parts": [
+       {
+        "block_id": "aff140d476cf",
+        "quote": "Only 1 person agreed with it."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Uses numeral '0' instead of word 'zero'",
+      "parts": [
+       {
+        "block_id": "9e83e7865900",
+        "quote": "Their aim is 0 net emissions by 2050."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Uses word 'three' instead of numeral '3'",
+      "parts": [
+       {
+        "block_id": "1ce59780220a",
+        "quote": "They were open to discussing three options."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use numerals for 2 and above in text",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a number of 2 or above written as a word in text, or the numbers 0 or 1 written as numerals",
+    "when": [
+     "In text, headings, and subheadings.",
+     "Write the numbers 'zero' and 'one' in words.",
+     "Exceptions apply when starting a sentence, writing fractions, proper nouns, publication titles, figures of speech, units of measurement, math, comparisons, tables, dates, times, series, steps, age, or school years."
+    ],
+    "why": "G-1, G-2: Main overarching rule governing numerals vs words for numbers in text, incorporating zero/one and headings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9e9ecc59a65c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5cd49c7486c2",
+      "quote": "Starting a sentence with a number"
+     },
+     {
+      "block_id": "4ba48ec40754",
+      "quote": "starting a sentence"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Sentence starts with word form of number",
+      "parts": [
+       {
+        "block_id": "b17f904b1a77",
+        "quote": "Twelve people from our group went to the rally."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Sentence rearranged so numeral is not at start",
+      "parts": [
+       {
+        "block_id": "b7d39801d226",
+        "quote": "From our group, 12 people went to the rally."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Sentence starts with numeral",
+      "parts": [
+       {
+        "block_id": "4c4f046b0e4f",
+        "quote": "12 people from our group went to the rally."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Start sentences with words rather than numerals.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence beginning with a numeral",
+    "when": [
+     "At the start of a sentence."
+    ],
+    "why": "G-1, G-2: Specific exception rule to the general numeral rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "682db7c90ab1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "54d19cd8547a",
+      "quote": "writing a fraction"
+     },
+     {
+      "block_id": "223ab4b2d94f",
+      "quote": "Use numerals when writing fractions in specialist content. Otherwise the general rule is words for fractions."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Fraction written as words",
+      "parts": [
+       {
+        "block_id": "bba45843aaeb",
+        "quote": "About two-thirds of staff attended last week’s meeting."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write words in general text for fractions.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a fraction written as numerals/digits in general text rather than words",
+    "when": [
+     "In general text, unless writing fractions in specialist content or when precise decimal values are required."
+    ],
+    "why": "G-2, G-4: Rule on fraction representation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4dbf47584785",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d094add48d94",
+      "quote": "writing a proper noun that includes a number written as a word"
+     },
+     {
+      "block_id": "b08b44c3677b",
+      "quote": "writing a publication title that includes a number written as a word"
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Proper name using Four as words",
+      "parts": [
+       {
+        "block_id": "d8af1cc3fb2b",
+        "quote": "The Treasurer wrote the terms of reference for the Review of the Four Major Banks and Other Financial Institutions."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Title using five as words",
+      "parts": [
+       {
+        "block_id": "428adc565e4a",
+        "quote": "Private politics : a study of five political outlooks by Alan Davies"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write numbers as words if this is how they appear in a name or title.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a number written as a numeral in a proper noun or publication title when the title uses words",
+    "when": [
+     "When writing proper nouns and publication titles."
+    ],
+    "why": "G-2: Exception rule for titles/proper nouns."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "38ac16360c1b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "aed45e6bb5ff",
+      "quote": "quoting a figure of speech."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Figure of speech with words",
+      "parts": [
+       {
+        "block_id": "6f3069cd65fa",
+        "quote": "Two’s company and three’s a crowd."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Idiom with words",
+      "parts": [
+       {
+        "block_id": "4bb1ea8821d7",
+        "quote": "Let’s take five."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Figure of speech with words",
+      "parts": [
+       {
+        "block_id": "90c71e7bab8f",
+        "quote": "She felt ten feet tall."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use words for figures of speech.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a figure of speech or idiom written using numerals instead of words for numbers",
+    "when": [
+     "In figures of speech."
+    ],
+    "why": "G-2: Exception rule for figures of speech."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "22891961b874",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7d608315d223",
+      "quote": "in units of measurement"
+     },
+     {
+      "block_id": "b36033301e2b",
+      "quote": "Units of measurement"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Measurement with numeral",
+      "parts": [
+       {
+        "block_id": "8967d6a9ac50",
+        "quote": "1 km"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Measurement with numeral",
+      "parts": [
+       {
+        "block_id": "9eb06ddfa10b",
+        "quote": "1 kilometre"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Measurement written as word",
+      "parts": [
+       {
+        "block_id": "9ad2ba4a3d9e",
+        "quote": "one kilometre"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use numerals to report a measurement (unless it is a large rounded number).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a number written as a word when reporting a unit of measurement (unless large and rounded)",
+    "when": [
+     "When reporting a measurement.",
+     "Does not apply to large rounded numbers."
+    ],
+    "why": "G-1, G-2: Specific rule requiring numerals for measurements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "477c59745c91",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4c96d141beca",
+      "quote": "when you are comparing numbers"
+     },
+     {
+      "block_id": "811796a5a653",
+      "quote": "to compare numbers"
+     },
+     {
+      "block_id": "0844e9f07a56",
+      "quote": "Comparisons"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Both items compared using consistent decimal numerals",
+      "parts": [
+       {
+        "block_id": "ba6fabf0c76f",
+        "quote": "For those aged 75 to 84, the rate was 2.5 times as high as the rate for the control group. This fell to 1.1 times as high for those aged 85 and over."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Mixes word 'twice' with decimal '1.1 times'",
+      "parts": [
+       {
+        "block_id": "485538b0c4fb",
+        "quote": "For those aged 75 to 84, the rate was over twice as high as the rate for the control group. This fell to 1.1 times as high for those aged 85 and over."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Compare numerals, not words and numerals.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a comparison that mixes words and numerals or compares dissimilar numerical formats (e.g. word multiplier compared with decimal)",
+    "when": [
+     "When comparing numbers.",
+     "If one number is a decimal, the other must be a decimal."
+    ],
+    "why": "G-1, G-2: Rule on comparisons using consistent numerals."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5b23a11409a6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b4ce1f8a030f",
+      "quote": "in tables and charts"
+     },
+     {
+      "block_id": "75d526644e18",
+      "quote": "in tables, graphs and charts."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always use numerals in graphs, charts and tables.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a number written as a word in a graph, chart, or table",
+    "when": [
+     "In graphs, charts, and tables."
+    ],
+    "why": "G-2: Mandate for numerals in tabular and graphical displays."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1a3da2d5db3b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a6467301658c",
+      "quote": "for dates and times"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Date using numerals",
+      "parts": [
+       {
+        "block_id": "b4b10afbb1cf",
+        "quote": "Wednesday 1 April 2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Time using numeral",
+      "parts": [
+       {
+        "block_id": "4eeb3d0c1958",
+        "quote": "She took the call at 1 pm."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use numerals for dates and time.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a date or time written using words instead of numerals",
+    "when": [
+     "For dates and times."
+    ],
+    "why": "G-2: Mandate for dates and times."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e68fd1bcc435",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b9cda03b67d0",
+      "quote": "in a series of numbers"
+     },
+     {
+      "block_id": "73e39b14306c",
+      "quote": "If you have 2 series of numbers, for the sake of clarity you can use words for one series and numerals for the other."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Series of numbers all in numerals",
+      "parts": [
+       {
+        "block_id": "0ddf0c108924",
+        "quote": "The anthology includes 160 poems by 22 poets – 14 of whom were born in Australia, 4 in New Zealand, 3 in England and 1 in Austria."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Two series using numerals for one and words for the second",
+      "parts": [
+       {
+        "block_id": "5b552a8f2422",
+        "quote": "Of the mothers of the 23 sets of triplets registered during the year, 8 had no previous children, 8 had one child and 7 had two previous children."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use numerals for:\n\na related group of items\n\na discussion of statistics.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a number written as a word when part of a related group of items or statistical discussion (series of numbers)",
+    "when": [
+     "In a related group of items or discussion of statistics, regardless of the size of the numbers.",
+     "Permission: If you have 2 series of numbers, words may be used for one series and numerals for the other for clarity."
+    ],
+    "why": "G-1, G-2, G-3: Rule governing series of numbers, folding in permission for distinguishing two series."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "feedcf0b6fae",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e49ecb2106fc",
+      "quote": "in specific contexts – such as steps, instructions, age and school years"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "List point using numeral",
+      "parts": [
+       {
+        "block_id": "3dee01a27514",
+        "quote": "1. Write a list"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Point reference using numeral",
+      "parts": [
+       {
+        "block_id": "e7774e095dfc",
+        "quote": "In point 2 of the record of discussion ..."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Step label using numeral",
+      "parts": [
+       {
+        "block_id": "1024cab5944f",
+        "quote": "Step 3: insert the audio cable into the left audio jack."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Lists, points and instructions are easier to follow if written as numerals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a list item, step number, or instruction label written using words instead of numerals",
+    "when": [
+     "In lists, points, and instructions (e.g. step numbers)."
+    ],
+    "why": "G-2, G-4: Rule on writing list steps and instructions with numerals."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4568fd591337",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9bca03dfe538",
+      "quote": "Age and school years"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Age written as numerals",
+      "parts": [
+       {
+        "block_id": "8711f18cb16b",
+        "quote": "They're a close-knit group of 12-year-olds."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "School years written as numerals",
+      "parts": [
+       {
+        "block_id": "68a51cb2cc70",
+        "quote": "The siblings are in year 1 and year 5."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use numerals for age and school years.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an age or school year written using words instead of numerals",
+    "when": [
+     "When referring to age or school years."
+    ],
+    "why": "G-2: Mandate for age and school years."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "859b0f252d15",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use powers of 10 in general content.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "powers of 10 (scientific notation) used in general content",
+    "when": [
+     "In general content. Permitted in technical content such as science and engineering publications."
+    ],
+    "why": "G-2, G-3: Prohibition on powers of 10 in general writing."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "af6c2f543ff9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "33e5f3fcf9b5",
+      "quote": "Use commas in numbers with 4 or more digits"
+     },
+     {
+      "block_id": "2a0df952871c",
+      "quote": "Don’t use a space or non-breaking space instead of a comma. This is because screen readers can announce spaced digits as separate numbers."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Number formatted with comma",
+      "parts": [
+       {
+        "block_id": "aa2cf4f54102",
+        "quote": "The government awards 2,500 grants to community projects annually."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Number formatted with space instead of comma",
+      "parts": [
+       {
+        "block_id": "21062c7b1eab",
+        "quote": "The government awards 2 500 grants to community projects annually."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Numbers from 1,000 need a comma. Separate the digits into groups of 3 (working from right to left).",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a number of 4 or more digits written without commas separating groups of 3 digits, or written with a space instead of a comma",
+    "when": [
+     "In numbers with 4 or more digits (from 1,000)."
+    ],
+    "why": "G-1, G-2: Core rule on thousands comma formatting."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f94c53186176",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3c002fe62534",
+      "quote": "Combine numerals and words for large, rounded numbers"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Combines numeral and word",
+      "parts": [
+       {
+        "block_id": "67eb817b8958",
+        "quote": "There are over 1.4 million students enrolled in Australian tertiary institutions."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Combines numeral and word",
+      "parts": [
+       {
+        "block_id": "e82582c67f30",
+        "quote": "The budget allocated $50 billion to that initiative."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a combination of numerals and words for large numbers from a million when they are rounded.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a rounded number of a million or greater written entirely in digits (e.g. '2,500,000') rather than combining numerals and words (e.g. '2.5 million')",
+    "when": [
+     "When writing large, rounded numbers from a million and above."
+    ],
+    "why": "G-1, G-2: Rule on large rounded numbers."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "031caeab453f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ba5d58a5a62d",
+      "quote": "Choose between numerals or words for currency"
+     },
+     {
+      "block_id": "db707a18d92b",
+      "quote": "However, money can be written entirely in words for approximations and figures of speech."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Currency symbol and numeral",
+      "parts": [
+       {
+        "block_id": "38d27c1611a0",
+        "quote": "They self-declared a $0 turnover."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Currency symbol and numeral",
+      "parts": [
+       {
+        "block_id": "6f1dadf13b75",
+        "quote": "50c"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Approximation in words",
+      "parts": [
+       {
+        "block_id": "3b3974f4ea70",
+        "quote": "The government’s new policy will save thousands of dollars."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Figure of speech in words",
+      "parts": [
+       {
+        "block_id": "e0f4e1214ad0",
+        "quote": "That’s my two cents worth."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use numerals and symbols for amounts of money.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an amount of money written out in words rather than using numerals and currency symbols",
+    "when": [
+     "For amounts of money.",
+     "Exception: money can be written entirely in words for approximations and figures of speech."
+    ],
+    "why": "G-1, G-2: Currency formatting rule including its exception."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "Always use numerals for:\n\na related group of items\n\na discussion of statistics.",
+   "what": "rule",
+   "why": "not found exactly once in block e68fd1bcc435"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "0b310f3789c6",
+    "end": 36,
+    "prefix": "",
+    "quote": "Use numerals for 2 and above in text",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d58ef4516ae1",
+     "end": 31,
+     "prefix": "",
+     "quote": "Use numerals for ‘2’ and above.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "aded58391ac3",
+     "end": 44,
+     "prefix": "",
+     "quote": "Write the numbers ‘zero’ and ‘one’ in words.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "37c8cd281111",
+     "end": 155,
+     "prefix": "",
+     "quote": "Follow the same rule for writing numbers in headings and subheadings. Apply exceptions to this general rule in specific situations, explained on this page.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses word 'one'",
+     "parts": [
+      {
+       "block_id": "591eb253cb12",
+       "end": 29,
+       "prefix": "",
+       "quote": "Only one person agreed to it.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses word 'zero'",
+     "parts": [
+      {
+       "block_id": "aedb532a4def",
+       "end": 40,
+       "prefix": "",
+       "quote": "Their aim is zero net emissions by 2050.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses numeral '3'",
+     "parts": [
+      {
+       "block_id": "46babacee2d6",
+       "end": 39,
+       "prefix": "",
+       "quote": "They were open to discussing 3 options.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses numeral '1' instead of word 'one'",
+     "parts": [
+      {
+       "block_id": "aff140d476cf",
+       "end": 29,
+       "prefix": "",
+       "quote": "Only 1 person agreed with it.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses numeral '0' instead of word 'zero'",
+     "parts": [
+      {
+       "block_id": "9e83e7865900",
+       "end": 37,
+       "prefix": "",
+       "quote": "Their aim is 0 net emissions by 2050.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses word 'three' instead of numeral '3'",
+     "parts": [
+      {
+       "block_id": "1ce59780220a",
+       "end": 43,
+       "prefix": "",
+       "quote": "They were open to discussing three options.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "248ac9c4d91a3413",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a number of 2 or above written as a word in text, or the numbers 0 or 1 written as numerals"
+   },
+   "when": [
+    "In text, headings, and subheadings.",
+    "Write the numbers 'zero' and 'one' in words.",
+    "Exceptions apply when starting a sentence, writing fractions, proper nouns, publication titles, figures of speech, units of measurement, math, comparisons, tables, dates, times, series, steps, age, or school years."
+   ],
+   "why": "G-1, G-2: Main overarching rule governing numerals vs words for numbers in text, incorporating zero/one and headings."
+  },
+  {
+   "anchor": {
+    "block_id": "9e9ecc59a65c",
+    "end": 48,
+    "prefix": "",
+    "quote": "Start sentences with words rather than numerals.",
+    "start": 0,
+    "suffix": " If you must use a number at the"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5cd49c7486c2",
+     "end": 33,
+     "prefix": "",
+     "quote": "Starting a sentence with a number",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4ba48ec40754",
+     "end": 19,
+     "prefix": "",
+     "quote": "starting a sentence",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Sentence starts with word form of number",
+     "parts": [
+      {
+       "block_id": "b17f904b1a77",
+       "end": 47,
+       "prefix": "",
+       "quote": "Twelve people from our group went to the rally.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Sentence rearranged so numeral is not at start",
+     "parts": [
+      {
+       "block_id": "b7d39801d226",
+       "end": 44,
+       "prefix": "",
+       "quote": "From our group, 12 people went to the rally.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Sentence starts with numeral",
+     "parts": [
+      {
+       "block_id": "4c4f046b0e4f",
+       "end": 43,
+       "prefix": "",
+       "quote": "12 people from our group went to the rally.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence beginning with a numeral"
+   },
+   "when": [
+    "At the start of a sentence."
+   ],
+   "why": "G-1, G-2: Specific exception rule to the general numeral rule."
+  },
+  {
+   "anchor": {
+    "block_id": "682db7c90ab1",
+    "end": 42,
+    "prefix": "",
+    "quote": "Write words in general text for fractions.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "54d19cd8547a",
+     "end": 18,
+     "prefix": "",
+     "quote": "writing a fraction",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "223ab4b2d94f",
+     "end": 109,
+     "prefix": "",
+     "quote": "Use numerals when writing fractions in specialist content. Otherwise the general rule is words for fractions.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Fraction written as words",
+     "parts": [
+      {
+       "block_id": "bba45843aaeb",
+       "end": 55,
+       "prefix": "",
+       "quote": "About two-thirds of staff attended last week’s meeting.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a fraction written as numerals/digits in general text rather than words"
+   },
+   "when": [
+    "In general text, unless writing fractions in specialist content or when precise decimal values are required."
+   ],
+   "why": "G-2, G-4: Rule on fraction representation."
+  },
+  {
+   "anchor": {
+    "block_id": "4dbf47584785",
+    "end": 69,
+    "prefix": "",
+    "quote": "Write numbers as words if this is how they appear in a name or title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d094add48d94",
+     "end": 62,
+     "prefix": "",
+     "quote": "writing a proper noun that includes a number written as a word",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b08b44c3677b",
+     "end": 68,
+     "prefix": "",
+     "quote": "writing a publication title that includes a number written as a word",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Proper name using Four as words",
+     "parts": [
+      {
+       "block_id": "d8af1cc3fb2b",
+       "end": 115,
+       "prefix": "",
+       "quote": "The Treasurer wrote the terms of reference for the Review of the Four Major Banks and Other Financial Institutions.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Title using five as words",
+     "parts": [
+      {
+       "block_id": "428adc565e4a",
+       "end": 68,
+       "prefix": "",
+       "quote": "Private politics : a study of five political outlooks by Alan Davies",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a number written as a numeral in a proper noun or publication title when the title uses words"
+   },
+   "when": [
+    "When writing proper nouns and publication titles."
+   ],
+   "why": "G-2: Exception rule for titles/proper nouns."
+  },
+  {
+   "anchor": {
+    "block_id": "38ac16360c1b",
+    "end": 32,
+    "prefix": "",
+    "quote": "Use words for figures of speech.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "aed45e6bb5ff",
+     "end": 27,
+     "prefix": "",
+     "quote": "quoting a figure of speech.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Figure of speech with words",
+     "parts": [
+      {
+       "block_id": "6f3069cd65fa",
+       "end": 34,
+       "prefix": "",
+       "quote": "Two’s company and three’s a crowd.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Idiom with words",
+     "parts": [
+      {
+       "block_id": "4bb1ea8821d7",
+       "end": 16,
+       "prefix": "",
+       "quote": "Let’s take five.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Figure of speech with words",
+     "parts": [
+      {
+       "block_id": "90c71e7bab8f",
+       "end": 23,
+       "prefix": "",
+       "quote": "She felt ten feet tall.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a figure of speech or idiom written using numerals instead of words for numbers"
+   },
+   "when": [
+    "In figures of speech."
+   ],
+   "why": "G-2: Exception rule for figures of speech."
+  },
+  {
+   "anchor": {
+    "block_id": "22891961b874",
+    "end": 82,
+    "prefix": "",
+    "quote": "Always use numerals to report a measurement (unless it is a large rounded number).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7d608315d223",
+     "end": 23,
+     "prefix": "",
+     "quote": "in units of measurement",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b36033301e2b",
+     "end": 20,
+     "prefix": "",
+     "quote": "Units of measurement",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Measurement with numeral",
+     "parts": [
+      {
+       "block_id": "8967d6a9ac50",
+       "end": 4,
+       "prefix": "",
+       "quote": "1 km",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Measurement with numeral",
+     "parts": [
+      {
+       "block_id": "9eb06ddfa10b",
+       "end": 11,
+       "prefix": "",
+       "quote": "1 kilometre",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Measurement written as word",
+     "parts": [
+      {
+       "block_id": "9ad2ba4a3d9e",
+       "end": 13,
+       "prefix": "",
+       "quote": "one kilometre",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a number written as a word when reporting a unit of measurement (unless large and rounded)"
+   },
+   "when": [
+    "When reporting a measurement.",
+    "Does not apply to large rounded numbers."
+   ],
+   "why": "G-1, G-2: Specific rule requiring numerals for measurements."
+  },
+  {
+   "anchor": {
+    "block_id": "477c59745c91",
+    "end": 41,
+    "prefix": "",
+    "quote": "Compare numerals, not words and numerals.",
+    "start": 0,
+    "suffix": " If one number is a decimal, the"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4c96d141beca",
+     "end": 30,
+     "prefix": "",
+     "quote": "when you are comparing numbers",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "811796a5a653",
+     "end": 18,
+     "prefix": "",
+     "quote": "to compare numbers",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0844e9f07a56",
+     "end": 11,
+     "prefix": "",
+     "quote": "Comparisons",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Both items compared using consistent decimal numerals",
+     "parts": [
+      {
+       "block_id": "ba6fabf0c76f",
+       "end": 149,
+       "prefix": "",
+       "quote": "For those aged 75 to 84, the rate was 2.5 times as high as the rate for the control group. This fell to 1.1 times as high for those aged 85 and over.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Mixes word 'twice' with decimal '1.1 times'",
+     "parts": [
+      {
+       "block_id": "485538b0c4fb",
+       "end": 150,
+       "prefix": "",
+       "quote": "For those aged 75 to 84, the rate was over twice as high as the rate for the control group. This fell to 1.1 times as high for those aged 85 and over.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a comparison that mixes words and numerals or compares dissimilar numerical formats (e.g. word multiplier compared with decimal)"
+   },
+   "when": [
+    "When comparing numbers.",
+    "If one number is a decimal, the other must be a decimal."
+   ],
+   "why": "G-1, G-2: Rule on comparisons using consistent numerals."
+  },
+  {
+   "anchor": {
+    "block_id": "5b23a11409a6",
+    "end": 144,
+    "prefix": "l find them hard to understand. ",
+    "quote": "Always use numerals in graphs, charts and tables.",
+    "start": 95,
+    "suffix": " Numerals save space and help pe"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b4ce1f8a030f",
+     "end": 20,
+     "prefix": "",
+     "quote": "in tables and charts",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "75d526644e18",
+     "end": 29,
+     "prefix": "",
+     "quote": "in tables, graphs and charts.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "a number written as a word in a graph, chart, or table"
+   },
+   "when": [
+    "In graphs, charts, and tables."
+   ],
+   "why": "G-2: Mandate for numerals in tabular and graphical displays."
+  },
+  {
+   "anchor": {
+    "block_id": "1a3da2d5db3b",
+    "end": 39,
+    "prefix": "",
+    "quote": "Always use numerals for dates and time.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a6467301658c",
+     "end": 19,
+     "prefix": "",
+     "quote": "for dates and times",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Date using numerals",
+     "parts": [
+      {
+       "block_id": "b4b10afbb1cf",
+       "end": 22,
+       "prefix": "",
+       "quote": "Wednesday 1 April 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Time using numeral",
+     "parts": [
+      {
+       "block_id": "4eeb3d0c1958",
+       "end": 26,
+       "prefix": "",
+       "quote": "She took the call at 1 pm.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a date or time written using words instead of numerals"
+   },
+   "when": [
+    "For dates and times."
+   ],
+   "why": "G-2: Mandate for dates and times."
+  },
+  {
+   "anchor": {
+    "block_id": "feedcf0b6fae",
+    "end": 75,
+    "prefix": "",
+    "quote": "Lists, points and instructions are easier to follow if written as numerals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e49ecb2106fc",
+     "end": 72,
+     "prefix": "",
+     "quote": "in specific contexts – such as steps, instructions, age and school years",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "List point using numeral",
+     "parts": [
+      {
+       "block_id": "3dee01a27514",
+       "end": 15,
+       "prefix": "",
+       "quote": "1. Write a list",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Point reference using numeral",
+     "parts": [
+      {
+       "block_id": "e7774e095dfc",
+       "end": 42,
+       "prefix": "",
+       "quote": "In point 2 of the record of discussion ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Step label using numeral",
+     "parts": [
+      {
+       "block_id": "1024cab5944f",
+       "end": 56,
+       "prefix": "",
+       "quote": "Step 3: insert the audio cable into the left audio jack.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a list item, step number, or instruction label written using words instead of numerals"
+   },
+   "when": [
+    "In lists, points, and instructions (e.g. step numbers)."
+   ],
+   "why": "G-2, G-4: Rule on writing list steps and instructions with numerals."
+  },
+  {
+   "anchor": {
+    "block_id": "4568fd591337",
+    "end": 45,
+    "prefix": "",
+    "quote": "Always use numerals for age and school years.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9bca03dfe538",
+     "end": 20,
+     "prefix": "",
+     "quote": "Age and school years",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Age written as numerals",
+     "parts": [
+      {
+       "block_id": "8711f18cb16b",
+       "end": 43,
+       "prefix": "",
+       "quote": "They're a close-knit group of 12-year-olds.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "School years written as numerals",
+     "parts": [
+      {
+       "block_id": "68a51cb2cc70",
+       "end": 38,
+       "prefix": "",
+       "quote": "The siblings are in year 1 and year 5.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an age or school year written using words instead of numerals"
+   },
+   "when": [
+    "When referring to age or school years."
+   ],
+   "why": "G-2: Mandate for age and school years."
+  },
+  {
+   "anchor": {
+    "block_id": "859b0f252d15",
+    "end": 153,
+    "prefix": "e and engineering publications. ",
+    "quote": "Don’t use powers of 10 in general content.",
+    "start": 111,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "powers of 10 (scientific notation) used in general content"
+   },
+   "when": [
+    "In general content. Permitted in technical content such as science and engineering publications."
+   ],
+   "why": "G-2, G-3: Prohibition on powers of 10 in general writing."
+  },
+  {
+   "anchor": {
+    "block_id": "af6c2f543ff9",
+    "end": 99,
+    "prefix": "",
+    "quote": "Numbers from 1,000 need a comma. Separate the digits into groups of 3 (working from right to left).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "33e5f3fcf9b5",
+     "end": 43,
+     "prefix": "",
+     "quote": "Use commas in numbers with 4 or more digits",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2a0df952871c",
+     "end": 138,
+     "prefix": "",
+     "quote": "Don’t use a space or non-breaking space instead of a comma. This is because screen readers can announce spaced digits as separate numbers.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Number formatted with comma",
+     "parts": [
+      {
+       "block_id": "aa2cf4f54102",
+       "end": 66,
+       "prefix": "",
+       "quote": "The government awards 2,500 grants to community projects annually.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Number formatted with space instead of comma",
+     "parts": [
+      {
+       "block_id": "21062c7b1eab",
+       "end": 66,
+       "prefix": "",
+       "quote": "The government awards 2 500 grants to community projects annually.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a number of 4 or more digits written without commas separating groups of 3 digits, or written with a space instead of a comma"
+   },
+   "when": [
+    "In numbers with 4 or more digits (from 1,000)."
+   ],
+   "why": "G-1, G-2: Core rule on thousands comma formatting."
+  },
+  {
+   "anchor": {
+    "block_id": "f94c53186176",
+    "end": 95,
+    "prefix": "",
+    "quote": "Use a combination of numerals and words for large numbers from a million when they are rounded.",
+    "start": 0,
+    "suffix": " It is easier to read ‘2.5 milli"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3c002fe62534",
+     "end": 53,
+     "prefix": "",
+     "quote": "Combine numerals and words for large, rounded numbers",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Combines numeral and word",
+     "parts": [
+      {
+       "block_id": "67eb817b8958",
+       "end": 81,
+       "prefix": "",
+       "quote": "There are over 1.4 million students enrolled in Australian tertiary institutions.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Combines numeral and word",
+     "parts": [
+      {
+       "block_id": "e82582c67f30",
+       "end": 52,
+       "prefix": "",
+       "quote": "The budget allocated $50 billion to that initiative.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a rounded number of a million or greater written entirely in digits (e.g. '2,500,000') rather than combining numerals and words (e.g. '2.5 million')"
+   },
+   "when": [
+    "When writing large, rounded numbers from a million and above."
+   ],
+   "why": "G-1, G-2: Rule on large rounded numbers."
+  },
+  {
+   "anchor": {
+    "block_id": "031caeab453f",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use numerals and symbols for amounts of money.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ba5d58a5a62d",
+     "end": 45,
+     "prefix": "",
+     "quote": "Choose between numerals or words for currency",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "db707a18d92b",
+     "end": 89,
+     "prefix": "",
+     "quote": "However, money can be written entirely in words for approximations and figures of speech.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Currency symbol and numeral",
+     "parts": [
+      {
+       "block_id": "38d27c1611a0",
+       "end": 33,
+       "prefix": "",
+       "quote": "They self-declared a $0 turnover.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Currency symbol and numeral",
+     "parts": [
+      {
+       "block_id": "6f1dadf13b75",
+       "end": 3,
+       "prefix": "",
+       "quote": "50c",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Approximation in words",
+     "parts": [
+      {
+       "block_id": "3b3974f4ea70",
+       "end": 59,
+       "prefix": "",
+       "quote": "The government’s new policy will save thousands of dollars.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Figure of speech in words",
+     "parts": [
+      {
+       "block_id": "e0f4e1214ad0",
+       "end": 26,
+       "prefix": "",
+       "quote": "That’s my two cents worth.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an amount of money written out in words rather than using numerals and currency symbols"
+   },
+   "when": [
+    "For amounts of money.",
+    "Exception: money can be written entirely in words for approximations and figures of speech."
+   ],
+   "why": "G-1, G-2: Currency formatting rule including its exception."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 9459,
+  "output_tokens": 8094,
+  "reasoning_tokens": 0
+ }
+}

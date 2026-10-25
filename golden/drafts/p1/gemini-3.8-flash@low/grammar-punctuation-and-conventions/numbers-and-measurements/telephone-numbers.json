@@ -1,0 +1,838 @@
+{
+ "effort": "low",
+ "input_sha256": "58a99caa266c0d13e8557dea045745638e9f8de606bc05ab73e4ddd9c33a356f",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "e829187c51a4",
+    "end": 60,
+    "prefix": "",
+    "quote": "Use ‘chunks’ of digits to help people read telephone numbers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: General grouping heading for specific chunking formats detailed below.",
+   "reason": "section",
+   "seed_uid": "b44a0fd212ba6f0e"
+  },
+  {
+   "anchor": {
+    "block_id": "42c25b8d4df1",
+    "end": 66,
+    "prefix": "",
+    "quote": "Break telephone numbers into shorter blocks of digits or ‘chunks’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: General introductory restatement elaborated by the specific formatting rules for landlines and mobiles.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c643a6eb35a6",
+    "end": 63,
+    "prefix": "",
+    "quote": "Write telephone numbers in the national or international format",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: Grouping heading for national and international format subsections.",
+   "reason": "section",
+   "seed_uid": "d43f54418cb7c184"
+  },
+  {
+   "anchor": {
+    "block_id": "7c2fcf20e1fb",
+    "end": 78,
+    "prefix": "",
+    "quote": "Write telephone numbers in a format appropriate for the location of the users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: General writer advice introducing the choice between national and international format.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5bce7777f3cf",
+    "end": 71,
+    "prefix": "",
+    "quote": "Make telephone numbers accessible through ‘click-to-call’ functionality",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: Section heading explaining click-to-call functionality and technical implementation.",
+   "reason": "section",
+   "seed_uid": "e8c4d44ae256ae36"
+  },
+  {
+   "anchor": {
+    "block_id": "bac8e355ce2f",
+    "end": 71,
+    "prefix": "",
+    "quote": "You can insert a non-breaking space using the Unicode character U+00A0.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: Practical technical instructions for writers on how to type non-breaking spaces.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1cbc8123ab40",
+    "end": 130,
+    "prefix": "",
+    "quote": "In HTML, use the entity &nbsp; to insert a non-breaking space. You can also use the keyboard shortcut Ctrl+Shift+Spacebar in Word.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: Software-specific technical advice for inputting characters.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "81e458e7a2cf",
+    "end": 74,
+    "prefix": "",
+    "quote": "You can insert a narrow no-break space using the Unicode character U+202F.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: Software-specific advice.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b375fb30d0e4",
+    "end": 117,
+    "prefix": "",
+    "quote": "Remember that all webpages can be accessed internationally. Include the international dialling prefix if appropriate.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: Editorial advice/reminder to consider audience location.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/telephone-numbers.md",
+ "page_sha256": "1116b7ce5e3d8eb4c4bffd79081bd6d58b54ec65d0da6b6cfcd57490003d3dc4",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "e829187c51a4",
+    "note": "G-1: General grouping heading for specific chunking formats detailed below.",
+    "quote": "Use ‘chunks’ of digits to help people read telephone numbers",
+    "reason": "section"
+   },
+   {
+    "block_id": "42c25b8d4df1",
+    "note": "G-4: General introductory restatement elaborated by the specific formatting rules for landlines and mobiles.",
+    "quote": "Break telephone numbers into shorter blocks of digits or ‘chunks’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c643a6eb35a6",
+    "note": "G-1: Grouping heading for national and international format subsections.",
+    "quote": "Write telephone numbers in the national or international format",
+    "reason": "section"
+   },
+   {
+    "block_id": "7c2fcf20e1fb",
+    "note": "G-5: General writer advice introducing the choice between national and international format.",
+    "quote": "Write telephone numbers in a format appropriate for the location of the users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5bce7777f3cf",
+    "note": "G-1: Section heading explaining click-to-call functionality and technical implementation.",
+    "quote": "Make telephone numbers accessible through ‘click-to-call’ functionality",
+    "reason": "section"
+   },
+   {
+    "block_id": "bac8e355ce2f",
+    "note": "G-5: Practical technical instructions for writers on how to type non-breaking spaces.",
+    "quote": "You can insert a non-breaking space using the Unicode character U+00A0.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1cbc8123ab40",
+    "note": "G-5: Software-specific technical advice for inputting characters.",
+    "quote": "In HTML, use the entity &nbsp; to insert a non-breaking space. You can also use the keyboard shortcut Ctrl+Shift+Spacebar in Word.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "81e458e7a2cf",
+    "note": "G-5: Software-specific advice.",
+    "quote": "You can insert a narrow no-break space using the Unicode character U+202F.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b375fb30d0e4",
+    "note": "G-5: Editorial advice/reminder to consider audience location.",
+    "quote": "Remember that all webpages can be accessed internationally. Include the international dialling prefix if appropriate.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fe3cb3efac12",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bfac6106f2a3",
+      "quote": "Put a non-breaking space between the chunks of digits"
+     },
+     {
+      "block_id": "36db664272b7",
+      "quote": "Use a narrow no-break space between chunks of digits in a telephone number."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a non-breaking space between chunks of digits in a telephone number.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "chunks of digits in a telephone number separated by normal breaking spaces or punctuation instead of non-breaking spaces",
+    "when": [
+     "In print contexts, a narrow no-break space (U+202F) is used instead."
+    ],
+    "why": "G-2: narrow no-break space for print is a variation/case of non-breaking space between digit chunks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5e84b27910c7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "59ff44f252e1",
+      "quote": "Use Australia’s national format when writing Australian telephone numbers for content that will be used within Australia."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Landline formatted in national 2-4-4 chunks",
+      "parts": [
+       {
+        "block_id": "b45ec1f44b7a",
+        "quote": "02 5550 4321"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For landline telephone numbers, write the 2-digit area code followed by a non-breaking space. Then write the rest of the number in 2 chunks of 4 digits.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an Australian national landline number not formatted as 2 digits, a space, 4 digits, a space, and 4 digits (e.g. 02 5550 4321)",
+    "when": [
+     "Content is intended for use within Australia."
+    ],
+    "why": "G-2: specific digit chunking rule for Australian landline telephone numbers in national format."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "291ca1f1bfe5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Australian mobile number in 4-3-3 format",
+      "parts": [
+       {
+        "block_id": "ad24041a8d7f",
+        "quote": "0491 570 159"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write mobile telephone numbers in 1 chunk of 4 digits and then 2 chunks of 3 digits.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an Australian mobile phone number in national format not formatted as 4 digits followed by two chunks of 3 digits (e.g. 0491 570 159)",
+    "when": [
+     "Content is intended for use within Australia."
+    ],
+    "why": "G-2: specific chunking specification for mobile numbers."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "08a0eaa48741",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4a50cc005022",
+      "quote": "Use international format for content that will be used outside Australia."
+     },
+     {
+      "block_id": "70c9c961df7c",
+      "quote": "The international format uses a plus symbol ’+’ to represent the international prefix, followed by a country code (‘61’ for Australia)."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Australian landline number in international format",
+      "parts": [
+       {
+        "block_id": "6db41224b0d2",
+        "quote": "+61 3 7010 4321"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For landline numbers:\n[aaf2f31d4fc5] LI  start with a plus symbol ‘+’ and add the country code (‘61’ for Australia)\n[ab9c3e20011c] LI  add the area code without the ‘0’\n[6b7b2b6e48f8] LI  write the telephone number in 2 chunks of 4 digits.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an Australian landline telephone number intended for international audiences that does not follow the format +61 [area code without leading 0] [4 digits] [4 digits]",
+    "when": [
+     "Content will be used outside Australia."
+    ],
+    "why": "G-2: specification for formatting Australian landlines in international format."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "00db18519b79",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Australian mobile number in international format",
+      "parts": [
+       {
+        "block_id": "8bdc5d89a511",
+        "quote": "+61 491 578 888"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "For mobile numbers:\n[b387f57ef65e] LI  start with a plus symbol ‘+’ and add the country code (‘61’ for Australia)\n[fbefa13ab9b7] LI  omit the first ‘0’\n[3ab957d5f8c7] LI  write the telephone number in 3 chunks of 3 digits.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an Australian mobile phone number in international format that does not follow '+61' followed by 3 chunks of 3 digits without the leading 0",
+    "when": [
+     "Content will be used outside Australia."
+    ],
+    "why": "G-2: specification for formatting Australian mobile numbers in international format."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c046972b51d1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "US landline in international format",
+      "parts": [
+       {
+        "block_id": "c6f68cb1d346",
+        "quote": "+1 212 555 0188"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "UK landline in international format",
+      "parts": [
+       {
+        "block_id": "99a61f6193de",
+        "quote": "+44 20 7946 0990"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always write foreign telephone numbers in the international format.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a foreign telephone number written without the international format (plus symbol prefix and country code)",
+    "when": [
+     "When writing foreign (non-Australian) telephone numbers."
+    ],
+    "why": "Clear distinct rule for foreign telephone numbers."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "6541526d554b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "61e669c94d11",
+      "quote": "This is not always the case, so use HTML code to support this functionality."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Tel link with spaces stripped in href",
+      "parts": [
+       {
+        "block_id": "3b54876689f6",
+        "quote": "02 5550 5722 [HTML: <a href=\"tel:0255505722\">02&nbsp;5550&nbsp;5722</a>]"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use ‘tel:[telephone number]’ as the URL. Remove spaces between the numbers.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a telephone number link href that does not use the 'tel:' scheme or that contains spaces within the dialling digits",
+    "when": [
+     "In HTML content providing click-to-call functionality."
+    ],
+    "why": "G-2: specific rule for formatting click-to-call telephone URLs in HTML."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "82a98a260ba0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1d52a132492e",
+      "quote": "Don't use ‘phone words’"
+     },
+     {
+      "block_id": "d36b72dc7ec9",
+      "quote": "Don’t do this, because some people find it hard to convert letters to numbers."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Digits used instead of phone word",
+      "parts": [
+       {
+        "block_id": "1efe4b3be6f2",
+        "quote": "13 83 87"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Phone word used instead of digits",
+      "parts": [
+       {
+        "block_id": "903326ae4d39",
+        "quote": "13 VETS"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Always display the telephone number as digits. Don’t use ‘phone words’. Use the relevant 13 or 1300 number instead.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a telephone number written using letters/phone words (e.g. '13 VETS') instead of numeric digits",
+    "when": [],
+    "why": "G-4: body states the rule clearly; covers candidate heading and explanation."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "For landline numbers:\n[aaf2f31d4fc5] LI  start with a plus symbol ‘+’ and add the country code (‘61’ for Australia)\n[ab9c3e20011c] LI  add the area code without the ‘0’\n[6b7b2b6e48f8] LI  write the te",
+   "what": "rule",
+   "why": "not found exactly once in block 08a0eaa48741"
+  },
+  {
+   "quote": "For mobile numbers:\n[b387f57ef65e] LI  start with a plus symbol ‘+’ and add the country code (‘61’ for Australia)\n[fbefa13ab9b7] LI  omit the first ‘0’\n[3ab957d5f8c7] LI  write the telephone number in",
+   "what": "rule",
+   "why": "not found exactly once in block 00db18519b79"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "fe3cb3efac12",
+    "end": 72,
+    "prefix": "",
+    "quote": "Use a non-breaking space between chunks of digits in a telephone number.",
+    "start": 0,
+    "suffix": " A non-breaking space means that"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bfac6106f2a3",
+     "end": 53,
+     "prefix": "",
+     "quote": "Put a non-breaking space between the chunks of digits",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "36db664272b7",
+     "end": 75,
+     "prefix": "",
+     "quote": "Use a narrow no-break space between chunks of digits in a telephone number.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "chunks of digits in a telephone number separated by normal breaking spaces or punctuation instead of non-breaking spaces"
+   },
+   "when": [
+    "In print contexts, a narrow no-break space (U+202F) is used instead."
+   ],
+   "why": "G-2: narrow no-break space for print is a variation/case of non-breaking space between digit chunks."
+  },
+  {
+   "anchor": {
+    "block_id": "5e84b27910c7",
+    "end": 152,
+    "prefix": "",
+    "quote": "For landline telephone numbers, write the 2-digit area code followed by a non-breaking space. Then write the rest of the number in 2 chunks of 4 digits.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "59ff44f252e1",
+     "end": 121,
+     "prefix": "",
+     "quote": "Use Australia’s national format when writing Australian telephone numbers for content that will be used within Australia.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Landline formatted in national 2-4-4 chunks",
+     "parts": [
+      {
+       "block_id": "b45ec1f44b7a",
+       "end": 12,
+       "prefix": "",
+       "quote": "02 5550 4321",
+       "start": 0,
+       "suffix": " [Telephone]"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an Australian national landline number not formatted as 2 digits, a space, 4 digits, a space, and 4 digits (e.g. 02 5550 4321)"
+   },
+   "when": [
+    "Content is intended for use within Australia."
+   ],
+   "why": "G-2: specific digit chunking rule for Australian landline telephone numbers in national format."
+  },
+  {
+   "anchor": {
+    "block_id": "291ca1f1bfe5",
+    "end": 84,
+    "prefix": "",
+    "quote": "Write mobile telephone numbers in 1 chunk of 4 digits and then 2 chunks of 3 digits.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Australian mobile number in 4-3-3 format",
+     "parts": [
+      {
+       "block_id": "ad24041a8d7f",
+       "end": 12,
+       "prefix": "",
+       "quote": "0491 570 159",
+       "start": 0,
+       "suffix": " [Mobile]"
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an Australian mobile phone number in national format not formatted as 4 digits followed by two chunks of 3 digits (e.g. 0491 570 159)"
+   },
+   "when": [
+    "Content is intended for use within Australia."
+   ],
+   "why": "G-2: specific chunking specification for mobile numbers."
+  },
+  {
+   "anchor": {
+    "block_id": "c046972b51d1",
+    "end": 67,
+    "prefix": "",
+    "quote": "Always write foreign telephone numbers in the international format.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "US landline in international format",
+     "parts": [
+      {
+       "block_id": "c6f68cb1d346",
+       "end": 15,
+       "prefix": "",
+       "quote": "+1 212 555 0188",
+       "start": 0,
+       "suffix": " [US landline]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "UK landline in international format",
+     "parts": [
+      {
+       "block_id": "99a61f6193de",
+       "end": 16,
+       "prefix": "",
+       "quote": "+44 20 7946 0990",
+       "start": 0,
+       "suffix": " [UK landline]"
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a foreign telephone number written without the international format (plus symbol prefix and country code)"
+   },
+   "when": [
+    "When writing foreign (non-Australian) telephone numbers."
+   ],
+   "why": "Clear distinct rule for foreign telephone numbers."
+  },
+  {
+   "anchor": {
+    "block_id": "6541526d554b",
+    "end": 75,
+    "prefix": "",
+    "quote": "Use ‘tel:[telephone number]’ as the URL. Remove spaces between the numbers.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "61e669c94d11",
+     "end": 211,
+     "prefix": "number as a click-to-call link. ",
+     "quote": "This is not always the case, so use HTML code to support this functionality.",
+     "start": 135,
+     "suffix": " Seek specialist advice if you’r"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Tel link with spaces stripped in href",
+     "parts": [
+      {
+       "block_id": "3b54876689f6",
+       "end": 72,
+       "prefix": "",
+       "quote": "02 5550 5722 [HTML: <a href=\"tel:0255505722\">02&nbsp;5550&nbsp;5722</a>]",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a telephone number link href that does not use the 'tel:' scheme or that contains spaces within the dialling digits"
+   },
+   "when": [
+    "In HTML content providing click-to-call functionality."
+   ],
+   "why": "G-2: specific rule for formatting click-to-call telephone URLs in HTML."
+  },
+  {
+   "anchor": {
+    "block_id": "82a98a260ba0",
+    "end": 115,
+    "prefix": "",
+    "quote": "Always display the telephone number as digits. Don’t use ‘phone words’. Use the relevant 13 or 1300 number instead.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1d52a132492e",
+     "end": 23,
+     "prefix": "",
+     "quote": "Don't use ‘phone words’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d36b72dc7ec9",
+     "end": 178,
+     "prefix": "er as a digit-word combination. ",
+     "quote": "Don’t do this, because some people find it hard to convert letters to numbers.",
+     "start": 100,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Digits used instead of phone word",
+     "parts": [
+      {
+       "block_id": "1efe4b3be6f2",
+       "end": 8,
+       "prefix": "",
+       "quote": "13 83 87",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Phone word used instead of digits",
+     "parts": [
+      {
+       "block_id": "903326ae4d39",
+       "end": 7,
+       "prefix": "",
+       "quote": "13 VETS",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a telephone number written using letters/phone words (e.g. '13 VETS') instead of numeric digits"
+   },
+   "when": [],
+   "why": "G-4: body states the rule clearly; covers candidate heading and explanation."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5540,
+  "output_tokens": 3770,
+  "reasoning_tokens": 0
+ }
+}

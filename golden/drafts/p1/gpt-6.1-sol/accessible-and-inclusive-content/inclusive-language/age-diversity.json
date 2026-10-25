@@ -1,0 +1,1358 @@
+{
+ "effort": "high",
+ "input_sha256": "3c5c0a94db96f05cb6abfeb23dbdc1330a418a4f6595e305991726c01e259800",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "bdb2e9b0c353",
+    "end": 37,
+    "prefix": "",
+    "quote": "Refer to age only if it is necessary.",
+    "start": 0,
+    "suffix": " Use respectful language and con"
+   },
+   "note": "Consolidated into the age-relevance rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bdb2e9b0c353",
+    "end": 102,
+    "prefix": "to age only if it is necessary. ",
+    "quote": "Use respectful language and consistent style if age is relevant.",
+    "start": 38,
+    "suffix": ""
+   },
+   "note": "Page summary introducing the specific language and style checks.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3705e485d39e",
+    "end": 44,
+    "prefix": "",
+    "quote": "If age is relevant, follow style conventions",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The hyphenation and numeral instructions provide the independently checkable rules.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7bea8ea64325",
+    "end": 33,
+    "prefix": "",
+    "quote": "Question whether age is relevant.",
+    "start": 0,
+    "suffix": " Avoid referring to a person’s a"
+   },
+   "note": "Writer action; the following sentence states the checkable property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "50534c04ad8a",
+    "end": 53,
+    "prefix": "",
+    "quote": "If you need to mention age, follow style conventions:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in to the two specific style rules.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "73384589c35c",
+    "end": 45,
+    "prefix": "",
+    "quote": "Use respectful terms when you write about age",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups the specific guidance on relevance, stereotypes and age-group labels.",
+   "reason": "section",
+   "seed_uid": "bf981b9a1b7652bc"
+  },
+  {
+   "anchor": {
+    "block_id": "ab9554a05a3b",
+    "end": 68,
+    "prefix": "",
+    "quote": "Avoid characterising age references when it’s not strictly relevant.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The relevance rule also covers unnecessary age characterisations.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "15413c6c3c21",
+    "end": 101,
+    "prefix": "",
+    "quote": "When an age or age range is relevant to a fact, you can use the term ‘people’ with the age reference.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Permits a neutral construction; it does not require every age reference to contain ‘people’.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a108a7317a3a",
+    "end": 85,
+    "prefix": "",
+    "quote": "Use respectful and inclusive language that talks to the person, not their difference.",
+    "start": 0,
+    "suffix": " It’s the law."
+   },
+   "note": "Overarching inclusive-language requirement, implemented here through the specific age-language checks; not a separate person-first wording mandate.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fee18ccf190b",
+    "end": 12,
+    "prefix": "",
+    "quote": "Older people",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Topic heading; the body supplies the actionable prohibition.",
+   "reason": "description",
+   "seed_uid": "05259592187d136c"
+  },
+  {
+   "anchor": {
+    "block_id": "d39a19364e21",
+    "end": 38,
+    "prefix": "",
+    "quote": "The term ‘older people’ is acceptable.",
+    "start": 0,
+    "suffix": " Don’t use the term ‘old people’"
+   },
+   "note": "Recorded as an acceptable alternative under the prohibition on ‘old people’.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0608f155f79a",
+    "end": 43,
+    "prefix": "",
+    "quote": "Choose the term that best fits the context.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "No independent textual test is specified beyond the neighbouring terminology guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "74cc0a5ac123",
+    "end": 12,
+    "prefix": "",
+    "quote": "Young people",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Topic heading; the neutral-term guidance is in the body.",
+   "reason": "description",
+   "seed_uid": "d711fef853c0e2d4"
+  },
+  {
+   "anchor": {
+    "block_id": "bd6a69b3c09f",
+    "end": 97,
+    "prefix": "neutral term is ‘young people’. ",
+    "quote": "‘Youth’ is a gender-neutral term and is also acceptable.",
+    "start": 41,
+    "suffix": ""
+   },
+   "note": "An allowed alternative under the young-people terminology rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dfab5ab67515",
+    "end": 37,
+    "prefix": "",
+    "quote": "Be careful using the plural ‘youths’.",
+    "start": 0,
+    "suffix": " This is often used to refer to "
+   },
+   "note": "A caution to the writer, not a categorical prohibition or a specified condition that makes every occurrence wrong.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fc29beda06b7",
+    "end": 87,
+    "prefix": "",
+    "quote": "Depending on the context, you can use the words ‘adolescents’, ‘children’ and ‘babies’.",
+    "start": 0,
+    "suffix": " ‘Kids’ can be suitable, dependi"
+   },
+   "note": "Context-dependent alternatives retained under the young-people terminology rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fc29beda06b7",
+    "end": 154,
+    "prefix": "ents’, ‘children’ and ‘babies’. ",
+    "quote": "‘Kids’ can be suitable, depending on the content’s voice and tone.",
+    "start": 88,
+    "suffix": ""
+   },
+   "note": "A contextual permission, not a requirement to use ‘kids’.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4ee964f84a21",
+    "end": 38,
+    "prefix": "",
+    "quote": "Refer to level of study instead of age",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated as the student-specific application of the age-relevance check, with educational labels as the alternatives.",
+   "reason": "restatement",
+   "seed_uid": "3634c385d02bdda4"
+  },
+  {
+   "anchor": {
+    "block_id": "acc3a2502ebc",
+    "end": 101,
+    "prefix": "",
+    "quote": "Refer to students by the level of study they are doing, not by their age, unless the age is relevant.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The same irrelevant age-based student label should not generate both a general relevance finding and a student-specific finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9370fe23bb0d",
+    "end": 124,
+    "prefix": "iary students can be many ages. ",
+    "quote": "Refer to them simply as ‘students’ or, in the case of PhD students, as ‘PhD candidates’.",
+    "start": 36,
+    "suffix": ""
+   },
+   "note": "Supplies neutral educational alternatives within the consolidated student-label guidance.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f7590d76672d",
+    "end": 79,
+    "prefix": "",
+    "quote": "Avoid using ‘mature-age student’ unless it is relevant to what you are writing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A named case of the age-relevance rule, with the same relevance exception.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/inclusive-language/age-diversity.md",
+ "page_sha256": "8334b1b30546d8567b81c5bf50243d1cac0375cf1f0b1bd9dd88f3b1876c1176",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "bdb2e9b0c353",
+    "note": "Consolidated into the age-relevance rule.",
+    "quote": "Refer to age only if it is necessary.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bdb2e9b0c353",
+    "note": "Page summary introducing the specific language and style checks.",
+    "quote": "Use respectful language and consistent style if age is relevant.",
+    "reason": "section"
+   },
+   {
+    "block_id": "3705e485d39e",
+    "note": "The hyphenation and numeral instructions provide the independently checkable rules.",
+    "quote": "If age is relevant, follow style conventions",
+    "reason": "section"
+   },
+   {
+    "block_id": "7bea8ea64325",
+    "note": "Writer action; the following sentence states the checkable property.",
+    "quote": "Question whether age is relevant.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "50534c04ad8a",
+    "note": "Lead-in to the two specific style rules.",
+    "quote": "If you need to mention age, follow style conventions:",
+    "reason": "section"
+   },
+   {
+    "block_id": "73384589c35c",
+    "note": "Groups the specific guidance on relevance, stereotypes and age-group labels.",
+    "quote": "Use respectful terms when you write about age",
+    "reason": "section"
+   },
+   {
+    "block_id": "ab9554a05a3b",
+    "note": "The relevance rule also covers unnecessary age characterisations.",
+    "quote": "Avoid characterising age references when it’s not strictly relevant.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "15413c6c3c21",
+    "note": "Permits a neutral construction; it does not require every age reference to contain ‘people’.",
+    "quote": "When an age or age range is relevant to a fact, you can use the term ‘people’ with the age reference.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a108a7317a3a",
+    "note": "Overarching inclusive-language requirement, implemented here through the specific age-language checks; not a separate person-first wording mandate.",
+    "quote": "Use respectful and inclusive language that talks to the person, not their difference.",
+    "reason": "section"
+   },
+   {
+    "block_id": "fee18ccf190b",
+    "note": "Topic heading; the body supplies the actionable prohibition.",
+    "quote": "Older people",
+    "reason": "description"
+   },
+   {
+    "block_id": "d39a19364e21",
+    "note": "Recorded as an acceptable alternative under the prohibition on ‘old people’.",
+    "quote": "The term ‘older people’ is acceptable.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "0608f155f79a",
+    "note": "No independent textual test is specified beyond the neighbouring terminology guidance.",
+    "quote": "Choose the term that best fits the context.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "74cc0a5ac123",
+    "note": "Topic heading; the neutral-term guidance is in the body.",
+    "quote": "Young people",
+    "reason": "description"
+   },
+   {
+    "block_id": "bd6a69b3c09f",
+    "note": "An allowed alternative under the young-people terminology rule.",
+    "quote": "‘Youth’ is a gender-neutral term and is also acceptable.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "dfab5ab67515",
+    "note": "A caution to the writer, not a categorical prohibition or a specified condition that makes every occurrence wrong.",
+    "quote": "Be careful using the plural ‘youths’.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "fc29beda06b7",
+    "note": "Context-dependent alternatives retained under the young-people terminology rule.",
+    "quote": "Depending on the context, you can use the words ‘adolescents’, ‘children’ and ‘babies’.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "fc29beda06b7",
+    "note": "A contextual permission, not a requirement to use ‘kids’.",
+    "quote": "‘Kids’ can be suitable, depending on the content’s voice and tone.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "4ee964f84a21",
+    "note": "Consolidated as the student-specific application of the age-relevance check, with educational labels as the alternatives.",
+    "quote": "Refer to level of study instead of age",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "acc3a2502ebc",
+    "note": "The same irrelevant age-based student label should not generate both a general relevance finding and a student-specific finding.",
+    "quote": "Refer to students by the level of study they are doing, not by their age, unless the age is relevant.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9370fe23bb0d",
+    "note": "Supplies neutral educational alternatives within the consolidated student-label guidance.",
+    "quote": "Refer to them simply as ‘students’ or, in the case of PhD students, as ‘PhD candidates’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f7590d76672d",
+    "note": "A named case of the age-relevance rule, with the same relevance exception.",
+    "quote": "Avoid using ‘mature-age student’ unless it is relevant to what you are writing.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7bea8ea64325",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "bdb2e9b0c353",
+      "quote": "Refer to age only if it is necessary."
+     },
+     {
+      "block_id": "ab9554a05a3b",
+      "quote": "Avoid characterising age references when it’s not strictly relevant."
+     },
+     {
+      "block_id": "4ee964f84a21",
+      "quote": "Refer to level of study instead of age"
+     },
+     {
+      "block_id": "acc3a2502ebc",
+      "quote": "Refer to students by the level of study they are doing, not by their age, unless the age is relevant."
+     },
+     {
+      "block_id": "9370fe23bb0d",
+      "quote": "Refer to them simply as ‘students’ or, in the case of PhD students, as ‘PhD candidates’."
+     },
+     {
+      "block_id": "f7590d76672d",
+      "quote": "Avoid using ‘mature-age student’ unless it is relevant to what you are writing."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "433302dd32d7",
+        "quote": "preschool students"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e867eef2c912",
+        "quote": "high-school students"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6d46623b2b53",
+        "quote": "postgraduate students"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid referring to a person’s age or an age group if it’s not relevant.",
+    "specification": "Treat unnecessary age characterisations and irrelevant age-based student labels as cases of the same relevance check. The student guidance supplies alternatives: level of study, ‘students’ or ‘PhD candidates’. It does not establish a blanket prohibition on other educational labels.",
+    "unit": "paragraph",
+    "violation_condition": "An age, age group or age-based description is included even though it is not relevant to the content.",
+    "when": [
+     "Age references are acceptable when age is relevant.",
+     "The relevance test also applies to characterising people by age.",
+     "For students, use level of study rather than age unless age is relevant.",
+     "The term ‘mature-age student’ is acceptable when relevant to the content."
+    ],
+    "why": "G-2 consolidates the relevance test and its student-specific cases; G-4 avoids separate findings for restatements."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ddadc2713b99",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "42a006a5e855",
+        "quote": "A 39-year-old man faces court today on several charges."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "85cd0b574a2c",
+        "quote": "Fourteen-year-old Jasmine Greenwood is the youngest Australian on the Paralympic Games squad."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When the reference to age comes before a noun, punctuate it with hyphens.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An age expression modifying a following noun is missing a required hyphen.",
+    "when": [
+     "The age expression comes before and modifies a noun.",
+     "The instruction also applies when the age is written in words at the beginning of a sentence."
+    ],
+    "why": "G-1 treats the introductory style heading as a section and marks its independently checkable child instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f9b8768d9bf9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "42a006a5e855",
+        "quote": "A 39-year-old man faces court today on several charges."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2fe74febda14",
+        "quote": "You can withdraw your super once you’re 65, even if you’re still working."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "85cd0b574a2c",
+        "quote": "Fourteen-year-old Jasmine Greenwood is the youngest Australian on the Paralympic Games squad."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Unless the age reference begins a sentence, use numerals.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An age reference that does not begin a sentence is written in words rather than numerals.",
+    "when": [
+     "The age reference does not begin the sentence.",
+     "An age reference beginning a sentence is exempt from this numeral requirement."
+    ],
+    "why": "G-2 keeps the sentence-initial exception with the numeral rule rather than creating a second rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cc86e9d65c1f",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "cc86e9d65c1f",
+      "quote": "Standalone words in everyday use, like ‘old’ and ‘young’, can carry bias or unintended subtext."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Words that carry stereotypes, for example ‘elderly’, are not acceptable.",
+    "specification": "‘Elderly’ is explicitly identified as unacceptable. Other words require a contextual judgement about stereotyping; the preceding sentence does not categorically prohibit every use of ‘old’ or ‘young’.",
+    "unit": "sentence",
+    "violation_condition": "Language describing people by age carries an age stereotype, including use of ‘elderly’ as an age label.",
+    "when": [
+     "The wording describes people or groups by age.",
+     "The possibility that ‘old’ or ‘young’ carries bias is not, by itself, a blanket prohibition on those words."
+    ],
+    "why": "G-1 leaves the respectful-language umbrella as a section; this sentence states a distinct prohibition on stereotyping."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d39a19364e21",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d39a19364e21",
+      "quote": "The term ‘older people’ is acceptable."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8cfceaec8383",
+        "quote": "older people"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "077525e06f3c",
+        "quote": "retired people or retirees"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f5f31e15c8ff",
+        "quote": "older Australians"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c1103cf20f89",
+        "quote": "senior Australians or seniors"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "12018af42cdc",
+        "quote": "old people"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "df5c87a055c8",
+        "quote": "More older Australians are using smartphones to do their business."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use the term ‘old people’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Old people’ is used as a label for older people.",
+    "when": [
+     "The expression is used to refer to people, rather than discussed as a term.",
+     "‘Older people’ is an acceptable alternative.",
+     "Select an alternative appropriate to the context."
+    ],
+    "why": "G-4 selects the actionable body sentence instead of the topic heading; G-3 retains the acceptable alternative as a permission."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bd6a69b3c09f",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "bd6a69b3c09f",
+      "quote": "‘Youth’ is a gender-neutral term and is also acceptable."
+     },
+     {
+      "block_id": "fc29beda06b7",
+      "quote": "Depending on the context, you can use the words ‘adolescents’, ‘children’ and ‘babies’."
+     },
+     {
+      "block_id": "fc29beda06b7",
+      "quote": "‘Kids’ can be suitable, depending on the content’s voice and tone."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e571da24ea2c",
+        "quote": "young people"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c886ac9ab0a1",
+        "quote": "youth"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "926a95543930",
+        "quote": "junior or juniors"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b8a9b76b6c3f",
+        "quote": "The eSafety Commissioner resources for kids and young people are tailored to different reading ages."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ab43cb571403",
+        "quote": "Children in Defence families can need support through a move."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "The most neutral term is ‘young people’.",
+    "specification": "The explicit disfavoured alternatives are supplied by the ‘Not this’ example: ‘junior’ and ‘juniors’. Do not turn the preference for ‘young people’ into a ban on the other terms the page permits, or flag non-age uses of ‘junior’.",
+    "unit": "phrase",
+    "violation_condition": "‘Junior’ or ‘juniors’ is used as a generic age-group label for young people rather than a neutral age term.",
+    "when": [
+     "The term labels people by age, not by rank or another non-age distinction.",
+     "‘Youth’ is also acceptable.",
+     "‘Adolescents’, ‘children’ and ‘babies’ are acceptable when appropriate to the context.",
+     "‘Kids’ can be suitable for the content’s voice and tone."
+    ],
+    "why": "G-4 uses the body guidance rather than the topic heading; the Not this example identifies the disfavoured alternatives, and G-3 preserves the permitted terms."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "7bea8ea64325",
+    "end": 105,
+    "prefix": "estion whether age is relevant. ",
+    "quote": "Avoid referring to a person’s age or an age group if it’s not relevant.",
+    "start": 34,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "bdb2e9b0c353",
+     "end": 37,
+     "prefix": "",
+     "quote": "Refer to age only if it is necessary.",
+     "start": 0,
+     "suffix": " Use respectful language and con"
+    },
+    {
+     "block_id": "ab9554a05a3b",
+     "end": 68,
+     "prefix": "",
+     "quote": "Avoid characterising age references when it’s not strictly relevant.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4ee964f84a21",
+     "end": 38,
+     "prefix": "",
+     "quote": "Refer to level of study instead of age",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "acc3a2502ebc",
+     "end": 101,
+     "prefix": "",
+     "quote": "Refer to students by the level of study they are doing, not by their age, unless the age is relevant.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9370fe23bb0d",
+     "end": 124,
+     "prefix": "iary students can be many ages. ",
+     "quote": "Refer to them simply as ‘students’ or, in the case of PhD students, as ‘PhD candidates’.",
+     "start": 36,
+     "suffix": ""
+    },
+    {
+     "block_id": "f7590d76672d",
+     "end": 79,
+     "prefix": "",
+     "quote": "Avoid using ‘mature-age student’ unless it is relevant to what you are writing.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "433302dd32d7",
+       "end": 18,
+       "prefix": "",
+       "quote": "preschool students",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e867eef2c912",
+       "end": 20,
+       "prefix": "",
+       "quote": "high-school students",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6d46623b2b53",
+       "end": 21,
+       "prefix": "",
+       "quote": "postgraduate students",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Treat unnecessary age characterisations and irrelevant age-based student labels as cases of the same relevance check. The student guidance supplies alternatives: level of study, ‘students’ or ‘PhD candidates’. It does not establish a blanket prohibition on other educational labels.",
+    "unit": "paragraph",
+    "violation_condition": "An age, age group or age-based description is included even though it is not relevant to the content."
+   },
+   "when": [
+    "Age references are acceptable when age is relevant.",
+    "The relevance test also applies to characterising people by age.",
+    "For students, use level of study rather than age unless age is relevant.",
+    "The term ‘mature-age student’ is acceptable when relevant to the content."
+   ],
+   "why": "G-2 consolidates the relevance test and its student-specific cases; G-4 avoids separate findings for restatements."
+  },
+  {
+   "anchor": {
+    "block_id": "ddadc2713b99",
+    "end": 73,
+    "prefix": "",
+    "quote": "When the reference to age comes before a noun, punctuate it with hyphens.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "42a006a5e855",
+       "end": 55,
+       "prefix": "",
+       "quote": "A 39-year-old man faces court today on several charges.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "85cd0b574a2c",
+       "end": 93,
+       "prefix": "",
+       "quote": "Fourteen-year-old Jasmine Greenwood is the youngest Australian on the Paralympic Games squad.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An age expression modifying a following noun is missing a required hyphen."
+   },
+   "when": [
+    "The age expression comes before and modifies a noun.",
+    "The instruction also applies when the age is written in words at the beginning of a sentence."
+   ],
+   "why": "G-1 treats the introductory style heading as a section and marks its independently checkable child instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "f9b8768d9bf9",
+    "end": 57,
+    "prefix": "",
+    "quote": "Unless the age reference begins a sentence, use numerals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "42a006a5e855",
+       "end": 55,
+       "prefix": "",
+       "quote": "A 39-year-old man faces court today on several charges.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2fe74febda14",
+       "end": 73,
+       "prefix": "",
+       "quote": "You can withdraw your super once you’re 65, even if you’re still working.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "85cd0b574a2c",
+       "end": 93,
+       "prefix": "",
+       "quote": "Fourteen-year-old Jasmine Greenwood is the youngest Australian on the Paralympic Games squad.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An age reference that does not begin a sentence is written in words rather than numerals."
+   },
+   "when": [
+    "The age reference does not begin the sentence.",
+    "An age reference beginning a sentence is exempt from this numeral requirement."
+   ],
+   "why": "G-2 keeps the sentence-initial exception with the numeral rule rather than creating a second rule."
+  },
+  {
+   "anchor": {
+    "block_id": "cc86e9d65c1f",
+    "end": 168,
+    "prefix": "rry bias or unintended subtext. ",
+    "quote": "Words that carry stereotypes, for example ‘elderly’, are not acceptable.",
+    "start": 96,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "cc86e9d65c1f",
+     "end": 95,
+     "prefix": "",
+     "quote": "Standalone words in everyday use, like ‘old’ and ‘young’, can carry bias or unintended subtext.",
+     "start": 0,
+     "suffix": " Words that carry stereotypes, f"
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "‘Elderly’ is explicitly identified as unacceptable. Other words require a contextual judgement about stereotyping; the preceding sentence does not categorically prohibit every use of ‘old’ or ‘young’.",
+    "unit": "sentence",
+    "violation_condition": "Language describing people by age carries an age stereotype, including use of ‘elderly’ as an age label."
+   },
+   "when": [
+    "The wording describes people or groups by age.",
+    "The possibility that ‘old’ or ‘young’ carries bias is not, by itself, a blanket prohibition on those words."
+   ],
+   "why": "G-1 leaves the respectful-language umbrella as a section; this sentence states a distinct prohibition on stereotyping."
+  },
+  {
+   "anchor": {
+    "block_id": "d39a19364e21",
+    "end": 71,
+    "prefix": "m ‘older people’ is acceptable. ",
+    "quote": "Don’t use the term ‘old people’.",
+    "start": 39,
+    "suffix": " It is disrespectful."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d39a19364e21",
+     "end": 38,
+     "prefix": "",
+     "quote": "The term ‘older people’ is acceptable.",
+     "start": 0,
+     "suffix": " Don’t use the term ‘old people’"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8cfceaec8383",
+       "end": 12,
+       "prefix": "",
+       "quote": "older people",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "077525e06f3c",
+       "end": 26,
+       "prefix": "",
+       "quote": "retired people or retirees",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f5f31e15c8ff",
+       "end": 17,
+       "prefix": "",
+       "quote": "older Australians",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c1103cf20f89",
+       "end": 29,
+       "prefix": "",
+       "quote": "senior Australians or seniors",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "12018af42cdc",
+       "end": 10,
+       "prefix": "",
+       "quote": "old people",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "df5c87a055c8",
+       "end": 66,
+       "prefix": "",
+       "quote": "More older Australians are using smartphones to do their business.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "‘Old people’ is used as a label for older people."
+   },
+   "when": [
+    "The expression is used to refer to people, rather than discussed as a term.",
+    "‘Older people’ is an acceptable alternative.",
+    "Select an alternative appropriate to the context."
+   ],
+   "why": "G-4 selects the actionable body sentence instead of the topic heading; G-3 retains the acceptable alternative as a permission."
+  },
+  {
+   "anchor": {
+    "block_id": "bd6a69b3c09f",
+    "end": 40,
+    "prefix": "",
+    "quote": "The most neutral term is ‘young people’.",
+    "start": 0,
+    "suffix": " ‘Youth’ is a gender-neutral ter"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "bd6a69b3c09f",
+     "end": 97,
+     "prefix": "neutral term is ‘young people’. ",
+     "quote": "‘Youth’ is a gender-neutral term and is also acceptable.",
+     "start": 41,
+     "suffix": ""
+    },
+    {
+     "block_id": "fc29beda06b7",
+     "end": 87,
+     "prefix": "",
+     "quote": "Depending on the context, you can use the words ‘adolescents’, ‘children’ and ‘babies’.",
+     "start": 0,
+     "suffix": " ‘Kids’ can be suitable, dependi"
+    },
+    {
+     "block_id": "fc29beda06b7",
+     "end": 154,
+     "prefix": "ents’, ‘children’ and ‘babies’. ",
+     "quote": "‘Kids’ can be suitable, depending on the content’s voice and tone.",
+     "start": 88,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e571da24ea2c",
+       "end": 12,
+       "prefix": "",
+       "quote": "young people",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c886ac9ab0a1",
+       "end": 5,
+       "prefix": "",
+       "quote": "youth",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "926a95543930",
+       "end": 17,
+       "prefix": "",
+       "quote": "junior or juniors",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b8a9b76b6c3f",
+       "end": 100,
+       "prefix": "",
+       "quote": "The eSafety Commissioner resources for kids and young people are tailored to different reading ages.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ab43cb571403",
+       "end": 61,
+       "prefix": "",
+       "quote": "Children in Defence families can need support through a move.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "The explicit disfavoured alternatives are supplied by the ‘Not this’ example: ‘junior’ and ‘juniors’. Do not turn the preference for ‘young people’ into a ban on the other terms the page permits, or flag non-age uses of ‘junior’.",
+    "unit": "phrase",
+    "violation_condition": "‘Junior’ or ‘juniors’ is used as a generic age-group label for young people rather than a neutral age term."
+   },
+   "when": [
+    "The term labels people by age, not by rank or another non-age distinction.",
+    "‘Youth’ is also acceptable.",
+    "‘Adolescents’, ‘children’ and ‘babies’ are acceptable when appropriate to the context.",
+    "‘Kids’ can be suitable for the content’s voice and tone."
+   ],
+   "why": "G-4 uses the body guidance rather than the topic heading; the Not this example identifies the disfavoured alternatives, and G-3 preserves the permitted terms."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4386,
+  "output_tokens": 10058,
+  "reasoning_tokens": 5696
+ }
+}

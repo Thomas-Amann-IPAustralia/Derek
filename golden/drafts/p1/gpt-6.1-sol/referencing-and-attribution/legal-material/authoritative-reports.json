@@ -1,0 +1,814 @@
+{
+ "effort": "high",
+ "input_sha256": "6d70eac5fabbfc86329290f0ee9922f2e214eff4672d9ce040ac59dfb5ebc43a",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "0dc2f2a12f38",
+    "end": 73,
+    "prefix": "",
+    "quote": "When you are referring to case law, you will generally cite a law report.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes general citation practice; it does not independently require a law-report citation for every reference to case law.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "56242e8c7465",
+    "end": 160,
+    "prefix": "ed law reports for publication. ",
+    "quote": "Wherever you can, cite an authorised law report using the relevant abbreviation.",
+    "start": 80,
+    "suffix": ""
+   },
+   "note": "Restates the authorised-source selection rule and the abbreviation rule; absorbed into those two checks rather than creating another finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a6d173cb5753",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use common abbreviations for authorised reports",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The authorised-series case of the general rule requiring correct Australian law-report abbreviations.",
+   "reason": "restatement",
+   "seed_uid": "c383f67e5f50c670"
+  },
+  {
+   "anchor": {
+    "block_id": "8dc673eb9741",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use standard abbreviations for unauthorised reports",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The unauthorised-series case of the same abbreviation check, not a separate violation.",
+   "reason": "restatement",
+   "seed_uid": "bbf78bf9c045e424"
+  },
+  {
+   "anchor": {
+    "block_id": "a14c28b12530",
+    "end": 141,
+    "prefix": "",
+    "quote": "If the law report has no authorised version, you might need to use the abbreviations from this select list of unauthorised law report series:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Supplies the fallback condition for source selection and introduces lookup data for the abbreviation rule; neither creates an additional check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "referencing-and-attribution/legal-material/authoritative-reports.md",
+ "page_sha256": "5b490b4ae16950b25312b5f33db6344662d4156ff02b3ce4b63e32380494fdda",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "0dc2f2a12f38",
+    "note": "Describes general citation practice; it does not independently require a law-report citation for every reference to case law.",
+    "quote": "When you are referring to case law, you will generally cite a law report.",
+    "reason": "description"
+   },
+   {
+    "block_id": "56242e8c7465",
+    "note": "Restates the authorised-source selection rule and the abbreviation rule; absorbed into those two checks rather than creating another finding.",
+    "quote": "Wherever you can, cite an authorised law report using the relevant abbreviation.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a6d173cb5753",
+    "note": "The authorised-series case of the general rule requiring correct Australian law-report abbreviations.",
+    "quote": "Use common abbreviations for authorised reports",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8dc673eb9741",
+    "note": "The unauthorised-series case of the same abbreviation check, not a separate violation.",
+    "quote": "Use standard abbreviations for unauthorised reports",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a14c28b12530",
+    "note": "Supplies the fallback condition for source selection and introduces lookup data for the abbreviation rule; neither creates an additional check.",
+    "quote": "If the law report has no authorised version, you might need to use the abbreviations from this select list of unauthorised law report series:",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ca475218492c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "56242e8c7465",
+      "quote": "Wherever you can, cite an authorised law report using the relevant abbreviation."
+     },
+     {
+      "block_id": "b3c19ae48756",
+      "quote": "These can be the only available reports of those decisions."
+     },
+     {
+      "block_id": "a14c28b12530",
+      "quote": "If the law report has no authorised version, you might need to use the abbreviations from this select list of unauthorised law report series:"
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Cite an authorised law report if one is available",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A case citation relies on an unauthorised report or an unreported judgment instead of an available authorised report of the same decision.",
+    "when": [
+     "The text cites case law.",
+     "An authorised report of the cited decision is available.",
+     "An unauthorised report may be used when no authorised report is available."
+    ],
+    "why": "G-2 keeps availability and the unauthorised-report fallback within one source-selection rule; G-4 absorbs the body restatement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9c2fdde1e0fa",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6043786ee05d",
+      "quote": "Citations use common abbreviations for the titles of law reports."
+     },
+     {
+      "block_id": "56242e8c7465",
+      "quote": "Wherever you can, cite an authorised law report using the relevant abbreviation."
+     },
+     {
+      "block_id": "a6d173cb5753",
+      "quote": "Use common abbreviations for authorised reports"
+     },
+     {
+      "block_id": "5c4ad5b1912b",
+      "quote": "State and territory reports have common abbreviations for series titles that cover different periods."
+     },
+     {
+      "block_id": "b86fa6be4eca",
+      "quote": "ALD (Administrative Law Decisions) – Administrative Appeals Tribunal – 1976 onward"
+     },
+     {
+      "block_id": "0c6adaf4f806",
+      "quote": "CLR (Commonwealth Law Reports) – High Court – 1903 onward"
+     },
+     {
+      "block_id": "b043d74155c0",
+      "quote": "FCR (Federal Court Reports) – Federal Court – 1984 onward"
+     },
+     {
+      "block_id": "d2f98b6bda90",
+      "quote": "IR (Industrial Reports) – Australian Industrial Relations Commission, Fair Work Australia, Fair Work Commission – 2006 onward"
+     },
+     {
+      "block_id": "8eb4f1243b24",
+      "quote": "ACTLR (Australian Capital Territory Law Reports) – 2007 onward"
+     },
+     {
+      "block_id": "673135bd7eeb",
+      "quote": "ACTR (Australian Capital Territory Reports) – 1973 to 2008"
+     },
+     {
+      "block_id": "8c3c91f72fc4",
+      "quote": "NSWLR (New South Wales Law Reports) – 1971 onward"
+     },
+     {
+      "block_id": "46dc095c1fdb",
+      "quote": "NSWR (New South Wales Reports) – 1960 to 1970"
+     },
+     {
+      "block_id": "88200ff11bd2",
+      "quote": "SR (NSW) (State Reports NSW) – 1901 to 1959"
+     },
+     {
+      "block_id": "f50bcae7f473",
+      "quote": "NTLR (Northern Territory Law Reports) – 1990 onward"
+     },
+     {
+      "block_id": "717992b11e6a",
+      "quote": "NTR (Northern Territory Reports) – 1979 to 1991"
+     },
+     {
+      "block_id": "400f1ffdd96b",
+      "quote": "QdR (Queensland Reports) – 1958 onward"
+     },
+     {
+      "block_id": "3765def3b63c",
+      "quote": "St R Qd (State Reports Queensland) – 1902 to 1957"
+     },
+     {
+      "block_id": "f0328f452164",
+      "quote": "SASR (South Australian State Reports) – 1971 onward"
+     },
+     {
+      "block_id": "df3d710ac1ad",
+      "quote": "SRSA (State Reports South Australia) – 1921 to 1970"
+     },
+     {
+      "block_id": "ebe4470496df",
+      "quote": "SALR (South Australian Law Report) – 1899 to 1920"
+     },
+     {
+      "block_id": "d44e28d66f8c",
+      "quote": "Tas R (Tasmanian Reports) – 1979 onward"
+     },
+     {
+      "block_id": "6d1ae8041487",
+      "quote": "Tas SR (State Reports Tasmania) – 1941 to 1978"
+     },
+     {
+      "block_id": "221d840c4999",
+      "quote": "Tas LR (Tasmanian Law Reports) – 1904 to 1940"
+     },
+     {
+      "block_id": "cc8a827ccb80",
+      "quote": "VR (Victorian Reports) – 1957 onward"
+     },
+     {
+      "block_id": "35396a7ba378",
+      "quote": "VLR (Victorian Law Reports) – 1875 to 1956"
+     },
+     {
+      "block_id": "c796c21409ca",
+      "quote": "WAR (Western Australian Reports) – 1958 onward"
+     },
+     {
+      "block_id": "414cd72bea2a",
+      "quote": "WALR (Western Australian Law Reports) – 1898 to 1958"
+     },
+     {
+      "block_id": "8dc673eb9741",
+      "quote": "Use standard abbreviations for unauthorised reports"
+     },
+     {
+      "block_id": "a14c28b12530",
+      "quote": "If the law report has no authorised version, you might need to use the abbreviations from this select list of unauthorised law report series:"
+     },
+     {
+      "block_id": "1aad736f21ef",
+      "quote": "ACLR (Australian Company Law Reports)"
+     },
+     {
+      "block_id": "b21be74a2e6f",
+      "quote": "ACompT (Australian Competition Tribunal)"
+     },
+     {
+      "block_id": "55e9b4f9336f",
+      "quote": "ALJR (Australian Law Journal Reports)"
+     },
+     {
+      "block_id": "95ba3704dff8",
+      "quote": "ALR (Australian Law Reports)"
+     },
+     {
+      "block_id": "98dd0a48d27a",
+      "quote": "APO (Australian Patent Office)"
+     },
+     {
+      "block_id": "ba0895b3fe1e",
+      "quote": "ATR (Australian Tax Reports)"
+     },
+     {
+      "block_id": "966e91e2be92",
+      "quote": "ATMO (Australian Trade Marks Office)"
+     },
+     {
+      "block_id": "f87ccf2b5a54",
+      "quote": "CAR (Commonwealth Arbitration Reports)"
+     },
+     {
+      "block_id": "40831032978b",
+      "quote": "ACopyT (Copyright Tribunal of Australia)"
+     },
+     {
+      "block_id": "3d9d3c017a55",
+      "quote": "ADFDAT (Defence Force Discipline Appeal Tribunal)"
+     },
+     {
+      "block_id": "aba45b1fe58c",
+      "quote": "FWC (Fair Work Commission)"
+     },
+     {
+      "block_id": "17c063d222c5",
+      "quote": "Fam LR (Family Law Reports)"
+     },
+     {
+      "block_id": "28cc17d9c4bf",
+      "quote": "FCCA (Federal Circuit Court of Australia)"
+     },
+     {
+      "block_id": "04f1cfd5960c",
+      "quote": "FLR (Federal Law Reports)"
+     },
+     {
+      "block_id": "a89d57219e64",
+      "quote": "HCA (High Court of Australia)"
+     },
+     {
+      "block_id": "b41db91d0efd",
+      "quote": "NNTA (National Native Title Tribunal)."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the correct abbreviations for Australian law report series.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An Australian law-report series title in a case citation is written out instead of abbreviated, or is represented by an abbreviation that does not match that series.",
+    "when": [
+     "The text names an Australian law-report series in a case citation.",
+     "The abbreviation must match the relevant series; historical state and territory series have different titles and reporting periods.",
+     "The unauthorised-series list is selective, not exhaustive."
+    ],
+    "why": "G-2 treats authorised and unauthorised series as cases of the same abbreviation check; G-4 consolidates the headings and restatements, with the lists supplying lookup data rather than separate rules."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "ca475218492c",
+    "end": 49,
+    "prefix": "",
+    "quote": "Cite an authorised law report if one is available",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "56242e8c7465",
+     "end": 160,
+     "prefix": "ed law reports for publication. ",
+     "quote": "Wherever you can, cite an authorised law report using the relevant abbreviation.",
+     "start": 80,
+     "suffix": ""
+    },
+    {
+     "block_id": "b3c19ae48756",
+     "end": 232,
+     "prefix": "ften have unauthorised reports. ",
+     "quote": "These can be the only available reports of those decisions.",
+     "start": 173,
+     "suffix": ""
+    },
+    {
+     "block_id": "a14c28b12530",
+     "end": 141,
+     "prefix": "",
+     "quote": "If the law report has no authorised version, you might need to use the abbreviations from this select list of unauthorised law report series:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "c64e595d1c5b94ad",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A case citation relies on an unauthorised report or an unreported judgment instead of an available authorised report of the same decision."
+   },
+   "when": [
+    "The text cites case law.",
+    "An authorised report of the cited decision is available.",
+    "An unauthorised report may be used when no authorised report is available."
+   ],
+   "why": "G-2 keeps availability and the unauthorised-report fallback within one source-selection rule; G-4 absorbs the body restatement."
+  },
+  {
+   "anchor": {
+    "block_id": "9c2fdde1e0fa",
+    "end": 133,
+    "prefix": "unauthorised law report series. ",
+    "quote": "Use the correct abbreviations for Australian law report series.",
+    "start": 70,
+    "suffix": " This will help people find the "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6043786ee05d",
+     "end": 65,
+     "prefix": "",
+     "quote": "Citations use common abbreviations for the titles of law reports.",
+     "start": 0,
+     "suffix": " A law report is part of either "
+    },
+    {
+     "block_id": "56242e8c7465",
+     "end": 160,
+     "prefix": "ed law reports for publication. ",
+     "quote": "Wherever you can, cite an authorised law report using the relevant abbreviation.",
+     "start": 80,
+     "suffix": ""
+    },
+    {
+     "block_id": "a6d173cb5753",
+     "end": 47,
+     "prefix": "",
+     "quote": "Use common abbreviations for authorised reports",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5c4ad5b1912b",
+     "end": 101,
+     "prefix": "",
+     "quote": "State and territory reports have common abbreviations for series titles that cover different periods.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b86fa6be4eca",
+     "end": 82,
+     "prefix": "",
+     "quote": "ALD (Administrative Law Decisions) – Administrative Appeals Tribunal – 1976 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0c6adaf4f806",
+     "end": 57,
+     "prefix": "",
+     "quote": "CLR (Commonwealth Law Reports) – High Court – 1903 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b043d74155c0",
+     "end": 57,
+     "prefix": "",
+     "quote": "FCR (Federal Court Reports) – Federal Court – 1984 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d2f98b6bda90",
+     "end": 125,
+     "prefix": "",
+     "quote": "IR (Industrial Reports) – Australian Industrial Relations Commission, Fair Work Australia, Fair Work Commission – 2006 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8eb4f1243b24",
+     "end": 62,
+     "prefix": "",
+     "quote": "ACTLR (Australian Capital Territory Law Reports) – 2007 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "673135bd7eeb",
+     "end": 58,
+     "prefix": "",
+     "quote": "ACTR (Australian Capital Territory Reports) – 1973 to 2008",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8c3c91f72fc4",
+     "end": 49,
+     "prefix": "",
+     "quote": "NSWLR (New South Wales Law Reports) – 1971 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "46dc095c1fdb",
+     "end": 45,
+     "prefix": "",
+     "quote": "NSWR (New South Wales Reports) – 1960 to 1970",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "88200ff11bd2",
+     "end": 43,
+     "prefix": "",
+     "quote": "SR (NSW) (State Reports NSW) – 1901 to 1959",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f50bcae7f473",
+     "end": 51,
+     "prefix": "",
+     "quote": "NTLR (Northern Territory Law Reports) – 1990 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "717992b11e6a",
+     "end": 47,
+     "prefix": "",
+     "quote": "NTR (Northern Territory Reports) – 1979 to 1991",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "400f1ffdd96b",
+     "end": 38,
+     "prefix": "",
+     "quote": "QdR (Queensland Reports) – 1958 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3765def3b63c",
+     "end": 49,
+     "prefix": "",
+     "quote": "St R Qd (State Reports Queensland) – 1902 to 1957",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f0328f452164",
+     "end": 51,
+     "prefix": "",
+     "quote": "SASR (South Australian State Reports) – 1971 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "df3d710ac1ad",
+     "end": 51,
+     "prefix": "",
+     "quote": "SRSA (State Reports South Australia) – 1921 to 1970",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ebe4470496df",
+     "end": 49,
+     "prefix": "",
+     "quote": "SALR (South Australian Law Report) – 1899 to 1920",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d44e28d66f8c",
+     "end": 39,
+     "prefix": "",
+     "quote": "Tas R (Tasmanian Reports) – 1979 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6d1ae8041487",
+     "end": 46,
+     "prefix": "",
+     "quote": "Tas SR (State Reports Tasmania) – 1941 to 1978",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "221d840c4999",
+     "end": 45,
+     "prefix": "",
+     "quote": "Tas LR (Tasmanian Law Reports) – 1904 to 1940",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cc8a827ccb80",
+     "end": 36,
+     "prefix": "",
+     "quote": "VR (Victorian Reports) – 1957 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "35396a7ba378",
+     "end": 42,
+     "prefix": "",
+     "quote": "VLR (Victorian Law Reports) – 1875 to 1956",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c796c21409ca",
+     "end": 46,
+     "prefix": "",
+     "quote": "WAR (Western Australian Reports) – 1958 onward",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "414cd72bea2a",
+     "end": 52,
+     "prefix": "",
+     "quote": "WALR (Western Australian Law Reports) – 1898 to 1958",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8dc673eb9741",
+     "end": 51,
+     "prefix": "",
+     "quote": "Use standard abbreviations for unauthorised reports",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a14c28b12530",
+     "end": 141,
+     "prefix": "",
+     "quote": "If the law report has no authorised version, you might need to use the abbreviations from this select list of unauthorised law report series:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1aad736f21ef",
+     "end": 37,
+     "prefix": "",
+     "quote": "ACLR (Australian Company Law Reports)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b21be74a2e6f",
+     "end": 40,
+     "prefix": "",
+     "quote": "ACompT (Australian Competition Tribunal)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "55e9b4f9336f",
+     "end": 37,
+     "prefix": "",
+     "quote": "ALJR (Australian Law Journal Reports)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "95ba3704dff8",
+     "end": 28,
+     "prefix": "",
+     "quote": "ALR (Australian Law Reports)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "98dd0a48d27a",
+     "end": 30,
+     "prefix": "",
+     "quote": "APO (Australian Patent Office)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ba0895b3fe1e",
+     "end": 28,
+     "prefix": "",
+     "quote": "ATR (Australian Tax Reports)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "966e91e2be92",
+     "end": 36,
+     "prefix": "",
+     "quote": "ATMO (Australian Trade Marks Office)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f87ccf2b5a54",
+     "end": 38,
+     "prefix": "",
+     "quote": "CAR (Commonwealth Arbitration Reports)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "40831032978b",
+     "end": 40,
+     "prefix": "",
+     "quote": "ACopyT (Copyright Tribunal of Australia)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3d9d3c017a55",
+     "end": 49,
+     "prefix": "",
+     "quote": "ADFDAT (Defence Force Discipline Appeal Tribunal)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "aba45b1fe58c",
+     "end": 26,
+     "prefix": "",
+     "quote": "FWC (Fair Work Commission)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "17c063d222c5",
+     "end": 27,
+     "prefix": "",
+     "quote": "Fam LR (Family Law Reports)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "28cc17d9c4bf",
+     "end": 41,
+     "prefix": "",
+     "quote": "FCCA (Federal Circuit Court of Australia)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "04f1cfd5960c",
+     "end": 25,
+     "prefix": "",
+     "quote": "FLR (Federal Law Reports)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a89d57219e64",
+     "end": 29,
+     "prefix": "",
+     "quote": "HCA (High Court of Australia)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b41db91d0efd",
+     "end": 38,
+     "prefix": "",
+     "quote": "NNTA (National Native Title Tribunal).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An Australian law-report series title in a case citation is written out instead of abbreviated, or is represented by an abbreviation that does not match that series."
+   },
+   "when": [
+    "The text names an Australian law-report series in a case citation.",
+    "The abbreviation must match the relevant series; historical state and territory series have different titles and reporting periods.",
+    "The unauthorised-series list is selective, not exhaustive."
+   ],
+   "why": "G-2 treats authorised and unauthorised series as cases of the same abbreviation check; G-4 consolidates the headings and restatements, with the lists supplying lookup data rather than separate rules."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4693,
+  "output_tokens": 4529,
+  "reasoning_tokens": 1923
+ }
+}

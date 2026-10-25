@@ -1,0 +1,662 @@
+{
+ "effort": "high",
+ "input_sha256": "07797e78084c8b9a3a0919442e6a8c7d13f32877136f663f81098c7e96cd37ad",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "fa55aed67579",
+    "end": 135,
+    "prefix": "at the user most needs to know. ",
+    "quote": "Order the rest of the page from most to least important information.",
+    "start": 67,
+    "suffix": ""
+   },
+   "note": "Absorbed into the inverted-pyramid ordering rule rather than creating a second finding for the same ordering problem (G-4).",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fbb79d0cbcd4",
+    "end": 43,
+    "prefix": "",
+    "quote": "Start with what the user most needs to know",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Already covered by the inverted-pyramid ordering rule. The distinct requirements in the list below are extracted separately (G-4).",
+   "reason": "restatement",
+   "seed_uid": "b85bd0d2e52bcc26"
+  },
+  {
+   "anchor": {
+    "block_id": "7b2e84cca316",
+    "end": 49,
+    "prefix": "",
+    "quote": "To structure your content as an inverted pyramid:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the following instructions and supplies their shared context; it is not an additional check (G-1).",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "51939a3ab0e7",
+    "end": 138,
+    "prefix": "ea in as few words as possible. ",
+    "quote": "It can be a summary, a conclusion or recommendation, or the action someone needs to take.",
+    "start": 49,
+    "suffix": ""
+   },
+   "note": "Permits alternative forms of the main idea without imposing a separate requirement (G-3).",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b46d5ca7281f",
+    "end": 48,
+    "prefix": "",
+    "quote": "Organise the information in order of importance.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Repeats the inverted-pyramid ordering requirement and is absorbed into that rule (G-4).",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7beb777cf641",
+    "end": 40,
+    "prefix": "",
+    "quote": "Design pages based on how the user scans",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Frames the explanation of scanning behaviour and the concrete paragraph instructions; it adds no independent textual check (G-1).",
+   "reason": "section",
+   "seed_uid": "5a793f157e68bf67"
+  },
+  {
+   "anchor": {
+    "block_id": "7ef1e705db09",
+    "end": 87,
+    "prefix": "",
+    "quote": "An inverted pyramid is a structure for a piece of content: important detail comes first",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes the structure under the Example label; it is not a separate instruction or a specimen demonstrating a violation.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/types-structure/inverted-pyramid-structure.md",
+ "page_sha256": "be6422dff9c6182c283763fb6975ac8b028467f0a6876422d8f86dd19b823eed",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "fa55aed67579",
+    "note": "Absorbed into the inverted-pyramid ordering rule rather than creating a second finding for the same ordering problem (G-4).",
+    "quote": "Order the rest of the page from most to least important information.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "fbb79d0cbcd4",
+    "note": "Already covered by the inverted-pyramid ordering rule. The distinct requirements in the list below are extracted separately (G-4).",
+    "quote": "Start with what the user most needs to know",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7b2e84cca316",
+    "note": "Introduces the following instructions and supplies their shared context; it is not an additional check (G-1).",
+    "quote": "To structure your content as an inverted pyramid:",
+    "reason": "section"
+   },
+   {
+    "block_id": "51939a3ab0e7",
+    "note": "Permits alternative forms of the main idea without imposing a separate requirement (G-3).",
+    "quote": "It can be a summary, a conclusion or recommendation, or the action someone needs to take.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b46d5ca7281f",
+    "note": "Repeats the inverted-pyramid ordering requirement and is absorbed into that rule (G-4).",
+    "quote": "Organise the information in order of importance.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7beb777cf641",
+    "note": "Frames the explanation of scanning behaviour and the concrete paragraph instructions; it adds no independent textual check (G-1).",
+    "quote": "Design pages based on how the user scans",
+    "reason": "section"
+   },
+   {
+    "block_id": "7ef1e705db09",
+    "note": "Describes the structure under the Example label; it is not a separate instruction or a specimen demonstrating a violation.",
+    "quote": "An inverted pyramid is a structure for a piece of content: important detail comes first",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ebdd5ad8d142",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "fa55aed67579",
+      "quote": "The inverted pyramid starts with what the user most needs to know. Order the rest of the page from most to least important information."
+     },
+     {
+      "block_id": "6aa247aceb8f",
+      "quote": "details in order, from the most to the least important."
+     },
+     {
+      "block_id": "6907587222d1",
+      "quote": "The most important idea comes first or ‘above the fold’."
+     },
+     {
+      "block_id": "fbb79d0cbcd4",
+      "quote": "Start with what the user most needs to know"
+     },
+     {
+      "block_id": "b46d5ca7281f",
+      "quote": "Organise the information in order of importance."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the inverted pyramid for most content",
+    "specification": "The inverted pyramid puts what the user most needs first and orders the remaining information from most to least important. The page does not identify which content is exempt from 'most content'.",
+    "unit": "document",
+    "violation_condition": "Content places information the user most needs after less important material, or orders supporting information from less to more important.",
+    "when": [
+     "Applies to most content; the page does not specify the exceptions."
+    ],
+    "why": "G-2 and G-4: main-information-first and descending importance describe one ordering check; repeated formulations are consolidated."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "51939a3ab0e7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "51939a3ab0e7",
+      "quote": "It can be a summary, a conclusion or recommendation, or the action someone needs to take."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write the main idea in as few words as possible.",
+    "specification": "Interpret 'as few words as possible' as avoiding removable redundancy in the main-idea statement, rather than imposing a fixed word limit.",
+    "unit": "sentence",
+    "violation_condition": "The main-idea statement contains unnecessary wording that can be removed without losing its meaning.",
+    "when": [
+     "When structuring content as an inverted pyramid.",
+     "The main idea may be a summary, a conclusion or recommendation, or an action someone needs to take."
+    ],
+    "why": "The one-rule test separates brevity from information order; G-3 keeps the permitted forms of the main idea within this rule's context."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "86c416a46849",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "6f5c4b324bec",
+      "quote": "a heading"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Describe the main ideas in headings.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The main ideas of the content are not expressed in its headings.",
+    "when": [
+     "When structuring content as an inverted pyramid."
+    ],
+    "why": "G-4: the list instruction supplies the actionable heading requirement and absorbs the earlier structural description."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "67de5e98dc4b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Under each of the top-level headings, group the content under subheadings.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Content beneath a top-level heading is not grouped under subheadings.",
+    "when": [
+     "When structuring content as an inverted pyramid.",
+     "Applies beneath each top-level heading."
+    ],
+    "why": "The one-rule test distinguishes grouping content under subheadings from describing main ideas in headings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1ca5c3da7d9c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write supporting paragraphs.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The content lacks paragraphs supporting the main ideas presented in its headings.",
+    "when": [
+     "When structuring content as an inverted pyramid."
+    ],
+    "why": "The one-rule test treats the presence of supporting paragraphs as a distinct textual requirement, not merely writer-process advice under G-5."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1d1645a0941c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For long-form content, use a summary or a list of recommendations in the preliminary pages.",
+    "specification": "The page gives no threshold for 'long-form content'. Establish that applicability before checking the preliminary pages; do not infer a word-count threshold.",
+    "unit": "document",
+    "violation_condition": "Long-form content has neither a summary nor a list of recommendations in its preliminary pages.",
+    "when": [
+     "For long-form content.",
+     "Either a summary or a list of recommendations satisfies the requirement."
+    ],
+    "why": "G-2 and G-3: the long-form condition and the two acceptable alternatives belong to one preliminary-summary check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "074634109a48",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "To structure a paragraph using the inverted pyramid, start with a topic sentence.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph using the inverted pyramid does not begin with a sentence stating its topic.",
+    "when": [
+     "When structuring a paragraph using the inverted pyramid."
+    ],
+    "why": "G-1: the body supplies a concrete paragraph-opening check beneath the broader scanning heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "074634109a48",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the rest of the paragraph to explain the topic sentence.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "Material after the topic sentence does not explain that sentence.",
+    "when": [
+     "When structuring a paragraph using the inverted pyramid.",
+     "Applies to material following the topic sentence."
+    ],
+    "why": "The one-rule test separates what the remaining sentences do from whether the paragraph opens with a topic sentence."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "ebdd5ad8d142",
+    "end": 41,
+    "prefix": "",
+    "quote": "Use the inverted pyramid for most content",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "fa55aed67579",
+     "end": 135,
+     "prefix": "",
+     "quote": "The inverted pyramid starts with what the user most needs to know. Order the rest of the page from most to least important information.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6aa247aceb8f",
+     "end": 55,
+     "prefix": "",
+     "quote": "details in order, from the most to the least important.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6907587222d1",
+     "end": 56,
+     "prefix": "",
+     "quote": "The most important idea comes first or ‘above the fold’.",
+     "start": 0,
+     "suffix": " This is the top part of a scree"
+    },
+    {
+     "block_id": "fbb79d0cbcd4",
+     "end": 43,
+     "prefix": "",
+     "quote": "Start with what the user most needs to know",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b46d5ca7281f",
+     "end": 48,
+     "prefix": "",
+     "quote": "Organise the information in order of importance.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "9b37eab79b688018",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The inverted pyramid puts what the user most needs first and orders the remaining information from most to least important. The page does not identify which content is exempt from 'most content'.",
+    "unit": "document",
+    "violation_condition": "Content places information the user most needs after less important material, or orders supporting information from less to more important."
+   },
+   "when": [
+    "Applies to most content; the page does not specify the exceptions."
+   ],
+   "why": "G-2 and G-4: main-information-first and descending importance describe one ordering check; repeated formulations are consolidated."
+  },
+  {
+   "anchor": {
+    "block_id": "51939a3ab0e7",
+    "end": 48,
+    "prefix": "",
+    "quote": "Write the main idea in as few words as possible.",
+    "start": 0,
+    "suffix": " It can be a summary, a conclusi"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "51939a3ab0e7",
+     "end": 138,
+     "prefix": "ea in as few words as possible. ",
+     "quote": "It can be a summary, a conclusion or recommendation, or the action someone needs to take.",
+     "start": 49,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret 'as few words as possible' as avoiding removable redundancy in the main-idea statement, rather than imposing a fixed word limit.",
+    "unit": "sentence",
+    "violation_condition": "The main-idea statement contains unnecessary wording that can be removed without losing its meaning."
+   },
+   "when": [
+    "When structuring content as an inverted pyramid.",
+    "The main idea may be a summary, a conclusion or recommendation, or an action someone needs to take."
+   ],
+   "why": "The one-rule test separates brevity from information order; G-3 keeps the permitted forms of the main idea within this rule's context."
+  },
+  {
+   "anchor": {
+    "block_id": "86c416a46849",
+    "end": 36,
+    "prefix": "",
+    "quote": "Describe the main ideas in headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "6f5c4b324bec",
+     "end": 9,
+     "prefix": "",
+     "quote": "a heading",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The main ideas of the content are not expressed in its headings."
+   },
+   "when": [
+    "When structuring content as an inverted pyramid."
+   ],
+   "why": "G-4: the list instruction supplies the actionable heading requirement and absorbs the earlier structural description."
+  },
+  {
+   "anchor": {
+    "block_id": "67de5e98dc4b",
+    "end": 74,
+    "prefix": "",
+    "quote": "Under each of the top-level headings, group the content under subheadings.",
+    "start": 0,
+    "suffix": " This helps people find supporti"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Content beneath a top-level heading is not grouped under subheadings."
+   },
+   "when": [
+    "When structuring content as an inverted pyramid.",
+    "Applies beneath each top-level heading."
+   ],
+   "why": "The one-rule test distinguishes grouping content under subheadings from describing main ideas in headings."
+  },
+  {
+   "anchor": {
+    "block_id": "1ca5c3da7d9c",
+    "end": 28,
+    "prefix": "",
+    "quote": "Write supporting paragraphs.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The content lacks paragraphs supporting the main ideas presented in its headings."
+   },
+   "when": [
+    "When structuring content as an inverted pyramid."
+   ],
+   "why": "The one-rule test treats the presence of supporting paragraphs as a distinct textual requirement, not merely writer-process advice under G-5."
+  },
+  {
+   "anchor": {
+    "block_id": "1d1645a0941c",
+    "end": 91,
+    "prefix": "",
+    "quote": "For long-form content, use a summary or a list of recommendations in the preliminary pages.",
+    "start": 0,
+    "suffix": " This helps people read the main"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page gives no threshold for 'long-form content'. Establish that applicability before checking the preliminary pages; do not infer a word-count threshold.",
+    "unit": "document",
+    "violation_condition": "Long-form content has neither a summary nor a list of recommendations in its preliminary pages."
+   },
+   "when": [
+    "For long-form content.",
+    "Either a summary or a list of recommendations satisfies the requirement."
+   ],
+   "why": "G-2 and G-3: the long-form condition and the two acceptable alternatives belong to one preliminary-summary check."
+  },
+  {
+   "anchor": {
+    "block_id": "074634109a48",
+    "end": 81,
+    "prefix": "",
+    "quote": "To structure a paragraph using the inverted pyramid, start with a topic sentence.",
+    "start": 0,
+    "suffix": " Use the rest of the paragraph t"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph using the inverted pyramid does not begin with a sentence stating its topic."
+   },
+   "when": [
+    "When structuring a paragraph using the inverted pyramid."
+   ],
+   "why": "G-1: the body supplies a concrete paragraph-opening check beneath the broader scanning heading."
+  },
+  {
+   "anchor": {
+    "block_id": "074634109a48",
+    "end": 142,
+    "prefix": "d, start with a topic sentence. ",
+    "quote": "Use the rest of the paragraph to explain the topic sentence.",
+    "start": 82,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "Material after the topic sentence does not explain that sentence."
+   },
+   "when": [
+    "When structuring a paragraph using the inverted pyramid.",
+    "Applies to material following the topic sentence."
+   ],
+   "why": "The one-rule test separates what the remaining sentences do from whether the paragraph opens with a topic sentence."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 3767,
+  "output_tokens": 6973,
+  "reasoning_tokens": 4660
+ }
+}

@@ -1,0 +1,1841 @@
+{
+ "effort": "low",
+ "input_sha256": "8c9e9817c5ec73429444fd1d3605a58569052617216b53d8c8cfa93fde0c1549",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "61f1d2f6dc29",
+    "end": 181,
+    "prefix": "",
+    "quote": "Refer to Acts of parliament using the correct style so people can find the source material. Choose when to cite the short and long titles, series numbers, jurisdiction and sections.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory summary advice to the writer.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b1ef946fce60",
+    "end": 234,
+    "prefix": "",
+    "quote": "An Act has a short title (its name) and long title (a description). Both appear after the list of contents in the text of the Act. The long title appears as a heading before section 1 of the Act. The short title is named in section 1.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive background about statutory drafting.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ed8ce25e1c7b",
+    "end": 48,
+    "prefix": "",
+    "quote": "At first mention, use the short title in italics",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed into cdfc6fb1575a (first-mention italics rule).",
+   "reason": "restatement",
+   "seed_uid": "4fbbcce3a3f16436"
+  },
+  {
+   "anchor": {
+    "block_id": "088a195be35d",
+    "end": 108,
+    "prefix": "",
+    "quote": "Often, Acts also have a shorter informal title. This is usually an initialism or acronym of the short title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes informal titles.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d53b075538ea",
+    "end": 48,
+    "prefix": "",
+    "quote": "Each Act has a series number to use in citations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes what series numbers are and how they can be used.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "46e1df7bb240",
+    "end": 167,
+    "prefix": "",
+    "quote": "Using the series in general content helps people identify the particular Act and find it in the Legislation Register. Series are also used in annotations and in notes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the purpose and utility of series numbers.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ff0cbb5dacb5",
+    "end": 35,
+    "prefix": "",
+    "quote": "Jurisdiction is an important detail",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping child guidance on indicating jurisdiction.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f74eeff53179",
+    "end": 46,
+    "prefix": "",
+    "quote": "Write a sentence that makes jurisdiction clear",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An alternative method / option for indicating jurisdiction.",
+   "reason": "permission",
+   "seed_uid": "4be5de31b119847d"
+  },
+  {
+   "anchor": {
+    "block_id": "cf22f9b227d4",
+    "end": 154,
+    "prefix": "",
+    "quote": "The first way is to write a sentence that explains where the Act originates. This method is useful in documents that don’t mention legislation frequently.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Permitted alternative to parenthetical citation.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a9e9ff96cc19",
+    "end": 41,
+    "prefix": "",
+    "quote": "The basic unit of an Act is a section (s)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Grouping heading introducing structural units.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8a8f34c28143",
+    "end": 44,
+    "prefix": "",
+    "quote": "Choose how to cite units below section level",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explicitly gives the author discretion ('You can choose which method to follow').",
+   "reason": "permission",
+   "seed_uid": "0302864342c3d085"
+  },
+  {
+   "anchor": {
+    "block_id": "279debc81b8d",
+    "end": 125,
+    "prefix": "",
+    "quote": "Whether to cite at section level or below will depend on the context for your content. You can choose which method to follow.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Author choice.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "427a24b2611d",
+    "end": 112,
+    "prefix": "",
+    "quote": "Follow in-house style. Otherwise, be guided by the type of content you’re writing, and its purpose and audience.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice to follow in-house style.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "87538cab8aa3",
+    "end": 142,
+    "prefix": "",
+    "quote": "The Constitution was enacted by the British Parliament. The long title of the Act is the Commonwealth of Australia Constitution Act 1900 (UK).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Historical factual description.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5a8f35be1026",
+    "end": 142,
+    "prefix": "",
+    "quote": "The original version is available on the UK Government Legislation website. A compilation including amendments is on the Legislation Register.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Factual reference information.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8a1ce5fd9323",
+    "end": 76,
+    "prefix": "",
+    "quote": "If you’re unsure, use ‘the Australian Constitution’ so there’s no confusion.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Discretionary phrasing advice.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "referencing-and-attribution/legal-material/acts-parliament.md",
+ "page_sha256": "000124480644349c585e66ffce5b4f51e363bd3e8b5359f754d8dfc9ee7b526c",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "61f1d2f6dc29",
+    "note": "Introductory summary advice to the writer.",
+    "quote": "Refer to Acts of parliament using the correct style so people can find the source material. Choose when to cite the short and long titles, series numbers, jurisdiction and sections.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b1ef946fce60",
+    "note": "Descriptive background about statutory drafting.",
+    "quote": "An Act has a short title (its name) and long title (a description). Both appear after the list of contents in the text of the Act. The long title appears as a heading before section 1 of the Act. The short title is named in section 1.",
+    "reason": "description"
+   },
+   {
+    "block_id": "ed8ce25e1c7b",
+    "note": "Absorbed into cdfc6fb1575a (first-mention italics rule).",
+    "quote": "At first mention, use the short title in italics",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "088a195be35d",
+    "note": "Describes informal titles.",
+    "quote": "Often, Acts also have a shorter informal title. This is usually an initialism or acronym of the short title.",
+    "reason": "description"
+   },
+   {
+    "block_id": "d53b075538ea",
+    "note": "Describes what series numbers are and how they can be used.",
+    "quote": "Each Act has a series number to use in citations",
+    "reason": "description"
+   },
+   {
+    "block_id": "46e1df7bb240",
+    "note": "Explains the purpose and utility of series numbers.",
+    "quote": "Using the series in general content helps people identify the particular Act and find it in the Legislation Register. Series are also used in annotations and in notes.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ff0cbb5dacb5",
+    "note": "Section heading grouping child guidance on indicating jurisdiction.",
+    "quote": "Jurisdiction is an important detail",
+    "reason": "section"
+   },
+   {
+    "block_id": "f74eeff53179",
+    "note": "An alternative method / option for indicating jurisdiction.",
+    "quote": "Write a sentence that makes jurisdiction clear",
+    "reason": "permission"
+   },
+   {
+    "block_id": "cf22f9b227d4",
+    "note": "Permitted alternative to parenthetical citation.",
+    "quote": "The first way is to write a sentence that explains where the Act originates. This method is useful in documents that don’t mention legislation frequently.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "a9e9ff96cc19",
+    "note": "Grouping heading introducing structural units.",
+    "quote": "The basic unit of an Act is a section (s)",
+    "reason": "section"
+   },
+   {
+    "block_id": "8a8f34c28143",
+    "note": "Explicitly gives the author discretion ('You can choose which method to follow').",
+    "quote": "Choose how to cite units below section level",
+    "reason": "permission"
+   },
+   {
+    "block_id": "279debc81b8d",
+    "note": "Author choice.",
+    "quote": "Whether to cite at section level or below will depend on the context for your content. You can choose which method to follow.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "427a24b2611d",
+    "note": "General advice to follow in-house style.",
+    "quote": "Follow in-house style. Otherwise, be guided by the type of content you’re writing, and its purpose and audience.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "87538cab8aa3",
+    "note": "Historical factual description.",
+    "quote": "The Constitution was enacted by the British Parliament. The long title of the Act is the Commonwealth of Australia Constitution Act 1900 (UK).",
+    "reason": "description"
+   },
+   {
+    "block_id": "5a8f35be1026",
+    "note": "Factual reference information.",
+    "quote": "The original version is available on the UK Government Legislation website. A compilation including amendments is on the Legislation Register.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8a1ce5fd9323",
+    "note": "Discretionary phrasing advice.",
+    "quote": "If you’re unsure, use ‘the Australian Constitution’ so there’s no confusion.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cdfc6fb1575a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "aed23dad6858",
+      "quote": "Style for Act titles is title case, not always italics"
+     },
+     {
+      "block_id": "ebb460de4256",
+      "quote": "Use roman type for the titles of Acts in reference lists and other long lists. Blocks of italics are difficult to read."
+     },
+     {
+      "block_id": "02fe3cf60be4",
+      "quote": "The first time you name the Act in text, use the short title in italics."
+     },
+     {
+      "block_id": "e4b895c60ebf",
+      "quote": "Always use the short title in italics the first time you cite the Act in your text."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Title case with no comma before the year",
+      "parts": [
+       {
+        "block_id": "6dc1149bb086",
+        "quote": "Export Control Act 2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Fails title case ('control')",
+      "parts": [
+       {
+        "block_id": "970d550efcde",
+        "quote": "Export control Act, 2020"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use title case (maximal capitalisation) for the titles of Acts. Use italics for the first mention of these titles.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the title of an Act written without title case, or not in italics on its first mention in running text",
+    "when": [
+     "Use roman type for the titles of Acts in reference lists and other long lists.",
+     "Foreign legislation is written in roman type rather than italics."
+    ],
+    "why": "G-1, G-2, G-4: The heading and multiple restatements prescribe title case and first-mention italics, with lists as a noted exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "31657aeeba0e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "31657aeeba0e",
+      "quote": "The year the legislation is first enacted forms part of the title."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No comma preceding the year",
+      "parts": [
+       {
+        "block_id": "6dc1149bb086",
+        "quote": "Export Control Act 2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Contains a comma before the year",
+      "parts": [
+       {
+        "block_id": "970d550efcde",
+        "quote": "Export control Act, 2020"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use a comma before the year.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a comma placed immediately before the year in the title of an Act",
+    "when": [],
+    "why": "Direct negative constraint on punctuation within Act citations."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cab78c4bc752",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Includes initial article 'A'",
+      "parts": [
+       {
+        "block_id": "ca79e2413e08",
+        "quote": "A New Tax System (Goods and Services Tax) Act 1999"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Includes initial article 'The'",
+      "parts": [
+       {
+        "block_id": "aac5b52ac087",
+        "quote": "The Commercial Bank of Australia Limited (Merger) Act 1982 (NSW)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Include all the words in the title. If the title begins with ‘The’, ‘An’ or ‘A’, make sure you include it.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an initial article ('The', 'An', or 'A') omitted from an Act's full formal title when cited",
+    "when": [],
+    "why": "Specific rule requiring leading articles when they form part of the official title."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cd69594fc702",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Uses 'No.' with a period",
+      "parts": [
+       {
+        "block_id": "aa86e19e56a2",
+        "quote": "Supply Act (No. 1) 2019–2020"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'No.' with a period",
+      "parts": [
+       {
+        "block_id": "eb4b6beed6ec",
+        "quote": "Farm Household Support Amendment (Relief Measures) Act (No. 2) 2019"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the Act’s title has a number, include the number exactly as written. The contraction ‘No.’ retains the full stop in this situation, which is an exception to the general rule for the shortened form for ‘number’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the contraction 'No.' written without a period (e.g. 'No') when part of an Act's title",
+    "when": [],
+    "why": "Specific style rule explicitly overriding the general Australian convention for contractions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "52952a7c9b8f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "21f2b95e2de1",
+      "quote": "After first mention, use the short title in roman type without the year"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "First mention includes year in italics; subsequent mention drops the year and is in roman type.",
+      "parts": [
+       {
+        "block_id": "f1e395383461",
+        "quote": "… was convicted of federal offences under the Crimes Act 1914. The Crimes Act specifies …"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Subsequent reference drops the year and 'Act', in roman type.",
+      "parts": [
+       {
+        "block_id": "6c88ca2655b2",
+        "quote": "… was convicted of federal offences under the Criminal Code Act 1995.The Criminal Code has a constitutional basis ..."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If there are subsequent mentions of the Act, use the short title in roman type without the year.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a subsequent mention of an Act that includes the enactment year or is set in italics instead of roman type",
+    "when": [],
+    "why": "G-4: Heading restates body; specifies formatting on subsequent mentions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "25088595587b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "120375df336e",
+      "quote": "At first mention, include the informal title in parentheses after the title. Use the informal title after that."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Shortened form introduced in parentheses at first mention.",
+      "parts": [
+       {
+        "block_id": "8678904d7c5e",
+        "quote": "Comcare administers the Work Health and Safety Act 2011(WHS Act). The WHS Act requires that a person who ..."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Acronym defined in parentheses at first mention.",
+      "parts": [
+       {
+        "block_id": "ca99c66b3b25",
+        "quote": "… in the Public Governance, Performance and Accountability Act 2013 (PGPA Act). … Section 10 of the PGPA Act defines a Commonwealth entity as …"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Add the shortened form in parentheses at the first mention if it does more than just remove the year or the word ‘Act’ from the title.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an informal or abbreviated title introduced on subsequent mentions without having been defined in parentheses at the first mention",
+    "when": [
+     "Not needed if the shortened form only drops the year or the word 'Act'."
+    ],
+    "why": "Defines parenthetical introduction requirements for informal shortened Act titles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7e8ee74ac32f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "ee9dc50ee889",
+      "quote": "Or use the informal title in roman type"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "FOI Act is in roman type and capitalized",
+      "parts": [
+       {
+        "block_id": "7a86b0426bda",
+        "quote": "Freedom of Information Act 1982 (FOI Act)"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use title case and roman type for the informal title.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an informal title of an Act styled in italics or failing title case",
+    "when": [],
+    "why": "G-4: Heading restates rule in body paragraph."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "677d8bc5566c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "83dd52fe9788",
+      "quote": "Use the shortened form of the jurisdiction in the Act’s title in roman type and in parentheses"
+     },
+     {
+      "block_id": "496f7de01903",
+      "quote": "None of these shortened forms for jurisdictions are punctuated."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Shortened form in parentheses in roman type without punctuation.",
+      "parts": [
+       {
+        "block_id": "fccd6e45d4de",
+        "quote": "Dugong are defined as ‘fish’ for the purposes of the Marine Act 1981 (NT)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "insert the jurisdiction’s shortened form in roman type in parentheses after the italicised title.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a jurisdiction abbreviation following an Act title that is not enclosed in parentheses, is italicised, or uses internal full stops",
+    "when": [
+     "Shortened forms must be unpunctuated: Cth, ACT, NT, NSW, Qld, SA, Tas, Vic, WA.",
+     "An alternative method is to write a sentence that explains the jurisdiction in words."
+    ],
+    "why": "G-1, G-2: Covers format, casing, and lack of punctuation for jurisdiction abbreviations."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "27bea7093f3a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "820c40efa201",
+      "quote": "An initial capital is correct, whether the reference is generic or not"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "'Act' is capitalised.",
+      "parts": [
+       {
+        "block_id": "a27302bca509",
+        "quote": "Staff must read the Act to understand their compliance responsibilities."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use capitals for the words ‘Act’ and ‘Acts’ when you write about Acts of parliament.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the word 'act' or 'acts' written in lower case when referring to Acts of parliament",
+    "when": [],
+    "why": "G-4: Heading restates body rule. Absolute rule requiring capitalization of 'Act(s)'."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bf7c2ffca339",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Lower case 'paragraph' in mid-sentence citation.",
+      "parts": [
+       {
+        "block_id": "7c3f065aa8dd",
+        "quote": "... is described in paragraph 21(3)(a)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use lower case for these units unless they begin a sentence.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "an Act unit ('section', 'subsection', 'paragraph', 'subparagraph') capitalised mid-sentence",
+    "when": [
+     "Does not apply if the word begins a sentence."
+    ],
+    "why": "Prescribes lower case for section, subsection, paragraph, subparagraph mid-sentence."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "df77bcc3d691",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Capitalised 'Part 4'.",
+      "parts": [
+       {
+        "block_id": "461657d3504c",
+        "quote": "The Auditor-General’s main functions and powers are defined in Part 4 of the Act."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Capitalised 'Division 2' and 'Part 9'.",
+      "parts": [
+       {
+        "block_id": "b3e2a5b6549f",
+        "quote": "… under Division 2 of Part 9 of the Law Enforcement (Powers and Responsibilities) Act 2002"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always use an initial capital for a specific reference to a ‘Chapter’, ‘Part’, ‘Division’ or ‘Subdivision’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a specific reference to a Chapter, Part, Division, or Subdivision of an Act written in lower case",
+    "when": [],
+    "why": "Prescribes obligatory initial capitals for specific structural units."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9faa19283f98",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Never begin a sentence with the shortened form.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence starting with an abbreviated legislative unit form (such as 'Pt', 'Div', 'Subdiv', 's', 'ss', 'subs', 'subss', 'para', 'paras', 'subpara', 'subparas')",
+    "when": [],
+    "why": "Clear structural constraint banning abbreviations at sentence start."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "122fbabafea5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "685308f0c226",
+      "quote": "Don’t use a full stop after the shortened forms of units"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "'s 4' without a full stop after 's'.",
+      "parts": [
+       {
+        "block_id": "f1098152229f",
+        "quote": "... the Copyright Act 1968, s 4."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "'paras' without a full stop.",
+      "parts": [
+       {
+        "block_id": "ecab40dbfed5",
+        "quote": "... produce documents when required (paras 17(1)(a)–(c))."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use a full stop after the shortened form when you use it in a citation or note.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a full stop placed after the shortened form of an Act unit (e.g. 's.', 'ss.', 'para.', 'Pt.') in a citation or note",
+    "when": [],
+    "why": "G-4: Heading restates body sentence."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "59fa72b8ca43",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3d58336261c0",
+      "quote": "Titles of Acts from other countries are in roman type"
+     },
+     {
+      "block_id": "ca584e0dadd1",
+      "quote": "If you’re not sure of an abbreviation, write the sentence to make the jurisdiction clear."
+     },
+     {
+      "block_id": "5fd8d4a79f44",
+      "quote": "Like all foreign Acts of parliament, it is written in roman type, not italics."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Roman type followed by country abbreviation.",
+      "parts": [
+       {
+        "block_id": "06d089425216",
+        "quote": "Digital Economy Act 2017 (UK)"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Sentence phrased to make jurisdiction clear.",
+      "parts": [
+       {
+        "block_id": "064fe1139d90",
+        "quote": "Fiji’s Foreign Investment Act 1999"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write all legislation from foreign countries in roman type, followed by the country abbreviation.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "foreign legislation written in italics or lacking its country abbreviation",
+    "when": [
+     "If you're not sure of an abbreviation, write the sentence to make the jurisdiction clear."
+    ],
+    "why": "G-1, G-4: Rule specifies roman type and country abbreviation for foreign Acts."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "17656ce66744",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "a5f4b7af0ce3",
+      "quote": "Reference to Australia’s Constitution needs capitalisation only"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Capitalised 'Constitution'.",
+      "parts": [
+       {
+        "block_id": "763f2ecb49e0",
+        "quote": "Write ‘the Constitution’ when it’s clear that you’re referring to Australia’s Constitution."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Always capitalise ‘Constitution’ when writing about Australia’s Constitution.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the word 'constitution' written with a lower-case initial letter when referring to Australia's Constitution",
+    "when": [],
+    "why": "G-4: Specific casing rule for the Australian Constitution."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "cdfc6fb1575a",
+    "end": 114,
+    "prefix": "",
+    "quote": "Use title case (maximal capitalisation) for the titles of Acts. Use italics for the first mention of these titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "aed23dad6858",
+     "end": 54,
+     "prefix": "",
+     "quote": "Style for Act titles is title case, not always italics",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ebb460de4256",
+     "end": 119,
+     "prefix": "",
+     "quote": "Use roman type for the titles of Acts in reference lists and other long lists. Blocks of italics are difficult to read.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "02fe3cf60be4",
+     "end": 72,
+     "prefix": "",
+     "quote": "The first time you name the Act in text, use the short title in italics.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e4b895c60ebf",
+     "end": 83,
+     "prefix": "",
+     "quote": "Always use the short title in italics the first time you cite the Act in your text.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Title case with no comma before the year",
+     "parts": [
+      {
+       "block_id": "6dc1149bb086",
+       "end": 23,
+       "prefix": "",
+       "quote": "Export Control Act 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Fails title case ('control')",
+     "parts": [
+      {
+       "block_id": "970d550efcde",
+       "end": 24,
+       "prefix": "",
+       "quote": "Export control Act, 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the title of an Act written without title case, or not in italics on its first mention in running text"
+   },
+   "when": [
+    "Use roman type for the titles of Acts in reference lists and other long lists.",
+    "Foreign legislation is written in roman type rather than italics."
+   ],
+   "why": "G-1, G-2, G-4: The heading and multiple restatements prescribe title case and first-mention italics, with lists as a noted exception."
+  },
+  {
+   "anchor": {
+    "block_id": "31657aeeba0e",
+    "end": 101,
+    "prefix": "nacted forms part of the title. ",
+    "quote": "Don’t use a comma before the year.",
+    "start": 67,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "31657aeeba0e",
+     "end": 66,
+     "prefix": "",
+     "quote": "The year the legislation is first enacted forms part of the title.",
+     "start": 0,
+     "suffix": " Don’t use a comma before the ye"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No comma preceding the year",
+     "parts": [
+      {
+       "block_id": "6dc1149bb086",
+       "end": 23,
+       "prefix": "",
+       "quote": "Export Control Act 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Contains a comma before the year",
+     "parts": [
+      {
+       "block_id": "970d550efcde",
+       "end": 24,
+       "prefix": "",
+       "quote": "Export control Act, 2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a comma placed immediately before the year in the title of an Act"
+   },
+   "when": [],
+   "why": "Direct negative constraint on punctuation within Act citations."
+  },
+  {
+   "anchor": {
+    "block_id": "cab78c4bc752",
+    "end": 106,
+    "prefix": "",
+    "quote": "Include all the words in the title. If the title begins with ‘The’, ‘An’ or ‘A’, make sure you include it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Includes initial article 'A'",
+     "parts": [
+      {
+       "block_id": "ca79e2413e08",
+       "end": 50,
+       "prefix": "",
+       "quote": "A New Tax System (Goods and Services Tax) Act 1999",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Includes initial article 'The'",
+     "parts": [
+      {
+       "block_id": "aac5b52ac087",
+       "end": 64,
+       "prefix": "",
+       "quote": "The Commercial Bank of Australia Limited (Merger) Act 1982 (NSW)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an initial article ('The', 'An', or 'A') omitted from an Act's full formal title when cited"
+   },
+   "when": [],
+   "why": "Specific rule requiring leading articles when they form part of the official title."
+  },
+  {
+   "anchor": {
+    "block_id": "cd69594fc702",
+    "end": 213,
+    "prefix": "",
+    "quote": "If the Act’s title has a number, include the number exactly as written. The contraction ‘No.’ retains the full stop in this situation, which is an exception to the general rule for the shortened form for ‘number’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses 'No.' with a period",
+     "parts": [
+      {
+       "block_id": "aa86e19e56a2",
+       "end": 28,
+       "prefix": "",
+       "quote": "Supply Act (No. 1) 2019–2020",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Uses 'No.' with a period",
+     "parts": [
+      {
+       "block_id": "eb4b6beed6ec",
+       "end": 67,
+       "prefix": "",
+       "quote": "Farm Household Support Amendment (Relief Measures) Act (No. 2) 2019",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "the contraction 'No.' written without a period (e.g. 'No') when part of an Act's title"
+   },
+   "when": [],
+   "why": "Specific style rule explicitly overriding the general Australian convention for contractions."
+  },
+  {
+   "anchor": {
+    "block_id": "52952a7c9b8f",
+    "end": 96,
+    "prefix": "",
+    "quote": "If there are subsequent mentions of the Act, use the short title in roman type without the year.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "21f2b95e2de1",
+     "end": 71,
+     "prefix": "",
+     "quote": "After first mention, use the short title in roman type without the year",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "First mention includes year in italics; subsequent mention drops the year and is in roman type.",
+     "parts": [
+      {
+       "block_id": "f1e395383461",
+       "end": 89,
+       "prefix": "",
+       "quote": "… was convicted of federal offences under the Crimes Act 1914. The Crimes Act specifies …",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Subsequent reference drops the year and 'Act', in roman type.",
+     "parts": [
+      {
+       "block_id": "6c88ca2655b2",
+       "end": 117,
+       "prefix": "",
+       "quote": "… was convicted of federal offences under the Criminal Code Act 1995.The Criminal Code has a constitutional basis ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a subsequent mention of an Act that includes the enactment year or is set in italics instead of roman type"
+   },
+   "when": [],
+   "why": "G-4: Heading restates body; specifies formatting on subsequent mentions."
+  },
+  {
+   "anchor": {
+    "block_id": "25088595587b",
+    "end": 134,
+    "prefix": "",
+    "quote": "Add the shortened form in parentheses at the first mention if it does more than just remove the year or the word ‘Act’ from the title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "120375df336e",
+     "end": 111,
+     "prefix": "",
+     "quote": "At first mention, include the informal title in parentheses after the title. Use the informal title after that.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Shortened form introduced in parentheses at first mention.",
+     "parts": [
+      {
+       "block_id": "8678904d7c5e",
+       "end": 108,
+       "prefix": "",
+       "quote": "Comcare administers the Work Health and Safety Act 2011(WHS Act). The WHS Act requires that a person who ...",
+       "start": 0,
+       "suffix": " [The shortened form goes with t"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Acronym defined in parentheses at first mention.",
+     "parts": [
+      {
+       "block_id": "ca99c66b3b25",
+       "end": 143,
+       "prefix": "",
+       "quote": "… in the Public Governance, Performance and Accountability Act 2013 (PGPA Act). … Section 10 of the PGPA Act defines a Commonwealth entity as …",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "an informal or abbreviated title introduced on subsequent mentions without having been defined in parentheses at the first mention"
+   },
+   "when": [
+    "Not needed if the shortened form only drops the year or the word 'Act'."
+   ],
+   "why": "Defines parenthetical introduction requirements for informal shortened Act titles."
+  },
+  {
+   "anchor": {
+    "block_id": "7e8ee74ac32f",
+    "end": 53,
+    "prefix": "",
+    "quote": "Use title case and roman type for the informal title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "ee9dc50ee889",
+     "end": 39,
+     "prefix": "",
+     "quote": "Or use the informal title in roman type",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "FOI Act is in roman type and capitalized",
+     "parts": [
+      {
+       "block_id": "7a86b0426bda",
+       "end": 41,
+       "prefix": "",
+       "quote": "Freedom of Information Act 1982 (FOI Act)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an informal title of an Act styled in italics or failing title case"
+   },
+   "when": [],
+   "why": "G-4: Heading restates rule in body paragraph."
+  },
+  {
+   "anchor": {
+    "block_id": "677d8bc5566c",
+    "end": 112,
+    "prefix": "Alternatively, ",
+    "quote": "insert the jurisdiction’s shortened form in roman type in parentheses after the italicised title.",
+    "start": 15,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "83dd52fe9788",
+     "end": 94,
+     "prefix": "",
+     "quote": "Use the shortened form of the jurisdiction in the Act’s title in roman type and in parentheses",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "496f7de01903",
+     "end": 63,
+     "prefix": "",
+     "quote": "None of these shortened forms for jurisdictions are punctuated.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Shortened form in parentheses in roman type without punctuation.",
+     "parts": [
+      {
+       "block_id": "fccd6e45d4de",
+       "end": 74,
+       "prefix": "",
+       "quote": "Dugong are defined as ‘fish’ for the purposes of the Marine Act 1981 (NT).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a jurisdiction abbreviation following an Act title that is not enclosed in parentheses, is italicised, or uses internal full stops"
+   },
+   "when": [
+    "Shortened forms must be unpunctuated: Cth, ACT, NT, NSW, Qld, SA, Tas, Vic, WA.",
+    "An alternative method is to write a sentence that explains the jurisdiction in words."
+   ],
+   "why": "G-1, G-2: Covers format, casing, and lack of punctuation for jurisdiction abbreviations."
+  },
+  {
+   "anchor": {
+    "block_id": "27bea7093f3a",
+    "end": 91,
+    "prefix": "",
+    "quote": "Always use capitals for the words ‘Act’ and ‘Acts’ when you write about Acts of parliament.",
+    "start": 0,
+    "suffix": " This avoids possible confusion "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "820c40efa201",
+     "end": 70,
+     "prefix": "",
+     "quote": "An initial capital is correct, whether the reference is generic or not",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "'Act' is capitalised.",
+     "parts": [
+      {
+       "block_id": "a27302bca509",
+       "end": 72,
+       "prefix": "",
+       "quote": "Staff must read the Act to understand their compliance responsibilities.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the word 'act' or 'acts' written in lower case when referring to Acts of parliament"
+   },
+   "when": [],
+   "why": "G-4: Heading restates body rule. Absolute rule requiring capitalization of 'Act(s)'."
+  },
+  {
+   "anchor": {
+    "block_id": "bf7c2ffca339",
+    "end": 60,
+    "prefix": "",
+    "quote": "Use lower case for these units unless they begin a sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Lower case 'paragraph' in mid-sentence citation.",
+     "parts": [
+      {
+       "block_id": "7c3f065aa8dd",
+       "end": 39,
+       "prefix": "",
+       "quote": "... is described in paragraph 21(3)(a).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "an Act unit ('section', 'subsection', 'paragraph', 'subparagraph') capitalised mid-sentence"
+   },
+   "when": [
+    "Does not apply if the word begins a sentence."
+   ],
+   "why": "Prescribes lower case for section, subsection, paragraph, subparagraph mid-sentence."
+  },
+  {
+   "anchor": {
+    "block_id": "df77bcc3d691",
+    "end": 107,
+    "prefix": "",
+    "quote": "Always use an initial capital for a specific reference to a ‘Chapter’, ‘Part’, ‘Division’ or ‘Subdivision’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Capitalised 'Part 4'.",
+     "parts": [
+      {
+       "block_id": "461657d3504c",
+       "end": 81,
+       "prefix": "",
+       "quote": "The Auditor-General’s main functions and powers are defined in Part 4 of the Act.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Capitalised 'Division 2' and 'Part 9'.",
+     "parts": [
+      {
+       "block_id": "b3e2a5b6549f",
+       "end": 90,
+       "prefix": "",
+       "quote": "… under Division 2 of Part 9 of the Law Enforcement (Powers and Responsibilities) Act 2002",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a specific reference to a Chapter, Part, Division, or Subdivision of an Act written in lower case"
+   },
+   "when": [],
+   "why": "Prescribes obligatory initial capitals for specific structural units."
+  },
+  {
+   "anchor": {
+    "block_id": "9faa19283f98",
+    "end": 165,
+    "prefix": "ion), depending on the context. ",
+    "quote": "Never begin a sentence with the shortened form.",
+    "start": 118,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence starting with an abbreviated legislative unit form (such as 'Pt', 'Div', 'Subdiv', 's', 'ss', 'subs', 'subss', 'para', 'paras', 'subpara', 'subparas')"
+   },
+   "when": [],
+   "why": "Clear structural constraint banning abbreviations at sentence start."
+  },
+  {
+   "anchor": {
+    "block_id": "122fbabafea5",
+    "end": 85,
+    "prefix": "",
+    "quote": "Don’t use a full stop after the shortened form when you use it in a citation or note.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "685308f0c226",
+     "end": 56,
+     "prefix": "",
+     "quote": "Don’t use a full stop after the shortened forms of units",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "'s 4' without a full stop after 's'.",
+     "parts": [
+      {
+       "block_id": "f1098152229f",
+       "end": 32,
+       "prefix": "",
+       "quote": "... the Copyright Act 1968, s 4.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "'paras' without a full stop.",
+     "parts": [
+      {
+       "block_id": "ecab40dbfed5",
+       "end": 57,
+       "prefix": "",
+       "quote": "... produce documents when required (paras 17(1)(a)–(c)).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a full stop placed after the shortened form of an Act unit (e.g. 's.', 'ss.', 'para.', 'Pt.') in a citation or note"
+   },
+   "when": [],
+   "why": "G-4: Heading restates body sentence."
+  },
+  {
+   "anchor": {
+    "block_id": "59fa72b8ca43",
+    "end": 97,
+    "prefix": "",
+    "quote": "Write all legislation from foreign countries in roman type, followed by the country abbreviation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3d58336261c0",
+     "end": 53,
+     "prefix": "",
+     "quote": "Titles of Acts from other countries are in roman type",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ca584e0dadd1",
+     "end": 89,
+     "prefix": "",
+     "quote": "If you’re not sure of an abbreviation, write the sentence to make the jurisdiction clear.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5fd8d4a79f44",
+     "end": 78,
+     "prefix": "",
+     "quote": "Like all foreign Acts of parliament, it is written in roman type, not italics.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Roman type followed by country abbreviation.",
+     "parts": [
+      {
+       "block_id": "06d089425216",
+       "end": 29,
+       "prefix": "",
+       "quote": "Digital Economy Act 2017 (UK)",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Sentence phrased to make jurisdiction clear.",
+     "parts": [
+      {
+       "block_id": "064fe1139d90",
+       "end": 34,
+       "prefix": "",
+       "quote": "Fiji’s Foreign Investment Act 1999",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "foreign legislation written in italics or lacking its country abbreviation"
+   },
+   "when": [
+    "If you're not sure of an abbreviation, write the sentence to make the jurisdiction clear."
+   ],
+   "why": "G-1, G-4: Rule specifies roman type and country abbreviation for foreign Acts."
+  },
+  {
+   "anchor": {
+    "block_id": "17656ce66744",
+    "end": 77,
+    "prefix": "",
+    "quote": "Always capitalise ‘Constitution’ when writing about Australia’s Constitution.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "a5f4b7af0ce3",
+     "end": 63,
+     "prefix": "",
+     "quote": "Reference to Australia’s Constitution needs capitalisation only",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Capitalised 'Constitution'.",
+     "parts": [
+      {
+       "block_id": "763f2ecb49e0",
+       "end": 91,
+       "prefix": "",
+       "quote": "Write ‘the Constitution’ when it’s clear that you’re referring to Australia’s Constitution.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the word 'constitution' written with a lower-case initial letter when referring to Australia's Constitution"
+   },
+   "when": [],
+   "why": "G-4: Specific casing rule for the Australian Constitution."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 8119,
+  "output_tokens": 7047,
+  "reasoning_tokens": 0
+ }
+}

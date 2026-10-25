@@ -1,0 +1,229 @@
+{
+ "effort": "low",
+ "input_sha256": "2d9a88f8baaf6ea18743e26c9d9708be321b2e820da7e74e4f4a278c5ae0e519",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "01581d6b9f49",
+    "end": 41,
+    "prefix": "",
+    "quote": "Show how categories relate to one another",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading introducing hierarchical concepts.",
+   "reason": "section",
+   "seed_uid": "4ac34af369b4b0fb"
+  },
+  {
+   "anchor": {
+    "block_id": "9b5717c333a6",
+    "end": 18,
+    "prefix": "",
+    "quote": "Plan the headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Process advice for writers.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "130c322037d4",
+    "end": 48,
+    "prefix": "",
+    "quote": "Decide what information fits under each heading.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Process advice for writers.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "091fa1727cfd",
+    "end": 17,
+    "prefix": "",
+    "quote": "Plan subheadings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Process advice for writers.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16befc23f589",
+    "end": 45,
+    "prefix": "",
+    "quote": "Check the headings for consistency and logic.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General advice to the writer (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "457de1e6eeba",
+    "end": 135,
+    "prefix": "",
+    "quote": "Write clear page titles. The title is the first thing a screen reader user will hear and is the first item to appear in search results.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of rules on titles and page titles pages.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7b369b4bafc1",
+    "end": 119,
+    "prefix": "",
+    "quote": "Organise content in a clear order using section headings. Describe the topics or the following section in the headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Duplicate of rules on headings page.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f98280ca6020",
+    "end": 169,
+    "prefix": "",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using. Use the same navigation elements across services.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General accessibility and site design advice.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/types-structure/hierarchical-structure.md",
+ "page_sha256": "b91695b0714b952d826c4cfdbd1800f8d2f2e60c9e17d19e7aa8f19e97b4f407",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "01581d6b9f49",
+    "note": "Section heading introducing hierarchical concepts.",
+    "quote": "Show how categories relate to one another",
+    "reason": "section"
+   },
+   {
+    "block_id": "9b5717c333a6",
+    "note": "Process advice for writers.",
+    "quote": "Plan the headings.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "130c322037d4",
+    "note": "Process advice for writers.",
+    "quote": "Decide what information fits under each heading.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "091fa1727cfd",
+    "note": "Process advice for writers.",
+    "quote": "Plan subheadings.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "16befc23f589",
+    "note": "General advice to the writer (G-5).",
+    "quote": "Check the headings for consistency and logic.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "457de1e6eeba",
+    "note": "Duplicate of rules on titles and page titles pages.",
+    "quote": "Write clear page titles. The title is the first thing a screen reader user will hear and is the first item to appear in search results.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "7b369b4bafc1",
+    "note": "Duplicate of rules on headings page.",
+    "quote": "Organise content in a clear order using section headings. Describe the topics or the following section in the headings.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "f98280ca6020",
+    "note": "General accessibility and site design advice.",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using. Use the same navigation elements across services.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "33a877b1a131",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Keep the hierarchy shallow – use no more than 4 heading levels.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "more than 4 heading levels used in a document or page",
+    "when": [],
+    "why": "G-1, G-5: Specific quantifiable structural rule on heading depth."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "33a877b1a131",
+    "end": 63,
+    "prefix": "",
+    "quote": "Keep the hierarchy shallow – use no more than 4 heading levels.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "more than 4 heading levels used in a document or page"
+   },
+   "when": [],
+   "why": "G-1, G-5: Specific quantifiable structural rule on heading depth."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3503,
+  "output_tokens": 736,
+  "reasoning_tokens": 0
+ }
+}

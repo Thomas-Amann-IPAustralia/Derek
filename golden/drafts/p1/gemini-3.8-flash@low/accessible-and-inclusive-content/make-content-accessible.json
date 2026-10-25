@@ -1,0 +1,86 @@
+{
+ "effort": "low",
+ "input_sha256": "d342cab3eadd2b9b65a368c48215c71f31857c2805de447c3324c8480d9e33b1",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "2c653ef87e8b",
+    "end": 23,
+    "prefix": "",
+    "quote": "Make content accessible",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level goal and introduction to the section, elaborated with descriptive and aspirational text rather than a testable textual rule.",
+   "reason": "advice",
+   "seed_uid": "9872f0e6241ca1b1"
+  },
+  {
+   "anchor": {
+    "block_id": "4448c8494bd8",
+    "end": 92,
+    "prefix": "",
+    "quote": "Australian Government digital services must be usable, inclusive, accessible and responsive.",
+    "start": 0,
+    "suffix": " This is outlined in The data an"
+   },
+   "note": "High-level policy requirement referencing the Digital Service Standard, not a specific rule for textual checking.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ae0a78c53487",
+    "end": 40,
+    "prefix": "",
+    "quote": "Follow accessibility guidance in context",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Meta-guidance explaining how the Style Manual presents accessibility callouts across other topics.",
+   "reason": "advice",
+   "seed_uid": "34e93acd14cc4e7a"
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/make-content-accessible.md",
+ "page_sha256": "5456fc98587b3e1ba592fd9effcc4d4d442d1d2690523517099797bcd215ff87",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "2c653ef87e8b",
+    "note": "High-level goal and introduction to the section, elaborated with descriptive and aspirational text rather than a testable textual rule.",
+    "quote": "Make content accessible",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4448c8494bd8",
+    "note": "High-level policy requirement referencing the Digital Service Standard, not a specific rule for textual checking.",
+    "quote": "Australian Government digital services must be usable, inclusive, accessible and responsive.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ae0a78c53487",
+    "note": "Meta-guidance explaining how the Style Manual presents accessibility callouts across other topics.",
+    "quote": "Follow accessibility guidance in context",
+    "reason": "advice"
+   }
+  ],
+  "rules": []
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3452,
+  "output_tokens": 243,
+  "reasoning_tokens": 0
+ }
+}

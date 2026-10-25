@@ -1,0 +1,1573 @@
+{
+ "effort": "low",
+ "input_sha256": "121cdd2ea4dab99531d59cec4dff95a0a751fb7bbd725035923e6431fae31725",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "741f9d44b905",
+    "end": 23,
+    "prefix": "",
+    "quote": "Use respectful language",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping specific rules underneath (G-1).",
+   "reason": "section",
+   "seed_uid": "c32c6e6b9933b794"
+  },
+  {
+   "anchor": {
+    "block_id": "447cb9bfa7dd",
+    "end": 26,
+    "prefix": "",
+    "quote": "People with mental illness",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Section heading grouping specific mental health language rules (G-1).",
+   "reason": "section",
+   "seed_uid": "6a62ef3a51c359af"
+  },
+  {
+   "anchor": {
+    "block_id": "42910c7615d7",
+    "end": 146,
+    "prefix": "",
+    "quote": "Disability does not define people. Neurological differences are a natural part of human diversity. Use inclusive language that respects diversity.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General introductory statement and advice rather than a testable text rule (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9458bf21d9c9",
+    "end": 72,
+    "prefix": "",
+    "quote": "You must design accessible content to meet the Digital Service Standard:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Process and standards guidance for writers and designers (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5dff9e2536f9",
+    "end": 74,
+    "prefix": "",
+    "quote": "You must make all government content accessible to people with disability.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "High-level policy requirement covered by accessibility standards, not a specific text checker rule (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8879bbdc1714",
+    "end": 86,
+    "prefix": "",
+    "quote": "Use respectful and inclusive language that talks to the person – not their difference.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General introductory principle restating person-first advice (G-4, G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4de479f2c7b0",
+    "end": 183,
+    "prefix": "",
+    "quote": "It is important to use the right terms when discussing neurodiversity. Visit the glossary of the National autism strategy 2025–2031for more on inclusive language about neurodiversity.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Workflow advice directing the reader to external guidance (G-5).",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/inclusive-language/disability-and-neurodiversity.md",
+ "page_sha256": "0d390055e1ff36da03456107ed020bf4deb6ac4594bb6e04d210e40f1ff62335",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "741f9d44b905",
+    "note": "Section heading grouping specific rules underneath (G-1).",
+    "quote": "Use respectful language",
+    "reason": "section"
+   },
+   {
+    "block_id": "447cb9bfa7dd",
+    "note": "Section heading grouping specific mental health language rules (G-1).",
+    "quote": "People with mental illness",
+    "reason": "section"
+   },
+   {
+    "block_id": "42910c7615d7",
+    "note": "General introductory statement and advice rather than a testable text rule (G-5).",
+    "quote": "Disability does not define people. Neurological differences are a natural part of human diversity. Use inclusive language that respects diversity.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9458bf21d9c9",
+    "note": "Process and standards guidance for writers and designers (G-5).",
+    "quote": "You must design accessible content to meet the Digital Service Standard:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5dff9e2536f9",
+    "note": "High-level policy requirement covered by accessibility standards, not a specific text checker rule (G-5).",
+    "quote": "You must make all government content accessible to people with disability.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8879bbdc1714",
+    "note": "General introductory principle restating person-first advice (G-4, G-5).",
+    "quote": "Use respectful and inclusive language that talks to the person – not their difference.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4de479f2c7b0",
+    "note": "Workflow advice directing the reader to external guidance (G-5).",
+    "quote": "It is important to use the right terms when discussing neurodiversity. Visit the glossary of the National autism strategy 2025–2031for more on inclusive language about neurodiversity.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "add5c80c5b8e",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Mention disability only when it’s relevant to the content.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "mentioning a person's disability when it is not relevant to the content",
+    "when": [],
+    "why": "G-5 vs actionable text property: this directly restricts when disability mentions may appear."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "58b4be84015f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "20f8cfefb240",
+      "quote": "When you are writing about people with disability, focus on the person."
+     },
+     {
+      "block_id": "c1ea86978b4e",
+      "quote": "Use person-first language when you don’t understand individual or community preferences."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Example of person-first language.",
+      "parts": [
+       {
+        "block_id": "5d7fc8ca3995",
+        "quote": "people with disability"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Example of identity-first language without user research preference.",
+      "parts": [
+       {
+        "block_id": "51520b1fd73a",
+        "quote": "disabled person"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use person-first language for Australian Government content, unless user research says otherwise.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using identity-first disability language (e.g. 'disabled person') instead of person-first language (e.g. 'people with disability')",
+    "when": [
+     "User research or community/individual preference indicates a preference for identity-first language."
+    ],
+    "why": "G-2, G-4: Consolidated general person-first mandate and restatements into one rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "65d248280d3a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c7a2288a7952",
+      "quote": "Terms should not identify people without an understanding of personal preference."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uncountable noun usage.",
+      "parts": [
+       {
+        "block_id": "3e3d6f6fc956",
+        "quote": "person with disability"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful person-first phrasing.",
+      "parts": [
+       {
+        "block_id": "98e8613ee58c",
+        "quote": "person who is deaf or hard of hearing"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful person-first phrasing.",
+      "parts": [
+       {
+        "block_id": "d902d84faff4",
+        "quote": "person who is blind or has low vision"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful phrasing with uncountable 'disability'.",
+      "parts": [
+       {
+        "block_id": "31465120a84c",
+        "quote": "person living with disability"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful mental health terms.",
+      "parts": [
+       {
+        "block_id": "d1108b435e60",
+        "quote": "person with mental illness, person with psychosocial disability, person with a psychiatric condition"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful cognitive/developmental terms.",
+      "parts": [
+       {
+        "block_id": "c514365daaa1",
+        "quote": "person with intellectual disability, person with developmental disability"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful learning disability phrasing.",
+      "parts": [
+       {
+        "block_id": "842d3df44835",
+        "quote": "person with learning disability"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful cognitive phrasing.",
+      "parts": [
+       {
+        "block_id": "adedcaf9cd69",
+        "quote": "person with cognitive disability"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful mobility phrasing.",
+      "parts": [
+       {
+        "block_id": "7bc91dcdd905",
+        "quote": "person who uses a wheelchair or mobility device"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful mobility phrasing.",
+      "parts": [
+       {
+        "block_id": "d373aab56c4d",
+        "quote": "person with reduced mobility"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Respectful physical disability phrasing.",
+      "parts": [
+       {
+        "block_id": "7a0b7d4453d2",
+        "quote": "person with physical disability"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Standard respectful terminology.",
+      "parts": [
+       {
+        "block_id": "5fe6cf333900",
+        "quote": "accessible parking"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'disability' as a countable noun.",
+      "parts": [
+       {
+        "block_id": "962cb08e026b",
+        "quote": "person with a disability"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Outdated, offensive adjective.",
+      "parts": [
+       {
+        "block_id": "710942dedcc2",
+        "quote": "handicapped person"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Outdated terminology.",
+      "parts": [
+       {
+        "block_id": "23e1403e97c4",
+        "quote": "handicapped parking"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Offensive terminology.",
+      "parts": [
+       {
+        "block_id": "96628238e9d1",
+        "quote": "crippled"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Offensive terminology.",
+      "parts": [
+       {
+        "block_id": "409b5437e964",
+        "quote": "invalid"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Disparaging terminology.",
+      "parts": [
+       {
+        "block_id": "2c30e5363a00",
+        "quote": "incapacitated"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Disparaging terminology.",
+      "parts": [
+       {
+        "block_id": "75560f07fedc",
+        "quote": "mad"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Outdated terminology.",
+      "parts": [
+       {
+        "block_id": "22f883932c4a",
+        "quote": "mute"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Offensive terminology.",
+      "parts": [
+       {
+        "block_id": "7044a8413cf3",
+        "quote": "deaf and dumb"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Adjective defining person.",
+      "parts": [
+       {
+        "block_id": "89fbeb6488e9",
+        "quote": "deaf person"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Adjective defining person.",
+      "parts": [
+       {
+        "block_id": "b60b7b45afd0",
+        "quote": "blind person"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Deficiency-focused phrasing.",
+      "parts": [
+       {
+        "block_id": "57a130a983d1",
+        "quote": "person without sight"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using the disability as an adjective that defines the person, unless that is their preference. Use the word ‘disability’ as an uncountable noun.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'disability' as a countable noun (such as 'a disability') or using disability terms as modifying adjectives defining a person without preference",
+    "when": [
+     "The individual or community indicates preference for adjectival or identity-first terms."
+    ],
+    "why": "G-2, G-4, E-2: Covers respectful person-first terminology rules and uncountable usage of 'disability'."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6c7a225e4336",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t say a person is inspirational only because of their disability.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "characterising someone as inspirational solely on the basis of having a disability",
+    "when": [],
+    "why": "G-2: Standalone prohibition against inspiration porn / patronising framing."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5d398c2c4856",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t write about people as if they are heroes or victims.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "framing people with disability as heroes or victims",
+    "when": [],
+    "why": "G-2: Standalone prohibition against patronising hero/victim framing."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f4c4402cc7de",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid euphemisms and made-up terms, such as ‘differently abled’ and ‘handicapable’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using patronising euphemisms or made-up terms such as 'differently abled' or 'handicapable' for disability",
+    "when": [],
+    "why": "G-2: Prohibits specific condescending euphemisms."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b00f833bb6f8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "08b3f82c2439",
+      "quote": "‘person without disability’ – rather than ‘able-bodied’"
+     },
+     {
+      "block_id": "9c95c6acfae2",
+      "quote": "‘sighted person’ for someone who is not blind"
+     },
+     {
+      "block_id": "99cf405e31a1",
+      "quote": "‘hearing person’ for someone who is not deaf."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "PREFER",
+    "quote": "When you are making comparisons, write:\n\n* ‘person without disability’ – rather than ‘able-bodied’\n* ‘sighted person’ for someone who is not blind\n* ‘hearing person’ for someone who is not deaf.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'able-bodied' instead of 'person without disability' when making comparisons",
+    "when": [
+     "Making comparisons between people with and without disability."
+    ],
+    "why": "E-3, G-2: Lead-in and list items form one rule defining preferred comparison terms."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "246ab596a24b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Acceptable terms include ‘person who is blind’ and ‘person who has low vision’. Don’t write ‘the blind’ or ‘person without sight’.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'the blind' or 'person without sight'",
+    "when": [],
+    "why": "Specific terminology rule for referring to people who are blind or have low vision."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5f1ee5039ac4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "e73885c00341",
+      "quote": "Refer to someone with hearing loss as a ‘person who is deaf or hard of hearing’."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "The World Federation of the Deaf disapproves of the term ‘hearing impaired’ as it describes people as if they have a deficiency.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using the term 'hearing impaired' instead of 'person who is deaf or hard of hearing'",
+    "when": [],
+    "why": "G-4: Prohibition of 'hearing impaired' and instruction on preferred alternative."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a7caa0970f27",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Compliant person-first mental health phrasing.",
+      "parts": [
+       {
+        "block_id": "83f1ae5e440c",
+        "quote": "people with mental illness"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Compliant person-first mental health phrasing.",
+      "parts": [
+       {
+        "block_id": "8c0d8461b5df",
+        "quote": "people with mental ill-health"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Violating collective nominal phrase.",
+      "parts": [
+       {
+        "block_id": "43c5526d5d69",
+        "quote": "the mentally ill"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use people-first language when you refer to a person with mental illness.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using collective nominal phrases (e.g. 'the mentally ill') rather than person-first language for mental illness",
+    "when": [],
+    "why": "G-2, E-2: Person-first rule specific to mental illness with its own dedicated examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "90db78ca2543",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Describing the person as having the illness.",
+      "parts": [
+       {
+        "block_id": "0fecca20b196",
+        "quote": "Rupert has schizophrenia."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Describing the person as having the illness.",
+      "parts": [
+       {
+        "block_id": "a1060e3f3ffa",
+        "quote": "Alice has depression."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Describing the person as having the illness.",
+      "parts": [
+       {
+        "block_id": "1f405d7afb53",
+        "quote": "Lu has bipolar disorder."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Describing the person as being the disease.",
+      "parts": [
+       {
+        "block_id": "e9a0ed29893d",
+        "quote": "Rupert is a schizophrenic."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Describing the person as being the disease.",
+      "parts": [
+       {
+        "block_id": "e72d3890f128",
+        "quote": "Alice is a depressive."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Describing the person as being the disease.",
+      "parts": [
+       {
+        "block_id": "7c21d4d6c34f",
+        "quote": "Lu is bipolar."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Describe the person as ‘having’ mental illness, just as you would for any other illness or injury. Don’t describe the person as ‘being’ a disease.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "describing a person as 'being' a disease or mental illness (e.g. 'Rupert is a schizophrenic', 'Lu is bipolar') rather than 'having' the illness (e.g. 'Rupert has schizophrenia')",
+    "when": [],
+    "why": "G-2, E-2: Standalone grammatical rule contrasting 'having' an illness with 'being' an illness."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "When you are making comparisons, write:\n\n* ‘person without disability’ – rather than ‘able-bodied’\n* ‘sighted person’ for someone who is not blind\n* ‘hearing person’ for someone who is not deaf.",
+   "what": "rule",
+   "why": "not found exactly once in block b00f833bb6f8"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "add5c80c5b8e",
+    "end": 58,
+    "prefix": "",
+    "quote": "Mention disability only when it’s relevant to the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "mentioning a person's disability when it is not relevant to the content"
+   },
+   "when": [],
+   "why": "G-5 vs actionable text property: this directly restricts when disability mentions may appear."
+  },
+  {
+   "anchor": {
+    "block_id": "58b4be84015f",
+    "end": 97,
+    "prefix": "",
+    "quote": "Use person-first language for Australian Government content, unless user research says otherwise.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "20f8cfefb240",
+     "end": 71,
+     "prefix": "",
+     "quote": "When you are writing about people with disability, focus on the person.",
+     "start": 0,
+     "suffix": " Engage with people through user"
+    },
+    {
+     "block_id": "c1ea86978b4e",
+     "end": 88,
+     "prefix": "",
+     "quote": "Use person-first language when you don’t understand individual or community preferences.",
+     "start": 0,
+     "suffix": " Describe the person and then th"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Example of person-first language.",
+     "parts": [
+      {
+       "block_id": "5d7fc8ca3995",
+       "end": 22,
+       "prefix": "",
+       "quote": "people with disability",
+       "start": 0,
+       "suffix": " [Person-first language]"
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Example of identity-first language without user research preference.",
+     "parts": [
+      {
+       "block_id": "51520b1fd73a",
+       "end": 15,
+       "prefix": "",
+       "quote": "disabled person",
+       "start": 0,
+       "suffix": " [Identity-first language]"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using identity-first disability language (e.g. 'disabled person') instead of person-first language (e.g. 'people with disability')"
+   },
+   "when": [
+    "User research or community/individual preference indicates a preference for identity-first language."
+   ],
+   "why": "G-2, G-4: Consolidated general person-first mandate and restatements into one rule."
+  },
+  {
+   "anchor": {
+    "block_id": "65d248280d3a",
+    "end": 150,
+    "prefix": "",
+    "quote": "Avoid using the disability as an adjective that defines the person, unless that is their preference. Use the word ‘disability’ as an uncountable noun.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c7a2288a7952",
+     "end": 81,
+     "prefix": "",
+     "quote": "Terms should not identify people without an understanding of personal preference.",
+     "start": 0,
+     "suffix": " For example, many people who ar"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uncountable noun usage.",
+     "parts": [
+      {
+       "block_id": "3e3d6f6fc956",
+       "end": 22,
+       "prefix": "",
+       "quote": "person with disability",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful person-first phrasing.",
+     "parts": [
+      {
+       "block_id": "98e8613ee58c",
+       "end": 37,
+       "prefix": "",
+       "quote": "person who is deaf or hard of hearing",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful person-first phrasing.",
+     "parts": [
+      {
+       "block_id": "d902d84faff4",
+       "end": 37,
+       "prefix": "",
+       "quote": "person who is blind or has low vision",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful phrasing with uncountable 'disability'.",
+     "parts": [
+      {
+       "block_id": "31465120a84c",
+       "end": 29,
+       "prefix": "",
+       "quote": "person living with disability",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful mental health terms.",
+     "parts": [
+      {
+       "block_id": "d1108b435e60",
+       "end": 100,
+       "prefix": "",
+       "quote": "person with mental illness, person with psychosocial disability, person with a psychiatric condition",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful cognitive/developmental terms.",
+     "parts": [
+      {
+       "block_id": "c514365daaa1",
+       "end": 73,
+       "prefix": "",
+       "quote": "person with intellectual disability, person with developmental disability",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful learning disability phrasing.",
+     "parts": [
+      {
+       "block_id": "842d3df44835",
+       "end": 31,
+       "prefix": "",
+       "quote": "person with learning disability",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful cognitive phrasing.",
+     "parts": [
+      {
+       "block_id": "adedcaf9cd69",
+       "end": 32,
+       "prefix": "",
+       "quote": "person with cognitive disability",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful mobility phrasing.",
+     "parts": [
+      {
+       "block_id": "7bc91dcdd905",
+       "end": 47,
+       "prefix": "",
+       "quote": "person who uses a wheelchair or mobility device",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful mobility phrasing.",
+     "parts": [
+      {
+       "block_id": "d373aab56c4d",
+       "end": 28,
+       "prefix": "",
+       "quote": "person with reduced mobility",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Respectful physical disability phrasing.",
+     "parts": [
+      {
+       "block_id": "7a0b7d4453d2",
+       "end": 31,
+       "prefix": "",
+       "quote": "person with physical disability",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Standard respectful terminology.",
+     "parts": [
+      {
+       "block_id": "5fe6cf333900",
+       "end": 18,
+       "prefix": "",
+       "quote": "accessible parking",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses 'disability' as a countable noun.",
+     "parts": [
+      {
+       "block_id": "962cb08e026b",
+       "end": 24,
+       "prefix": "",
+       "quote": "person with a disability",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Outdated, offensive adjective.",
+     "parts": [
+      {
+       "block_id": "710942dedcc2",
+       "end": 18,
+       "prefix": "",
+       "quote": "handicapped person",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Outdated terminology.",
+     "parts": [
+      {
+       "block_id": "23e1403e97c4",
+       "end": 19,
+       "prefix": "",
+       "quote": "handicapped parking",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Offensive terminology.",
+     "parts": [
+      {
+       "block_id": "96628238e9d1",
+       "end": 8,
+       "prefix": "",
+       "quote": "crippled",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Offensive terminology.",
+     "parts": [
+      {
+       "block_id": "409b5437e964",
+       "end": 7,
+       "prefix": "",
+       "quote": "invalid",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Disparaging terminology.",
+     "parts": [
+      {
+       "block_id": "2c30e5363a00",
+       "end": 13,
+       "prefix": "",
+       "quote": "incapacitated",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Disparaging terminology.",
+     "parts": [
+      {
+       "block_id": "75560f07fedc",
+       "end": 3,
+       "prefix": "",
+       "quote": "mad",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Outdated terminology.",
+     "parts": [
+      {
+       "block_id": "22f883932c4a",
+       "end": 4,
+       "prefix": "",
+       "quote": "mute",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Offensive terminology.",
+     "parts": [
+      {
+       "block_id": "7044a8413cf3",
+       "end": 13,
+       "prefix": "",
+       "quote": "deaf and dumb",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Adjective defining person.",
+     "parts": [
+      {
+       "block_id": "89fbeb6488e9",
+       "end": 11,
+       "prefix": "",
+       "quote": "deaf person",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Adjective defining person.",
+     "parts": [
+      {
+       "block_id": "b60b7b45afd0",
+       "end": 12,
+       "prefix": "",
+       "quote": "blind person",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Deficiency-focused phrasing.",
+     "parts": [
+      {
+       "block_id": "57a130a983d1",
+       "end": 20,
+       "prefix": "",
+       "quote": "person without sight",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'disability' as a countable noun (such as 'a disability') or using disability terms as modifying adjectives defining a person without preference"
+   },
+   "when": [
+    "The individual or community indicates preference for adjectival or identity-first terms."
+   ],
+   "why": "G-2, G-4, E-2: Covers respectful person-first terminology rules and uncountable usage of 'disability'."
+  },
+  {
+   "anchor": {
+    "block_id": "6c7a225e4336",
+    "end": 69,
+    "prefix": "",
+    "quote": "Don’t say a person is inspirational only because of their disability.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "characterising someone as inspirational solely on the basis of having a disability"
+   },
+   "when": [],
+   "why": "G-2: Standalone prohibition against inspiration porn / patronising framing."
+  },
+  {
+   "anchor": {
+    "block_id": "5d398c2c4856",
+    "end": 58,
+    "prefix": "",
+    "quote": "Don’t write about people as if they are heroes or victims.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "framing people with disability as heroes or victims"
+   },
+   "when": [],
+   "why": "G-2: Standalone prohibition against patronising hero/victim framing."
+  },
+  {
+   "anchor": {
+    "block_id": "f4c4402cc7de",
+    "end": 83,
+    "prefix": "",
+    "quote": "Avoid euphemisms and made-up terms, such as ‘differently abled’ and ‘handicapable’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using patronising euphemisms or made-up terms such as 'differently abled' or 'handicapable' for disability"
+   },
+   "when": [],
+   "why": "G-2: Prohibits specific condescending euphemisms."
+  },
+  {
+   "anchor": {
+    "block_id": "246ab596a24b",
+    "end": 130,
+    "prefix": "",
+    "quote": "Acceptable terms include ‘person who is blind’ and ‘person who has low vision’. Don’t write ‘the blind’ or ‘person without sight’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using 'the blind' or 'person without sight'"
+   },
+   "when": [],
+   "why": "Specific terminology rule for referring to people who are blind or have low vision."
+  },
+  {
+   "anchor": {
+    "block_id": "5f1ee5039ac4",
+    "end": 128,
+    "prefix": "",
+    "quote": "The World Federation of the Deaf disapproves of the term ‘hearing impaired’ as it describes people as if they have a deficiency.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "e73885c00341",
+     "end": 80,
+     "prefix": "",
+     "quote": "Refer to someone with hearing loss as a ‘person who is deaf or hard of hearing’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using the term 'hearing impaired' instead of 'person who is deaf or hard of hearing'"
+   },
+   "when": [],
+   "why": "G-4: Prohibition of 'hearing impaired' and instruction on preferred alternative."
+  },
+  {
+   "anchor": {
+    "block_id": "a7caa0970f27",
+    "end": 73,
+    "prefix": "",
+    "quote": "Use people-first language when you refer to a person with mental illness.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Compliant person-first mental health phrasing.",
+     "parts": [
+      {
+       "block_id": "83f1ae5e440c",
+       "end": 26,
+       "prefix": "",
+       "quote": "people with mental illness",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Compliant person-first mental health phrasing.",
+     "parts": [
+      {
+       "block_id": "8c0d8461b5df",
+       "end": 29,
+       "prefix": "",
+       "quote": "people with mental ill-health",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Violating collective nominal phrase.",
+     "parts": [
+      {
+       "block_id": "43c5526d5d69",
+       "end": 16,
+       "prefix": "",
+       "quote": "the mentally ill",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "using collective nominal phrases (e.g. 'the mentally ill') rather than person-first language for mental illness"
+   },
+   "when": [],
+   "why": "G-2, E-2: Person-first rule specific to mental illness with its own dedicated examples."
+  },
+  {
+   "anchor": {
+    "block_id": "90db78ca2543",
+    "end": 146,
+    "prefix": "",
+    "quote": "Describe the person as ‘having’ mental illness, just as you would for any other illness or injury. Don’t describe the person as ‘being’ a disease.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Describing the person as having the illness.",
+     "parts": [
+      {
+       "block_id": "0fecca20b196",
+       "end": 25,
+       "prefix": "",
+       "quote": "Rupert has schizophrenia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Describing the person as having the illness.",
+     "parts": [
+      {
+       "block_id": "a1060e3f3ffa",
+       "end": 21,
+       "prefix": "",
+       "quote": "Alice has depression.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Describing the person as having the illness.",
+     "parts": [
+      {
+       "block_id": "1f405d7afb53",
+       "end": 24,
+       "prefix": "",
+       "quote": "Lu has bipolar disorder.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Describing the person as being the disease.",
+     "parts": [
+      {
+       "block_id": "e9a0ed29893d",
+       "end": 26,
+       "prefix": "",
+       "quote": "Rupert is a schizophrenic.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Describing the person as being the disease.",
+     "parts": [
+      {
+       "block_id": "e72d3890f128",
+       "end": 22,
+       "prefix": "",
+       "quote": "Alice is a depressive.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Describing the person as being the disease.",
+     "parts": [
+      {
+       "block_id": "7c21d4d6c34f",
+       "end": 14,
+       "prefix": "",
+       "quote": "Lu is bipolar.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "describing a person as 'being' a disease or mental illness (e.g. 'Rupert is a schizophrenic', 'Lu is bipolar') rather than 'having' the illness (e.g. 'Rupert has schizophrenia')"
+   },
+   "when": [],
+   "why": "G-2, E-2: Standalone grammatical rule contrasting 'having' an illness with 'being' an illness."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 6407,
+  "output_tokens": 5779,
+  "reasoning_tokens": 0
+ }
+}

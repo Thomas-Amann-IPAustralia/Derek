@@ -1,0 +1,1211 @@
+{
+ "effort": "high",
+ "input_sha256": "4ee7adb7c574eef159fd1e49f9a52d0357b1bce2be279ddbcfb7fd27e1e53be3",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "829de156f046",
+    "end": 20,
+    "prefix": "",
+    "quote": "Use forward slashes:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the permitted contexts absorbed into the use restriction; it does not require slashes in every mathematical expression, date or other listed context.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "292d8ad3f1d4",
+    "end": 70,
+    "prefix": "",
+    "quote": "There is no need to include a space on either side of a forward slash.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Body wording supporting the no-space heading, not a second spacing rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ada003e13a99",
+    "end": 114,
+    "prefix": "",
+    "quote": "If you must, include the slash before the line break so that the reader anticipates it as they read the next line.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 fallback condition absorbed into the print line-break rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "18154f552c5e",
+    "end": 77,
+    "prefix": "",
+    "quote": "Don’t use a forward slash as a replacement for an en dash in financial years.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the financial-year heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f60311ef7b07",
+    "end": 63,
+    "prefix": "",
+    "quote": "When showing alternatives, use ‘or’ instead of a forward slash.",
+    "start": 0,
+    "suffix": " This is easier for people to un"
+   },
+   "note": "Restates the alternatives heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "aae835b2e5db",
+    "end": 138,
+    "prefix": "or’, which confuses many users. ",
+    "quote": "Rewrite the sentence to make the meaning clear.",
+    "start": 91,
+    "suffix": ""
+   },
+   "note": "Remediation for ‘and/or’, not an additional independently testable requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16234453b1c5",
+    "end": 29,
+    "prefix": "",
+    "quote": "Don’t join words with a slash",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The qualified body sentence is the rule span; this heading alone would overgeneralise to permitted slash uses.",
+   "reason": "restatement",
+   "seed_uid": "d60fae2bea86b77b"
+  },
+  {
+   "anchor": {
+    "block_id": "d6c6b3abb729",
+    "end": 133,
+    "prefix": "tain their separate identities. ",
+    "quote": "Instead, either use an en dash or reword the sentence.",
+    "start": 79,
+    "suffix": " Forward slashes can make it loo"
+   },
+   "note": "Alternative remedies for the word-joining violation, not a separate finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/forward-slashes.md",
+ "page_sha256": "1895e0bb7b5e0025d917ae67a105480e39ad65dc7939122ae79d3fdbb3751768",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "829de156f046",
+    "note": "Introduces the permitted contexts absorbed into the use restriction; it does not require slashes in every mathematical expression, date or other listed context.",
+    "quote": "Use forward slashes:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "292d8ad3f1d4",
+    "note": "Body wording supporting the no-space heading, not a second spacing rule.",
+    "quote": "There is no need to include a space on either side of a forward slash.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ada003e13a99",
+    "note": "G-2 fallback condition absorbed into the print line-break rule.",
+    "quote": "If you must, include the slash before the line break so that the reader anticipates it as they read the next line.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "18154f552c5e",
+    "note": "Restates the financial-year heading.",
+    "quote": "Don’t use a forward slash as a replacement for an en dash in financial years.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f60311ef7b07",
+    "note": "Restates the alternatives heading.",
+    "quote": "When showing alternatives, use ‘or’ instead of a forward slash.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "aae835b2e5db",
+    "note": "Remediation for ‘and/or’, not an additional independently testable requirement.",
+    "quote": "Rewrite the sentence to make the meaning clear.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "16234453b1c5",
+    "note": "The qualified body sentence is the rule span; this heading alone would overgeneralise to permitted slash uses.",
+    "quote": "Don’t join words with a slash",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d6c6b3abb729",
+    "note": "Alternative remedies for the word-joining violation, not a separate finding.",
+    "quote": "Instead, either use an en dash or reword the sentence.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5e4ab7f29072",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "829de156f046",
+      "quote": "Use forward slashes:"
+     },
+     {
+      "block_id": "d84c6c4be754",
+      "quote": "in some shortened forms"
+     },
+     {
+      "block_id": "bb829845aa8a",
+      "quote": "in mathematical expressions"
+     },
+     {
+      "block_id": "5cdc2cd03a40",
+      "quote": "to present lines of poetry in body text"
+     },
+     {
+      "block_id": "43da85e2fcc5",
+      "quote": "instead of ‘per’, ‘an’ or ‘a’ when abbreviating units of measurement"
+     },
+     {
+      "block_id": "858a951376dc",
+      "quote": "in web addresses"
+     },
+     {
+      "block_id": "84f87524fb34",
+      "quote": "in dates if you can’t write them out – for example, in tables"
+     },
+     {
+      "block_id": "631f7556e900",
+      "quote": "in some place names."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "49d41e3cfdad",
+        "quote": "c/-"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Limit the forward slash to specific uses",
+    "specification": "The page does not exhaustively identify the shortened forms or place names that qualify, or define when a date cannot be written out. Treat this as a residual restriction on slash uses; cite the more specific rules below when they apply.",
+    "unit": "block",
+    "violation_condition": "A forward slash used outside the listed contexts: conventional shortened forms, mathematical expressions, poetry line breaks in body text, abbreviated measurement units, web addresses, dates that cannot be written out, and recognised place names.",
+    "when": [
+     "The listed contexts permit slashes; they do not require slashes in every expression within those contexts.",
+     "Slashes in dates are permitted when the dates cannot be written out, for example in tables.",
+     "Use the specific measurement, financial-year, alternatives, ‘and/or’ and word-joining checks instead when they apply."
+    ],
+    "why": "G-2 keeps the permitted contexts together; G-3 prevents turning each permission into a separate requirement, and the one-finding test gives specific prohibitions precedence."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "43eb823bfcff",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "292d8ad3f1d4",
+      "quote": "There is no need to include a space on either side of a forward slash."
+     },
+     {
+      "block_id": "7f0f5e35c9bf",
+      "quote": "The exceptions are for:"
+     },
+     {
+      "block_id": "71a0f4b9abc4",
+      "quote": "official dual place names"
+     },
+     {
+      "block_id": "6ee4ca950bd9",
+      "quote": "lines of poetry in body text"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t add spaces around most forward slashes",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A space immediately before or after a forward slash outside the stated exceptions.",
+    "when": [
+     "Do not apply this prohibition to official dual place names.",
+     "Do not apply this prohibition to slashes marking poetry line breaks in body text."
+    ],
+    "why": "G-2 keeps the exceptions with the no-space check; the explicit requirement for poetry spacing produces a different, missing-space finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6ee4ca950bd9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "lines of poetry in body text – use forward slashes with spaces around them to show the line breaks.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A slash marking a poetry line break in body text without a separating space on one or both sides.",
+    "when": [
+     "When a forward slash represents a poetry line break in body text."
+    ],
+    "why": "The one-finding test separates missing required poetry spacing from the general prohibition on extra spaces."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ae7b13b50773",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "ada003e13a99",
+      "quote": "If you must, include the slash before the line break so that the reader anticipates it as they read the next line."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "As far as possible, avoid using forward slashes either side of a line break.",
+    "specification": "The page does not define when adjacency to a line break is unavoidable. Assessing this qualification requires print-layout information.",
+    "unit": "block",
+    "violation_condition": "A forward slash directly beside an avoidable print line break, or a slash placed after the line break when the split is unavoidable.",
+    "when": [
+     "For print layouts.",
+     "If the slash must be beside a line break, put it before the break rather than at the start of the next line."
+    ],
+    "why": "G-2 keeps the fallback placement condition with the line-break restriction rather than creating overlapping findings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "12b761b580f0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "43da85e2fcc5",
+      "quote": "instead of ‘per’, ‘an’ or ‘a’ when abbreviating units of measurement"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b1e08eb34bad",
+        "quote": "60 km/h"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write shortened units of measurement with a forward slash",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A measurement rate expressed using shortened unit names but lacking the forward slash representing ‘per’, ‘an’ or ‘a’.",
+    "when": [
+     "When shortened units express a rate or division relationship.",
+     "A single abbreviated unit does not require a slash merely because it is abbreviated."
+    ],
+    "why": "The one-finding test separates a missing slash in abbreviated rates from a prohibited slash with spelt-out units."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "38cbf5ca7121",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bf3dcb7d6cb7",
+        "quote": "60 kilometres per hour"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2afd216ceb89",
+        "quote": "60 kilometres/hour"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use forward slashes when spelling out units of measurement.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A forward slash used as the separator in a measurement rate whose unit names are spelt out.",
+    "when": [
+     "When unit names are spelt out rather than shortened."
+    ],
+    "why": "This is not a restatement of the heading: it prohibits a present slash, while the heading requires a missing one; E-2 attaches the spelt-out-unit examples here."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "56efa2183239",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "18154f552c5e",
+      "quote": "Don’t use a forward slash as a replacement for an en dash in financial years."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "de81b5843bfc",
+        "quote": "2019–20"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8dffcd04d3ff",
+        "quote": "2019/20"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Use an en dash for financial years, not a slash",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A forward slash separating the years in a financial-year expression.",
+    "when": [
+     "When the expression denotes a financial year."
+    ],
+    "why": "G-4 consolidates the heading and its body restatement into one financial-year separator check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f8332428ac67",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f60311ef7b07",
+      "quote": "When showing alternatives, use ‘or’ instead of a forward slash."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8d20f64b6c31",
+        "quote": "a yes or no question"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0bacab4f30c7",
+        "quote": "a yes/no question"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write ‘or’ instead of a slash for alternatives",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A forward slash used between alternatives in place of the word ‘or’.",
+    "when": [
+     "When the slash represents a choice between alternatives.",
+     "Use the separate explicit prohibition for the fixed form ‘and/or’."
+    ],
+    "why": "G-4 merges the heading and restatement; the one-finding test avoids also reporting ‘and/or’ under this general check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "aae835b2e5db",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "aae835b2e5db",
+      "quote": "Rewrite the sentence to make the meaning clear."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not use ‘and/or’in text.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "The expression ‘and/or’ used in text.",
+    "when": [],
+    "why": "This is a distinct fixed-form prohibition; G-5 treats the rewriting instruction as remediation rather than another finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d6c6b3abb729",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "16234453b1c5",
+      "quote": "Don’t join words with a slash"
+     },
+     {
+      "block_id": "d6c6b3abb729",
+      "quote": "Instead, either use an en dash or reword the sentence."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c4831d5593df",
+        "quote": "a Sydney–Brisbane flight"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "31f3a844bc7e",
+        "quote": "a Sydney to Brisbane flight"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d450e7c4ad0d",
+        "quote": "a Sydney/Brisbane flight"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a forward slash between words that retain their separate identities.",
+    "specification": "Interpret ‘retain their separate identities’ as paired terms expressing a relationship, such as the endpoints of a flight. Do not extend the broad heading to permitted uses such as web addresses, conventional shortened forms, measurement rates or official dual place names.",
+    "unit": "phrase",
+    "violation_condition": "A forward slash joining distinct words to express a relationship or connection, rather than an alternative or another permitted slash use.",
+    "when": [
+     "When joining distinct words to express a connection rather than offering alternatives."
+    ],
+    "why": "G-4 selects the qualified body sentence over the broader heading; the alternative treatments remedy the same finding."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "5e4ab7f29072",
+    "end": 40,
+    "prefix": "",
+    "quote": "Limit the forward slash to specific uses",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "829de156f046",
+     "end": 20,
+     "prefix": "",
+     "quote": "Use forward slashes:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d84c6c4be754",
+     "end": 23,
+     "prefix": "",
+     "quote": "in some shortened forms",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bb829845aa8a",
+     "end": 27,
+     "prefix": "",
+     "quote": "in mathematical expressions",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5cdc2cd03a40",
+     "end": 39,
+     "prefix": "",
+     "quote": "to present lines of poetry in body text",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "43da85e2fcc5",
+     "end": 68,
+     "prefix": "",
+     "quote": "instead of ‘per’, ‘an’ or ‘a’ when abbreviating units of measurement",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "858a951376dc",
+     "end": 16,
+     "prefix": "",
+     "quote": "in web addresses",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "84f87524fb34",
+     "end": 61,
+     "prefix": "",
+     "quote": "in dates if you can’t write them out – for example, in tables",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "631f7556e900",
+     "end": 20,
+     "prefix": "",
+     "quote": "in some place names.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "49d41e3cfdad",
+       "end": 3,
+       "prefix": "",
+       "quote": "c/-",
+       "start": 0,
+       "suffix": " [for ‘care of’ in postal addres"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "5375766b01fbf4a3",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page does not exhaustively identify the shortened forms or place names that qualify, or define when a date cannot be written out. Treat this as a residual restriction on slash uses; cite the more specific rules below when they apply.",
+    "unit": "block",
+    "violation_condition": "A forward slash used outside the listed contexts: conventional shortened forms, mathematical expressions, poetry line breaks in body text, abbreviated measurement units, web addresses, dates that cannot be written out, and recognised place names."
+   },
+   "when": [
+    "The listed contexts permit slashes; they do not require slashes in every expression within those contexts.",
+    "Slashes in dates are permitted when the dates cannot be written out, for example in tables.",
+    "Use the specific measurement, financial-year, alternatives, ‘and/or’ and word-joining checks instead when they apply."
+   ],
+   "why": "G-2 keeps the permitted contexts together; G-3 prevents turning each permission into a separate requirement, and the one-finding test gives specific prohibitions precedence."
+  },
+  {
+   "anchor": {
+    "block_id": "43eb823bfcff",
+    "end": 44,
+    "prefix": "",
+    "quote": "Don’t add spaces around most forward slashes",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "292d8ad3f1d4",
+     "end": 70,
+     "prefix": "",
+     "quote": "There is no need to include a space on either side of a forward slash.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "7f0f5e35c9bf",
+     "end": 23,
+     "prefix": "",
+     "quote": "The exceptions are for:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "71a0f4b9abc4",
+     "end": 25,
+     "prefix": "",
+     "quote": "official dual place names",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6ee4ca950bd9",
+     "end": 28,
+     "prefix": "",
+     "quote": "lines of poetry in body text",
+     "start": 0,
+     "suffix": " – use forward slashes with spac"
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "0700dec6d99ab19d",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A space immediately before or after a forward slash outside the stated exceptions."
+   },
+   "when": [
+    "Do not apply this prohibition to official dual place names.",
+    "Do not apply this prohibition to slashes marking poetry line breaks in body text."
+   ],
+   "why": "G-2 keeps the exceptions with the no-space check; the explicit requirement for poetry spacing produces a different, missing-space finding."
+  },
+  {
+   "anchor": {
+    "block_id": "6ee4ca950bd9",
+    "end": 99,
+    "prefix": "",
+    "quote": "lines of poetry in body text – use forward slashes with spaces around them to show the line breaks.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A slash marking a poetry line break in body text without a separating space on one or both sides."
+   },
+   "when": [
+    "When a forward slash represents a poetry line break in body text."
+   ],
+   "why": "The one-finding test separates missing required poetry spacing from the general prohibition on extra spaces."
+  },
+  {
+   "anchor": {
+    "block_id": "ae7b13b50773",
+    "end": 76,
+    "prefix": "",
+    "quote": "As far as possible, avoid using forward slashes either side of a line break.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "ada003e13a99",
+     "end": 114,
+     "prefix": "",
+     "quote": "If you must, include the slash before the line break so that the reader anticipates it as they read the next line.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page does not define when adjacency to a line break is unavoidable. Assessing this qualification requires print-layout information.",
+    "unit": "block",
+    "violation_condition": "A forward slash directly beside an avoidable print line break, or a slash placed after the line break when the split is unavoidable."
+   },
+   "when": [
+    "For print layouts.",
+    "If the slash must be beside a line break, put it before the break rather than at the start of the next line."
+   ],
+   "why": "G-2 keeps the fallback placement condition with the line-break restriction rather than creating overlapping findings."
+  },
+  {
+   "anchor": {
+    "block_id": "12b761b580f0",
+    "end": 57,
+    "prefix": "",
+    "quote": "Write shortened units of measurement with a forward slash",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "43da85e2fcc5",
+     "end": 68,
+     "prefix": "",
+     "quote": "instead of ‘per’, ‘an’ or ‘a’ when abbreviating units of measurement",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b1e08eb34bad",
+       "end": 7,
+       "prefix": "",
+       "quote": "60 km/h",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "b6003cfb2d11339e",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A measurement rate expressed using shortened unit names but lacking the forward slash representing ‘per’, ‘an’ or ‘a’."
+   },
+   "when": [
+    "When shortened units express a rate or division relationship.",
+    "A single abbreviated unit does not require a slash merely because it is abbreviated."
+   ],
+   "why": "The one-finding test separates a missing slash in abbreviated rates from a prohibited slash with spelt-out units."
+  },
+  {
+   "anchor": {
+    "block_id": "38cbf5ca7121",
+    "end": 65,
+    "prefix": "",
+    "quote": "Don’t use forward slashes when spelling out units of measurement.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bf3dcb7d6cb7",
+       "end": 22,
+       "prefix": "",
+       "quote": "60 kilometres per hour",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2afd216ceb89",
+       "end": 18,
+       "prefix": "",
+       "quote": "60 kilometres/hour",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A forward slash used as the separator in a measurement rate whose unit names are spelt out."
+   },
+   "when": [
+    "When unit names are spelt out rather than shortened."
+   ],
+   "why": "This is not a restatement of the heading: it prohibits a present slash, while the heading requires a missing one; E-2 attaches the spelt-out-unit examples here."
+  },
+  {
+   "anchor": {
+    "block_id": "56efa2183239",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use an en dash for financial years, not a slash",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "18154f552c5e",
+     "end": 77,
+     "prefix": "",
+     "quote": "Don’t use a forward slash as a replacement for an en dash in financial years.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "de81b5843bfc",
+       "end": 7,
+       "prefix": "",
+       "quote": "2019–20",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8dffcd04d3ff",
+       "end": 7,
+       "prefix": "",
+       "quote": "2019/20",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "6be57eaf1936d8b2",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A forward slash separating the years in a financial-year expression."
+   },
+   "when": [
+    "When the expression denotes a financial year."
+   ],
+   "why": "G-4 consolidates the heading and its body restatement into one financial-year separator check."
+  },
+  {
+   "anchor": {
+    "block_id": "f8332428ac67",
+    "end": 46,
+    "prefix": "",
+    "quote": "Write ‘or’ instead of a slash for alternatives",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f60311ef7b07",
+     "end": 63,
+     "prefix": "",
+     "quote": "When showing alternatives, use ‘or’ instead of a forward slash.",
+     "start": 0,
+     "suffix": " This is easier for people to un"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8d20f64b6c31",
+       "end": 20,
+       "prefix": "",
+       "quote": "a yes or no question",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0bacab4f30c7",
+       "end": 17,
+       "prefix": "",
+       "quote": "a yes/no question",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "d8e53d4ffbc5b988",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A forward slash used between alternatives in place of the word ‘or’."
+   },
+   "when": [
+    "When the slash represents a choice between alternatives.",
+    "Use the separate explicit prohibition for the fixed form ‘and/or’."
+   ],
+   "why": "G-4 merges the heading and restatement; the one-finding test avoids also reporting ‘and/or’ under this general check."
+  },
+  {
+   "anchor": {
+    "block_id": "aae835b2e5db",
+    "end": 27,
+    "prefix": "",
+    "quote": "Do not use ‘and/or’in text.",
+    "start": 0,
+    "suffix": " It could mean either ‘and’ or ‘"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "aae835b2e5db",
+     "end": 138,
+     "prefix": "or’, which confuses many users. ",
+     "quote": "Rewrite the sentence to make the meaning clear.",
+     "start": 91,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "The expression ‘and/or’ used in text."
+   },
+   "when": [],
+   "why": "This is a distinct fixed-form prohibition; G-5 treats the rewriting instruction as remediation rather than another finding."
+  },
+  {
+   "anchor": {
+    "block_id": "d6c6b3abb729",
+    "end": 78,
+    "prefix": "",
+    "quote": "Don’t use a forward slash between words that retain their separate identities.",
+    "start": 0,
+    "suffix": " Instead, either use an en dash "
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "16234453b1c5",
+     "end": 29,
+     "prefix": "",
+     "quote": "Don’t join words with a slash",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d6c6b3abb729",
+     "end": 133,
+     "prefix": "tain their separate identities. ",
+     "quote": "Instead, either use an en dash or reword the sentence.",
+     "start": 79,
+     "suffix": " Forward slashes can make it loo"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c4831d5593df",
+       "end": 24,
+       "prefix": "",
+       "quote": "a Sydney–Brisbane flight",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "31f3a844bc7e",
+       "end": 27,
+       "prefix": "",
+       "quote": "a Sydney to Brisbane flight",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d450e7c4ad0d",
+       "end": 24,
+       "prefix": "",
+       "quote": "a Sydney/Brisbane flight",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Interpret ‘retain their separate identities’ as paired terms expressing a relationship, such as the endpoints of a flight. Do not extend the broad heading to permitted uses such as web addresses, conventional shortened forms, measurement rates or official dual place names.",
+    "unit": "phrase",
+    "violation_condition": "A forward slash joining distinct words to express a relationship or connection, rather than an alternative or another permitted slash use."
+   },
+   "when": [
+    "When joining distinct words to express a connection rather than offering alternatives."
+   ],
+   "why": "G-4 selects the qualified body sentence over the broader heading; the alternative treatments remedy the same finding."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4351,
+  "output_tokens": 15804,
+  "reasoning_tokens": 11912
+ }
+}

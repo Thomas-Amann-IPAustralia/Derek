@@ -1,0 +1,626 @@
+{
+ "effort": "low",
+ "input_sha256": "10d44d8be00951934924af18c9a1b1016d8bf4f27ea555bc421ce0932bc431dc",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "dbac63ee1136",
+    "end": 143,
+    "prefix": "",
+    "quote": "Ellipses show users that ideas or words are missing from a sentence or a quote. Don’t use ellipses to change the intent of the original source.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory summary explaining what ellipses do and general authorial guidance not to change intent (reiterated in the final section).",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ae6184ed44a8",
+    "end": 41,
+    "prefix": "",
+    "quote": "Show missing words or ideas with ellipses",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: Section heading defining the general role and function of ellipses.",
+   "reason": "section",
+   "seed_uid": "1701363e5346a625"
+  },
+  {
+   "anchor": {
+    "block_id": "3816f660cb77",
+    "end": 66,
+    "prefix": "",
+    "quote": "The ellipsis (plural ‘ellipses’) is a character of exactly 3 dots.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Descriptive definition of what an ellipsis is.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "33c0ae60ef07",
+    "end": 17,
+    "prefix": "",
+    "quote": "Use the ellipsis:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in explaining standard English grammatical usage of ellipses.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "54df726eca16",
+    "end": 106,
+    "prefix": "",
+    "quote": "If a paragraph or more is omitted from a block quotation, you can place the ellipsis on a line of its own.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: Permissive ('you can place...') formatting option for omitted paragraphs in block quotations.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6a7dd4f7f8d6",
+    "end": 51,
+    "prefix": "",
+    "quote": "Don’t change the original intent of quoted material",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: Substantive editorial/journalistic advice to the writer; impossible for a mechanical checker to detect without semantic intent analysis against external sources.",
+   "reason": "advice",
+   "seed_uid": "b47d928ba3a06465"
+  },
+  {
+   "anchor": {
+    "block_id": "c703e0f65f27",
+    "end": 179,
+    "prefix": "",
+    "quote": "Use ellipses sparingly. Overusing ellipses can lead to a suspicion that you are misquoting. Don’t leave out important details or change the original intent of the quoted material.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: Editorial guidance for authors regarding credibility and accurate representation of sources.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/ellipses.md",
+ "page_sha256": "8b77c6fc02d454c64ad5a099e760674ca04d59f3273b924b8943563331e205b0",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "dbac63ee1136",
+    "note": "Introductory summary explaining what ellipses do and general authorial guidance not to change intent (reiterated in the final section).",
+    "quote": "Ellipses show users that ideas or words are missing from a sentence or a quote. Don’t use ellipses to change the intent of the original source.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ae6184ed44a8",
+    "note": "G-1: Section heading defining the general role and function of ellipses.",
+    "quote": "Show missing words or ideas with ellipses",
+    "reason": "section"
+   },
+   {
+    "block_id": "3816f660cb77",
+    "note": "Descriptive definition of what an ellipsis is.",
+    "quote": "The ellipsis (plural ‘ellipses’) is a character of exactly 3 dots.",
+    "reason": "description"
+   },
+   {
+    "block_id": "33c0ae60ef07",
+    "note": "Lead-in explaining standard English grammatical usage of ellipses.",
+    "quote": "Use the ellipsis:",
+    "reason": "description"
+   },
+   {
+    "block_id": "54df726eca16",
+    "note": "G-3: Permissive ('you can place...') formatting option for omitted paragraphs in block quotations.",
+    "quote": "If a paragraph or more is omitted from a block quotation, you can place the ellipsis on a line of its own.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6a7dd4f7f8d6",
+    "note": "G-5: Substantive editorial/journalistic advice to the writer; impossible for a mechanical checker to detect without semantic intent analysis against external sources.",
+    "quote": "Don’t change the original intent of quoted material",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c703e0f65f27",
+    "note": "G-5: Editorial guidance for authors regarding credibility and accurate representation of sources.",
+    "quote": "Use ellipses sparingly. Overusing ellipses can lead to a suspicion that you are misquoting. Don’t leave out important details or change the original intent of the quoted material.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "885c672af89d",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "885c672af89d",
+      "quote": "Use the same font as the surrounding text."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Compliant quotation with '[ellipsis in original]' noting that the ellipsis was in the source text.",
+      "parts": [
+       {
+        "block_id": "8c360a9cc4e6",
+        "quote": "The minister wrote, ‘The policy settings were … comprehensive’ [ellipsis in original]."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "If there is an ellipsis in the original text you’re quoting, add the phrase ‘ellipsis in original’ in square brackets after the quote.",
+    "specification": "When quoting text that contains an ellipsis in the source, '[ellipsis in original]' must appear in square brackets after the quotation in the same font.",
+    "unit": "sentence",
+    "violation_condition": "a quotation containing an ellipsis that appeared in the original source without '[ellipsis in original]' following the quote",
+    "when": [
+     "The text quoted contains an ellipsis in the original source."
+    ],
+    "why": "Specific, actionable punctuation convention for quoting sources containing ellipses (G-2)."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "95eacc91c328",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1b450a1e0dcd",
+      "quote": "You can use a question mark or exclamation mark after an ellipsis if necessary."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No full stop after the ellipsis before starting the next sentence.",
+      "parts": [
+       {
+        "block_id": "39f93b23f643",
+        "quote": "The review clarified that the Army might have to fight on home ground … To be properly equipped, the Army needs a new troop carrier."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Compliant use of an exclamation mark after an ellipsis.",
+      "parts": [
+       {
+        "block_id": "24ec3de0a5fd",
+        "quote": "I’ve written hundreds of reports: annual reports, white papers …!"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use a full stop, comma or semicolon after an ellipsis.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an ellipsis directly followed by a full stop, comma, or semicolon",
+    "when": [
+     "Question marks and exclamation marks are permitted after an ellipsis if necessary."
+    ],
+    "why": "G-2, G-3: Prohibits full stops, commas, or semicolons after an ellipsis; absorbs the permission allowing question/exclamation marks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3a5fccdb051c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "50160515d2b2",
+      "quote": "Do not use a string of full stops"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Use the symbol for the ellipsis. Don’t use a string of full stops.",
+    "specification": "",
+    "unit": "character",
+    "violation_condition": "a sequence of three or more consecutive full stops/periods used instead of the single ellipsis character (U+2026)",
+    "when": [],
+    "why": "G-4: Body restates the heading with the specific instruction to use the ellipsis character rather than typed periods."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8541a1afae4c",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "b6ca6f2d0480",
+      "quote": "Add spaces around ellipses"
+     },
+     {
+      "block_id": "8caeb6ab6c81",
+      "quote": "The exception to this rule is if the quote ends in an exclamation mark or question mark. Include the final punctuation mark after the ellipsis. Don’t include a space between the punctuation and the ellipsis."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Single space before and after the ellipsis.",
+      "parts": [
+       {
+        "block_id": "ba1655c301d5",
+        "quote": "The evaluation concluded, ‘The report is well written, but it needs … more work.’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Missing spaces before and after the ellipsis.",
+      "parts": [
+       {
+        "block_id": "4b3ced660a2a",
+        "quote": "The evaluation concluded, ‘The report is well written, but it needs…more work.’"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "Space before the ellipsis at the end of a clause/sentence.",
+      "parts": [
+       {
+        "block_id": "44309ebc25bc",
+        "quote": "The evaluation concluded, ‘The report is well written, but …’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "No space before the ellipsis.",
+      "parts": [
+       {
+        "block_id": "063e0943df5f",
+        "quote": "The evaluation concluded, ‘The report is well written, but…’"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "No space between the ellipsis and the final question mark.",
+      "parts": [
+       {
+        "block_id": "9bfa11d188fc",
+        "quote": "He asked, ‘What does the Army do during exercises …?’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "Use a single space before and after each ellipsis.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an ellipsis lacking a space before it or after it, except when immediately followed by a closing quotation mark preceded by an exclamation mark or question mark",
+    "when": [
+     "If the quote ends in an exclamation mark or question mark, place the punctuation mark directly after the ellipsis with no space between them."
+    ],
+    "why": "G-2, G-4: Rule specifies spacing around ellipses and absorbs its exception regarding trailing exclamation/question marks."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "885c672af89d",
+    "end": 134,
+    "prefix": "",
+    "quote": "If there is an ellipsis in the original text you’re quoting, add the phrase ‘ellipsis in original’ in square brackets after the quote.",
+    "start": 0,
+    "suffix": " Use the same font as the surrou"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "885c672af89d",
+     "end": 177,
+     "prefix": "quare brackets after the quote. ",
+     "quote": "Use the same font as the surrounding text.",
+     "start": 135,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Compliant quotation with '[ellipsis in original]' noting that the ellipsis was in the source text.",
+     "parts": [
+      {
+       "block_id": "8c360a9cc4e6",
+       "end": 86,
+       "prefix": "",
+       "quote": "The minister wrote, ‘The policy settings were … comprehensive’ [ellipsis in original].",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "When quoting text that contains an ellipsis in the source, '[ellipsis in original]' must appear in square brackets after the quotation in the same font.",
+    "unit": "sentence",
+    "violation_condition": "a quotation containing an ellipsis that appeared in the original source without '[ellipsis in original]' following the quote"
+   },
+   "when": [
+    "The text quoted contains an ellipsis in the original source."
+   ],
+   "why": "Specific, actionable punctuation convention for quoting sources containing ellipses (G-2)."
+  },
+  {
+   "anchor": {
+    "block_id": "95eacc91c328",
+    "end": 60,
+    "prefix": "",
+    "quote": "Don’t use a full stop, comma or semicolon after an ellipsis.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1b450a1e0dcd",
+     "end": 79,
+     "prefix": "",
+     "quote": "You can use a question mark or exclamation mark after an ellipsis if necessary.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No full stop after the ellipsis before starting the next sentence.",
+     "parts": [
+      {
+       "block_id": "39f93b23f643",
+       "end": 132,
+       "prefix": "",
+       "quote": "The review clarified that the Army might have to fight on home ground … To be properly equipped, the Army needs a new troop carrier.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Compliant use of an exclamation mark after an ellipsis.",
+     "parts": [
+      {
+       "block_id": "24ec3de0a5fd",
+       "end": 65,
+       "prefix": "",
+       "quote": "I’ve written hundreds of reports: annual reports, white papers …!",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an ellipsis directly followed by a full stop, comma, or semicolon"
+   },
+   "when": [
+    "Question marks and exclamation marks are permitted after an ellipsis if necessary."
+   ],
+   "why": "G-2, G-3: Prohibits full stops, commas, or semicolons after an ellipsis; absorbs the permission allowing question/exclamation marks."
+  },
+  {
+   "anchor": {
+    "block_id": "3a5fccdb051c",
+    "end": 66,
+    "prefix": "",
+    "quote": "Use the symbol for the ellipsis. Don’t use a string of full stops.",
+    "start": 0,
+    "suffix": " Insert it using:"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "50160515d2b2",
+     "end": 33,
+     "prefix": "",
+     "quote": "Do not use a string of full stops",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "character",
+    "violation_condition": "a sequence of three or more consecutive full stops/periods used instead of the single ellipsis character (U+2026)"
+   },
+   "when": [],
+   "why": "G-4: Body restates the heading with the specific instruction to use the ellipsis character rather than typed periods."
+  },
+  {
+   "anchor": {
+    "block_id": "8541a1afae4c",
+    "end": 50,
+    "prefix": "",
+    "quote": "Use a single space before and after each ellipsis.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "b6ca6f2d0480",
+     "end": 26,
+     "prefix": "",
+     "quote": "Add spaces around ellipses",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8caeb6ab6c81",
+     "end": 207,
+     "prefix": "",
+     "quote": "The exception to this rule is if the quote ends in an exclamation mark or question mark. Include the final punctuation mark after the ellipsis. Don’t include a space between the punctuation and the ellipsis.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Single space before and after the ellipsis.",
+     "parts": [
+      {
+       "block_id": "ba1655c301d5",
+       "end": 81,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but it needs … more work.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Missing spaces before and after the ellipsis.",
+     "parts": [
+      {
+       "block_id": "4b3ced660a2a",
+       "end": 79,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but it needs…more work.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Space before the ellipsis at the end of a clause/sentence.",
+     "parts": [
+      {
+       "block_id": "44309ebc25bc",
+       "end": 61,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but …’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "No space before the ellipsis.",
+     "parts": [
+      {
+       "block_id": "063e0943df5f",
+       "end": 60,
+       "prefix": "",
+       "quote": "The evaluation concluded, ‘The report is well written, but…’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "No space between the ellipsis and the final question mark.",
+     "parts": [
+      {
+       "block_id": "9bfa11d188fc",
+       "end": 53,
+       "prefix": "",
+       "quote": "He asked, ‘What does the Army do during exercises …?’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "an ellipsis lacking a space before it or after it, except when immediately followed by a closing quotation mark preceded by an exclamation mark or question mark"
+   },
+   "when": [
+    "If the quote ends in an exclamation mark or question mark, place the punctuation mark directly after the ellipsis with no space between them."
+   ],
+   "why": "G-2, G-4: Rule specifies spacing around ellipses and absorbs its exception regarding trailing exclamation/question marks."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4277,
+  "output_tokens": 2469,
+  "reasoning_tokens": 0
+ }
+}

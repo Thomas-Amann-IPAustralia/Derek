@@ -1,0 +1,4943 @@
+{
+ "effort": "high",
+ "input_sha256": "d2f638d6f96bcedc3d8bb34f2f1594e2d7492fdaf0f8e8d01040b4d95d6b25a3",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "72901d0fb760",
+    "end": 78,
+    "prefix": "",
+    "quote": "Follow these rules to address and title academics and professionals correctly.",
+    "start": 0,
+    "suffix": " The guidance focuses on academi"
+   },
+   "note": "Introductory direction to follow the page, not an additional property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "72901d0fb760",
+    "end": 233,
+    "prefix": "rs, dentists and veterinarians. ",
+    "quote": "Apply the rules when writing about individuals in other professions.",
+    "start": 165,
+    "suffix": ""
+   },
+   "note": "Extends the scope of applicable rules; it does not create another finding.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4d284b559e1c",
+    "end": 46,
+    "prefix": "",
+    "quote": "Use lower case if you use a title generically.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the generic-title lower-case rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b6440f8f0c01",
+    "end": 17,
+    "prefix": "",
+    "quote": "Use a full title:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The lead-in and its contextual list are covered by the full-title rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5e85e77063a2",
+    "end": 116,
+    "prefix": "",
+    "quote": "Use initial capitals for titles that appear immediately before a person’s name. Do this unless the title is generic.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A context and exception of the initial-capital rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "805c21da78f2",
+    "end": 60,
+    "prefix": "",
+    "quote": "Also use initial capitals for the shortened forms of titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Shortened forms are included in the initial-capital check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6617a23e43dd",
+    "end": 298,
+    "prefix": "‘Pro Vice-Chancellor’ is ‘PVC’. ",
+    "quote": "To ensure your content is readable, write the title in full.",
+    "start": 238,
+    "suffix": ""
+   },
+   "note": "Positive wording of the restriction on shortened titles.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ab0a97cb9d82",
+    "end": 118,
+    "prefix": "",
+    "quote": "Shortened forms are sometimes necessary because of limited space. For example, shortened forms often appear in tables.",
+    "start": 0,
+    "suffix": " List the full form of any title"
+   },
+   "note": "Limited space is recorded as an exception to the shortened-title restriction.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c23ccf12ed08",
+    "end": 38,
+    "prefix": "",
+    "quote": "‘Dr’ is an exception in all instances.",
+    "start": 0,
+    "suffix": " Like ‘Ms’ and ‘Mr’, ‘Dr’ is eas"
+   },
+   "note": "Exception to spelling titles out, not a separate requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "135500c9d637",
+    "end": 61,
+    "prefix": "",
+    "quote": "Use initial capitals for official titles that replace a name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Official name-replacing titles are a case of the initial-capital rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d1984debe9be",
+    "end": 68,
+    "prefix": "",
+    "quote": "For all other uses, titles that replace a name should be lower case.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the generic-title rule, with the preceding capitalisation cases excluded.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a0d4c9c1bf85",
+    "end": 290,
+    "prefix": "ot Australian Government style. ",
+    "quote": "Treat them as generic and use lower case.",
+    "start": 249,
+    "suffix": ""
+   },
+   "note": "Applies the generic-title rule to abbreviated and organisation-given role titles.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "968648d10b4b",
+    "end": 56,
+    "prefix": "",
+    "quote": "Use lower case for most titles that appear after a name.",
+    "start": 0,
+    "suffix": " These titles describe the indiv"
+   },
+   "note": "Descriptive titles after a name are covered by the generic-title rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c2bfd4aaa85c",
+    "end": 90,
+    "prefix": "There is one exception. ",
+    "quote": "Only use initial capitals for titles after a name in a full title.",
+    "start": 24,
+    "suffix": ""
+   },
+   "note": "The full-title exception is incorporated into the two complementary capitalisation checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8af24879ed52",
+    "end": 63,
+    "prefix": "",
+    "quote": "Follow your organisation’s template style for signature blocks.",
+    "start": 0,
+    "suffix": " Templates apply design elements"
+   },
+   "note": "G-5: directs the writer to an organisation-specific template rather than specifying a standalone textual convention.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "650db507aa9e",
+    "end": 50,
+    "prefix": "",
+    "quote": "Use title, name and post-nominals at first mention",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body states the first-body-text-mention format more precisely.",
+   "reason": "restatement",
+   "seed_uid": "75dbdd9e59efad0d"
+  },
+  {
+   "anchor": {
+    "block_id": "2306cb85e870",
+    "end": 71,
+    "prefix": "",
+    "quote": "When you write about an individual, it’s respectful to use their title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Rationale for the specific first and subsequent mention rules, not a third title-inclusion check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fb1605566998",
+    "end": 163,
+    "prefix": "ly use the title and last name. ",
+    "quote": "Some academic titles have an accepted abbreviated title you can use after the first mention.",
+    "start": 71,
+    "suffix": ""
+   },
+   "note": "Recorded as an exception to the subsequent-mention format and distinguished from contractions such as ‘Prof’.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2ad912fc0c44",
+    "end": 109,
+    "prefix": "",
+    "quote": "Never use the shortened form of the title in body text (‘Prof’ for example), except for the contraction ‘Dr’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The categorical body-text case is consolidated into the general shortened-title rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "172c11d7ffdf",
+    "end": 39,
+    "prefix": "",
+    "quote": "Use post-nominals at first mention only",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "First-mention inclusion and subsequent-mention omission are already covered by the respective body-text mention rules.",
+   "reason": "restatement",
+   "seed_uid": "eacc7df53b966b2e"
+  },
+  {
+   "anchor": {
+    "block_id": "119ba16676d9",
+    "end": 191,
+    "prefix": "",
+    "quote": "The first time you write a name in body text, use the academic and professional title along with the first and last name. Include the post-nominal for a civil or military honour in the title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the earlier first-mention rule and identifies the applicable honour post-nominals.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "09910065c36d",
+    "end": 95,
+    "prefix": "",
+    "quote": "If you mention the name again, use the title and last name, but don’t include the post-nominal.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the subsequent-body-text-mention rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "10d1a0f198a0",
+    "end": 54,
+    "prefix": "",
+    "quote": "Include post-nominals in the shortened forms of titles",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body is selected because it limits this requirement to civil and military honours.",
+   "reason": "restatement",
+   "seed_uid": "7e51fa7814f4ad9d"
+  },
+  {
+   "anchor": {
+    "block_id": "f11f29e38022",
+    "end": 24,
+    "prefix": "",
+    "quote": "Use these post-nominals:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The heading and its two contextual list items form the qualification-post-nominal rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "734d1c3cc89a",
+    "end": 150,
+    "prefix": "f Philosophy) for the one name. ",
+    "quote": "It is conventional to use either the title or the post-nominal.",
+    "start": 87,
+    "suffix": " This also applies to PhD equiva"
+   },
+   "note": "Either representation of the doctorate is allowed; the prohibition concerns using both.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8e8f74a07e73",
+    "end": 134,
+    "prefix": "",
+    "quote": "In most contexts, address academics with their full title: title or honorific, name, position, post-nominals and academic institution.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Adds the academic-address default to the full-title rule rather than creating a duplicate full-title finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9b58749e4b18",
+    "end": 31,
+    "prefix": "",
+    "quote": "Emails and letters to academics",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups separate opening, closing, punctuation and title-selection rules.",
+   "reason": "section",
+   "seed_uid": "b7f0e2c72ce14d10"
+  },
+  {
+   "anchor": {
+    "block_id": "214bd8908176",
+    "end": 98,
+    "prefix": "",
+    "quote": "Keep the initial capital for the title in correspondence when you’re writing to a specific person.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Specific correspondence case of the initial-capital rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "28848b383c7b",
+    "end": 74,
+    "prefix": "",
+    "quote": "Open with ‘Dear Chancellor’ (or ‘Vice-Chancellor’, ‘Professor’ and so on).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the less-formal case of the academic-correspondence opening rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f7b6eab9580b",
+    "end": 32,
+    "prefix": "",
+    "quote": "Conclude with ‘Yours sincerely’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the less-formal case of the academic-correspondence closing rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d62412b0c7b1",
+    "end": 42,
+    "prefix": "",
+    "quote": "Don’t include a comma after these phrases.",
+    "start": 0,
+    "suffix": " Australian Government style is "
+   },
+   "note": "Consolidated into the salutation and complimentary-close punctuation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "805529873f04",
+    "end": 63,
+    "prefix": "",
+    "quote": "You can address people who hold a doctorate as ‘Doctor’ or ‘Dr’",
+    "start": 0,
+    "suffix": " (without a full stop). Today, i"
+   },
+   "note": "G-3: allows either title form. The attached no-full-stop restriction is extracted separately.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "805529873f04",
+    "end": 177,
+    "prefix": " or ‘Dr’ (without a full stop). ",
+    "quote": "Today, it is acceptable to use ‘Dear Dr Name’ for both formal and informal correspondence.",
+    "start": 87,
+    "suffix": ""
+   },
+   "note": "Exception to the general formality-dependent opening guidance and condition of the nameless ‘Dear Doctor’ rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ef2f5da5cac5",
+    "end": 42,
+    "prefix": "",
+    "quote": "Don’t include a comma after these phrases.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Same salutation-punctuation prohibition as the earlier correspondence section.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d17ab145e341",
+    "end": 47,
+    "prefix": "",
+    "quote": "Instead, address the person by ‘Sir’ or ‘Dame’.",
+    "start": 0,
+    "suffix": " Write the post-nominals for the"
+   },
+   "note": "Positive replacement form of the prohibition on addressing a knighted doctorate holder as ‘Doctor’.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d17ab145e341",
+    "end": 143,
+    "prefix": " the person by ‘Sir’ or ‘Dame’. ",
+    "quote": "Write the post-nominals for the knighthood after the name, followed by any other post-nominals.",
+    "start": 48,
+    "suffix": " Don’t insert commas before or b"
+   },
+   "note": "Specific case consolidated into the post-nominal ordering rule; the inconsistency with the example is explicitly deferred.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d17ab145e341",
+    "end": 200,
+    "prefix": "wed by any other post-nominals. ",
+    "quote": "Don’t insert commas before or between the post-nominals.",
+    "start": 144,
+    "suffix": ""
+   },
+   "note": "Repeats the earlier post-nominal comma rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "720989a0efad",
+    "end": 178,
+    "prefix": "r or not they hold a doctorate. ",
+    "quote": "Those with a doctorate may choose to add the post-nominal ‘PhD’.",
+    "start": 114,
+    "suffix": ""
+   },
+   "note": "Allows a doctorate post-nominal alongside a professional medical ‘Dr’ honorific; it is not mandatory.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f26cbc8fde16",
+    "end": 123,
+    "prefix": "",
+    "quote": "Use ‘Professor’, ‘Associate Professor’ or ‘Assistant Professor’ for doctors who hold these titles at academic institutions.",
+    "start": 0,
+    "suffix": " Some doctors who hold professor"
+   },
+   "note": "Academic-title case of the medical-professional title-selection rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f26cbc8fde16",
+    "end": 214,
+    "prefix": "itles at academic institutions. ",
+    "quote": "Some doctors who hold professorships choose to use ‘Dr’ when working in clinical practice.",
+    "start": 124,
+    "suffix": ""
+   },
+   "note": "Clinical-practice exception to using the professorship title.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dfc378faca14",
+    "end": 111,
+    "prefix": "",
+    "quote": "Surgeons in human medicine are traditionally called ‘Mr’, ‘Ms’ or their preferred gender-appropriate honorific.",
+    "start": 0,
+    "suffix": " Some surgeons prefer to use ‘Dr"
+   },
+   "note": "Describes customary and preference-dependent forms; it does not impose one universal surgeon title. Recorded as a qualification of the medical-title rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dfc378faca14",
+    "end": 145,
+    "prefix": "d gender-appropriate honorific. ",
+    "quote": "Some surgeons prefer to use ‘Dr’.",
+    "start": 112,
+    "suffix": " For example, a search of the we"
+   },
+   "note": "Permitted surgeon preference, not a requirement that all surgeons use ‘Dr’.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "58889fd8a8e0",
+    "end": 91,
+    "prefix": "",
+    "quote": "It is best to contact the doctor’s practice if you are unsure of their preferred honorific.",
+    "start": 0,
+    "suffix": " You are unlikely to cause offen"
+   },
+   "note": "G-5: a research action for the writer, not a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "58889fd8a8e0",
+    "end": 181,
+    "prefix": "e of their preferred honorific. ",
+    "quote": "You are unlikely to cause offence if you use the title (or honour) awarded most recently.",
+    "start": 92,
+    "suffix": ""
+   },
+   "note": "Pragmatic reassurance, not a rule making every other applicable title incorrect.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/titles-honours-forms-address/academics-and-professionals.md",
+ "page_sha256": "d34d3db747cfbc11ac97d5dd2ffa26c67aee19271d7fdebd0011b0c3da56f122",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "72901d0fb760",
+    "note": "Introductory direction to follow the page, not an additional property of the text.",
+    "quote": "Follow these rules to address and title academics and professionals correctly.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "72901d0fb760",
+    "note": "Extends the scope of applicable rules; it does not create another finding.",
+    "quote": "Apply the rules when writing about individuals in other professions.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4d284b559e1c",
+    "note": "Consolidated into the generic-title lower-case rule.",
+    "quote": "Use lower case if you use a title generically.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b6440f8f0c01",
+    "note": "The lead-in and its contextual list are covered by the full-title rule.",
+    "quote": "Use a full title:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5e85e77063a2",
+    "note": "A context and exception of the initial-capital rule.",
+    "quote": "Use initial capitals for titles that appear immediately before a person’s name. Do this unless the title is generic.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "805c21da78f2",
+    "note": "Shortened forms are included in the initial-capital check.",
+    "quote": "Also use initial capitals for the shortened forms of titles.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6617a23e43dd",
+    "note": "Positive wording of the restriction on shortened titles.",
+    "quote": "To ensure your content is readable, write the title in full.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ab0a97cb9d82",
+    "note": "Limited space is recorded as an exception to the shortened-title restriction.",
+    "quote": "Shortened forms are sometimes necessary because of limited space. For example, shortened forms often appear in tables.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "c23ccf12ed08",
+    "note": "Exception to spelling titles out, not a separate requirement.",
+    "quote": "‘Dr’ is an exception in all instances.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "135500c9d637",
+    "note": "Official name-replacing titles are a case of the initial-capital rule.",
+    "quote": "Use initial capitals for official titles that replace a name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d1984debe9be",
+    "note": "Consolidated into the generic-title rule, with the preceding capitalisation cases excluded.",
+    "quote": "For all other uses, titles that replace a name should be lower case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a0d4c9c1bf85",
+    "note": "Applies the generic-title rule to abbreviated and organisation-given role titles.",
+    "quote": "Treat them as generic and use lower case.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "968648d10b4b",
+    "note": "Descriptive titles after a name are covered by the generic-title rule.",
+    "quote": "Use lower case for most titles that appear after a name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c2bfd4aaa85c",
+    "note": "The full-title exception is incorporated into the two complementary capitalisation checks.",
+    "quote": "Only use initial capitals for titles after a name in a full title.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8af24879ed52",
+    "note": "G-5: directs the writer to an organisation-specific template rather than specifying a standalone textual convention.",
+    "quote": "Follow your organisation’s template style for signature blocks.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "650db507aa9e",
+    "note": "The body states the first-body-text-mention format more precisely.",
+    "quote": "Use title, name and post-nominals at first mention",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2306cb85e870",
+    "note": "Rationale for the specific first and subsequent mention rules, not a third title-inclusion check.",
+    "quote": "When you write about an individual, it’s respectful to use their title.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "fb1605566998",
+    "note": "Recorded as an exception to the subsequent-mention format and distinguished from contractions such as ‘Prof’.",
+    "quote": "Some academic titles have an accepted abbreviated title you can use after the first mention.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "2ad912fc0c44",
+    "note": "The categorical body-text case is consolidated into the general shortened-title rule.",
+    "quote": "Never use the shortened form of the title in body text (‘Prof’ for example), except for the contraction ‘Dr’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "172c11d7ffdf",
+    "note": "First-mention inclusion and subsequent-mention omission are already covered by the respective body-text mention rules.",
+    "quote": "Use post-nominals at first mention only",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "119ba16676d9",
+    "note": "Restates the earlier first-mention rule and identifies the applicable honour post-nominals.",
+    "quote": "The first time you write a name in body text, use the academic and professional title along with the first and last name. Include the post-nominal for a civil or military honour in the title.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "09910065c36d",
+    "note": "Consolidated into the subsequent-body-text-mention rule.",
+    "quote": "If you mention the name again, use the title and last name, but don’t include the post-nominal.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "10d1a0f198a0",
+    "note": "The body is selected because it limits this requirement to civil and military honours.",
+    "quote": "Include post-nominals in the shortened forms of titles",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f11f29e38022",
+    "note": "The heading and its two contextual list items form the qualification-post-nominal rule.",
+    "quote": "Use these post-nominals:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "734d1c3cc89a",
+    "note": "Either representation of the doctorate is allowed; the prohibition concerns using both.",
+    "quote": "It is conventional to use either the title or the post-nominal.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "8e8f74a07e73",
+    "note": "Adds the academic-address default to the full-title rule rather than creating a duplicate full-title finding.",
+    "quote": "In most contexts, address academics with their full title: title or honorific, name, position, post-nominals and academic institution.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9b58749e4b18",
+    "note": "G-1: groups separate opening, closing, punctuation and title-selection rules.",
+    "quote": "Emails and letters to academics",
+    "reason": "section"
+   },
+   {
+    "block_id": "214bd8908176",
+    "note": "Specific correspondence case of the initial-capital rule.",
+    "quote": "Keep the initial capital for the title in correspondence when you’re writing to a specific person.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "28848b383c7b",
+    "note": "G-2: the less-formal case of the academic-correspondence opening rule.",
+    "quote": "Open with ‘Dear Chancellor’ (or ‘Vice-Chancellor’, ‘Professor’ and so on).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f7b6eab9580b",
+    "note": "G-2: the less-formal case of the academic-correspondence closing rule.",
+    "quote": "Conclude with ‘Yours sincerely’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d62412b0c7b1",
+    "note": "Consolidated into the salutation and complimentary-close punctuation check.",
+    "quote": "Don’t include a comma after these phrases.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "805529873f04",
+    "note": "G-3: allows either title form. The attached no-full-stop restriction is extracted separately.",
+    "quote": "You can address people who hold a doctorate as ‘Doctor’ or ‘Dr’",
+    "reason": "permission"
+   },
+   {
+    "block_id": "805529873f04",
+    "note": "Exception to the general formality-dependent opening guidance and condition of the nameless ‘Dear Doctor’ rule.",
+    "quote": "Today, it is acceptable to use ‘Dear Dr Name’ for both formal and informal correspondence.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "ef2f5da5cac5",
+    "note": "Same salutation-punctuation prohibition as the earlier correspondence section.",
+    "quote": "Don’t include a comma after these phrases.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d17ab145e341",
+    "note": "Positive replacement form of the prohibition on addressing a knighted doctorate holder as ‘Doctor’.",
+    "quote": "Instead, address the person by ‘Sir’ or ‘Dame’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d17ab145e341",
+    "note": "Specific case consolidated into the post-nominal ordering rule; the inconsistency with the example is explicitly deferred.",
+    "quote": "Write the post-nominals for the knighthood after the name, followed by any other post-nominals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d17ab145e341",
+    "note": "Repeats the earlier post-nominal comma rule.",
+    "quote": "Don’t insert commas before or between the post-nominals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "720989a0efad",
+    "note": "Allows a doctorate post-nominal alongside a professional medical ‘Dr’ honorific; it is not mandatory.",
+    "quote": "Those with a doctorate may choose to add the post-nominal ‘PhD’.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "f26cbc8fde16",
+    "note": "Academic-title case of the medical-professional title-selection rule.",
+    "quote": "Use ‘Professor’, ‘Associate Professor’ or ‘Assistant Professor’ for doctors who hold these titles at academic institutions.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f26cbc8fde16",
+    "note": "Clinical-practice exception to using the professorship title.",
+    "quote": "Some doctors who hold professorships choose to use ‘Dr’ when working in clinical practice.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "dfc378faca14",
+    "note": "Describes customary and preference-dependent forms; it does not impose one universal surgeon title. Recorded as a qualification of the medical-title rule.",
+    "quote": "Surgeons in human medicine are traditionally called ‘Mr’, ‘Ms’ or their preferred gender-appropriate honorific.",
+    "reason": "description"
+   },
+   {
+    "block_id": "dfc378faca14",
+    "note": "Permitted surgeon preference, not a requirement that all surgeons use ‘Dr’.",
+    "quote": "Some surgeons prefer to use ‘Dr’.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "58889fd8a8e0",
+    "note": "G-5: a research action for the writer, not a property of the resulting text.",
+    "quote": "It is best to contact the doctor’s practice if you are unsure of their preferred honorific.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "58889fd8a8e0",
+    "note": "Pragmatic reassurance, not a rule making every other applicable title incorrect.",
+    "quote": "You are unlikely to cause offence if you use the title (or honour) awarded most recently.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f80dafce5c5",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f14a20c627d0",
+      "quote": "The academic and professional titles held by individuals usually have initial capitals. This includes honorary titles."
+     },
+     {
+      "block_id": "5e85e77063a2",
+      "quote": "Use initial capitals for titles that appear immediately before a person’s name. Do this unless the title is generic."
+     },
+     {
+      "block_id": "805c21da78f2",
+      "quote": "Also use initial capitals for the shortened forms of titles."
+     },
+     {
+      "block_id": "135500c9d637",
+      "quote": "Use initial capitals for official titles that replace a name."
+     },
+     {
+      "block_id": "9ebcfe453fca",
+      "quote": "Titles replacing a name also have initial capitals:"
+     },
+     {
+      "block_id": "aea6c733b846",
+      "quote": "when you address someone directly"
+     },
+     {
+      "block_id": "c7ab60a61f08",
+      "quote": "for salutations in correspondence."
+     },
+     {
+      "block_id": "214bd8908176",
+      "quote": "Keep the initial capital for the title in correspondence when you’re writing to a specific person."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "24c4a49621b4",
+        "quote": "Adjunct Professor Monty Chiratte"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "66aa4fb6edb8",
+        "quote": "Our new vice-chancellor and president is Professor Rufus Black."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "35f37f2233bf",
+        "quote": "We welcome Dr Jamilah Mulyadi to our clinic. Dr Mulyadi is now available for skin examinations."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c43de3fbbbec",
+        "quote": "The Vice-Chancellor of the University of Tasmania visited last week."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7fb257ebd1bc",
+        "quote": "Dear Chancellor"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "00fd01452e32",
+        "quote": "‘We note your concerns Doctor. Thank you for bringing this evidence before the committee’."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use initial capitals for the titles of individual academics and professionals",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-generic academic or professional title is written with a lower-case initial where it identifies an individual before their name, replaces their name as an official title, addresses them directly, or forms part of a full title.",
+    "when": [
+     "Includes honorary titles and shortened forms of titles.",
+     "Applies to non-generic titles immediately before a name.",
+     "Applies to official titles replacing a name, direct address and correspondence salutations.",
+     "Applies to titles after a name only when they form part of a full title.",
+     "Generic titles are checked under the lower-case rule instead."
+    ],
+    "why": "G-2 and G-4: these are contexts and restatements of the same initial-capital check, not separate findings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dd539849215f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4d284b559e1c",
+      "quote": "Use lower case if you use a title generically."
+     },
+     {
+      "block_id": "d1984debe9be",
+      "quote": "For all other uses, titles that replace a name should be lower case."
+     },
+     {
+      "block_id": "a0d4c9c1bf85",
+      "quote": "These other uses include abbreviated titles and titles given by an organisation to a role or position. Academic and professional organisations might capitalise such titles as a mark of respect or status, but this is not Australian Government style. Treat them as generic and use lower case."
+     },
+     {
+      "block_id": "968648d10b4b",
+      "quote": "Use lower case for most titles that appear after a name. These titles describe the individual and are generic."
+     },
+     {
+      "block_id": "c2bfd4aaa85c",
+      "quote": "Only use initial capitals for titles after a name in a full title."
+     },
+     {
+      "block_id": "ad871e179fa9",
+      "quote": "Generic use of academic and professional titles includes:"
+     },
+     {
+      "block_id": "f1720c05fea3",
+      "quote": "titles that describe a named individual"
+     },
+     {
+      "block_id": "b47f24425cb7",
+      "quote": "plural titles"
+     },
+     {
+      "block_id": "ca6649d59ac3",
+      "quote": "common nouns."
+     },
+     {
+      "block_id": "09431462d0dd",
+      "quote": "Some titles appearing immediately before a name are also generic because they describe the individual. These titles are usually preceded by ‘the’ or a modifier."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "03170e215481",
+        "quote": "All general surgeons at the hospital attended Wednesday’s forum."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8efb7f5f272a",
+        "quote": "The vice-chancellor visited Burnie campus last week."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "49ae84d56e23",
+        "quote": "They met with Associate Professor Dianne Stephens OAM, medical director of the National Critical Care and Trauma Response Centre."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5cb4b5004b68",
+        "quote": "Professor Bartlett, the university’s vice-chancellor, welcomed alumni to the reception."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7a92da32cb93",
+        "quote": "The research fellow Lydia Mbegngue wrote extensively on this topic."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9011b288d6a1",
+        "quote": "Several postdoctoral fellows in the research facility met last week."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e0203b2dd85d",
+        "quote": "A provost oversees a university’s academic performance."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7c6e5658f9e7",
+        "quote": "Dhriti Saxena is a local doctor in general practice."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "960b296a61bd",
+        "quote": "They met with former medical director Tom Perera."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0eb3742aeae7",
+        "quote": "Two doctors from this practice attended the conference."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "dcbcb02e1600",
+        "quote": "It is important to see your doctor to develop an asthma action plan."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use lower case for titles used in a generic way",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic academic or professional title has an initial capital, including a descriptive title, plural title, common noun or abbreviated role title replacing a name.",
+    "when": [
+     "Most titles after a name are generic; titles in a full title are the exception.",
+     "A title before a name can be generic when it describes the individual, often following ‘the’ or a modifier.",
+     "Abbreviated titles and organisation-given role titles replacing a name are generic unless an official-title, direct-address or salutation case applies.",
+     "An organisation’s preference for respectful capitals does not by itself make a generic title capitalised.",
+     "Signature blocks may follow the organisation’s template, including its prescribed all-capitals treatment."
+    ],
+    "why": "G-2 and G-4: generic uses before, after and instead of a name are cases of one lower-case check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4b1037986f25",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "23f7b92ca7d6",
+      "quote": "A full title includes the title or honorific (with initial capitals), name, post-nominals, position and organisation."
+     },
+     {
+      "block_id": "b6440f8f0c01",
+      "quote": "Use a full title:"
+     },
+     {
+      "block_id": "fc2199234ad6",
+      "quote": "to introduce an individual as speaker"
+     },
+     {
+      "block_id": "2d1b3c17ea1f",
+      "quote": "in address and signature blocks in correspondence"
+     },
+     {
+      "block_id": "e5d068455879",
+      "quote": "in official records of proceedings"
+     },
+     {
+      "block_id": "0ce424e2618b",
+      "quote": "in lists in organisational publications such as annual reports"
+     },
+     {
+      "block_id": "da909b100f35",
+      "quote": "if it is important to know where an individual works."
+     },
+     {
+      "block_id": "4e09a0af7608",
+      "quote": "A full title is often about using titles in a display or presentation context (display text)."
+     },
+     {
+      "block_id": "8e8f74a07e73",
+      "quote": "In most contexts, address academics with their full title: title or honorific, name, position, post-nominals and academic institution."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "88e36b6aa51a",
+        "quote": "Professor Margaret Sheil AO, Vice-Chancellor and President, Queensland University of Technology"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1cc95fa6714e",
+        "quote": "Associate Professor Dianne Stephens OAM, Medical Director, National Critical Care and Trauma Response Centre"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0bbf4819f1b4",
+        "quote": "Professor Chris Goodnow FAA FRS"
+       },
+       {
+        "block_id": "6c09fb8e787c",
+        "quote": "Executive Director"
+       },
+       {
+        "block_id": "1fdf0793608f",
+        "quote": "Garvan Institute of Medical Research"
+       },
+       {
+        "block_id": "1320af19aea9",
+        "quote": "384 Victoria Street"
+       },
+       {
+        "block_id": "81dbf6aa36b1",
+        "quote": "Darlinghurst NSW 2010"
+       },
+       {
+        "block_id": "7cbaf2fbff12",
+        "quote": "Australia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0d2816f13a2b",
+        "quote": "Dr Fatima Dashti FASM"
+       },
+       {
+        "block_id": "a3fdc40fa942",
+        "quote": "Director (Research)"
+       },
+       {
+        "block_id": "dc45c6386b91",
+        "quote": "Institute for Viruses"
+       },
+       {
+        "block_id": "91780e7af2df",
+        "quote": "telephone"
+       },
+       {
+        "block_id": "d5dec56ebb9d",
+        "quote": "email"
+       },
+       {
+        "block_id": "5d5a0900bd31",
+        "quote": "website"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fa50d97a538a",
+        "quote": "#LIVE #COVID Update with Professor Paul Kelly, Australian Government Chief Medical Officer, Department of Health."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3542482b97e7",
+        "quote": "2021 Innovation Award recipients Dr Joanne Zheng"
+       },
+       {
+        "block_id": "265789c22cc2",
+        "quote": "Senior Research Scientist"
+       },
+       {
+        "block_id": "b3c66d699035",
+        "quote": "AcmeCo Australia"
+       },
+       {
+        "block_id": "c3dcdf362c20",
+        "quote": "Professor Alexander Bannon"
+       },
+       {
+        "block_id": "59b471f4fd8f",
+        "quote": "Senior Lecturer in Rehabilitation Medicine"
+       },
+       {
+        "block_id": "18cac0d54a03",
+        "quote": "Faculty of Health and Medical Sciences"
+       },
+       {
+        "block_id": "56e544f20dd8",
+        "quote": "University of Adelaide"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d06802f845b9",
+        "quote": "Associate Professor Peter Spencer, College of Science, Health, Engineering and Education, Murdoch University"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fddf7bae94b2",
+        "quote": "Distinguished Professor Larissa Behrendt AO"
+       },
+       {
+        "block_id": "e616d2816d21",
+        "quote": "Director of Research"
+       },
+       {
+        "block_id": "260e73358698",
+        "quote": "Jumbunna Institute for Indigenous Education and Research"
+       },
+       {
+        "block_id": "df1d8ced6233",
+        "quote": "University of Technology Sydney"
+       },
+       {
+        "block_id": "b4e1b0c6cd31",
+        "quote": "PO Box 123"
+       },
+       {
+        "block_id": "05f8d5f9e711",
+        "quote": "Broadway NSW 2007"
+       },
+       {
+        "block_id": "cf8bf406a994",
+        "quote": "Australia"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use full titles in certain contexts",
+    "specification": "A full title contains the title or honorific, name, applicable post-nominals, position and organisation. For academics the organisation is the academic institution. The page does not define the limits of ‘most contexts’ when addressing academics. Ordinary first and subsequent mentions in body text have their own rules. Post-nominal content and formatting should be checked under the more specific post-nominal rules rather than producing a second finding for the same omission.",
+    "unit": "block",
+    "violation_condition": "An individual is presented without the identifying elements of a full title in a context that calls for a full title.",
+    "when": [
+     "Introducing an individual as a speaker.",
+     "Address and signature blocks in correspondence.",
+     "Official records of proceedings.",
+     "Lists in organisational publications, including annual reports.",
+     "Where the individual’s workplace is important.",
+     "As the default when addressing academics in most contexts."
+    ],
+    "why": "G-2 and G-4: the listed contexts and academic-address guidance change when the full-title check applies."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6617a23e43dd",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "6617a23e43dd",
+      "quote": "To ensure your content is readable, write the title in full."
+     },
+     {
+      "block_id": "ab0a97cb9d82",
+      "quote": "Shortened forms are sometimes necessary because of limited space. For example, shortened forms often appear in tables."
+     },
+     {
+      "block_id": "c23ccf12ed08",
+      "quote": "‘Dr’ is an exception in all instances."
+     },
+     {
+      "block_id": "2ad912fc0c44",
+      "quote": "Never use the shortened form of the title in body text (‘Prof’ for example), except for the contraction ‘Dr’."
+     },
+     {
+      "block_id": "fb1605566998",
+      "quote": "Some academic titles have an accepted abbreviated title you can use after the first mention."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "45273dae4e4a",
+        "quote": "Departmental officers recently attended Upsilon University’s annual Copyright Symposium. The academic panel (pictured below), chaired by Vice-Chancellor Tom Dhillon, discussed recent cases with implications for fair dealing provisions of the Copyright Act 1968."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7f9c9124cb1f",
+        "quote": "Left to right: Associate Professor Sara Baird, Vice-Chancellor Tom Dhillon, Dean Frank Ealing, Adjunct Professor Olena Iraklidis, Dr Celia Nieminen"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "277e8d174370",
+        "quote": "Left to right: Assoc Prof S Baird, VC T Dhillon, Dean F Ealing, Adj Prof O Iraklidis, Dr C Nieminen"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "00f3b34729ed",
+        "quote": "This year’s graduate cohort asked Deputy Vice-Chancellor Jonquil Johansson to moderate their debate."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5c90c94b1206",
+        "quote": "DVC Jonquil Johansson to moderate their debate."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Only use shortened forms of titles in limited circumstances.",
+    "specification": "The general rule leaves ‘limited circumstances’ open, with limited space as an explicit example. The body-text restriction is categorical: the page says ‘Never’. An accepted abbreviated academic rank, such as ‘Professor’ for ‘Emeritus Professor’ on subsequent mention, is not the same as a contraction or initialism such as ‘Prof’ or ‘PVC’.",
+    "unit": "block",
+    "violation_condition": "An academic or professional title other than ‘Dr’ is shortened in body text, or is shortened elsewhere without a limited-circumstances justification.",
+    "when": [
+     "Applies to shortened titles immediately before a name.",
+     "Limited space can justify shortened forms outside body text, including in tables and image captions.",
+     "Body text must use the full form except for ‘Dr’.",
+     "‘Dr’ is an exception in all instances."
+    ],
+    "why": "G-2 and G-3: body text, limited space and ‘Dr’ are conditions or exceptions to the same shortened-title check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ab0a97cb9d82",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "6617a23e43dd",
+      "quote": "People might understand common contractions like ‘Prof’ for ‘Professor’, but some shortened forms are confusing. For example, the initialism for ‘Pro Vice-Chancellor’ is ‘PVC’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "List the full form of any title that people might find confusing in a note.",
+    "specification": "The page gives no closed list or audience test for confusing shortened titles. A checker needs an audience-sensitive allowlist or reviewer judgement; it should not treat every shortened title as confusing.",
+    "unit": "block",
+    "violation_condition": "A potentially confusing shortened title appears without a note giving its full form.",
+    "when": [
+     "A shortened title is used in circumstances where shortening is otherwise allowed.",
+     "The shortened title may confuse the intended audience."
+    ],
+    "why": "This requires a distinct textual element—a note—rather than merely restating the preference for full titles."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f6a8deb3c6a",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7f9c9124cb1f",
+        "quote": "Left to right: Associate Professor Sara Baird, Vice-Chancellor Tom Dhillon, Dean Frank Ealing, Adjunct Professor Olena Iraklidis, Dr Celia Nieminen"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "277e8d174370",
+        "quote": "Left to right: Assoc Prof S Baird, VC T Dhillon, Dean F Ealing, Adj Prof O Iraklidis, Dr C Nieminen"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "The space available for image captions can be limited, but write the full names and titles as a default.",
+    "specification": "This finding concerns shortened personal names. Shortened titles are covered by the general shortened-title rule, avoiding two findings for the same title. Whether space requires initials needs publication-layout information not supplied by the words alone.",
+    "unit": "block",
+    "violation_condition": "An image caption uses personal initials instead of full names when space does not require shortening.",
+    "when": [
+     "Applies to image captions identifying people.",
+     "Initials are allowed when limited caption space makes them necessary."
+    ],
+    "why": "G-3: limited space relaxes the full-name default; the permitted shortened caption is not a violating example."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f6a8deb3c6a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "45273dae4e4a",
+        "quote": "Departmental officers recently attended Upsilon University’s annual Copyright Symposium. The academic panel (pictured below), chaired by Vice-Chancellor Tom Dhillon, discussed recent cases with implications for fair dealing provisions of the Copyright Act 1968."
+       },
+       {
+        "block_id": "277e8d174370",
+        "quote": "Left to right: Assoc Prof S Baird, VC T Dhillon, Dean F Ealing, Adj Prof O Iraklidis, Dr C Nieminen"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST",
+    "quote": "If you have to use initials and the shortened forms of titles in a caption, always include the full forms in body text to provide context.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A caption uses personal initials or shortened titles without the corresponding full forms appearing in body text.",
+    "when": [
+     "A caption uses shortened names or titles because space is limited.",
+     "The universal ‘Dr’ exception does not require expansion to ‘Doctor’."
+    ],
+    "why": "This is a separate document-level expansion requirement, not another prohibition on shortened captions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ed4a5e6bfcd7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "650db507aa9e",
+      "quote": "Use title, name and post-nominals at first mention"
+     },
+     {
+      "block_id": "119ba16676d9",
+      "quote": "The first time you write a name in body text, use the academic and professional title along with the first and last name. Include the post-nominal for a civil or military honour in the title."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2f299be214fa",
+        "quote": "Emeritus Professor Stephen Duckett has extensive experience in health care at senior leadership level. Professor Duckett’s membership of the RMIT Council concludes in 2022."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ee9ea0243d78",
+        "quote": "Dr Ziggy Switkowski AO has been chancellor of RMIT since 2011. Dr Switkowski is also chair of NBN Co."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The first time you mention someone in body text, use their academic or professional title before their first name and last name, followed by post-nominals.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first body-text mention of an individual omits their academic or professional title, first name, last name or applicable civil or military honour post-nominals, or places the title after the personal name.",
+    "when": [
+     "Applies at the first mention in body text.",
+     "Post-nominals for civil or military honours are included when applicable.",
+     "Academic and professional qualification post-nominals are subject to the separate context restrictions.",
+     "‘Dr’ is allowed without being spelt out."
+    ],
+    "why": "G-4: the later post-nominal section restates and qualifies the same first-mention format."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fb1605566998",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "172c11d7ffdf",
+      "quote": "Use post-nominals at first mention only"
+     },
+     {
+      "block_id": "09910065c36d",
+      "quote": "If you mention the name again, use the title and last name, but don’t include the post-nominal."
+     },
+     {
+      "block_id": "fb1605566998",
+      "quote": "Some academic titles have an accepted abbreviated title you can use after the first mention."
+     },
+     {
+      "block_id": "aa8cc658226d",
+      "quote": "[‘Professor’ is the accepted abbreviated title for an Emeritus or Emerita Professor.]"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2f299be214fa",
+        "quote": "Emeritus Professor Stephen Duckett has extensive experience in health care at senior leadership level. Professor Duckett’s membership of the RMIT Council concludes in 2022."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ee9ea0243d78",
+        "quote": "Dr Ziggy Switkowski AO has been chancellor of RMIT since 2011. Dr Switkowski is also chair of NBN Co."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If you mention the individual again, only use the title and last name.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A subsequent body-text name reference does not use the title and last name alone, for example by repeating given names or post-nominals or dropping the title.",
+    "when": [
+     "Applies to subsequent name mentions in body text, not repeated display titles or correspondence blocks.",
+     "An accepted abbreviated academic rank may replace the original rank after first mention.",
+     "‘Professor’ is an accepted abbreviated title for an Emeritus or Emerita Professor."
+    ],
+    "why": "G-2 to G-4: omission of post-nominals and accepted abbreviated ranks are parts or exceptions of the subsequent-mention format."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "83fac542df4e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "27b1ca4ba12f",
+      "quote": "Post-nominals are letters after a name that stand for academic, civil and military awards and honours."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b9a95eec67fe",
+        "quote": "Professor Sally Wheeler OBE MRIA FAcSS FAAL"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write post-nominals after the name in academic and professional titles",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Post-nominal letters are placed before the person’s name rather than after it.",
+    "when": [
+     "Post-nominals are included in an academic or professional title."
+    ],
+    "why": "The heading states an independently checkable placement rule, not merely a grouping of its child sections."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1f0f6a038b84",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "d17ab145e341",
+      "quote": "Write the post-nominals for the knighthood after the name, followed by any other post-nominals."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b9a95eec67fe",
+        "quote": "Professor Sally Wheeler OBE MRIA FAcSS FAAL"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Make sure you write post-nominals in the right order.",
+    "specification": "The page does not supply a complete precedence order. It specifically says to place knighthood post-nominals before other post-nominals for a knighted doctorate holder, but its Dame Bridget Ogilvie example places AC before DBE. An authoritative ordering source and resolution of this inconsistency are needed; no ordering table should be invented.",
+    "unit": "phrase",
+    "violation_condition": "A sequence of post-nominals is not in the applicable order of precedence.",
+    "when": [
+     "A person has multiple post-nominals.",
+     "The knighted-doctorate subsection states that knighthood post-nominals come before other post-nominals."
+    ],
+    "why": "G-2: the knighted-doctorate instruction is a specific ordering case; the unresolved ordering is made explicit rather than guessed."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "436783d468a4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d17ab145e341",
+      "quote": "Don’t insert commas before or between the post-nominals."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b9a95eec67fe",
+        "quote": "Professor Sally Wheeler OBE MRIA FAcSS FAAL"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "018ab7e68544",
+        "quote": "Dame Bridget Ogilvie AC DBE FRS FAA"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use commas before or between post-nominals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma separates a person’s name from their post-nominals or separates post-nominals from one another.",
+    "when": [
+     "Applies to commas introducing or separating post-nominals, not punctuation after the completed title."
+    ],
+    "why": "G-4: the knighthood subsection repeats the same comma prohibition."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7118365e4651",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "10d1a0f198a0",
+      "quote": "Include post-nominals in the shortened forms of titles"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b9aa6ad67c51",
+        "quote": "Attendees: Dr Z Switkowski AO, Prof M Bean CBE, Dr S Andrews, Ms J Latchford, Prof S Duckett, Ms T McLaughin and Mr D Hoogstra."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Retain any post-nominals for civil and military honours when using the shortened forms of titles.",
+    "specification": "Apply this check to shortened display or presentation forms. Ordinary first body-text mentions already require applicable honour post-nominals, while subsequent body-text mentions omit them. This scope resolves the apparent conflict between ‘retain any’ here and ‘first mention only’ above.",
+    "unit": "block",
+    "violation_condition": "A shortened presentation of an individual’s title drops applicable civil or military honour post-nominals.",
+    "when": [
+     "A shortened title is otherwise allowed.",
+     "The person holds a civil or military honour.",
+     "Ordinary first and subsequent body-text mentions are checked under their respective mention rules."
+    ],
+    "why": "G-4: the body supplies the honour-specific qualification missing from the heading; body-mention findings are kept disjoint."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f2d5a211141d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f11f29e38022",
+      "quote": "Use these post-nominals:"
+     },
+     {
+      "block_id": "402cd4af7d34",
+      "quote": "for correspondence within the academic community"
+     },
+     {
+      "block_id": "f096f64d36ef",
+      "quote": "to show relevant expertise."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b20215fa20fc",
+        "quote": "Dr Zdenka Svoboda or Zdenka Svoboda PhD"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b463f0d39651",
+        "quote": "Dr Amin Salke MD FRACGP"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "924cb71e1c45",
+        "quote": "Brent Hulot CPA"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1c65f31dbe0b",
+        "quote": "Mark Price BEngTech TMIEAust"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2036b2a2b800",
+        "quote": "Mia Lillard BCom CFP"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use post-nominals for academic and professional qualifications in 2 contexts",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Applicable qualification post-nominals are omitted in academic-community correspondence or where they are needed to establish relevant expertise.",
+    "when": [
+     "Correspondence within the academic community.",
+     "Showing relevant expertise.",
+     "Master and bachelor degree post-nominals are excluded from correspondence.",
+     "The first-mention-only restriction applies to running body text.",
+     "A doctorate may be represented by its title rather than its qualification post-nominal."
+    ],
+    "why": "G-2 and G-3: the two contexts and degree/title exceptions qualify one qualification-post-nominal check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "734d1c3cc89a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "734d1c3cc89a",
+      "quote": "It is conventional to use either the title or the post-nominal. This also applies to PhD equivalents such as ‘LLD’ (Doctor of Laws)."
+     },
+     {
+      "block_id": "720989a0efad",
+      "quote": "Those with a doctorate may choose to add the post-nominal ‘PhD’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b20215fa20fc",
+        "quote": "Dr Zdenka Svoboda or Zdenka Svoboda PhD"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c1a53d8fc7c4",
+        "quote": "Dr Tina Macleod MD PhD"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t include both ‘Dr’ (doctorate) and ‘PhD’ (Doctor of Philosophy) for the one name.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The same name has both a doctorate-derived ‘Dr’ title and a PhD or equivalent doctoral qualification post-nominal.",
+    "when": [
+     "Applies when ‘Dr’ denotes the doctorate.",
+     "Includes equivalent doctoral qualifications such as LLD.",
+     "Does not prohibit a medical practitioner’s professional ‘Dr’ honorific together with PhD."
+    ],
+    "why": "G-2 and G-3: equivalent doctorates are cases of the same duplication check; professional ‘Dr’ is an exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9fdd58b92797",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t include post-nominals for master and bachelor degrees in correspondence.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Correspondence includes a person’s master or bachelor degree post-nominals.",
+    "when": [
+     "Applies to correspondence, including correspondence within the academic community.",
+     "Does not prohibit these degree post-nominals in other contexts where they establish relevant expertise."
+    ],
+    "why": "This is a distinct prohibition on particular qualifications in correspondence, and an exception to the broader qualification guidance."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "320968077166",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "799d84fcbaba",
+        "quote": "Chancellor Dame Leonie Kramer AC DBE"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "93d7d16b22ca",
+        "quote": "Chancellor Sir Albert Axon KBE"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use ‘Sir’ or ‘Dame’ after the academic title.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A knighted academic’s ‘Sir’ or ‘Dame’ precedes the academic title or is omitted from the combined academic-and-knighthood form.",
+    "when": [
+     "An academic who is knighted is identified using their academic title."
+    ],
+    "why": "This checks the order of two honorific elements, not the separate order of post-nominals."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "65c878003ecf",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "3f66c383ab41",
+      "quote": "In formal correspondence:"
+     },
+     {
+      "block_id": "d1f265ec1f49",
+      "quote": "In less formal correspondence:"
+     },
+     {
+      "block_id": "28848b383c7b",
+      "quote": "Open with ‘Dear Chancellor’ (or ‘Vice-Chancellor’, ‘Professor’ and so on)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Open with ‘Chancellor’ (or ‘Vice-Chancellor’, ‘Professor’ and so on).",
+    "specification": "The general formal opening is the academic title; the less-formal opening is ‘Dear’ plus that title. The page does not define how to determine formality. Its specific Australian associate/assistant-professor rule and its permission for ‘Dear Dr Name’ in both formal and informal correspondence take precedence over this general pattern.",
+    "unit": "document",
+    "violation_condition": "Correspondence to an academic has an opening that does not use the academic title in the form specified for its level of formality.",
+    "when": [
+     "Applies to emails and letters to academics.",
+     "Formal correspondence opens with the academic title.",
+     "Less formal correspondence opens with ‘Dear’ followed by the academic title.",
+     "Use the more specific rules for Australian associate and assistant professors and for doctoral salutations."
+    ],
+    "why": "G-2: formal and less-formal openings are alternative cases of one opening check, subject to the page’s specific exceptions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "428eb1c90f0e",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "3f66c383ab41",
+      "quote": "In formal correspondence:"
+     },
+     {
+      "block_id": "d1f265ec1f49",
+      "quote": "In less formal correspondence:"
+     },
+     {
+      "block_id": "f7b6eab9580b",
+      "quote": "Conclude with ‘Yours sincerely’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "specification": "The closing depends on formality, but the page supplies no operational test for formal versus less formal correspondence.",
+    "unit": "document",
+    "violation_condition": "Correspondence to an academic closes with a formula other than ‘Yours faithfully’ when formal, or other than ‘Yours sincerely’ when less formal.",
+    "when": [
+     "Applies to emails and letters to academics.",
+     "Formal correspondence uses ‘Yours faithfully’.",
+     "Less formal correspondence uses ‘Yours sincerely’."
+    ],
+    "why": "G-2: the two formality-dependent closings are one check; opening and closing remain independently violable."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d62412b0c7b1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d62412b0c7b1",
+      "quote": "Don’t include a comma after these phrases."
+     },
+     {
+      "block_id": "ef2f5da5cac5",
+      "quote": "Don’t include a comma after these phrases."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0b31a34e9c39",
+        "quote": "Dear Associate Professor … Yours faithfully"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a5aa415495a5",
+        "quote": "Dear Assistant Professor … Yours sincerely"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "da242cdead0b",
+        "quote": "Dear Associate Professor, … Yours faithfully,"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "860dffca74ba",
+        "quote": "Dear Assistant Professor, … Yours sincerely,"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a7b0d485ca84",
+        "quote": "Dear Dr Muecke"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "74db4896d025",
+        "quote": "Dear Doctor"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Australian Government style is to write salutations without punctuation.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A correspondence salutation ends with punctuation, or a comma follows one of the specified complimentary closes.",
+    "when": [
+     "Applies to the salutations discussed on this page.",
+     "Also excludes a comma after ‘Yours faithfully’ and ‘Yours sincerely’."
+    ],
+    "why": "G-4 and E-2: both sets of salutation examples test the same terminal-punctuation rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "dc4847024273",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7bbff308473c",
+      "quote": "How to address associate and assistant professors correctly in correspondence differs by country and educational institution."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For Australian correspondence, write ‘Dear Associate Professor’ and ‘Dear Assistant Professor’ not ‘Dear Doctor’ or ‘Dear Professor’.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Australian correspondence addresses an associate or assistant professor as ‘Dear Doctor’ or ‘Dear Professor’, or otherwise substitutes a shortened rank for the specified salutation.",
+    "when": [
+     "Applies to Australian correspondence to an associate professor or assistant professor.",
+     "The addressee’s actual academic rank must be known."
+    ],
+    "why": "G-4: the body after the example labels states a new, independently checkable rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "805529873f04",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a7b0d485ca84",
+        "quote": "Dear Dr Muecke"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "‘Dr’ (without a full stop)",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title contraction ‘Dr’ has an abbreviation full stop.",
+    "when": [
+     "A full stop is attached to the title contraction, rather than serving as independent sentence-ending punctuation."
+    ],
+    "why": "G-3: permission to use ‘Dr’ is not itself a rule, but the stated punctuation restriction can produce a finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8a19bd6288f6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "805529873f04",
+      "quote": "Today, it is acceptable to use ‘Dear Dr Name’ for both formal and informal correspondence."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a7b0d485ca84",
+        "quote": "Dear Dr Muecke"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "74db4896d025",
+        "quote": "Dear Doctor"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When writing ‘Dear’ without the person’s name in emails and letters, write the title ‘Doctor’ in full.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A nameless email or letter salutation uses ‘Dear Dr’ instead of ‘Dear Doctor’.",
+    "when": [
+     "Applies to emails and letters addressing a person with a doctorate.",
+     "The salutation has ‘Dear’ and the title but no personal name.",
+     "With a name, ‘Dear Dr Name’ is allowed in formal and informal correspondence."
+    ],
+    "why": "G-2 and G-3: presence or absence of the personal name determines whether the contraction is allowed."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "02c8bb67fff7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "d17ab145e341",
+      "quote": "Instead, address the person by ‘Sir’ or ‘Dame’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "018ab7e68544",
+        "quote": "Dame Bridget Ogilvie AC DBE FRS FAA"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "If the holder of a doctorate is knighted, don’t address them as ‘Doctor’.",
+    "specification": "Interpret ‘Doctor’ as including its contraction ‘Dr’. Replace the doctorate-based honorific with ‘Sir’ or ‘Dame’; this does not remove an academic office or rank that can precede ‘Sir’ or ‘Dame’ under the separate academic-title rule.",
+    "unit": "phrase",
+    "violation_condition": "A knighted doctorate holder is addressed using the doctorate-based honorific ‘Doctor’ or ‘Dr’ instead of ‘Sir’ or ‘Dame’.",
+    "when": [
+     "The individual holds a doctorate and is knighted.",
+     "Applies to the doctorate-based form of address."
+    ],
+    "why": "G-2 and G-4: the prohibition and its positive replacement state one honorific-selection rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "720989a0efad",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "f26cbc8fde16",
+      "quote": "Use ‘Professor’, ‘Associate Professor’ or ‘Assistant Professor’ for doctors who hold these titles at academic institutions."
+     },
+     {
+      "block_id": "f26cbc8fde16",
+      "quote": "Some doctors who hold professorships choose to use ‘Dr’ when working in clinical practice."
+     },
+     {
+      "block_id": "dfc378faca14",
+      "quote": "Surgeons in human medicine are traditionally called ‘Mr’, ‘Ms’ or their preferred gender-appropriate honorific. Some surgeons prefer to use ‘Dr’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "39b341b4b95f",
+        "quote": "Doctor Farida Khan"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "61d79d2d9cf9",
+        "quote": "Dr Wilson Chang MBBS"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c1a53d8fc7c4",
+        "quote": "Dr Tina Macleod MD PhD"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "728d57f1391a",
+        "quote": "Dr Phil Smith BDS"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5aca03d0ca40",
+        "quote": "Dr Eve Fenton BVSc DVM"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d29da6e72d04",
+        "quote": "Miss Patricia Woo MBBS FRACS FAOrthA MsurgEd"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fbc18fde2ee0",
+        "quote": "Professor Henry Nicklin MBBS FRANZCP"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use ‘Doctor’ or ‘Dr’ for medical practitioners, dentists and veterinarians, whether or not they hold a doctorate.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A medical practitioner, dentist or veterinarian is given a professional title inconsistent with ‘Doctor’ or ‘Dr’, their applicable academic title, or a known surgeon-specific honorific preference.",
+    "when": [
+     "A doctorate is not required for the professional honorific ‘Doctor’ or ‘Dr’.",
+     "Doctors holding academic professorship titles use ‘Professor’, ‘Associate Professor’ or ‘Assistant Professor’ as applicable.",
+     "A doctor with a professorship may choose ‘Dr’ in clinical practice.",
+     "Human-medicine surgeons may use their preferred honorific, including traditional gender-appropriate forms or ‘Dr’."
+    ],
+    "why": "G-2 and G-3: professorships, clinical practice and surgeon preferences change which professional title is appropriate."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "1f80dafce5c5",
+    "end": 77,
+    "prefix": "",
+    "quote": "Use initial capitals for the titles of individual academics and professionals",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f14a20c627d0",
+     "end": 118,
+     "prefix": "",
+     "quote": "The academic and professional titles held by individuals usually have initial capitals. This includes honorary titles.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5e85e77063a2",
+     "end": 116,
+     "prefix": "",
+     "quote": "Use initial capitals for titles that appear immediately before a person’s name. Do this unless the title is generic.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "805c21da78f2",
+     "end": 60,
+     "prefix": "",
+     "quote": "Also use initial capitals for the shortened forms of titles.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "135500c9d637",
+     "end": 61,
+     "prefix": "",
+     "quote": "Use initial capitals for official titles that replace a name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9ebcfe453fca",
+     "end": 51,
+     "prefix": "",
+     "quote": "Titles replacing a name also have initial capitals:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "aea6c733b846",
+     "end": 33,
+     "prefix": "",
+     "quote": "when you address someone directly",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c7ab60a61f08",
+     "end": 34,
+     "prefix": "",
+     "quote": "for salutations in correspondence.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "214bd8908176",
+     "end": 98,
+     "prefix": "",
+     "quote": "Keep the initial capital for the title in correspondence when you’re writing to a specific person.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "24c4a49621b4",
+       "end": 32,
+       "prefix": "",
+       "quote": "Adjunct Professor Monty Chiratte",
+       "start": 0,
+       "suffix": " [Honorary academic title]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "66aa4fb6edb8",
+       "end": 63,
+       "prefix": "",
+       "quote": "Our new vice-chancellor and president is Professor Rufus Black.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "35f37f2233bf",
+       "end": 95,
+       "prefix": "",
+       "quote": "We welcome Dr Jamilah Mulyadi to our clinic. Dr Mulyadi is now available for skin examinations.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c43de3fbbbec",
+       "end": 68,
+       "prefix": "",
+       "quote": "The Vice-Chancellor of the University of Tasmania visited last week.",
+       "start": 0,
+       "suffix": " [Initial capitals: official tit"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7fb257ebd1bc",
+       "end": 15,
+       "prefix": "",
+       "quote": "Dear Chancellor",
+       "start": 0,
+       "suffix": " [Initial capital: salutation]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "00fd01452e32",
+       "end": 90,
+       "prefix": "",
+       "quote": "‘We note your concerns Doctor. Thank you for bringing this evidence before the committee’.",
+       "start": 0,
+       "suffix": " [Initial capital: direct addres"
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "d5f3d79c9a832316",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-generic academic or professional title is written with a lower-case initial where it identifies an individual before their name, replaces their name as an official title, addresses them directly, or forms part of a full title."
+   },
+   "when": [
+    "Includes honorary titles and shortened forms of titles.",
+    "Applies to non-generic titles immediately before a name.",
+    "Applies to official titles replacing a name, direct address and correspondence salutations.",
+    "Applies to titles after a name only when they form part of a full title.",
+    "Generic titles are checked under the lower-case rule instead."
+   ],
+   "why": "G-2 and G-4: these are contexts and restatements of the same initial-capital check, not separate findings."
+  },
+  {
+   "anchor": {
+    "block_id": "dd539849215f",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use lower case for titles used in a generic way",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4d284b559e1c",
+     "end": 46,
+     "prefix": "",
+     "quote": "Use lower case if you use a title generically.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d1984debe9be",
+     "end": 68,
+     "prefix": "",
+     "quote": "For all other uses, titles that replace a name should be lower case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a0d4c9c1bf85",
+     "end": 290,
+     "prefix": "",
+     "quote": "These other uses include abbreviated titles and titles given by an organisation to a role or position. Academic and professional organisations might capitalise such titles as a mark of respect or status, but this is not Australian Government style. Treat them as generic and use lower case.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "968648d10b4b",
+     "end": 110,
+     "prefix": "",
+     "quote": "Use lower case for most titles that appear after a name. These titles describe the individual and are generic.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c2bfd4aaa85c",
+     "end": 90,
+     "prefix": "There is one exception. ",
+     "quote": "Only use initial capitals for titles after a name in a full title.",
+     "start": 24,
+     "suffix": ""
+    },
+    {
+     "block_id": "ad871e179fa9",
+     "end": 57,
+     "prefix": "",
+     "quote": "Generic use of academic and professional titles includes:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f1720c05fea3",
+     "end": 39,
+     "prefix": "",
+     "quote": "titles that describe a named individual",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b47f24425cb7",
+     "end": 13,
+     "prefix": "",
+     "quote": "plural titles",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ca6649d59ac3",
+     "end": 13,
+     "prefix": "",
+     "quote": "common nouns.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "09431462d0dd",
+     "end": 160,
+     "prefix": "",
+     "quote": "Some titles appearing immediately before a name are also generic because they describe the individual. These titles are usually preceded by ‘the’ or a modifier.",
+     "start": 0,
+     "suffix": " Adjectives are modifiers becaus"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "03170e215481",
+       "end": 64,
+       "prefix": "",
+       "quote": "All general surgeons at the hospital attended Wednesday’s forum.",
+       "start": 0,
+       "suffix": " [Generic use]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8efb7f5f272a",
+       "end": 52,
+       "prefix": "",
+       "quote": "The vice-chancellor visited Burnie campus last week.",
+       "start": 0,
+       "suffix": " [Lower case: abbreviated title "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "49ae84d56e23",
+       "end": 129,
+       "prefix": "",
+       "quote": "They met with Associate Professor Dianne Stephens OAM, medical director of the National Critical Care and Trauma Response Centre.",
+       "start": 0,
+       "suffix": " [Lower case: generic descriptiv"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5cb4b5004b68",
+       "end": 87,
+       "prefix": "",
+       "quote": "Professor Bartlett, the university’s vice-chancellor, welcomed alumni to the reception.",
+       "start": 0,
+       "suffix": " [Lower case: descriptive title "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7a92da32cb93",
+       "end": 67,
+       "prefix": "",
+       "quote": "The research fellow Lydia Mbegngue wrote extensively on this topic.",
+       "start": 0,
+       "suffix": " [Lower case: title before a nam"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9011b288d6a1",
+       "end": 68,
+       "prefix": "",
+       "quote": "Several postdoctoral fellows in the research facility met last week.",
+       "start": 0,
+       "suffix": " [Lower case: plural title]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e0203b2dd85d",
+       "end": 55,
+       "prefix": "",
+       "quote": "A provost oversees a university’s academic performance.",
+       "start": 0,
+       "suffix": " [Lower case: common noun]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7c6e5658f9e7",
+       "end": 52,
+       "prefix": "",
+       "quote": "Dhriti Saxena is a local doctor in general practice.",
+       "start": 0,
+       "suffix": " [Lower case: common noun and de"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "960b296a61bd",
+       "end": 49,
+       "prefix": "",
+       "quote": "They met with former medical director Tom Perera.",
+       "start": 0,
+       "suffix": " [Lower case: title immediately "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0eb3742aeae7",
+       "end": 55,
+       "prefix": "",
+       "quote": "Two doctors from this practice attended the conference.",
+       "start": 0,
+       "suffix": " [Lower case: plural title]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "dcbcb02e1600",
+       "end": 68,
+       "prefix": "",
+       "quote": "It is important to see your doctor to develop an asthma action plan.",
+       "start": 0,
+       "suffix": " [Lower case: common noun]"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "ba6154802eeed194",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic academic or professional title has an initial capital, including a descriptive title, plural title, common noun or abbreviated role title replacing a name."
+   },
+   "when": [
+    "Most titles after a name are generic; titles in a full title are the exception.",
+    "A title before a name can be generic when it describes the individual, often following ‘the’ or a modifier.",
+    "Abbreviated titles and organisation-given role titles replacing a name are generic unless an official-title, direct-address or salutation case applies.",
+    "An organisation’s preference for respectful capitals does not by itself make a generic title capitalised.",
+    "Signature blocks may follow the organisation’s template, including its prescribed all-capitals treatment."
+   ],
+   "why": "G-2 and G-4: generic uses before, after and instead of a name are cases of one lower-case check."
+  },
+  {
+   "anchor": {
+    "block_id": "4b1037986f25",
+    "end": 35,
+    "prefix": "",
+    "quote": "Use full titles in certain contexts",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "23f7b92ca7d6",
+     "end": 188,
+     "prefix": "ddressed by their ‘full title’. ",
+     "quote": "A full title includes the title or honorific (with initial capitals), name, post-nominals, position and organisation.",
+     "start": 71,
+     "suffix": ""
+    },
+    {
+     "block_id": "b6440f8f0c01",
+     "end": 17,
+     "prefix": "",
+     "quote": "Use a full title:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fc2199234ad6",
+     "end": 37,
+     "prefix": "",
+     "quote": "to introduce an individual as speaker",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2d1b3c17ea1f",
+     "end": 49,
+     "prefix": "",
+     "quote": "in address and signature blocks in correspondence",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e5d068455879",
+     "end": 34,
+     "prefix": "",
+     "quote": "in official records of proceedings",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0ce424e2618b",
+     "end": 62,
+     "prefix": "",
+     "quote": "in lists in organisational publications such as annual reports",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "da909b100f35",
+     "end": 53,
+     "prefix": "",
+     "quote": "if it is important to know where an individual works.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "4e09a0af7608",
+     "end": 93,
+     "prefix": "",
+     "quote": "A full title is often about using titles in a display or presentation context (display text).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8e8f74a07e73",
+     "end": 134,
+     "prefix": "",
+     "quote": "In most contexts, address academics with their full title: title or honorific, name, position, post-nominals and academic institution.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "88e36b6aa51a",
+       "end": 95,
+       "prefix": "",
+       "quote": "Professor Margaret Sheil AO, Vice-Chancellor and President, Queensland University of Technology",
+       "start": 0,
+       "suffix": " [Full title]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1cc95fa6714e",
+       "end": 108,
+       "prefix": "",
+       "quote": "Associate Professor Dianne Stephens OAM, Medical Director, National Critical Care and Trauma Response Centre",
+       "start": 0,
+       "suffix": " [Initial capitals: full title]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0bbf4819f1b4",
+       "end": 31,
+       "prefix": "",
+       "quote": "Professor Chris Goodnow FAA FRS",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "6c09fb8e787c",
+       "end": 18,
+       "prefix": "",
+       "quote": "Executive Director",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "1fdf0793608f",
+       "end": 36,
+       "prefix": "",
+       "quote": "Garvan Institute of Medical Research",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "1320af19aea9",
+       "end": 19,
+       "prefix": "",
+       "quote": "384 Victoria Street",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "81dbf6aa36b1",
+       "end": 21,
+       "prefix": "",
+       "quote": "Darlinghurst NSW 2010",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7cbaf2fbff12",
+       "end": 9,
+       "prefix": "",
+       "quote": "Australia",
+       "start": 0,
+       "suffix": " [Initial capitals: full title f"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0d2816f13a2b",
+       "end": 21,
+       "prefix": "",
+       "quote": "Dr Fatima Dashti FASM",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a3fdc40fa942",
+       "end": 19,
+       "prefix": "",
+       "quote": "Director (Research)",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "dc45c6386b91",
+       "end": 21,
+       "prefix": "",
+       "quote": "Institute for Viruses",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "91780e7af2df",
+       "end": 9,
+       "prefix": "",
+       "quote": "telephone",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d5dec56ebb9d",
+       "end": 5,
+       "prefix": "",
+       "quote": "email",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "5d5a0900bd31",
+       "end": 7,
+       "prefix": "",
+       "quote": "website",
+       "start": 0,
+       "suffix": " [Initial capitals: full title f"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fa50d97a538a",
+       "end": 113,
+       "prefix": "",
+       "quote": "#LIVE #COVID Update with Professor Paul Kelly, Australian Government Chief Medical Officer, Department of Health.",
+       "start": 0,
+       "suffix": " [Initial capitals: full title t"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3542482b97e7",
+       "end": 48,
+       "prefix": "",
+       "quote": "2021 Innovation Award recipients Dr Joanne Zheng",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "265789c22cc2",
+       "end": 25,
+       "prefix": "",
+       "quote": "Senior Research Scientist",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b3c66d699035",
+       "end": 16,
+       "prefix": "",
+       "quote": "AcmeCo Australia",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c3dcdf362c20",
+       "end": 26,
+       "prefix": "",
+       "quote": "Professor Alexander Bannon",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "59b471f4fd8f",
+       "end": 42,
+       "prefix": "",
+       "quote": "Senior Lecturer in Rehabilitation Medicine",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "18cac0d54a03",
+       "end": 38,
+       "prefix": "",
+       "quote": "Faculty of Health and Medical Sciences",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "56e544f20dd8",
+       "end": 22,
+       "prefix": "",
+       "quote": "University of Adelaide",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d06802f845b9",
+       "end": 108,
+       "prefix": "",
+       "quote": "Associate Professor Peter Spencer, College of Science, Health, Engineering and Education, Murdoch University",
+       "start": 0,
+       "suffix": " [Full title]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fddf7bae94b2",
+       "end": 43,
+       "prefix": "",
+       "quote": "Distinguished Professor Larissa Behrendt AO",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "e616d2816d21",
+       "end": 20,
+       "prefix": "",
+       "quote": "Director of Research",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "260e73358698",
+       "end": 56,
+       "prefix": "",
+       "quote": "Jumbunna Institute for Indigenous Education and Research",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "df1d8ced6233",
+       "end": 31,
+       "prefix": "",
+       "quote": "University of Technology Sydney",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b4e1b0c6cd31",
+       "end": 10,
+       "prefix": "",
+       "quote": "PO Box 123",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "05f8d5f9e711",
+       "end": 17,
+       "prefix": "",
+       "quote": "Broadway NSW 2007",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "cf8bf406a994",
+       "end": 9,
+       "prefix": "",
+       "quote": "Australia",
+       "start": 0,
+       "suffix": " [Full title: address block]"
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "801d4fdf97903bbc",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "A full title contains the title or honorific, name, applicable post-nominals, position and organisation. For academics the organisation is the academic institution. The page does not define the limits of ‘most contexts’ when addressing academics. Ordinary first and subsequent mentions in body text have their own rules. Post-nominal content and formatting should be checked under the more specific post-nominal rules rather than producing a second finding for the same omission.",
+    "unit": "block",
+    "violation_condition": "An individual is presented without the identifying elements of a full title in a context that calls for a full title."
+   },
+   "when": [
+    "Introducing an individual as a speaker.",
+    "Address and signature blocks in correspondence.",
+    "Official records of proceedings.",
+    "Lists in organisational publications, including annual reports.",
+    "Where the individual’s workplace is important.",
+    "As the default when addressing academics in most contexts."
+   ],
+   "why": "G-2 and G-4: the listed contexts and academic-address guidance change when the full-title check applies."
+  },
+  {
+   "anchor": {
+    "block_id": "6617a23e43dd",
+    "end": 60,
+    "prefix": "",
+    "quote": "Only use shortened forms of titles in limited circumstances.",
+    "start": 0,
+    "suffix": " People might understand common "
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "6617a23e43dd",
+     "end": 298,
+     "prefix": "‘Pro Vice-Chancellor’ is ‘PVC’. ",
+     "quote": "To ensure your content is readable, write the title in full.",
+     "start": 238,
+     "suffix": ""
+    },
+    {
+     "block_id": "ab0a97cb9d82",
+     "end": 118,
+     "prefix": "",
+     "quote": "Shortened forms are sometimes necessary because of limited space. For example, shortened forms often appear in tables.",
+     "start": 0,
+     "suffix": " List the full form of any title"
+    },
+    {
+     "block_id": "c23ccf12ed08",
+     "end": 38,
+     "prefix": "",
+     "quote": "‘Dr’ is an exception in all instances.",
+     "start": 0,
+     "suffix": " Like ‘Ms’ and ‘Mr’, ‘Dr’ is eas"
+    },
+    {
+     "block_id": "2ad912fc0c44",
+     "end": 109,
+     "prefix": "",
+     "quote": "Never use the shortened form of the title in body text (‘Prof’ for example), except for the contraction ‘Dr’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fb1605566998",
+     "end": 163,
+     "prefix": "ly use the title and last name. ",
+     "quote": "Some academic titles have an accepted abbreviated title you can use after the first mention.",
+     "start": 71,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "45273dae4e4a",
+       "end": 261,
+       "prefix": "",
+       "quote": "Departmental officers recently attended Upsilon University’s annual Copyright Symposium. The academic panel (pictured below), chaired by Vice-Chancellor Tom Dhillon, discussed recent cases with implications for fair dealing provisions of the Copyright Act 1968.",
+       "start": 0,
+       "suffix": " [Body text: spelt-out titles]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7f9c9124cb1f",
+       "end": 147,
+       "prefix": "",
+       "quote": "Left to right: Associate Professor Sara Baird, Vice-Chancellor Tom Dhillon, Dean Frank Ealing, Adjunct Professor Olena Iraklidis, Dr Celia Nieminen",
+       "start": 0,
+       "suffix": " [Image caption: preferred style"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "277e8d174370",
+       "end": 99,
+       "prefix": "",
+       "quote": "Left to right: Assoc Prof S Baird, VC T Dhillon, Dean F Ealing, Adj Prof O Iraklidis, Dr C Nieminen",
+       "start": 0,
+       "suffix": " [Image caption: only for limite"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "00f3b34729ed",
+       "end": 100,
+       "prefix": "",
+       "quote": "This year’s graduate cohort asked Deputy Vice-Chancellor Jonquil Johansson to moderate their debate.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5c90c94b1206",
+       "end": 47,
+       "prefix": "",
+       "quote": "DVC Jonquil Johansson to moderate their debate.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The general rule leaves ‘limited circumstances’ open, with limited space as an explicit example. The body-text restriction is categorical: the page says ‘Never’. An accepted abbreviated academic rank, such as ‘Professor’ for ‘Emeritus Professor’ on subsequent mention, is not the same as a contraction or initialism such as ‘Prof’ or ‘PVC’.",
+    "unit": "block",
+    "violation_condition": "An academic or professional title other than ‘Dr’ is shortened in body text, or is shortened elsewhere without a limited-circumstances justification."
+   },
+   "when": [
+    "Applies to shortened titles immediately before a name.",
+    "Limited space can justify shortened forms outside body text, including in tables and image captions.",
+    "Body text must use the full form except for ‘Dr’.",
+    "‘Dr’ is an exception in all instances."
+   ],
+   "why": "G-2 and G-3: body text, limited space and ‘Dr’ are conditions or exceptions to the same shortened-title check."
+  },
+  {
+   "anchor": {
+    "block_id": "ab0a97cb9d82",
+    "end": 194,
+    "prefix": "d forms often appear in tables. ",
+    "quote": "List the full form of any title that people might find confusing in a note.",
+    "start": 119,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "6617a23e43dd",
+     "end": 237,
+     "prefix": "itles in limited circumstances. ",
+     "quote": "People might understand common contractions like ‘Prof’ for ‘Professor’, but some shortened forms are confusing. For example, the initialism for ‘Pro Vice-Chancellor’ is ‘PVC’.",
+     "start": 61,
+     "suffix": " To ensure your content is reada"
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page gives no closed list or audience test for confusing shortened titles. A checker needs an audience-sensitive allowlist or reviewer judgement; it should not treat every shortened title as confusing.",
+    "unit": "block",
+    "violation_condition": "A potentially confusing shortened title appears without a note giving its full form."
+   },
+   "when": [
+    "A shortened title is used in circumstances where shortening is otherwise allowed.",
+    "The shortened title may confuse the intended audience."
+   ],
+   "why": "This requires a distinct textual element—a note—rather than merely restating the preference for full titles."
+  },
+  {
+   "anchor": {
+    "block_id": "1f6a8deb3c6a",
+    "end": 104,
+    "prefix": "",
+    "quote": "The space available for image captions can be limited, but write the full names and titles as a default.",
+    "start": 0,
+    "suffix": " If you have to use initials and"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7f9c9124cb1f",
+       "end": 147,
+       "prefix": "",
+       "quote": "Left to right: Associate Professor Sara Baird, Vice-Chancellor Tom Dhillon, Dean Frank Ealing, Adjunct Professor Olena Iraklidis, Dr Celia Nieminen",
+       "start": 0,
+       "suffix": " [Image caption: preferred style"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "277e8d174370",
+       "end": 99,
+       "prefix": "",
+       "quote": "Left to right: Assoc Prof S Baird, VC T Dhillon, Dean F Ealing, Adj Prof O Iraklidis, Dr C Nieminen",
+       "start": 0,
+       "suffix": " [Image caption: only for limite"
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "This finding concerns shortened personal names. Shortened titles are covered by the general shortened-title rule, avoiding two findings for the same title. Whether space requires initials needs publication-layout information not supplied by the words alone.",
+    "unit": "block",
+    "violation_condition": "An image caption uses personal initials instead of full names when space does not require shortening."
+   },
+   "when": [
+    "Applies to image captions identifying people.",
+    "Initials are allowed when limited caption space makes them necessary."
+   ],
+   "why": "G-3: limited space relaxes the full-name default; the permitted shortened caption is not a violating example."
+  },
+  {
+   "anchor": {
+    "block_id": "1f6a8deb3c6a",
+    "end": 243,
+    "prefix": " names and titles as a default. ",
+    "quote": "If you have to use initials and the shortened forms of titles in a caption, always include the full forms in body text to provide context.",
+    "start": 105,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "45273dae4e4a",
+       "end": 261,
+       "prefix": "",
+       "quote": "Departmental officers recently attended Upsilon University’s annual Copyright Symposium. The academic panel (pictured below), chaired by Vice-Chancellor Tom Dhillon, discussed recent cases with implications for fair dealing provisions of the Copyright Act 1968.",
+       "start": 0,
+       "suffix": " [Body text: spelt-out titles]"
+      },
+      {
+       "block_id": "277e8d174370",
+       "end": 99,
+       "prefix": "",
+       "quote": "Left to right: Assoc Prof S Baird, VC T Dhillon, Dean F Ealing, Adj Prof O Iraklidis, Dr C Nieminen",
+       "start": 0,
+       "suffix": " [Image caption: only for limite"
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A caption uses personal initials or shortened titles without the corresponding full forms appearing in body text."
+   },
+   "when": [
+    "A caption uses shortened names or titles because space is limited.",
+    "The universal ‘Dr’ exception does not require expansion to ‘Doctor’."
+   ],
+   "why": "This is a separate document-level expansion requirement, not another prohibition on shortened captions."
+  },
+  {
+   "anchor": {
+    "block_id": "ed4a5e6bfcd7",
+    "end": 155,
+    "prefix": "",
+    "quote": "The first time you mention someone in body text, use their academic or professional title before their first name and last name, followed by post-nominals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "650db507aa9e",
+     "end": 50,
+     "prefix": "",
+     "quote": "Use title, name and post-nominals at first mention",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "119ba16676d9",
+     "end": 191,
+     "prefix": "",
+     "quote": "The first time you write a name in body text, use the academic and professional title along with the first and last name. Include the post-nominal for a civil or military honour in the title.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2f299be214fa",
+       "end": 172,
+       "prefix": "",
+       "quote": "Emeritus Professor Stephen Duckett has extensive experience in health care at senior leadership level. Professor Duckett’s membership of the RMIT Council concludes in 2022.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ee9ea0243d78",
+       "end": 101,
+       "prefix": "",
+       "quote": "Dr Ziggy Switkowski AO has been chancellor of RMIT since 2011. Dr Switkowski is also chair of NBN Co.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The first body-text mention of an individual omits their academic or professional title, first name, last name or applicable civil or military honour post-nominals, or places the title after the personal name."
+   },
+   "when": [
+    "Applies at the first mention in body text.",
+    "Post-nominals for civil or military honours are included when applicable.",
+    "Academic and professional qualification post-nominals are subject to the separate context restrictions.",
+    "‘Dr’ is allowed without being spelt out."
+   ],
+   "why": "G-4: the later post-nominal section restates and qualifies the same first-mention format."
+  },
+  {
+   "anchor": {
+    "block_id": "fb1605566998",
+    "end": 70,
+    "prefix": "",
+    "quote": "If you mention the individual again, only use the title and last name.",
+    "start": 0,
+    "suffix": " Some academic titles have an ac"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "172c11d7ffdf",
+     "end": 39,
+     "prefix": "",
+     "quote": "Use post-nominals at first mention only",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "09910065c36d",
+     "end": 95,
+     "prefix": "",
+     "quote": "If you mention the name again, use the title and last name, but don’t include the post-nominal.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "fb1605566998",
+     "end": 163,
+     "prefix": "ly use the title and last name. ",
+     "quote": "Some academic titles have an accepted abbreviated title you can use after the first mention.",
+     "start": 71,
+     "suffix": ""
+    },
+    {
+     "block_id": "aa8cc658226d",
+     "end": 85,
+     "prefix": "",
+     "quote": "[‘Professor’ is the accepted abbreviated title for an Emeritus or Emerita Professor.]",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2f299be214fa",
+       "end": 172,
+       "prefix": "",
+       "quote": "Emeritus Professor Stephen Duckett has extensive experience in health care at senior leadership level. Professor Duckett’s membership of the RMIT Council concludes in 2022.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ee9ea0243d78",
+       "end": 101,
+       "prefix": "",
+       "quote": "Dr Ziggy Switkowski AO has been chancellor of RMIT since 2011. Dr Switkowski is also chair of NBN Co.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A subsequent body-text name reference does not use the title and last name alone, for example by repeating given names or post-nominals or dropping the title."
+   },
+   "when": [
+    "Applies to subsequent name mentions in body text, not repeated display titles or correspondence blocks.",
+    "An accepted abbreviated academic rank may replace the original rank after first mention.",
+    "‘Professor’ is an accepted abbreviated title for an Emeritus or Emerita Professor."
+   ],
+   "why": "G-2 to G-4: omission of post-nominals and accepted abbreviated ranks are parts or exceptions of the subsequent-mention format."
+  },
+  {
+   "anchor": {
+    "block_id": "83fac542df4e",
+    "end": 70,
+    "prefix": "",
+    "quote": "Write post-nominals after the name in academic and professional titles",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "27b1ca4ba12f",
+     "end": 102,
+     "prefix": "",
+     "quote": "Post-nominals are letters after a name that stand for academic, civil and military awards and honours.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b9a95eec67fe",
+       "end": 43,
+       "prefix": "",
+       "quote": "Professor Sally Wheeler OBE MRIA FAcSS FAAL",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "7bee0c1c7df550ed",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Post-nominal letters are placed before the person’s name rather than after it."
+   },
+   "when": [
+    "Post-nominals are included in an academic or professional title."
+   ],
+   "why": "The heading states an independently checkable placement rule, not merely a grouping of its child sections."
+  },
+  {
+   "anchor": {
+    "block_id": "1f0f6a038b84",
+    "end": 53,
+    "prefix": "",
+    "quote": "Make sure you write post-nominals in the right order.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "d17ab145e341",
+     "end": 143,
+     "prefix": " the person by ‘Sir’ or ‘Dame’. ",
+     "quote": "Write the post-nominals for the knighthood after the name, followed by any other post-nominals.",
+     "start": 48,
+     "suffix": " Don’t insert commas before or b"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b9a95eec67fe",
+       "end": 43,
+       "prefix": "",
+       "quote": "Professor Sally Wheeler OBE MRIA FAcSS FAAL",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not supply a complete precedence order. It specifically says to place knighthood post-nominals before other post-nominals for a knighted doctorate holder, but its Dame Bridget Ogilvie example places AC before DBE. An authoritative ordering source and resolution of this inconsistency are needed; no ordering table should be invented.",
+    "unit": "phrase",
+    "violation_condition": "A sequence of post-nominals is not in the applicable order of precedence."
+   },
+   "when": [
+    "A person has multiple post-nominals.",
+    "The knighted-doctorate subsection states that knighthood post-nominals come before other post-nominals."
+   ],
+   "why": "G-2: the knighted-doctorate instruction is a specific ordering case; the unresolved ordering is made explicit rather than guessed."
+  },
+  {
+   "anchor": {
+    "block_id": "436783d468a4",
+    "end": 49,
+    "prefix": "",
+    "quote": "Don’t use commas before or between post-nominals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d17ab145e341",
+     "end": 200,
+     "prefix": "wed by any other post-nominals. ",
+     "quote": "Don’t insert commas before or between the post-nominals.",
+     "start": 144,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b9a95eec67fe",
+       "end": 43,
+       "prefix": "",
+       "quote": "Professor Sally Wheeler OBE MRIA FAcSS FAAL",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "018ab7e68544",
+       "end": 35,
+       "prefix": "",
+       "quote": "Dame Bridget Ogilvie AC DBE FRS FAA",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma separates a person’s name from their post-nominals or separates post-nominals from one another."
+   },
+   "when": [
+    "Applies to commas introducing or separating post-nominals, not punctuation after the completed title."
+   ],
+   "why": "G-4: the knighthood subsection repeats the same comma prohibition."
+  },
+  {
+   "anchor": {
+    "block_id": "7118365e4651",
+    "end": 97,
+    "prefix": "",
+    "quote": "Retain any post-nominals for civil and military honours when using the shortened forms of titles.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "10d1a0f198a0",
+     "end": 54,
+     "prefix": "",
+     "quote": "Include post-nominals in the shortened forms of titles",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b9aa6ad67c51",
+       "end": 127,
+       "prefix": "",
+       "quote": "Attendees: Dr Z Switkowski AO, Prof M Bean CBE, Dr S Andrews, Ms J Latchford, Prof S Duckett, Ms T McLaughin and Mr D Hoogstra.",
+       "start": 0,
+       "suffix": " [Extract from minutes of a univ"
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Apply this check to shortened display or presentation forms. Ordinary first body-text mentions already require applicable honour post-nominals, while subsequent body-text mentions omit them. This scope resolves the apparent conflict between ‘retain any’ here and ‘first mention only’ above.",
+    "unit": "block",
+    "violation_condition": "A shortened presentation of an individual’s title drops applicable civil or military honour post-nominals."
+   },
+   "when": [
+    "A shortened title is otherwise allowed.",
+    "The person holds a civil or military honour.",
+    "Ordinary first and subsequent body-text mentions are checked under their respective mention rules."
+   ],
+   "why": "G-4: the body supplies the honour-specific qualification missing from the heading; body-mention findings are kept disjoint."
+  },
+  {
+   "anchor": {
+    "block_id": "f2d5a211141d",
+    "end": 76,
+    "prefix": "",
+    "quote": "Use post-nominals for academic and professional qualifications in 2 contexts",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f11f29e38022",
+     "end": 24,
+     "prefix": "",
+     "quote": "Use these post-nominals:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "402cd4af7d34",
+     "end": 48,
+     "prefix": "",
+     "quote": "for correspondence within the academic community",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f096f64d36ef",
+     "end": 27,
+     "prefix": "",
+     "quote": "to show relevant expertise.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b20215fa20fc",
+       "end": 39,
+       "prefix": "",
+       "quote": "Dr Zdenka Svoboda or Zdenka Svoboda PhD",
+       "start": 0,
+       "suffix": " [Individual with doctorate]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b463f0d39651",
+       "end": 23,
+       "prefix": "",
+       "quote": "Dr Amin Salke MD FRACGP",
+       "start": 0,
+       "suffix": " [Medical practitioner]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "924cb71e1c45",
+       "end": 15,
+       "prefix": "",
+       "quote": "Brent Hulot CPA",
+       "start": 0,
+       "suffix": " [Accountant]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1c65f31dbe0b",
+       "end": 28,
+       "prefix": "",
+       "quote": "Mark Price BEngTech TMIEAust",
+       "start": 0,
+       "suffix": " [Engineer]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2036b2a2b800",
+       "end": 20,
+       "prefix": "",
+       "quote": "Mia Lillard BCom CFP",
+       "start": 0,
+       "suffix": " [Financial planner]"
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "344a9e1417ef5857",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Applicable qualification post-nominals are omitted in academic-community correspondence or where they are needed to establish relevant expertise."
+   },
+   "when": [
+    "Correspondence within the academic community.",
+    "Showing relevant expertise.",
+    "Master and bachelor degree post-nominals are excluded from correspondence.",
+    "The first-mention-only restriction applies to running body text.",
+    "A doctorate may be represented by its title rather than its qualification post-nominal."
+   ],
+   "why": "G-2 and G-3: the two contexts and degree/title exceptions qualify one qualification-post-nominal check."
+  },
+  {
+   "anchor": {
+    "block_id": "734d1c3cc89a",
+    "end": 86,
+    "prefix": "",
+    "quote": "Don’t include both ‘Dr’ (doctorate) and ‘PhD’ (Doctor of Philosophy) for the one name.",
+    "start": 0,
+    "suffix": " It is conventional to use eithe"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "734d1c3cc89a",
+     "end": 219,
+     "prefix": "f Philosophy) for the one name. ",
+     "quote": "It is conventional to use either the title or the post-nominal. This also applies to PhD equivalents such as ‘LLD’ (Doctor of Laws).",
+     "start": 87,
+     "suffix": ""
+    },
+    {
+     "block_id": "720989a0efad",
+     "end": 178,
+     "prefix": "r or not they hold a doctorate. ",
+     "quote": "Those with a doctorate may choose to add the post-nominal ‘PhD’.",
+     "start": 114,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b20215fa20fc",
+       "end": 39,
+       "prefix": "",
+       "quote": "Dr Zdenka Svoboda or Zdenka Svoboda PhD",
+       "start": 0,
+       "suffix": " [Individual with doctorate]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c1a53d8fc7c4",
+       "end": 22,
+       "prefix": "",
+       "quote": "Dr Tina Macleod MD PhD",
+       "start": 0,
+       "suffix": " [Medical practitioner with doct"
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The same name has both a doctorate-derived ‘Dr’ title and a PhD or equivalent doctoral qualification post-nominal."
+   },
+   "when": [
+    "Applies when ‘Dr’ denotes the doctorate.",
+    "Includes equivalent doctoral qualifications such as LLD.",
+    "Does not prohibit a medical practitioner’s professional ‘Dr’ honorific together with PhD."
+   ],
+   "why": "G-2 and G-3: equivalent doctorates are cases of the same duplication check; professional ‘Dr’ is an exception."
+  },
+  {
+   "anchor": {
+    "block_id": "9fdd58b92797",
+    "end": 78,
+    "prefix": "",
+    "quote": "Don’t include post-nominals for master and bachelor degrees in correspondence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Correspondence includes a person’s master or bachelor degree post-nominals."
+   },
+   "when": [
+    "Applies to correspondence, including correspondence within the academic community.",
+    "Does not prohibit these degree post-nominals in other contexts where they establish relevant expertise."
+   ],
+   "why": "This is a distinct prohibition on particular qualifications in correspondence, and an exception to the broader qualification guidance."
+  },
+  {
+   "anchor": {
+    "block_id": "320968077166",
+    "end": 45,
+    "prefix": "",
+    "quote": "Use ‘Sir’ or ‘Dame’ after the academic title.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "799d84fcbaba",
+       "end": 36,
+       "prefix": "",
+       "quote": "Chancellor Dame Leonie Kramer AC DBE",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "93d7d16b22ca",
+       "end": 30,
+       "prefix": "",
+       "quote": "Chancellor Sir Albert Axon KBE",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A knighted academic’s ‘Sir’ or ‘Dame’ precedes the academic title or is omitted from the combined academic-and-knighthood form."
+   },
+   "when": [
+    "An academic who is knighted is identified using their academic title."
+   ],
+   "why": "This checks the order of two honorific elements, not the separate order of post-nominals."
+  },
+  {
+   "anchor": {
+    "block_id": "65c878003ecf",
+    "end": 69,
+    "prefix": "",
+    "quote": "Open with ‘Chancellor’ (or ‘Vice-Chancellor’, ‘Professor’ and so on).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "3f66c383ab41",
+     "end": 25,
+     "prefix": "",
+     "quote": "In formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d1f265ec1f49",
+     "end": 30,
+     "prefix": "",
+     "quote": "In less formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "28848b383c7b",
+     "end": 74,
+     "prefix": "",
+     "quote": "Open with ‘Dear Chancellor’ (or ‘Vice-Chancellor’, ‘Professor’ and so on).",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The general formal opening is the academic title; the less-formal opening is ‘Dear’ plus that title. The page does not define how to determine formality. Its specific Australian associate/assistant-professor rule and its permission for ‘Dear Dr Name’ in both formal and informal correspondence take precedence over this general pattern.",
+    "unit": "document",
+    "violation_condition": "Correspondence to an academic has an opening that does not use the academic title in the form specified for its level of formality."
+   },
+   "when": [
+    "Applies to emails and letters to academics.",
+    "Formal correspondence opens with the academic title.",
+    "Less formal correspondence opens with ‘Dear’ followed by the academic title.",
+    "Use the more specific rules for Australian associate and assistant professors and for doctoral salutations."
+   ],
+   "why": "G-2: formal and less-formal openings are alternative cases of one opening check, subject to the page’s specific exceptions."
+  },
+  {
+   "anchor": {
+    "block_id": "428eb1c90f0e",
+    "end": 33,
+    "prefix": "",
+    "quote": "Conclude with ‘Yours faithfully’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "3f66c383ab41",
+     "end": 25,
+     "prefix": "",
+     "quote": "In formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d1f265ec1f49",
+     "end": 30,
+     "prefix": "",
+     "quote": "In less formal correspondence:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f7b6eab9580b",
+     "end": 32,
+     "prefix": "",
+     "quote": "Conclude with ‘Yours sincerely’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The closing depends on formality, but the page supplies no operational test for formal versus less formal correspondence.",
+    "unit": "document",
+    "violation_condition": "Correspondence to an academic closes with a formula other than ‘Yours faithfully’ when formal, or other than ‘Yours sincerely’ when less formal."
+   },
+   "when": [
+    "Applies to emails and letters to academics.",
+    "Formal correspondence uses ‘Yours faithfully’.",
+    "Less formal correspondence uses ‘Yours sincerely’."
+   ],
+   "why": "G-2: the two formality-dependent closings are one check; opening and closing remain independently violable."
+  },
+  {
+   "anchor": {
+    "block_id": "d62412b0c7b1",
+    "end": 115,
+    "prefix": "de a comma after these phrases. ",
+    "quote": "Australian Government style is to write salutations without punctuation.",
+    "start": 43,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d62412b0c7b1",
+     "end": 42,
+     "prefix": "",
+     "quote": "Don’t include a comma after these phrases.",
+     "start": 0,
+     "suffix": " Australian Government style is "
+    },
+    {
+     "block_id": "ef2f5da5cac5",
+     "end": 42,
+     "prefix": "",
+     "quote": "Don’t include a comma after these phrases.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0b31a34e9c39",
+       "end": 43,
+       "prefix": "",
+       "quote": "Dear Associate Professor … Yours faithfully",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a5aa415495a5",
+       "end": 42,
+       "prefix": "",
+       "quote": "Dear Assistant Professor … Yours sincerely",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "da242cdead0b",
+       "end": 45,
+       "prefix": "",
+       "quote": "Dear Associate Professor, … Yours faithfully,",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "860dffca74ba",
+       "end": 44,
+       "prefix": "",
+       "quote": "Dear Assistant Professor, … Yours sincerely,",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a7b0d485ca84",
+       "end": 14,
+       "prefix": "",
+       "quote": "Dear Dr Muecke",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "74db4896d025",
+       "end": 11,
+       "prefix": "",
+       "quote": "Dear Doctor",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A correspondence salutation ends with punctuation, or a comma follows one of the specified complimentary closes."
+   },
+   "when": [
+    "Applies to the salutations discussed on this page.",
+    "Also excludes a comma after ‘Yours faithfully’ and ‘Yours sincerely’."
+   ],
+   "why": "G-4 and E-2: both sets of salutation examples test the same terminal-punctuation rule."
+  },
+  {
+   "anchor": {
+    "block_id": "dc4847024273",
+    "end": 133,
+    "prefix": "",
+    "quote": "For Australian correspondence, write ‘Dear Associate Professor’ and ‘Dear Assistant Professor’ not ‘Dear Doctor’ or ‘Dear Professor’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7bbff308473c",
+     "end": 125,
+     "prefix": "",
+     "quote": "How to address associate and assistant professors correctly in correspondence differs by country and educational institution.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Australian correspondence addresses an associate or assistant professor as ‘Dear Doctor’ or ‘Dear Professor’, or otherwise substitutes a shortened rank for the specified salutation."
+   },
+   "when": [
+    "Applies to Australian correspondence to an associate professor or assistant professor.",
+    "The addressee’s actual academic rank must be known."
+   ],
+   "why": "G-4: the body after the example labels states a new, independently checkable rule."
+  },
+  {
+   "anchor": {
+    "block_id": "805529873f04",
+    "end": 85,
+    "prefix": "hold a doctorate as ‘Doctor’ or ",
+    "quote": "‘Dr’ (without a full stop)",
+    "start": 59,
+    "suffix": ". Today, it is acceptable to use"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a7b0d485ca84",
+       "end": 14,
+       "prefix": "",
+       "quote": "Dear Dr Muecke",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The title contraction ‘Dr’ has an abbreviation full stop."
+   },
+   "when": [
+    "A full stop is attached to the title contraction, rather than serving as independent sentence-ending punctuation."
+   ],
+   "why": "G-3: permission to use ‘Dr’ is not itself a rule, but the stated punctuation restriction can produce a finding."
+  },
+  {
+   "anchor": {
+    "block_id": "8a19bd6288f6",
+    "end": 102,
+    "prefix": "",
+    "quote": "When writing ‘Dear’ without the person’s name in emails and letters, write the title ‘Doctor’ in full.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "805529873f04",
+     "end": 177,
+     "prefix": " or ‘Dr’ (without a full stop). ",
+     "quote": "Today, it is acceptable to use ‘Dear Dr Name’ for both formal and informal correspondence.",
+     "start": 87,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a7b0d485ca84",
+       "end": 14,
+       "prefix": "",
+       "quote": "Dear Dr Muecke",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "74db4896d025",
+       "end": 11,
+       "prefix": "",
+       "quote": "Dear Doctor",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 22,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A nameless email or letter salutation uses ‘Dear Dr’ instead of ‘Dear Doctor’."
+   },
+   "when": [
+    "Applies to emails and letters addressing a person with a doctorate.",
+    "The salutation has ‘Dear’ and the title but no personal name.",
+    "With a name, ‘Dear Dr Name’ is allowed in formal and informal correspondence."
+   ],
+   "why": "G-2 and G-3: presence or absence of the personal name determines whether the contraction is allowed."
+  },
+  {
+   "anchor": {
+    "block_id": "02c8bb67fff7",
+    "end": 73,
+    "prefix": "",
+    "quote": "If the holder of a doctorate is knighted, don’t address them as ‘Doctor’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "d17ab145e341",
+     "end": 47,
+     "prefix": "",
+     "quote": "Instead, address the person by ‘Sir’ or ‘Dame’.",
+     "start": 0,
+     "suffix": " Write the post-nominals for the"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "018ab7e68544",
+       "end": 35,
+       "prefix": "",
+       "quote": "Dame Bridget Ogilvie AC DBE FRS FAA",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 23,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Interpret ‘Doctor’ as including its contraction ‘Dr’. Replace the doctorate-based honorific with ‘Sir’ or ‘Dame’; this does not remove an academic office or rank that can precede ‘Sir’ or ‘Dame’ under the separate academic-title rule.",
+    "unit": "phrase",
+    "violation_condition": "A knighted doctorate holder is addressed using the doctorate-based honorific ‘Doctor’ or ‘Dr’ instead of ‘Sir’ or ‘Dame’."
+   },
+   "when": [
+    "The individual holds a doctorate and is knighted.",
+    "Applies to the doctorate-based form of address."
+   ],
+   "why": "G-2 and G-4: the prohibition and its positive replacement state one honorific-selection rule."
+  },
+  {
+   "anchor": {
+    "block_id": "720989a0efad",
+    "end": 113,
+    "prefix": "",
+    "quote": "Use ‘Doctor’ or ‘Dr’ for medical practitioners, dentists and veterinarians, whether or not they hold a doctorate.",
+    "start": 0,
+    "suffix": " Those with a doctorate may choo"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "f26cbc8fde16",
+     "end": 123,
+     "prefix": "",
+     "quote": "Use ‘Professor’, ‘Associate Professor’ or ‘Assistant Professor’ for doctors who hold these titles at academic institutions.",
+     "start": 0,
+     "suffix": " Some doctors who hold professor"
+    },
+    {
+     "block_id": "f26cbc8fde16",
+     "end": 214,
+     "prefix": "itles at academic institutions. ",
+     "quote": "Some doctors who hold professorships choose to use ‘Dr’ when working in clinical practice.",
+     "start": 124,
+     "suffix": ""
+    },
+    {
+     "block_id": "dfc378faca14",
+     "end": 145,
+     "prefix": "",
+     "quote": "Surgeons in human medicine are traditionally called ‘Mr’, ‘Ms’ or their preferred gender-appropriate honorific. Some surgeons prefer to use ‘Dr’.",
+     "start": 0,
+     "suffix": " For example, a search of the we"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "39b341b4b95f",
+       "end": 18,
+       "prefix": "",
+       "quote": "Doctor Farida Khan",
+       "start": 0,
+       "suffix": " [Medical practitioner]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "61d79d2d9cf9",
+       "end": 20,
+       "prefix": "",
+       "quote": "Dr Wilson Chang MBBS",
+       "start": 0,
+       "suffix": " [Medical practitioner]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c1a53d8fc7c4",
+       "end": 22,
+       "prefix": "",
+       "quote": "Dr Tina Macleod MD PhD",
+       "start": 0,
+       "suffix": " [Medical practitioner with doct"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "728d57f1391a",
+       "end": 17,
+       "prefix": "",
+       "quote": "Dr Phil Smith BDS",
+       "start": 0,
+       "suffix": " [Dentist]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5aca03d0ca40",
+       "end": 22,
+       "prefix": "",
+       "quote": "Dr Eve Fenton BVSc DVM",
+       "start": 0,
+       "suffix": " [Veterinarian]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d29da6e72d04",
+       "end": 44,
+       "prefix": "",
+       "quote": "Miss Patricia Woo MBBS FRACS FAOrthA MsurgEd",
+       "start": 0,
+       "suffix": " [Orthopaedic surgeon]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fbc18fde2ee0",
+       "end": 36,
+       "prefix": "",
+       "quote": "Professor Henry Nicklin MBBS FRANZCP",
+       "start": 0,
+       "suffix": " [Psychiatrist with academic tit"
+      }
+     ]
+    }
+   ],
+   "n": 24,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A medical practitioner, dentist or veterinarian is given a professional title inconsistent with ‘Doctor’ or ‘Dr’, their applicable academic title, or a known surgeon-specific honorific preference."
+   },
+   "when": [
+    "A doctorate is not required for the professional honorific ‘Doctor’ or ‘Dr’.",
+    "Doctors holding academic professorship titles use ‘Professor’, ‘Associate Professor’ or ‘Assistant Professor’ as applicable.",
+    "A doctor with a professorship may choose ‘Dr’ in clinical practice.",
+    "Human-medicine surgeons may use their preferred honorific, including traditional gender-appropriate forms or ‘Dr’."
+   ],
+   "why": "G-2 and G-3: professorships, clinical practice and surgeon preferences change which professional title is appropriate."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 8330,
+  "output_tokens": 27824,
+  "reasoning_tokens": 11199
+ }
+}

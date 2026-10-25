@@ -1,0 +1,553 @@
+{
+ "effort": "high",
+ "input_sha256": "9818bca62ea05d01edc24af5e4313e7f46aa5e6ba006c24cf3c3cdc393c6dba0",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "0a8173d11076",
+    "end": 81,
+    "prefix": "",
+    "quote": "Only create PDFs if your research shows there are specific needs for this format.",
+    "start": 0,
+    "suffix": " Make PDF content accessible to "
+   },
+   "note": "Restricts the choice of file format based on research, rather than specifying a property of the words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0a8173d11076",
+    "end": 135,
+    "prefix": "specific needs for this format. ",
+    "quote": "Make PDF content accessible to everyone who needs it.",
+    "start": 82,
+    "suffix": ""
+   },
+   "note": "An overarching PDF-accessibility instruction, not a specific textual check. Concrete textual requirements are captured separately.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "27940b1e7f90",
+    "end": 26,
+    "prefix": "",
+    "quote": "Create webpages by default",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The candidate heading governs publication format, not wording.",
+   "reason": "not_text",
+   "seed_uid": "1b5f2d1011a49350"
+  },
+  {
+   "anchor": {
+    "block_id": "ff241722bcd3",
+    "end": 45,
+    "prefix": "",
+    "quote": "Create content in HTML pages instead of PDFs.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Specifies the publication format rather than a property of the text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d78d59045f51",
+    "end": 54,
+    "prefix": "",
+    "quote": "You can configure HTML pages for printing and sharing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: an optional capability, not a requirement that text can violate.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "825c5dfc7adb",
+    "end": 65,
+    "prefix": "",
+    "quote": "For a comprehensive list, refer to the overview on accessibility.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to another resource.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "582a50a01b09",
+    "end": 74,
+    "prefix": "",
+    "quote": "You must make all government content accessible to people with disability.",
+    "start": 0,
+    "suffix": " This is part of Australian law "
+   },
+   "note": "States an overarching accessibility obligation rather than a specific wording requirement; it includes technical accessibility outside a text check.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "745a3c9d3ea8",
+    "end": 213,
+    "prefix": "o help you comply with the Act. ",
+    "quote": "The AHRC advises that if you use PDFs, you should also provide the content in another format that is accessible.",
+    "start": 101,
+    "suffix": ""
+   },
+   "note": "Requires an alternative publication format, not particular words in the document.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9e8092ea009b",
+    "end": 40,
+    "prefix": "",
+    "quote": "Do research to find why users need a PDF",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: the candidate heading directs a research activity, not a checkable property of text.",
+   "reason": "advice",
+   "seed_uid": "60706a404012ccb7"
+  },
+  {
+   "anchor": {
+    "block_id": "0f96b7124d46",
+    "end": 71,
+    "prefix": "",
+    "quote": "Before using a PDF, check if other document formats will meet the need.",
+    "start": 0,
+    "suffix": " An example is the electronic pu"
+   },
+   "note": "G-5: asks the publisher to evaluate formats before publication.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "aa3104aed0a6",
+    "end": 103,
+    "prefix": "",
+    "quote": "Don't use a Microsoft Word document if you need to protect the document from changes after it's shared.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns file-format choice and protection against editing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dc8e3b0687e8",
+    "end": 40,
+    "prefix": "",
+    "quote": "Make PDF content accessible to all users",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the following accessibility measures, including distinct link-text and fallback-content requirements.",
+   "reason": "section",
+   "seed_uid": "b18a3a4c72e82091"
+  },
+  {
+   "anchor": {
+    "block_id": "2c2b667636b0",
+    "end": 56,
+    "prefix": "",
+    "quote": "provide the content in another format that is accessible",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns supplying an alternative format rather than the wording of the content.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a066db10b578",
+    "end": 35,
+    "prefix": "",
+    "quote": "mark up the PDF with the right tags",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns PDF structure and tagging rather than words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "096bb7eaa5a4",
+    "end": 74,
+    "prefix": "",
+    "quote": "check that assistive technology reads the PDF content in the correct order",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs an assistive-technology test of the PDF, not a textual check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "62615a888121",
+    "end": 170,
+    "prefix": "ats from certain existing PDFs. ",
+    "quote": "Government is not allowed to change some documents authored by independent organisations.",
+    "start": 81,
+    "suffix": " This includes audits and privac"
+   },
+   "note": "Restricts alteration of externally authored documents; compliance cannot be determined from their wording alone.",
+   "reason": "not_text",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/pdf-portable-document-format.md",
+ "page_sha256": "e4ad6e2ba74984afeb730e21a35feed60d20870bab2437d66a4fad65431e0de2",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "0a8173d11076",
+    "note": "Restricts the choice of file format based on research, rather than specifying a property of the words.",
+    "quote": "Only create PDFs if your research shows there are specific needs for this format.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0a8173d11076",
+    "note": "An overarching PDF-accessibility instruction, not a specific textual check. Concrete textual requirements are captured separately.",
+    "quote": "Make PDF content accessible to everyone who needs it.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "27940b1e7f90",
+    "note": "The candidate heading governs publication format, not wording.",
+    "quote": "Create webpages by default",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "ff241722bcd3",
+    "note": "Specifies the publication format rather than a property of the text.",
+    "quote": "Create content in HTML pages instead of PDFs.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d78d59045f51",
+    "note": "G-3: an optional capability, not a requirement that text can violate.",
+    "quote": "You can configure HTML pages for printing and sharing.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "825c5dfc7adb",
+    "note": "G-5: directs the writer to another resource.",
+    "quote": "For a comprehensive list, refer to the overview on accessibility.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "582a50a01b09",
+    "note": "States an overarching accessibility obligation rather than a specific wording requirement; it includes technical accessibility outside a text check.",
+    "quote": "You must make all government content accessible to people with disability.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "745a3c9d3ea8",
+    "note": "Requires an alternative publication format, not particular words in the document.",
+    "quote": "The AHRC advises that if you use PDFs, you should also provide the content in another format that is accessible.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9e8092ea009b",
+    "note": "G-5: the candidate heading directs a research activity, not a checkable property of text.",
+    "quote": "Do research to find why users need a PDF",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0f96b7124d46",
+    "note": "G-5: asks the publisher to evaluate formats before publication.",
+    "quote": "Before using a PDF, check if other document formats will meet the need.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "aa3104aed0a6",
+    "note": "Concerns file-format choice and protection against editing.",
+    "quote": "Don't use a Microsoft Word document if you need to protect the document from changes after it's shared.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "dc8e3b0687e8",
+    "note": "G-1: groups the following accessibility measures, including distinct link-text and fallback-content requirements.",
+    "quote": "Make PDF content accessible to all users",
+    "reason": "section"
+   },
+   {
+    "block_id": "2c2b667636b0",
+    "note": "Concerns supplying an alternative format rather than the wording of the content.",
+    "quote": "provide the content in another format that is accessible",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "a066db10b578",
+    "note": "Concerns PDF structure and tagging rather than words.",
+    "quote": "mark up the PDF with the right tags",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "096bb7eaa5a4",
+    "note": "G-5: directs an assistive-technology test of the PDF, not a textual check.",
+    "quote": "check that assistive technology reads the PDF content in the correct order",
+    "reason": "advice"
+   },
+   {
+    "block_id": "62615a888121",
+    "note": "Restricts alteration of externally authored documents; compliance cannot be determined from their wording alone.",
+    "quote": "Government is not allowed to change some documents authored by independent organisations.",
+    "reason": "not_text"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8dab634ccf0d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c0a5ff81e256",
+      "quote": "When you publish a PDF:"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The example demonstrates PDF and file-size information in link text.",
+      "parts": [
+       {
+        "block_id": "8e3d612670e2",
+        "quote": "A useful resource for law students is Table of abbreviations [PDF 94.35 KB] by Thomson Reuters Australia."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "add 'PDF' and file size to meaningful link text.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A link to a PDF has link text that omits 'PDF', the file size, or both.",
+    "when": [
+     "The link points to a published PDF."
+    ],
+    "why": "G-2 keeps the PDF publication condition with the check; E-2 attaches the following example to this link-text instruction."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "0d1f927d9f91",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "35cebf26bf31",
+      "quote": "When there are significant barriers to providing content in another format, at least:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "create a landing page with a high-level summary of the content",
+    "specification": "The textual check concerns the summary on the landing page, not the technical creation of that page. The manual does not define 'significant barriers' or how much detail constitutes a 'high-level summary'; the publication condition needs contextual confirmation.",
+    "unit": "document",
+    "violation_condition": "A PDF landing page lacks a high-level summary of the PDF's content when significant barriers exist to providing the content in another format.",
+    "when": [
+     "There are significant barriers to providing the PDF content in another format."
+    ],
+    "why": "G-2 retains the conditional trigger; the summary and the accessible-version request route are separate textual requirements under the one-finding test."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7ce534885259",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "35cebf26bf31",
+      "quote": "When there are significant barriers to providing content in another format, at least:"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "provide a way for people to request an accessible version – for example, an email address.",
+    "specification": "The manual does not define 'significant barriers', so that condition needs contextual confirmation. An email address is an example of an acceptable request route, not a required mechanism.",
+    "unit": "document",
+    "violation_condition": "Content offering a PDF provides no way to request an accessible version when significant barriers exist to providing the content in another format.",
+    "when": [
+     "There are significant barriers to providing the PDF content in another format."
+    ],
+    "why": "G-2 keeps the condition and alternative request mechanisms together; the missing request route is distinct from a missing summary."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "8dab634ccf0d",
+    "end": 48,
+    "prefix": "",
+    "quote": "add 'PDF' and file size to meaningful link text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c0a5ff81e256",
+     "end": 23,
+     "prefix": "",
+     "quote": "When you publish a PDF:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The example demonstrates PDF and file-size information in link text.",
+     "parts": [
+      {
+       "block_id": "8e3d612670e2",
+       "end": 105,
+       "prefix": "",
+       "quote": "A useful resource for law students is Table of abbreviations [PDF 94.35 KB] by Thomson Reuters Australia.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A link to a PDF has link text that omits 'PDF', the file size, or both."
+   },
+   "when": [
+    "The link points to a published PDF."
+   ],
+   "why": "G-2 keeps the PDF publication condition with the check; E-2 attaches the following example to this link-text instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "0d1f927d9f91",
+    "end": 62,
+    "prefix": "",
+    "quote": "create a landing page with a high-level summary of the content",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "35cebf26bf31",
+     "end": 85,
+     "prefix": "",
+     "quote": "When there are significant barriers to providing content in another format, at least:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The textual check concerns the summary on the landing page, not the technical creation of that page. The manual does not define 'significant barriers' or how much detail constitutes a 'high-level summary'; the publication condition needs contextual confirmation.",
+    "unit": "document",
+    "violation_condition": "A PDF landing page lacks a high-level summary of the PDF's content when significant barriers exist to providing the content in another format."
+   },
+   "when": [
+    "There are significant barriers to providing the PDF content in another format."
+   ],
+   "why": "G-2 retains the conditional trigger; the summary and the accessible-version request route are separate textual requirements under the one-finding test."
+  },
+  {
+   "anchor": {
+    "block_id": "7ce534885259",
+    "end": 90,
+    "prefix": "",
+    "quote": "provide a way for people to request an accessible version – for example, an email address.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "35cebf26bf31",
+     "end": 85,
+     "prefix": "",
+     "quote": "When there are significant barriers to providing content in another format, at least:",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The manual does not define 'significant barriers', so that condition needs contextual confirmation. An email address is an example of an acceptable request route, not a required mechanism.",
+    "unit": "document",
+    "violation_condition": "Content offering a PDF provides no way to request an accessible version when significant barriers exist to providing the content in another format."
+   },
+   "when": [
+    "There are significant barriers to providing the PDF content in another format."
+   ],
+   "why": "G-2 keeps the condition and alternative request mechanisms together; the missing request route is distinct from a missing summary."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4201,
+  "output_tokens": 5000,
+  "reasoning_tokens": 3106
+ }
+}

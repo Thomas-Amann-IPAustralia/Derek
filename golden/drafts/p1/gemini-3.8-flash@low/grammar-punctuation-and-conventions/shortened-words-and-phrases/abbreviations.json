@@ -1,0 +1,822 @@
+{
+ "effort": "low",
+ "input_sha256": "64d14bf4a96385838a604ca78e7e7aa58abe9c0e8bb50343fd14aa3f2f60347c",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "05de17dea182",
+    "end": 101,
+    "prefix": "",
+    "quote": "Abbreviations are shortened words. They can hinder people’s understanding, so they have limited uses.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introductory definition and rationale.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "590582f0456d",
+    "end": 123,
+    "prefix": "",
+    "quote": "Abbreviations contain the first single letter or first few letters of a word. They don’t include the last letter of a word.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Defines what an abbreviation is in this taxonomy.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0ad25a3a7db5",
+    "end": 55,
+    "prefix": "",
+    "quote": "Abbreviations are useful in very limited circumstances:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Lead-in describing circumstances where abbreviations are acceptable.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "83ba4f6922ce",
+    "end": 60,
+    "prefix": "",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "General plain language / accessibility rule belonging on plain-language/accessibility pages.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "01d1045be020",
+    "end": 21,
+    "prefix": "",
+    "quote": "WCAG quick reference:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Reference pointer to external standards.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/shortened-words-and-phrases/abbreviations.md",
+ "page_sha256": "9dce33e1e5ba6d040d29ebc4d1b1b78ab1977e93e8784d40f212798267e4fe51",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "05de17dea182",
+    "note": "Introductory definition and rationale.",
+    "quote": "Abbreviations are shortened words. They can hinder people’s understanding, so they have limited uses.",
+    "reason": "description"
+   },
+   {
+    "block_id": "590582f0456d",
+    "note": "Defines what an abbreviation is in this taxonomy.",
+    "quote": "Abbreviations contain the first single letter or first few letters of a word. They don’t include the last letter of a word.",
+    "reason": "description"
+   },
+   {
+    "block_id": "0ad25a3a7db5",
+    "note": "Lead-in describing circumstances where abbreviations are acceptable.",
+    "quote": "Abbreviations are useful in very limited circumstances:",
+    "reason": "description"
+   },
+   {
+    "block_id": "83ba4f6922ce",
+    "note": "General plain language / accessibility rule belonging on plain-language/accessibility pages.",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "01d1045be020",
+    "note": "Reference pointer to external standards.",
+    "quote": "WCAG quick reference:",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page",
+     "easy_read",
+     "form",
+     "social_post"
+    ],
+    "block_id": "97b4e5ed507b",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "20ec358539e2",
+      "quote": "Limit the use of abbreviations"
+     },
+     {
+      "block_id": "ed7060cdda5e",
+      "quote": "Avoid using them in general content where possible."
+     },
+     {
+      "block_id": "5096e9e64567",
+      "quote": "Use abbreviations only if users will understand what they mean. If there’s any doubt, define the abbreviation on first use."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Paragraph written out in full.",
+      "parts": [
+       {
+        "block_id": "753a945fd7d0",
+        "quote": "Thank you for your email about errors in the third paragraph of the webpage How to apply for a special use permit."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses abbreviation 'para' in general correspondence/content.",
+      "parts": [
+       {
+        "block_id": "e14497e59684",
+        "quote": "Thank you for your email about errors in the third para of the webpage How to apply for a special use permit."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using abbreviations in any public-facing content.",
+    "specification": "Abbreviations (truncated words such as 'para', 'vol', 'app') should not be used in general/public-facing content, except in tables/charts where space is tight (with an explanatory note) or 'cont' across page breaks.",
+    "unit": "token",
+    "violation_condition": "an abbreviation used in public-facing or general content where the full word should be written out",
+    "when": [
+     "Tables or charts where space is unavailable for the full word (provide a note giving the full form).",
+     "When using 'cont' to show continuing text in another part of content.",
+     "Semi-formal and informal content if users will understand, or if defined on first use."
+    ],
+    "why": "G-1, G-2, G-4: consolidates the general prohibition/avoidance of abbreviations in general content and the exceptions/conditions for when they may appear."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "43224cf48a74",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "db75fcc60f95",
+      "quote": "Don’t put a full stop after most abbreviations"
+     },
+     {
+      "block_id": "1e135aff6ba2",
+      "quote": "when the abbreviation ends a sentence and isn’t followed by another punctuation mark"
+     },
+     {
+      "block_id": "128dfeb06fd3",
+      "quote": "for abbreviations of scientific names for plants and animals"
+     },
+     {
+      "block_id": "46b10a8ca54f",
+      "quote": "for the abbreviation ‘n.d.’(meaning ‘no date’) for the year of publication in references."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No full stop after 'misc'.",
+      "parts": [
+       {
+        "block_id": "228146878ef5",
+        "quote": "It’s listed as a container of ‘misc goods’."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "A full stop after the abbreviation ends the sentence.",
+      "parts": [
+       {
+        "block_id": "ad3f1989905a",
+        "quote": "The full name of the company is Sizzling Outback Tours Inc."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "No full stop after 'para' when another punctuation mark ends the sentence.",
+      "parts": [
+       {
+        "block_id": "4e1c27c72b41",
+        "quote": "Have you reviewed the relevant para?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Scientific name retains full stop.",
+      "parts": [
+       {
+        "block_id": "f28f73c85abb",
+        "quote": "Xanthorrhoea glauca subsp. angustifolia"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "'n.d.' retains full stops.",
+      "parts": [
+       {
+        "block_id": "58b83c4e9dc3",
+        "quote": "Office of Parliamentary Counsel (n.d.) Glossary, Federal Register of Legislation website, accessed 12 January 2020."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t place a full stop after an abbreviation.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a full stop placed after an abbreviation",
+    "when": [
+     "When the abbreviation ends a sentence and is not followed by another punctuation mark.",
+     "Abbreviations of scientific names for plants and animals (e.g. 'subsp.').",
+     "The abbreviation 'n.d.' (meaning 'no date') for the year of publication in references."
+    ],
+    "why": "G-2, G-4: Rule prohibiting full stops after abbreviations with specific listed exceptions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bddd7f8d59c3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bf530977e71a",
+      "quote": "Capitalise the same way as the spelt-out version"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Lower-case unabbreviated word remains lower-case.",
+      "parts": [
+       {
+        "block_id": "6a846bb121d1",
+        "quote": "misc for ‘miscellaneous’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Capitalised proper noun remains capitalised.",
+      "parts": [
+       {
+        "block_id": "9cb3f4a98c34",
+        "quote": "Dec for ‘December’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the same capitalisation as for the unabbreviated word.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "an abbreviation capitalised differently from its unabbreviated form (e.g. lowercasing a proper noun abbreviation or capitalising a common noun abbreviation)",
+    "when": [],
+    "why": "G-4: Clear instruction matching the candidate heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5085f6e97c9f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "4bd53b754a87",
+      "quote": "Write out the abbreviated term in full."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Spelled out in full at the beginning of a sentence.",
+      "parts": [
+       {
+        "block_id": "fde00b6c65a2",
+        "quote": "Appendix B explains this further."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t abbreviate the first word in a sentence",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence starting with an abbreviated word instead of the word written out in full",
+    "when": [],
+    "why": "G-4: Candidate heading specifies the exact constraint."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0934e31284cd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "91efb7f4f3d4",
+      "quote": "Add ‘s’ to create plural abbreviations"
+     },
+     {
+      "block_id": "0934e31284cd",
+      "quote": "One exception is ‘pp’(pages), which is used when referring to multiple pages."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Plural formed with 's'.",
+      "parts": [
+       {
+        "block_id": "cac155cb7798",
+        "quote": "I’ve sent you some paras to check."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Exception 'pp' used for pages.",
+      "parts": [
+       {
+        "block_id": "d294c90dcf67",
+        "quote": "Refer to pp 58–64."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Add an ‘s’.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a plural abbreviation formed without appending 's', or forming 'pp' without following the exception",
+    "when": [
+     "Exception: 'pp' (pages) when referring to multiple pages."
+    ],
+    "why": "G-2, G-4: Single rule for pluralising abbreviations with its exception."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "97b4e5ed507b",
+    "end": 55,
+    "prefix": "",
+    "quote": "Avoid using abbreviations in any public-facing content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "20ec358539e2",
+     "end": 30,
+     "prefix": "",
+     "quote": "Limit the use of abbreviations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ed7060cdda5e",
+     "end": 130,
+     "prefix": "ility and can be misunderstood. ",
+     "quote": "Avoid using them in general content where possible.",
+     "start": 79,
+     "suffix": ""
+    },
+    {
+     "block_id": "5096e9e64567",
+     "end": 187,
+     "prefix": " uses abbreviations more often. ",
+     "quote": "Use abbreviations only if users will understand what they mean. If there’s any doubt, define the abbreviation on first use.",
+     "start": 64,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Paragraph written out in full.",
+     "parts": [
+      {
+       "block_id": "753a945fd7d0",
+       "end": 114,
+       "prefix": "",
+       "quote": "Thank you for your email about errors in the third paragraph of the webpage How to apply for a special use permit.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses abbreviation 'para' in general correspondence/content.",
+     "parts": [
+      {
+       "block_id": "e14497e59684",
+       "end": 109,
+       "prefix": "",
+       "quote": "Thank you for your email about errors in the third para of the webpage How to apply for a special use permit.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page",
+     "easy_read",
+     "form",
+     "social_post"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Abbreviations (truncated words such as 'para', 'vol', 'app') should not be used in general/public-facing content, except in tables/charts where space is tight (with an explanatory note) or 'cont' across page breaks.",
+    "unit": "token",
+    "violation_condition": "an abbreviation used in public-facing or general content where the full word should be written out"
+   },
+   "when": [
+    "Tables or charts where space is unavailable for the full word (provide a note giving the full form).",
+    "When using 'cont' to show continuing text in another part of content.",
+    "Semi-formal and informal content if users will understand, or if defined on first use."
+   ],
+   "why": "G-1, G-2, G-4: consolidates the general prohibition/avoidance of abbreviations in general content and the exceptions/conditions for when they may appear."
+  },
+  {
+   "anchor": {
+    "block_id": "43224cf48a74",
+    "end": 46,
+    "prefix": "",
+    "quote": "Don’t place a full stop after an abbreviation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "db75fcc60f95",
+     "end": 46,
+     "prefix": "",
+     "quote": "Don’t put a full stop after most abbreviations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1e135aff6ba2",
+     "end": 84,
+     "prefix": "",
+     "quote": "when the abbreviation ends a sentence and isn’t followed by another punctuation mark",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "128dfeb06fd3",
+     "end": 60,
+     "prefix": "",
+     "quote": "for abbreviations of scientific names for plants and animals",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "46b10a8ca54f",
+     "end": 89,
+     "prefix": "",
+     "quote": "for the abbreviation ‘n.d.’(meaning ‘no date’) for the year of publication in references.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No full stop after 'misc'.",
+     "parts": [
+      {
+       "block_id": "228146878ef5",
+       "end": 43,
+       "prefix": "",
+       "quote": "It’s listed as a container of ‘misc goods’.",
+       "start": 0,
+       "suffix": " [No full stop after the abbrevi"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "A full stop after the abbreviation ends the sentence.",
+     "parts": [
+      {
+       "block_id": "ad3f1989905a",
+       "end": 59,
+       "prefix": "",
+       "quote": "The full name of the company is Sizzling Outback Tours Inc.",
+       "start": 0,
+       "suffix": " [A full stop after the abbrevia"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "No full stop after 'para' when another punctuation mark ends the sentence.",
+     "parts": [
+      {
+       "block_id": "4e1c27c72b41",
+       "end": 36,
+       "prefix": "",
+       "quote": "Have you reviewed the relevant para?",
+       "start": 0,
+       "suffix": " [No full stop after the abbrevi"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Scientific name retains full stop.",
+     "parts": [
+      {
+       "block_id": "f28f73c85abb",
+       "end": 39,
+       "prefix": "",
+       "quote": "Xanthorrhoea glauca subsp. angustifolia",
+       "start": 0,
+       "suffix": " [Full stop in the abbreviation "
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "'n.d.' retains full stops.",
+     "parts": [
+      {
+       "block_id": "58b83c4e9dc3",
+       "end": 115,
+       "prefix": "",
+       "quote": "Office of Parliamentary Counsel (n.d.) Glossary, Federal Register of Legislation website, accessed 12 January 2020.",
+       "start": 0,
+       "suffix": " [No date of publication on this"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a full stop placed after an abbreviation"
+   },
+   "when": [
+    "When the abbreviation ends a sentence and is not followed by another punctuation mark.",
+    "Abbreviations of scientific names for plants and animals (e.g. 'subsp.').",
+    "The abbreviation 'n.d.' (meaning 'no date') for the year of publication in references."
+   ],
+   "why": "G-2, G-4: Rule prohibiting full stops after abbreviations with specific listed exceptions."
+  },
+  {
+   "anchor": {
+    "block_id": "bddd7f8d59c3",
+    "end": 58,
+    "prefix": "",
+    "quote": "Use the same capitalisation as for the unabbreviated word.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bf530977e71a",
+     "end": 48,
+     "prefix": "",
+     "quote": "Capitalise the same way as the spelt-out version",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Lower-case unabbreviated word remains lower-case.",
+     "parts": [
+      {
+       "block_id": "6a846bb121d1",
+       "end": 24,
+       "prefix": "",
+       "quote": "misc for ‘miscellaneous’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Capitalised proper noun remains capitalised.",
+     "parts": [
+      {
+       "block_id": "9cb3f4a98c34",
+       "end": 18,
+       "prefix": "",
+       "quote": "Dec for ‘December’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "an abbreviation capitalised differently from its unabbreviated form (e.g. lowercasing a proper noun abbreviation or capitalising a common noun abbreviation)"
+   },
+   "when": [],
+   "why": "G-4: Clear instruction matching the candidate heading."
+  },
+  {
+   "anchor": {
+    "block_id": "5085f6e97c9f",
+    "end": 45,
+    "prefix": "",
+    "quote": "Don’t abbreviate the first word in a sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "4bd53b754a87",
+     "end": 39,
+     "prefix": "",
+     "quote": "Write out the abbreviated term in full.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Spelled out in full at the beginning of a sentence.",
+     "parts": [
+      {
+       "block_id": "fde00b6c65a2",
+       "end": 33,
+       "prefix": "",
+       "quote": "Appendix B explains this further.",
+       "start": 0,
+       "suffix": " [Not ‘App B’]"
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "3e22803efc2bde5b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence starting with an abbreviated word instead of the word written out in full"
+   },
+   "when": [],
+   "why": "G-4: Candidate heading specifies the exact constraint."
+  },
+  {
+   "anchor": {
+    "block_id": "0934e31284cd",
+    "end": 11,
+    "prefix": "",
+    "quote": "Add an ‘s’.",
+    "start": 0,
+    "suffix": " One exception is ‘pp’(pages), w"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "91efb7f4f3d4",
+     "end": 38,
+     "prefix": "",
+     "quote": "Add ‘s’ to create plural abbreviations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0934e31284cd",
+     "end": 89,
+     "prefix": "Add an ‘s’. ",
+     "quote": "One exception is ‘pp’(pages), which is used when referring to multiple pages.",
+     "start": 12,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Plural formed with 's'.",
+     "parts": [
+      {
+       "block_id": "cac155cb7798",
+       "end": 34,
+       "prefix": "",
+       "quote": "I’ve sent you some paras to check.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Exception 'pp' used for pages.",
+     "parts": [
+      {
+       "block_id": "d294c90dcf67",
+       "end": 18,
+       "prefix": "",
+       "quote": "Refer to pp 58–64.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "a plural abbreviation formed without appending 's', or forming 'pp' without following the exception"
+   },
+   "when": [
+    "Exception: 'pp' (pages) when referring to multiple pages."
+   ],
+   "why": "G-2, G-4: Single rule for pluralising abbreviations with its exception."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 4312,
+  "output_tokens": 3012,
+  "reasoning_tokens": 0
+ }
+}

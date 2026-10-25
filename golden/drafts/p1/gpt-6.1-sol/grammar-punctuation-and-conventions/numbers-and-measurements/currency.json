@@ -1,0 +1,1670 @@
+{
+ "effort": "high",
+ "input_sha256": "6756ae65f6943ce7a3f0567eb2959f421903f107ee2cf254029c29185abab765",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "c0b4c6aec405",
+    "end": 93,
+    "prefix": "",
+    "quote": "Use the correct numbers, words and symbols for currency so people are clear about the amount.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An introductory summary of the concrete currency-formatting rules, not an additional independently testable check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "15f30454e3e3",
+    "end": 53,
+    "prefix": "",
+    "quote": "Quantify an amount of money with a symbol and numeral",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups notation, spacing, cents punctuation and decimal-formatting checks.",
+   "reason": "section",
+   "seed_uid": "970d1c8db390f0fc"
+  },
+  {
+   "anchor": {
+    "block_id": "64d2e8afeb4a",
+    "end": 101,
+    "prefix": "",
+    "quote": "For an amount less than $1, you can write it either as a whole number of cents or as a decimal value.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: recorded as an alternative under the amount-notation rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9afb054533be",
+    "end": 48,
+    "prefix": "",
+    "quote": "Use the letter ‘c’ for cents after the numerals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the cents-specific marker and placement case is consolidated into the amount-notation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2a78b8ae0869",
+    "end": 51,
+    "prefix": "",
+    "quote": "Don’t add a space between the numerals and the ‘c’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the cents case of the currency-marker spacing rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bf824a39287e",
+    "end": 75,
+    "prefix": "",
+    "quote": "If the amount is less than 10 cents, use a zero before the number of cents.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: a specific application of the 2-decimal-digit requirement, not a second finding for $0.4.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16957429cd94",
+    "end": 45,
+    "prefix": "",
+    "quote": "Clarify when you are using Australian dollars",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the choice of dollar designation and spacing within A$.",
+   "reason": "section",
+   "seed_uid": "d57bb41fc6609fce"
+  },
+  {
+   "anchor": {
+    "block_id": "7064883043c2",
+    "end": 70,
+    "prefix": "",
+    "quote": "Where content is clearly only referencing Australian dollars, use ‘$’.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the unambiguous Australian-dollar case of the country-designation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8304b4afa72f",
+    "end": 89,
+    "prefix": "",
+    "quote": "If users could be confused about the currency being referenced, place ‘A’ before the ‘$’.",
+    "start": 0,
+    "suffix": " Don’t insert a space between th"
+   },
+   "note": "G-2: the ambiguous Australian-dollar case of the country-designation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "237a591c6622",
+    "end": 53,
+    "prefix": "",
+    "quote": "Reference non-Australian currencies for accessibility",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups notation choices and the detailed rules for codes and symbols.",
+   "reason": "section",
+   "seed_uid": "d62c2da8e1e594a8"
+  },
+  {
+   "anchor": {
+    "block_id": "2ef8d25b34e2",
+    "end": 235,
+    "prefix": "rpret and describe the symbols. ",
+    "quote": "Avoid the use of non-Australian currency symbols where possible.",
+    "start": 171,
+    "suffix": ""
+   },
+   "note": "G-4: consolidated with the stated preference for 3-letter currency codes and its alternatives.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "48d9507eea10",
+    "end": 184,
+    "prefix": " for example, A$, C$, NZ$, US$. ",
+    "quote": "If there is any chance of confusion, use the 3-letter IBAN codes.",
+    "start": 119,
+    "suffix": ""
+   },
+   "note": "G-2: the confusion condition is included in the currency-code preference rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "60c5bd4c549d",
+    "end": 134,
+    "prefix": "",
+    "quote": "Use the currency symbol only, for example ‘£’ for the British pound, if you have evidence that it is the best way to meet a user need.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: permits a symbol-only alternative on evidence of user need; recorded under the code-preference rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "67360b2cc130",
+    "end": 37,
+    "prefix": "",
+    "quote": "Using IBAN currency codes (preferred)",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups code consistency, spacing and decimal-place consistency rather than stating an additional check.",
+   "reason": "section",
+   "seed_uid": "998fb6ab78047793"
+  },
+  {
+   "anchor": {
+    "block_id": "34f5d1a06720",
+    "end": 68,
+    "prefix": "",
+    "quote": "Don’t place a space between the IBAN currency code and the numerals.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the code-specific case of the currency-marker spacing rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dc3d98fdfb85",
+    "end": 56,
+    "prefix": "",
+    "quote": "Place them before the numerals and don’t insert a space.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: its two requirements are absorbed into the marker-placement and marker-spacing rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9ccf2c8e6fd4",
+    "end": 270,
+    "prefix": " was previously ¥874 per hour. [",
+    "quote": "The Japanese yen symbol isn’t very widely known in Australia, so explain it at first mention unless you're writing for a specialist audience familiar with the symbol.",
+    "start": 104,
+    "suffix": "]"
+   },
+   "note": "G-2: supplies the audience-familiarity exception to the first-use explanation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3e43345e6473",
+    "end": 134,
+    "prefix": "is currently US$7.25 per hour. [",
+    "quote": "Because US$ is very widely known, don’t explain it on first use.",
+    "start": 70,
+    "suffix": "]"
+   },
+   "note": "G-2: supplies the widely-known-symbol case of the first-use explanation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "15375581be9b",
+    "end": 131,
+    "prefix": "per hour. [",
+    "quote": "Don’t use both the currency symbol and the IBAN currency code. This also applies when writing Australian dollar amounts.",
+    "start": 11,
+    "suffix": "]"
+   },
+   "note": "G-4: repeats the symbol-plus-code prohibition and clarifies that it includes Australian dollars.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3a532e9c05fb",
+    "end": 173,
+    "prefix": " Australia’s units of currency. ",
+    "quote": "Few people would recognise these symbols now, so write them out in full.",
+    "start": 101,
+    "suffix": ""
+   },
+   "note": "G-4: repeats the requirement to write former Australian currency units in words.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "af59461d7d68",
+    "end": 31,
+    "prefix": "",
+    "quote": "Quantify large amounts of money",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups contextual precision and the formatting and explanation of the shortened form ‘m’.",
+   "reason": "section",
+   "seed_uid": "f96a54b43f57515b"
+  },
+  {
+   "anchor": {
+    "block_id": "362e7c4644ec",
+    "end": 60,
+    "prefix": " spent more than $2.1 million. [",
+    "quote": "Use in descriptive text.",
+    "start": 36,
+    "suffix": "]"
+   },
+   "note": "Illustrates the context-dependent precision rule; it does not establish a universal decimal-place threshold.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "88f202f5a099",
+    "end": 65,
+    "prefix": "xpenditure was $2.195 million. [",
+    "quote": "Use in a financial report.",
+    "start": 39,
+    "suffix": "]"
+   },
+   "note": "Illustrates the context-dependent precision rule; it does not require every financial report to use this exact precision.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e9e503db06eb",
+    "end": 33,
+    "prefix": "$2.195m [",
+    "quote": "Use in a table or chart.",
+    "start": 9,
+    "suffix": " No space or full stop. Explain "
+   },
+   "note": "G-3: presents shortened ‘m’ notation as an option for tables and charts; its formatting and explanatory-note requirements are separate rules.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c3843b52bbca",
+    "end": 29,
+    "prefix": "",
+    "quote": "Use words for inexact amounts",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body states the actionable, narrower rule for expressions rather than actual amounts.",
+   "reason": "restatement",
+   "seed_uid": "2192575b9c21f677"
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/currency.md",
+ "page_sha256": "cb031347fd62cb65eb99c37729154c51195e7b4afd72807fb20b8685df469556",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "c0b4c6aec405",
+    "note": "An introductory summary of the concrete currency-formatting rules, not an additional independently testable check.",
+    "quote": "Use the correct numbers, words and symbols for currency so people are clear about the amount.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "15f30454e3e3",
+    "note": "G-1: groups notation, spacing, cents punctuation and decimal-formatting checks.",
+    "quote": "Quantify an amount of money with a symbol and numeral",
+    "reason": "section"
+   },
+   {
+    "block_id": "64d2e8afeb4a",
+    "note": "G-3: recorded as an alternative under the amount-notation rule.",
+    "quote": "For an amount less than $1, you can write it either as a whole number of cents or as a decimal value.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "9afb054533be",
+    "note": "G-2: the cents-specific marker and placement case is consolidated into the amount-notation rule.",
+    "quote": "Use the letter ‘c’ for cents after the numerals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2a78b8ae0869",
+    "note": "G-2: the cents case of the currency-marker spacing rule.",
+    "quote": "Don’t add a space between the numerals and the ‘c’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bf824a39287e",
+    "note": "G-2 and G-4: a specific application of the 2-decimal-digit requirement, not a second finding for $0.4.",
+    "quote": "If the amount is less than 10 cents, use a zero before the number of cents.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "16957429cd94",
+    "note": "G-1: groups the choice of dollar designation and spacing within A$.",
+    "quote": "Clarify when you are using Australian dollars",
+    "reason": "section"
+   },
+   {
+    "block_id": "7064883043c2",
+    "note": "G-2: the unambiguous Australian-dollar case of the country-designation rule.",
+    "quote": "Where content is clearly only referencing Australian dollars, use ‘$’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8304b4afa72f",
+    "note": "G-2: the ambiguous Australian-dollar case of the country-designation rule.",
+    "quote": "If users could be confused about the currency being referenced, place ‘A’ before the ‘$’.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "237a591c6622",
+    "note": "G-1: groups notation choices and the detailed rules for codes and symbols.",
+    "quote": "Reference non-Australian currencies for accessibility",
+    "reason": "section"
+   },
+   {
+    "block_id": "2ef8d25b34e2",
+    "note": "G-4: consolidated with the stated preference for 3-letter currency codes and its alternatives.",
+    "quote": "Avoid the use of non-Australian currency symbols where possible.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "48d9507eea10",
+    "note": "G-2: the confusion condition is included in the currency-code preference rule.",
+    "quote": "If there is any chance of confusion, use the 3-letter IBAN codes.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "60c5bd4c549d",
+    "note": "G-3: permits a symbol-only alternative on evidence of user need; recorded under the code-preference rule.",
+    "quote": "Use the currency symbol only, for example ‘£’ for the British pound, if you have evidence that it is the best way to meet a user need.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "67360b2cc130",
+    "note": "G-1: groups code consistency, spacing and decimal-place consistency rather than stating an additional check.",
+    "quote": "Using IBAN currency codes (preferred)",
+    "reason": "section"
+   },
+   {
+    "block_id": "34f5d1a06720",
+    "note": "G-2: the code-specific case of the currency-marker spacing rule.",
+    "quote": "Don’t place a space between the IBAN currency code and the numerals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "dc3d98fdfb85",
+    "note": "G-4: its two requirements are absorbed into the marker-placement and marker-spacing rules.",
+    "quote": "Place them before the numerals and don’t insert a space.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9ccf2c8e6fd4",
+    "note": "G-2: supplies the audience-familiarity exception to the first-use explanation rule.",
+    "quote": "The Japanese yen symbol isn’t very widely known in Australia, so explain it at first mention unless you're writing for a specialist audience familiar with the symbol.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3e43345e6473",
+    "note": "G-2: supplies the widely-known-symbol case of the first-use explanation rule.",
+    "quote": "Because US$ is very widely known, don’t explain it on first use.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "15375581be9b",
+    "note": "G-4: repeats the symbol-plus-code prohibition and clarifies that it includes Australian dollars.",
+    "quote": "Don’t use both the currency symbol and the IBAN currency code. This also applies when writing Australian dollar amounts.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3a532e9c05fb",
+    "note": "G-4: repeats the requirement to write former Australian currency units in words.",
+    "quote": "Few people would recognise these symbols now, so write them out in full.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "af59461d7d68",
+    "note": "G-1: groups contextual precision and the formatting and explanation of the shortened form ‘m’.",
+    "quote": "Quantify large amounts of money",
+    "reason": "section"
+   },
+   {
+    "block_id": "362e7c4644ec",
+    "note": "Illustrates the context-dependent precision rule; it does not establish a universal decimal-place threshold.",
+    "quote": "Use in descriptive text.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "88f202f5a099",
+    "note": "Illustrates the context-dependent precision rule; it does not require every financial report to use this exact precision.",
+    "quote": "Use in a financial report.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e9e503db06eb",
+    "note": "G-3: presents shortened ‘m’ notation as an option for tables and charts; its formatting and explanatory-note requirements are separate rules.",
+    "quote": "Use in a table or chart.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "c3843b52bbca",
+    "note": "G-4: the body states the actionable, narrower rule for expressions rather than actual amounts.",
+    "quote": "Use words for inexact amounts",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5ecb66e414b1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "64d2e8afeb4a",
+      "quote": "For an amount less than $1, you can write it either as a whole number of cents or as a decimal value."
+     },
+     {
+      "block_id": "9afb054533be",
+      "quote": "Use the letter ‘c’ for cents after the numerals."
+     },
+     {
+      "block_id": "dc3d98fdfb85",
+      "quote": "Place them before the numerals"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write amounts using the relevant currency symbol followed by numerals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A literal monetary amount lacks numeral-and-currency-marker notation, or its currency marker is on the wrong side of the numerals.",
+    "when": [
+     "Currency symbols precede the numerals.",
+     "For amounts below $1, either decimal notation or whole-number cents notation is allowed. In cents notation, ‘c’ follows the numerals.",
+     "Currency codes are an alternative to currency symbols.",
+     "Former Australian currency units and expressions rather than actual amounts have separate rules requiring words.",
+     "Large amounts may combine numerals with a scale word or shortened form."
+    ],
+    "why": "G-2 consolidates currency-marker placement and the cents-form exception into one notation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5ecb66e414b1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2a78b8ae0869",
+      "quote": "Don’t add a space between the numerals and the ‘c’."
+     },
+     {
+      "block_id": "34f5d1a06720",
+      "quote": "Don’t place a space between the IBAN currency code and the numerals."
+     },
+     {
+      "block_id": "dc3d98fdfb85",
+      "quote": "don’t insert a space."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t put a space between the currency symbol and the numerals.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Whitespace separates an amount’s numerals from its currency symbol, currency code or cents suffix.",
+    "when": [
+     "Applies to currency symbols before numerals, currency codes before numerals and ‘c’ after numerals.",
+     "A parenthetical introduction of a symbol, such as ‘Japanese yen (¥) 901’, is an explanation rather than ordinary symbol-and-amount notation."
+    ],
+    "why": "G-2 combines the symbol, cents and currency-code cases of the same unwanted-spacing check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ead316536042",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a full stop after the ‘c’ unless it’s at the end of a sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The cents suffix ‘c’ is followed by a full stop that is not sentence-ending punctuation.",
+    "when": [
+     "Applies to ‘c’ used as the cents suffix.",
+     "A full stop is allowed when it ends the sentence."
+    ],
+    "why": "G-2 keeps the sentence-ending exception within the cents-punctuation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c1e7fb43dc92",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bf824a39287e",
+      "quote": "If the amount is less than 10 cents, use a zero before the number of cents."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "If the amount is a decimal number, always use 2 digits after the decimal point.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A monetary amount written as a decimal has other than 2 digits after the decimal point, including a missing zero before a single-digit number of cents.",
+    "when": [
+     "Applies when an amount is written in decimal notation.",
+     "For a decimal amount below 10 cents, the cents portion begins with zero.",
+     "Does not require adding a decimal portion to an amount written as a whole number."
+    ],
+    "why": "G-2 and G-4 absorb the below-10-cents case because it would otherwise flag the same missing digit twice."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "48d9507eea10",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7064883043c2",
+      "quote": "Where content is clearly only referencing Australian dollars, use ‘$’."
+     },
+     {
+      "block_id": "8304b4afa72f",
+      "quote": "If users could be confused about the currency being referenced, place ‘A’ before the ‘$’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "When referencing ‘dollar’ currencies, use a country prefix followed by the ‘$’ symbol – for example, A$, C$, NZ$, US$.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A dollar amount uses an inappropriate country designation: an unqualified ‘$’ for a non-Australian currency or an ambiguous Australian-dollar reference, or an Australian prefix where the content clearly references only Australian dollars.",
+    "when": [
+     "Applies when dollar-symbol notation is used rather than currency codes.",
+     "Use bare ‘$’ where the content clearly references only Australian dollars.",
+     "Use ‘A$’ where readers could otherwise misunderstand an Australian-dollar reference.",
+     "Use a country prefix for non-Australian dollar currencies.",
+     "For potentially confusing non-Australian currency references, the page directs writers to use 3-letter currency codes."
+    ],
+    "why": "G-2 combines country-prefix selection and the Australian-dollar exception as conditions of one designation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "8304b4afa72f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t insert a space between them.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Whitespace separates the ‘A’ from the ‘$’ in an Australian-dollar symbol.",
+    "when": [
+     "Applies to the ‘A$’ Australian-dollar symbol."
+    ],
+    "why": "The spacing inside ‘A$’ is distinct from spacing between a currency marker and its numerals."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fa643a4cc7ef",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2ef8d25b34e2",
+      "quote": "Avoid the use of non-Australian currency symbols where possible."
+     },
+     {
+      "block_id": "fa643a4cc7ef",
+      "quote": "This is the preferred method because it doesn’t use symbols and makes content more accessible."
+     },
+     {
+      "block_id": "48d9507eea10",
+      "quote": "If there is any chance of confusion, use the 3-letter IBAN codes."
+     },
+     {
+      "block_id": "60c5bd4c549d",
+      "quote": "Use the currency symbol only, for example ‘£’ for the British pound, if you have evidence that it is the best way to meet a user need."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "PREFER",
+    "quote": "Use the 3-letter International Bank Account Number (IBAN) currency codes – for example, THB, USD, VND.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A non-Australian currency reference uses symbol-based notation instead of a feasible 3-letter currency code, particularly where the symbol could cause confusion.",
+    "when": [
+     "The preference applies when referencing non-Australian currencies.",
+     "Country-prefixed dollar symbols are a stated alternative.",
+     "If a non-Australian dollar reference could be confused, use the 3-letter code.",
+     "A currency symbol alone is allowed when there is evidence that it best meets a user need."
+    ],
+    "why": "G-2 to G-4 consolidate the accessible-notation preference, its confusion condition and its permitted alternatives."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3833888a1f66",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use them for all currencies referenced in the content (including Australian dollars).",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content using IBAN currency codes leaves another referenced currency, including Australian dollars, in symbol or other non-code notation.",
+    "when": [
+     "Applies when IBAN currency-code notation is used in the content."
+    ],
+    "why": "This checks consistent application of the chosen notation, not the separate preference for choosing codes."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "91376ec8a540",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the same number of decimal places for all the currencies you refer to.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Currencies referenced using IBAN codes are presented with inconsistent numbers of decimal places.",
+    "when": [
+     "Applies under the page’s instructions for using IBAN currency codes."
+    ],
+    "why": "This is a cross-currency consistency check, distinct from checking the format of an individual decimal amount."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5c0ee291d6d2",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "9ccf2c8e6fd4",
+      "quote": "The Japanese yen symbol isn’t very widely known in Australia, so explain it at first mention unless you're writing for a specialist audience familiar with the symbol."
+     },
+     {
+      "block_id": "3e43345e6473",
+      "quote": "Because US$ is very widely known, don’t explain it on first use."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Explain them on first use unless they are very widely known (for example, US$).",
+    "specification": "Assess familiarity for the intended audience. The page identifies US$ as very widely known and the Japanese yen symbol as generally needing explanation in Australia, with an exception for a specialist audience familiar with it. It supplies no exhaustive familiarity list.",
+    "unit": "document",
+    "violation_condition": "An unfamiliar foreign currency symbol is first used without explanation, or a very widely known symbol such as US$ receives an unnecessary first-use explanation.",
+    "when": [
+     "Applies when foreign currency symbols are used.",
+     "Explain unfamiliar symbols at their first use.",
+     "Do not explain very widely known symbols such as US$ at first use.",
+     "An explanation is unnecessary for a specialist audience already familiar with the symbol."
+    ],
+    "why": "G-2 keeps audience familiarity and the widely-known-symbol exception within one first-use explanation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e862bc0d89aa",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "15375581be9b",
+      "quote": "Don’t use both the currency symbol and the IBAN currency code. This also applies when writing Australian dollar amounts."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t also use the IBAN currency code.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The same monetary amount is labelled with both a currency symbol and an IBAN currency code.",
+    "when": [
+     "Applies to Australian-dollar amounts as well as foreign-currency amounts."
+    ],
+    "why": "G-2 and G-4 absorb the example’s restatement and its explicit Australian-dollar scope."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "bcb3ee216d61",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3a532e9c05fb",
+      "quote": "Few people would recognise these symbols now, so write them out in full."
+     },
+     {
+      "block_id": "0ba1fd9208ac",
+      "quote": "If there is any chance of confusion, state ‘former Australian pounds’ or use the symbol ‘A£’."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use words rather than symbols for former Australian currency.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Former Australian pounds, shillings or pence are represented by currency symbols instead of their unit names written out in full.",
+    "when": [
+     "Applies to former Australian currency units.",
+     "The page permits ‘A£’ when needed to distinguish former Australian pounds from other pounds."
+    ],
+    "why": "G-3 and G-4 retain one words-over-symbols rule with the later disambiguating-symbol exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0ba1fd9208ac",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If there is any chance of confusion, state ‘former Australian pounds’ or use the symbol ‘A£’.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A potentially ambiguous reference to former Australian pounds lacks either ‘former Australian pounds’ or the distinguishing symbol ‘A£’.",
+    "when": [
+     "Applies when readers could confuse former Australian pounds with another country’s pounds.",
+     "Either the full designation or ‘A£’ satisfies the rule."
+    ],
+    "why": "This checks missing currency identification, distinct from the general spelling-out requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4dbae23e9514",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "362e7c4644ec",
+      "quote": "Use in descriptive text."
+     },
+     {
+      "block_id": "88f202f5a099",
+      "quote": "Use in a financial report."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the level of precision needed for the content.",
+    "specification": "The examples contrast descriptive text with financial reporting, but the page gives no general threshold for sufficient or excessive precision. Do not turn the example decimal-place counts into fixed requirements.",
+    "unit": "document",
+    "violation_condition": "A monetary amount is presented at a level of precision inappropriate for the content’s purpose.",
+    "when": [
+     "Applies to the presentation of large monetary amounts.",
+     "Required precision depends on the content’s purpose, including whether it is descriptive text or a financial report."
+    ],
+    "why": "G-2 keeps context-dependent precision in one check; E-4 prevents inventing numerical thresholds from examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e9e503db06eb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "No space or full stop.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The shortened million suffix ‘m’ is separated from the amount by a space or is written with an abbreviation full stop.",
+    "when": [
+     "Applies to ‘m’ used as the shortened form of million in a table or chart."
+    ],
+    "why": "The example gloss states an actionable formatting rule for the shortened multiplier, not merely an example value."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e9e503db06eb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Explain the shortened form ‘m’ in a note.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A table or chart uses ‘m’ for million without a note explaining the shortened form.",
+    "when": [
+     "Applies when ‘m’ is used for million in a table or chart."
+    ],
+    "why": "A missing explanatory note is a separate finding from malformed ‘m’ notation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ddfa7c08b483",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c3843b52bbca",
+      "quote": "Use words for inexact amounts"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use words for amounts of money that are an expression rather than an actual amount.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A monetary expression rather than an actual amount is written using numerals or currency symbols instead of words.",
+    "when": [
+     "Applies to expressions such as ‘thousands of dollars’ and ‘several million dollars’, not simply to every rounded or approximate actual amount."
+    ],
+    "why": "G-4 selects the body’s precise scope rather than reading the broader heading as a ban on numerals for all approximate amounts."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "5ecb66e414b1",
+    "end": 70,
+    "prefix": "",
+    "quote": "Write amounts using the relevant currency symbol followed by numerals.",
+    "start": 0,
+    "suffix": " Don’t put a space between the c"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "64d2e8afeb4a",
+     "end": 101,
+     "prefix": "",
+     "quote": "For an amount less than $1, you can write it either as a whole number of cents or as a decimal value.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9afb054533be",
+     "end": 48,
+     "prefix": "",
+     "quote": "Use the letter ‘c’ for cents after the numerals.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dc3d98fdfb85",
+     "end": 30,
+     "prefix": "",
+     "quote": "Place them before the numerals",
+     "start": 0,
+     "suffix": " and don’t insert a space."
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A literal monetary amount lacks numeral-and-currency-marker notation, or its currency marker is on the wrong side of the numerals."
+   },
+   "when": [
+    "Currency symbols precede the numerals.",
+    "For amounts below $1, either decimal notation or whole-number cents notation is allowed. In cents notation, ‘c’ follows the numerals.",
+    "Currency codes are an alternative to currency symbols.",
+    "Former Australian currency units and expressions rather than actual amounts have separate rules requiring words.",
+    "Large amounts may combine numerals with a scale word or shortened form."
+   ],
+   "why": "G-2 consolidates currency-marker placement and the cents-form exception into one notation check."
+  },
+  {
+   "anchor": {
+    "block_id": "5ecb66e414b1",
+    "end": 134,
+    "prefix": "cy symbol followed by numerals. ",
+    "quote": "Don’t put a space between the currency symbol and the numerals.",
+    "start": 71,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2a78b8ae0869",
+     "end": 51,
+     "prefix": "",
+     "quote": "Don’t add a space between the numerals and the ‘c’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "34f5d1a06720",
+     "end": 68,
+     "prefix": "",
+     "quote": "Don’t place a space between the IBAN currency code and the numerals.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "dc3d98fdfb85",
+     "end": 56,
+     "prefix": "ce them before the numerals and ",
+     "quote": "don’t insert a space.",
+     "start": 35,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Whitespace separates an amount’s numerals from its currency symbol, currency code or cents suffix."
+   },
+   "when": [
+    "Applies to currency symbols before numerals, currency codes before numerals and ‘c’ after numerals.",
+    "A parenthetical introduction of a symbol, such as ‘Japanese yen (¥) 901’, is an explanation rather than ordinary symbol-and-amount notation."
+   ],
+   "why": "G-2 combines the symbol, cents and currency-code cases of the same unwanted-spacing check."
+  },
+  {
+   "anchor": {
+    "block_id": "ead316536042",
+    "end": 73,
+    "prefix": "",
+    "quote": "Don’t use a full stop after the ‘c’ unless it’s at the end of a sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The cents suffix ‘c’ is followed by a full stop that is not sentence-ending punctuation."
+   },
+   "when": [
+    "Applies to ‘c’ used as the cents suffix.",
+    "A full stop is allowed when it ends the sentence."
+   ],
+   "why": "G-2 keeps the sentence-ending exception within the cents-punctuation check."
+  },
+  {
+   "anchor": {
+    "block_id": "c1e7fb43dc92",
+    "end": 79,
+    "prefix": "",
+    "quote": "If the amount is a decimal number, always use 2 digits after the decimal point.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bf824a39287e",
+     "end": 75,
+     "prefix": "",
+     "quote": "If the amount is less than 10 cents, use a zero before the number of cents.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A monetary amount written as a decimal has other than 2 digits after the decimal point, including a missing zero before a single-digit number of cents."
+   },
+   "when": [
+    "Applies when an amount is written in decimal notation.",
+    "For a decimal amount below 10 cents, the cents portion begins with zero.",
+    "Does not require adding a decimal portion to an amount written as a whole number."
+   ],
+   "why": "G-2 and G-4 absorb the below-10-cents case because it would otherwise flag the same missing digit twice."
+  },
+  {
+   "anchor": {
+    "block_id": "48d9507eea10",
+    "end": 118,
+    "prefix": "",
+    "quote": "When referencing ‘dollar’ currencies, use a country prefix followed by the ‘$’ symbol – for example, A$, C$, NZ$, US$.",
+    "start": 0,
+    "suffix": " If there is any chance of confu"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7064883043c2",
+     "end": 70,
+     "prefix": "",
+     "quote": "Where content is clearly only referencing Australian dollars, use ‘$’.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "8304b4afa72f",
+     "end": 89,
+     "prefix": "",
+     "quote": "If users could be confused about the currency being referenced, place ‘A’ before the ‘$’.",
+     "start": 0,
+     "suffix": " Don’t insert a space between th"
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A dollar amount uses an inappropriate country designation: an unqualified ‘$’ for a non-Australian currency or an ambiguous Australian-dollar reference, or an Australian prefix where the content clearly references only Australian dollars."
+   },
+   "when": [
+    "Applies when dollar-symbol notation is used rather than currency codes.",
+    "Use bare ‘$’ where the content clearly references only Australian dollars.",
+    "Use ‘A$’ where readers could otherwise misunderstand an Australian-dollar reference.",
+    "Use a country prefix for non-Australian dollar currencies.",
+    "For potentially confusing non-Australian currency references, the page directs writers to use 3-letter currency codes."
+   ],
+   "why": "G-2 combines country-prefix selection and the Australian-dollar exception as conditions of one designation check."
+  },
+  {
+   "anchor": {
+    "block_id": "8304b4afa72f",
+    "end": 124,
+    "prefix": "nced, place ‘A’ before the ‘$’. ",
+    "quote": "Don’t insert a space between them.",
+    "start": 90,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Whitespace separates the ‘A’ from the ‘$’ in an Australian-dollar symbol."
+   },
+   "when": [
+    "Applies to the ‘A$’ Australian-dollar symbol."
+   ],
+   "why": "The spacing inside ‘A$’ is distinct from spacing between a currency marker and its numerals."
+  },
+  {
+   "anchor": {
+    "block_id": "fa643a4cc7ef",
+    "end": 102,
+    "prefix": "",
+    "quote": "Use the 3-letter International Bank Account Number (IBAN) currency codes – for example, THB, USD, VND.",
+    "start": 0,
+    "suffix": " This is the preferred method be"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2ef8d25b34e2",
+     "end": 235,
+     "prefix": "rpret and describe the symbols. ",
+     "quote": "Avoid the use of non-Australian currency symbols where possible.",
+     "start": 171,
+     "suffix": ""
+    },
+    {
+     "block_id": "fa643a4cc7ef",
+     "end": 197,
+     "prefix": "s – for example, THB, USD, VND. ",
+     "quote": "This is the preferred method because it doesn’t use symbols and makes content more accessible.",
+     "start": 103,
+     "suffix": ""
+    },
+    {
+     "block_id": "48d9507eea10",
+     "end": 184,
+     "prefix": " for example, A$, C$, NZ$, US$. ",
+     "quote": "If there is any chance of confusion, use the 3-letter IBAN codes.",
+     "start": 119,
+     "suffix": ""
+    },
+    {
+     "block_id": "60c5bd4c549d",
+     "end": 134,
+     "prefix": "",
+     "quote": "Use the currency symbol only, for example ‘£’ for the British pound, if you have evidence that it is the best way to meet a user need.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A non-Australian currency reference uses symbol-based notation instead of a feasible 3-letter currency code, particularly where the symbol could cause confusion."
+   },
+   "when": [
+    "The preference applies when referencing non-Australian currencies.",
+    "Country-prefixed dollar symbols are a stated alternative.",
+    "If a non-Australian dollar reference could be confused, use the 3-letter code.",
+    "A currency symbol alone is allowed when there is evidence that it best meets a user need."
+   ],
+   "why": "G-2 to G-4 consolidate the accessible-notation preference, its confusion condition and its permitted alternatives."
+  },
+  {
+   "anchor": {
+    "block_id": "3833888a1f66",
+    "end": 85,
+    "prefix": "",
+    "quote": "Use them for all currencies referenced in the content (including Australian dollars).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content using IBAN currency codes leaves another referenced currency, including Australian dollars, in symbol or other non-code notation."
+   },
+   "when": [
+    "Applies when IBAN currency-code notation is used in the content."
+   ],
+   "why": "This checks consistent application of the chosen notation, not the separate preference for choosing codes."
+  },
+  {
+   "anchor": {
+    "block_id": "91376ec8a540",
+    "end": 74,
+    "prefix": "",
+    "quote": "Use the same number of decimal places for all the currencies you refer to.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Currencies referenced using IBAN codes are presented with inconsistent numbers of decimal places."
+   },
+   "when": [
+    "Applies under the page’s instructions for using IBAN currency codes."
+   ],
+   "why": "This is a cross-currency consistency check, distinct from checking the format of an individual decimal amount."
+  },
+  {
+   "anchor": {
+    "block_id": "5c0ee291d6d2",
+    "end": 79,
+    "prefix": "",
+    "quote": "Explain them on first use unless they are very widely known (for example, US$).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "9ccf2c8e6fd4",
+     "end": 270,
+     "prefix": " was previously ¥874 per hour. [",
+     "quote": "The Japanese yen symbol isn’t very widely known in Australia, so explain it at first mention unless you're writing for a specialist audience familiar with the symbol.",
+     "start": 104,
+     "suffix": "]"
+    },
+    {
+     "block_id": "3e43345e6473",
+     "end": 134,
+     "prefix": "is currently US$7.25 per hour. [",
+     "quote": "Because US$ is very widely known, don’t explain it on first use.",
+     "start": 70,
+     "suffix": "]"
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Assess familiarity for the intended audience. The page identifies US$ as very widely known and the Japanese yen symbol as generally needing explanation in Australia, with an exception for a specialist audience familiar with it. It supplies no exhaustive familiarity list.",
+    "unit": "document",
+    "violation_condition": "An unfamiliar foreign currency symbol is first used without explanation, or a very widely known symbol such as US$ receives an unnecessary first-use explanation."
+   },
+   "when": [
+    "Applies when foreign currency symbols are used.",
+    "Explain unfamiliar symbols at their first use.",
+    "Do not explain very widely known symbols such as US$ at first use.",
+    "An explanation is unnecessary for a specialist audience already familiar with the symbol."
+   ],
+   "why": "G-2 keeps audience familiarity and the widely-known-symbol exception within one first-use explanation check."
+  },
+  {
+   "anchor": {
+    "block_id": "e862bc0d89aa",
+    "end": 38,
+    "prefix": "",
+    "quote": "Don’t also use the IBAN currency code.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "15375581be9b",
+     "end": 131,
+     "prefix": "per hour. [",
+     "quote": "Don’t use both the currency symbol and the IBAN currency code. This also applies when writing Australian dollar amounts.",
+     "start": 11,
+     "suffix": "]"
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The same monetary amount is labelled with both a currency symbol and an IBAN currency code."
+   },
+   "when": [
+    "Applies to Australian-dollar amounts as well as foreign-currency amounts."
+   ],
+   "why": "G-2 and G-4 absorb the example’s restatement and its explicit Australian-dollar scope."
+  },
+  {
+   "anchor": {
+    "block_id": "bcb3ee216d61",
+    "end": 61,
+    "prefix": "",
+    "quote": "Use words rather than symbols for former Australian currency.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3a532e9c05fb",
+     "end": 173,
+     "prefix": " Australia’s units of currency. ",
+     "quote": "Few people would recognise these symbols now, so write them out in full.",
+     "start": 101,
+     "suffix": ""
+    },
+    {
+     "block_id": "0ba1fd9208ac",
+     "end": 144,
+     "prefix": "l use pounds as their currency. ",
+     "quote": "If there is any chance of confusion, state ‘former Australian pounds’ or use the symbol ‘A£’.",
+     "start": 51,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Former Australian pounds, shillings or pence are represented by currency symbols instead of their unit names written out in full."
+   },
+   "when": [
+    "Applies to former Australian currency units.",
+    "The page permits ‘A£’ when needed to distinguish former Australian pounds from other pounds."
+   ],
+   "why": "G-3 and G-4 retain one words-over-symbols rule with the later disambiguating-symbol exception."
+  },
+  {
+   "anchor": {
+    "block_id": "0ba1fd9208ac",
+    "end": 144,
+    "prefix": "l use pounds as their currency. ",
+    "quote": "If there is any chance of confusion, state ‘former Australian pounds’ or use the symbol ‘A£’.",
+    "start": 51,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A potentially ambiguous reference to former Australian pounds lacks either ‘former Australian pounds’ or the distinguishing symbol ‘A£’."
+   },
+   "when": [
+    "Applies when readers could confuse former Australian pounds with another country’s pounds.",
+    "Either the full designation or ‘A£’ satisfies the rule."
+   ],
+   "why": "This checks missing currency identification, distinct from the general spelling-out requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "4dbae23e9514",
+    "end": 50,
+    "prefix": "",
+    "quote": "Use the level of precision needed for the content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "362e7c4644ec",
+     "end": 60,
+     "prefix": " spent more than $2.1 million. [",
+     "quote": "Use in descriptive text.",
+     "start": 36,
+     "suffix": "]"
+    },
+    {
+     "block_id": "88f202f5a099",
+     "end": 65,
+     "prefix": "xpenditure was $2.195 million. [",
+     "quote": "Use in a financial report.",
+     "start": 39,
+     "suffix": "]"
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The examples contrast descriptive text with financial reporting, but the page gives no general threshold for sufficient or excessive precision. Do not turn the example decimal-place counts into fixed requirements.",
+    "unit": "document",
+    "violation_condition": "A monetary amount is presented at a level of precision inappropriate for the content’s purpose."
+   },
+   "when": [
+    "Applies to the presentation of large monetary amounts.",
+    "Required precision depends on the content’s purpose, including whether it is descriptive text or a financial report."
+   ],
+   "why": "G-2 keeps context-dependent precision in one check; E-4 prevents inventing numerical thresholds from examples."
+  },
+  {
+   "anchor": {
+    "block_id": "e9e503db06eb",
+    "end": 56,
+    "prefix": ".195m [Use in a table or chart. ",
+    "quote": "No space or full stop.",
+    "start": 34,
+    "suffix": " Explain the shortened form ‘m’ "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The shortened million suffix ‘m’ is separated from the amount by a space or is written with an abbreviation full stop."
+   },
+   "when": [
+    "Applies to ‘m’ used as the shortened form of million in a table or chart."
+   ],
+   "why": "The example gloss states an actionable formatting rule for the shortened multiplier, not merely an example value."
+  },
+  {
+   "anchor": {
+    "block_id": "e9e503db06eb",
+    "end": 98,
+    "prefix": "r chart. No space or full stop. ",
+    "quote": "Explain the shortened form ‘m’ in a note.",
+    "start": 57,
+    "suffix": "]"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A table or chart uses ‘m’ for million without a note explaining the shortened form."
+   },
+   "when": [
+    "Applies when ‘m’ is used for million in a table or chart."
+   ],
+   "why": "A missing explanatory note is a separate finding from malformed ‘m’ notation."
+  },
+  {
+   "anchor": {
+    "block_id": "ddfa7c08b483",
+    "end": 83,
+    "prefix": "",
+    "quote": "Use words for amounts of money that are an expression rather than an actual amount.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c3843b52bbca",
+     "end": 29,
+     "prefix": "",
+     "quote": "Use words for inexact amounts",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A monetary expression rather than an actual amount is written using numerals or currency symbols instead of words."
+   },
+   "when": [
+    "Applies to expressions such as ‘thousands of dollars’ and ‘several million dollars’, not simply to every rounded or approximate actual amount."
+   ],
+   "why": "G-4 selects the body’s precise scope rather than reading the broader heading as a ban on numerals for all approximate amounts."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5178,
+  "output_tokens": 12473,
+  "reasoning_tokens": 6214
+ }
+}

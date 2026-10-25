@@ -1,0 +1,3344 @@
+{
+ "effort": "high",
+ "input_sha256": "163097a08e15245ea166cd5fa9556551f44d4920c60189c7090ec025c05d377c",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "45e55f7ec7a3",
+    "end": 131,
+    "prefix": "cipient what they need to know. ",
+    "quote": "Use the right level of formality for the recipient and purpose.",
+    "start": 68,
+    "suffix": " Be mindful of people’s privacy."
+   },
+   "note": "Consolidated into the recipient-appropriate tone rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "45e55f7ec7a3",
+    "end": 163,
+    "prefix": " for the recipient and purpose. ",
+    "quote": "Be mindful of people’s privacy.",
+    "start": 132,
+    "suffix": ""
+   },
+   "note": "General caution, not a discrete property a text checker can flag.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3172368e5e2f",
+    "end": 29,
+    "prefix": "",
+    "quote": "Identify the user and purpose",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A planning task rather than a requirement to state the user and purpose in the text.",
+   "reason": "advice",
+   "seed_uid": "28d0823e2d250c4e"
+  },
+  {
+   "anchor": {
+    "block_id": "b06f957d940d",
+    "end": 89,
+    "prefix": "",
+    "quote": "When you write emails or letters for work, use the right format and tone for the purpose.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The tone requirement is consolidated; no independently checkable format is specified here.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ef6cb4ab26a9",
+    "end": 67,
+    "prefix": "",
+    "quote": "Consider the kind of relationship that you have with the recipient.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Writer consideration supporting the tone rule, not a separate textual requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0effa7785f9e",
+    "end": 48,
+    "prefix": "",
+    "quote": "Assess the formality based on context and policy",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A contextual assessment task; it does not prescribe one correspondence format.",
+   "reason": "advice",
+   "seed_uid": "3dc60a113c2281f5"
+  },
+  {
+   "anchor": {
+    "block_id": "e3353f936ca5",
+    "end": 212,
+    "prefix": "our organisation’s preferences. ",
+    "quote": "Make sure you know what they are.",
+    "start": 179,
+    "suffix": ""
+   },
+   "note": "Asks the writer to learn organisational preferences.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "647683c0c938",
+    "end": 45,
+    "prefix": "",
+    "quote": "Write in clear language with appropriate tone",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups the distinct plain-language and tone requirements.",
+   "reason": "section",
+   "seed_uid": "7a56533b4070d9e9"
+  },
+  {
+   "anchor": {
+    "block_id": "a661bd3e5c4f",
+    "end": 49,
+    "prefix": "",
+    "quote": "Confirm privacy rules before you write to someone",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A pre-writing compliance task, not a textual check.",
+   "reason": "advice",
+   "seed_uid": "31c41ae45895575e"
+  },
+  {
+   "anchor": {
+    "block_id": "56f040295bb6",
+    "end": 100,
+    "prefix": "",
+    "quote": "Take steps to confirm details are up-to-date before sending letters containing personal information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Prescribes verification activity; accuracy of the resulting address details is captured separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "008f1e3365bb",
+    "end": 93,
+    "prefix": "",
+    "quote": "When you handle personal information, you must comply with the Australian Privacy Principles.",
+    "start": 0,
+    "suffix": " Personal information is any inf"
+   },
+   "note": "A broad external compliance obligation, not a specific textual criterion stated on this page.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c64cdd6001bd",
+    "end": 75,
+    "prefix": "",
+    "quote": "You must prevent unintended transmission of personal information via email.",
+    "start": 0,
+    "suffix": " Emails need to be sent securely"
+   },
+   "note": "Concerns transmission and disclosure rather than the message’s wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c64cdd6001bd",
+    "end": 137,
+    "prefix": "personal information via email. ",
+    "quote": "Emails need to be sent securely and to the correct recipient.",
+    "start": 76,
+    "suffix": " Check your organisation’s proce"
+   },
+   "note": "Concerns secure delivery and routing.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c64cdd6001bd",
+    "end": 241,
+    "prefix": "y and to the correct recipient. ",
+    "quote": "Check your organisation’s processes and procedures for the secure transmission of personal information.",
+    "start": 138,
+    "suffix": ""
+   },
+   "note": "An instruction to consult organisational procedures.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ef11e3b80a92",
+    "end": 57,
+    "prefix": "",
+    "quote": "For letters sent by post, consider using registered post.",
+    "start": 0,
+    "suffix": " This requires signature on deli"
+   },
+   "note": "A postal delivery choice, not a property of the letter’s words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8064400c273b",
+    "end": 73,
+    "prefix": "",
+    "quote": "You must have someone’s explicit permission to add them to a mailing list",
+    "start": 0,
+    "suffix": " and you must give them the opti"
+   },
+   "note": "Permission to add a person is a list-management obligation; the message’s unsubscribe requirement is retained separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9f99ef9baefa",
+    "end": 14,
+    "prefix": "",
+    "quote": "Address blocks",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups address-block completeness and accuracy requirements.",
+   "reason": "section",
+   "seed_uid": "f5d84ce38e80c521"
+  },
+  {
+   "anchor": {
+    "block_id": "b51eb5b5cd06",
+    "end": 120,
+    "prefix": "dress at the top of the letter. ",
+    "quote": "Make sure the recipient’s details are correct.",
+    "start": 74,
+    "suffix": ""
+   },
+   "note": "Consolidated into the address-information quality rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "567d29f66632",
+    "end": 66,
+    "prefix": "",
+    "quote": "If you’re sending a letter to someone in an organisation, include:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The following components are conditional additions to the address-block completeness rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0cae3fabfd27",
+    "end": 134,
+    "prefix": "to date, complete and relevant. ",
+    "quote": "If necessary, contact a recipient to confirm their address.",
+    "start": 75,
+    "suffix": ""
+   },
+   "note": "Describes how to verify details, not a property of the resulting letter.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "693ca8988bd4",
+    "end": 70,
+    "prefix": "",
+    "quote": "Consider using secure messaging services like myGov rather than email.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A choice of transmission service.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "be30d324b169",
+    "end": 56,
+    "prefix": "",
+    "quote": "Send emails to people only if they need the information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recipient selection and whether to send a message are operational decisions, not wording requirements.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f2365696aacf",
+    "end": 70,
+    "prefix": "",
+    "quote": "Copy people into an email if they need the email for information only.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated with the To-field recipient-role rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0a074ceec51a",
+    "end": 91,
+    "prefix": "",
+    "quote": "Use the ‘CC’ field if people all know each other or can look up an email address with ease.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The CC case is consolidated with the copied-recipient privacy rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1c44fc08916f",
+    "end": 40,
+    "prefix": "",
+    "quote": "Use your organisation’s letter templates",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires using an organisational resource without specifying a textual criterion.",
+   "reason": "advice",
+   "seed_uid": "90fd5ae2dc7555cf"
+  },
+  {
+   "anchor": {
+    "block_id": "17f0f23df5f8",
+    "end": 44,
+    "prefix": "",
+    "quote": "Use the organisation’s template for letters.",
+    "start": 0,
+    "suffix": " The template will include any b"
+   },
+   "note": "A production instruction; the template’s actual textual requirements are not supplied.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "23d854347c22",
+    "end": 89,
+    "prefix": "",
+    "quote": "To enable mobile device screen readers to access the file, use an accessible file format.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns file format and assistive-technology access.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0c9ef58069d1",
+    "end": 48,
+    "prefix": "",
+    "quote": "Consider accessibility when sending attachments.",
+    "start": 0,
+    "suffix": " For example, don’t send PDF att"
+   },
+   "note": "A general consideration for the sender.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0c9ef58069d1",
+    "end": 155,
+    "prefix": "ility when sending attachments. ",
+    "quote": "For example, don’t send PDF attachments if the recipient could be using a mobile device to read the email.",
+    "start": 49,
+    "suffix": ""
+   },
+   "note": "Concerns attachment format rather than wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "48a3fbd0e850",
+    "end": 55,
+    "prefix": "",
+    "quote": "Make sure any links are easily found and work properly.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns link presentation and functioning; descriptive link wording is captured separately.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d61cd011973f",
+    "end": 24,
+    "prefix": "",
+    "quote": "Include dates in letters",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body specifies the sending date.",
+   "reason": "restatement",
+   "seed_uid": "73c21cfe5d87074c"
+  },
+  {
+   "anchor": {
+    "block_id": "f264e8c41ccf",
+    "end": 43,
+    "prefix": "",
+    "quote": "Be clear and concise with the subject line.",
+    "start": 0,
+    "suffix": " It should sum up the purpose of"
+   },
+   "note": "Consolidated into the subject-quality rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f264e8c41ccf",
+    "end": 86,
+    "prefix": " concise with the subject line. ",
+    "quote": "It should sum up the purpose of the email.",
+    "start": 44,
+    "suffix": ""
+   },
+   "note": "Explains the clear-subject requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6d17a1c02fe7",
+    "end": 108,
+    "prefix": "",
+    "quote": "Write the subject line as a heading that helps people know what is in the email and why they should read it.",
+    "start": 0,
+    "suffix": " As for all headings, it is good"
+   },
+   "note": "Consolidated into the subject-quality rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cb45bd4c9a11",
+    "end": 149,
+    "prefix": "ike a subject line in an email. ",
+    "quote": "It’s what the recipient will read first and must make the purpose of the letter very clear.",
+    "start": 58,
+    "suffix": ""
+   },
+   "note": "Extends the subject-quality requirement to letters.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e48729629fca",
+    "end": 30,
+    "prefix": "",
+    "quote": "Keep it short but informative.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated into the subject-quality rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5f8f9495b217",
+    "end": 11,
+    "prefix": "",
+    "quote": "Don’t write",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An example-polarity label, not a standalone prohibition.",
+   "reason": "section",
+   "seed_uid": "80f0aa9568c650a2"
+  },
+  {
+   "anchor": {
+    "block_id": "87c5eb537878",
+    "end": 52,
+    "prefix": "",
+    "quote": "Use a salutation and sign-off to match the formality",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups salutation, personal-title and sign-off checks.",
+   "reason": "section",
+   "seed_uid": "6dcc9cf923927434"
+  },
+  {
+   "anchor": {
+    "block_id": "ed407843d335",
+    "end": 64,
+    "prefix": "",
+    "quote": "The salutation and sign off should match the level of formality.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Summary of the more specific salutation and sign-off requirements.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c76c7070bfb4",
+    "end": 112,
+    "prefix": " salutations are rarely useful. ",
+    "quote": "It is best to address a person by their name and preferred title.",
+    "start": 47,
+    "suffix": ""
+   },
+   "note": "Consolidated with the named-salutation and preferred-title requirements.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "686a19c0d4ad",
+    "end": 203,
+    "prefix": " and an appropriate salutation. ",
+    "quote": "Use ‘Dear’ in a more formal context and ‘Hi’ in a more informal context, such as emailing a colleague.",
+    "start": 101,
+    "suffix": ""
+   },
+   "note": "Contextual forms within the salutation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b0323daaaf0d",
+    "end": 132,
+    "prefix": "",
+    "quote": "If you don’t know the recipient for an email or letter, use ‘Dear’, the recipient’s title (Ms, Mr, Mrs, Mx, Dr) and their last name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The unknown-recipient case of the salutation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0fc137338ae7",
+    "end": 250,
+    "prefix": "be referred to by their gender. ",
+    "quote": "Use ‘Mx’ when a person indicates this is what they prefer, but not otherwise.",
+    "start": 173,
+    "suffix": ""
+   },
+   "note": "The Mx-specific condition of the preferred-title rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f14d35817f4f",
+    "end": 116,
+    "prefix": "",
+    "quote": "If you do not know the recipient’s preferred title, you can simply use a person’s given name with their family name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Recorded as the no-title exception to the salutation and title requirements.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "55d9224ecca2",
+    "end": 94,
+    "prefix": "",
+    "quote": "Follow specific conventions when addressing ministers, royalty, diplomats and other officials.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Refers to external conventions without stating a concrete form to check here.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2116314f4dd1",
+    "end": 78,
+    "prefix": "",
+    "quote": "Be careful of using a shortened name if you aren’t sure the recipient uses it.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A caution to the writer, not an explicit ban on a defined name form.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c60176f32946",
+    "end": 135,
+    "prefix": "ff that matches the salutation. ",
+    "quote": "Use ‘Yours sincerely’ if you know the person’s name.",
+    "start": 83,
+    "suffix": " Use ‘Yours faithfully’ if you d"
+   },
+   "note": "The named-recipient case of the formal sign-off convention.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c60176f32946",
+    "end": 173,
+    "prefix": " if you know the person’s name. ",
+    "quote": "Use ‘Yours faithfully’ if you do not.",
+    "start": 136,
+    "suffix": ""
+   },
+   "note": "The unnamed-recipient case of the formal sign-off convention.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dccc777c50cd",
+    "end": 35,
+    "prefix": "",
+    "quote": "Structure the body to help the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups distinct content-focus, paragraph, ordering and body-completeness checks.",
+   "reason": "section",
+   "seed_uid": "6911a24270204c3f"
+  },
+  {
+   "anchor": {
+    "block_id": "6a6027f9e883",
+    "end": 46,
+    "prefix": "",
+    "quote": "Plan what you are going to write. Think about:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Planning activity followed by prompts, not required text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "098943b38163",
+    "end": 118,
+    "prefix": "at the recipient needs to know. ",
+    "quote": "For emails, send separate emails about separate topics.",
+    "start": 63,
+    "suffix": " It helps keep the conversation "
+   },
+   "note": "Consolidated into the content-focus rule rather than flagging the same topic mixing twice.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c837172012a1",
+    "end": 150,
+    "prefix": "ortant as soon as they open it. ",
+    "quote": "Keep the email or letter as short as possible.",
+    "start": 104,
+    "suffix": " People will be able to read and"
+   },
+   "note": "Consolidated into the rule against unnecessary content; no length threshold is stated.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "804e1870dae3",
+    "end": 53,
+    "prefix": "",
+    "quote": "The body of an email should reflect the subject line.",
+    "start": 0,
+    "suffix": " It should tell the recipient:"
+   },
+   "note": "Consolidated into the subject-quality check to avoid duplicate findings for the same subject–body mismatch.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e456f98d42f0",
+    "end": 79,
+    "prefix": "",
+    "quote": "The body of a letter is where you give more details about the subject. Include:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The following list supplies the letter-specific cases of body completeness.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "579b3ba7fa87",
+    "end": 63,
+    "prefix": "",
+    "quote": "Attach only documents that are relevant to the email or letter.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns attachment selection rather than the correspondence’s words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "699549d6240c",
+    "end": 103,
+    "prefix": "",
+    "quote": "If you include links in emails or electronic letters, make sure they’re accessible and check they work.",
+    "start": 0,
+    "suffix": " Do not use URLs in emails or le"
+   },
+   "note": "Concerns link accessibility and destination functioning; descriptive link text is captured separately.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "699549d6240c",
+    "end": 141,
+    "prefix": "accessible and check they work. ",
+    "quote": "Do not use URLs in emails or letters.",
+    "start": 104,
+    "suffix": " Link a word or phrase so the re"
+   },
+   "note": "Consolidated into link representation, with the later printed-letter exception.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "baf7bf9e19eb",
+    "end": 78,
+    "prefix": "",
+    "quote": "Check your organisation’s policy about links in emails and electronic letters.",
+    "start": 0,
+    "suffix": " They can look suspicious to peo"
+   },
+   "note": "An instruction to consult policy, not a stated property of link wording.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2ad1c3304cb2",
+    "end": 56,
+    "prefix": "",
+    "quote": "Spell out the full URL of any links you use in a letter.",
+    "start": 0,
+    "suffix": " This makes it easier for the re"
+   },
+   "note": "The Print considerations case of the consolidated link-representation rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "69616c2e8f16",
+    "end": 124,
+    "prefix": "",
+    "quote": "If a letter is longer than one page, insert the page breaks in appropriate places so the recipient doesn't miss information.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns pagination and layout.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9b166306bc69",
+    "end": 98,
+    "prefix": "emoji in formal correspondence. ",
+    "quote": "Use emojis only when you’re sure they are appropriate",
+    "start": 45,
+    "suffix": ", and don’t rely on them for mea"
+   },
+   "note": "The contextual condition on emoji use outside the categorical formal-correspondence ban.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8eb45f883cd8",
+    "end": 28,
+    "prefix": "",
+    "quote": "Include your signature block",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body specifies that every email needs sender and organisation information.",
+   "reason": "restatement",
+   "seed_uid": "0940ae84a5793bc6"
+  },
+  {
+   "anchor": {
+    "block_id": "9753a3a56179",
+    "end": 58,
+    "prefix": "",
+    "quote": "Follow your agency’s requirements, which may include your:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Refers to agency-specific requirements. The following possible fields are not all mandatory on this page.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "22c91bba5b91",
+    "end": 34,
+    "prefix": "",
+    "quote": "Check for style and writing errors",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A checking activity rather than a particular textual violation.",
+   "reason": "advice",
+   "seed_uid": "cafe3559bdbd358d"
+  },
+  {
+   "anchor": {
+    "block_id": "79fc3730e94f",
+    "end": 47,
+    "prefix": "",
+    "quote": "Use the organisation’s style guide or template.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Requires consulting or using a resource without specifying its rules.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5931344550fd",
+    "end": 87,
+    "prefix": "",
+    "quote": "Check the letter or email before sending it, even if it’s a quick email to a colleague.",
+    "start": 0,
+    "suffix": " A typographical error (‘typo’) "
+   },
+   "note": "Proofreading activity; a text cannot establish whether the activity occurred.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0e415e50b488",
+    "end": 46,
+    "prefix": "",
+    "quote": "Follow your organisation’s rules for archiving",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An information-management task rather than a textual requirement.",
+   "reason": "advice",
+   "seed_uid": "edf42bbd1ddcf284"
+  },
+  {
+   "anchor": {
+    "block_id": "5c60fcf60816",
+    "end": 76,
+    "prefix": "",
+    "quote": "Follow your workplace’s guidelines for record keeping and managing security.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Refers to external operational guidelines without specifying a textual check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ab23349b7a68",
+    "end": 99,
+    "prefix": "",
+    "quote": "You must use the Protective Security Policy Framework (PSPF) when preparing government information.",
+    "start": 0,
+    "suffix": " The PSPF covers how information"
+   },
+   "note": "A broad framework-compliance instruction; no specific classification or marking requirement is stated here.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ab23349b7a68",
+    "end": 349,
+    "prefix": " handling, access and disposal. ",
+    "quote": "Consult the PSPF’s guide to sensitive and classified information or consult your organisation’s protective security policy.",
+    "start": 226,
+    "suffix": ""
+   },
+   "note": "An instruction to consult external guidance.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "917211a52d2f",
+    "end": 88,
+    "prefix": "",
+    "quote": "Managing and disposing of records properly is a requirement under the Archives Act 1983.",
+    "start": 0,
+    "suffix": " You must follow your organisati"
+   },
+   "note": "Concerns record management and disposal rather than wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "917211a52d2f",
+    "end": 161,
+    "prefix": "nt under the Archives Act 1983. ",
+    "quote": "You must follow your organisation’s information management requirements.",
+    "start": 89,
+    "suffix": " Visit the National Archives of "
+   },
+   "note": "A broad external compliance obligation, not a textual criterion supplied on the page.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "917211a52d2f",
+    "end": 248,
+    "prefix": "mation management requirements. ",
+    "quote": "Visit the National Archives of Australia website for information management standards.",
+    "start": 162,
+    "suffix": ""
+   },
+   "note": "An instruction to visit an external source.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "content-types/emails-and-letters.md",
+ "page_sha256": "21618fb58937a8feaf7ae106f2c6ef8673411b548e0ab1d58057b34d22171f98",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "45e55f7ec7a3",
+    "note": "Consolidated into the recipient-appropriate tone rule.",
+    "quote": "Use the right level of formality for the recipient and purpose.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "45e55f7ec7a3",
+    "note": "General caution, not a discrete property a text checker can flag.",
+    "quote": "Be mindful of people’s privacy.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "3172368e5e2f",
+    "note": "A planning task rather than a requirement to state the user and purpose in the text.",
+    "quote": "Identify the user and purpose",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b06f957d940d",
+    "note": "The tone requirement is consolidated; no independently checkable format is specified here.",
+    "quote": "When you write emails or letters for work, use the right format and tone for the purpose.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ef6cb4ab26a9",
+    "note": "Writer consideration supporting the tone rule, not a separate textual requirement.",
+    "quote": "Consider the kind of relationship that you have with the recipient.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0effa7785f9e",
+    "note": "A contextual assessment task; it does not prescribe one correspondence format.",
+    "quote": "Assess the formality based on context and policy",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e3353f936ca5",
+    "note": "Asks the writer to learn organisational preferences.",
+    "quote": "Make sure you know what they are.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "647683c0c938",
+    "note": "Groups the distinct plain-language and tone requirements.",
+    "quote": "Write in clear language with appropriate tone",
+    "reason": "section"
+   },
+   {
+    "block_id": "a661bd3e5c4f",
+    "note": "A pre-writing compliance task, not a textual check.",
+    "quote": "Confirm privacy rules before you write to someone",
+    "reason": "advice"
+   },
+   {
+    "block_id": "56f040295bb6",
+    "note": "Prescribes verification activity; accuracy of the resulting address details is captured separately.",
+    "quote": "Take steps to confirm details are up-to-date before sending letters containing personal information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "008f1e3365bb",
+    "note": "A broad external compliance obligation, not a specific textual criterion stated on this page.",
+    "quote": "When you handle personal information, you must comply with the Australian Privacy Principles.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c64cdd6001bd",
+    "note": "Concerns transmission and disclosure rather than the message’s wording.",
+    "quote": "You must prevent unintended transmission of personal information via email.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c64cdd6001bd",
+    "note": "Concerns secure delivery and routing.",
+    "quote": "Emails need to be sent securely and to the correct recipient.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c64cdd6001bd",
+    "note": "An instruction to consult organisational procedures.",
+    "quote": "Check your organisation’s processes and procedures for the secure transmission of personal information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ef11e3b80a92",
+    "note": "A postal delivery choice, not a property of the letter’s words.",
+    "quote": "For letters sent by post, consider using registered post.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "8064400c273b",
+    "note": "Permission to add a person is a list-management obligation; the message’s unsubscribe requirement is retained separately.",
+    "quote": "You must have someone’s explicit permission to add them to a mailing list",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9f99ef9baefa",
+    "note": "Groups address-block completeness and accuracy requirements.",
+    "quote": "Address blocks",
+    "reason": "section"
+   },
+   {
+    "block_id": "b51eb5b5cd06",
+    "note": "Consolidated into the address-information quality rule.",
+    "quote": "Make sure the recipient’s details are correct.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "567d29f66632",
+    "note": "The following components are conditional additions to the address-block completeness rule.",
+    "quote": "If you’re sending a letter to someone in an organisation, include:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0cae3fabfd27",
+    "note": "Describes how to verify details, not a property of the resulting letter.",
+    "quote": "If necessary, contact a recipient to confirm their address.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "693ca8988bd4",
+    "note": "A choice of transmission service.",
+    "quote": "Consider using secure messaging services like myGov rather than email.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "be30d324b169",
+    "note": "Recipient selection and whether to send a message are operational decisions, not wording requirements.",
+    "quote": "Send emails to people only if they need the information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f2365696aacf",
+    "note": "Consolidated with the To-field recipient-role rule.",
+    "quote": "Copy people into an email if they need the email for information only.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0a074ceec51a",
+    "note": "The CC case is consolidated with the copied-recipient privacy rule.",
+    "quote": "Use the ‘CC’ field if people all know each other or can look up an email address with ease.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1c44fc08916f",
+    "note": "Requires using an organisational resource without specifying a textual criterion.",
+    "quote": "Use your organisation’s letter templates",
+    "reason": "advice"
+   },
+   {
+    "block_id": "17f0f23df5f8",
+    "note": "A production instruction; the template’s actual textual requirements are not supplied.",
+    "quote": "Use the organisation’s template for letters.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "23d854347c22",
+    "note": "Concerns file format and assistive-technology access.",
+    "quote": "To enable mobile device screen readers to access the file, use an accessible file format.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "0c9ef58069d1",
+    "note": "A general consideration for the sender.",
+    "quote": "Consider accessibility when sending attachments.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0c9ef58069d1",
+    "note": "Concerns attachment format rather than wording.",
+    "quote": "For example, don’t send PDF attachments if the recipient could be using a mobile device to read the email.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "48a3fbd0e850",
+    "note": "Concerns link presentation and functioning; descriptive link wording is captured separately.",
+    "quote": "Make sure any links are easily found and work properly.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "d61cd011973f",
+    "note": "The body specifies the sending date.",
+    "quote": "Include dates in letters",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f264e8c41ccf",
+    "note": "Consolidated into the subject-quality rule.",
+    "quote": "Be clear and concise with the subject line.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f264e8c41ccf",
+    "note": "Explains the clear-subject requirement.",
+    "quote": "It should sum up the purpose of the email.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6d17a1c02fe7",
+    "note": "Consolidated into the subject-quality rule.",
+    "quote": "Write the subject line as a heading that helps people know what is in the email and why they should read it.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cb45bd4c9a11",
+    "note": "Extends the subject-quality requirement to letters.",
+    "quote": "It’s what the recipient will read first and must make the purpose of the letter very clear.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e48729629fca",
+    "note": "Consolidated into the subject-quality rule.",
+    "quote": "Keep it short but informative.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5f8f9495b217",
+    "note": "An example-polarity label, not a standalone prohibition.",
+    "quote": "Don’t write",
+    "reason": "section"
+   },
+   {
+    "block_id": "87c5eb537878",
+    "note": "Groups salutation, personal-title and sign-off checks.",
+    "quote": "Use a salutation and sign-off to match the formality",
+    "reason": "section"
+   },
+   {
+    "block_id": "ed407843d335",
+    "note": "Summary of the more specific salutation and sign-off requirements.",
+    "quote": "The salutation and sign off should match the level of formality.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c76c7070bfb4",
+    "note": "Consolidated with the named-salutation and preferred-title requirements.",
+    "quote": "It is best to address a person by their name and preferred title.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "686a19c0d4ad",
+    "note": "Contextual forms within the salutation rule.",
+    "quote": "Use ‘Dear’ in a more formal context and ‘Hi’ in a more informal context, such as emailing a colleague.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b0323daaaf0d",
+    "note": "The unknown-recipient case of the salutation rule.",
+    "quote": "If you don’t know the recipient for an email or letter, use ‘Dear’, the recipient’s title (Ms, Mr, Mrs, Mx, Dr) and their last name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "0fc137338ae7",
+    "note": "The Mx-specific condition of the preferred-title rule.",
+    "quote": "Use ‘Mx’ when a person indicates this is what they prefer, but not otherwise.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "f14d35817f4f",
+    "note": "Recorded as the no-title exception to the salutation and title requirements.",
+    "quote": "If you do not know the recipient’s preferred title, you can simply use a person’s given name with their family name.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "55d9224ecca2",
+    "note": "Refers to external conventions without stating a concrete form to check here.",
+    "quote": "Follow specific conventions when addressing ministers, royalty, diplomats and other officials.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2116314f4dd1",
+    "note": "A caution to the writer, not an explicit ban on a defined name form.",
+    "quote": "Be careful of using a shortened name if you aren’t sure the recipient uses it.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c60176f32946",
+    "note": "The named-recipient case of the formal sign-off convention.",
+    "quote": "Use ‘Yours sincerely’ if you know the person’s name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c60176f32946",
+    "note": "The unnamed-recipient case of the formal sign-off convention.",
+    "quote": "Use ‘Yours faithfully’ if you do not.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "dccc777c50cd",
+    "note": "Groups distinct content-focus, paragraph, ordering and body-completeness checks.",
+    "quote": "Structure the body to help the user",
+    "reason": "section"
+   },
+   {
+    "block_id": "6a6027f9e883",
+    "note": "Planning activity followed by prompts, not required text.",
+    "quote": "Plan what you are going to write. Think about:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "098943b38163",
+    "note": "Consolidated into the content-focus rule rather than flagging the same topic mixing twice.",
+    "quote": "For emails, send separate emails about separate topics.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c837172012a1",
+    "note": "Consolidated into the rule against unnecessary content; no length threshold is stated.",
+    "quote": "Keep the email or letter as short as possible.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "804e1870dae3",
+    "note": "Consolidated into the subject-quality check to avoid duplicate findings for the same subject–body mismatch.",
+    "quote": "The body of an email should reflect the subject line.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e456f98d42f0",
+    "note": "The following list supplies the letter-specific cases of body completeness.",
+    "quote": "The body of a letter is where you give more details about the subject. Include:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "579b3ba7fa87",
+    "note": "Concerns attachment selection rather than the correspondence’s words.",
+    "quote": "Attach only documents that are relevant to the email or letter.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "699549d6240c",
+    "note": "Concerns link accessibility and destination functioning; descriptive link text is captured separately.",
+    "quote": "If you include links in emails or electronic letters, make sure they’re accessible and check they work.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "699549d6240c",
+    "note": "Consolidated into link representation, with the later printed-letter exception.",
+    "quote": "Do not use URLs in emails or letters.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "baf7bf9e19eb",
+    "note": "An instruction to consult policy, not a stated property of link wording.",
+    "quote": "Check your organisation’s policy about links in emails and electronic letters.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "2ad1c3304cb2",
+    "note": "The Print considerations case of the consolidated link-representation rule.",
+    "quote": "Spell out the full URL of any links you use in a letter.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "69616c2e8f16",
+    "note": "Concerns pagination and layout.",
+    "quote": "If a letter is longer than one page, insert the page breaks in appropriate places so the recipient doesn't miss information.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "9b166306bc69",
+    "note": "The contextual condition on emoji use outside the categorical formal-correspondence ban.",
+    "quote": "Use emojis only when you’re sure they are appropriate",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "8eb45f883cd8",
+    "note": "The body specifies that every email needs sender and organisation information.",
+    "quote": "Include your signature block",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9753a3a56179",
+    "note": "Refers to agency-specific requirements. The following possible fields are not all mandatory on this page.",
+    "quote": "Follow your agency’s requirements, which may include your:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "22c91bba5b91",
+    "note": "A checking activity rather than a particular textual violation.",
+    "quote": "Check for style and writing errors",
+    "reason": "advice"
+   },
+   {
+    "block_id": "79fc3730e94f",
+    "note": "Requires consulting or using a resource without specifying its rules.",
+    "quote": "Use the organisation’s style guide or template.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5931344550fd",
+    "note": "Proofreading activity; a text cannot establish whether the activity occurred.",
+    "quote": "Check the letter or email before sending it, even if it’s a quick email to a colleague.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0e415e50b488",
+    "note": "An information-management task rather than a textual requirement.",
+    "quote": "Follow your organisation’s rules for archiving",
+    "reason": "advice"
+   },
+   {
+    "block_id": "5c60fcf60816",
+    "note": "Refers to external operational guidelines without specifying a textual check.",
+    "quote": "Follow your workplace’s guidelines for record keeping and managing security.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ab23349b7a68",
+    "note": "A broad framework-compliance instruction; no specific classification or marking requirement is stated here.",
+    "quote": "You must use the Protective Security Policy Framework (PSPF) when preparing government information.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ab23349b7a68",
+    "note": "An instruction to consult external guidance.",
+    "quote": "Consult the PSPF’s guide to sensitive and classified information or consult your organisation’s protective security policy.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "917211a52d2f",
+    "note": "Concerns record management and disposal rather than wording.",
+    "quote": "Managing and disposing of records properly is a requirement under the Archives Act 1983.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "917211a52d2f",
+    "note": "A broad external compliance obligation, not a textual criterion supplied on the page.",
+    "quote": "You must follow your organisation’s information management requirements.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "917211a52d2f",
+    "note": "An instruction to visit an external source.",
+    "quote": "Visit the National Archives of Australia website for information management standards.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7aff1d0d7b2e",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Always write in plain language.",
+    "specification": "Assess vocabulary and sentence complexity against the intended recipient. The page supplies no numerical readability threshold.",
+    "unit": "document",
+    "violation_condition": "An email or letter uses language unnecessarily difficult for its intended recipient to understand.",
+    "when": [
+     "The text is an email or letter."
+    ],
+    "why": "G-1: plain language is a distinct requirement under the combined language-and-tone heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "27c2b1e34279",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "45e55f7ec7a3",
+      "quote": "Use the right level of formality for the recipient and purpose."
+     },
+     {
+      "block_id": "1faa3a107efc",
+      "quote": "The level of formality in the writing depends on the recipient and the purpose."
+     },
+     {
+      "block_id": "b06f957d940d",
+      "quote": "When you write emails or letters for work, use the right format and tone for the purpose."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Consider the needs of the person who will get the email or letter and choose the right tone.",
+    "specification": "Assess tone against the recipient relationship and communicative purpose, rather than requiring formal language in all correspondence.",
+    "unit": "document",
+    "violation_condition": "The tone of an email or letter is inappropriate for its recipient, relationship or purpose.",
+    "when": [
+     "The text is an email or letter."
+    ],
+    "why": "G-4: consolidate the repeated requirement for recipient- and purpose-appropriate tone."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "8064400c273b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "you must give them the option to unsubscribe.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A mailing-list email gives its recipients no option to unsubscribe.",
+    "when": [
+     "The email is sent through a mailing list."
+    ],
+    "why": "G-5: an unsubscribe option is a property of the message; obtaining permission to add someone is a separate operational obligation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b51eb5b5cd06",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "567d29f66632",
+      "quote": "If you’re sending a letter to someone in an organisation, include:"
+     },
+     {
+      "block_id": "51c21d9e0b6c",
+      "quote": "the recipient’s position"
+     },
+     {
+      "block_id": "28784773af3e",
+      "quote": "the branch or division they work in"
+     },
+     {
+      "block_id": "1d4bc02161c6",
+      "quote": "the name of the organisation."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include the recipient’s name and postal address at the top of the letter.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A letter lacks the recipient’s name or postal address at the top, or its address block omits the additional organisational details required for a recipient in an organisation.",
+    "when": [
+     "The text is a letter.",
+     "For a recipient in an organisation, also include their position, branch or division, and organisation name."
+    ],
+    "why": "G-2: organisational recipients add conditions to one address-block completeness check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0cae3fabfd27",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "b51eb5b5cd06",
+      "quote": "Make sure the recipient’s details are correct."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use information only if it is accurate, up to date, complete and relevant.",
+    "specification": "Apply this paragraph in its Address blocks context. Verification requires an authoritative current source for recipient details. Missing address components belong to the address-block completeness check, not a second finding here.",
+    "unit": "block",
+    "violation_condition": "A letter’s recipient or address details contain inaccurate, outdated or irrelevant information.",
+    "when": [
+     "The information appears in a letter’s recipient or address details."
+    ],
+    "why": "G-4: consolidate the accuracy restatement; distinguish incorrect supplied details from missing address components."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "b7af4c76943a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "With emails, explain in the covering text that the email has a letter attached.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email carrying an attached letter does not mention the attached letter in its covering text.",
+    "when": [
+     "A letter is attached to the email."
+    ],
+    "why": "G-5: this specifies required covering words, unlike the adjacent advice about transmission services."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "eae2771894a5",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "f2365696aacf",
+      "quote": "Copy people into an email if they need the email for information only."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include recipients in the ‘To’ field only if you need them to act on something in the email.",
+    "specification": "The checker needs recipient fields and enough context to establish who is expected to act. Do not infer that every recipient not explicitly named in a request is information-only.",
+    "unit": "document",
+    "violation_condition": "The email’s To field includes a recipient who is receiving the message for information only and is not expected to act.",
+    "when": [
+     "Recipient fields are available for inspection."
+    ],
+    "why": "G-2: action recipients and information-only recipients are cases of the same recipient-role check."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "70e26117686e",
+    "clarity_suggestion": "not_automatable",
+    "covers": [
+     {
+      "block_id": "0a074ceec51a",
+      "quote": "Use the ‘CC’ field if people all know each other or can look up an email address with ease."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the ‘BCC’ field to send an email to a group of people who don’t know each other.",
+    "specification": "Recipient relationships require external information. Do not infer that people know each other merely because their addresses share a domain.",
+    "unit": "block",
+    "violation_condition": "An email exposes a copied group’s addresses instead of using BCC when the people do not know each other.",
+    "when": [
+     "The email is being copied to a group.",
+     "CC is appropriate when everyone knows each other or can readily look up an email address.",
+     "Use BCC for a group of people who do not know each other."
+    ],
+    "why": "G-2: CC and BCC are conditional alternatives within one copied-recipient privacy check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "249d5f27ce0b",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For images in emails and digital letters, use alt text.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image in an email or digital letter has no alternative text.",
+    "when": [
+     "The text is an email or digital letter containing an image.",
+     "Image and alternative-text information is available for inspection."
+    ],
+    "why": "G-5: this requires a textual alternative, rather than prescribing a file format or delivery method."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "66939e8a7fbb",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don't send images unless they're referred to and described in the text.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email or digital letter includes an image that is not referred to and described in the accompanying text.",
+    "when": [
+     "The text is an email or digital letter containing an image."
+    ],
+    "why": "G-5: the instruction imposes an explicit requirement on the accompanying words."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "24678acc4d09",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d61cd011973f",
+      "quote": "Include dates in letters"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include the date you are sending the letter so that the recipient knows when you wrote it.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A letter does not include its sending date.",
+    "when": [
+     "The text is a letter."
+    ],
+    "why": "G-4: the body specifies which date the heading requires."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "10164e07af9a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "f264e8c41ccf",
+      "quote": "Be clear and concise with the subject line. It should sum up the purpose of the email."
+     },
+     {
+      "block_id": "6d17a1c02fe7",
+      "quote": "Write the subject line as a heading that helps people know what is in the email and why they should read it."
+     },
+     {
+      "block_id": "cb45bd4c9a11",
+      "quote": "It’s what the recipient will read first and must make the purpose of the letter very clear."
+     },
+     {
+      "block_id": "e48729629fca",
+      "quote": "Keep it short but informative."
+     },
+     {
+      "block_id": "804e1870dae3",
+      "quote": "The body of an email should reflect the subject line."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write a clear and concise subject line",
+    "specification": "Treat wording as unnecessarily long when it can be removed without losing information needed to identify the purpose. Do not impose a numerical length limit. Compare the subject with the body when assessing whether it represents the correspondence.",
+    "unit": "document",
+    "violation_condition": "An email subject line or letter subject fails to identify the correspondence’s purpose, misrepresents its body, or contains unnecessary wording.",
+    "when": [
+     "The text is an email or letter with a subject."
+    ],
+    "why": "G-4: consolidate subject clarity, concision and correspondence with the body rather than flagging the same misleading subject twice."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "6d17a1c02fe7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "As for all headings, it is good practice to put the main idea first.",
+    "specification": "Identify the main idea from the email’s purpose. Flag front-loaded secondary information, not a fixed number of introductory words.",
+    "unit": "phrase",
+    "violation_condition": "An email subject line places subsidiary wording before its main idea.",
+    "when": [
+     "Assessing an email subject line."
+    ],
+    "why": "G-1: information order is independently checkable even when a subject is otherwise clear and concise."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "8f8fa9d50dd0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using expressions and words that make the email look like spam or like a suspicious email.",
+    "specification": "The page supplies no expressions, lexicon or decision criteria. Agree contextual criteria before generating automatic findings.",
+    "unit": "phrase",
+    "violation_condition": "An email subject uses wording that makes the message look like spam or a suspicious email.",
+    "when": [
+     "Assessing an email subject line."
+    ],
+    "why": "G-1: suspicious wording is a separate defect from subject length or information order."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "686a19c0d4ad",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "686a19c0d4ad",
+      "quote": "Use ‘Dear’ in a more formal context and ‘Hi’ in a more informal context, such as emailing a colleague."
+     },
+     {
+      "block_id": "b0323daaaf0d",
+      "quote": "If you don’t know the recipient for an email or letter, use ‘Dear’, the recipient’s title (Ms, Mr, Mrs, Mx, Dr) and their last name."
+     },
+     {
+      "block_id": "f14d35817f4f",
+      "quote": "If you do not know the recipient’s preferred title, you can simply use a person’s given name with their family name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "The first email in a conversation should include the recipient’s name and an appropriate salutation.",
+    "specification": "Combine the salutation’s required presence and its contextual form in one check. The title-preference check separately handles whether an included title is the recipient’s preferred title.",
+    "unit": "document",
+    "violation_condition": "The first email in a conversation lacks a named salutation, or an email or letter uses a salutation form inconsistent with the stated formality and recipient-familiarity conventions.",
+    "when": [
+     "The first email in a conversation needs the recipient’s name and a salutation.",
+     "Use Dear in a more formal context and Hi in a more informal context.",
+     "For an unknown recipient of an email or letter, use Dear, their title and their last name.",
+     "If the preferred title is unknown, a given name and family name without a title is permitted."
+    ],
+    "why": "G-2 and G-3: salutation forms are contextual cases, and the no-title option is an exception rather than another rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0fc137338ae7",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "0fc137338ae7",
+      "quote": "Use ‘Mx’ when a person indicates this is what they prefer, but not otherwise."
+     },
+     {
+      "block_id": "c76c7070bfb4",
+      "quote": "It is best to address a person by their name and preferred title."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use the correct and preferred title for people of different gender identities.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An email or letter uses a title contrary to a person’s known preference, or uses Mx without that person indicating a preference for it.",
+    "when": [
+     "A personal title is used in an email or letter.",
+     "Use Mx only when the person indicates that they prefer it.",
+     "An unknown preferred title may be omitted in favour of the person’s given name and family name."
+    ],
+    "why": "G-2 and G-4: the Mx condition and preferred-title wording belong to one title-selection check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c60176f32946",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "c60176f32946",
+      "quote": "Use ‘Yours sincerely’ if you know the person’s name. Use ‘Yours faithfully’ if you do not."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "At the end of the letter or email, include a sign-off that matches the salutation.",
+    "specification": "Apply Yours sincerely and Yours faithfully as formal closing conventions. Do not make them exclusive options for all correspondence: the table also permits informal closings such as Regards and Thanks.",
+    "unit": "document",
+    "violation_condition": "A letter or email lacks a closing sign-off or uses one inconsistent with its salutation and level of formality.",
+    "when": [
+     "The text is a letter or email.",
+     "For the formal closing convention, use Yours sincerely when the person’s name is known and Yours faithfully when it is not.",
+     "Informal salutations may take the informal sign-offs shown in the table."
+    ],
+    "why": "G-2: named, unnamed and informal recipients change the acceptable closing, not the underlying sign-off check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "098943b38163",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "098943b38163",
+      "quote": "For emails, send separate emails about separate topics."
+     },
+     {
+      "block_id": "c837172012a1",
+      "quote": "Keep the email or letter as short as possible."
+     },
+     {
+      "block_id": "c837172012a1",
+      "quote": "People will be able to read and understand it quickly if you omit unnecessary detail."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Stay on topic and write only what the recipient needs to know.",
+    "specification": "Assess necessity against the recipient’s purpose and required action. Do not impose a word-count limit. Treat independently actionable, unrelated subjects as separate email topics, not every supporting point within one subject.",
+    "unit": "document",
+    "violation_condition": "An email or letter contains off-topic or unnecessary material, or an email combines separate topics that should be separate messages.",
+    "when": [
+     "The text is an email or letter.",
+     "The separate-message condition applies to emails."
+    ],
+    "why": "G-2 and G-4: topic separation and omission of unnecessary detail consolidate into one content-focus check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cdbdf1ca85b7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use one idea per paragraph.",
+    "specification": "Supporting details and examples of the same controlling idea do not count as additional ideas.",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph in an email or letter develops more than one distinct idea.",
+    "when": [
+     "The paragraph is in an email or letter."
+    ],
+    "why": "G-1: paragraph unity is independent of the adjacent conditional heading requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "cdbdf1ca85b7",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If it will make the email or letter clearer, use headings.",
+    "specification": "Flag missing headings only where distinct substantial parts are hard to navigate without them; do not require headings in every message.",
+    "unit": "document",
+    "violation_condition": "An email or letter lacks headings where their absence makes its distinct parts difficult to locate or understand.",
+    "when": [
+     "Headings would make the email or letter clearer."
+    ],
+    "why": "G-2: retain the explicit clarity condition rather than turning headings into a universal requirement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c837172012a1",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Structure emails and letters so that the recipient knows what’s most important as soon as they open it.",
+    "specification": "Identify priority from the correspondence’s purpose, such as its key decision, request or required action, rather than treating the first chronological event as automatically most important.",
+    "unit": "document",
+    "violation_condition": "An email or letter buries its most important information beneath background or secondary material.",
+    "when": [
+     "The text is an email or letter."
+    ],
+    "why": "G-1: ordering important information is distinct from removing unnecessary information."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "804e1870dae3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8fff52544a22",
+      "quote": "why you’re sending the email"
+     },
+     {
+      "block_id": "de38008e5311",
+      "quote": "what they need to do or understand."
+     },
+     {
+      "block_id": "e456f98d42f0",
+      "quote": "The body of a letter is where you give more details about the subject. Include:"
+     },
+     {
+      "block_id": "6dc3cc6d4d9f",
+      "quote": "an introduction stating why you’re sending the letter"
+     },
+     {
+      "block_id": "bbf908745f25",
+      "quote": "what the recipient needs to do or understand"
+     },
+     {
+      "block_id": "b7684f7331d5",
+      "quote": "any information the recipient needs to know so they can do what you have asked them to"
+     },
+     {
+      "block_id": "641962384b28",
+      "quote": "a list of extra pages, such as a form"
+     },
+     {
+      "block_id": "48966af4045c",
+      "quote": "a concluding sentence or paragraph."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "It should tell the recipient:",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The body of an email or letter omits its purpose, what the recipient needs to do or understand, or another body component required for that correspondence type.",
+    "when": [
+     "An email body must explain why it is being sent and what the recipient needs to do or understand.",
+     "A letter body needs an introduction explaining its purpose, what the recipient needs to do or understand, the information needed to do it, and a concluding sentence or paragraph.",
+     "A letter with extra pages must list those extra pages."
+    ],
+    "why": "G-2: email and letter lists specify conditional components of one body-completeness check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "699549d6240c",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "699549d6240c",
+      "quote": "Do not use URLs in emails or letters."
+     },
+     {
+      "block_id": "2ad1c3304cb2",
+      "quote": "Spell out the full URL of any links you use in a letter."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Link a word or phrase so the reader is clear about where the link will take them.",
+    "specification": "Read the later instruction under Print considerations as the printed-letter exception to the earlier prohibition on URLs. Electronic correspondence uses descriptive linked words; printed letters show full URLs.",
+    "unit": "phrase",
+    "violation_condition": "An email or electronic letter displays a raw URL or non-descriptive link wording, or a printed letter refers to a link without spelling out its full URL.",
+    "when": [
+     "The correspondence contains links.",
+     "Emails and electronic letters use descriptive linked words or phrases rather than displayed URLs.",
+     "Printed letters spell out the full URL so the recipient can type it."
+    ],
+    "why": "G-2: print and electronic delivery change the required representation of the same link."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9b166306bc69",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "9b166306bc69",
+      "quote": "Use emojis only when you’re sure they are appropriate"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Never use an emoji in formal correspondence.",
+    "specification": "The categorical prohibition applies to formal correspondence. Outside formal correspondence, assess contextual appropriateness rather than imposing a universal emoji ban.",
+    "unit": "document",
+    "violation_condition": "Formal correspondence contains an emoji, or informal correspondence uses an emoji inappropriate to its context.",
+    "when": [
+     "The text is an email or letter.",
+     "Formal correspondence prohibits emojis.",
+     "In other correspondence, use an emoji only when it is appropriate."
+    ],
+    "why": "G-2: formality and appropriateness are conditions on the same emoji-use check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9b166306bc69",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "don’t rely on them for meaning.",
+    "specification": "Treat reliance as losing essential information when the emoji is removed. Decorative reinforcement of information already expressed in words is not reliance.",
+    "unit": "sentence",
+    "violation_condition": "An emoji carries essential information that is not also expressed in words.",
+    "when": [
+     "An email or letter contains an emoji."
+    ],
+    "why": "G-1: reliance on an emoji for meaning is distinct from whether its use is appropriate."
+   },
+   {
+    "applies_to": [
+     "email"
+    ],
+    "block_id": "1281ca8a0afd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "8eb45f883cd8",
+      "quote": "Include your signature block"
+     },
+     {
+      "block_id": "1281ca8a0afd",
+      "quote": "This could be you or the person or team responsible for the email."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Every email should include a signature block with information about the sender and their organisation.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email lacks a signature block identifying its sender and organisation.",
+    "when": [
+     "The sender may be an individual, another person on whose behalf the email is sent, or a responsible team.",
+     "The agency may specify additional signature details; the following list is not a universal requirement for every listed field."
+    ],
+    "why": "G-4: the body clarifies the heading’s scope and required identifying information."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fc98e4fef0ea",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "In a letter, when appropriate, add the details of a contact person if there is one.",
+    "specification": "The page does not define when a contact person is appropriate. Establish that trigger before generating automatic findings.",
+    "unit": "document",
+    "violation_condition": "A letter omits the details of an available contact person in circumstances where including a contact person is appropriate.",
+    "when": [
+     "The text is a letter.",
+     "A contact person exists and including their details is appropriate."
+    ],
+    "why": "G-2: retain both limiting conditions rather than requiring contact-person details in every letter."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fc98e4fef0ea",
+    "clarity_suggestion": "not_automatable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST_NOT",
+    "quote": "Never include someone’s contact details if you haven’t asked first.",
+    "specification": "Whether the person was asked must be supplied externally; the letter alone cannot establish it. Do not replace the stated requirement to ask first with an invented consent test.",
+    "unit": "phrase",
+    "violation_condition": "A letter includes another person’s contact details although that person was not asked first.",
+    "when": [
+     "Someone’s contact details are included in a letter."
+    ],
+    "why": "G-1: the prohibition on including unapproved contact details is distinct from the conditional requirement to provide a contact person."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "7aff1d0d7b2e",
+    "end": 31,
+    "prefix": "",
+    "quote": "Always write in plain language.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "Assess vocabulary and sentence complexity against the intended recipient. The page supplies no numerical readability threshold.",
+    "unit": "document",
+    "violation_condition": "An email or letter uses language unnecessarily difficult for its intended recipient to understand."
+   },
+   "when": [
+    "The text is an email or letter."
+   ],
+   "why": "G-1: plain language is a distinct requirement under the combined language-and-tone heading."
+  },
+  {
+   "anchor": {
+    "block_id": "27c2b1e34279",
+    "end": 92,
+    "prefix": "",
+    "quote": "Consider the needs of the person who will get the email or letter and choose the right tone.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "45e55f7ec7a3",
+     "end": 131,
+     "prefix": "cipient what they need to know. ",
+     "quote": "Use the right level of formality for the recipient and purpose.",
+     "start": 68,
+     "suffix": " Be mindful of people’s privacy."
+    },
+    {
+     "block_id": "1faa3a107efc",
+     "end": 79,
+     "prefix": "",
+     "quote": "The level of formality in the writing depends on the recipient and the purpose.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b06f957d940d",
+     "end": 89,
+     "prefix": "",
+     "quote": "When you write emails or letters for work, use the right format and tone for the purpose.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess tone against the recipient relationship and communicative purpose, rather than requiring formal language in all correspondence.",
+    "unit": "document",
+    "violation_condition": "The tone of an email or letter is inappropriate for its recipient, relationship or purpose."
+   },
+   "when": [
+    "The text is an email or letter."
+   ],
+   "why": "G-4: consolidate the repeated requirement for recipient- and purpose-appropriate tone."
+  },
+  {
+   "anchor": {
+    "block_id": "8064400c273b",
+    "end": 123,
+    "prefix": " add them to a mailing list and ",
+    "quote": "you must give them the option to unsubscribe.",
+    "start": 78,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A mailing-list email gives its recipients no option to unsubscribe."
+   },
+   "when": [
+    "The email is sent through a mailing list."
+   ],
+   "why": "G-5: an unsubscribe option is a property of the message; obtaining permission to add someone is a separate operational obligation."
+  },
+  {
+   "anchor": {
+    "block_id": "b51eb5b5cd06",
+    "end": 73,
+    "prefix": "",
+    "quote": "Include the recipient’s name and postal address at the top of the letter.",
+    "start": 0,
+    "suffix": " Make sure the recipient’s detai"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "567d29f66632",
+     "end": 66,
+     "prefix": "",
+     "quote": "If you’re sending a letter to someone in an organisation, include:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "51c21d9e0b6c",
+     "end": 24,
+     "prefix": "",
+     "quote": "the recipient’s position",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "28784773af3e",
+     "end": 35,
+     "prefix": "",
+     "quote": "the branch or division they work in",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1d4bc02161c6",
+     "end": 29,
+     "prefix": "",
+     "quote": "the name of the organisation.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A letter lacks the recipient’s name or postal address at the top, or its address block omits the additional organisational details required for a recipient in an organisation."
+   },
+   "when": [
+    "The text is a letter.",
+    "For a recipient in an organisation, also include their position, branch or division, and organisation name."
+   ],
+   "why": "G-2: organisational recipients add conditions to one address-block completeness check."
+  },
+  {
+   "anchor": {
+    "block_id": "0cae3fabfd27",
+    "end": 74,
+    "prefix": "",
+    "quote": "Use information only if it is accurate, up to date, complete and relevant.",
+    "start": 0,
+    "suffix": " If necessary, contact a recipie"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "b51eb5b5cd06",
+     "end": 120,
+     "prefix": "dress at the top of the letter. ",
+     "quote": "Make sure the recipient’s details are correct.",
+     "start": 74,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Apply this paragraph in its Address blocks context. Verification requires an authoritative current source for recipient details. Missing address components belong to the address-block completeness check, not a second finding here.",
+    "unit": "block",
+    "violation_condition": "A letter’s recipient or address details contain inaccurate, outdated or irrelevant information."
+   },
+   "when": [
+    "The information appears in a letter’s recipient or address details."
+   ],
+   "why": "G-4: consolidate the accuracy restatement; distinguish incorrect supplied details from missing address components."
+  },
+  {
+   "anchor": {
+    "block_id": "b7af4c76943a",
+    "end": 79,
+    "prefix": "",
+    "quote": "With emails, explain in the covering text that the email has a letter attached.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email carrying an attached letter does not mention the attached letter in its covering text."
+   },
+   "when": [
+    "A letter is attached to the email."
+   ],
+   "why": "G-5: this specifies required covering words, unlike the adjacent advice about transmission services."
+  },
+  {
+   "anchor": {
+    "block_id": "eae2771894a5",
+    "end": 92,
+    "prefix": "",
+    "quote": "Include recipients in the ‘To’ field only if you need them to act on something in the email.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "f2365696aacf",
+     "end": 70,
+     "prefix": "",
+     "quote": "Copy people into an email if they need the email for information only.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The checker needs recipient fields and enough context to establish who is expected to act. Do not infer that every recipient not explicitly named in a request is information-only.",
+    "unit": "document",
+    "violation_condition": "The email’s To field includes a recipient who is receiving the message for information only and is not expected to act."
+   },
+   "when": [
+    "Recipient fields are available for inspection."
+   ],
+   "why": "G-2: action recipients and information-only recipients are cases of the same recipient-role check."
+  },
+  {
+   "anchor": {
+    "block_id": "70e26117686e",
+    "end": 84,
+    "prefix": "",
+    "quote": "Use the ‘BCC’ field to send an email to a group of people who don’t know each other.",
+    "start": 0,
+    "suffix": " Use of BCC protects people’s pr"
+   },
+   "clarity_suggestion": "not_automatable",
+   "covers": [
+    {
+     "block_id": "0a074ceec51a",
+     "end": 91,
+     "prefix": "",
+     "quote": "Use the ‘CC’ field if people all know each other or can look up an email address with ease.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Recipient relationships require external information. Do not infer that people know each other merely because their addresses share a domain.",
+    "unit": "block",
+    "violation_condition": "An email exposes a copied group’s addresses instead of using BCC when the people do not know each other."
+   },
+   "when": [
+    "The email is being copied to a group.",
+    "CC is appropriate when everyone knows each other or can readily look up an email address.",
+    "Use BCC for a group of people who do not know each other."
+   ],
+   "why": "G-2: CC and BCC are conditional alternatives within one copied-recipient privacy check."
+  },
+  {
+   "anchor": {
+    "block_id": "249d5f27ce0b",
+    "end": 55,
+    "prefix": "",
+    "quote": "For images in emails and digital letters, use alt text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An image in an email or digital letter has no alternative text."
+   },
+   "when": [
+    "The text is an email or digital letter containing an image.",
+    "Image and alternative-text information is available for inspection."
+   ],
+   "why": "G-5: this requires a textual alternative, rather than prescribing a file format or delivery method."
+  },
+  {
+   "anchor": {
+    "block_id": "66939e8a7fbb",
+    "end": 71,
+    "prefix": "",
+    "quote": "Don't send images unless they're referred to and described in the text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email or digital letter includes an image that is not referred to and described in the accompanying text."
+   },
+   "when": [
+    "The text is an email or digital letter containing an image."
+   ],
+   "why": "G-5: the instruction imposes an explicit requirement on the accompanying words."
+  },
+  {
+   "anchor": {
+    "block_id": "24678acc4d09",
+    "end": 90,
+    "prefix": "",
+    "quote": "Include the date you are sending the letter so that the recipient knows when you wrote it.",
+    "start": 0,
+    "suffix": " This is especially important if"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d61cd011973f",
+     "end": 24,
+     "prefix": "",
+     "quote": "Include dates in letters",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "A letter does not include its sending date."
+   },
+   "when": [
+    "The text is a letter."
+   ],
+   "why": "G-4: the body specifies which date the heading requires."
+  },
+  {
+   "anchor": {
+    "block_id": "10164e07af9a",
+    "end": 38,
+    "prefix": "",
+    "quote": "Write a clear and concise subject line",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "f264e8c41ccf",
+     "end": 86,
+     "prefix": "",
+     "quote": "Be clear and concise with the subject line. It should sum up the purpose of the email.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6d17a1c02fe7",
+     "end": 108,
+     "prefix": "",
+     "quote": "Write the subject line as a heading that helps people know what is in the email and why they should read it.",
+     "start": 0,
+     "suffix": " As for all headings, it is good"
+    },
+    {
+     "block_id": "cb45bd4c9a11",
+     "end": 149,
+     "prefix": "ike a subject line in an email. ",
+     "quote": "It’s what the recipient will read first and must make the purpose of the letter very clear.",
+     "start": 58,
+     "suffix": ""
+    },
+    {
+     "block_id": "e48729629fca",
+     "end": 30,
+     "prefix": "",
+     "quote": "Keep it short but informative.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "804e1870dae3",
+     "end": 53,
+     "prefix": "",
+     "quote": "The body of an email should reflect the subject line.",
+     "start": 0,
+     "suffix": " It should tell the recipient:"
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "f638fa9264a9e341",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Treat wording as unnecessarily long when it can be removed without losing information needed to identify the purpose. Do not impose a numerical length limit. Compare the subject with the body when assessing whether it represents the correspondence.",
+    "unit": "document",
+    "violation_condition": "An email subject line or letter subject fails to identify the correspondence’s purpose, misrepresents its body, or contains unnecessary wording."
+   },
+   "when": [
+    "The text is an email or letter with a subject."
+   ],
+   "why": "G-4: consolidate subject clarity, concision and correspondence with the body rather than flagging the same misleading subject twice."
+  },
+  {
+   "anchor": {
+    "block_id": "6d17a1c02fe7",
+    "end": 177,
+    "prefix": "il and why they should read it. ",
+    "quote": "As for all headings, it is good practice to put the main idea first.",
+    "start": 109,
+    "suffix": " This is especially helpful when"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Identify the main idea from the email’s purpose. Flag front-loaded secondary information, not a fixed number of introductory words.",
+    "unit": "phrase",
+    "violation_condition": "An email subject line places subsidiary wording before its main idea."
+   },
+   "when": [
+    "Assessing an email subject line."
+   ],
+   "why": "G-1: information order is independently checkable even when a subject is otherwise clear and concise."
+  },
+  {
+   "anchor": {
+    "block_id": "8f8fa9d50dd0",
+    "end": 96,
+    "prefix": "",
+    "quote": "Avoid using expressions and words that make the email look like spam or like a suspicious email.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page supplies no expressions, lexicon or decision criteria. Agree contextual criteria before generating automatic findings.",
+    "unit": "phrase",
+    "violation_condition": "An email subject uses wording that makes the message look like spam or a suspicious email."
+   },
+   "when": [
+    "Assessing an email subject line."
+   ],
+   "why": "G-1: suspicious wording is a separate defect from subject length or information order."
+  },
+  {
+   "anchor": {
+    "block_id": "686a19c0d4ad",
+    "end": 100,
+    "prefix": "",
+    "quote": "The first email in a conversation should include the recipient’s name and an appropriate salutation.",
+    "start": 0,
+    "suffix": " Use ‘Dear’ in a more formal con"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "686a19c0d4ad",
+     "end": 203,
+     "prefix": " and an appropriate salutation. ",
+     "quote": "Use ‘Dear’ in a more formal context and ‘Hi’ in a more informal context, such as emailing a colleague.",
+     "start": 101,
+     "suffix": ""
+    },
+    {
+     "block_id": "b0323daaaf0d",
+     "end": 132,
+     "prefix": "",
+     "quote": "If you don’t know the recipient for an email or letter, use ‘Dear’, the recipient’s title (Ms, Mr, Mrs, Mx, Dr) and their last name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f14d35817f4f",
+     "end": 116,
+     "prefix": "",
+     "quote": "If you do not know the recipient’s preferred title, you can simply use a person’s given name with their family name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Combine the salutation’s required presence and its contextual form in one check. The title-preference check separately handles whether an included title is the recipient’s preferred title.",
+    "unit": "document",
+    "violation_condition": "The first email in a conversation lacks a named salutation, or an email or letter uses a salutation form inconsistent with the stated formality and recipient-familiarity conventions."
+   },
+   "when": [
+    "The first email in a conversation needs the recipient’s name and a salutation.",
+    "Use Dear in a more formal context and Hi in a more informal context.",
+    "For an unknown recipient of an email or letter, use Dear, their title and their last name.",
+    "If the preferred title is unknown, a given name and family name without a title is permitted."
+   ],
+   "why": "G-2 and G-3: salutation forms are contextual cases, and the no-title option is an exception rather than another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "0fc137338ae7",
+    "end": 78,
+    "prefix": "",
+    "quote": "Use the correct and preferred title for people of different gender identities.",
+    "start": 0,
+    "suffix": " ‘Mx’ refers to non-binary peopl"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "0fc137338ae7",
+     "end": 250,
+     "prefix": "be referred to by their gender. ",
+     "quote": "Use ‘Mx’ when a person indicates this is what they prefer, but not otherwise.",
+     "start": 173,
+     "suffix": ""
+    },
+    {
+     "block_id": "c76c7070bfb4",
+     "end": 112,
+     "prefix": " salutations are rarely useful. ",
+     "quote": "It is best to address a person by their name and preferred title.",
+     "start": 47,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An email or letter uses a title contrary to a person’s known preference, or uses Mx without that person indicating a preference for it."
+   },
+   "when": [
+    "A personal title is used in an email or letter.",
+    "Use Mx only when the person indicates that they prefer it.",
+    "An unknown preferred title may be omitted in favour of the person’s given name and family name."
+   ],
+   "why": "G-2 and G-4: the Mx condition and preferred-title wording belong to one title-selection check."
+  },
+  {
+   "anchor": {
+    "block_id": "c60176f32946",
+    "end": 82,
+    "prefix": "",
+    "quote": "At the end of the letter or email, include a sign-off that matches the salutation.",
+    "start": 0,
+    "suffix": " Use ‘Yours sincerely’ if you kn"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "c60176f32946",
+     "end": 173,
+     "prefix": "ff that matches the salutation. ",
+     "quote": "Use ‘Yours sincerely’ if you know the person’s name. Use ‘Yours faithfully’ if you do not.",
+     "start": 83,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Apply Yours sincerely and Yours faithfully as formal closing conventions. Do not make them exclusive options for all correspondence: the table also permits informal closings such as Regards and Thanks.",
+    "unit": "document",
+    "violation_condition": "A letter or email lacks a closing sign-off or uses one inconsistent with its salutation and level of formality."
+   },
+   "when": [
+    "The text is a letter or email.",
+    "For the formal closing convention, use Yours sincerely when the person’s name is known and Yours faithfully when it is not.",
+    "Informal salutations may take the informal sign-offs shown in the table."
+   ],
+   "why": "G-2: named, unnamed and informal recipients change the acceptable closing, not the underlying sign-off check."
+  },
+  {
+   "anchor": {
+    "block_id": "098943b38163",
+    "end": 62,
+    "prefix": "",
+    "quote": "Stay on topic and write only what the recipient needs to know.",
+    "start": 0,
+    "suffix": " For emails, send separate email"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "098943b38163",
+     "end": 118,
+     "prefix": "at the recipient needs to know. ",
+     "quote": "For emails, send separate emails about separate topics.",
+     "start": 63,
+     "suffix": " It helps keep the conversation "
+    },
+    {
+     "block_id": "c837172012a1",
+     "end": 150,
+     "prefix": "ortant as soon as they open it. ",
+     "quote": "Keep the email or letter as short as possible.",
+     "start": 104,
+     "suffix": " People will be able to read and"
+    },
+    {
+     "block_id": "c837172012a1",
+     "end": 236,
+     "prefix": "or letter as short as possible. ",
+     "quote": "People will be able to read and understand it quickly if you omit unnecessary detail.",
+     "start": 151,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess necessity against the recipient’s purpose and required action. Do not impose a word-count limit. Treat independently actionable, unrelated subjects as separate email topics, not every supporting point within one subject.",
+    "unit": "document",
+    "violation_condition": "An email or letter contains off-topic or unnecessary material, or an email combines separate topics that should be separate messages."
+   },
+   "when": [
+    "The text is an email or letter.",
+    "The separate-message condition applies to emails."
+   ],
+   "why": "G-2 and G-4: topic separation and omission of unnecessary detail consolidate into one content-focus check."
+  },
+  {
+   "anchor": {
+    "block_id": "cdbdf1ca85b7",
+    "end": 27,
+    "prefix": "",
+    "quote": "Use one idea per paragraph.",
+    "start": 0,
+    "suffix": " If it will make the email or le"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Supporting details and examples of the same controlling idea do not count as additional ideas.",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph in an email or letter develops more than one distinct idea."
+   },
+   "when": [
+    "The paragraph is in an email or letter."
+   ],
+   "why": "G-1: paragraph unity is independent of the adjacent conditional heading requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "cdbdf1ca85b7",
+    "end": 86,
+    "prefix": "Use one idea per paragraph. ",
+    "quote": "If it will make the email or letter clearer, use headings.",
+    "start": 28,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Flag missing headings only where distinct substantial parts are hard to navigate without them; do not require headings in every message.",
+    "unit": "document",
+    "violation_condition": "An email or letter lacks headings where their absence makes its distinct parts difficult to locate or understand."
+   },
+   "when": [
+    "Headings would make the email or letter clearer."
+   ],
+   "why": "G-2: retain the explicit clarity condition rather than turning headings into a universal requirement."
+  },
+  {
+   "anchor": {
+    "block_id": "c837172012a1",
+    "end": 103,
+    "prefix": "",
+    "quote": "Structure emails and letters so that the recipient knows what’s most important as soon as they open it.",
+    "start": 0,
+    "suffix": " Keep the email or letter as sho"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Identify priority from the correspondence’s purpose, such as its key decision, request or required action, rather than treating the first chronological event as automatically most important.",
+    "unit": "document",
+    "violation_condition": "An email or letter buries its most important information beneath background or secondary material."
+   },
+   "when": [
+    "The text is an email or letter."
+   ],
+   "why": "G-1: ordering important information is distinct from removing unnecessary information."
+  },
+  {
+   "anchor": {
+    "block_id": "804e1870dae3",
+    "end": 83,
+    "prefix": "hould reflect the subject line. ",
+    "quote": "It should tell the recipient:",
+    "start": 54,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8fff52544a22",
+     "end": 28,
+     "prefix": "",
+     "quote": "why you’re sending the email",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "de38008e5311",
+     "end": 35,
+     "prefix": "",
+     "quote": "what they need to do or understand.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "e456f98d42f0",
+     "end": 79,
+     "prefix": "",
+     "quote": "The body of a letter is where you give more details about the subject. Include:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "6dc3cc6d4d9f",
+     "end": 53,
+     "prefix": "",
+     "quote": "an introduction stating why you’re sending the letter",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "bbf908745f25",
+     "end": 44,
+     "prefix": "",
+     "quote": "what the recipient needs to do or understand",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b7684f7331d5",
+     "end": 86,
+     "prefix": "",
+     "quote": "any information the recipient needs to know so they can do what you have asked them to",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "641962384b28",
+     "end": 37,
+     "prefix": "",
+     "quote": "a list of extra pages, such as a form",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "48966af4045c",
+     "end": 35,
+     "prefix": "",
+     "quote": "a concluding sentence or paragraph.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 21,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "The body of an email or letter omits its purpose, what the recipient needs to do or understand, or another body component required for that correspondence type."
+   },
+   "when": [
+    "An email body must explain why it is being sent and what the recipient needs to do or understand.",
+    "A letter body needs an introduction explaining its purpose, what the recipient needs to do or understand, the information needed to do it, and a concluding sentence or paragraph.",
+    "A letter with extra pages must list those extra pages."
+   ],
+   "why": "G-2: email and letter lists specify conditional components of one body-completeness check."
+  },
+  {
+   "anchor": {
+    "block_id": "699549d6240c",
+    "end": 223,
+    "prefix": " use URLs in emails or letters. ",
+    "quote": "Link a word or phrase so the reader is clear about where the link will take them.",
+    "start": 142,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "699549d6240c",
+     "end": 141,
+     "prefix": "accessible and check they work. ",
+     "quote": "Do not use URLs in emails or letters.",
+     "start": 104,
+     "suffix": " Link a word or phrase so the re"
+    },
+    {
+     "block_id": "2ad1c3304cb2",
+     "end": 56,
+     "prefix": "",
+     "quote": "Spell out the full URL of any links you use in a letter.",
+     "start": 0,
+     "suffix": " This makes it easier for the re"
+    }
+   ],
+   "examples": [],
+   "n": 22,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Read the later instruction under Print considerations as the printed-letter exception to the earlier prohibition on URLs. Electronic correspondence uses descriptive linked words; printed letters show full URLs.",
+    "unit": "phrase",
+    "violation_condition": "An email or electronic letter displays a raw URL or non-descriptive link wording, or a printed letter refers to a link without spelling out its full URL."
+   },
+   "when": [
+    "The correspondence contains links.",
+    "Emails and electronic letters use descriptive linked words or phrases rather than displayed URLs.",
+    "Printed letters spell out the full URL so the recipient can type it."
+   ],
+   "why": "G-2: print and electronic delivery change the required representation of the same link."
+  },
+  {
+   "anchor": {
+    "block_id": "9b166306bc69",
+    "end": 44,
+    "prefix": "",
+    "quote": "Never use an emoji in formal correspondence.",
+    "start": 0,
+    "suffix": " Use emojis only when you’re sur"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "9b166306bc69",
+     "end": 98,
+     "prefix": "emoji in formal correspondence. ",
+     "quote": "Use emojis only when you’re sure they are appropriate",
+     "start": 45,
+     "suffix": ", and don’t rely on them for mea"
+    }
+   ],
+   "examples": [],
+   "n": 23,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "The categorical prohibition applies to formal correspondence. Outside formal correspondence, assess contextual appropriateness rather than imposing a universal emoji ban.",
+    "unit": "document",
+    "violation_condition": "Formal correspondence contains an emoji, or informal correspondence uses an emoji inappropriate to its context."
+   },
+   "when": [
+    "The text is an email or letter.",
+    "Formal correspondence prohibits emojis.",
+    "In other correspondence, use an emoji only when it is appropriate."
+   ],
+   "why": "G-2: formality and appropriateness are conditions on the same emoji-use check."
+  },
+  {
+   "anchor": {
+    "block_id": "9b166306bc69",
+    "end": 135,
+    "prefix": " sure they are appropriate, and ",
+    "quote": "don’t rely on them for meaning.",
+    "start": 104,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 24,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD_NOT",
+    "specification": "Treat reliance as losing essential information when the emoji is removed. Decorative reinforcement of information already expressed in words is not reliance.",
+    "unit": "sentence",
+    "violation_condition": "An emoji carries essential information that is not also expressed in words."
+   },
+   "when": [
+    "An email or letter contains an emoji."
+   ],
+   "why": "G-1: reliance on an emoji for meaning is distinct from whether its use is appropriate."
+  },
+  {
+   "anchor": {
+    "block_id": "1281ca8a0afd",
+    "end": 102,
+    "prefix": "",
+    "quote": "Every email should include a signature block with information about the sender and their organisation.",
+    "start": 0,
+    "suffix": " This could be you or the person"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "8eb45f883cd8",
+     "end": 28,
+     "prefix": "",
+     "quote": "Include your signature block",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "1281ca8a0afd",
+     "end": 169,
+     "prefix": " sender and their organisation. ",
+     "quote": "This could be you or the person or team responsible for the email.",
+     "start": 103,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 25,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "email"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An email lacks a signature block identifying its sender and organisation."
+   },
+   "when": [
+    "The sender may be an individual, another person on whose behalf the email is sent, or a responsible team.",
+    "The agency may specify additional signature details; the following list is not a universal requirement for every listed field."
+   ],
+   "why": "G-4: the body clarifies the heading’s scope and required identifying information."
+  },
+  {
+   "anchor": {
+    "block_id": "fc98e4fef0ea",
+    "end": 83,
+    "prefix": "",
+    "quote": "In a letter, when appropriate, add the details of a contact person if there is one.",
+    "start": 0,
+    "suffix": " Never include someone’s contact"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 26,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define when a contact person is appropriate. Establish that trigger before generating automatic findings.",
+    "unit": "document",
+    "violation_condition": "A letter omits the details of an available contact person in circumstances where including a contact person is appropriate."
+   },
+   "when": [
+    "The text is a letter.",
+    "A contact person exists and including their details is appropriate."
+   ],
+   "why": "G-2: retain both limiting conditions rather than requiring contact-person details in every letter."
+  },
+  {
+   "anchor": {
+    "block_id": "fc98e4fef0ea",
+    "end": 151,
+    "prefix": "contact person if there is one. ",
+    "quote": "Never include someone’s contact details if you haven’t asked first.",
+    "start": 84,
+    "suffix": ""
+   },
+   "clarity_suggestion": "not_automatable",
+   "covers": [],
+   "examples": [],
+   "n": 27,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "Whether the person was asked must be supplied externally; the letter alone cannot establish it. Do not replace the stated requirement to ask first with an invented consent test.",
+    "unit": "phrase",
+    "violation_condition": "A letter includes another person’s contact details although that person was not asked first."
+   },
+   "when": [
+    "Someone’s contact details are included in a letter."
+   ],
+   "why": "G-1: the prohibition on including unapproved contact details is distinct from the conditional requirement to provide a contact person."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 7363,
+  "output_tokens": 20903,
+  "reasoning_tokens": 9171
+ }
+}

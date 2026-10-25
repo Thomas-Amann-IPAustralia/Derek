@@ -1,0 +1,2723 @@
+{
+ "effort": "high",
+ "input_sha256": "079c4653d16702da3753a8c41274037bb25c6e280c9604a30ef669e0d15d675c",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "40e336269cd0",
+    "end": 107,
+    "prefix": "official place names correctly. ",
+    "quote": "Follow style rules so people recognise names for other public places.",
+    "start": 38,
+    "suffix": " Use standard shortened forms in"
+   },
+   "note": "Introductory summary of the concrete naming and capitalisation rules below, not an additional finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "40e336269cd0",
+    "end": 150,
+    "prefix": " names for other public places. ",
+    "quote": "Use standard shortened forms in addresses.",
+    "start": 108,
+    "suffix": ""
+   },
+   "note": "Absorbed into the address shortened-form rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6def6eca3039",
+    "end": 51,
+    "prefix": "",
+    "quote": "Check official place names and style them correctly",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups spelling, capitalisation, punctuation and dual-name guidance; do not add a broad overlapping check.",
+   "reason": "section",
+   "seed_uid": "74fe531a19974932"
+  },
+  {
+   "anchor": {
+    "block_id": "7b151cd34786",
+    "end": 161,
+    "prefix": "s all communicate more clearly. ",
+    "quote": "You can check the spelling of a place name using the Australian Place Names dataset.",
+    "start": 77,
+    "suffix": ""
+   },
+   "note": "G-5: gives a verification method rather than a separate property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "944aa3aa512d",
+    "end": 74,
+    "prefix": "",
+    "quote": "If still unsure, contact the relevant state or territory naming authority.",
+    "start": 0,
+    "suffix": " You can click on the government"
+   },
+   "note": "G-5: an action for the writer, not a textual violation.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "944aa3aa512d",
+    "end": 152,
+    "prefix": " or territory naming authority. ",
+    "quote": "You can click on the government logos in the search results from the dataset.",
+    "start": 75,
+    "suffix": " They will take you to the juris"
+   },
+   "note": "Navigation advice for using the dataset.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c36889602803",
+    "end": 249,
+    "prefix": "re are also many that have not. ",
+    "quote": "Consult directly with relevant communities about conventions for naming and spelling in specific First Nations languages.",
+    "start": 128,
+    "suffix": ""
+   },
+   "note": "G-5: consultation is a writer's process; the text alone cannot establish whether it occurred.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "84821f0d5a5d",
+    "end": 27,
+    "prefix": "",
+    "quote": "Spelling and capitalisation",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: a topic heading; the actionable spelling and capitalisation statements are marked instead.",
+   "reason": "section",
+   "seed_uid": "0fcef57040f8fef4"
+  },
+  {
+   "anchor": {
+    "block_id": "690a0cc820bd",
+    "end": 27,
+    "prefix": "",
+    "quote": "don’t use diacritical marks",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Absorbed into the standard-alphabet check rather than creating another finding on the same accented letter.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "19a7cb158601",
+    "end": 18,
+    "prefix": "",
+    "quote": "are not possessive",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Consolidated with the prohibition on unauthorised punctuation within names.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5c23a65a3c23",
+    "end": 36,
+    "prefix": "",
+    "quote": "loses any accent marks or diacritics",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Repeats the diacritic restriction for names adopted from other languages.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d41ace34c027",
+    "end": 20,
+    "prefix": "",
+    "quote": "adds capitalisation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The adopted-name case is included in the proper-name capitalisation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "91e904c8b854",
+    "end": 11,
+    "prefix": "",
+    "quote": "Punctuation",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups official-name punctuation exceptions and the separate dual-name checks.",
+   "reason": "section",
+   "seed_uid": "402b87ec60d8dec6"
+  },
+  {
+   "anchor": {
+    "block_id": "24e0c27d5e83",
+    "end": 144,
+    "prefix": "",
+    "quote": "Hyphens and apostrophes can be part of an official name. They appear if they were part of the name of the person commemorated by the place name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: an exception to the general punctuation restriction, recorded on that rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "232db81a9cac",
+    "end": 93,
+    "prefix": "",
+    "quote": "Words that don’t usually need an initial capital have one when they are part of a place name.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the proper-name capitalisation requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "37f59f43fee6",
+    "end": 81,
+    "prefix": "",
+    "quote": "The names of roads, streets and other thoroughfares also take an initial capital.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The thoroughfare case is included in the same proper-name capitalisation check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2f4ac99a87f3",
+    "end": 82,
+    "prefix": "",
+    "quote": "Write the names of buildings, structures and public places with an initial capital",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: absorbed into the proper-name capitalisation rule rather than duplicating it for public places.",
+   "reason": "restatement",
+   "seed_uid": "8d890da36fbb72a8"
+  },
+  {
+   "anchor": {
+    "block_id": "3a7e2f86a33e",
+    "end": 71,
+    "prefix": "",
+    "quote": "Names of buildings, structures and public places have initial capitals.",
+    "start": 0,
+    "suffix": " Write generic and plural terms "
+   },
+   "note": "Repeats the capitalisation requirement already consolidated into one check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "30dbef3cfe85",
+    "end": 57,
+    "prefix": "",
+    "quote": "Use initial capitals for the names of private properties.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Private-property names are another case of the same proper-name capitalisation requirement.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1a2e74afad32",
+    "end": 56,
+    "prefix": "",
+    "quote": "Shorten names for states and territories in 4 situations",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body makes these four situations permissions, not requirements to shorten; they qualify the full-name rule.",
+   "reason": "permission",
+   "seed_uid": "47b0cdd288700dbd"
+  },
+  {
+   "anchor": {
+    "block_id": "307564e0be40",
+    "end": 33,
+    "prefix": "",
+    "quote": "You can use shortened forms when:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: the four following cases are exceptions on the formal-content full-name rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "728eea2da235",
+    "end": 48,
+    "prefix": "",
+    "quote": "Don’t use a full stop after the shortened forms.",
+    "start": 0,
+    "suffix": " This rule applies to the initia"
+   },
+   "note": "Consolidated into the punctuation check, with its state-and-territory scope retained.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a189a5fe3ab2",
+    "end": 88,
+    "prefix": "",
+    "quote": "States and territories are generally listed in an order when more than one is mentioned.",
+    "start": 0,
+    "suffix": " For example:"
+   },
+   "note": "Introduces the contextual-ordering instruction; it does not mandate either of the example orders.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ea6c2dc85462",
+    "end": 53,
+    "prefix": "",
+    "quote": "Other orders might be more suitable for some content.",
+    "start": 0,
+    "suffix": " For example, content might incl"
+   },
+   "note": "Allows alternatives to the example orders; retained as a condition of the contextual-ordering rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/australian-place-names.md",
+ "page_sha256": "6d845ba1721b11fedcb6bcee2cc3d41110a46df27a10f56799c99129a144f660",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "40e336269cd0",
+    "note": "Introductory summary of the concrete naming and capitalisation rules below, not an additional finding.",
+    "quote": "Follow style rules so people recognise names for other public places.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "40e336269cd0",
+    "note": "Absorbed into the address shortened-form rule.",
+    "quote": "Use standard shortened forms in addresses.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6def6eca3039",
+    "note": "G-1: groups spelling, capitalisation, punctuation and dual-name guidance; do not add a broad overlapping check.",
+    "quote": "Check official place names and style them correctly",
+    "reason": "section"
+   },
+   {
+    "block_id": "7b151cd34786",
+    "note": "G-5: gives a verification method rather than a separate property of the text.",
+    "quote": "You can check the spelling of a place name using the Australian Place Names dataset.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "944aa3aa512d",
+    "note": "G-5: an action for the writer, not a textual violation.",
+    "quote": "If still unsure, contact the relevant state or territory naming authority.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "944aa3aa512d",
+    "note": "Navigation advice for using the dataset.",
+    "quote": "You can click on the government logos in the search results from the dataset.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "c36889602803",
+    "note": "G-5: consultation is a writer's process; the text alone cannot establish whether it occurred.",
+    "quote": "Consult directly with relevant communities about conventions for naming and spelling in specific First Nations languages.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "84821f0d5a5d",
+    "note": "G-1: a topic heading; the actionable spelling and capitalisation statements are marked instead.",
+    "quote": "Spelling and capitalisation",
+    "reason": "section"
+   },
+   {
+    "block_id": "690a0cc820bd",
+    "note": "Absorbed into the standard-alphabet check rather than creating another finding on the same accented letter.",
+    "quote": "don’t use diacritical marks",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "19a7cb158601",
+    "note": "Consolidated with the prohibition on unauthorised punctuation within names.",
+    "quote": "are not possessive",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "5c23a65a3c23",
+    "note": "Repeats the diacritic restriction for names adopted from other languages.",
+    "quote": "loses any accent marks or diacritics",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d41ace34c027",
+    "note": "The adopted-name case is included in the proper-name capitalisation check.",
+    "quote": "adds capitalisation.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "91e904c8b854",
+    "note": "G-1: groups official-name punctuation exceptions and the separate dual-name checks.",
+    "quote": "Punctuation",
+    "reason": "section"
+   },
+   {
+    "block_id": "24e0c27d5e83",
+    "note": "G-3: an exception to the general punctuation restriction, recorded on that rule.",
+    "quote": "Hyphens and apostrophes can be part of an official name. They appear if they were part of the name of the person commemorated by the place name.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "232db81a9cac",
+    "note": "Explains the proper-name capitalisation requirement.",
+    "quote": "Words that don’t usually need an initial capital have one when they are part of a place name.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "37f59f43fee6",
+    "note": "The thoroughfare case is included in the same proper-name capitalisation check.",
+    "quote": "The names of roads, streets and other thoroughfares also take an initial capital.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "2f4ac99a87f3",
+    "note": "G-2 and G-4: absorbed into the proper-name capitalisation rule rather than duplicating it for public places.",
+    "quote": "Write the names of buildings, structures and public places with an initial capital",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3a7e2f86a33e",
+    "note": "Repeats the capitalisation requirement already consolidated into one check.",
+    "quote": "Names of buildings, structures and public places have initial capitals.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "30dbef3cfe85",
+    "note": "Private-property names are another case of the same proper-name capitalisation requirement.",
+    "quote": "Use initial capitals for the names of private properties.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "1a2e74afad32",
+    "note": "The body makes these four situations permissions, not requirements to shorten; they qualify the full-name rule.",
+    "quote": "Shorten names for states and territories in 4 situations",
+    "reason": "permission"
+   },
+   {
+    "block_id": "307564e0be40",
+    "note": "G-3: the four following cases are exceptions on the formal-content full-name rule.",
+    "quote": "You can use shortened forms when:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "728eea2da235",
+    "note": "Consolidated into the punctuation check, with its state-and-territory scope retained.",
+    "quote": "Don’t use a full stop after the shortened forms.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a189a5fe3ab2",
+    "note": "Introduces the contextual-ordering instruction; it does not mandate either of the example orders.",
+    "quote": "States and territories are generally listed in an order when more than one is mentioned.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ea6c2dc85462",
+    "note": "Allows alternatives to the example orders; retained as a condition of the contextual-ordering rule.",
+    "quote": "Other orders might be more suitable for some content.",
+    "reason": "permission"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "40e336269cd0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "41607b75ab9e",
+      "quote": "Australian place names are proper nouns, written using standard Australian English."
+     },
+     {
+      "block_id": "8f3d4aa207fd",
+      "quote": "Because of this reality, there may appear to be exceptions to the general rules given in this guide."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Spell official place names correctly.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An official Australian place name has the wrong lexical spelling or omits a hyphen or apostrophe belonging to its official spelling. Differences solely in capitalisation, diacritics, added punctuation or dual-name presentation belong to the more specific checks.",
+    "when": [
+     "Use the official registered spelling, including established spellings that appear to depart from the general conventions.",
+     "This requirement concerns official names, not every name in a First Nations naming system.",
+     "Apply the address-specific presentation rules where they require a different postal presentation."
+    ],
+    "why": "G-4 retains the explicit spelling instruction; G-1 avoids using it as an umbrella that duplicates the specific style checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "6495c5ccaa3a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "690a0cc820bd",
+      "quote": "don’t use diacritical marks"
+     },
+     {
+      "block_id": "5c23a65a3c23",
+      "quote": "loses any accent marks or diacritics"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "use a standard 26 character alphabet",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A letter in an official Australian place name is outside the standard unaccented 26-letter alphabet, including a letter carrying an accent or other diacritical mark.",
+    "when": [
+     "Applies to official Australian place names, including names adopted from other languages.",
+     "The alphabet restriction concerns letters, not spaces or expressly permitted punctuation.",
+     "Respect established official spellings that are exceptions to the general conventions."
+    ],
+    "why": "G-2 and G-4 combine the alphabet restriction and its repeated diacritic case into one allowed-letter check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9ad27ab50e07",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "19a7cb158601",
+      "quote": "are not possessive"
+     },
+     {
+      "block_id": "24e0c27d5e83",
+      "quote": "Hyphens and apostrophes can be part of an official name. They appear if they were part of the name of the person commemorated by the place name."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "don’t generally have punctuation.",
+    "specification": "Use the registered name to resolve exceptions to ‘generally’. Treat the prohibition on possessives as a convention about the name itself, not a prohibition on grammatical possessives in surrounding prose.",
+    "unit": "phrase",
+    "violation_condition": "Punctuation is added within an official Australian place name without an official basis, including an apostrophe that incorrectly makes the name possessive.",
+    "when": [
+     "Hyphens and apostrophes may belong to an official name when inherited from the name of the person commemorated.",
+     "Do not remove punctuation belonging to the official spelling.",
+     "Separators between the parts of an official dual name are assessed under the dual-name separator rule.",
+     "Punctuation belonging to the surrounding sentence is not punctuation within the name."
+    ],
+    "why": "G-2 consolidates possessive punctuation with the general punctuation check; G-3 records inherited punctuation as an exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "20cfa3e8c555",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8a1f2f7f3070",
+        "quote": "Kata Tjuta / Mount Olga"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "47aba6a74bef",
+        "quote": "Karlu Karlu / Devils Marbles"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7dd99b3f3a37",
+        "quote": "Kunanyi / Mount Wellington"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When writing official dual names, use a spaced forward slash to separate the 2 parts of the name.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The two parts of an official dual place name are not separated by a forward slash with a space on each side.",
+    "when": [
+     "Applies when writing both parts of an official dual place name."
+    ],
+    "why": "G-1 and E-2 anchor this check to the instruction immediately above the dual-name examples, not the broad punctuation heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "20cfa3e8c555",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8a1f2f7f3070",
+        "quote": "Kata Tjuta / Mount Olga"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "47aba6a74bef",
+        "quote": "Karlu Karlu / Devils Marbles"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7dd99b3f3a37",
+        "quote": "Kunanyi / Mount Wellington"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The order should be as written in the official name, which you can check in the Australian Place Names dataset.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The two parts of an official dual place name appear in a different order from the registered official name.",
+    "when": [
+     "Applies when writing both parts of an official dual place name."
+    ],
+    "why": "The grain test separates incorrect name order from an incorrect separator because they are distinct findings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1e3e045e15b2",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d41ace34c027",
+      "quote": "adds capitalisation."
+     },
+     {
+      "block_id": "232db81a9cac",
+      "quote": "Words that don’t usually need an initial capital have one when they are part of a place name."
+     },
+     {
+      "block_id": "37f59f43fee6",
+      "quote": "The names of roads, streets and other thoroughfares also take an initial capital."
+     },
+     {
+      "block_id": "2f4ac99a87f3",
+      "quote": "Write the names of buildings, structures and public places with an initial capital"
+     },
+     {
+      "block_id": "3a7e2f86a33e",
+      "quote": "Names of buildings, structures and public places have initial capitals."
+     },
+     {
+      "block_id": "30dbef3cfe85",
+      "quote": "Use initial capitals for the names of private properties."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f956f6221718",
+        "quote": "D’Entrecasteaux"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b70034733c53",
+        "quote": "d’Entrecasteaux"
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3a78b886fac8",
+        "quote": "the Adelaide Hills"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "46bad6088d47",
+        "quote": "the North Shore"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bd963b684fb1",
+        "quote": "the Western District"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "acadf12c03bd",
+        "quote": "George Street"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "034b1b83f513",
+        "quote": "Wickham Terrace"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "87bc8698a83e",
+        "quote": "Monaro Highway"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fa0dc55a3ea8",
+        "quote": "St Paul’s Cathedral is close to Melbourne’s Federation Square. The cathedral ..."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1a209408ca40",
+        "quote": "The Iron Cove and Gladesville bridges are both in Sydney."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "43051188ac6e",
+        "quote": "Thargomindah Station"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9de4eda75891",
+        "quote": "Myocum Downs"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e431c94ac158",
+        "quote": "Tocal Homestead"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use capitals for names of places, roads and streets",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A word forming part of a proper place, road, street, thoroughfare, building, structure, public-place or private-property name lacks its required initial capital.",
+    "when": [
+     "Includes words that would normally be lower case but form part of the proper name.",
+     "Includes official Australian names adopted from other languages.",
+     "Follow the capitalisation of an established official name where it is an exception to the general convention.",
+     "Generic references and shared plural terms are assessed under the lower-case rule."
+    ],
+    "why": "G-2 and G-4 consolidate the repeated proper-name capitalisation requirement across the named categories."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3a7e2f86a33e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fa0dc55a3ea8",
+        "quote": "St Paul’s Cathedral is close to Melbourne’s Federation Square. The cathedral ..."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1a209408ca40",
+        "quote": "The Iron Cove and Gladesville bridges are both in Sydney."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Write generic and plural terms in lower case.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic reference or shared plural descriptor for buildings, structures or public places is capitalised as though it were part of a proper name.",
+    "when": [
+     "Applies to generic references rather than the proper name itself.",
+     "Includes shared plural descriptors following multiple names, such as a plural term for two named bridges.",
+     "Does not require lower case for a plural word that is itself part of an established proper name."
+    ],
+    "why": "The grain test distinguishes an unwanted capital on a generic term from a missing capital in a proper name."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2e6c56c8b215",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "40e336269cd0",
+      "quote": "Use standard shortened forms in addresses."
+     }
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3639af248ff2",
+        "quote": "10 Bendemeer Blvd"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5b42be2aad7c",
+        "quote": "PO Box 1"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5a415c9b7946",
+        "quote": "RMB 99"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "965065d78b5b",
+        "quote": "11 Banks Av"
+       },
+       {
+        "block_id": "7279e48bcb34",
+        "quote": "WAGGA WAGGA NSW 2650"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use shortened forms for addresses",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A conventional address term is written in full where its standard shortened form is expected, or an address uses a non-standard shortening.",
+    "when": [
+     "Applies to address terms with established shortened forms, not arbitrary shortening of place names.",
+     "For mail sent overseas, spell names out in full instead."
+    ],
+    "why": "G-4 merges the introductory instruction with its specific heading; G-3 records overseas mail as the exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "23ae5dd6c3cf",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "23ae5dd6c3cf",
+      "quote": "Addresses usually have abbreviations and contractions."
+     },
+     {
+      "block_id": "96da34fbf918",
+      "quote": "without punctuation"
+     },
+     {
+      "block_id": "728eea2da235",
+      "quote": "Don’t use a full stop after the shortened forms."
+     },
+     {
+      "block_id": "728eea2da235",
+      "quote": "This rule applies to the initialisms (NSW, WA, ACT and NT), abbreviations (Vic and Tas) and the contraction (Qld)."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3639af248ff2",
+        "quote": "10 Bendemeer Blvd"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5b42be2aad7c",
+        "quote": "PO Box 1"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5a415c9b7946",
+        "quote": "RMB 99"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "965065d78b5b",
+        "quote": "11 Banks Av"
+       },
+       {
+        "block_id": "7279e48bcb34",
+        "quote": "WAGGA WAGGA NSW 2650"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "439b67c1565b",
+        "quote": "The WA Government has reopened the Eyre Highway."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not add punctuation marks to these.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Punctuation is added to an address abbreviation or contraction, a full stop follows a shortened Australian state or territory name, or punctuation appears in the final delivery line of a letter address.",
+    "when": [
+     "Address abbreviations and contractions do not take added punctuation.",
+     "The final delivery line of an Australian letter address is punctuation-free.",
+     "Outside addresses, the stated restriction on shortened state and territory names is a trailing full stop.",
+     "The state and territory restriction covers initialisms, abbreviations and contractions."
+    ],
+    "why": "G-2 combines the punctuation prohibition's contexts so a punctuated state abbreviation in an address is not flagged repeatedly for the same reason."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "96da34fbf918",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "965065d78b5b",
+        "quote": "11 Banks Av"
+       },
+       {
+        "block_id": "7279e48bcb34",
+        "quote": "WAGGA WAGGA NSW 2650"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "write the last line in capitals",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The final delivery line of an Australian letter address contains lower-case letters.",
+    "when": [
+     "Applies to the letter-address line containing the delivery place or post office, state or territory and postcode."
+    ],
+    "why": "The grain test separates last-line capitalisation from punctuation, underlining, content and postcode position."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "96da34fbf918",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "965065d78b5b",
+        "quote": "11 Banks Av"
+       },
+       {
+        "block_id": "7279e48bcb34",
+        "quote": "WAGGA WAGGA NSW 2650"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "without punctuation or underlining",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Text in the final delivery line of an Australian letter address is underlined.",
+    "when": [
+     "Applies to the letter-address line containing the delivery place or post office, state or territory and postcode.",
+     "This check concerns underlining; punctuation is covered by the consolidated punctuation rule."
+    ],
+    "why": "The grain test retains underlining as a distinct, independently detectable text-formatting violation."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "96da34fbf918",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "965065d78b5b",
+        "quote": "11 Banks Av"
+       },
+       {
+        "block_id": "7279e48bcb34",
+        "quote": "WAGGA WAGGA NSW 2650"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "with the postcode last.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A postcode appears before other content in the final delivery line of an Australian letter address rather than at its end.",
+    "when": [
+     "Applies to the letter-address line containing the delivery place or post office, state or territory and postcode.",
+     "A missing postcode is assessed under the required-components rule."
+    ],
+    "why": "The grain test separates an incorrectly positioned postcode from a missing address component."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "96da34fbf918",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "965065d78b5b",
+        "quote": "11 Banks Av"
+       },
+       {
+        "block_id": "7279e48bcb34",
+        "quote": "WAGGA WAGGA NSW 2650"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The last line should contain the place name or post office of delivery, state or territory abbreviation and postcode.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The final delivery line of an Australian letter address is missing the delivery place or post office, the state or territory abbreviation, or the postcode.",
+    "when": [
+     "Applies to Australian domestic letter addresses.",
+     "Either a place name or a post office of delivery satisfies the delivery-place component."
+    ],
+    "why": "G-2 keeps the alternative delivery-place forms within one required-components check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b0e4364695cd",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "If you are sending mail overseas, spell out all names in the address in full to avoid confusion.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An address for mail being sent overseas contains an abbreviated or contracted name instead of its full form.",
+    "when": [
+     "Applies when sending mail overseas.",
+     "Overrides the general use of shortened forms in addresses."
+    ],
+    "why": "G-2 treats overseas delivery as the trigger; the explicit full-name requirement can produce a finding, unlike a mere permission."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d44a182784d9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1a2e74afad32",
+      "quote": "Shorten names for states and territories in 4 situations"
+     },
+     {
+      "block_id": "307564e0be40",
+      "quote": "You can use shortened forms when:"
+     },
+     {
+      "block_id": "c1acce486faf",
+      "quote": "the name is used as an adjective"
+     },
+     {
+      "block_id": "2350059a2f62",
+      "quote": "space is limited"
+     },
+     {
+      "block_id": "0114a32b09ae",
+      "quote": "the full name would result in repetition"
+     },
+     {
+      "block_id": "35e4896f2b16",
+      "quote": "you are writing an address."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "439b67c1565b",
+        "quote": "The WA Government has reopened the Eyre Highway."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Spell out the names of Australian states and territories in formal content.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Formal content uses a shortened Australian state or territory name outside the four permitted circumstances.",
+    "when": [
+     "Applies to formal content.",
+     "Shortened forms are permitted when the name is used as an adjective.",
+     "Shortened forms are permitted when space is limited.",
+     "Shortened forms are permitted when the full name would result in repetition.",
+     "Shortened forms are permitted in an address, subject to the overseas-mail requirement to spell names out."
+    ],
+    "why": "G-2 and G-3 make the four shortening permissions exceptions to the full-name rule, not four separate rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "ea6c2dc85462",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "a189a5fe3ab2",
+      "quote": "States and territories are generally listed in an order when more than one is mentioned."
+     },
+     {
+      "block_id": "9105e2a45fed",
+      "quote": "in alphabetical order (ACT to WA)"
+     },
+     {
+      "block_id": "2fd475871871",
+      "quote": "by population size (NSW to NT)."
+     },
+     {
+      "block_id": "ea6c2dc85462",
+      "quote": "Other orders might be more suitable for some content."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0e4fd468d257",
+        "quote": "NSW"
+       },
+       {
+        "block_id": "7ab320545293",
+        "quote": "Vic"
+       },
+       {
+        "block_id": "a4613fc01e62",
+        "quote": "Qld"
+       },
+       {
+        "block_id": "21b03fdcb785",
+        "quote": "WA"
+       },
+       {
+        "block_id": "0b0f5c21dd8b",
+        "quote": "SA"
+       },
+       {
+        "block_id": "b7379f7ca00b",
+        "quote": "Tas"
+       },
+       {
+        "block_id": "04763883e7f9",
+        "quote": "ACT"
+       },
+       {
+        "block_id": "24f4fe1a77b7",
+        "quote": "NT"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the order that fits with context and helps people understand your content.",
+    "specification": "Only flag a demonstrable mismatch with a stated or clearly implied ordering criterion. Do not impose alphabetical or population order as a default: the page permits other contextually meaningful orders.",
+    "unit": "block",
+    "violation_condition": "A listing of multiple Australian states or territories uses an order that demonstrably conflicts with the ordering criterion stated or clearly implied by its context.",
+    "when": [
+     "Applies when more than one state or territory is listed.",
+     "Alphabetical order and population order are examples, not the only permitted orders.",
+     "Other orders, such as rainfall or enrolled-voter totals, can be appropriate."
+    ],
+    "why": "G-2 keeps alternative ordering criteria together; E-4 makes the chosen conservative interpretation explicit rather than inventing a mandatory sort order."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "40e336269cd0",
+    "end": 37,
+    "prefix": "",
+    "quote": "Spell official place names correctly.",
+    "start": 0,
+    "suffix": " Follow style rules so people re"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "41607b75ab9e",
+     "end": 83,
+     "prefix": "",
+     "quote": "Australian place names are proper nouns, written using standard Australian English.",
+     "start": 0,
+     "suffix": " Place names:"
+    },
+    {
+     "block_id": "8f3d4aa207fd",
+     "end": 166,
+     "prefix": "ious points throughout history. ",
+     "quote": "Because of this reality, there may appear to be exceptions to the general rules given in this guide.",
+     "start": 66,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "An official Australian place name has the wrong lexical spelling or omits a hyphen or apostrophe belonging to its official spelling. Differences solely in capitalisation, diacritics, added punctuation or dual-name presentation belong to the more specific checks."
+   },
+   "when": [
+    "Use the official registered spelling, including established spellings that appear to depart from the general conventions.",
+    "This requirement concerns official names, not every name in a First Nations naming system.",
+    "Apply the address-specific presentation rules where they require a different postal presentation."
+   ],
+   "why": "G-4 retains the explicit spelling instruction; G-1 avoids using it as an umbrella that duplicates the specific style checks."
+  },
+  {
+   "anchor": {
+    "block_id": "6495c5ccaa3a",
+    "end": 36,
+    "prefix": "",
+    "quote": "use a standard 26 character alphabet",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "690a0cc820bd",
+     "end": 27,
+     "prefix": "",
+     "quote": "don’t use diacritical marks",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5c23a65a3c23",
+     "end": 36,
+     "prefix": "",
+     "quote": "loses any accent marks or diacritics",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A letter in an official Australian place name is outside the standard unaccented 26-letter alphabet, including a letter carrying an accent or other diacritical mark."
+   },
+   "when": [
+    "Applies to official Australian place names, including names adopted from other languages.",
+    "The alphabet restriction concerns letters, not spaces or expressly permitted punctuation.",
+    "Respect established official spellings that are exceptions to the general conventions."
+   ],
+   "why": "G-2 and G-4 combine the alphabet restriction and its repeated diacritic case into one allowed-letter check."
+  },
+  {
+   "anchor": {
+    "block_id": "9ad27ab50e07",
+    "end": 33,
+    "prefix": "",
+    "quote": "don’t generally have punctuation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "19a7cb158601",
+     "end": 18,
+     "prefix": "",
+     "quote": "are not possessive",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "24e0c27d5e83",
+     "end": 144,
+     "prefix": "",
+     "quote": "Hyphens and apostrophes can be part of an official name. They appear if they were part of the name of the person commemorated by the place name.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Use the registered name to resolve exceptions to ‘generally’. Treat the prohibition on possessives as a convention about the name itself, not a prohibition on grammatical possessives in surrounding prose.",
+    "unit": "phrase",
+    "violation_condition": "Punctuation is added within an official Australian place name without an official basis, including an apostrophe that incorrectly makes the name possessive."
+   },
+   "when": [
+    "Hyphens and apostrophes may belong to an official name when inherited from the name of the person commemorated.",
+    "Do not remove punctuation belonging to the official spelling.",
+    "Separators between the parts of an official dual name are assessed under the dual-name separator rule.",
+    "Punctuation belonging to the surrounding sentence is not punctuation within the name."
+   ],
+   "why": "G-2 consolidates possessive punctuation with the general punctuation check; G-3 records inherited punctuation as an exception."
+  },
+  {
+   "anchor": {
+    "block_id": "20cfa3e8c555",
+    "end": 97,
+    "prefix": "",
+    "quote": "When writing official dual names, use a spaced forward slash to separate the 2 parts of the name.",
+    "start": 0,
+    "suffix": " The order should be as written "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8a1f2f7f3070",
+       "end": 23,
+       "prefix": "",
+       "quote": "Kata Tjuta / Mount Olga",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "47aba6a74bef",
+       "end": 28,
+       "prefix": "",
+       "quote": "Karlu Karlu / Devils Marbles",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7dd99b3f3a37",
+       "end": 26,
+       "prefix": "",
+       "quote": "Kunanyi / Mount Wellington",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The two parts of an official dual place name are not separated by a forward slash with a space on each side."
+   },
+   "when": [
+    "Applies when writing both parts of an official dual place name."
+   ],
+   "why": "G-1 and E-2 anchor this check to the instruction immediately above the dual-name examples, not the broad punctuation heading."
+  },
+  {
+   "anchor": {
+    "block_id": "20cfa3e8c555",
+    "end": 209,
+    "prefix": "parate the 2 parts of the name. ",
+    "quote": "The order should be as written in the official name, which you can check in the Australian Place Names dataset.",
+    "start": 98,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8a1f2f7f3070",
+       "end": 23,
+       "prefix": "",
+       "quote": "Kata Tjuta / Mount Olga",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "47aba6a74bef",
+       "end": 28,
+       "prefix": "",
+       "quote": "Karlu Karlu / Devils Marbles",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7dd99b3f3a37",
+       "end": 26,
+       "prefix": "",
+       "quote": "Kunanyi / Mount Wellington",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "The two parts of an official dual place name appear in a different order from the registered official name."
+   },
+   "when": [
+    "Applies when writing both parts of an official dual place name."
+   ],
+   "why": "The grain test separates incorrect name order from an incorrect separator because they are distinct findings."
+  },
+  {
+   "anchor": {
+    "block_id": "1e3e045e15b2",
+    "end": 51,
+    "prefix": "",
+    "quote": "Use capitals for names of places, roads and streets",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d41ace34c027",
+     "end": 20,
+     "prefix": "",
+     "quote": "adds capitalisation.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "232db81a9cac",
+     "end": 93,
+     "prefix": "",
+     "quote": "Words that don’t usually need an initial capital have one when they are part of a place name.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "37f59f43fee6",
+     "end": 81,
+     "prefix": "",
+     "quote": "The names of roads, streets and other thoroughfares also take an initial capital.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2f4ac99a87f3",
+     "end": 82,
+     "prefix": "",
+     "quote": "Write the names of buildings, structures and public places with an initial capital",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3a7e2f86a33e",
+     "end": 71,
+     "prefix": "",
+     "quote": "Names of buildings, structures and public places have initial capitals.",
+     "start": 0,
+     "suffix": " Write generic and plural terms "
+    },
+    {
+     "block_id": "30dbef3cfe85",
+     "end": 57,
+     "prefix": "",
+     "quote": "Use initial capitals for the names of private properties.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f956f6221718",
+       "end": 15,
+       "prefix": "",
+       "quote": "D’Entrecasteaux",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b70034733c53",
+       "end": 15,
+       "prefix": "",
+       "quote": "d’Entrecasteaux",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3a78b886fac8",
+       "end": 18,
+       "prefix": "",
+       "quote": "the Adelaide Hills",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "46bad6088d47",
+       "end": 15,
+       "prefix": "",
+       "quote": "the North Shore",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bd963b684fb1",
+       "end": 20,
+       "prefix": "",
+       "quote": "the Western District",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "acadf12c03bd",
+       "end": 13,
+       "prefix": "",
+       "quote": "George Street",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "034b1b83f513",
+       "end": 15,
+       "prefix": "",
+       "quote": "Wickham Terrace",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "87bc8698a83e",
+       "end": 14,
+       "prefix": "",
+       "quote": "Monaro Highway",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fa0dc55a3ea8",
+       "end": 80,
+       "prefix": "",
+       "quote": "St Paul’s Cathedral is close to Melbourne’s Federation Square. The cathedral ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1a209408ca40",
+       "end": 57,
+       "prefix": "",
+       "quote": "The Iron Cove and Gladesville bridges are both in Sydney.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "43051188ac6e",
+       "end": 20,
+       "prefix": "",
+       "quote": "Thargomindah Station",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9de4eda75891",
+       "end": 12,
+       "prefix": "",
+       "quote": "Myocum Downs",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e431c94ac158",
+       "end": 15,
+       "prefix": "",
+       "quote": "Tocal Homestead",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "dafc1a163509aecf",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A word forming part of a proper place, road, street, thoroughfare, building, structure, public-place or private-property name lacks its required initial capital."
+   },
+   "when": [
+    "Includes words that would normally be lower case but form part of the proper name.",
+    "Includes official Australian names adopted from other languages.",
+    "Follow the capitalisation of an established official name where it is an exception to the general convention.",
+    "Generic references and shared plural terms are assessed under the lower-case rule."
+   ],
+   "why": "G-2 and G-4 consolidate the repeated proper-name capitalisation requirement across the named categories."
+  },
+  {
+   "anchor": {
+    "block_id": "3a7e2f86a33e",
+    "end": 117,
+    "prefix": "c places have initial capitals. ",
+    "quote": "Write generic and plural terms in lower case.",
+    "start": 72,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fa0dc55a3ea8",
+       "end": 80,
+       "prefix": "",
+       "quote": "St Paul’s Cathedral is close to Melbourne’s Federation Square. The cathedral ...",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1a209408ca40",
+       "end": 57,
+       "prefix": "",
+       "quote": "The Iron Cove and Gladesville bridges are both in Sydney.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A generic reference or shared plural descriptor for buildings, structures or public places is capitalised as though it were part of a proper name."
+   },
+   "when": [
+    "Applies to generic references rather than the proper name itself.",
+    "Includes shared plural descriptors following multiple names, such as a plural term for two named bridges.",
+    "Does not require lower case for a plural word that is itself part of an established proper name."
+   ],
+   "why": "The grain test distinguishes an unwanted capital on a generic term from a missing capital in a proper name."
+  },
+  {
+   "anchor": {
+    "block_id": "2e6c56c8b215",
+    "end": 33,
+    "prefix": "",
+    "quote": "Use shortened forms for addresses",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "40e336269cd0",
+     "end": 150,
+     "prefix": " names for other public places. ",
+     "quote": "Use standard shortened forms in addresses.",
+     "start": 108,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3639af248ff2",
+       "end": 17,
+       "prefix": "",
+       "quote": "10 Bendemeer Blvd",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5b42be2aad7c",
+       "end": 8,
+       "prefix": "",
+       "quote": "PO Box 1",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5a415c9b7946",
+       "end": 6,
+       "prefix": "",
+       "quote": "RMB 99",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "965065d78b5b",
+       "end": 11,
+       "prefix": "",
+       "quote": "11 Banks Av",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7279e48bcb34",
+       "end": 20,
+       "prefix": "",
+       "quote": "WAGGA WAGGA NSW 2650",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "8972b2764969c604",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "lookup",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A conventional address term is written in full where its standard shortened form is expected, or an address uses a non-standard shortening."
+   },
+   "when": [
+    "Applies to address terms with established shortened forms, not arbitrary shortening of place names.",
+    "For mail sent overseas, spell names out in full instead."
+   ],
+   "why": "G-4 merges the introductory instruction with its specific heading; G-3 records overseas mail as the exception."
+  },
+  {
+   "anchor": {
+    "block_id": "23ae5dd6c3cf",
+    "end": 93,
+    "prefix": "abbreviations and contractions. ",
+    "quote": "Do not add punctuation marks to these.",
+    "start": 55,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "23ae5dd6c3cf",
+     "end": 54,
+     "prefix": "",
+     "quote": "Addresses usually have abbreviations and contractions.",
+     "start": 0,
+     "suffix": " Do not add punctuation marks to"
+    },
+    {
+     "block_id": "96da34fbf918",
+     "end": 77,
+     "prefix": "write the last line in capitals ",
+     "quote": "without punctuation",
+     "start": 58,
+     "suffix": " or underlining, with the postco"
+    },
+    {
+     "block_id": "728eea2da235",
+     "end": 48,
+     "prefix": "",
+     "quote": "Don’t use a full stop after the shortened forms.",
+     "start": 0,
+     "suffix": " This rule applies to the initia"
+    },
+    {
+     "block_id": "728eea2da235",
+     "end": 163,
+     "prefix": "stop after the shortened forms. ",
+     "quote": "This rule applies to the initialisms (NSW, WA, ACT and NT), abbreviations (Vic and Tas) and the contraction (Qld).",
+     "start": 49,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3639af248ff2",
+       "end": 17,
+       "prefix": "",
+       "quote": "10 Bendemeer Blvd",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5b42be2aad7c",
+       "end": 8,
+       "prefix": "",
+       "quote": "PO Box 1",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5a415c9b7946",
+       "end": 6,
+       "prefix": "",
+       "quote": "RMB 99",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "965065d78b5b",
+       "end": 11,
+       "prefix": "",
+       "quote": "11 Banks Av",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7279e48bcb34",
+       "end": 20,
+       "prefix": "",
+       "quote": "WAGGA WAGGA NSW 2650",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "439b67c1565b",
+       "end": 48,
+       "prefix": "",
+       "quote": "The WA Government has reopened the Eyre Highway.",
+       "start": 0,
+       "suffix": " [‘WA’ is used as an adjective.]"
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Punctuation is added to an address abbreviation or contraction, a full stop follows a shortened Australian state or territory name, or punctuation appears in the final delivery line of a letter address."
+   },
+   "when": [
+    "Address abbreviations and contractions do not take added punctuation.",
+    "The final delivery line of an Australian letter address is punctuation-free.",
+    "Outside addresses, the stated restriction on shortened state and territory names is a trailing full stop.",
+    "The state and territory restriction covers initialisms, abbreviations and contractions."
+   ],
+   "why": "G-2 combines the punctuation prohibition's contexts so a punctuated state abbreviation in an address is not flagged repeatedly for the same reason."
+  },
+  {
+   "anchor": {
+    "block_id": "96da34fbf918",
+    "end": 57,
+    "prefix": "When addressing a letter, ",
+    "quote": "write the last line in capitals",
+    "start": 26,
+    "suffix": " without punctuation or underlin"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "965065d78b5b",
+       "end": 11,
+       "prefix": "",
+       "quote": "11 Banks Av",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7279e48bcb34",
+       "end": 20,
+       "prefix": "",
+       "quote": "WAGGA WAGGA NSW 2650",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The final delivery line of an Australian letter address contains lower-case letters."
+   },
+   "when": [
+    "Applies to the letter-address line containing the delivery place or post office, state or territory and postcode."
+   ],
+   "why": "The grain test separates last-line capitalisation from punctuation, underlining, content and postcode position."
+  },
+  {
+   "anchor": {
+    "block_id": "96da34fbf918",
+    "end": 92,
+    "prefix": "write the last line in capitals ",
+    "quote": "without punctuation or underlining",
+    "start": 58,
+    "suffix": ", with the postcode last. The la"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "965065d78b5b",
+       "end": 11,
+       "prefix": "",
+       "quote": "11 Banks Av",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7279e48bcb34",
+       "end": 20,
+       "prefix": "",
+       "quote": "WAGGA WAGGA NSW 2650",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Text in the final delivery line of an Australian letter address is underlined."
+   },
+   "when": [
+    "Applies to the letter-address line containing the delivery place or post office, state or territory and postcode.",
+    "This check concerns underlining; punctuation is covered by the consolidated punctuation rule."
+   ],
+   "why": "The grain test retains underlining as a distinct, independently detectable text-formatting violation."
+  },
+  {
+   "anchor": {
+    "block_id": "96da34fbf918",
+    "end": 117,
+    "prefix": "out punctuation or underlining, ",
+    "quote": "with the postcode last.",
+    "start": 94,
+    "suffix": " The last line should contain th"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "965065d78b5b",
+       "end": 11,
+       "prefix": "",
+       "quote": "11 Banks Av",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7279e48bcb34",
+       "end": 20,
+       "prefix": "",
+       "quote": "WAGGA WAGGA NSW 2650",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A postcode appears before other content in the final delivery line of an Australian letter address rather than at its end."
+   },
+   "when": [
+    "Applies to the letter-address line containing the delivery place or post office, state or territory and postcode.",
+    "A missing postcode is assessed under the required-components rule."
+   ],
+   "why": "The grain test separates an incorrectly positioned postcode from a missing address component."
+  },
+  {
+   "anchor": {
+    "block_id": "96da34fbf918",
+    "end": 235,
+    "prefix": "lining, with the postcode last. ",
+    "quote": "The last line should contain the place name or post office of delivery, state or territory abbreviation and postcode.",
+    "start": 118,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "965065d78b5b",
+       "end": 11,
+       "prefix": "",
+       "quote": "11 Banks Av",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7279e48bcb34",
+       "end": 20,
+       "prefix": "",
+       "quote": "WAGGA WAGGA NSW 2650",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "The final delivery line of an Australian letter address is missing the delivery place or post office, the state or territory abbreviation, or the postcode."
+   },
+   "when": [
+    "Applies to Australian domestic letter addresses.",
+    "Either a place name or a post office of delivery satisfies the delivery-place component."
+   ],
+   "why": "G-2 keeps the alternative delivery-place forms within one required-components check."
+  },
+  {
+   "anchor": {
+    "block_id": "b0e4364695cd",
+    "end": 96,
+    "prefix": "",
+    "quote": "If you are sending mail overseas, spell out all names in the address in full to avoid confusion.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An address for mail being sent overseas contains an abbreviated or contracted name instead of its full form."
+   },
+   "when": [
+    "Applies when sending mail overseas.",
+    "Overrides the general use of shortened forms in addresses."
+   ],
+   "why": "G-2 treats overseas delivery as the trigger; the explicit full-name requirement can produce a finding, unlike a mere permission."
+  },
+  {
+   "anchor": {
+    "block_id": "d44a182784d9",
+    "end": 75,
+    "prefix": "",
+    "quote": "Spell out the names of Australian states and territories in formal content.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1a2e74afad32",
+     "end": 56,
+     "prefix": "",
+     "quote": "Shorten names for states and territories in 4 situations",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "307564e0be40",
+     "end": 33,
+     "prefix": "",
+     "quote": "You can use shortened forms when:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c1acce486faf",
+     "end": 32,
+     "prefix": "",
+     "quote": "the name is used as an adjective",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2350059a2f62",
+     "end": 16,
+     "prefix": "",
+     "quote": "space is limited",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "0114a32b09ae",
+     "end": 40,
+     "prefix": "",
+     "quote": "the full name would result in repetition",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "35e4896f2b16",
+     "end": 27,
+     "prefix": "",
+     "quote": "you are writing an address.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "439b67c1565b",
+       "end": 48,
+       "prefix": "",
+       "quote": "The WA Government has reopened the Eyre Highway.",
+       "start": 0,
+       "suffix": " [‘WA’ is used as an adjective.]"
+      }
+     ]
+    }
+   ],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Formal content uses a shortened Australian state or territory name outside the four permitted circumstances."
+   },
+   "when": [
+    "Applies to formal content.",
+    "Shortened forms are permitted when the name is used as an adjective.",
+    "Shortened forms are permitted when space is limited.",
+    "Shortened forms are permitted when the full name would result in repetition.",
+    "Shortened forms are permitted in an address, subject to the overseas-mail requirement to spell names out."
+   ],
+   "why": "G-2 and G-3 make the four shortening permissions exceptions to the full-name rule, not four separate rules."
+  },
+  {
+   "anchor": {
+    "block_id": "ea6c2dc85462",
+    "end": 263,
+    "prefix": "l or number of enrolled voters. ",
+    "quote": "Use the order that fits with context and helps people understand your content.",
+    "start": 185,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "a189a5fe3ab2",
+     "end": 88,
+     "prefix": "",
+     "quote": "States and territories are generally listed in an order when more than one is mentioned.",
+     "start": 0,
+     "suffix": " For example:"
+    },
+    {
+     "block_id": "9105e2a45fed",
+     "end": 33,
+     "prefix": "",
+     "quote": "in alphabetical order (ACT to WA)",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2fd475871871",
+     "end": 31,
+     "prefix": "",
+     "quote": "by population size (NSW to NT).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ea6c2dc85462",
+     "end": 53,
+     "prefix": "",
+     "quote": "Other orders might be more suitable for some content.",
+     "start": 0,
+     "suffix": " For example, content might incl"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0e4fd468d257",
+       "end": 3,
+       "prefix": "",
+       "quote": "NSW",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7ab320545293",
+       "end": 3,
+       "prefix": "",
+       "quote": "Vic",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a4613fc01e62",
+       "end": 3,
+       "prefix": "",
+       "quote": "Qld",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "21b03fdcb785",
+       "end": 2,
+       "prefix": "",
+       "quote": "WA",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "0b0f5c21dd8b",
+       "end": 2,
+       "prefix": "",
+       "quote": "SA",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "b7379f7ca00b",
+       "end": 3,
+       "prefix": "",
+       "quote": "Tas",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "04763883e7f9",
+       "end": 3,
+       "prefix": "",
+       "quote": "ACT",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "24f4fe1a77b7",
+       "end": 2,
+       "prefix": "",
+       "quote": "NT",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Only flag a demonstrable mismatch with a stated or clearly implied ordering criterion. Do not impose alphabetical or population order as a default: the page permits other contextually meaningful orders.",
+    "unit": "block",
+    "violation_condition": "A listing of multiple Australian states or territories uses an order that demonstrably conflicts with the ordering criterion stated or clearly implied by its context."
+   },
+   "when": [
+    "Applies when more than one state or territory is listed.",
+    "Alphabetical order and population order are examples, not the only permitted orders.",
+    "Other orders, such as rainfall or enrolled-voter totals, can be appropriate."
+   ],
+   "why": "G-2 keeps alternative ordering criteria together; E-4 makes the chosen conservative interpretation explicit rather than inventing a mandatory sort order."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5607,
+  "output_tokens": 21439,
+  "reasoning_tokens": 12948
+ }
+}

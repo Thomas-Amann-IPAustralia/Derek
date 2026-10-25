@@ -1,0 +1,1072 @@
+{
+ "effort": "high",
+ "input_sha256": "a27a8a70c736e9d4ae70634ca241e57f08d01f1c7127b347b829346a2ed4ff36",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "5ba1ad36eeff",
+    "end": 53,
+    "prefix": "",
+    "quote": "Write and design content that matches how users read.",
+    "start": 0,
+    "suffix": " Use short sentences and simple "
+   },
+   "note": "Page-level introduction to the specific writing and design guidance, not an additional finding for every failure below.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5ba1ad36eeff",
+    "end": 95,
+    "prefix": "nt that matches how users read. ",
+    "quote": "Use short sentences and simple structure.",
+    "start": 54,
+    "suffix": ""
+   },
+   "note": "The two components are covered by the specific sentence-length and section-heading checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "fca31635eb4b",
+    "end": 96,
+    "prefix": "",
+    "quote": "To create usable content, take into account how people read and what makes content easy to read.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: asks writers to consider reading behaviour; it does not identify a separate textual violation.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "75b95d830762",
+    "end": 32,
+    "prefix": "",
+    "quote": "You can increase usability with:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces factors affecting usability, not a separate check for each listed factor.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "820da804f9dd",
+    "end": 131,
+    "prefix": "",
+    "quote": "You must understand the needs of all users of your service and create content they can access to meet the Digital Service Standard:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: states a user-research and service-compliance duty rather than a determinate additional property of the text. The concrete accessibility instructions are considered separately.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1d7687fa607f",
+    "end": 69,
+    "prefix": "",
+    "quote": "To help people understand the type of content, use a clear structure.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the more specific instruction to organise content using section headings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c19a3f249792",
+    "end": 115,
+    "prefix": "",
+    "quote": "Make sure users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "start": 0,
+    "suffix": " Use the same navigation element"
+   },
+   "note": "Concerns navigation and technology-dependent access order, rather than a rule about the words themselves.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c19a3f249792",
+    "end": 168,
+    "prefix": "f the technology they're using. ",
+    "quote": "Use the same navigation elements across the service.",
+    "start": 116,
+    "suffix": ""
+   },
+   "note": "Requires consistency of service navigation elements; it does not specifically prescribe navigation wording.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cca78c85d7f9",
+    "end": 46,
+    "prefix": "",
+    "quote": "Don’t rely on colour alone to structure pages.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Concerns visual page presentation and colour-dependent structure.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bd55c2be17e9",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write in plain language.",
+    "start": 0,
+    "suffix": " This helps all users and is ess"
+   },
+   "note": "Introduces the specific reading-level, unusual-expression, acronym and double-negative checks; do not add a second generic finding for the same text.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "93fcc4971adc",
+    "end": 41,
+    "prefix": "",
+    "quote": "Rhythm changes can help or hinder reading",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: the candidate heading groups the discussions of sentence length, paragraphs, line breaks and variations in rhythm. It does not itself instruct a check.",
+   "reason": "section",
+   "seed_uid": "dc095794778650b3"
+  },
+  {
+   "anchor": {
+    "block_id": "1c0527b6c67f",
+    "end": 38,
+    "prefix": "",
+    "quote": "Help people build reading rhythm with:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces the following discussion of short sentences, paragraphs and line breaks; it supplies no additional threshold or independent check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b14a8621a41d",
+    "end": 165,
+    "prefix": " need to support comprehension. ",
+    "quote": "For example, you can use a change of rhythm for emphasis: to make a point or draw the reader's attention to a certain word.",
+    "start": 42,
+    "suffix": ""
+   },
+   "note": "G-3: recorded as a permitted use under the comprehension rule, not an independent requirement to vary rhythm.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6b53dd64eaa2",
+    "end": 26,
+    "prefix": "",
+    "quote": "You can vary rhythm using:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: introduces possible techniques, not requirements to use them or prohibitions on them.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "7859a0a9cf8e",
+    "end": 76,
+    "prefix": "",
+    "quote": "Use capital letters appropriately to help people understand written English.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a general exhortation to follow appropriate capitalisation, with no specific casing convention to test. Do not turn the preceding demonstration into an unstated blanket ban on capitals.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "accessible-and-inclusive-content/how-people-read.md",
+ "page_sha256": "b240694888797d17b079bbeda4ba53514681427b2dd05697cddb49708a0b4d3d",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "5ba1ad36eeff",
+    "note": "Page-level introduction to the specific writing and design guidance, not an additional finding for every failure below.",
+    "quote": "Write and design content that matches how users read.",
+    "reason": "section"
+   },
+   {
+    "block_id": "5ba1ad36eeff",
+    "note": "The two components are covered by the specific sentence-length and section-heading checks.",
+    "quote": "Use short sentences and simple structure.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "fca31635eb4b",
+    "note": "G-5: asks writers to consider reading behaviour; it does not identify a separate textual violation.",
+    "quote": "To create usable content, take into account how people read and what makes content easy to read.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "75b95d830762",
+    "note": "Introduces factors affecting usability, not a separate check for each listed factor.",
+    "quote": "You can increase usability with:",
+    "reason": "description"
+   },
+   {
+    "block_id": "820da804f9dd",
+    "note": "G-5: states a user-research and service-compliance duty rather than a determinate additional property of the text. The concrete accessibility instructions are considered separately.",
+    "quote": "You must understand the needs of all users of your service and create content they can access to meet the Digital Service Standard:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "1d7687fa607f",
+    "note": "G-4: absorbed into the more specific instruction to organise content using section headings.",
+    "quote": "To help people understand the type of content, use a clear structure.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c19a3f249792",
+    "note": "Concerns navigation and technology-dependent access order, rather than a rule about the words themselves.",
+    "quote": "Make sure users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "c19a3f249792",
+    "note": "Requires consistency of service navigation elements; it does not specifically prescribe navigation wording.",
+    "quote": "Use the same navigation elements across the service.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "cca78c85d7f9",
+    "note": "Concerns visual page presentation and colour-dependent structure.",
+    "quote": "Don’t rely on colour alone to structure pages.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "bd55c2be17e9",
+    "note": "Introduces the specific reading-level, unusual-expression, acronym and double-negative checks; do not add a second generic finding for the same text.",
+    "quote": "Write in plain language.",
+    "reason": "section"
+   },
+   {
+    "block_id": "93fcc4971adc",
+    "note": "G-1: the candidate heading groups the discussions of sentence length, paragraphs, line breaks and variations in rhythm. It does not itself instruct a check.",
+    "quote": "Rhythm changes can help or hinder reading",
+    "reason": "section"
+   },
+   {
+    "block_id": "1c0527b6c67f",
+    "note": "Introduces the following discussion of short sentences, paragraphs and line breaks; it supplies no additional threshold or independent check.",
+    "quote": "Help people build reading rhythm with:",
+    "reason": "section"
+   },
+   {
+    "block_id": "b14a8621a41d",
+    "note": "G-3: recorded as a permitted use under the comprehension rule, not an independent requirement to vary rhythm.",
+    "quote": "For example, you can use a change of rhythm for emphasis: to make a point or draw the reader's attention to a certain word.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6b53dd64eaa2",
+    "note": "G-3: introduces possible techniques, not requirements to use them or prohibitions on them.",
+    "quote": "You can vary rhythm using:",
+    "reason": "permission"
+   },
+   {
+    "block_id": "7859a0a9cf8e",
+    "note": "G-5: a general exhortation to follow appropriate capitalisation, with no specific casing convention to test. Do not turn the preceding demonstration into an unstated blanket ban on capitals.",
+    "quote": "Use capital letters appropriately to help people understand written English.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "e9ebe5a93aa5",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Structure the page to make the most useful content stand out.",
+    "specification": "The page does not define how to identify the most useful content or how much prominence it needs. These require an understanding of user needs and the page's presentation.",
+    "unit": "document",
+    "violation_condition": "The information most useful to the page's users is buried or obscured by the page structure rather than made prominent.",
+    "when": [
+     "Applies to the discussion of structuring content for reading on screens."
+    ],
+    "why": "This is a distinct instruction about information prominence, not a general prohibition on particular layouts."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "9862b3b0807c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For this reason, present information in an accepted pattern such as:",
+    "specification": "The page illustrates accepted patterns with an address block and underlined hyperlinks. It supplies neither an exhaustive inventory of patterns nor exact address-format requirements; do not infer those requirements.",
+    "unit": "block",
+    "violation_condition": "Information that users scan for is presented in an unfamiliar arrangement rather than a recognisable conventional pattern.",
+    "when": [
+     "Applies to information users seek by scanning, such as an address or a link.",
+     "The listed patterns are examples, not a statement that every other presentation is wrong."
+    ],
+    "why": "G-2: the examples illustrate one conventional-presentation check, not separate universal requirements for every formatting detail."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "8f8f3ded3267",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write clear page titles.",
+    "specification": "Interpret clarity as communicating the page's subject or purpose. The page gives no title-length limit or prescribed wording.",
+    "unit": "document",
+    "violation_condition": "A page title is too vague or unclear to communicate the page's subject or purpose.",
+    "when": [],
+    "why": "Title clarity and alignment with the first heading can fail independently, so they are separate checks."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "8f8f3ded3267",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "This is the first thing a screen reader user will hear and should align with the first heading on the page.",
+    "specification": "‘This’ refers to the page title. Interpret alignment as consistency of subject and purpose, not a requirement for identical wording.",
+    "unit": "document",
+    "violation_condition": "The page title and the first heading communicate inconsistent subjects or purposes.",
+    "when": [],
+    "why": "G-4: retain the body sentence that states the title–heading relationship rather than treating it as another title-clarity instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e5c557513310",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "1d7687fa607f",
+      "quote": "To help people understand the type of content, use a clear structure."
+     },
+     {
+      "block_id": "5ba1ad36eeff",
+      "quote": "simple structure"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Organise content with a clear structure using section headings.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content has distinct sections but lacks section headings that expose its organisation.",
+    "when": [
+     "Applies to content organised into sections."
+    ],
+    "why": "G-1 and G-4: use the specific section-heading instruction rather than also flagging the broad clear-structure summaries."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e5c557513310",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Describe the topics or the following section in the heading.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not identify the topic or content of the section that follows it.",
+    "when": [],
+    "why": "A missing section heading and an existing but uninformative heading are different findings."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "60d87c38f102",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t rely on sensory characteristics such as shape, size, visual location, orientation or sound to explain things.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "An explanation depends on sensory characteristics to identify a referent or communicate an action, without sufficient non-sensory information.",
+    "when": [
+     "Assess whether the surrounding explanation supplies enough information without relying on the sensory characteristic."
+    ],
+    "why": "This constrains the wording of explanations, unlike the neighbouring instructions about navigation implementation and page colour."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "af9cd5ee6ff6",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles (year 7 or between 12 and 14 years old).",
+    "specification": "The target is lower secondary education, described as year 7 or ages 12–14. The page does not specify a reading-level assessment method.",
+    "unit": "document",
+    "violation_condition": "Content required to meet Level AAA exceeds a lower secondary education reading level after proper names and titles are removed.",
+    "when": [
+     "Applies when WCAG Level AAA conformance is required.",
+     "Remove proper names and titles before assessing the reading level."
+    ],
+    "why": "G-2: the conformance level and removal of names and titles are conditions on one reading-level check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d9c28830cab0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "specification": "What counts as unusual depends on the intended readers. The page supplies no vocabulary list or fixed test, and does not prescribe where explanations must appear.",
+    "unit": "document",
+    "violation_condition": "An unusual word, phrase or idiom appears without an explanation that makes it understandable to the intended readers.",
+    "when": [
+     "An unusual expression is permitted when it is explained."
+    ],
+    "why": "G-2 and G-3: avoidance and explanation are alternative ways to satisfy one check, not two rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d9c28830cab0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Expand all acronyms on their first use.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An acronym's first occurrence lacks its expansion.",
+    "when": [
+     "Check the first use of each acronym.",
+     "The page states no exception for familiar acronyms."
+    ],
+    "why": "First-use expansion is independently testable and is not merely another unusual-word finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4abb9859c4e8",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using double negatives",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains a double negative.",
+    "when": [],
+    "why": "Keep the specific double-negative check rather than duplicating it under a general plain-language rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7cdb9794dca9",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "5ba1ad36eeff",
+      "quote": "Use short sentences"
+     },
+     {
+      "block_id": "4fe20715eb11",
+      "quote": "short sentences"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "For most readers, aim for an average sentence length of 15 words per sentence.",
+    "specification": "Operationalise the aim as flagging a mean above 15 words, without flagging lower means. This upper-target interpretation is not an explicit hard limit in the manual.",
+    "unit": "document",
+    "violation_condition": "Content for most readers has a document-wide average sentence length above the 15-word target.",
+    "when": [
+     "Applies to content intended for most readers."
+    ],
+    "why": "G-4 consolidates the short-sentence summaries; E-4 requires the operational interpretation of ‘aim for’ to be explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7cdb9794dca9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Long sentences should have no more than 25 words.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An individual sentence contains more than 25 words.",
+    "when": [],
+    "why": "An individual sentence can exceed 25 words even when the document meets the average target, so these are separate checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "b14a8621a41d",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "b14a8621a41d",
+      "quote": "For example, you can use a change of rhythm for emphasis: to make a point or draw the reader's attention to a certain word."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Variations need to support comprehension.",
+    "specification": "The page gives no measurable test for whether a rhythm change supports comprehension. Do not infer a prohibition on headings, lists, punctuation, parenthetical information, capitals or italics merely because they can interrupt rhythm.",
+    "unit": "paragraph",
+    "violation_condition": "A variation in reading rhythm disrupts understanding rather than supporting comprehension.",
+    "when": [
+     "Applies to variations in reading rhythm.",
+     "Changes of rhythm for emphasis are permitted when they support comprehension.",
+     "Headings, lists, punctuation and parenthetical information are possible means of varying rhythm, not inherently violations."
+    ],
+    "why": "G-2 and G-3: keep one comprehension check with permitted uses, rather than turning every listed interruption into a prohibition."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "e9ebe5a93aa5",
+    "end": 292,
+    "prefix": "n to the left and to the right. ",
+    "quote": "Structure the page to make the most useful content stand out.",
+    "start": 231,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define how to identify the most useful content or how much prominence it needs. These require an understanding of user needs and the page's presentation.",
+    "unit": "document",
+    "violation_condition": "The information most useful to the page's users is buried or obscured by the page structure rather than made prominent."
+   },
+   "when": [
+    "Applies to the discussion of structuring content for reading on screens."
+   ],
+   "why": "This is a distinct instruction about information prominence, not a general prohibition on particular layouts."
+  },
+  {
+   "anchor": {
+    "block_id": "9862b3b0807c",
+    "end": 251,
+    "prefix": "c term, a number or an address. ",
+    "quote": "For this reason, present information in an accepted pattern such as:",
+    "start": 183,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page illustrates accepted patterns with an address block and underlined hyperlinks. It supplies neither an exhaustive inventory of patterns nor exact address-format requirements; do not infer those requirements.",
+    "unit": "block",
+    "violation_condition": "Information that users scan for is presented in an unfamiliar arrangement rather than a recognisable conventional pattern."
+   },
+   "when": [
+    "Applies to information users seek by scanning, such as an address or a link.",
+    "The listed patterns are examples, not a statement that every other presentation is wrong."
+   ],
+   "why": "G-2: the examples illustrate one conventional-presentation check, not separate universal requirements for every formatting detail."
+  },
+  {
+   "anchor": {
+    "block_id": "8f8f3ded3267",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write clear page titles.",
+    "start": 0,
+    "suffix": " This is the first thing a scree"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret clarity as communicating the page's subject or purpose. The page gives no title-length limit or prescribed wording.",
+    "unit": "document",
+    "violation_condition": "A page title is too vague or unclear to communicate the page's subject or purpose."
+   },
+   "when": [],
+   "why": "Title clarity and alignment with the first heading can fail independently, so they are separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "8f8f3ded3267",
+    "end": 132,
+    "prefix": "Write clear page titles. ",
+    "quote": "This is the first thing a screen reader user will hear and should align with the first heading on the page.",
+    "start": 25,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "‘This’ refers to the page title. Interpret alignment as consistency of subject and purpose, not a requirement for identical wording.",
+    "unit": "document",
+    "violation_condition": "The page title and the first heading communicate inconsistent subjects or purposes."
+   },
+   "when": [],
+   "why": "G-4: retain the body sentence that states the title–heading relationship rather than treating it as another title-clarity instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "e5c557513310",
+    "end": 63,
+    "prefix": "",
+    "quote": "Organise content with a clear structure using section headings.",
+    "start": 0,
+    "suffix": " Describe the topics or the foll"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "1d7687fa607f",
+     "end": 69,
+     "prefix": "",
+     "quote": "To help people understand the type of content, use a clear structure.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "5ba1ad36eeff",
+     "end": 94,
+     "prefix": "s read. Use short sentences and ",
+     "quote": "simple structure",
+     "start": 78,
+     "suffix": "."
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content has distinct sections but lacks section headings that expose its organisation."
+   },
+   "when": [
+    "Applies to content organised into sections."
+   ],
+   "why": "G-1 and G-4: use the specific section-heading instruction rather than also flagging the broad clear-structure summaries."
+  },
+  {
+   "anchor": {
+    "block_id": "e5c557513310",
+    "end": 124,
+    "prefix": "ructure using section headings. ",
+    "quote": "Describe the topics or the following section in the heading.",
+    "start": 64,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not identify the topic or content of the section that follows it."
+   },
+   "when": [],
+   "why": "A missing section heading and an existing but uninformative heading are different findings."
+  },
+  {
+   "anchor": {
+    "block_id": "60d87c38f102",
+    "end": 115,
+    "prefix": "",
+    "quote": "Don’t rely on sensory characteristics such as shape, size, visual location, orientation or sound to explain things.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "An explanation depends on sensory characteristics to identify a referent or communicate an action, without sufficient non-sensory information."
+   },
+   "when": [
+    "Assess whether the surrounding explanation supplies enough information without relying on the sensory characteristic."
+   ],
+   "why": "This constrains the wording of explanations, unlike the neighbouring instructions about navigation implementation and page colour."
+  },
+  {
+   "anchor": {
+    "block_id": "af9cd5ee6ff6",
+    "end": 143,
+    "prefix": "",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles (year 7 or between 12 and 14 years old).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "unsure",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "The target is lower secondary education, described as year 7 or ages 12–14. The page does not specify a reading-level assessment method.",
+    "unit": "document",
+    "violation_condition": "Content required to meet Level AAA exceeds a lower secondary education reading level after proper names and titles are removed."
+   },
+   "when": [
+    "Applies when WCAG Level AAA conformance is required.",
+    "Remove proper names and titles before assessing the reading level."
+   ],
+   "why": "G-2: the conformance level and removal of names and titles are conditions on one reading-level check."
+  },
+  {
+   "anchor": {
+    "block_id": "d9c28830cab0",
+    "end": 60,
+    "prefix": "",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "start": 0,
+    "suffix": " Expand all acronyms on their fi"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "What counts as unusual depends on the intended readers. The page supplies no vocabulary list or fixed test, and does not prescribe where explanations must appear.",
+    "unit": "document",
+    "violation_condition": "An unusual word, phrase or idiom appears without an explanation that makes it understandable to the intended readers."
+   },
+   "when": [
+    "An unusual expression is permitted when it is explained."
+   ],
+   "why": "G-2 and G-3: avoidance and explanation are alternative ways to satisfy one check, not two rules."
+  },
+  {
+   "anchor": {
+    "block_id": "d9c28830cab0",
+    "end": 100,
+    "prefix": "rds, phrases, idioms and so on. ",
+    "quote": "Expand all acronyms on their first use.",
+    "start": 61,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An acronym's first occurrence lacks its expansion."
+   },
+   "when": [
+    "Check the first use of each acronym.",
+    "The page states no exception for familiar acronyms."
+   ],
+   "why": "First-use expansion is independently testable and is not merely another unusual-word finding."
+  },
+  {
+   "anchor": {
+    "block_id": "4abb9859c4e8",
+    "end": 28,
+    "prefix": "",
+    "quote": "Avoid using double negatives",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains a double negative."
+   },
+   "when": [],
+   "why": "Keep the specific double-negative check rather than duplicating it under a general plain-language rule."
+  },
+  {
+   "anchor": {
+    "block_id": "7cdb9794dca9",
+    "end": 233,
+    "prefix": " a mixture of sentence lengths. ",
+    "quote": "For most readers, aim for an average sentence length of 15 words per sentence.",
+    "start": 155,
+    "suffix": " Long sentences should have no m"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "5ba1ad36eeff",
+     "end": 73,
+     "prefix": "nt that matches how users read. ",
+     "quote": "Use short sentences",
+     "start": 54,
+     "suffix": " and simple structure."
+    },
+    {
+     "block_id": "4fe20715eb11",
+     "end": 15,
+     "prefix": "",
+     "quote": "short sentences",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Operationalise the aim as flagging a mean above 15 words, without flagging lower means. This upper-target interpretation is not an explicit hard limit in the manual.",
+    "unit": "document",
+    "violation_condition": "Content for most readers has a document-wide average sentence length above the 15-word target."
+   },
+   "when": [
+    "Applies to content intended for most readers."
+   ],
+   "why": "G-4 consolidates the short-sentence summaries; E-4 requires the operational interpretation of ‘aim for’ to be explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "7cdb9794dca9",
+    "end": 283,
+    "prefix": "ength of 15 words per sentence. ",
+    "quote": "Long sentences should have no more than 25 words.",
+    "start": 234,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An individual sentence contains more than 25 words."
+   },
+   "when": [],
+   "why": "An individual sentence can exceed 25 words even when the document meets the average target, so these are separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "b14a8621a41d",
+    "end": 41,
+    "prefix": "",
+    "quote": "Variations need to support comprehension.",
+    "start": 0,
+    "suffix": " For example, you can use a chan"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "b14a8621a41d",
+     "end": 165,
+     "prefix": " need to support comprehension. ",
+     "quote": "For example, you can use a change of rhythm for emphasis: to make a point or draw the reader's attention to a certain word.",
+     "start": 42,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page gives no measurable test for whether a rhythm change supports comprehension. Do not infer a prohibition on headings, lists, punctuation, parenthetical information, capitals or italics merely because they can interrupt rhythm.",
+    "unit": "paragraph",
+    "violation_condition": "A variation in reading rhythm disrupts understanding rather than supporting comprehension."
+   },
+   "when": [
+    "Applies to variations in reading rhythm.",
+    "Changes of rhythm for emphasis are permitted when they support comprehension.",
+    "Headings, lists, punctuation and parenthetical information are possible means of varying rhythm, not inherently violations."
+   ],
+   "why": "G-2 and G-3: keep one comprehension check with permitted uses, rather than turning every listed interruption into a prohibition."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5865,
+  "output_tokens": 13716,
+  "reasoning_tokens": 9724
+ }
+}
