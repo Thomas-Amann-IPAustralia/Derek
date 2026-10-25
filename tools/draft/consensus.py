@@ -647,7 +647,7 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
     tag_dec = {it["rid"]: d for it, d in decided.values() if it["kind"] == "tags"}
     single_dec = {it["rid"]: d for it, d in decided.values() if it["kind"] == "single"}
 
-    ops, used_parts, seen_anchor, refused = [], set(), set(), []
+    ops, used_parts, seen_anchor, refused, released = [], set(), set(), [], []
     page = load_page(rel)
     by_id = {b.id: b for b in page.blocks}
 
@@ -668,6 +668,12 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
         elif rule.get("single"):
             d = single_dec.get(rule["rid"], {}).get("decision", {})
             if not d.get("keep"):
+                if rule.get("seed_uid"):
+                    # It stood on a heading candidate, which _dropped_candidates
+                    # therefore never raised. Dropping the rule drops the
+                    # candidate, and the sweep must be told why (ADR-023).
+                    released.append({"uid": rule["seed_uid"],
+                                     "reason": single_dec[rule["rid"]].get("reason", "")})
                 continue
             by, note = BY_ADJUDICATOR, f"found by {rule['found_by'][0]} only; kept by " \
                                        f"the adjudicator: {single_dec[rule['rid']].get('reason', '')}"
@@ -676,6 +682,9 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
             if d.get("drop"):
                 # Both models agreed on it, but the adjudicator found it is not a
                 # rule after all, typically an anchor on an example label.
+                if rule.get("seed_uid"):
+                    released.append({"uid": rule["seed_uid"],
+                                     "reason": tag_dec[rule["rid"]].get("reason", "")})
                 continue
             by = BY_ADJUDICATOR
             note += f"; tags adjudicated: {tag_dec[rule['rid']].get('reason', '')}"
@@ -744,7 +753,7 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
                     span["group"] = group
                 ops.append(op(span, by))
 
-    dropped = list(plan.get("restated", []))
+    dropped = list(plan.get("restated", [])) + released
     for it, d in decided.values():
         if it["kind"] != "dropped":
             continue

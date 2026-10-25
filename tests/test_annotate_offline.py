@@ -184,7 +184,15 @@ def test_every_seeded_candidate_maps_to_a_block(built):
             total += 1
             if seed["block_id"] not in ids:
                 unmatched += 1
-    assert total > 700, total
+    # Every heading candidate not yet answered by a golden span is shipped. The
+    # count falls as spans replace candidates (consensus, ADR-027, swept most
+    # pages), so it is checked against the ledger rather than a fixed number.
+    from derek.corpus.eligibility import load_eligibility
+    eligibility = load_eligibility(REPO / "corpus" / "eligibility.yaml")
+    expected = sum(1 for r in load_ledger(REPO / "ledger" / "rules.jsonl").values()
+                   if r.derivation.method != "human_span"
+                   and eligibility.decide(r.source.page_path)[0])
+    assert total == expected and total > 0, (total, expected)
     assert unmatched == 0, unmatched
 
 

@@ -1,0 +1,1985 @@
+{
+ "effort": "high",
+ "input_sha256": "15bb34fcfb00095ed034244caf6bb9f6c206c56e1b5ba4f08d6876c5e7c774ea",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "d597ddbe2ebc",
+    "end": 116,
+    "prefix": "helps users absorb information. ",
+    "quote": "Organise them under headings to help users scan the content.",
+    "start": 56,
+    "suffix": " Write short paragraphs, each st"
+   },
+   "note": "Absorbed by the instruction to arrange paragraphs under brief, meaningful headings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d597ddbe2ebc",
+    "end": 202,
+    "prefix": "to help users scan the content. ",
+    "quote": "Write short paragraphs, each starting with a topic sentence or a transition sentence.",
+    "start": 117,
+    "suffix": ""
+   },
+   "note": "The paragraph-length and paragraph-opening rules are stated more specifically in the body.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "62a8e02dc97b",
+    "end": 197,
+    "prefix": "ntains only one topic or theme. ",
+    "quote": "Don’t introduce a new topic in the middle or at the end of a paragraph. Start a new paragraph instead.",
+    "start": 95,
+    "suffix": ""
+   },
+   "note": "These are consequences of limiting each paragraph to one topic, not additional checks.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4051bb9dea0b",
+    "end": 186,
+    "prefix": "p ideas covered in the content. ",
+    "quote": "Group sentences in these paragraphs by theme – for example, to help users understand how the content is structured.",
+    "start": 71,
+    "suffix": ""
+   },
+   "note": "The introduction and summary case is incorporated into the topic-unity rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bbefdae0d41a",
+    "end": 48,
+    "prefix": "",
+    "quote": "Order paragraphs in a logical sequence, such as:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Restates the paragraph-order heading; the following list supplies possible sequences.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "def48eee4499",
+    "end": 87,
+    "prefix": "",
+    "quote": "Use the first paragraph to make the purpose of your content easier to find in searches.",
+    "start": 0,
+    "suffix": " It should include a topic sente"
+   },
+   "note": "The first-paragraph rule captures the substantive requirement; search visibility explains its purpose.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "def48eee4499",
+    "end": 162,
+    "prefix": "ent easier to find in searches. ",
+    "quote": "It should include a topic sentence and summarise the following paragraphs.",
+    "start": 88,
+    "suffix": ""
+   },
+   "note": "Its two requirements are incorporated into the opening-sentence and first-paragraph summary rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "32edbcddd461",
+    "end": 139,
+    "prefix": "",
+    "quote": "You can use first paragraphs to improve long-form content, such as reports. First paragraphs can summarise the main points in each section.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a permitted application of first-paragraph summaries, not an independently violable requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6926ffdc09e7",
+    "end": 86,
+    "prefix": "",
+    "quote": "Copy and paste all the first paragraphs together to compile a summary of your content.",
+    "start": 0,
+    "suffix": " If you’re missing any main poin"
+   },
+   "note": "A suggested checking workflow, not a property of the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6926ffdc09e7",
+    "end": 160,
+    "prefix": "pile a summary of your content. ",
+    "quote": "If you’re missing any main points, rewrite some of your first paragraphs.",
+    "start": 87,
+    "suffix": ""
+   },
+   "note": "An editing step for checking the first-paragraph summary requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "770141e80341",
+    "end": 29,
+    "prefix": "",
+    "quote": "Structure each paragraph well",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Groups the more specific checks for openings, internal organisation, topic sentences, transitions and pronouns.",
+   "reason": "section",
+   "seed_uid": "6843bf169a7a7922"
+  },
+  {
+   "anchor": {
+    "block_id": "feabb986d683",
+    "end": 96,
+    "prefix": "",
+    "quote": "A paragraph’s concluding sentence usually summarises the topic or leads into the next paragraph.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Describes a usual concluding-sentence function without prescribing it for every paragraph.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "49bf668ed749",
+    "end": 49,
+    "prefix": "",
+    "quote": "Most paragraphs will begin with a topic sentence.",
+    "start": 0,
+    "suffix": " When users skim content, topic "
+   },
+   "note": "Describes the usual choice between the topic and transition openings already covered by the opening-sentence rule.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "816e808cbb46",
+    "end": 149,
+    "prefix": "pic sentence, use active voice. ",
+    "quote": "This approach makes the topic of the paragraph the grammatical subject of the topic sentence.",
+    "start": 56,
+    "suffix": ""
+   },
+   "note": "Used with the example gloss to interpret the topic-subject check; not an additional rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6db0df7feec8",
+    "end": 68,
+    "prefix": "",
+    "quote": "You can also choose to start a paragraph with a transition sentence.",
+    "start": 0,
+    "suffix": " The transition sentence include"
+   },
+   "note": "An allowed alternative within the paragraph-opening rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "2b9428a8a40b",
+    "end": 48,
+    "prefix": "",
+    "quote": "Be clear when using pronouns to start paragraphs",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body states the actionable requirement that the pronoun's referent already be clear.",
+   "reason": "restatement",
+   "seed_uid": "8f5963503d4291c8"
+  },
+  {
+   "anchor": {
+    "block_id": "a070ac4dbaf4",
+    "end": 50,
+    "prefix": "",
+    "quote": "Take care if you start a paragraph with a pronoun.",
+    "start": 0,
+    "suffix": " It should already be clear who "
+   },
+   "note": "The following sentence supplies the text property that can actually be checked.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a070ac4dbaf4",
+    "end": 226,
+    "prefix": "at the pronoun is referring to. ",
+    "quote": "If not, make sure to mention the noun in each paragraph before using the pronoun that substitutes the noun.",
+    "start": 119,
+    "suffix": ""
+   },
+   "note": "A conditional remedy within the pronoun-clarity rule, not a requirement to repeat every antecedent in every paragraph.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "137e1ef8a7a0",
+    "end": 60,
+    "prefix": "",
+    "quote": "Consider starting a new paragraph or using an itemised list.",
+    "start": 0,
+    "suffix": " Make sure the items relate to e"
+   },
+   "note": "Suggests alternative editing techniques rather than requiring a particular textual form.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a1fe3d8939f9",
+    "end": 48,
+    "prefix": "",
+    "quote": "A paragraph can be one sentence, but be careful.",
+    "start": 0,
+    "suffix": " Overusing single-sentence parag"
+   },
+   "note": "Recorded as a qualification of the paragraph-length guidance.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "209bcef989ac",
+    "end": 84,
+    "prefix": "",
+    "quote": "Use responsive design methods to make sure users can read the content on any device.",
+    "start": 0,
+    "suffix": " Short paragraphs are critical i"
+   },
+   "note": "Concerns responsive design and rendering rather than a property of the words.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "766a2689860c",
+    "end": 152,
+    "prefix": "nment services and information. ",
+    "quote": "Test your content on a mobile device first.",
+    "start": 109,
+    "suffix": ""
+   },
+   "note": "A testing activity, not a violation detectable in the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "dd0edbd55159",
+    "end": 49,
+    "prefix": "",
+    "quote": "Write clear sentences using a maximum of 25 words",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The body separately states the 25-word limit and the plain-language requirement.",
+   "reason": "restatement",
+   "seed_uid": "36177f83953891ef"
+  },
+  {
+   "anchor": {
+    "block_id": "4354d3549203",
+    "end": 86,
+    "prefix": "",
+    "quote": "Sentences in a paragraph develop the main idea from a topic or transition sentence by:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduces possible ways sentences develop an idea; it does not require every paragraph to use each listed method.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c8c320216ff1",
+    "end": 87,
+    "prefix": "",
+    "quote": "In complex content, you might need to use a paragraph or more for each of these points.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Allows development across multiple paragraphs without creating a separate requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "68ceadb46f8a",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write in plain language.",
+    "start": 0,
+    "suffix": " This helps all users and is ess"
+   },
+   "note": "Consolidated with the earlier instruction that all sentences should use plain language.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/paragraphs.md",
+ "page_sha256": "d171096ae21150e30465cd2532d5a597eaaf7f89f8b8bb2c2aeb468c9a78c3f9",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "d597ddbe2ebc",
+    "note": "Absorbed by the instruction to arrange paragraphs under brief, meaningful headings.",
+    "quote": "Organise them under headings to help users scan the content.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d597ddbe2ebc",
+    "note": "The paragraph-length and paragraph-opening rules are stated more specifically in the body.",
+    "quote": "Write short paragraphs, each starting with a topic sentence or a transition sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "62a8e02dc97b",
+    "note": "These are consequences of limiting each paragraph to one topic, not additional checks.",
+    "quote": "Don’t introduce a new topic in the middle or at the end of a paragraph. Start a new paragraph instead.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4051bb9dea0b",
+    "note": "The introduction and summary case is incorporated into the topic-unity rule.",
+    "quote": "Group sentences in these paragraphs by theme – for example, to help users understand how the content is structured.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bbefdae0d41a",
+    "note": "Restates the paragraph-order heading; the following list supplies possible sequences.",
+    "quote": "Order paragraphs in a logical sequence, such as:",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "def48eee4499",
+    "note": "The first-paragraph rule captures the substantive requirement; search visibility explains its purpose.",
+    "quote": "Use the first paragraph to make the purpose of your content easier to find in searches.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "def48eee4499",
+    "note": "Its two requirements are incorporated into the opening-sentence and first-paragraph summary rules.",
+    "quote": "It should include a topic sentence and summarise the following paragraphs.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "32edbcddd461",
+    "note": "Describes a permitted application of first-paragraph summaries, not an independently violable requirement.",
+    "quote": "You can use first paragraphs to improve long-form content, such as reports. First paragraphs can summarise the main points in each section.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "6926ffdc09e7",
+    "note": "A suggested checking workflow, not a property of the finished text.",
+    "quote": "Copy and paste all the first paragraphs together to compile a summary of your content.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6926ffdc09e7",
+    "note": "An editing step for checking the first-paragraph summary requirement.",
+    "quote": "If you’re missing any main points, rewrite some of your first paragraphs.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "770141e80341",
+    "note": "Groups the more specific checks for openings, internal organisation, topic sentences, transitions and pronouns.",
+    "quote": "Structure each paragraph well",
+    "reason": "section"
+   },
+   {
+    "block_id": "feabb986d683",
+    "note": "Describes a usual concluding-sentence function without prescribing it for every paragraph.",
+    "quote": "A paragraph’s concluding sentence usually summarises the topic or leads into the next paragraph.",
+    "reason": "description"
+   },
+   {
+    "block_id": "49bf668ed749",
+    "note": "Describes the usual choice between the topic and transition openings already covered by the opening-sentence rule.",
+    "quote": "Most paragraphs will begin with a topic sentence.",
+    "reason": "description"
+   },
+   {
+    "block_id": "816e808cbb46",
+    "note": "Used with the example gloss to interpret the topic-subject check; not an additional rule.",
+    "quote": "This approach makes the topic of the paragraph the grammatical subject of the topic sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "6db0df7feec8",
+    "note": "An allowed alternative within the paragraph-opening rule.",
+    "quote": "You can also choose to start a paragraph with a transition sentence.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "2b9428a8a40b",
+    "note": "The body states the actionable requirement that the pronoun's referent already be clear.",
+    "quote": "Be clear when using pronouns to start paragraphs",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a070ac4dbaf4",
+    "note": "The following sentence supplies the text property that can actually be checked.",
+    "quote": "Take care if you start a paragraph with a pronoun.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a070ac4dbaf4",
+    "note": "A conditional remedy within the pronoun-clarity rule, not a requirement to repeat every antecedent in every paragraph.",
+    "quote": "If not, make sure to mention the noun in each paragraph before using the pronoun that substitutes the noun.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "137e1ef8a7a0",
+    "note": "Suggests alternative editing techniques rather than requiring a particular textual form.",
+    "quote": "Consider starting a new paragraph or using an itemised list.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a1fe3d8939f9",
+    "note": "Recorded as a qualification of the paragraph-length guidance.",
+    "quote": "A paragraph can be one sentence, but be careful.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "209bcef989ac",
+    "note": "Concerns responsive design and rendering rather than a property of the words.",
+    "quote": "Use responsive design methods to make sure users can read the content on any device.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "766a2689860c",
+    "note": "A testing activity, not a violation detectable in the text.",
+    "quote": "Test your content on a mobile device first.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "dd0edbd55159",
+    "note": "The body separately states the 25-word limit and the plain-language requirement.",
+    "quote": "Write clear sentences using a maximum of 25 words",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "4354d3549203",
+    "note": "Introduces possible ways sentences develop an idea; it does not require every paragraph to use each listed method.",
+    "quote": "Sentences in a paragraph develop the main idea from a topic or transition sentence by:",
+    "reason": "description"
+   },
+   {
+    "block_id": "c8c320216ff1",
+    "note": "Allows development across multiple paragraphs without creating a separate requirement.",
+    "quote": "In complex content, you might need to use a paragraph or more for each of these points.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "68ceadb46f8a",
+    "note": "Consolidated with the earlier instruction that all sentences should use plain language.",
+    "quote": "Write in plain language.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7605229ba814",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "62a8e02dc97b",
+      "quote": "Don’t introduce a new topic in the middle or at the end of a paragraph. Start a new paragraph instead."
+     },
+     {
+      "block_id": "4051bb9dea0b",
+      "quote": "Group sentences in these paragraphs by theme – for example, to help users understand how the content is structured."
+     },
+     {
+      "block_id": "2e25b3a2ff5d",
+      "quote": "relate only to the topic"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Limit each paragraph to one topic",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph introduces a separate topic instead of keeping its sentences focused on one topic or theme.",
+    "when": [
+     "Introduction and summary paragraphs may recap several ideas, but their sentences should be grouped by theme."
+    ],
+    "why": "G-2 and G-4: thematic grouping in introductions and summaries qualifies the topic-unity check; repeated instructions are absorbed."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "aa580766f0bc",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "bbefdae0d41a",
+      "quote": "Order paragraphs in a logical sequence, such as:"
+     },
+     {
+      "block_id": "f1cf14be435e",
+      "quote": "steps in a transaction"
+     },
+     {
+      "block_id": "44cea1f16606",
+      "quote": "the order of importance"
+     },
+     {
+      "block_id": "51d847d6d032",
+      "quote": "cause then effect"
+     },
+     {
+      "block_id": "50639cf57b9a",
+      "quote": "problem then solution"
+     },
+     {
+      "block_id": "2fe6d08d9fe8",
+      "quote": "pros then cons."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Put paragraphs in the order that makes sense to the user",
+    "specification": "Assess the order against the user's task and the relationships between paragraphs. The listed sequences are alternatives, not a required universal order.",
+    "unit": "document",
+    "violation_condition": "Paragraphs occur in an order that makes the intended task, argument or sequence difficult to follow.",
+    "when": [
+     "Appropriate sequences include transaction steps, importance, cause then effect, problem then solution, and pros then cons."
+    ],
+    "why": "G-2 and G-4: the listed sequences are cases of one paragraph-ordering check, not separate rules."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "fcf6e3cba74c",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "d597ddbe2ebc",
+      "quote": "Organise them under headings to help users scan the content."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Arrange paragraphs under brief, meaningful headings.",
+    "specification": "Assess whether a heading identifies the grouped paragraphs' subject without unnecessary wording. The page supplies no numerical heading-length limit.",
+    "unit": "section",
+    "violation_condition": "Paragraphs are not organised under headings, or the headings do not concisely identify the content they cover.",
+    "when": [],
+    "why": "G-4: the body gives the actionable wording. Organisation under headings is a different check from paragraph order."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a346554f1f24",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "def48eee4499",
+      "quote": "Use the first paragraph to make the purpose of your content easier to find in searches."
+     },
+     {
+      "block_id": "def48eee4499",
+      "quote": "summarise the following paragraphs."
+     },
+     {
+      "block_id": "32edbcddd461",
+      "quote": "First paragraphs can summarise the main points in each section."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Expand on the heading in the first paragraph",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The first paragraph under a heading does not develop the heading or summarise the main content of the following paragraphs.",
+    "when": [
+     "The summary requirement concerns the paragraphs that follow under the heading.",
+     "This also applies to sections of long-form content such as reports."
+    ],
+    "why": "G-4 and G-5: consolidate the first-paragraph summary requirement without turning the suggested checking workflow into another rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5721dc82868f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d597ddbe2ebc",
+      "quote": "each starting with a topic sentence or a transition sentence."
+     },
+     {
+      "block_id": "def48eee4499",
+      "quote": "It should include a topic sentence"
+     },
+     {
+      "block_id": "5721dc82868f",
+      "quote": "A topic sentence tells people what the paragraph is about. A transition sentence explicitly connects the previous paragraph with the new."
+     },
+     {
+      "block_id": "6db0df7feec8",
+      "quote": "You can also choose to start a paragraph with a transition sentence."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "The transition connects the two paragraphs.",
+      "parts": [
+       {
+        "block_id": "1b163fc0e9e8",
+        "quote": "… In summary, an effective policy strategy understands public needs, the purpose of the strategy and the desired strategic outcome."
+       },
+       {
+        "block_id": "28cfb93d9384",
+        "quote": "To build on a robust policy strategy, it’s essential to evaluate and measure outcomes after implementation. Analyse performance metrics and gather user feedback regularly. And stay responsive: keep informed about societal trends and adapt where necessary …"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The first sentence in each paragraph should be a topic or transition sentence.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph begins with a sentence that neither identifies its topic nor explicitly connects it with the previous paragraph.",
+    "when": [
+     "A topic sentence tells readers what the paragraph is about.",
+     "A transition sentence explicitly connects the previous paragraph with the new paragraph.",
+     "The first paragraph under a heading should include a topic sentence."
+    ],
+    "why": "G-2 and G-4: topic and transition openings are alternatives within one opening-sentence check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "2e25b3a2ff5d",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Each paragraph should contain sentences that are arranged logically and relate only to the topic.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "The sentences within a paragraph occur in an illogical order that obscures the development of its idea.",
+    "when": [],
+    "why": "G-1: sentence order within a paragraph is distinct from paragraph order and topic unity; this item checks only sentence order."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "816e808cbb46",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "To write an effective topic sentence, use active voice.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A paragraph's topic sentence uses passive rather than active voice.",
+    "when": [
+     "Applies to topic sentences."
+    ],
+    "why": "G-1: active voice is a separate test from whether the grammatical subject matches the paragraph's topic."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c14b0a8f6d5d",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "816e808cbb46",
+      "quote": "This approach makes the topic of the paragraph the grammatical subject of the topic sentence."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The rapid response team is the grammatical subject of the topic sentence.",
+      "parts": [
+       {
+        "block_id": "8b4c7bf934e6",
+        "quote": "Our rapid response team began operating in 2019 as a result of the 2018 stakeholder survey. The survey showed it took too long to repair damage."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The paragraph is about the team, but its opening sentence foregrounds the survey.",
+      "parts": [
+       {
+        "block_id": "e5366b7599bb",
+        "quote": "A stakeholder survey in 2018 revealed dissatisfaction with the time taken to repair damage. Our rapid response team began operating in 2019."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "The grammatical subject of the topic sentence should be ‘the team’, not ‘the survey’.",
+    "specification": "Read the example-specific instruction together with the preceding explanation: the paragraph's topic should be the grammatical subject of its topic sentence. This is not a requirement to use the words ‘the team’ in other content.",
+    "unit": "paragraph",
+    "violation_condition": "The grammatical subject of a topic sentence foregrounds something other than the paragraph's topic.",
+    "when": [
+     "Applies to topic sentences, rather than transition sentences."
+    ],
+    "why": "G-1 and E-2: the labelled contrast tests the topic sentence's subject, not passive voice; keep the two checks distinct."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a070ac4dbaf4",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "2b9428a8a40b",
+      "quote": "Be clear when using pronouns to start paragraphs"
+     },
+     {
+      "block_id": "a070ac4dbaf4",
+      "quote": "If not, make sure to mention the noun in each paragraph before using the pronoun that substitutes the noun."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "The new paragraph names the appropriations.",
+      "parts": [
+       {
+        "block_id": "6a1e90b8a0a6",
+        "quote": "The initial amounts for appropriation in 2019–20 were up to:"
+       },
+       {
+        "block_id": "a7ddf3dcc96b",
+        "quote": "$295 million for ordinary annual services"
+       },
+       {
+        "block_id": "2e90e532feaa",
+        "quote": "$380 million for other annual services."
+       },
+       {
+        "block_id": "8364be8e8d0b",
+        "quote": "The appropriations increased in March 2020 to account for unforeseen expenditures in relation to COVID-19."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The paragraph-opening ‘These’ does not clearly specify what increased.",
+      "parts": [
+       {
+        "block_id": "44b1ac354755",
+        "quote": "The initial amounts for appropriation in 2019–20 were up to:"
+       },
+       {
+        "block_id": "67fe65563e90",
+        "quote": "$295 million for ordinary annual services"
+       },
+       {
+        "block_id": "12e2729d1991",
+        "quote": "$380 million for other annual services."
+       },
+       {
+        "block_id": "f3cea9293b3f",
+        "quote": "These increased in March 2020 to account for unforeseen expenditures in relation to COVID-19."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "It should already be clear who or what the pronoun is referring to.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph starts with a pronoun whose referent is unclear from the available context.",
+    "when": [
+     "Applies when a pronoun starts a paragraph.",
+     "A paragraph-opening pronoun is permitted when its referent is already clear.",
+     "Otherwise, name the noun in the paragraph before using the pronoun that substitutes for it."
+    ],
+    "why": "G-2, G-3 and G-4: clarity is the single check; repeating the noun is the remedy when the pronoun's referent is unclear."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "64244d3a52a3",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "d597ddbe2ebc",
+      "quote": "Write short paragraphs"
+     },
+     {
+      "block_id": "8d4aa153639d",
+      "quote": "Media releases and news articles have 1 or 2 sentences in a paragraph."
+     },
+     {
+      "block_id": "2950030302e5",
+      "quote": "Content designed for mobile screens has no more than 2 or 3 sentences in a paragraph."
+     },
+     {
+      "block_id": "3e6b743f5033",
+      "quote": "Reports (and other long-form content) usually have a limit of 6 sentences in a paragraph."
+     },
+     {
+      "block_id": "a1fe3d8939f9",
+      "quote": "A paragraph can be one sentence, but be careful. Overusing single-sentence paragraphs reduces their effectiveness and can disrupt the flow of content."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Keep most paragraphs to 2 or 3 sentences",
+    "specification": "Interpret ‘most’ as more than half of ordinary prose paragraphs having 2 or 3 sentences. Apply the stated content-specific guidance instead where relevant. A single one-sentence paragraph or an occasional longer report paragraph is not, by itself, a violation.",
+    "unit": "document",
+    "violation_condition": "The content does not follow the recommended paragraph-length profile for its type: ordinary prose is not mostly 2 or 3 sentences per paragraph, media or news paragraphs exceed 2 sentences, mobile paragraphs exceed 3, or long-form paragraphs routinely exceed 6.",
+    "when": [
+     "Media releases and news articles use 1 or 2 sentences per paragraph.",
+     "Content designed for mobile screens has no more than 3 sentences per paragraph.",
+     "Reports and other long-form content usually have a limit of 6 sentences per paragraph.",
+     "One-sentence paragraphs are permitted, but should not be overused."
+    ],
+    "why": "G-2, G-3 and E-4: paragraph length is one check with genre-specific cases and a single-sentence permission; the interpretation of ‘most’ is explicit."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "137e1ef8a7a0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Make sure the items relate to each other",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An itemised list contains items that do not share the relationship or topic established by the list.",
+    "when": [
+     "Applies to itemised lists, including lists used instead of a long paragraph."
+    ],
+    "why": "G-1: relatedness of list items and grammatical parallelism are separate properties that can fail independently."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "137e1ef8a7a0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "are grammatically parallel.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Items in an itemised list use incompatible grammatical structures rather than parallel forms.",
+    "when": [
+     "Applies to itemised lists, including lists used instead of a long paragraph."
+    ],
+    "why": "G-1: grammatical parallelism is a distinct check from whether list items relate to each other."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f9d294f710c9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "dd0edbd55159",
+      "quote": "Write clear sentences using a maximum of 25 words"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Even in technical documents, keep sentences to 25 words or less.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains more than 25 words.",
+    "when": [
+     "Technical documents are not exempt."
+    ],
+    "why": "G-4: the body states the numerical limit and expressly includes technical documents."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f9d294f710c9",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "68ceadb46f8a",
+      "quote": "Write in plain language."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "All sentences should use plain language.",
+    "specification": "Assess unnecessary complexity against the intended users and whether simpler wording would preserve the meaning. Sentence length alone does not decide this check.",
+    "unit": "sentence",
+    "violation_condition": "Sentences use unnecessarily complex or obscure language that makes their meaning difficult for the intended users to understand.",
+    "when": [
+     "Applies to technical content as well as other content."
+    ],
+    "why": "G-1 and G-4: plain language is distinct from the 25-word limit, and its repeated accessibility instruction is consolidated."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "47b3768453bf",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "specification": "Treat an expression as unusual relative to the intended users' likely vocabulary and cultural knowledge, rather than merely because it is infrequent in a general corpus.",
+    "unit": "document",
+    "violation_condition": "The text contains unusual words, phrases or idioms without an explanation that makes them understandable to its users.",
+    "when": [
+     "An unusual expression is permitted when it is explained."
+    ],
+    "why": "G-2 and G-3: avoiding an expression and explaining it are alternative ways to satisfy one accessibility check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "47b3768453bf",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Expand all acronyms on their first use.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An acronym first appears without its expanded form.",
+    "when": [
+     "Applies at the acronym's first use."
+    ],
+    "why": "G-1: first-use acronym expansion is a distinct, document-level check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "897f900cfe99",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using double negatives.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence expresses its meaning through a double negative.",
+    "when": [],
+    "why": "G-1: double negatives are a specific sentence-level check, not a restatement of the word limit."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "209df7e0c33b",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles, (year 7 or between 12 and 14 years old).",
+    "specification": "The page identifies Year 7 or ages 12–14 as the target but does not specify a readability formula or assessment method.",
+    "unit": "document",
+    "violation_condition": "Content subject to the stated Level AAA requirement exceeds a lower-secondary reading level after proper names and titles are excluded.",
+    "when": [
+     "Applies when WCAG success criterion 3.1.5 at Level AAA is required.",
+     "Exclude proper names and titles from the reading-level assessment."
+    ],
+    "why": "G-2: retain the explicit requirement with its Level AAA scope; do not impose that conformance level on every document."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "7605229ba814",
+    "end": 33,
+    "prefix": "",
+    "quote": "Limit each paragraph to one topic",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "62a8e02dc97b",
+     "end": 197,
+     "prefix": "ntains only one topic or theme. ",
+     "quote": "Don’t introduce a new topic in the middle or at the end of a paragraph. Start a new paragraph instead.",
+     "start": 95,
+     "suffix": ""
+    },
+    {
+     "block_id": "4051bb9dea0b",
+     "end": 186,
+     "prefix": "p ideas covered in the content. ",
+     "quote": "Group sentences in these paragraphs by theme – for example, to help users understand how the content is structured.",
+     "start": 71,
+     "suffix": ""
+    },
+    {
+     "block_id": "2e25b3a2ff5d",
+     "end": 96,
+     "prefix": "that are arranged logically and ",
+     "quote": "relate only to the topic",
+     "start": 72,
+     "suffix": "."
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "ad3462fdb644e307",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph introduces a separate topic instead of keeping its sentences focused on one topic or theme."
+   },
+   "when": [
+    "Introduction and summary paragraphs may recap several ideas, but their sentences should be grouped by theme."
+   ],
+   "why": "G-2 and G-4: thematic grouping in introductions and summaries qualifies the topic-unity check; repeated instructions are absorbed."
+  },
+  {
+   "anchor": {
+    "block_id": "aa580766f0bc",
+    "end": 56,
+    "prefix": "",
+    "quote": "Put paragraphs in the order that makes sense to the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "bbefdae0d41a",
+     "end": 48,
+     "prefix": "",
+     "quote": "Order paragraphs in a logical sequence, such as:",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "f1cf14be435e",
+     "end": 22,
+     "prefix": "",
+     "quote": "steps in a transaction",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "44cea1f16606",
+     "end": 23,
+     "prefix": "",
+     "quote": "the order of importance",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "51d847d6d032",
+     "end": 17,
+     "prefix": "",
+     "quote": "cause then effect",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "50639cf57b9a",
+     "end": 21,
+     "prefix": "",
+     "quote": "problem then solution",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2fe6d08d9fe8",
+     "end": 15,
+     "prefix": "",
+     "quote": "pros then cons.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "478fff6356a906e3",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess the order against the user's task and the relationships between paragraphs. The listed sequences are alternatives, not a required universal order.",
+    "unit": "document",
+    "violation_condition": "Paragraphs occur in an order that makes the intended task, argument or sequence difficult to follow."
+   },
+   "when": [
+    "Appropriate sequences include transaction steps, importance, cause then effect, problem then solution, and pros then cons."
+   ],
+   "why": "G-2 and G-4: the listed sequences are cases of one paragraph-ordering check, not separate rules."
+  },
+  {
+   "anchor": {
+    "block_id": "fcf6e3cba74c",
+    "end": 52,
+    "prefix": "",
+    "quote": "Arrange paragraphs under brief, meaningful headings.",
+    "start": 0,
+    "suffix": " Headings help users understand "
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "d597ddbe2ebc",
+     "end": 116,
+     "prefix": "helps users absorb information. ",
+     "quote": "Organise them under headings to help users scan the content.",
+     "start": 56,
+     "suffix": " Write short paragraphs, each st"
+    }
+   ],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Assess whether a heading identifies the grouped paragraphs' subject without unnecessary wording. The page supplies no numerical heading-length limit.",
+    "unit": "section",
+    "violation_condition": "Paragraphs are not organised under headings, or the headings do not concisely identify the content they cover."
+   },
+   "when": [],
+   "why": "G-4: the body gives the actionable wording. Organisation under headings is a different check from paragraph order."
+  },
+  {
+   "anchor": {
+    "block_id": "a346554f1f24",
+    "end": 44,
+    "prefix": "",
+    "quote": "Expand on the heading in the first paragraph",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "def48eee4499",
+     "end": 87,
+     "prefix": "",
+     "quote": "Use the first paragraph to make the purpose of your content easier to find in searches.",
+     "start": 0,
+     "suffix": " It should include a topic sente"
+    },
+    {
+     "block_id": "def48eee4499",
+     "end": 162,
+     "prefix": "ld include a topic sentence and ",
+     "quote": "summarise the following paragraphs.",
+     "start": 127,
+     "suffix": ""
+    },
+    {
+     "block_id": "32edbcddd461",
+     "end": 139,
+     "prefix": "-form content, such as reports. ",
+     "quote": "First paragraphs can summarise the main points in each section.",
+     "start": 76,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "c1b6c019b357e6a6",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "The first paragraph under a heading does not develop the heading or summarise the main content of the following paragraphs."
+   },
+   "when": [
+    "The summary requirement concerns the paragraphs that follow under the heading.",
+    "This also applies to sections of long-form content such as reports."
+   ],
+   "why": "G-4 and G-5: consolidate the first-paragraph summary requirement without turning the suggested checking workflow into another rule."
+  },
+  {
+   "anchor": {
+    "block_id": "5721dc82868f",
+    "end": 78,
+    "prefix": "",
+    "quote": "The first sentence in each paragraph should be a topic or transition sentence.",
+    "start": 0,
+    "suffix": " A topic sentence tells people w"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d597ddbe2ebc",
+     "end": 202,
+     "prefix": "ontent. Write short paragraphs, ",
+     "quote": "each starting with a topic sentence or a transition sentence.",
+     "start": 141,
+     "suffix": ""
+    },
+    {
+     "block_id": "def48eee4499",
+     "end": 122,
+     "prefix": "ent easier to find in searches. ",
+     "quote": "It should include a topic sentence",
+     "start": 88,
+     "suffix": " and summarise the following par"
+    },
+    {
+     "block_id": "5721dc82868f",
+     "end": 216,
+     "prefix": "a topic or transition sentence. ",
+     "quote": "A topic sentence tells people what the paragraph is about. A transition sentence explicitly connects the previous paragraph with the new.",
+     "start": 79,
+     "suffix": ""
+    },
+    {
+     "block_id": "6db0df7feec8",
+     "end": 68,
+     "prefix": "",
+     "quote": "You can also choose to start a paragraph with a transition sentence.",
+     "start": 0,
+     "suffix": " The transition sentence include"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The transition connects the two paragraphs.",
+     "parts": [
+      {
+       "block_id": "1b163fc0e9e8",
+       "end": 131,
+       "prefix": "",
+       "quote": "… In summary, an effective policy strategy understands public needs, the purpose of the strategy and the desired strategic outcome.",
+       "start": 0,
+       "suffix": " [Concluding sentence of paragra"
+      },
+      {
+       "block_id": "28cfb93d9384",
+       "end": 256,
+       "prefix": "",
+       "quote": "To build on a robust policy strategy, it’s essential to evaluate and measure outcomes after implementation. Analyse performance metrics and gather user feedback regularly. And stay responsive: keep informed about societal trends and adapt where necessary …",
+       "start": 0,
+       "suffix": " [Transition sentence begins par"
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph begins with a sentence that neither identifies its topic nor explicitly connects it with the previous paragraph."
+   },
+   "when": [
+    "A topic sentence tells readers what the paragraph is about.",
+    "A transition sentence explicitly connects the previous paragraph with the new paragraph.",
+    "The first paragraph under a heading should include a topic sentence."
+   ],
+   "why": "G-2 and G-4: topic and transition openings are alternatives within one opening-sentence check."
+  },
+  {
+   "anchor": {
+    "block_id": "2e25b3a2ff5d",
+    "end": 97,
+    "prefix": "",
+    "quote": "Each paragraph should contain sentences that are arranged logically and relate only to the topic.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "The sentences within a paragraph occur in an illogical order that obscures the development of its idea."
+   },
+   "when": [],
+   "why": "G-1: sentence order within a paragraph is distinct from paragraph order and topic unity; this item checks only sentence order."
+  },
+  {
+   "anchor": {
+    "block_id": "816e808cbb46",
+    "end": 55,
+    "prefix": "",
+    "quote": "To write an effective topic sentence, use active voice.",
+    "start": 0,
+    "suffix": " This approach makes the topic o"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A paragraph's topic sentence uses passive rather than active voice."
+   },
+   "when": [
+    "Applies to topic sentences."
+   ],
+   "why": "G-1: active voice is a separate test from whether the grammatical subject matches the paragraph's topic."
+  },
+  {
+   "anchor": {
+    "block_id": "c14b0a8f6d5d",
+    "end": 163,
+    "prefix": "am, not the stakeholder survey. ",
+    "quote": "The grammatical subject of the topic sentence should be ‘the team’, not ‘the survey’.",
+    "start": 78,
+    "suffix": "]"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "816e808cbb46",
+     "end": 149,
+     "prefix": "pic sentence, use active voice. ",
+     "quote": "This approach makes the topic of the paragraph the grammatical subject of the topic sentence.",
+     "start": 56,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The rapid response team is the grammatical subject of the topic sentence.",
+     "parts": [
+      {
+       "block_id": "8b4c7bf934e6",
+       "end": 144,
+       "prefix": "",
+       "quote": "Our rapid response team began operating in 2019 as a result of the 2018 stakeholder survey. The survey showed it took too long to repair damage.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The paragraph is about the team, but its opening sentence foregrounds the survey.",
+     "parts": [
+      {
+       "block_id": "e5366b7599bb",
+       "end": 140,
+       "prefix": "",
+       "quote": "A stakeholder survey in 2018 revealed dissatisfaction with the time taken to repair damage. Our rapid response team began operating in 2019.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Read the example-specific instruction together with the preceding explanation: the paragraph's topic should be the grammatical subject of its topic sentence. This is not a requirement to use the words ‘the team’ in other content.",
+    "unit": "paragraph",
+    "violation_condition": "The grammatical subject of a topic sentence foregrounds something other than the paragraph's topic."
+   },
+   "when": [
+    "Applies to topic sentences, rather than transition sentences."
+   ],
+   "why": "G-1 and E-2: the labelled contrast tests the topic sentence's subject, not passive voice; keep the two checks distinct."
+  },
+  {
+   "anchor": {
+    "block_id": "a070ac4dbaf4",
+    "end": 118,
+    "prefix": "art a paragraph with a pronoun. ",
+    "quote": "It should already be clear who or what the pronoun is referring to.",
+    "start": 51,
+    "suffix": " If not, make sure to mention th"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "2b9428a8a40b",
+     "end": 48,
+     "prefix": "",
+     "quote": "Be clear when using pronouns to start paragraphs",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a070ac4dbaf4",
+     "end": 226,
+     "prefix": "at the pronoun is referring to. ",
+     "quote": "If not, make sure to mention the noun in each paragraph before using the pronoun that substitutes the noun.",
+     "start": 119,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "The new paragraph names the appropriations.",
+     "parts": [
+      {
+       "block_id": "6a1e90b8a0a6",
+       "end": 60,
+       "prefix": "",
+       "quote": "The initial amounts for appropriation in 2019–20 were up to:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "a7ddf3dcc96b",
+       "end": 41,
+       "prefix": "",
+       "quote": "$295 million for ordinary annual services",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "2e90e532feaa",
+       "end": 39,
+       "prefix": "",
+       "quote": "$380 million for other annual services.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "8364be8e8d0b",
+       "end": 106,
+       "prefix": "",
+       "quote": "The appropriations increased in March 2020 to account for unforeseen expenditures in relation to COVID-19.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The paragraph-opening ‘These’ does not clearly specify what increased.",
+     "parts": [
+      {
+       "block_id": "44b1ac354755",
+       "end": 60,
+       "prefix": "",
+       "quote": "The initial amounts for appropriation in 2019–20 were up to:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "67fe65563e90",
+       "end": 41,
+       "prefix": "",
+       "quote": "$295 million for ordinary annual services",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "12e2729d1991",
+       "end": 39,
+       "prefix": "",
+       "quote": "$380 million for other annual services.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "f3cea9293b3f",
+       "end": 93,
+       "prefix": "",
+       "quote": "These increased in March 2020 to account for unforeseen expenditures in relation to COVID-19.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph starts with a pronoun whose referent is unclear from the available context."
+   },
+   "when": [
+    "Applies when a pronoun starts a paragraph.",
+    "A paragraph-opening pronoun is permitted when its referent is already clear.",
+    "Otherwise, name the noun in the paragraph before using the pronoun that substitutes for it."
+   ],
+   "why": "G-2, G-3 and G-4: clarity is the single check; repeating the noun is the remedy when the pronoun's referent is unclear."
+  },
+  {
+   "anchor": {
+    "block_id": "64244d3a52a3",
+    "end": 40,
+    "prefix": "",
+    "quote": "Keep most paragraphs to 2 or 3 sentences",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "d597ddbe2ebc",
+     "end": 139,
+     "prefix": "to help users scan the content. ",
+     "quote": "Write short paragraphs",
+     "start": 117,
+     "suffix": ", each starting with a topic sen"
+    },
+    {
+     "block_id": "8d4aa153639d",
+     "end": 70,
+     "prefix": "",
+     "quote": "Media releases and news articles have 1 or 2 sentences in a paragraph.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "2950030302e5",
+     "end": 85,
+     "prefix": "",
+     "quote": "Content designed for mobile screens has no more than 2 or 3 sentences in a paragraph.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "3e6b743f5033",
+     "end": 89,
+     "prefix": "",
+     "quote": "Reports (and other long-form content) usually have a limit of 6 sentences in a paragraph.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "a1fe3d8939f9",
+     "end": 150,
+     "prefix": "",
+     "quote": "A paragraph can be one sentence, but be careful. Overusing single-sentence paragraphs reduces their effectiveness and can disrupt the flow of content.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "1817cc8ff2f7fe6b",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret ‘most’ as more than half of ordinary prose paragraphs having 2 or 3 sentences. Apply the stated content-specific guidance instead where relevant. A single one-sentence paragraph or an occasional longer report paragraph is not, by itself, a violation.",
+    "unit": "document",
+    "violation_condition": "The content does not follow the recommended paragraph-length profile for its type: ordinary prose is not mostly 2 or 3 sentences per paragraph, media or news paragraphs exceed 2 sentences, mobile paragraphs exceed 3, or long-form paragraphs routinely exceed 6."
+   },
+   "when": [
+    "Media releases and news articles use 1 or 2 sentences per paragraph.",
+    "Content designed for mobile screens has no more than 3 sentences per paragraph.",
+    "Reports and other long-form content usually have a limit of 6 sentences per paragraph.",
+    "One-sentence paragraphs are permitted, but should not be overused."
+   ],
+   "why": "G-2, G-3 and E-4: paragraph length is one check with genre-specific cases and a single-sentence permission; the interpretation of ‘most’ is explicit."
+  },
+  {
+   "anchor": {
+    "block_id": "137e1ef8a7a0",
+    "end": 101,
+    "prefix": "raph or using an itemised list. ",
+    "quote": "Make sure the items relate to each other",
+    "start": 61,
+    "suffix": " and are grammatically parallel."
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "An itemised list contains items that do not share the relationship or topic established by the list."
+   },
+   "when": [
+    "Applies to itemised lists, including lists used instead of a long paragraph."
+   ],
+   "why": "G-1: relatedness of list items and grammatical parallelism are separate properties that can fail independently."
+  },
+  {
+   "anchor": {
+    "block_id": "137e1ef8a7a0",
+    "end": 133,
+    "prefix": " items relate to each other and ",
+    "quote": "are grammatically parallel.",
+    "start": 106,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "Items in an itemised list use incompatible grammatical structures rather than parallel forms."
+   },
+   "when": [
+    "Applies to itemised lists, including lists used instead of a long paragraph."
+   ],
+   "why": "G-1: grammatical parallelism is a distinct check from whether list items relate to each other."
+  },
+  {
+   "anchor": {
+    "block_id": "f9d294f710c9",
+    "end": 105,
+    "prefix": "nces should use plain language. ",
+    "quote": "Even in technical documents, keep sentences to 25 words or less.",
+    "start": 41,
+    "suffix": " Long sentences often cause long"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "dd0edbd55159",
+     "end": 49,
+     "prefix": "",
+     "quote": "Write clear sentences using a maximum of 25 words",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence contains more than 25 words."
+   },
+   "when": [
+    "Technical documents are not exempt."
+   ],
+   "why": "G-4: the body states the numerical limit and expressly includes technical documents."
+  },
+  {
+   "anchor": {
+    "block_id": "f9d294f710c9",
+    "end": 40,
+    "prefix": "",
+    "quote": "All sentences should use plain language.",
+    "start": 0,
+    "suffix": " Even in technical documents, ke"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "68ceadb46f8a",
+     "end": 24,
+     "prefix": "",
+     "quote": "Write in plain language.",
+     "start": 0,
+     "suffix": " This helps all users and is ess"
+    }
+   ],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess unnecessary complexity against the intended users and whether simpler wording would preserve the meaning. Sentence length alone does not decide this check.",
+    "unit": "sentence",
+    "violation_condition": "Sentences use unnecessarily complex or obscure language that makes their meaning difficult for the intended users to understand."
+   },
+   "when": [
+    "Applies to technical content as well as other content."
+   ],
+   "why": "G-1 and G-4: plain language is distinct from the 25-word limit, and its repeated accessibility instruction is consolidated."
+  },
+  {
+   "anchor": {
+    "block_id": "47b3768453bf",
+    "end": 60,
+    "prefix": "",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "start": 0,
+    "suffix": " Expand all acronyms on their fi"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Treat an expression as unusual relative to the intended users' likely vocabulary and cultural knowledge, rather than merely because it is infrequent in a general corpus.",
+    "unit": "document",
+    "violation_condition": "The text contains unusual words, phrases or idioms without an explanation that makes them understandable to its users."
+   },
+   "when": [
+    "An unusual expression is permitted when it is explained."
+   ],
+   "why": "G-2 and G-3: avoiding an expression and explaining it are alternative ways to satisfy one accessibility check."
+  },
+  {
+   "anchor": {
+    "block_id": "47b3768453bf",
+    "end": 100,
+    "prefix": "rds, phrases, idioms and so on. ",
+    "quote": "Expand all acronyms on their first use.",
+    "start": 61,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "An acronym first appears without its expanded form."
+   },
+   "when": [
+    "Applies at the acronym's first use."
+   ],
+   "why": "G-1: first-use acronym expansion is a distinct, document-level check."
+  },
+  {
+   "anchor": {
+    "block_id": "897f900cfe99",
+    "end": 29,
+    "prefix": "",
+    "quote": "Avoid using double negatives.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence expresses its meaning through a double negative."
+   },
+   "when": [],
+   "why": "G-1: double negatives are a specific sentence-level check, not a restatement of the word limit."
+  },
+  {
+   "anchor": {
+    "block_id": "209df7e0c33b",
+    "end": 177,
+    "prefix": ".1.5 Reading level – level AAA. ",
+    "quote": "Level AAA requires a lower secondary education reading level, after removal of proper names and titles, (year 7 or between 12 and 14 years old).",
+    "start": 33,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 17,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "The page identifies Year 7 or ages 12–14 as the target but does not specify a readability formula or assessment method.",
+    "unit": "document",
+    "violation_condition": "Content subject to the stated Level AAA requirement exceeds a lower-secondary reading level after proper names and titles are excluded."
+   },
+   "when": [
+    "Applies when WCAG success criterion 3.1.5 at Level AAA is required.",
+    "Exclude proper names and titles from the reading-level assessment."
+   ],
+   "why": "G-2: retain the explicit requirement with its Level AAA scope; do not impose that conformance level on every document."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 5415,
+  "output_tokens": 12723,
+  "reasoning_tokens": 5696
+ }
+}

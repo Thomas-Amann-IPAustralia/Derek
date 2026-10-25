@@ -235,3 +235,16 @@ def test_a_label_written_as_a_paragraph_counts():
     wrong = next(b for b in p.blocks if b.plain == "£9 8s 7d")
     assert consensus._label_polarity(p, right.id) == "compliant"
     assert consensus._label_polarity(p, wrong.id) == "violating"
+
+
+def test_dropping_a_single_rule_on_a_heading_tells_the_sweep(page, tmp_path, monkeypatch):
+    """A single-model rule standing on a heading candidate hides the candidate
+    from _dropped_candidates; dropping the rule must list the candidate in the
+    sweep's `dropped`, or apply_spans refuses the page."""
+    h = next(b for b in page.blocks if b.kind == "heading" and b.id in page.seeds)
+    r = _rule(h)
+    r["seed_uid"] = page.seeds[h.id]
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(r), B: _draft()})
+    adj = {it["item_id"]: {"decision": {"keep": False}, "reason": "advice"} for it in plan["items"]}
+    ops, _ = consensus.export_page(plan, adj, "t")
+    assert {"uid": page.seeds[h.id], "reason": "advice"} in ops[-1]["dropped"]

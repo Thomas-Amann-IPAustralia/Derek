@@ -54,8 +54,9 @@ LEVELS = ("fix", "check", "look")
 
 # How the manual labels its example blocks. `Example` is neutral: it shows usage,
 # and a sentence under it is not a mistake unless the text says so (E-1).
-POSITIVE_LABELS = frozenset({"correct", "write this"})
-NEGATIVE_LABELS = frozenset({"incorrect", "not this"})
+POSITIVE_LABELS = frozenset({"correct", "write this", "write", "like this"})
+NEGATIVE_LABELS = frozenset({"incorrect", "not this", "avoid this", "don't write",
+                             "don’t write"})
 NEUTRAL_LABELS = frozenset({"example", "examples"})
 LABELS = POSITIVE_LABELS | NEGATIVE_LABELS | NEUTRAL_LABELS
 
@@ -91,6 +92,26 @@ def _key(block_id: str, start: int, end: int, kind: str) -> str:
 
 def _label(block: Block) -> str:
     return (block.heading_path[-1] if block.heading_path else "").strip().lower()
+
+
+def _nearest_labels(blocks: list[Block]) -> dict[str, str]:
+    """Each block's label: the nearest one before it in its section, whether a
+    label heading or a paragraph that is only a label.
+
+    The second matters. On currency.md "Not this" is a paragraph under a
+    "Write this" heading, and reading headings alone reported the manual's own
+    wrong example, "£9 8s 7d", as mislabelled. A non-label heading ends a
+    label's reach. The same rule as tools/draft/consensus._label_polarity.
+    """
+    out, label = {}, ""
+    for b in blocks:
+        text = b.plain.strip().lower()
+        if b.kind == "heading":
+            label = text if text in LABELS else ""
+        elif text in LABELS:
+            label = text
+        out[b.id] = label
+    return out
 
 
 def _example_blocks(blocks: list[Block]) -> set[str]:
@@ -289,7 +310,7 @@ def _check_shared_examples(page, page_rules) -> list[Finding]:
 
 def _check_example_polarity(page, spans, blocks) -> list[Finding]:
     """E-1: a label the manual gave the text, contradicted by the label a human gave it."""
-    by_id = {b.id: b for b in blocks}
+    labels = _nearest_labels(blocks)
     rule_keys = {s.span_id: _key(s.block_id, s.start, s.end, RULE)
                  for s in spans if s.kind == RULE}
     rule_quotes = {s.span_id: s.quote for s in spans if s.kind == RULE}
@@ -301,7 +322,7 @@ def _check_example_polarity(page, spans, blocks) -> list[Finding]:
             block = resolve_span(s, blocks).block
         except GoldenError:
             continue
-        label = _label(by_id.get(block.id, block))
+        label = labels.get(block.id, "")
         msg = None
         level = "check"
         if s.kind == "violating" and label in POSITIVE_LABELS:
