@@ -30,6 +30,8 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
+import urllib.error
 import urllib.request
 import uuid
 from datetime import datetime, timezone
@@ -96,10 +98,21 @@ def _multipart(fields: dict[str, str], filename: str, content: bytes) -> tuple[b
 
 def _openai_upload(jsonl: bytes) -> str:
     body, ctype = _multipart({"purpose": "batch"}, "drafts.jsonl", jsonl)
-    req = urllib.request.Request(f"{OPENAI}/files", data=body, method="POST",
-                                 headers={"Content-Type": ctype, **_openai_headers()})
-    with urllib.request.urlopen(req, timeout=300) as resp:
-        return json.loads(resp.read().decode("utf-8"))["id"]
+    last = ""
+    for attempt in range(5):
+        req = urllib.request.Request(f"{OPENAI}/files", data=body, method="POST",
+                                     headers={"Content-Type": ctype, **_openai_headers()})
+        try:
+            with urllib.request.urlopen(req, timeout=300) as resp:
+                return json.loads(resp.read().decode("utf-8"))["id"]
+        except urllib.error.HTTPError as exc:
+            last = f"HTTP {exc.code}: {exc.read().decode('utf-8', 'replace')[:300]}"
+            if exc.code not in (429, 500, 502, 503, 504):
+                break
+        except (urllib.error.URLError, TimeoutError) as exc:
+            last = f"transport: {exc}"
+        time.sleep(2 ** (attempt + 2))
+    raise DraftError(f"uploading the batch file failed: {last}")
 
 
 def submit_openai(model: str, effort: str, reqs: list[dict], system: str, schema: dict) -> str:
@@ -164,17 +177,27 @@ def submit(args) -> int:
                      "input_sha256": input_sha256(page, model, effort),
                      "_user": user_message(page)})
     send = submit_openai if provider == "openai" else submit_gemini
-    batch_id = send(model, effort, reqs, system, schema)
-    at = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    safe_id = batch_id.rsplit("/", 1)[-1]
-    path = BATCHES / f"{at}-{drafter.replace('@', '-')}-{safe_id}.json"
-    _save(path, {
-        "provider": provider, "model": model, "effort": effort, "drafter": drafter,
-        "prompt_version": PROMPT_VERSION, "batch_id": batch_id, "submitted_at": at,
-        "requests": [{k: v for k, v in r.items() if not k.startswith("_")} for r in reqs],
-        "collected": False,
-    })
-    print(f"submitted {batch_id}; manifest {path.name}")
+    # Chunks, because one file of every page is several megabytes and an upload
+    # that size was refused with a 503. Each chunk is its own batch and its own
+    # manifest, so a chunk that fails to submit costs nothing and leaves its
+    # pages for the next run.
+    for start in range(0, len(reqs), args.chunk):
+        chunk = reqs[start:start + args.chunk]
+        try:
+            batch_id = send(model, effort, chunk, system, schema)
+        except DraftError as exc:
+            print(f"  chunk of {len(chunk)} not submitted: {exc}", file=sys.stderr)
+            return 1
+        at = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        safe_id = batch_id.rsplit("/", 1)[-1]
+        path = BATCHES / f"{at}-{drafter.replace('@', '-')}-{safe_id}.json"
+        _save(path, {
+            "provider": provider, "model": model, "effort": effort, "drafter": drafter,
+            "prompt_version": PROMPT_VERSION, "batch_id": batch_id, "submitted_at": at,
+            "requests": [{k: v for k, v in r.items() if not k.startswith("_")} for r in chunk],
+            "collected": False,
+        })
+        print(f"submitted {batch_id} ({len(chunk)} page(s)); manifest {path.name}")
     return 0
 
 
@@ -314,6 +337,7 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--blind", action="store_true")
     s.add_argument("--limit", type=int, default=0)
     s.add_argument("--dry-run", action="store_true")
+    s.add_argument("--chunk", type=int, default=30, help="pages per batch")
     sub.add_parser("collect")
     sub.add_parser("status")
     args = ap.parse_args(argv)
