@@ -1486,3 +1486,62 @@ On the three human pages, v2 called 10 candidates rules. The adjudicator would k
 ten, three of them rules the human marked. Of the three it rejected, two rejections were
 right and one (the 25-word limit, called advice) is arguable, and that one still reaches
 the adjudicator. Cost on those pages: $0.15, live.
+
+**How the full batch came out (2026-10-25).** The second reading read 924 Sol-only
+candidates on 105 pages for $1.29: 361 `rule`, 337 `advice`, 66 `restatement`, 56
+`section`, 53 `description`, 42 `not_text`, 9 `permission`. The 361 settled themselves.
+Everything else, 1,068 items, was decided and recorded in
+`golden/consensus/adjudications.jsonl`:
+
+| Kind | Items | Kept | Dropped |
+|---|---|---|---|
+| Single-model rules the second reading did not confirm | 744 | 59 | 685 |
+| Tag disputes (direction, applies_to) | 243 | — | — |
+| Examples whose polarity the manual's label did not settle | 53 | — | — |
+| Seeded candidates no consensus rule covered | 28 | 9 | 19 |
+
+The adjudicator mostly agreed with the second reading. The 59 kept over it are concrete
+and checkable, and were called advice only because the manual words them softly, for
+example the 15-word sentence average, 280 characters for a post, `÷`, *it's*/*its*,
+4-3-3 for mobile numbers, and the salutations for diplomats, judges and the
+Governor-General. A seeded candidate a human had already accepted was kept.
+
+Two rules were fixed while adjudicating, so the next session applies them the same way:
+
+* **Direction.** `presence` when a wrong form or word is in the text: case, spelling, a
+  hyphen, italics, a wrong citation format. `absence` when a separate required element is
+  missing: a comma between items, an expansion, a heading, a URL, an attribution.
+  Capitalisation is therefore `presence` (the lower-case form is what is wrong).
+  `golden_lint`'s `direction-looks-inverted` check reads capitalisation the other way
+  and fires 408 times on consensus pages. It is a heuristic `check`, and these were not
+  changed to satisfy it.
+* **Labels.** An example's polarity comes from the nearest label before it in its
+  section, whether the label is a heading or a paragraph that is only a label. A census
+  of the corpus added *Like this*, *Avoid this*, *Write* and *Don't write* to *Correct*
+  and *Incorrect*. With paragraph labels read, 0 of 760 agreed examples contradict the
+  manual. `derek/detect/document.py`, which decides which blocks are the manual's wrong
+  examples, still reads heading labels only and has the same gap.
+
+Applied: 3,228 ops, 1,257 loadable rules (942 agreed or confirmed, 278 decided by the
+adjudicator, 37 the owner's), 175 with the manual's paired examples.
+
+**G-6 cleanup.** Rules stated on more than one page were found by comparing finished
+pages, with word overlap on statements and violation conditions plus shared examples.
+That gave 80 clusters. Each rule is kept once, on the page whose subject it is, and the
+other copies go into their sweep's `dropped` with the home rule named. 29 copies were
+dropped on 17 pages, for example *Expand all acronyms on their first use*, repeated in
+the checklist on six pages, now lives on the acronyms page. Some apparent repeats were
+kept on purpose:
+
+* **Author-date and documentary-note templates.** Each referencing system's template is
+  its own rule, and a checker cites the system the document uses.
+* **Forms of address.** *Conclude with 'Yours faithfully'* and *Open with 'Your
+  Excellency'* are kept per addressee.
+* **Same wording, different object.** For example, 70 characters for a heading and for a
+  page title, title case for Acts, bills and cases, and plurals of personal and
+  topographic names.
+
+Two repeats are on `commas.md`, a page the owner marked: the rounded-numbers rule
+`docs/08` itself uses as the G-6 example, and commas in 4-digit numbers. They are left
+for the owner, because a page a human marked is not written to. 1,228 rules load after
+the cleanup, 174 of them with pairs.
