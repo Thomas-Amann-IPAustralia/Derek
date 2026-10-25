@@ -1,0 +1,953 @@
+{
+ "effort": "high",
+ "input_sha256": "ab43ea85e45aec310d8990e4b473721792f3ce4c8f13d352bd6ff7391b543a67",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "1ea5c70da01d",
+    "end": 27,
+    "prefix": "",
+    "quote": "Write keyword-based content",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the more specific instructions on structure, placement, related terminology, stuffing and contextual details.",
+   "reason": "section",
+   "seed_uid": "02bdb3d9765a00c9"
+  },
+  {
+   "anchor": {
+    "block_id": "3e969c163867",
+    "end": 87,
+    "prefix": "",
+    "quote": "Government content should help users find information and achieve what they need to do.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "States the overall user outcome without identifying a separate textual defect to flag.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "02ac6d845b9f",
+    "end": 62,
+    "prefix": "",
+    "quote": "To write for users and search engines, you need to understand:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: introduces knowledge the writer needs, not a property of the finished text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "eea84769b3b0",
+    "end": 37,
+    "prefix": "",
+    "quote": "what users need to do with government",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Part of the instruction to understand users before writing.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "809cb84e13ec",
+    "end": 35,
+    "prefix": "",
+    "quote": "the keywords they’re likely to use.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Part of the instruction to understand users before writing; the resulting textual requirement is captured by the keyword-matching rule.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "798ff5955717",
+    "end": 69,
+    "prefix": "",
+    "quote": "Use this information to design content for people and search engines.",
+    "start": 0,
+    "suffix": " You can combine it with other t"
+   },
+   "note": "G-5: describes the writer’s design process rather than adding a distinct text check.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "798ff5955717",
+    "end": 136,
+    "prefix": " for people and search engines. ",
+    "quote": "You can combine it with other techniques for on-page optimisation.",
+    "start": 70,
+    "suffix": ""
+   },
+   "note": "G-3: permits additional techniques but requires no textual feature.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "1046801e73bf",
+    "end": 80,
+    "prefix": "",
+    "quote": "Include ‘citizen’ in the content, title, meta description and web address (URL).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "An instruction within the worked example, not a standalone rule requiring this particular keyword.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ee5a895cab47",
+    "end": 111,
+    "prefix": "",
+    "quote": "You must help the users of your service to find the information they need to meet the Digital Service Standard.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "A service-level compliance obligation, not a distinct specification of a defect in the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "87a6225cf71a",
+    "end": 23,
+    "prefix": "",
+    "quote": "Write in plain English.",
+    "start": 0,
+    "suffix": " This helps all users and is ess"
+   },
+   "note": "G-6: belongs to the Style Manual’s plain-language guidance, not a separate keyword rule.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "369dd3210f91",
+    "end": 60,
+    "prefix": "",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "start": 0,
+    "suffix": " Expand all acronyms on their fi"
+   },
+   "note": "G-6: belongs to the guidance on plain language and explaining unfamiliar language.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "369dd3210f91",
+    "end": 100,
+    "prefix": "rds, phrases, idioms and so on. ",
+    "quote": "Expand all acronyms on their first use.",
+    "start": 61,
+    "suffix": ""
+   },
+   "note": "G-6: belongs to the acronyms and initialisms guidance.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3ce1e8da0557",
+    "end": 97,
+    "prefix": "",
+    "quote": "Use keywords that users expect to see and are looking for, so they are indexed by search engines.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into matching keywords to users’ search terms.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c76d564182a6",
+    "end": 83,
+    "prefix": "",
+    "quote": "Find out which keywords to use through a keyword tool, analytics and user research.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: prescribes research methods, not a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "383a3485a750",
+    "end": 60,
+    "prefix": "",
+    "quote": "Write content using keywords and descriptive plain language.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Keyword use is absorbed into the keyword-matching rule; the plain-language component duplicates the dedicated plain-language guidance.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "62b1db1db992",
+    "end": 152,
+    "prefix": "first paragraph of the content. ",
+    "quote": "You can also include them in this way in the final paragraph.",
+    "start": 91,
+    "suffix": ""
+   },
+   "note": "G-3: final-paragraph keyword use is optional, not an additional placement requirement.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "24ab6ed66765",
+    "end": 87,
+    "prefix": "",
+    "quote": "People must be able to discover information produced by Australian Government agencies.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "States the overall discoverability outcome without adding a distinct textual check.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/findable-content/keywords-and-search-engines.md",
+ "page_sha256": "12ee53b46aa17b31152715820701ca365c2f29b417c1dd6c9806d32d74cc9c9f",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "1ea5c70da01d",
+    "note": "G-1: groups the more specific instructions on structure, placement, related terminology, stuffing and contextual details.",
+    "quote": "Write keyword-based content",
+    "reason": "section"
+   },
+   {
+    "block_id": "3e969c163867",
+    "note": "States the overall user outcome without identifying a separate textual defect to flag.",
+    "quote": "Government content should help users find information and achieve what they need to do.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "02ac6d845b9f",
+    "note": "G-5: introduces knowledge the writer needs, not a property of the finished text.",
+    "quote": "To write for users and search engines, you need to understand:",
+    "reason": "advice"
+   },
+   {
+    "block_id": "eea84769b3b0",
+    "note": "Part of the instruction to understand users before writing.",
+    "quote": "what users need to do with government",
+    "reason": "advice"
+   },
+   {
+    "block_id": "809cb84e13ec",
+    "note": "Part of the instruction to understand users before writing; the resulting textual requirement is captured by the keyword-matching rule.",
+    "quote": "the keywords they’re likely to use.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "798ff5955717",
+    "note": "G-5: describes the writer’s design process rather than adding a distinct text check.",
+    "quote": "Use this information to design content for people and search engines.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "798ff5955717",
+    "note": "G-3: permits additional techniques but requires no textual feature.",
+    "quote": "You can combine it with other techniques for on-page optimisation.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "1046801e73bf",
+    "note": "An instruction within the worked example, not a standalone rule requiring this particular keyword.",
+    "quote": "Include ‘citizen’ in the content, title, meta description and web address (URL).",
+    "reason": "description"
+   },
+   {
+    "block_id": "ee5a895cab47",
+    "note": "A service-level compliance obligation, not a distinct specification of a defect in the text.",
+    "quote": "You must help the users of your service to find the information they need to meet the Digital Service Standard.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "87a6225cf71a",
+    "note": "G-6: belongs to the Style Manual’s plain-language guidance, not a separate keyword rule.",
+    "quote": "Write in plain English.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "369dd3210f91",
+    "note": "G-6: belongs to the guidance on plain language and explaining unfamiliar language.",
+    "quote": "Avoid (or explain) unusual words, phrases, idioms and so on.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "369dd3210f91",
+    "note": "G-6: belongs to the acronyms and initialisms guidance.",
+    "quote": "Expand all acronyms on their first use.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "3ce1e8da0557",
+    "note": "G-4: absorbed into matching keywords to users’ search terms.",
+    "quote": "Use keywords that users expect to see and are looking for, so they are indexed by search engines.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c76d564182a6",
+    "note": "G-5: prescribes research methods, not a property of the resulting text.",
+    "quote": "Find out which keywords to use through a keyword tool, analytics and user research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "383a3485a750",
+    "note": "Keyword use is absorbed into the keyword-matching rule; the plain-language component duplicates the dedicated plain-language guidance.",
+    "quote": "Write content using keywords and descriptive plain language.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "62b1db1db992",
+    "note": "G-3: final-paragraph keyword use is optional, not an additional placement requirement.",
+    "quote": "You can also include them in this way in the final paragraph.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "24ab6ed66765",
+    "note": "States the overall discoverability outcome without adding a distinct textual check.",
+    "quote": "People must be able to discover information produced by Australian Government agencies.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "76fe1dbedfd9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3ce1e8da0557",
+      "quote": "Use keywords that users expect to see and are looking for, so they are indexed by search engines."
+     },
+     {
+      "block_id": "383a3485a750",
+      "quote": "Write content using keywords"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Worked scenario demonstrating the choice and placement of a researched keyword.",
+      "parts": [
+       {
+        "block_id": "ddb1ae639f9f",
+        "quote": "A website helps users become Australian citizens."
+       },
+       {
+        "block_id": "488ab8fe23d0",
+        "quote": "You have researched with users who are keen to become Australian citizens. You have found they use the keyword ‘citizen’ a lot."
+       },
+       {
+        "block_id": "1046801e73bf",
+        "quote": "Include ‘citizen’ in the content, title, meta description and web address (URL)."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Match keywords to the search terms people use",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content omits the terminology its intended users are likely to search for, using different terminology instead.",
+    "when": [
+     "Assess the terminology against the intended users and the information or task they are searching for."
+    ],
+    "why": "G-4: the heading and body express one check for expected search terminology, not separate findings."
+   },
+   {
+    "applies_to": [
+     "web_page",
+     "form"
+    ],
+    "block_id": "7a4a5f42c5a6",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Structure content (including forms and online tools) so people find what they need.",
+    "specification": "The page supplies no structural criteria for judging findability. Assessment needs the intended user task and a basis for deciding whether the organisation obstructs it.",
+    "unit": "document",
+    "violation_condition": "The organisation of content prevents users from locating the information they need.",
+    "when": [
+     "Applies to online content, including online forms and tools."
+    ],
+    "why": "G-1: this child instruction concerns content organisation, a different finding from keyword selection or placement."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "62b1db1db992",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Include keywords once or twice, if they make sense, in the first paragraph of the content.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "The first paragraph contains no relevant keyword even though one could be included naturally.",
+    "when": [
+     "Applies to the first paragraph.",
+     "Keywords need only be included where they make sense.",
+     "The stated target is one or two uses; excessive repetition is assessed under the keyword-overuse rule.",
+     "Including keywords in the final paragraph is optional."
+    ],
+    "why": "G-2 and G-3: retain the natural-use condition and optional final-paragraph use without creating another requirement; keep omission distinct from overuse."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "591ac9ba7c42",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Worked scenario illustrating related terminology selected for the topic and users’ needs.",
+      "parts": [
+       {
+        "block_id": "bc5c916c768e",
+        "quote": "You are writing content to help users find Australian embassies in Europe."
+       },
+       {
+        "block_id": "7b40aa6c386a",
+        "quote": "User research shows that when people search for an Australian embassy they’re either:"
+       },
+       {
+        "block_id": "16ac56a2a7e9",
+        "quote": "preparing to travel"
+       },
+       {
+        "block_id": "1522c4221f45",
+        "quote": "needing help with an emergency situation."
+       },
+       {
+        "block_id": "76237d4280dc",
+        "quote": "The types of keywords you might use are:"
+       },
+       {
+        "block_id": "bdcd11499b75",
+        "quote": "embassy locations"
+       },
+       {
+        "block_id": "0b158c80f937",
+        "quote": "emergency terms and current dangers"
+       },
+       {
+        "block_id": "c724591e9b8d",
+        "quote": "modes of travel"
+       },
+       {
+        "block_id": "c4d8d444a29d",
+        "quote": "passport and visa terms."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Include terms and concepts that are closely related to the topic you are writing about.",
+    "specification": "The page does not define the required breadth of related concepts or how much related terminology is sufficient. Do not invent a minimum count.",
+    "unit": "document",
+    "violation_condition": "Content lacks terms or concepts closely related to its topic.",
+    "when": [],
+    "why": "The main test separates missing related terminology from mismatched search terms and from the presence of irrelevant keywords; E-4 forbids inventing a coverage threshold."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "c75bec8a0fd1",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "62b1db1db992",
+      "quote": "Include keywords once or twice, if they make sense, in the first paragraph of the content."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use too many keywords",
+    "specification": "The page gives no general threshold for ‘too many’. Its first-paragraph guidance is once or twice, but it does not specify whether that count is per keyword or for all keywords combined.",
+    "unit": "document",
+    "violation_condition": "Content contains excessive keyword use or repetition.",
+    "when": [
+     "Assess repetition in context rather than imposing an invented keyword-density limit.",
+     "For the first paragraph, the stated guidance is one or two uses where they make sense."
+    ],
+    "why": "The main test separates excessive repetition from off-topic keywords; G-2 absorbs the first-paragraph frequency guidance, and E-4 prevents an invented general threshold."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "c75bec8a0fd1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use too many keywords or keywords that are outside the context of the content.",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content includes keywords unrelated to its context.",
+    "when": [
+     "This check concerns contextual relevance, not the number of keyword occurrences."
+    ],
+    "why": "The main test requires a separate finding for irrelevant keywords: relevance and excessive repetition can be violated independently."
+   },
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "58962a247e12",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "58962a247e12",
+      "quote": "Some information could relate to a specific place or a group of people."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Embedded example of including a relevant group and place.",
+      "parts": [
+       {
+        "block_id": "58962a247e12",
+        "quote": "student placements in northern NSW"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Make sure you include these details (for example, ‘student placements in northern NSW’).",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content about a particular place or group of people omits the relevant place or group details.",
+    "when": [
+     "Applies when the information relates to a specific place or group of people."
+    ],
+    "why": "G-2: place-specific and group-specific information are conditions of one details-omission check."
+   }
+  ]
+ },
+ "refused": [
+  {
+   "quote": "student placements in northern NSW",
+   "what": "example",
+   "why": "overlaps the rule it illustrates (D-5)"
+  }
+ ],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "76fe1dbedfd9",
+    "end": 45,
+    "prefix": "",
+    "quote": "Match keywords to the search terms people use",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3ce1e8da0557",
+     "end": 97,
+     "prefix": "",
+     "quote": "Use keywords that users expect to see and are looking for, so they are indexed by search engines.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "383a3485a750",
+     "end": 28,
+     "prefix": "",
+     "quote": "Write content using keywords",
+     "start": 0,
+     "suffix": " and descriptive plain language."
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Worked scenario demonstrating the choice and placement of a researched keyword.",
+     "parts": [
+      {
+       "block_id": "ddb1ae639f9f",
+       "end": 49,
+       "prefix": "",
+       "quote": "A website helps users become Australian citizens.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "488ab8fe23d0",
+       "end": 127,
+       "prefix": "",
+       "quote": "You have researched with users who are keen to become Australian citizens. You have found they use the keyword ‘citizen’ a lot.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "1046801e73bf",
+       "end": 80,
+       "prefix": "",
+       "quote": "Include ‘citizen’ in the content, title, meta description and web address (URL).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "63ed7ede7021f60d",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content omits the terminology its intended users are likely to search for, using different terminology instead."
+   },
+   "when": [
+    "Assess the terminology against the intended users and the information or task they are searching for."
+   ],
+   "why": "G-4: the heading and body express one check for expected search terminology, not separate findings."
+  },
+  {
+   "anchor": {
+    "block_id": "7a4a5f42c5a6",
+    "end": 83,
+    "prefix": "",
+    "quote": "Structure content (including forms and online tools) so people find what they need.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page",
+     "form"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page supplies no structural criteria for judging findability. Assessment needs the intended user task and a basis for deciding whether the organisation obstructs it.",
+    "unit": "document",
+    "violation_condition": "The organisation of content prevents users from locating the information they need."
+   },
+   "when": [
+    "Applies to online content, including online forms and tools."
+   ],
+   "why": "G-1: this child instruction concerns content organisation, a different finding from keyword selection or placement."
+  },
+  {
+   "anchor": {
+    "block_id": "62b1db1db992",
+    "end": 90,
+    "prefix": "",
+    "quote": "Include keywords once or twice, if they make sense, in the first paragraph of the content.",
+    "start": 0,
+    "suffix": " You can also include them in th"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "The first paragraph contains no relevant keyword even though one could be included naturally."
+   },
+   "when": [
+    "Applies to the first paragraph.",
+    "Keywords need only be included where they make sense.",
+    "The stated target is one or two uses; excessive repetition is assessed under the keyword-overuse rule.",
+    "Including keywords in the final paragraph is optional."
+   ],
+   "why": "G-2 and G-3: retain the natural-use condition and optional final-paragraph use without creating another requirement; keep omission distinct from overuse."
+  },
+  {
+   "anchor": {
+    "block_id": "591ac9ba7c42",
+    "end": 87,
+    "prefix": "",
+    "quote": "Include terms and concepts that are closely related to the topic you are writing about.",
+    "start": 0,
+    "suffix": " This helps search engines under"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Worked scenario illustrating related terminology selected for the topic and users’ needs.",
+     "parts": [
+      {
+       "block_id": "bc5c916c768e",
+       "end": 74,
+       "prefix": "",
+       "quote": "You are writing content to help users find Australian embassies in Europe.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "7b40aa6c386a",
+       "end": 85,
+       "prefix": "",
+       "quote": "User research shows that when people search for an Australian embassy they’re either:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "16ac56a2a7e9",
+       "end": 19,
+       "prefix": "",
+       "quote": "preparing to travel",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "1522c4221f45",
+       "end": 41,
+       "prefix": "",
+       "quote": "needing help with an emergency situation.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "76237d4280dc",
+       "end": 40,
+       "prefix": "",
+       "quote": "The types of keywords you might use are:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "bdcd11499b75",
+       "end": 17,
+       "prefix": "",
+       "quote": "embassy locations",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "0b158c80f937",
+       "end": 35,
+       "prefix": "",
+       "quote": "emergency terms and current dangers",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c724591e9b8d",
+       "end": 15,
+       "prefix": "",
+       "quote": "modes of travel",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "c4d8d444a29d",
+       "end": 24,
+       "prefix": "",
+       "quote": "passport and visa terms.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define the required breadth of related concepts or how much related terminology is sufficient. Do not invent a minimum count.",
+    "unit": "document",
+    "violation_condition": "Content lacks terms or concepts closely related to its topic."
+   },
+   "when": [],
+   "why": "The main test separates missing related terminology from mismatched search terms and from the presence of irrelevant keywords; E-4 forbids inventing a coverage threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "c75bec8a0fd1",
+    "end": 27,
+    "prefix": "",
+    "quote": "Don’t use too many keywords",
+    "start": 0,
+    "suffix": " or keywords that are outside th"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "62b1db1db992",
+     "end": 90,
+     "prefix": "",
+     "quote": "Include keywords once or twice, if they make sense, in the first paragraph of the content.",
+     "start": 0,
+     "suffix": " You can also include them in th"
+    }
+   ],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The page gives no general threshold for ‘too many’. Its first-paragraph guidance is once or twice, but it does not specify whether that count is per keyword or for all keywords combined.",
+    "unit": "document",
+    "violation_condition": "Content contains excessive keyword use or repetition."
+   },
+   "when": [
+    "Assess repetition in context rather than imposing an invented keyword-density limit.",
+    "For the first paragraph, the stated guidance is one or two uses where they make sense."
+   ],
+   "why": "The main test separates excessive repetition from off-topic keywords; G-2 absorbs the first-paragraph frequency guidance, and E-4 prevents an invented general threshold."
+  },
+  {
+   "anchor": {
+    "block_id": "c75bec8a0fd1",
+    "end": 84,
+    "prefix": "",
+    "quote": "Don’t use too many keywords or keywords that are outside the context of the content.",
+    "start": 0,
+    "suffix": " This is known as keyword stuffi"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content includes keywords unrelated to its context."
+   },
+   "when": [
+    "This check concerns contextual relevance, not the number of keyword occurrences."
+   ],
+   "why": "The main test requires a separate finding for irrelevant keywords: relevance and excessive repetition can be violated independently."
+  },
+  {
+   "anchor": {
+    "block_id": "58962a247e12",
+    "end": 160,
+    "prefix": "fic place or a group of people. ",
+    "quote": "Make sure you include these details (for example, ‘student placements in northern NSW’).",
+    "start": 72,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "58962a247e12",
+     "end": 71,
+     "prefix": "",
+     "quote": "Some information could relate to a specific place or a group of people.",
+     "start": 0,
+     "suffix": " Make sure you include these det"
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "document",
+    "violation_condition": "Content about a particular place or group of people omits the relevant place or group details."
+   },
+   "when": [
+    "Applies when the information relates to a specific place or group of people."
+   ],
+   "why": "G-2: place-specific and group-specific information are conditions of one details-omission check."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 4347,
+  "output_tokens": 7394,
+  "reasoning_tokens": 4142
+ }
+}

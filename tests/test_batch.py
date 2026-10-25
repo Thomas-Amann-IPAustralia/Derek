@@ -97,7 +97,12 @@ def test_a_gemini_batch_round_trips_into_the_cache(cache, monkeypatch):
     url, body = sent[0]
     assert url.endswith("gemini-3.8-flash:batchGenerateContent")
     req = body["batch"]["input_config"]["requests"]["requests"][0]
-    assert req["request"]["generationConfig"]["thinkingConfig"] == {"thinkingLevel": "low"}
+    config = req["request"]["generationConfig"]
+    assert config["thinkingConfig"] == {"thinkingLevel": "low"}
+    # The batch API refuses responseJsonSchema with this schema; see openapi_schema.
+    assert "responseJsonSchema" not in config
+    assert config["responseSchema"]["type"] == "OBJECT"
+    assert "additionalProperties" not in json.dumps(config["responseSchema"])
 
     good = {"candidates": [{"content": {"parts": [{"text": json.dumps(_answer(PAGES[1]))}]},
                             "finishReason": "STOP"}],

@@ -182,23 +182,42 @@ def call_openai(model: str, system: str, user: str, schema: dict, *,
     return parse_openai(out, model)
 
 
+def openapi_schema(schema):
+    """The same schema in Gemini's OpenAPI-subset form (``responseSchema``).
+
+    The batch API refuses ``responseJsonSchema`` with this schema
+    (INVALID_ARGUMENT, with or without ``additionalProperties``) while the live
+    API accepts it, and one refused request fails every request in its batch.
+    It accepts this form. The two say the same thing for everything the schema
+    uses (objects, arrays, string enums, required keys); what is lost is
+    ``additionalProperties: false``, and ``drafting.resolve`` reads only the
+    keys it knows, so an extra key is ignored rather than trusted.
+    """
+    if isinstance(schema, dict):
+        return {k: (v.upper() if k == "type" else openapi_schema(v))
+                for k, v in schema.items() if k != "additionalProperties"}
+    if isinstance(schema, list):
+        return [openapi_schema(x) for x in schema]
+    return schema
+
+
 def gemini_body(system: str, user: str, schema: dict, *, effort: str, max_tokens: int,
                 stream: bool) -> dict:
     thinking = {"thinkingLevel": effort}
+    config = {"responseMimeType": "application/json", "maxOutputTokens": max_tokens}
     if stream:
         # Thought summaries are asked for only so a live stream keeps moving
         # while the model thinks; they are dropped by parse_gemini. A batch
         # request has no connection to keep alive.
         thinking["includeThoughts"] = True
+        config["responseJsonSchema"] = schema
+    else:
+        config["responseSchema"] = openapi_schema(schema)
+    config["thinkingConfig"] = thinking
     return {
         "systemInstruction": {"parts": [{"text": system}]},
         "contents": [{"role": "user", "parts": [{"text": user}]}],
-        "generationConfig": {
-            "responseMimeType": "application/json",
-            "responseJsonSchema": schema,
-            "maxOutputTokens": max_tokens,
-            "thinkingConfig": thinking,
-        },
+        "generationConfig": config,
     }
 
 

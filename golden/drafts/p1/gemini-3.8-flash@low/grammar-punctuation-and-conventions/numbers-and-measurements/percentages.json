@@ -1,0 +1,892 @@
+{
+ "effort": "low",
+ "input_sha256": "443baa62d86b43a3911d4ab12802d3ab3cca13b0717bcb92cb416d42ffd42028",
+ "model": "gemini-3.8-flash",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "837d633725d1",
+    "end": 150,
+    "prefix": "",
+    "quote": "Percentages help people compare things and understand proportions. Use numerals with the percentage sign. Be concise when you write about percentages.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Introduction summary paragraph summarizing later sections.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/numbers-and-measurements/percentages.md",
+ "page_sha256": "9ffe8c9fb6c0defeff06834a9b733e1935a20e1ffd9055cafa27b3e104178492",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "837d633725d1",
+    "note": "Introduction summary paragraph summarizing later sections.",
+    "quote": "Percentages help people compare things and understand proportions. Use numerals with the percentage sign. Be concise when you write about percentages.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0cb5a46de804",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "5916b8db85bf",
+      "quote": "Use numerals with the percentage sign"
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Percentage sign is used directly next to a numeral.",
+      "parts": [
+       {
+        "block_id": "395fd69478c9",
+        "quote": "15%"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the percentage sign next to a numeral in text.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a percentage written using words (such as 'per cent' or 'percent') after a numeral, or written without the percentage sign in ordinary text",
+    "when": [
+     "The percentage is preceded by a numeral in text, and does not start a sentence."
+    ],
+    "why": "G-4: Heading restated in body text; body specifies 'in text'."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "0cb5a46de804",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "No space between number and percentage sign.",
+      "parts": [
+       {
+        "block_id": "395fd69478c9",
+        "quote": "15%"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Space between number and percentage sign.",
+      "parts": [
+       {
+        "block_id": "01063cb83cc7",
+        "quote": "15 %"
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "MUST_NOT",
+    "quote": "Don’t use a space between the number and the percentage sign.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a space between a number and the percentage sign (%)",
+    "when": [],
+    "why": "Distinct spacing rule directly tested by 15% vs 15 % examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "811f16c14560",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uses decimal 0.25% instead of fraction.",
+      "parts": [
+       {
+        "block_id": "c1b51b3e8193",
+        "quote": "The price of Tapis oil is up by 0.25%."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses fraction 1/4% with percentage sign.",
+      "parts": [
+       {
+        "block_id": "18f0a82cedb9",
+        "quote": "The price of Tapis oil is up by 1/4%."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "PREFER",
+    "quote": "Use decimals rather than fractions with the percentage sign.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a fraction used immediately before a percentage sign (%) instead of a decimal",
+    "when": [],
+    "why": "Directly stated preference with compliant and violating examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "78b0c7c30a6a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "78b0c7c30a6a",
+      "quote": "Reword the sentence if possible, or write the percentage out in words."
+     },
+     {
+      "block_id": "78b0c7c30a6a",
+      "quote": "You can use everyday words if a precise amount is not needed."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Written out in words when starting a sentence.",
+      "parts": [
+       {
+        "block_id": "ec68e6c68cc0",
+        "quote": "Fifty-five per cent of the council’s revenue came from rates."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Sentence reworded so numeral percentage does not start the sentence.",
+      "parts": [
+       {
+        "block_id": "8da4406101e4",
+        "quote": "Rates accounted for 55% of revenue."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Starts sentence with numeral and percentage sign.",
+      "parts": [
+       {
+        "block_id": "522a12a14399",
+        "quote": "55% of the council’s revenue came from rates."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "avoid starting a sentence with the percentage.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence starting with a numeral and percentage sign",
+    "when": [],
+    "why": "G-2, G-3: Sentence-initial percentage rule; the rest of the block provides remediation advice and permissions."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f21e025e9927",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "47cab9528ca8",
+      "quote": "‘Per cent’ and ‘percentage’ aren’t the same. The term ‘per cent’ is an adverb. The noun form is ‘percentage’."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "Uses noun 'percentage'.",
+      "parts": [
+       {
+        "block_id": "f858a1db3a79",
+        "quote": "Statistics show the percentage of Australians with university degrees is increasing."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses 'per cent' as a noun.",
+      "parts": [
+       {
+        "block_id": "5068ba6cda74",
+        "quote": "Statistics show the per cent of Australians with university degrees is increasing."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use the correct form of the noun (percentage)",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "use of 'per cent' or 'percent' where the noun 'percentage' is required (e.g. 'the per cent of')",
+    "when": [
+     "The word is used as a noun, such as after an article or determiner (e.g. 'the per cent of', 'a small per cent')."
+    ],
+    "why": "Heading gives the clear actionable instruction, supported by explanation and examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c2a59e8dd4d6",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "c2a59e8dd4d6",
+      "quote": "‘Percent’ is not Australian spelling."
+     }
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "MUST",
+    "quote": "‘Per cent’ is written as 2 words in Australia.",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the single-word spelling 'percent' instead of the two-word 'per cent'",
+    "when": [],
+    "why": "Direct orthographic rule for Australian English spelling of per cent."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "eb2aa5e5ab07",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "8ef90ff9ac30",
+      "quote": "Don’t use percentages to describe change"
+     },
+     {
+      "block_id": "b96fb3ac236c",
+      "quote": "Tell people what the actual increase or decrease is."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "States the actual increase ($20) instead of a percentage.",
+      "parts": [
+       {
+        "block_id": "15357f33845d",
+        "quote": "The application fee is now $70. This is a $20 increase from 1 January 2020."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Uses a percentage (40%) to describe the change.",
+      "parts": [
+       {
+        "block_id": "95ebe3342f41",
+        "quote": "The application fee increased by 40% from $50 to $70 on 1 January 2020."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using percentages to describe changes.",
+    "specification": "Flag statements where a change/increase/decrease is expressed as a percentage rather than absolute amounts.",
+    "unit": "sentence",
+    "violation_condition": "a percentage used to describe an increase, decrease, or change rather than the actual amounts",
+    "when": [
+     "Describing an increase or decrease in fees, prices, or quantities."
+    ],
+    "why": "G-4: Heading restated in body text; paired with compliant/violating examples."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "09157c4f1c1a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "87407a94ef6c",
+      "quote": "Be concise when writing about percentages"
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "Multiple percentages placed concisely in brackets.",
+      "parts": [
+       {
+        "block_id": "453b5be65eb2",
+        "quote": "In 2019, population size increased in New South Wales (32%), Queensland (20%) and Victoria (19%)."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "Repetitive, verbose prose used for multiple percentages.",
+      "parts": [
+       {
+        "block_id": "8f08b9794edc",
+        "quote": "In 2019, the largest sources of population growth were New South Wales, Queensland and Victoria. New South Wales accounted for 32% of the population growth, Queensland 20%, and Victoria 19%."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "When you use many percentages in body text, put the figures in brackets (parentheses) or use a list to simplify the text.",
+    "specification": "When 3 or more percentages appear in body text, enclose them in brackets or format them as a list.",
+    "unit": "paragraph",
+    "violation_condition": "multiple percentages written out as repetitive prose in body text rather than condensed in parentheses or formatted as a list",
+    "when": [
+     "A paragraph or body text section contains multiple percentage figures."
+    ],
+    "why": "G-1, G-4: Heading is generic advice/section; body sentence provides actionable guideline with examples."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "0cb5a46de804",
+    "end": 50,
+    "prefix": "",
+    "quote": "Use the percentage sign next to a numeral in text.",
+    "start": 0,
+    "suffix": " Don’t use a space between the n"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "5916b8db85bf",
+     "end": 37,
+     "prefix": "",
+     "quote": "Use numerals with the percentage sign",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Percentage sign is used directly next to a numeral.",
+     "parts": [
+      {
+       "block_id": "395fd69478c9",
+       "end": 3,
+       "prefix": "",
+       "quote": "15%",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a percentage written using words (such as 'per cent' or 'percent') after a numeral, or written without the percentage sign in ordinary text"
+   },
+   "when": [
+    "The percentage is preceded by a numeral in text, and does not start a sentence."
+   ],
+   "why": "G-4: Heading restated in body text; body specifies 'in text'."
+  },
+  {
+   "anchor": {
+    "block_id": "0cb5a46de804",
+    "end": 112,
+    "prefix": "sign next to a numeral in text. ",
+    "quote": "Don’t use a space between the number and the percentage sign.",
+    "start": 51,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "No space between number and percentage sign.",
+     "parts": [
+      {
+       "block_id": "395fd69478c9",
+       "end": 3,
+       "prefix": "",
+       "quote": "15%",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Space between number and percentage sign.",
+     "parts": [
+      {
+       "block_id": "01063cb83cc7",
+       "end": 4,
+       "prefix": "",
+       "quote": "15 %",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a space between a number and the percentage sign (%)"
+   },
+   "when": [],
+   "why": "Distinct spacing rule directly tested by 15% vs 15 % examples."
+  },
+  {
+   "anchor": {
+    "block_id": "811f16c14560",
+    "end": 60,
+    "prefix": "",
+    "quote": "Use decimals rather than fractions with the percentage sign.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses decimal 0.25% instead of fraction.",
+     "parts": [
+      {
+       "block_id": "c1b51b3e8193",
+       "end": 38,
+       "prefix": "",
+       "quote": "The price of Tapis oil is up by 0.25%.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses fraction 1/4% with percentage sign.",
+     "parts": [
+      {
+       "block_id": "18f0a82cedb9",
+       "end": 37,
+       "prefix": "",
+       "quote": "The price of Tapis oil is up by 1/4%.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "PREFER",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "a fraction used immediately before a percentage sign (%) instead of a decimal"
+   },
+   "when": [],
+   "why": "Directly stated preference with compliant and violating examples."
+  },
+  {
+   "anchor": {
+    "block_id": "78b0c7c30a6a",
+    "end": 65,
+    "prefix": "As for any number, ",
+    "quote": "avoid starting a sentence with the percentage.",
+    "start": 19,
+    "suffix": " Reword the sentence if possible"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "78b0c7c30a6a",
+     "end": 136,
+     "prefix": "a sentence with the percentage. ",
+     "quote": "Reword the sentence if possible, or write the percentage out in words.",
+     "start": 66,
+     "suffix": " You can use everyday words if a"
+    },
+    {
+     "block_id": "78b0c7c30a6a",
+     "end": 198,
+     "prefix": "te the percentage out in words. ",
+     "quote": "You can use everyday words if a precise amount is not needed.",
+     "start": 137,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Written out in words when starting a sentence.",
+     "parts": [
+      {
+       "block_id": "ec68e6c68cc0",
+       "end": 61,
+       "prefix": "",
+       "quote": "Fifty-five per cent of the council’s revenue came from rates.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "Sentence reworded so numeral percentage does not start the sentence.",
+     "parts": [
+      {
+       "block_id": "8da4406101e4",
+       "end": 35,
+       "prefix": "",
+       "quote": "Rates accounted for 55% of revenue.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Starts sentence with numeral and percentage sign.",
+     "parts": [
+      {
+       "block_id": "522a12a14399",
+       "end": 45,
+       "prefix": "",
+       "quote": "55% of the council’s revenue came from rates.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "a sentence starting with a numeral and percentage sign"
+   },
+   "when": [],
+   "why": "G-2, G-3: Sentence-initial percentage rule; the rest of the block provides remediation advice and permissions."
+  },
+  {
+   "anchor": {
+    "block_id": "f21e025e9927",
+    "end": 45,
+    "prefix": "",
+    "quote": "Use the correct form of the noun (percentage)",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "47cab9528ca8",
+     "end": 109,
+     "prefix": "",
+     "quote": "‘Per cent’ and ‘percentage’ aren’t the same. The term ‘per cent’ is an adverb. The noun form is ‘percentage’.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Uses noun 'percentage'.",
+     "parts": [
+      {
+       "block_id": "f858a1db3a79",
+       "end": 84,
+       "prefix": "",
+       "quote": "Statistics show the percentage of Australians with university degrees is increasing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses 'per cent' as a noun.",
+     "parts": [
+      {
+       "block_id": "5068ba6cda74",
+       "end": 82,
+       "prefix": "",
+       "quote": "Statistics show the per cent of Australians with university degrees is increasing.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "9fa4d8e8d642e251",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "use of 'per cent' or 'percent' where the noun 'percentage' is required (e.g. 'the per cent of')"
+   },
+   "when": [
+    "The word is used as a noun, such as after an article or determiner (e.g. 'the per cent of', 'a small per cent')."
+   ],
+   "why": "Heading gives the clear actionable instruction, supported by explanation and examples."
+  },
+  {
+   "anchor": {
+    "block_id": "c2a59e8dd4d6",
+    "end": 46,
+    "prefix": "",
+    "quote": "‘Per cent’ is written as 2 words in Australia.",
+    "start": 0,
+    "suffix": " ‘Percent’ is not Australian spe"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "c2a59e8dd4d6",
+     "end": 84,
+     "prefix": "ritten as 2 words in Australia. ",
+     "quote": "‘Percent’ is not Australian spelling.",
+     "start": 47,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "MUST",
+    "specification": "",
+    "unit": "token",
+    "violation_condition": "the single-word spelling 'percent' instead of the two-word 'per cent'"
+   },
+   "when": [],
+   "why": "Direct orthographic rule for Australian English spelling of per cent."
+  },
+  {
+   "anchor": {
+    "block_id": "eb2aa5e5ab07",
+    "end": 44,
+    "prefix": "",
+    "quote": "Avoid using percentages to describe changes.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "8ef90ff9ac30",
+     "end": 40,
+     "prefix": "",
+     "quote": "Don’t use percentages to describe change",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b96fb3ac236c",
+     "end": 52,
+     "prefix": "",
+     "quote": "Tell people what the actual increase or decrease is.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "States the actual increase ($20) instead of a percentage.",
+     "parts": [
+      {
+       "block_id": "15357f33845d",
+       "end": 75,
+       "prefix": "",
+       "quote": "The application fee is now $70. This is a $20 increase from 1 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Uses a percentage (40%) to describe the change.",
+     "parts": [
+      {
+       "block_id": "95ebe3342f41",
+       "end": 71,
+       "prefix": "",
+       "quote": "The application fee increased by 40% from $50 to $70 on 1 January 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Flag statements where a change/increase/decrease is expressed as a percentage rather than absolute amounts.",
+    "unit": "sentence",
+    "violation_condition": "a percentage used to describe an increase, decrease, or change rather than the actual amounts"
+   },
+   "when": [
+    "Describing an increase or decrease in fees, prices, or quantities."
+   ],
+   "why": "G-4: Heading restated in body text; paired with compliant/violating examples."
+  },
+  {
+   "anchor": {
+    "block_id": "09157c4f1c1a",
+    "end": 121,
+    "prefix": "",
+    "quote": "When you use many percentages in body text, put the figures in brackets (parentheses) or use a list to simplify the text.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "87407a94ef6c",
+     "end": 41,
+     "prefix": "",
+     "quote": "Be concise when writing about percentages",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "Multiple percentages placed concisely in brackets.",
+     "parts": [
+      {
+       "block_id": "453b5be65eb2",
+       "end": 97,
+       "prefix": "",
+       "quote": "In 2019, population size increased in New South Wales (32%), Queensland (20%) and Victoria (19%).",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "Repetitive, verbose prose used for multiple percentages.",
+     "parts": [
+      {
+       "block_id": "8f08b9794edc",
+       "end": 190,
+       "prefix": "",
+       "quote": "In 2019, the largest sources of population growth were New South Wales, Queensland and Victoria. New South Wales accounted for 32% of the population growth, Queensland 20%, and Victoria 19%.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "When 3 or more percentages appear in body text, enclose them in brackets or format them as a list.",
+    "unit": "paragraph",
+    "violation_condition": "multiple percentages written out as repetitive prose in body text rather than condensed in parentheses or formatted as a list"
+   },
+   "when": [
+    "A paragraph or body text section contains multiple percentage figures."
+   ],
+   "why": "G-1, G-4: Heading is generic advice/section; body sentence provides actionable guideline with examples."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gemini-3.8-flash",
+ "stop_reason": "STOP",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3970,
+  "output_tokens": 3280,
+  "reasoning_tokens": 0
+ }
+}

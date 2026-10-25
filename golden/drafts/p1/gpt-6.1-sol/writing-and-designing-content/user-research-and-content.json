@@ -1,0 +1,775 @@
+{
+ "effort": "high",
+ "input_sha256": "1d6487370fcbda6627411b29adb78df21d94bbcbbe52b4e3fb08ee7c1f60b2b8",
+ "model": "gpt-6.1-sol",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "e9cd5902adcc",
+    "end": 38,
+    "prefix": "",
+    "quote": "Only create content that meets a need.",
+    "start": 0,
+    "suffix": " Find out about users and their "
+   },
+   "note": "Covered by the rule about content meeting a real need.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e9cd5902adcc",
+    "end": 98,
+    "prefix": "eate content that meets a need. ",
+    "quote": "Find out about users and their needs through user research.",
+    "start": 39,
+    "suffix": ""
+   },
+   "note": "G-5: instructs the writer to conduct research, rather than specifying a property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "00d8ef980dc2",
+    "end": 62,
+    "prefix": "",
+    "quote": "Only design and write content that meets a real person’s need.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Covered by the rule about content meeting a real need.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "47c36cf073a2",
+    "end": 59,
+    "prefix": "",
+    "quote": "Find out about users and their needs through user research.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: research-process instruction.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b6b9bc51b6fc",
+    "end": 132,
+    "prefix": "",
+    "quote": "You must understand the needs of the users of your service to meet the Digital Service Standard: Criterion 1. Understand user needs.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a requirement about the service team's understanding and compliance process, not a separately checkable textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "767e981f175d",
+    "end": 37,
+    "prefix": "",
+    "quote": "Write for the user, not ‘an audience’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "The section explains a research orientation: learn about actual, diverse users rather than imagining an audience. It supplies no separate textual check.",
+   "reason": "advice",
+   "seed_uid": "b6c0856504fce030"
+  },
+  {
+   "anchor": {
+    "block_id": "e6778d47bbb9",
+    "end": 194,
+    "prefix": "",
+    "quote": "It’s not enough to imagine one kind of user. You need to do user research to learn about the range of users and their contexts. It's important to find out about their specific and diverse needs.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: instructions about researching users and their contexts.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ceacf91864a2",
+    "end": 78,
+    "prefix": "",
+    "quote": "Do user research to help you to understand how to meet the needs of all users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: research-process instruction.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "46fec5b26e19",
+    "end": 93,
+    "prefix": "",
+    "quote": "Include people with disability in your user research to avoid creating any barriers for them.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: specifies research participants, not a property of the resulting text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e1f7c23c50f1",
+    "end": 43,
+    "prefix": "",
+    "quote": "Adjust the research approach to the context",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: concerns how research is conducted.",
+   "reason": "advice",
+   "seed_uid": "e1ffb6bbe34425e7"
+  },
+  {
+   "anchor": {
+    "block_id": "f7009f264459",
+    "end": 61,
+    "prefix": "",
+    "quote": "If you can, work with a user researcher to plan the approach.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: advice about collaboration and research planning.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b41cd6f61881",
+    "end": 90,
+    "prefix": "",
+    "quote": "In this context you may not need to do research with the people who will read the content.",
+    "start": 0,
+    "suffix": " You might need to find out abou"
+   },
+   "note": "G-3: permits omitting reader research for internal policy or project material; it cannot itself produce a finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b41cd6f61881",
+    "end": 170,
+    "prefix": "ople who will read the content. ",
+    "quote": "You might need to find out about the subject of the content you are working on.",
+    "start": 91,
+    "suffix": ""
+   },
+   "note": "G-5: advice to investigate the subject.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "050314af3f27",
+    "end": 182,
+    "prefix": "ce design and delivery process. ",
+    "quote": "In this process, everyone in the team takes part in research through the Discovery, Alpha, Beta and Live stages.",
+    "start": 70,
+    "suffix": ""
+   },
+   "note": "G-5: specifies team participation in a service-design process, not a textual property.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "33c4fc4506ed",
+    "end": 92,
+    "prefix": "",
+    "quote": "Read the DTA’s digital guides to find out about the role of user research in service design.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: directs the writer to another resource.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "4ed05110e490",
+    "end": 77,
+    "prefix": "",
+    "quote": "If you are creating content you need to be part of the user research process.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: requires participation in a process rather than a property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8c35839a5be8",
+    "end": 136,
+    "prefix": "",
+    "quote": "It is best if you can observe research sessions led by an experienced user researcher. Then help to synthesise and analyse the research.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: instructions about observing and analysing research.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9e127e775dd8",
+    "end": 104,
+    "prefix": "",
+    "quote": "In a team that is delivering a service, everyone is part of research for at least 2 hours every 6 weeks.",
+    "start": 0,
+    "suffix": " This include writers, content d"
+   },
+   "note": "G-5: a measurable participation requirement, but not one that text can violate.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0a98c09a8162",
+    "end": 150,
+    "prefix": "",
+    "quote": "People who work on content must be part of the discovery process. They need to observe research sessions and contribute their perspective in analysis.",
+    "start": 0,
+    "suffix": " Content designers, writers and "
+   },
+   "note": "G-5: requirements about staff participation in discovery and research.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "a8aec7006235",
+    "end": 70,
+    "prefix": "User research is a craft. ",
+    "quote": "If possible, get an expert to lead research.",
+    "start": 26,
+    "suffix": " This will help you uncover as m"
+   },
+   "note": "G-5: advice about who should conduct research.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f4ef7d309292",
+    "end": 111,
+    "prefix": "",
+    "quote": "If you or your team are not able to access a user researcher or to talk to users, at least do desktop research.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: a fallback research activity, not a text requirement.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "24361563f6c6",
+    "end": 109,
+    "prefix": "",
+    "quote": "When you look at search data be aware that people use different words to search for and to talk about things.",
+    "start": 0,
+    "suffix": " Search terms can also be differ"
+   },
+   "note": "G-5: guidance for interpreting research data.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "351b3b7629e4",
+    "end": 71,
+    "prefix": "",
+    "quote": "It’s also helpful to do desktop research as well as interviewing users.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: recommends a research method.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b937d6d7ab16",
+    "end": 67,
+    "prefix": "",
+    "quote": "Review existing relevant research as part of your desktop research.",
+    "start": 0,
+    "suffix": " This includes research by other"
+   },
+   "note": "G-5: research-process instruction.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "6db12537bdd9",
+    "end": 79,
+    "prefix": "",
+    "quote": "When you review existing research, be aware that the context will be different.",
+    "start": 0,
+    "suffix": " There may also be gaps in the r"
+   },
+   "note": "G-5: guidance for evaluating existing research.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "31e5a9345178",
+    "end": 42,
+    "prefix": "",
+    "quote": "Use existing research as a starting point.",
+    "start": 0,
+    "suffix": " It’s not helpful to research th"
+   },
+   "note": "G-5: instruction about the research process.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "8e20ba261104",
+    "end": 115,
+    "prefix": "",
+    "quote": "If you have a choice, do user research. It can be helpful to do market research and stakeholder management as well.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: recommends research activities, not forms of wording.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f388b2e33b24",
+    "end": 28,
+    "prefix": "",
+    "quote": "User research: know the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Labels the purpose of user research; it is not an independent instruction about text.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ebafdf91b97e",
+    "end": 32,
+    "prefix": "",
+    "quote": "Market research: know the market",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Labels the purpose of market research.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "5c0f72a9d064",
+    "end": 42,
+    "prefix": "",
+    "quote": "Stakeholder engagement: know the community",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Labels the purpose of stakeholder engagement.",
+   "reason": "description",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "writing-and-designing-content/user-research-and-content.md",
+ "page_sha256": "c60e6b0ef3c5a2661d2ebf3035967b68a81197b754a8056403d8a42e5f9caeef",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "e9cd5902adcc",
+    "note": "Covered by the rule about content meeting a real need.",
+    "quote": "Only create content that meets a need.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e9cd5902adcc",
+    "note": "G-5: instructs the writer to conduct research, rather than specifying a property of the text.",
+    "quote": "Find out about users and their needs through user research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "00d8ef980dc2",
+    "note": "Covered by the rule about content meeting a real need.",
+    "quote": "Only design and write content that meets a real person’s need.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "47c36cf073a2",
+    "note": "G-5: research-process instruction.",
+    "quote": "Find out about users and their needs through user research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b6b9bc51b6fc",
+    "note": "G-5: a requirement about the service team's understanding and compliance process, not a separately checkable textual property.",
+    "quote": "You must understand the needs of the users of your service to meet the Digital Service Standard: Criterion 1. Understand user needs.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "767e981f175d",
+    "note": "The section explains a research orientation: learn about actual, diverse users rather than imagining an audience. It supplies no separate textual check.",
+    "quote": "Write for the user, not ‘an audience’",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e6778d47bbb9",
+    "note": "G-5: instructions about researching users and their contexts.",
+    "quote": "It’s not enough to imagine one kind of user. You need to do user research to learn about the range of users and their contexts. It's important to find out about their specific and diverse needs.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "ceacf91864a2",
+    "note": "G-5: research-process instruction.",
+    "quote": "Do user research to help you to understand how to meet the needs of all users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "46fec5b26e19",
+    "note": "G-5: specifies research participants, not a property of the resulting text.",
+    "quote": "Include people with disability in your user research to avoid creating any barriers for them.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "e1f7c23c50f1",
+    "note": "G-5: concerns how research is conducted.",
+    "quote": "Adjust the research approach to the context",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f7009f264459",
+    "note": "G-5: advice about collaboration and research planning.",
+    "quote": "If you can, work with a user researcher to plan the approach.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b41cd6f61881",
+    "note": "G-3: permits omitting reader research for internal policy or project material; it cannot itself produce a finding.",
+    "quote": "In this context you may not need to do research with the people who will read the content.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "b41cd6f61881",
+    "note": "G-5: advice to investigate the subject.",
+    "quote": "You might need to find out about the subject of the content you are working on.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "050314af3f27",
+    "note": "G-5: specifies team participation in a service-design process, not a textual property.",
+    "quote": "In this process, everyone in the team takes part in research through the Discovery, Alpha, Beta and Live stages.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "33c4fc4506ed",
+    "note": "G-5: directs the writer to another resource.",
+    "quote": "Read the DTA’s digital guides to find out about the role of user research in service design.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "4ed05110e490",
+    "note": "G-5: requires participation in a process rather than a property of the text.",
+    "quote": "If you are creating content you need to be part of the user research process.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8c35839a5be8",
+    "note": "G-5: instructions about observing and analysing research.",
+    "quote": "It is best if you can observe research sessions led by an experienced user researcher. Then help to synthesise and analyse the research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "9e127e775dd8",
+    "note": "G-5: a measurable participation requirement, but not one that text can violate.",
+    "quote": "In a team that is delivering a service, everyone is part of research for at least 2 hours every 6 weeks.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "0a98c09a8162",
+    "note": "G-5: requirements about staff participation in discovery and research.",
+    "quote": "People who work on content must be part of the discovery process. They need to observe research sessions and contribute their perspective in analysis.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "a8aec7006235",
+    "note": "G-5: advice about who should conduct research.",
+    "quote": "If possible, get an expert to lead research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f4ef7d309292",
+    "note": "G-5: a fallback research activity, not a text requirement.",
+    "quote": "If you or your team are not able to access a user researcher or to talk to users, at least do desktop research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "24361563f6c6",
+    "note": "G-5: guidance for interpreting research data.",
+    "quote": "When you look at search data be aware that people use different words to search for and to talk about things.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "351b3b7629e4",
+    "note": "G-5: recommends a research method.",
+    "quote": "It’s also helpful to do desktop research as well as interviewing users.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b937d6d7ab16",
+    "note": "G-5: research-process instruction.",
+    "quote": "Review existing relevant research as part of your desktop research.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "6db12537bdd9",
+    "note": "G-5: guidance for evaluating existing research.",
+    "quote": "When you review existing research, be aware that the context will be different.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "31e5a9345178",
+    "note": "G-5: instruction about the research process.",
+    "quote": "Use existing research as a starting point.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "8e20ba261104",
+    "note": "G-5: recommends research activities, not forms of wording.",
+    "quote": "If you have a choice, do user research. It can be helpful to do market research and stakeholder management as well.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "f388b2e33b24",
+    "note": "Labels the purpose of user research; it is not an independent instruction about text.",
+    "quote": "User research: know the user",
+    "reason": "description"
+   },
+   {
+    "block_id": "ebafdf91b97e",
+    "note": "Labels the purpose of market research.",
+    "quote": "Market research: know the market",
+    "reason": "description"
+   },
+   {
+    "block_id": "5c0f72a9d064",
+    "note": "Labels the purpose of stakeholder engagement.",
+    "quote": "Stakeholder engagement: know the community",
+    "reason": "description"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "16174440f626",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "e9cd5902adcc",
+      "quote": "Only create content that meets a need."
+     },
+     {
+      "block_id": "00d8ef980dc2",
+      "quote": "Only design and write content that meets a real person’s need."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Create content that meets a real need",
+    "specification": "Assessing this requires information about actual users and their needs. The page does not provide a text-only test for whether a need is real or has been met.",
+    "unit": "document",
+    "violation_condition": "Content that does not meet a real person’s need.",
+    "when": [],
+    "why": "G-4 consolidates the heading and its restatements; G-5 excludes the separate instructions about conducting research."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "af27fd749fc0",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [
+     {
+      "block_id": "af27fd749fc0",
+      "quote": "This includes other people working in government as well as end users."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "This illustrates the research and review process, rather than presenting an actual compliant report passage.",
+      "parts": [
+       {
+        "block_id": "fb68a34c6717",
+        "quote": "You are a policy officer working on a short progress report for a senior manager. The report updates the manager on a government policy your team is developing."
+       },
+       {
+        "block_id": "d4d6e284afbb",
+        "quote": "As you write the report you check for assumptions about the people the policy will affect. You identify some untested assumptions so you raise this with the team for more research."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "If you are writing about other people, make sure you are not making assumptions about them.",
+    "specification": "Determining whether a statement rests on an untested assumption requires information about its evidential basis; the wording alone may not establish a violation.",
+    "unit": "sentence",
+    "violation_condition": "Statements about other people that rest on untested assumptions.",
+    "when": [
+     "Applies when writing about other people, including people working in government and end users."
+    ],
+    "why": "G-2 keeps the different groups of people within one check; G-5 separates the restriction on assumptions in writing from the surrounding research-process advice."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "16174440f626",
+    "end": 37,
+    "prefix": "",
+    "quote": "Create content that meets a real need",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "e9cd5902adcc",
+     "end": 38,
+     "prefix": "",
+     "quote": "Only create content that meets a need.",
+     "start": 0,
+     "suffix": " Find out about users and their "
+    },
+    {
+     "block_id": "00d8ef980dc2",
+     "end": 62,
+     "prefix": "",
+     "quote": "Only design and write content that meets a real person’s need.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "aa30c8ca9bea2824",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assessing this requires information about actual users and their needs. The page does not provide a text-only test for whether a need is real or has been met.",
+    "unit": "document",
+    "violation_condition": "Content that does not meet a real person’s need."
+   },
+   "when": [],
+   "why": "G-4 consolidates the heading and its restatements; G-5 excludes the separate instructions about conducting research."
+  },
+  {
+   "anchor": {
+    "block_id": "af27fd749fc0",
+    "end": 91,
+    "prefix": "",
+    "quote": "If you are writing about other people, make sure you are not making assumptions about them.",
+    "start": 0,
+    "suffix": " This includes other people work"
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [
+    {
+     "block_id": "af27fd749fc0",
+     "end": 162,
+     "prefix": " making assumptions about them. ",
+     "quote": "This includes other people working in government as well as end users.",
+     "start": 92,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "This illustrates the research and review process, rather than presenting an actual compliant report passage.",
+     "parts": [
+      {
+       "block_id": "fb68a34c6717",
+       "end": 160,
+       "prefix": "",
+       "quote": "You are a policy officer working on a short progress report for a senior manager. The report updates the manager on a government policy your team is developing.",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "d4d6e284afbb",
+       "end": 180,
+       "prefix": "",
+       "quote": "As you write the report you check for assumptions about the people the policy will affect. You identify some untested assumptions so you raise this with the team for more research.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Determining whether a statement rests on an untested assumption requires information about its evidential basis; the wording alone may not establish a violation.",
+    "unit": "sentence",
+    "violation_condition": "Statements about other people that rest on untested assumptions."
+   },
+   "when": [
+    "Applies when writing about other people, including people working in government and end users."
+   ],
+   "why": "G-2 keeps the different groups of people within one check; G-5 separates the restriction on assumptions in writing from the surrounding research-process advice."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6.1-sol",
+ "stop_reason": "completed",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 3047,
+  "input_tokens": 6084,
+  "output_tokens": 5771,
+  "reasoning_tokens": 3106
+ }
+}
