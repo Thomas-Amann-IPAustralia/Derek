@@ -525,9 +525,22 @@ def human_pages() -> set[str]:
             if any(s.by not in (BY_CONSENSUS, BY_ADJUDICATOR) for s in spans)}
 
 
+def settled_pages() -> set[str]:
+    """Pages consensus will not plan again: a human marked them, or a consensus
+    sweep already completed them. Re-planning a swept page with a different
+    pair would put a second set of rules beside the first; redoing one is a
+    deliberate act (remove its spans first), not a side effect of `--all`."""
+    from derek.extract.golden import load_golden
+
+    gs = load_golden()
+    swept = {p for p, m in gs.swept.items()
+             if m.get("status") == "complete" and m.get("by") in (BY_CONSENSUS, BY_ADJUDICATOR)}
+    return human_pages() | swept
+
+
 def build_queue(pages: list[str]) -> tuple[list[dict], list[str]]:
     ready, missing = _drafted(pages)
-    skip = human_pages()
+    skip = settled_pages()
     items = []
     for rel in sorted(ready):
         if rel in skip:
@@ -869,12 +882,12 @@ def main(argv: list[str] | None = None) -> int:
 
     adj = load_adjudications()
     ready, _ = _drafted(pages)
-    skip = human_pages()
+    skip = settled_pages()
     if args.command == "status":
         agreed = single = 0
         for rel in sorted(ready):
             if rel in skip:
-                print(f"  {rel}: human-annotated, left alone")
+                print(f"  {rel}: already settled (human-marked or swept), left alone")
                 continue
             plan = page_plan(rel, ready[rel])
             open_ = sum(1 for it in plan["items"] if it["item_id"] not in adj)
