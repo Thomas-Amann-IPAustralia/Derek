@@ -138,6 +138,7 @@ def apply_op(gs: GoldenSet, op: dict, *, eligibility, page_text) -> str | None:
     # kind == "span"
     raw = op.get("span") or {}
     span = _span_from_op(raw, page, by, op.get("at", ""), text)
+    op["_span_id"] = span.span_id      # which spans this run brought; see _apply_decisions
     gs.spans.setdefault(page, [])
     gs.spans[page] = [s for s in gs.spans[page] if s.span_id != span.span_id]
     gs.spans[page].append(span)
@@ -507,13 +508,18 @@ def _apply_decisions(report, server, apply_decisions) -> tuple[int, int]:
     read = _page_reader()
     gs = report["golden"]
     n, missing = 0, []
+    # Only the spans this export brought. Replaying every span in the golden
+    # set re-applied every earlier reviewer's tags on each upload, which
+    # changed no verdict but appended a duplicate row to each of their
+    # review histories, every time.
+    fresh = {op.get("_span_id") for op, _ in report["applied"] if op.get("_span_id")}
 
     for page in sorted(gs.spans):
         text = read(page)
         if text is None:
             continue
         for span, cand in golden_rules(page, text, gs.spans[page]):
-            if not span.tags:
+            if not span.tags or span.span_id not in fresh:
                 continue
             rule = rules.get(cand.uid)
             if rule is None:

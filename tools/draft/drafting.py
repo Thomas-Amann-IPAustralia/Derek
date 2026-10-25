@@ -328,10 +328,10 @@ def prompt_sha256() -> str:
     return hashlib.sha256(body.encode("utf-8")).hexdigest()
 
 
-def input_sha256(page: Page) -> str:
+def input_sha256(page: Page, model: str = MODEL) -> str:
     body = json.dumps({
         "prompt_version": PROMPT_VERSION, "prompt_sha256": prompt_sha256(),
-        "model": MODEL, "effort": EFFORT, "user": user_message(page),
+        "model": model, "effort": EFFORT, "user": user_message(page),
     }, sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(body.encode("utf-8")).hexdigest()
 
@@ -487,7 +487,7 @@ def draft_path(rel: str, *, prompt_version: str = PROMPT_VERSION, model: str = M
 
 
 def record(page: Page, raw: dict, resolved: Resolved, *, served_model: str,
-           usage: dict, stop_reason: str) -> dict:
+           usage: dict, stop_reason: str, model: str = MODEL) -> dict:
     return {
         "schema_version": SCHEMA_VERSION,
         "page_path": page.path,
@@ -495,8 +495,8 @@ def record(page: Page, raw: dict, resolved: Resolved, *, served_model: str,
         "render_version": RENDER_VERSION,
         "prompt_version": PROMPT_VERSION,
         "prompt_sha256": prompt_sha256(),
-        "input_sha256": input_sha256(page),
-        "model": MODEL,
+        "input_sha256": input_sha256(page, model),
+        "model": model,
         "served_model": served_model,
         "effort": EFFORT,
         "stop_reason": stop_reason,

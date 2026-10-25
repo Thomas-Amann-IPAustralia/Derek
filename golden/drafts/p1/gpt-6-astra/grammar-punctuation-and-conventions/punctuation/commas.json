@@ -1,0 +1,4093 @@
+{
+ "effort": "high",
+ "input_sha256": "9baf0295ce543e8a16567c073741324b000a65a5745cf08b240b136cb1df46ce",
+ "model": "gpt-6-astra",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a76f6e107b75",
+    "end": 61,
+    "prefix": "",
+    "quote": "Separate introductory words, phrases and clauses with a comma",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the more specific introductory-word and introductory-phrase rules.",
+   "reason": "section",
+   "seed_uid": "2f41e75ee7296833"
+  },
+  {
+   "anchor": {
+    "block_id": "7f8b236ccb3d",
+    "end": 95,
+    "prefix": "",
+    "quote": "A comma separates introductory words, phrases and clauses from the main clause of the sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introductory summary of the child rules, not an additional finding.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9bc94c47ba4d",
+    "end": 150,
+    "prefix": "s without changing the meaning. ",
+    "quote": "In these cases, you don’t need a comma before the phrase.",
+    "start": 93,
+    "suffix": " This simpler structure can be e"
+   },
+   "note": "G-3: recorded as the end-position exception to the introductory-phrase rule.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "0d9e27004d63",
+    "end": 56,
+    "prefix": "",
+    "quote": "Place a comma after adverbs and other introductory words",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the selected body sentence also explicitly covers greetings and addressing someone.",
+   "reason": "restatement",
+   "seed_uid": "e14e1ddc770a469f"
+  },
+  {
+   "anchor": {
+    "block_id": "9f0af65b48a7",
+    "end": 80,
+    "prefix": "",
+    "quote": "You don’t need a comma after an introductory word if the sentence is very short.",
+    "start": 0,
+    "suffix": " This minimises punctuation in v"
+   },
+   "note": "G-3: an exception to the introductory-word rule, not a separate prohibition.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "75d0983d17a2",
+    "end": 68,
+    "prefix": "",
+    "quote": "Use a comma after phrases and clauses that change the whole sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body identifies the relevant phrases and clauses as adverbial.",
+   "reason": "restatement",
+   "seed_uid": "cdcdd37c9db07994"
+  },
+  {
+   "anchor": {
+    "block_id": "a4e35a65752d",
+    "end": 167,
+    "prefix": "ith ‘if’, ‘unless’ or ‘until’). ",
+    "quote": "They should also have a comma after them if they start the sentence.",
+    "start": 99,
+    "suffix": ""
+   },
+   "note": "G-2: introductory conditional clauses are a case of the adverbial-clause rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "75afd8850610",
+    "end": 158,
+    "prefix": "",
+    "quote": "Use a comma after an introductory phrase that ends with a numeral and is immediately followed by another numeral. It doesn’t matter how short the sentence is.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: this specifies a case of the introductory-phrase comma check, including its sentence-length condition.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3b47e70d54c3",
+    "end": 85,
+    "prefix": "",
+    "quote": "Avoid this type of sentence structure because the string of numbers can be confusing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the rule against beginning with a string of numbers and dates.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "3382fe5873f7",
+    "end": 52,
+    "prefix": "",
+    "quote": "Mark out non‐essential information within a sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific clause, noun-phrase, question-tag and phrase rules.",
+   "reason": "section",
+   "seed_uid": "b3876191780ac24e"
+  },
+  {
+   "anchor": {
+    "block_id": "ab7d509bd521",
+    "end": 95,
+    "prefix": "",
+    "quote": "Within a sentence, use a pair of commas to separate non-essential or supplementary information.",
+    "start": 0,
+    "suffix": " Always check for the second com"
+   },
+   "note": "G-1: introductory summary; its specific cases are checked by the child rules.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ab7d509bd521",
+    "end": 159,
+    "prefix": "l or supplementary information. ",
+    "quote": "Always check for the second comma where there should be a pair.",
+    "start": 96,
+    "suffix": ""
+   },
+   "note": "G-5: tells the writer to check; the child rules already flag a missing member of a required comma pair.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "03e35c308835",
+    "end": 129,
+    "prefix": "",
+    "quote": "Generally, if you can take out part of the sentence and it is still grammatically correct, it should be between a pair of commas.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: a general introductory test elaborated by the more specific child rules, not a second comma-pair finding.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "686dbaeb1ffe",
+    "end": 16,
+    "prefix": "",
+    "quote": "Check carefully.",
+    "start": 0,
+    "suffix": " Using comma pairs can completel"
+   },
+   "note": "G-5: a reviewing action, not a property of the text.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d707c51ceaf7",
+    "end": 29,
+    "prefix": "",
+    "quote": "Set off non-essential clauses",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body explicitly identifies commas as the delimiters.",
+   "reason": "restatement",
+   "seed_uid": "baebfee8d7fefd68"
+  },
+  {
+   "anchor": {
+    "block_id": "c9df3f688cd7",
+    "end": 56,
+    "prefix": "",
+    "quote": "Don’t use commas if the clause is essential for meaning.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the essential-clause case of the same clause-delimiting check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "63fd6267329c",
+    "end": 117,
+    "prefix": "",
+    "quote": "If you can remove the clause and your sentence means the same thing, it’s non-essential and should go between commas.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: supplies the meaning-preservation test for the selected non-essential-clause rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e22f43226693",
+    "end": 70,
+    "prefix": "",
+    "quote": "Check if you can rephrase the information to make it easier to follow.",
+    "start": 0,
+    "suffix": " It is easier for people to read"
+   },
+   "note": "G-5: asks the writer to consider rephrasing; it does not establish a separate bounded prohibition on supplementary information.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d45c45234a14",
+    "end": 96,
+    "prefix": "",
+    "quote": "Use a pair of commas when you have 2 noun phrases next to each other that define the same thing.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the selected noun-phrase heading.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "cf40d7f3ce8a",
+    "end": 118,
+    "prefix": "",
+    "quote": "You should be able to take out the noun phrase between the comma pair and still have a grammatically correct sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: a criterion for identifying the supplementary noun phrase, not a separate finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bdd2f1574e38",
+    "end": 41,
+    "prefix": "",
+    "quote": "Separate questions tagged onto a sentence",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the selected body sentence specifies the required comma.",
+   "reason": "restatement",
+   "seed_uid": "7c4f5c8be1bca65e"
+  },
+  {
+   "anchor": {
+    "block_id": "82b59e0a2abc",
+    "end": 40,
+    "prefix": "",
+    "quote": "Use commas with the phrase ‘for example’",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body specifies comma placement more precisely.",
+   "reason": "restatement",
+   "seed_uid": "6fb92d378b027deb"
+  },
+  {
+   "anchor": {
+    "block_id": "66e9999f9ad3",
+    "end": 89,
+    "prefix": "",
+    "quote": "If ‘for example’ begins a sentence, it is an introductory phrase. Follow it with a comma.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: sentence-initial placement is a case of the same ‘for example’ comma check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "9b7a8e9fde69",
+    "end": 43,
+    "prefix": "",
+    "quote": "Don’t use commas with Latin shortened forms",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body clarifies that the prohibited comma follows the shortened form.",
+   "reason": "restatement",
+   "seed_uid": "c99b24f6e85c5c4a"
+  },
+  {
+   "anchor": {
+    "block_id": "7d92326bf7b4",
+    "end": 114,
+    "prefix": "",
+    "quote": "Use commas to connect 2 or more principal clauses joined by a coordinating conjunction (‘and’, ‘or’, ‘but’, ‘so’).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: absorbed into the principal-clause heading and its conditions.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "c51d8ddcdda5",
+    "end": 81,
+    "prefix": "",
+    "quote": "If they have different subjects, use a comma before the coordinating conjunction.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: the different-subject case of the principal-clause check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b1c47f10f2c1",
+    "end": 115,
+    "prefix": "",
+    "quote": "If 2 clauses share the same subject, you don’t need to repeat the subject or insert a comma before the conjunction.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-3: recorded as an exception; it does not prohibit a comma or a repeated subject.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "90bcd8b391b4",
+    "end": 103,
+    "prefix": "",
+    "quote": "The exception to this rule is when you have joined more than 2 principal clauses with the same subject.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: qualifies the shared-subject exception within the principal-clause rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bd2060f01f2f",
+    "end": 38,
+    "prefix": "",
+    "quote": "Don’t use commas to ‘splice’ sentences",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the body states the check and its coordinating-conjunction exception explicitly.",
+   "reason": "restatement",
+   "seed_uid": "6625dbf6cb734ba1"
+  },
+  {
+   "anchor": {
+    "block_id": "64f4551797f5",
+    "end": 50,
+    "prefix": "",
+    "quote": "Punctuate sentence lists and strings of adjectives",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the more specific list and adjective rules.",
+   "reason": "section",
+   "seed_uid": "c39018fe403f68cf"
+  },
+  {
+   "anchor": {
+    "block_id": "05550c576f7a",
+    "end": 58,
+    "prefix": "",
+    "quote": "Separate items in lists of nouns or adjectives with commas",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the selected body sentence states the sentence-list separator rule.",
+   "reason": "restatement",
+   "seed_uid": "1cbd27a45d8d085b"
+  },
+  {
+   "anchor": {
+    "block_id": "d10e8de4a1ab",
+    "end": 75,
+    "prefix": "",
+    "quote": "This rule applies to sentence lists and sentence fragments in bullet lists.",
+    "start": 0,
+    "suffix": " Do not punctuate the end of a l"
+   },
+   "note": "Scope information recorded under the sentence-list rule, not a separate instruction.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "14755ad27d1e",
+    "end": 36,
+    "prefix": "",
+    "quote": "Restrict the use of the Oxford comma",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2 and G-4: consolidated with the default omission and stated cases requiring a final-item comma.",
+   "reason": "restatement",
+   "seed_uid": "4cf29ab55b32cf4c"
+  },
+  {
+   "anchor": {
+    "block_id": "d24b04b4f202",
+    "end": 101,
+    "prefix": "",
+    "quote": "If the last item combines 2 words or phrases with the word ‘and’, use a comma before that final item.",
+    "start": 0,
+    "suffix": " This use of the comma is known "
+   },
+   "note": "G-2: an internal ‘and’ changes when the final-item comma is required.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "16d2b031fe80",
+    "end": 190,
+    "prefix": "uity in complex sentence lists. ",
+    "quote": "For example, use the Oxford comma before the last item if you’re using a defining phrase applicable only to that final item.",
+    "start": 66,
+    "suffix": ""
+   },
+   "note": "G-2: the defining-phrase case belongs to the same final-item comma check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "133e01f0935a",
+    "end": 36,
+    "prefix": "",
+    "quote": "Separate adjectives of the same type",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: the selected body sentence specifies separation with commas.",
+   "reason": "restatement",
+   "seed_uid": "326401c53ca178c4"
+  },
+  {
+   "anchor": {
+    "block_id": "21eff846582d",
+    "end": 61,
+    "prefix": "",
+    "quote": "Don’t use commas in strings of adjectives of different types.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: different adjective types change the result of the same separator check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "eb2cfa2d3ad0",
+    "end": 112,
+    "prefix": "",
+    "quote": "Numbers with 4 or more digits (starting from 1,000) need a comma. Use commas for numerals in text and in tables.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: restates the selected number-grouping heading and supplies its text-and-table scope.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "379722064922",
+    "end": 95,
+    "prefix": "",
+    "quote": "Don’t use a space between the digits, because screen readers can read them as separate numbers.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: spaces instead of commas are one failure of the numerical digit-grouping check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "83a65354e53c",
+    "end": 122,
+    "prefix": "",
+    "quote": "When you are using numbers of 1,000 or more, use commas to separate the numerals into groups of 3 (working right to left).",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-4: specifies the placement required by the selected number-grouping rule.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "69f3cb30c93d",
+    "end": 52,
+    "prefix": "",
+    "quote": "Commas are not used to the right of a decimal point.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: fractional digits are an exception within the numerical comma check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "ec998738d6c1",
+    "end": 39,
+    "prefix": "",
+    "quote": "Don’t use commas in postcodes or dates.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: dates and postcodes are numerical-context exceptions, not separate grouping rules.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "bfb8a30b203c",
+    "end": 49,
+    "prefix": "",
+    "quote": "Use numerals and words for large, rounded numbers",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-6: this rule belongs on choosing-numerals-or-words.md, as explicitly identified in the project policy.",
+   "reason": "duplicate",
+   "seed_uid": "abd424c0990d7e28"
+  },
+  {
+   "anchor": {
+    "block_id": "54887df8cdf6",
+    "end": 144,
+    "prefix": "ually easy to read as numerals. ",
+    "quote": "Use a combination of words and numerals for large, rounded numbers from a million.",
+    "start": 62,
+    "suffix": ""
+   },
+   "note": "G-6: body wording of the large-rounded-number rule belonging on choosing-numerals-or-words.md.",
+   "reason": "duplicate",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "e44d17bd6ea7",
+    "end": 59,
+    "prefix": "",
+    "quote": "Large, rounded numbers are punctuated with a decimal point.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "Explains the numerical notation in the large-rounded-number discussion; it does not establish an additional comma check.",
+   "reason": "description",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "f5652afeb713",
+    "end": 69,
+    "prefix": "",
+    "quote": "You can use ‘1’ or ‘one’ when writing a million, a billion and so on.",
+    "start": 0,
+    "suffix": " Both forms are acceptable in go"
+   },
+   "note": "G-3: accepts either form and cannot independently produce a finding.",
+   "reason": "permission",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "d0ea7e05ca5a",
+    "end": 50,
+    "prefix": "",
+    "quote": "Show direct speech or quoted material using commas",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups attribution-boundary commas, punctuation between quoted parts and sentence-ending quotation punctuation.",
+   "reason": "section",
+   "seed_uid": "72b5baea4fadf9bf"
+  },
+  {
+   "anchor": {
+    "block_id": "04f2ba78ff76",
+    "end": 97,
+    "prefix": "tly quoted speech with a comma. ",
+    "quote": "Use the comma in combination with quotation marks.",
+    "start": 47,
+    "suffix": ""
+   },
+   "note": "G-4: clarifies the selected direct-speech comma convention rather than supplying another comma finding.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "71b24ff0623e",
+    "end": 113,
+    "prefix": "",
+    "quote": "If an attribution comes after a quotation, use a comma at the end of the quotation and before the quotation mark.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-2: following attribution is a positional case of the quotation–attribution comma check.",
+   "reason": "restatement",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "grammar-punctuation-and-conventions/punctuation/commas.md",
+ "page_sha256": "99691a1945b4c630c6dd299af352eb29ae11d5e257a05d907f11ebf885d358c4",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a76f6e107b75",
+    "note": "G-1: groups the more specific introductory-word and introductory-phrase rules.",
+    "quote": "Separate introductory words, phrases and clauses with a comma",
+    "reason": "section"
+   },
+   {
+    "block_id": "7f8b236ccb3d",
+    "note": "G-1: introductory summary of the child rules, not an additional finding.",
+    "quote": "A comma separates introductory words, phrases and clauses from the main clause of the sentence.",
+    "reason": "section"
+   },
+   {
+    "block_id": "9bc94c47ba4d",
+    "note": "G-3: recorded as the end-position exception to the introductory-phrase rule.",
+    "quote": "In these cases, you don’t need a comma before the phrase.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "0d9e27004d63",
+    "note": "G-4: the selected body sentence also explicitly covers greetings and addressing someone.",
+    "quote": "Place a comma after adverbs and other introductory words",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9f0af65b48a7",
+    "note": "G-3: an exception to the introductory-word rule, not a separate prohibition.",
+    "quote": "You don’t need a comma after an introductory word if the sentence is very short.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "75d0983d17a2",
+    "note": "G-4: the body identifies the relevant phrases and clauses as adverbial.",
+    "quote": "Use a comma after phrases and clauses that change the whole sentence",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "a4e35a65752d",
+    "note": "G-2: introductory conditional clauses are a case of the adverbial-clause rule.",
+    "quote": "They should also have a comma after them if they start the sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "75afd8850610",
+    "note": "G-2: this specifies a case of the introductory-phrase comma check, including its sentence-length condition.",
+    "quote": "Use a comma after an introductory phrase that ends with a numeral and is immediately followed by another numeral. It doesn’t matter how short the sentence is.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3b47e70d54c3",
+    "note": "G-4: absorbed into the rule against beginning with a string of numbers and dates.",
+    "quote": "Avoid this type of sentence structure because the string of numbers can be confusing.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "3382fe5873f7",
+    "note": "G-1: groups the specific clause, noun-phrase, question-tag and phrase rules.",
+    "quote": "Mark out non‐essential information within a sentence",
+    "reason": "section"
+   },
+   {
+    "block_id": "ab7d509bd521",
+    "note": "G-1: introductory summary; its specific cases are checked by the child rules.",
+    "quote": "Within a sentence, use a pair of commas to separate non-essential or supplementary information.",
+    "reason": "section"
+   },
+   {
+    "block_id": "ab7d509bd521",
+    "note": "G-5: tells the writer to check; the child rules already flag a missing member of a required comma pair.",
+    "quote": "Always check for the second comma where there should be a pair.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "03e35c308835",
+    "note": "G-1: a general introductory test elaborated by the more specific child rules, not a second comma-pair finding.",
+    "quote": "Generally, if you can take out part of the sentence and it is still grammatically correct, it should be between a pair of commas.",
+    "reason": "section"
+   },
+   {
+    "block_id": "686dbaeb1ffe",
+    "note": "G-5: a reviewing action, not a property of the text.",
+    "quote": "Check carefully.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d707c51ceaf7",
+    "note": "G-4: the body explicitly identifies commas as the delimiters.",
+    "quote": "Set off non-essential clauses",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c9df3f688cd7",
+    "note": "G-2: the essential-clause case of the same clause-delimiting check.",
+    "quote": "Don’t use commas if the clause is essential for meaning.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "63fd6267329c",
+    "note": "G-4: supplies the meaning-preservation test for the selected non-essential-clause rule.",
+    "quote": "If you can remove the clause and your sentence means the same thing, it’s non-essential and should go between commas.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "e22f43226693",
+    "note": "G-5: asks the writer to consider rephrasing; it does not establish a separate bounded prohibition on supplementary information.",
+    "quote": "Check if you can rephrase the information to make it easier to follow.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "d45c45234a14",
+    "note": "G-4: absorbed into the selected noun-phrase heading.",
+    "quote": "Use a pair of commas when you have 2 noun phrases next to each other that define the same thing.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "cf40d7f3ce8a",
+    "note": "G-2: a criterion for identifying the supplementary noun phrase, not a separate finding.",
+    "quote": "You should be able to take out the noun phrase between the comma pair and still have a grammatically correct sentence.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bdd2f1574e38",
+    "note": "G-4: the selected body sentence specifies the required comma.",
+    "quote": "Separate questions tagged onto a sentence",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "82b59e0a2abc",
+    "note": "G-4: the body specifies comma placement more precisely.",
+    "quote": "Use commas with the phrase ‘for example’",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "66e9999f9ad3",
+    "note": "G-2: sentence-initial placement is a case of the same ‘for example’ comma check.",
+    "quote": "If ‘for example’ begins a sentence, it is an introductory phrase. Follow it with a comma.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "9b7a8e9fde69",
+    "note": "G-4: the body clarifies that the prohibited comma follows the shortened form.",
+    "quote": "Don’t use commas with Latin shortened forms",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "7d92326bf7b4",
+    "note": "G-4: absorbed into the principal-clause heading and its conditions.",
+    "quote": "Use commas to connect 2 or more principal clauses joined by a coordinating conjunction (‘and’, ‘or’, ‘but’, ‘so’).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "c51d8ddcdda5",
+    "note": "G-2: the different-subject case of the principal-clause check.",
+    "quote": "If they have different subjects, use a comma before the coordinating conjunction.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b1c47f10f2c1",
+    "note": "G-3: recorded as an exception; it does not prohibit a comma or a repeated subject.",
+    "quote": "If 2 clauses share the same subject, you don’t need to repeat the subject or insert a comma before the conjunction.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "90bcd8b391b4",
+    "note": "G-2: qualifies the shared-subject exception within the principal-clause rule.",
+    "quote": "The exception to this rule is when you have joined more than 2 principal clauses with the same subject.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bd2060f01f2f",
+    "note": "G-4: the body states the check and its coordinating-conjunction exception explicitly.",
+    "quote": "Don’t use commas to ‘splice’ sentences",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "64f4551797f5",
+    "note": "G-1: groups the more specific list and adjective rules.",
+    "quote": "Punctuate sentence lists and strings of adjectives",
+    "reason": "section"
+   },
+   {
+    "block_id": "05550c576f7a",
+    "note": "G-4: the selected body sentence states the sentence-list separator rule.",
+    "quote": "Separate items in lists of nouns or adjectives with commas",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d10e8de4a1ab",
+    "note": "Scope information recorded under the sentence-list rule, not a separate instruction.",
+    "quote": "This rule applies to sentence lists and sentence fragments in bullet lists.",
+    "reason": "description"
+   },
+   {
+    "block_id": "14755ad27d1e",
+    "note": "G-2 and G-4: consolidated with the default omission and stated cases requiring a final-item comma.",
+    "quote": "Restrict the use of the Oxford comma",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "d24b04b4f202",
+    "note": "G-2: an internal ‘and’ changes when the final-item comma is required.",
+    "quote": "If the last item combines 2 words or phrases with the word ‘and’, use a comma before that final item.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "16d2b031fe80",
+    "note": "G-2: the defining-phrase case belongs to the same final-item comma check.",
+    "quote": "For example, use the Oxford comma before the last item if you’re using a defining phrase applicable only to that final item.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "133e01f0935a",
+    "note": "G-4: the selected body sentence specifies separation with commas.",
+    "quote": "Separate adjectives of the same type",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "21eff846582d",
+    "note": "G-2: different adjective types change the result of the same separator check.",
+    "quote": "Don’t use commas in strings of adjectives of different types.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "eb2cfa2d3ad0",
+    "note": "G-4: restates the selected number-grouping heading and supplies its text-and-table scope.",
+    "quote": "Numbers with 4 or more digits (starting from 1,000) need a comma. Use commas for numerals in text and in tables.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "379722064922",
+    "note": "G-2: spaces instead of commas are one failure of the numerical digit-grouping check.",
+    "quote": "Don’t use a space between the digits, because screen readers can read them as separate numbers.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "83a65354e53c",
+    "note": "G-4: specifies the placement required by the selected number-grouping rule.",
+    "quote": "When you are using numbers of 1,000 or more, use commas to separate the numerals into groups of 3 (working right to left).",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "69f3cb30c93d",
+    "note": "G-2: fractional digits are an exception within the numerical comma check.",
+    "quote": "Commas are not used to the right of a decimal point.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "ec998738d6c1",
+    "note": "G-2: dates and postcodes are numerical-context exceptions, not separate grouping rules.",
+    "quote": "Don’t use commas in postcodes or dates.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "bfb8a30b203c",
+    "note": "G-6: this rule belongs on choosing-numerals-or-words.md, as explicitly identified in the project policy.",
+    "quote": "Use numerals and words for large, rounded numbers",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "54887df8cdf6",
+    "note": "G-6: body wording of the large-rounded-number rule belonging on choosing-numerals-or-words.md.",
+    "quote": "Use a combination of words and numerals for large, rounded numbers from a million.",
+    "reason": "duplicate"
+   },
+   {
+    "block_id": "e44d17bd6ea7",
+    "note": "Explains the numerical notation in the large-rounded-number discussion; it does not establish an additional comma check.",
+    "quote": "Large, rounded numbers are punctuated with a decimal point.",
+    "reason": "description"
+   },
+   {
+    "block_id": "f5652afeb713",
+    "note": "G-3: accepts either form and cannot independently produce a finding.",
+    "quote": "You can use ‘1’ or ‘one’ when writing a million, a billion and so on.",
+    "reason": "permission"
+   },
+   {
+    "block_id": "d0ea7e05ca5a",
+    "note": "G-1: groups attribution-boundary commas, punctuation between quoted parts and sentence-ending quotation punctuation.",
+    "quote": "Show direct speech or quoted material using commas",
+    "reason": "section"
+   },
+   {
+    "block_id": "04f2ba78ff76",
+    "note": "G-4: clarifies the selected direct-speech comma convention rather than supplying another comma finding.",
+    "quote": "Use the comma in combination with quotation marks.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "71b24ff0623e",
+    "note": "G-2: following attribution is a positional case of the quotation–attribution comma check.",
+    "quote": "If an attribution comes after a quotation, use a comma at the end of the quotation and before the quotation mark.",
+    "reason": "restatement"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "248beef3d99a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "0d9e27004d63",
+      "quote": "Place a comma after adverbs and other introductory words"
+     },
+     {
+      "block_id": "9f0af65b48a7",
+      "quote": "You don’t need a comma after an introductory word if the sentence is very short."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "14426333cd87",
+        "quote": "Yes, they went to the estimates hearing."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "380fa7a74609",
+        "quote": "Goodnight, and good luck."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a0cdab470fbb",
+        "quote": "Actually, that's an interesting point."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "762d4ea09094",
+        "quote": "Excuse me, should I come with you?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3c759427a8d9",
+        "quote": "Today I went to work."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a comma after introductory words, such as greetings and adverbs, or when addressing someone.",
+    "specification": "The page does not define ‘very short’. A checker needs a reviewed interpretation of that exception; no numerical threshold is supplied here.",
+    "unit": "sentence",
+    "violation_condition": "An introductory word, greeting or expression addressing someone is not followed by a comma, outside the very-short-sentence exception.",
+    "when": [
+     "An introductory word, greeting or expression addressing someone precedes the rest of the sentence.",
+     "A comma after an introductory word is optional when the sentence is very short."
+    ],
+    "why": "G-4 consolidates the heading and body; G-3 keeps the very-short-sentence permission as an exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1ceace64d515",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "75d0983d17a2",
+      "quote": "Use a comma after phrases and clauses that change the whole sentence"
+     },
+     {
+      "block_id": "9bc94c47ba4d",
+      "quote": "Many introductory phrases can be moved to the end of sentences without changing the meaning. In these cases, you don’t need a comma before the phrase."
+     },
+     {
+      "block_id": "a4e35a65752d",
+      "quote": "Conditional clauses are adverbial clauses (for example, beginning with ‘if’, ‘unless’ or ‘until’). They should also have a comma after them if they start the sentence."
+     },
+     {
+      "block_id": "75afd8850610",
+      "quote": "Use a comma after an introductory phrase that ends with a numeral and is immediately followed by another numeral. It doesn’t matter how short the sentence is."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b067a716eaa7",
+        "quote": "During the meeting, we discussed Item 9."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2f1453bbed18",
+        "quote": "We discussed Item 9 during the meeting."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "609366268c44",
+        "quote": "During the meeting, we discussed item 9."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5091a9edf83e",
+        "quote": "Although they were shaking and sweating, the firefighters were relieved to feel the first drops of a downpour."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ac6f4bffd993",
+        "quote": "Unless the consultation starts early, it will not finish on time."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use commas after adverbial phrases and adverbial clauses.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An introductory adverbial phrase or clause is not separated from the following main clause by a comma.",
+    "when": [
+     "An adverbial phrase or clause introduces the sentence.",
+     "This includes introductory conditional clauses.",
+     "A phrase ending in a numeral and immediately followed by another numeral needs the comma regardless of sentence length.",
+     "A phrase moved to the end of the sentence without changing the meaning does not need a preceding comma.",
+     "The separately stated ‘for example’ rule handles that specific phrase."
+    ],
+    "why": "G-2 combines introductory adverbial, conditional and adjacent-numeral cases; G-3 records the end-position exception."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "faecc10468f1",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "3b47e70d54c3",
+      "quote": "Avoid this type of sentence structure because the string of numbers can be confusing."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "1370441c1684",
+        "quote": "There were 16.5 million people enrolled to vote in Australian elections on 18 April 2019."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual labels this ‘Not this’ for readability while explicitly acknowledging that it is grammatically correct.",
+      "parts": [
+       {
+        "block_id": "b24fb77fbfcb",
+        "quote": "On 18 April 2019, 16.5 million people were enrolled to vote in Australian elections."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid beginning a sentence with a string of numbers and dates",
+    "specification": "The surrounding prose identifies the structure as an introductory phrase ending in a numeral immediately followed by another numeral at the start of the main clause.",
+    "unit": "sentence",
+    "violation_condition": "A sentence begins with an introductory numerical or date phrase followed immediately by another numeral, creating a string of numbers and dates.",
+    "when": [
+     "An introductory numerical or date phrase ends with a numeral and the main clause starts with another numeral.",
+     "The structure remains discouraged even when its comma is grammatically correct."
+    ],
+    "why": "G-4 consolidates the heading and body; this readability finding is distinct from a missing introductory comma."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4d104e67c148",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d707c51ceaf7",
+      "quote": "Set off non-essential clauses"
+     },
+     {
+      "block_id": "c9df3f688cd7",
+      "quote": "Don’t use commas if the clause is essential for meaning."
+     },
+     {
+      "block_id": "63fd6267329c",
+      "quote": "If you can remove the clause and your sentence means the same thing, it’s non-essential and should go between commas."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5aac53e7a803",
+        "quote": "The committee, said the secretary, was incompetent."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "This is a correct sentence with a different meaning, not a comma violation.",
+      "parts": [
+       {
+        "block_id": "d03bc2f4095e",
+        "quote": "The committee said the secretary was incompetent."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4d380048e634",
+        "quote": "The business report, which the manager had edited, explained the agency’s strategy."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6cd6afa6d8ac",
+        "quote": "Introduced pests, such as varroa mite, threaten Australian honey production."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "952a8f98d7a2",
+        "quote": "The report that the manager had edited explained the agency’s strategy."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "79e8d23ba1c2",
+        "quote": "Introduced pests from South Asia threaten Australian honey production."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use commas around clauses that add information but aren’t essential to the meaning of the sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-essential clause lacks one or both delimiting commas, or an essential clause is incorrectly set off with commas.",
+    "when": [
+     "A clause supplies supplementary information within a sentence.",
+     "A removable clause that leaves the sentence’s meaning unchanged is non-essential.",
+     "A clause essential to identifying the intended meaning must not be set off as non-essential."
+    ],
+    "why": "G-1 selects the specific child rather than its grouping parent; G-2 keeps essential and non-essential cases together."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "82e2bf9f4cab",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "d45c45234a14",
+      "quote": "Use a pair of commas when you have 2 noun phrases next to each other that define the same thing."
+     },
+     {
+      "block_id": "cf40d7f3ce8a",
+      "quote": "You should be able to take out the noun phrase between the comma pair and still have a grammatically correct sentence."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9beed3bcea3c",
+        "quote": "The strike took place in Whyalla, South Australia, in June 2014."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "443e08f59732",
+        "quote": "The strike took place in Whyalla, South Australia in June 2014."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f8ce4fd475d0",
+        "quote": "My colleague, Mx Lesley May, will exercise my proxy vote."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f939da548586",
+        "quote": "My colleague will exercise my proxy vote."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Place commas around nouns that define the same thing they follow",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A supplementary noun phrase defining the noun phrase immediately before it lacks one or both commas needed to enclose it.",
+    "when": [
+     "Two adjacent noun phrases define the same thing and the second supplies non-essential information within the sentence.",
+     "Removing the second noun phrase leaves a grammatically correct sentence."
+    ],
+    "why": "G-1 keeps the specific noun-phrase check; G-4 absorbs its body restatement and removal test."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c2f20f02ecc9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bdd2f1574e38",
+      "quote": "Separate questions tagged onto a sentence"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "91053dc8ad71",
+        "quote": "They’re not here, are they?"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0ec3a94e17d5",
+        "quote": "We’ll be reporting back, won’t we?"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use a comma before a question that is part of the sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence-final question tag is not preceded by a comma.",
+    "when": [
+     "A question is tagged onto the end of a statement within the same sentence."
+    ],
+    "why": "G-1 keeps question tags separate from the grouping parent; G-4 uses the body’s explicit punctuation instruction."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e10f69277024",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "82b59e0a2abc",
+      "quote": "Use commas with the phrase ‘for example’"
+     },
+     {
+      "block_id": "66e9999f9ad3",
+      "quote": "If ‘for example’ begins a sentence, it is an introductory phrase. Follow it with a comma."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "bb3ebadb0143",
+        "quote": "Some colours, for example, are difficult for people with colour blindness to distinguish."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "96aa21ea123f",
+        "quote": "For example, some colours are difficult for people with colour blindness to distinguish."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Generally, use a comma before and after the phrase ‘for example’ in a sentence.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Explanatory ‘for example’ lacks a required surrounding comma, or lacks its following comma when sentence-initial, outside the bullet-list-colon case.",
+    "when": [
+     "‘For example’ functions as an explanatory phrase in a sentence.",
+     "Within a sentence, it generally has a comma before and after it.",
+     "At the beginning of a sentence, only the following comma is needed.",
+     "When it introduces a bullet list, a colon replaces the following comma; the separate colon rule checks that boundary."
+    ],
+    "why": "G-2 combines sentence-internal and sentence-initial positions; the bullet-list colon is a distinct punctuation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c61e8d069b3a",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "69bf74400667",
+        "quote": "Some colours are difficult for people with colour blindness to distinguish, for example:"
+       },
+       {
+        "block_id": "1664228ed9da",
+        "quote": "red"
+       },
+       {
+        "block_id": "040a84541de0",
+        "quote": "green"
+       },
+       {
+        "block_id": "1176192f52a3",
+        "quote": "orange"
+       },
+       {
+        "block_id": "ec3ef76e3788",
+        "quote": "brown"
+       },
+       {
+        "block_id": "317201dae12f",
+        "quote": "blue"
+       },
+       {
+        "block_id": "6b8796d540df",
+        "quote": "purple."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If you’re introducing a bullet list after ‘for example’, use a colon.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A bullet-list lead-in ending in ‘for example’ lacks a colon after that phrase.",
+    "when": [
+     "‘For example’ immediately introduces a bullet list."
+    ],
+    "why": "The required bullet-list colon is a separate finding from missing commas around a phrase; E-3 keeps its lead-in and items together."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "77cac099c8af",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "9b7a8e9fde69",
+      "quote": "Don’t use commas with Latin shortened forms"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c7ebfe0c6b5b",
+        "quote": "Exports of rare earths (e.g. lithium, europium) have soared."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "2958899b8058",
+        "quote": "Exports of rare earths (e.g., lithium and europium) have soared."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "If you use Latin shortened forms, such as ‘e.g.’ and ‘i.e.’, don’t follow them with a comma.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma immediately follows a Latin shortened form.",
+    "when": [
+     "A Latin shortened form such as ‘e.g.’ or ‘i.e.’ is used."
+    ],
+    "why": "G-4 selects the body because it specifies that the prohibited comma follows the shortened form."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "a05e36306533",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "7d92326bf7b4",
+      "quote": "Use commas to connect 2 or more principal clauses joined by a coordinating conjunction (‘and’, ‘or’, ‘but’, ‘so’)."
+     },
+     {
+      "block_id": "c51d8ddcdda5",
+      "quote": "If they have different subjects, use a comma before the coordinating conjunction."
+     },
+     {
+      "block_id": "b1c47f10f2c1",
+      "quote": "If 2 clauses share the same subject, you don’t need to repeat the subject or insert a comma before the conjunction."
+     },
+     {
+      "block_id": "90bcd8b391b4",
+      "quote": "The exception to this rule is when you have joined more than 2 principal clauses with the same subject."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "4757e3b37611",
+        "quote": "The Senate debated the Bill at length, but the party whips eventually called for a vote."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "d69c633756e8",
+        "quote": "The company closed its Perth office and sacked the chief financial officer."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f1a2eacd873c",
+        "quote": "The company closed its Perth office, sacked the chief financial officer, and opened a branch in Singapore."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Place commas between principal clauses joined together with a conjunction",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Coordinated principal clauses with different subjects lack a comma before their conjunction, or a series of more than two principal clauses sharing a subject lacks the required separating commas.",
+    "when": [
+     "Principal clauses are joined by a coordinating conjunction such as ‘and’, ‘or’, ‘but’ or ‘so’.",
+     "Two clauses with different subjects need a comma before the conjunction.",
+     "Two clauses sharing a subject do not require a repeated subject or a comma.",
+     "More than two principal clauses sharing a subject require separating commas, including before the final conjunction."
+    ],
+    "why": "G-2 explicitly groups different-subject, shared-subject and more-than-two-clause cases; G-3 preserves the shared-subject permission."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "f2c2c2f20987",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not use this rule to create a sentence of more than 25 words.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence formed by joining principal clauses with commas and coordinating conjunctions contains more than 25 words.",
+    "when": [
+     "A sentence joins principal clauses using commas and coordinating conjunctions."
+    ],
+    "why": "This states a measurable property of the resulting sentence, not merely writer advice, and is distinct from comma placement."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "94c5b6f7c08e",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "bd2060f01f2f",
+      "quote": "Don’t use commas to ‘splice’ sentences"
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f91a58143e9b",
+        "quote": "The report was finished last week, but the minister has not approved its release."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "54d41f59bd28",
+        "quote": "The report was finished last week, the minister has not approved its release."
+       }
+      ],
+      "polarity": "violating"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Don’t use a comma to link 2 stand-alone sentences unless you use a coordinating conjunction.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A comma alone joins two stand-alone sentences without a coordinating conjunction.",
+    "when": [
+     "The material on each side of a linking comma could stand as a sentence.",
+     "A coordinating conjunction permits the comma linkage."
+    ],
+    "why": "G-4 consolidates the heading and explicit body instruction; the conjunction exception belongs to this single splice check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4f776676d8a9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "05550c576f7a",
+      "quote": "Separate items in lists of nouns or adjectives with commas"
+     },
+     {
+      "block_id": "d10e8de4a1ab",
+      "quote": "This rule applies to sentence lists and sentence fragments in bullet lists."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8b51273b6541",
+        "quote": "The delegation visited Brisbane, Canberra and Adelaide."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a5b5e202a326",
+        "quote": "The consultation involved businesses, sole traders and not-for-profits."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b0e6aee0ad14",
+        "quote": "The applicant was willing to learn, eager to work and well prepared."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use commas between items in a sentence list.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Successive items in a sentence list lack a separating comma at a boundary other than the final conjunction boundary.",
+    "when": [
+     "Items form a sentence list, including a sentence list within a fragment in a bullet list.",
+     "The separate Oxford-comma rule handles the boundary before the final coordinated item.",
+     "This is not a requirement to put commas at the ends of bullet-list items."
+    ],
+    "why": "G-1 selects a child of the grouping heading; G-4 absorbs its heading, while the final-item comma is checked separately."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4f776676d8a9",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "14755ad27d1e",
+      "quote": "Restrict the use of the Oxford comma"
+     },
+     {
+      "block_id": "d24b04b4f202",
+      "quote": "If the last item combines 2 words or phrases with the word ‘and’, use a comma before that final item."
+     },
+     {
+      "block_id": "16d2b031fe80",
+      "quote": "For example, use the Oxford comma before the last item if you’re using a defining phrase applicable only to that final item."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "30ee8a778738",
+        "quote": "The industries most affected are retail trade, wholesale trade, and accommodation and food services."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual gives the meaning that all crops are for stockfeed.",
+      "parts": [
+       {
+        "block_id": "afe7a2ae423e",
+        "quote": "The analysis outlined demand for barley, wheat and hay for stockfeed."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "The manual gives the meaning that only the hay is for stockfeed.",
+      "parts": [
+       {
+        "block_id": "32f5b46408f1",
+        "quote": "The analysis outlined demand for barley, wheat, and hay for stockfeed."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid using a comma before the last item in the list.",
+    "specification": "The normal omission has stated exceptions for an internal ‘and’ in the final item and for a defining phrase applying only to that item. The discussion also identifies prevention of ambiguity in complex lists as the purpose of the Oxford comma.",
+    "unit": "phrase",
+    "violation_condition": "A comma precedes the final coordinated list item without a disambiguating reason, or the comma is missing where the final item contains an internal ‘and’ or has a defining phrase intended to apply only to it.",
+    "when": [
+     "A sentence list has a final item introduced by a conjunction.",
+     "Normally omit the comma before the final item.",
+     "Include it when the final item itself combines two words or phrases with ‘and’.",
+     "Include it when a defining phrase applies only to the final item.",
+     "Do not treat a contrast in intended meaning as an error merely because one version has an Oxford comma."
+    ],
+    "why": "G-2 combines the default omission and the stated Oxford-comma cases into one final-item punctuation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d10e8de4a1ab",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Do not punctuate the end of a list item with a comma if it is in a bullet list.",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A bullet-list item ends with a comma.",
+    "when": [
+     "The text is a bullet-list item."
+    ],
+    "why": "A comma terminating a bullet-list item is a different finding from missing separators within a sentence list."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1bdd34eaa9bc",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "When writing strings of adjectives, use a set order – evaluative, descriptive, then definitive.",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Adjectives occur in a type order other than evaluative before descriptive before definitive.",
+    "when": [
+     "A string of adjectives includes more than one of the named types."
+    ],
+    "why": "Adjective order is a distinct property from comma separation and can produce an independent finding."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3c4e86ee3937",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "133e01f0935a",
+      "quote": "Separate adjectives of the same type"
+     },
+     {
+      "block_id": "21eff846582d",
+      "quote": "Don’t use commas in strings of adjectives of different types."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "e6dd4586530c",
+        "quote": "This is an ethical, profitable, efficient organisation."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "13359fb91f5b",
+        "quote": "They were a happy, caring, devoted workforce."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a115e92964b3",
+        "quote": "My new black felt-tip pen splattered ink everywhere."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "5cd966f87c05",
+        "quote": "We found some used French tennis balls left over from a training day."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use commas in strings of adjectives of the same type (for example, a string of descriptive adjectives).",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Adjectives of the same type lack separating commas, or commas incorrectly separate adjectives of different types.",
+    "when": [
+     "A string of adjectives modifies a noun.",
+     "Adjectives of the same type take separating commas.",
+     "Adjectives of different types do not take separating commas."
+    ],
+    "why": "G-2 treats same-type and different-type adjectives as conditions of one separator check; G-4 absorbs the heading."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "d20634ac6c6f",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "eb2cfa2d3ad0",
+      "quote": "Numbers with 4 or more digits (starting from 1,000) need a comma. Use commas for numerals in text and in tables."
+     },
+     {
+      "block_id": "379722064922",
+      "quote": "Don’t use a space between the digits, because screen readers can read them as separate numbers."
+     },
+     {
+      "block_id": "83a65354e53c",
+      "quote": "When you are using numbers of 1,000 or more, use commas to separate the numerals into groups of 3 (working right to left)."
+     },
+     {
+      "block_id": "69f3cb30c93d",
+      "quote": "Commas are not used to the right of a decimal point."
+     },
+     {
+      "block_id": "ec998738d6c1",
+      "quote": "Don’t use commas in postcodes or dates."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "f7ab8f568bcb",
+        "quote": "The agency handles around 6,500 complaints each year."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6c1438d42904",
+        "quote": "The agency handles around 6 500 complaints each year."
+       }
+      ],
+      "polarity": "violating"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "714c7bba8e6a",
+        "quote": "1,000"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "c4ec66346b8b",
+        "quote": "17,275"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "7abf9f826221",
+        "quote": "505,607,400"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "ad0bef536998",
+        "quote": "808.12345"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a3cb63a9c38d",
+        "quote": "1,279.0044"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "3fe719f66b08",
+        "quote": "The year was 2020."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "6553157c8671",
+        "quote": "The office was in postcode area 6500."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Use commas in numbers with 4 or more digits",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A number of 1,000 or more lacks correctly placed three-digit grouping commas or uses spaces instead, or digit-grouping commas appear in a decimal fraction, date or postcode.",
+    "when": [
+     "The rule applies to numerals in text and tables.",
+     "Integer digits in numbers of 1,000 or more are grouped in threes from right to left.",
+     "Spaces are not substitutes for grouping commas.",
+     "Digits to the right of a decimal point are not comma-grouped.",
+     "Dates and postcodes are not comma-grouped."
+    ],
+    "why": "G-2 combines digit grouping, separator choice and numerical-context exceptions into one number-formatting check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "04f2ba78ff76",
+    "clarity_suggestion": "unambiguous",
+    "covers": [
+     {
+      "block_id": "04f2ba78ff76",
+      "quote": "Use the comma in combination with quotation marks."
+     },
+     {
+      "block_id": "71b24ff0623e",
+      "quote": "If an attribution comes after a quotation, use a comma at the end of the quotation and before the quotation mark."
+     }
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a3a49c677148",
+        "quote": "She said, ‘It’s time to start work.’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "8b4d3d85af41",
+        "quote": "The Prime Minister said, ‘I’m calling a half-Senate election.’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "9f8c0bebab58",
+        "quote": "‘It’s time to start work,’ she said."
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "a02a67f80795",
+        "quote": "‘I’m calling a half-Senate election for Saturday 15 August,’ the Prime Minister said."
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "Introduce directly quoted speech with a comma.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The comma separating directly quoted speech from its attribution is missing or is on the wrong side of the quotation mark.",
+    "when": [
+     "Directly quoted speech has an introductory or following attribution.",
+     "With an introductory attribution, the comma precedes the opening quotation mark.",
+     "With a following attribution, the comma is at the end of the quotation before the closing quotation mark."
+    ],
+    "why": "G-2 combines attribution-before and attribution-after positions as one quotation-boundary comma check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "e35d7b521c0d",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "77874cd04322",
+        "quote": "‘It’s time to start work,’ she said. ‘We have a lot to do.’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "0ab3911ad2cc",
+        "quote": "‘I’m calling a half-Senate election,’ the Prime Minister said. ‘It will be held on Saturday 15 August.’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the quotation is broken into 2 parts, the second part should follow a full stop rather than a comma.",
+    "specification": "The wording does not distinguish two complete quoted sentences from a single quoted sentence interrupted by an attribution. Both examples show the former; application to interrupted single sentences needs clarification.",
+    "unit": "paragraph",
+    "violation_condition": "A comma, rather than a full stop, separates the intervening attribution from the second quoted part.",
+    "when": [
+     "A quotation is broken into two parts with an attribution between them."
+    ],
+    "why": "This checks the boundary before a second quoted part, not the comma between the first part and its attribution."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5cba07877452",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "examples": [
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "fd33d50d0d0d",
+        "quote": "She said, ‘It’s time to start work.’"
+       }
+      ],
+      "polarity": "compliant"
+     },
+     {
+      "note": "",
+      "parts": [
+       {
+        "block_id": "b4a5a570eeaf",
+        "quote": "She asked, ‘Is it time to start work?’"
+       }
+      ],
+      "polarity": "compliant"
+     }
+    ],
+    "modality": "SHOULD",
+    "quote": "If the quotation ends the sentence, end it with the original punctuation of the quotation.",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A quotation at the end of a sentence has its original terminal punctuation omitted or replaced.",
+    "when": [
+     "The quotation ends the containing sentence."
+    ],
+    "why": "The terminal punctuation of a sentence-ending quotation is distinct from attribution-boundary commas."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "248beef3d99a",
+    "end": 96,
+    "prefix": "",
+    "quote": "Use a comma after introductory words, such as greetings and adverbs, or when addressing someone.",
+    "start": 0,
+    "suffix": " Using an introductory word give"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "0d9e27004d63",
+     "end": 56,
+     "prefix": "",
+     "quote": "Place a comma after adverbs and other introductory words",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9f0af65b48a7",
+     "end": 80,
+     "prefix": "",
+     "quote": "You don’t need a comma after an introductory word if the sentence is very short.",
+     "start": 0,
+     "suffix": " This minimises punctuation in v"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "14426333cd87",
+       "end": 40,
+       "prefix": "",
+       "quote": "Yes, they went to the estimates hearing.",
+       "start": 0,
+       "suffix": " [Affirmative emphasis]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "380fa7a74609",
+       "end": 25,
+       "prefix": "",
+       "quote": "Goodnight, and good luck.",
+       "start": 0,
+       "suffix": " [Greeting]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a0cdab470fbb",
+       "end": 38,
+       "prefix": "",
+       "quote": "Actually, that's an interesting point.",
+       "start": 0,
+       "suffix": " [Adverb]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "762d4ea09094",
+       "end": 34,
+       "prefix": "",
+       "quote": "Excuse me, should I come with you?",
+       "start": 0,
+       "suffix": " [Addressing someone]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3c759427a8d9",
+       "end": 21,
+       "prefix": "",
+       "quote": "Today I went to work.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "The page does not define ‘very short’. A checker needs a reviewed interpretation of that exception; no numerical threshold is supplied here.",
+    "unit": "sentence",
+    "violation_condition": "An introductory word, greeting or expression addressing someone is not followed by a comma, outside the very-short-sentence exception."
+   },
+   "when": [
+    "An introductory word, greeting or expression addressing someone precedes the rest of the sentence.",
+    "A comma after an introductory word is optional when the sentence is very short."
+   ],
+   "why": "G-4 consolidates the heading and body; G-3 keeps the very-short-sentence permission as an exception."
+  },
+  {
+   "anchor": {
+    "block_id": "1ceace64d515",
+    "end": 57,
+    "prefix": "",
+    "quote": "Use commas after adverbial phrases and adverbial clauses.",
+    "start": 0,
+    "suffix": " Adverbs – such as ‘first’ and ‘"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "75d0983d17a2",
+     "end": 68,
+     "prefix": "",
+     "quote": "Use a comma after phrases and clauses that change the whole sentence",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "9bc94c47ba4d",
+     "end": 150,
+     "prefix": "",
+     "quote": "Many introductory phrases can be moved to the end of sentences without changing the meaning. In these cases, you don’t need a comma before the phrase.",
+     "start": 0,
+     "suffix": " This simpler structure can be e"
+    },
+    {
+     "block_id": "a4e35a65752d",
+     "end": 167,
+     "prefix": "",
+     "quote": "Conditional clauses are adverbial clauses (for example, beginning with ‘if’, ‘unless’ or ‘until’). They should also have a comma after them if they start the sentence.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "75afd8850610",
+     "end": 158,
+     "prefix": "",
+     "quote": "Use a comma after an introductory phrase that ends with a numeral and is immediately followed by another numeral. It doesn’t matter how short the sentence is.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b067a716eaa7",
+       "end": 40,
+       "prefix": "",
+       "quote": "During the meeting, we discussed Item 9.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2f1453bbed18",
+       "end": 39,
+       "prefix": "",
+       "quote": "We discussed Item 9 during the meeting.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "609366268c44",
+       "end": 40,
+       "prefix": "",
+       "quote": "During the meeting, we discussed item 9.",
+       "start": 0,
+       "suffix": " [Adverbial phrase]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5091a9edf83e",
+       "end": 110,
+       "prefix": "",
+       "quote": "Although they were shaking and sweating, the firefighters were relieved to feel the first drops of a downpour.",
+       "start": 0,
+       "suffix": " [Adverbial clause]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ac6f4bffd993",
+       "end": 65,
+       "prefix": "",
+       "quote": "Unless the consultation starts early, it will not finish on time.",
+       "start": 0,
+       "suffix": " [A conditional adverbial clause"
+      }
+     ]
+    }
+   ],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "An introductory adverbial phrase or clause is not separated from the following main clause by a comma."
+   },
+   "when": [
+    "An adverbial phrase or clause introduces the sentence.",
+    "This includes introductory conditional clauses.",
+    "A phrase ending in a numeral and immediately followed by another numeral needs the comma regardless of sentence length.",
+    "A phrase moved to the end of the sentence without changing the meaning does not need a preceding comma.",
+    "The separately stated ‘for example’ rule handles that specific phrase."
+   ],
+   "why": "G-2 combines introductory adverbial, conditional and adjacent-numeral cases; G-3 records the end-position exception."
+  },
+  {
+   "anchor": {
+    "block_id": "faecc10468f1",
+    "end": 61,
+    "prefix": "",
+    "quote": "Avoid beginning a sentence with a string of numbers and dates",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "3b47e70d54c3",
+     "end": 85,
+     "prefix": "",
+     "quote": "Avoid this type of sentence structure because the string of numbers can be confusing.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "1370441c1684",
+       "end": 89,
+       "prefix": "",
+       "quote": "There were 16.5 million people enrolled to vote in Australian elections on 18 April 2019.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "The manual labels this ‘Not this’ for readability while explicitly acknowledging that it is grammatically correct.",
+     "parts": [
+      {
+       "block_id": "b24fb77fbfcb",
+       "end": 84,
+       "prefix": "",
+       "quote": "On 18 April 2019, 16.5 million people were enrolled to vote in Australian elections.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 2,
+   "seed_uid": "046a4193f3fe6331",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The surrounding prose identifies the structure as an introductory phrase ending in a numeral immediately followed by another numeral at the start of the main clause.",
+    "unit": "sentence",
+    "violation_condition": "A sentence begins with an introductory numerical or date phrase followed immediately by another numeral, creating a string of numbers and dates."
+   },
+   "when": [
+    "An introductory numerical or date phrase ends with a numeral and the main clause starts with another numeral.",
+    "The structure remains discouraged even when its comma is grammatically correct."
+   ],
+   "why": "G-4 consolidates the heading and body; this readability finding is distinct from a missing introductory comma."
+  },
+  {
+   "anchor": {
+    "block_id": "4d104e67c148",
+    "end": 99,
+    "prefix": "",
+    "quote": "Use commas around clauses that add information but aren’t essential to the meaning of the sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d707c51ceaf7",
+     "end": 29,
+     "prefix": "",
+     "quote": "Set off non-essential clauses",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c9df3f688cd7",
+     "end": 56,
+     "prefix": "",
+     "quote": "Don’t use commas if the clause is essential for meaning.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "63fd6267329c",
+     "end": 117,
+     "prefix": "",
+     "quote": "If you can remove the clause and your sentence means the same thing, it’s non-essential and should go between commas.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5aac53e7a803",
+       "end": 51,
+       "prefix": "",
+       "quote": "The committee, said the secretary, was incompetent.",
+       "start": 0,
+       "suffix": " [The committee was incompetent."
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "This is a correct sentence with a different meaning, not a comma violation.",
+     "parts": [
+      {
+       "block_id": "d03bc2f4095e",
+       "end": 49,
+       "prefix": "",
+       "quote": "The committee said the secretary was incompetent.",
+       "start": 0,
+       "suffix": " [The secretary was incompetent."
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4d380048e634",
+       "end": 83,
+       "prefix": "",
+       "quote": "The business report, which the manager had edited, explained the agency’s strategy.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6cd6afa6d8ac",
+       "end": 76,
+       "prefix": "",
+       "quote": "Introduced pests, such as varroa mite, threaten Australian honey production.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "952a8f98d7a2",
+       "end": 71,
+       "prefix": "",
+       "quote": "The report that the manager had edited explained the agency’s strategy.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "79e8d23ba1c2",
+       "end": 70,
+       "prefix": "",
+       "quote": "Introduced pests from South Asia threaten Australian honey production.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A non-essential clause lacks one or both delimiting commas, or an essential clause is incorrectly set off with commas."
+   },
+   "when": [
+    "A clause supplies supplementary information within a sentence.",
+    "A removable clause that leaves the sentence’s meaning unchanged is non-essential.",
+    "A clause essential to identifying the intended meaning must not be set off as non-essential."
+   ],
+   "why": "G-1 selects the specific child rather than its grouping parent; G-2 keeps essential and non-essential cases together."
+  },
+  {
+   "anchor": {
+    "block_id": "82e2bf9f4cab",
+    "end": 64,
+    "prefix": "",
+    "quote": "Place commas around nouns that define the same thing they follow",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "d45c45234a14",
+     "end": 96,
+     "prefix": "",
+     "quote": "Use a pair of commas when you have 2 noun phrases next to each other that define the same thing.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "cf40d7f3ce8a",
+     "end": 118,
+     "prefix": "",
+     "quote": "You should be able to take out the noun phrase between the comma pair and still have a grammatically correct sentence.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9beed3bcea3c",
+       "end": 64,
+       "prefix": "",
+       "quote": "The strike took place in Whyalla, South Australia, in June 2014.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "443e08f59732",
+       "end": 63,
+       "prefix": "",
+       "quote": "The strike took place in Whyalla, South Australia in June 2014.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f8ce4fd475d0",
+       "end": 57,
+       "prefix": "",
+       "quote": "My colleague, Mx Lesley May, will exercise my proxy vote.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f939da548586",
+       "end": 41,
+       "prefix": "",
+       "quote": "My colleague will exercise my proxy vote.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 4,
+   "seed_uid": "a01b8629ba1b0ac7",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A supplementary noun phrase defining the noun phrase immediately before it lacks one or both commas needed to enclose it."
+   },
+   "when": [
+    "Two adjacent noun phrases define the same thing and the second supplies non-essential information within the sentence.",
+    "Removing the second noun phrase leaves a grammatically correct sentence."
+   ],
+   "why": "G-1 keeps the specific noun-phrase check; G-4 absorbs its body restatement and removal test."
+  },
+  {
+   "anchor": {
+    "block_id": "c2f20f02ecc9",
+    "end": 110,
+    "prefix": "gged onto the end of sentences. ",
+    "quote": "Use a comma before a question that is part of the sentence.",
+    "start": 51,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bdd2f1574e38",
+     "end": 41,
+     "prefix": "",
+     "quote": "Separate questions tagged onto a sentence",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "91053dc8ad71",
+       "end": 27,
+       "prefix": "",
+       "quote": "They’re not here, are they?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0ec3a94e17d5",
+       "end": 34,
+       "prefix": "",
+       "quote": "We’ll be reporting back, won’t we?",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence-final question tag is not preceded by a comma."
+   },
+   "when": [
+    "A question is tagged onto the end of a statement within the same sentence."
+   ],
+   "why": "G-1 keeps question tags separate from the grouping parent; G-4 uses the body’s explicit punctuation instruction."
+  },
+  {
+   "anchor": {
+    "block_id": "e10f69277024",
+    "end": 79,
+    "prefix": "",
+    "quote": "Generally, use a comma before and after the phrase ‘for example’ in a sentence.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "82b59e0a2abc",
+     "end": 40,
+     "prefix": "",
+     "quote": "Use commas with the phrase ‘for example’",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "66e9999f9ad3",
+     "end": 89,
+     "prefix": "",
+     "quote": "If ‘for example’ begins a sentence, it is an introductory phrase. Follow it with a comma.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "bb3ebadb0143",
+       "end": 89,
+       "prefix": "",
+       "quote": "Some colours, for example, are difficult for people with colour blindness to distinguish.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "96aa21ea123f",
+       "end": 88,
+       "prefix": "",
+       "quote": "For example, some colours are difficult for people with colour blindness to distinguish.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Explanatory ‘for example’ lacks a required surrounding comma, or lacks its following comma when sentence-initial, outside the bullet-list-colon case."
+   },
+   "when": [
+    "‘For example’ functions as an explanatory phrase in a sentence.",
+    "Within a sentence, it generally has a comma before and after it.",
+    "At the beginning of a sentence, only the following comma is needed.",
+    "When it introduces a bullet list, a colon replaces the following comma; the separate colon rule checks that boundary."
+   ],
+   "why": "G-2 combines sentence-internal and sentence-initial positions; the bullet-list colon is a distinct punctuation check."
+  },
+  {
+   "anchor": {
+    "block_id": "c61e8d069b3a",
+    "end": 69,
+    "prefix": "",
+    "quote": "If you’re introducing a bullet list after ‘for example’, use a colon.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "69bf74400667",
+       "end": 88,
+       "prefix": "",
+       "quote": "Some colours are difficult for people with colour blindness to distinguish, for example:",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "1664228ed9da",
+       "end": 3,
+       "prefix": "",
+       "quote": "red",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "040a84541de0",
+       "end": 5,
+       "prefix": "",
+       "quote": "green",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "1176192f52a3",
+       "end": 6,
+       "prefix": "",
+       "quote": "orange",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "ec3ef76e3788",
+       "end": 5,
+       "prefix": "",
+       "quote": "brown",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "317201dae12f",
+       "end": 4,
+       "prefix": "",
+       "quote": "blue",
+       "start": 0,
+       "suffix": ""
+      },
+      {
+       "block_id": "6b8796d540df",
+       "end": 7,
+       "prefix": "",
+       "quote": "purple.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A bullet-list lead-in ending in ‘for example’ lacks a colon after that phrase."
+   },
+   "when": [
+    "‘For example’ immediately introduces a bullet list."
+   ],
+   "why": "The required bullet-list colon is a separate finding from missing commas around a phrase; E-3 keeps its lead-in and items together."
+  },
+  {
+   "anchor": {
+    "block_id": "77cac099c8af",
+    "end": 92,
+    "prefix": "",
+    "quote": "If you use Latin shortened forms, such as ‘e.g.’ and ‘i.e.’, don’t follow them with a comma.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "9b7a8e9fde69",
+     "end": 43,
+     "prefix": "",
+     "quote": "Don’t use commas with Latin shortened forms",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c7ebfe0c6b5b",
+       "end": 60,
+       "prefix": "",
+       "quote": "Exports of rare earths (e.g. lithium, europium) have soared.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "2958899b8058",
+       "end": 64,
+       "prefix": "",
+       "quote": "Exports of rare earths (e.g., lithium and europium) have soared.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A comma immediately follows a Latin shortened form."
+   },
+   "when": [
+    "A Latin shortened form such as ‘e.g.’ or ‘i.e.’ is used."
+   ],
+   "why": "G-4 selects the body because it specifies that the prohibited comma follows the shortened form."
+  },
+  {
+   "anchor": {
+    "block_id": "a05e36306533",
+    "end": 73,
+    "prefix": "",
+    "quote": "Place commas between principal clauses joined together with a conjunction",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "7d92326bf7b4",
+     "end": 114,
+     "prefix": "",
+     "quote": "Use commas to connect 2 or more principal clauses joined by a coordinating conjunction (‘and’, ‘or’, ‘but’, ‘so’).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "c51d8ddcdda5",
+     "end": 81,
+     "prefix": "",
+     "quote": "If they have different subjects, use a comma before the coordinating conjunction.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "b1c47f10f2c1",
+     "end": 115,
+     "prefix": "",
+     "quote": "If 2 clauses share the same subject, you don’t need to repeat the subject or insert a comma before the conjunction.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "90bcd8b391b4",
+     "end": 103,
+     "prefix": "",
+     "quote": "The exception to this rule is when you have joined more than 2 principal clauses with the same subject.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "4757e3b37611",
+       "end": 88,
+       "prefix": "",
+       "quote": "The Senate debated the Bill at length, but the party whips eventually called for a vote.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "d69c633756e8",
+       "end": 75,
+       "prefix": "",
+       "quote": "The company closed its Perth office and sacked the chief financial officer.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f1a2eacd873c",
+       "end": 106,
+       "prefix": "",
+       "quote": "The company closed its Perth office, sacked the chief financial officer, and opened a branch in Singapore.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 9,
+   "seed_uid": "2a14a2089b9d0e4d",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "Coordinated principal clauses with different subjects lack a comma before their conjunction, or a series of more than two principal clauses sharing a subject lacks the required separating commas."
+   },
+   "when": [
+    "Principal clauses are joined by a coordinating conjunction such as ‘and’, ‘or’, ‘but’ or ‘so’.",
+    "Two clauses with different subjects need a comma before the conjunction.",
+    "Two clauses sharing a subject do not require a repeated subject or a comma.",
+    "More than two principal clauses sharing a subject require separating commas, including before the final conjunction."
+   ],
+   "why": "G-2 explicitly groups different-subject, shared-subject and more-than-two-clause cases; G-3 preserves the shared-subject permission."
+  },
+  {
+   "anchor": {
+    "block_id": "f2c2c2f20987",
+    "end": 64,
+    "prefix": "",
+    "quote": "Do not use this rule to create a sentence of more than 25 words.",
+    "start": 0,
+    "suffix": " Shorter sentences are easier to"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A sentence formed by joining principal clauses with commas and coordinating conjunctions contains more than 25 words."
+   },
+   "when": [
+    "A sentence joins principal clauses using commas and coordinating conjunctions."
+   ],
+   "why": "This states a measurable property of the resulting sentence, not merely writer advice, and is distinct from comma placement."
+  },
+  {
+   "anchor": {
+    "block_id": "94c5b6f7c08e",
+    "end": 92,
+    "prefix": "",
+    "quote": "Don’t use a comma to link 2 stand-alone sentences unless you use a coordinating conjunction.",
+    "start": 0,
+    "suffix": " This kind of error is called a "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "bd2060f01f2f",
+     "end": 38,
+     "prefix": "",
+     "quote": "Don’t use commas to ‘splice’ sentences",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f91a58143e9b",
+       "end": 81,
+       "prefix": "",
+       "quote": "The report was finished last week, but the minister has not approved its release.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "54d41f59bd28",
+       "end": 77,
+       "prefix": "",
+       "quote": "The report was finished last week, the minister has not approved its release.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A comma alone joins two stand-alone sentences without a coordinating conjunction."
+   },
+   "when": [
+    "The material on each side of a linking comma could stand as a sentence.",
+    "A coordinating conjunction permits the comma linkage."
+   ],
+   "why": "G-4 consolidates the heading and explicit body instruction; the conjunction exception belongs to this single splice check."
+  },
+  {
+   "anchor": {
+    "block_id": "4f776676d8a9",
+    "end": 44,
+    "prefix": "",
+    "quote": "Use commas between items in a sentence list.",
+    "start": 0,
+    "suffix": " Avoid using a comma before the "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "05550c576f7a",
+     "end": 58,
+     "prefix": "",
+     "quote": "Separate items in lists of nouns or adjectives with commas",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d10e8de4a1ab",
+     "end": 75,
+     "prefix": "",
+     "quote": "This rule applies to sentence lists and sentence fragments in bullet lists.",
+     "start": 0,
+     "suffix": " Do not punctuate the end of a l"
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8b51273b6541",
+       "end": 55,
+       "prefix": "",
+       "quote": "The delegation visited Brisbane, Canberra and Adelaide.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a5b5e202a326",
+       "end": 71,
+       "prefix": "",
+       "quote": "The consultation involved businesses, sole traders and not-for-profits.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b0e6aee0ad14",
+       "end": 68,
+       "prefix": "",
+       "quote": "The applicant was willing to learn, eager to work and well prepared.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Successive items in a sentence list lack a separating comma at a boundary other than the final conjunction boundary."
+   },
+   "when": [
+    "Items form a sentence list, including a sentence list within a fragment in a bullet list.",
+    "The separate Oxford-comma rule handles the boundary before the final coordinated item.",
+    "This is not a requirement to put commas at the ends of bullet-list items."
+   ],
+   "why": "G-1 selects a child of the grouping heading; G-4 absorbs its heading, while the final-item comma is checked separately."
+  },
+  {
+   "anchor": {
+    "block_id": "4f776676d8a9",
+    "end": 98,
+    "prefix": "tween items in a sentence list. ",
+    "quote": "Avoid using a comma before the last item in the list.",
+    "start": 45,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "14755ad27d1e",
+     "end": 36,
+     "prefix": "",
+     "quote": "Restrict the use of the Oxford comma",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "d24b04b4f202",
+     "end": 101,
+     "prefix": "",
+     "quote": "If the last item combines 2 words or phrases with the word ‘and’, use a comma before that final item.",
+     "start": 0,
+     "suffix": " This use of the comma is known "
+    },
+    {
+     "block_id": "16d2b031fe80",
+     "end": 190,
+     "prefix": "uity in complex sentence lists. ",
+     "quote": "For example, use the Oxford comma before the last item if you’re using a defining phrase applicable only to that final item.",
+     "start": 66,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "30ee8a778738",
+       "end": 100,
+       "prefix": "",
+       "quote": "The industries most affected are retail trade, wholesale trade, and accommodation and food services.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The manual gives the meaning that all crops are for stockfeed.",
+     "parts": [
+      {
+       "block_id": "afe7a2ae423e",
+       "end": 69,
+       "prefix": "",
+       "quote": "The analysis outlined demand for barley, wheat and hay for stockfeed.",
+       "start": 0,
+       "suffix": " [All crops are for stockfeed.]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "The manual gives the meaning that only the hay is for stockfeed.",
+     "parts": [
+      {
+       "block_id": "32f5b46408f1",
+       "end": 70,
+       "prefix": "",
+       "quote": "The analysis outlined demand for barley, wheat, and hay for stockfeed.",
+       "start": 0,
+       "suffix": " [Only the hay is for stockfeed."
+      }
+     ]
+    }
+   ],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "The normal omission has stated exceptions for an internal ‘and’ in the final item and for a defining phrase applying only to that item. The discussion also identifies prevention of ambiguity in complex lists as the purpose of the Oxford comma.",
+    "unit": "phrase",
+    "violation_condition": "A comma precedes the final coordinated list item without a disambiguating reason, or the comma is missing where the final item contains an internal ‘and’ or has a defining phrase intended to apply only to it."
+   },
+   "when": [
+    "A sentence list has a final item introduced by a conjunction.",
+    "Normally omit the comma before the final item.",
+    "Include it when the final item itself combines two words or phrases with ‘and’.",
+    "Include it when a defining phrase applies only to the final item.",
+    "Do not treat a contrast in intended meaning as an error merely because one version has an Oxford comma."
+   ],
+   "why": "G-2 combines the default omission and the stated Oxford-comma cases into one final-item punctuation check."
+  },
+  {
+   "anchor": {
+    "block_id": "d10e8de4a1ab",
+    "end": 155,
+    "prefix": "ence fragments in bullet lists. ",
+    "quote": "Do not punctuate the end of a list item with a comma if it is in a bullet list.",
+    "start": 76,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "pattern",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "",
+    "unit": "block",
+    "violation_condition": "A bullet-list item ends with a comma."
+   },
+   "when": [
+    "The text is a bullet-list item."
+   ],
+   "why": "A comma terminating a bullet-list item is a different finding from missing separators within a sentence list."
+  },
+  {
+   "anchor": {
+    "block_id": "1bdd34eaa9bc",
+    "end": 95,
+    "prefix": "",
+    "quote": "When writing strings of adjectives, use a set order – evaluative, descriptive, then definitive.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 15,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Adjectives occur in a type order other than evaluative before descriptive before definitive."
+   },
+   "when": [
+    "A string of adjectives includes more than one of the named types."
+   ],
+   "why": "Adjective order is a distinct property from comma separation and can produce an independent finding."
+  },
+  {
+   "anchor": {
+    "block_id": "3c4e86ee3937",
+    "end": 103,
+    "prefix": "",
+    "quote": "Use commas in strings of adjectives of the same type (for example, a string of descriptive adjectives).",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "133e01f0935a",
+     "end": 36,
+     "prefix": "",
+     "quote": "Separate adjectives of the same type",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "21eff846582d",
+     "end": 61,
+     "prefix": "",
+     "quote": "Don’t use commas in strings of adjectives of different types.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "e6dd4586530c",
+       "end": 55,
+       "prefix": "",
+       "quote": "This is an ethical, profitable, efficient organisation.",
+       "start": 0,
+       "suffix": " [Descriptive adjectives]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "13359fb91f5b",
+       "end": 45,
+       "prefix": "",
+       "quote": "They were a happy, caring, devoted workforce.",
+       "start": 0,
+       "suffix": " [Evaluative adjectives]"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a115e92964b3",
+       "end": 52,
+       "prefix": "",
+       "quote": "My new black felt-tip pen splattered ink everywhere.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "5cd966f87c05",
+       "end": 69,
+       "prefix": "",
+       "quote": "We found some used French tennis balls left over from a training day.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 16,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "Adjectives of the same type lack separating commas, or commas incorrectly separate adjectives of different types."
+   },
+   "when": [
+    "A string of adjectives modifies a noun.",
+    "Adjectives of the same type take separating commas.",
+    "Adjectives of different types do not take separating commas."
+   ],
+   "why": "G-2 treats same-type and different-type adjectives as conditions of one separator check; G-4 absorbs the heading."
+  },
+  {
+   "anchor": {
+    "block_id": "d20634ac6c6f",
+    "end": 43,
+    "prefix": "",
+    "quote": "Use commas in numbers with 4 or more digits",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "eb2cfa2d3ad0",
+     "end": 112,
+     "prefix": "",
+     "quote": "Numbers with 4 or more digits (starting from 1,000) need a comma. Use commas for numerals in text and in tables.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "379722064922",
+     "end": 95,
+     "prefix": "",
+     "quote": "Don’t use a space between the digits, because screen readers can read them as separate numbers.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "83a65354e53c",
+     "end": 122,
+     "prefix": "",
+     "quote": "When you are using numbers of 1,000 or more, use commas to separate the numerals into groups of 3 (working right to left).",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "69f3cb30c93d",
+     "end": 52,
+     "prefix": "",
+     "quote": "Commas are not used to the right of a decimal point.",
+     "start": 0,
+     "suffix": ""
+    },
+    {
+     "block_id": "ec998738d6c1",
+     "end": 39,
+     "prefix": "",
+     "quote": "Don’t use commas in postcodes or dates.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "f7ab8f568bcb",
+       "end": 53,
+       "prefix": "",
+       "quote": "The agency handles around 6,500 complaints each year.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "violating",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6c1438d42904",
+       "end": 53,
+       "prefix": "",
+       "quote": "The agency handles around 6 500 complaints each year.",
+       "start": 0,
+       "suffix": " [This can be read as the number"
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "714c7bba8e6a",
+       "end": 5,
+       "prefix": "",
+       "quote": "1,000",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "c4ec66346b8b",
+       "end": 6,
+       "prefix": "",
+       "quote": "17,275",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "7abf9f826221",
+       "end": 11,
+       "prefix": "",
+       "quote": "505,607,400",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "ad0bef536998",
+       "end": 9,
+       "prefix": "",
+       "quote": "808.12345",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a3cb63a9c38d",
+       "end": 10,
+       "prefix": "",
+       "quote": "1,279.0044",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "3fe719f66b08",
+       "end": 18,
+       "prefix": "",
+       "quote": "The year was 2020.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "6553157c8671",
+       "end": 37,
+       "prefix": "",
+       "quote": "The office was in postcode area 6500.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 17,
+   "seed_uid": "8d112f931549bb88",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "phrase",
+    "violation_condition": "A number of 1,000 or more lacks correctly placed three-digit grouping commas or uses spaces instead, or digit-grouping commas appear in a decimal fraction, date or postcode."
+   },
+   "when": [
+    "The rule applies to numerals in text and tables.",
+    "Integer digits in numbers of 1,000 or more are grouped in threes from right to left.",
+    "Spaces are not substitutes for grouping commas.",
+    "Digits to the right of a decimal point are not comma-grouped.",
+    "Dates and postcodes are not comma-grouped."
+   ],
+   "why": "G-2 combines digit grouping, separator choice and numerical-context exceptions into one number-formatting check."
+  },
+  {
+   "anchor": {
+    "block_id": "04f2ba78ff76",
+    "end": 46,
+    "prefix": "",
+    "quote": "Introduce directly quoted speech with a comma.",
+    "start": 0,
+    "suffix": " Use the comma in combination wi"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [
+    {
+     "block_id": "04f2ba78ff76",
+     "end": 97,
+     "prefix": "tly quoted speech with a comma. ",
+     "quote": "Use the comma in combination with quotation marks.",
+     "start": 47,
+     "suffix": ""
+    },
+    {
+     "block_id": "71b24ff0623e",
+     "end": 113,
+     "prefix": "",
+     "quote": "If an attribution comes after a quotation, use a comma at the end of the quotation and before the quotation mark.",
+     "start": 0,
+     "suffix": ""
+    }
+   ],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a3a49c677148",
+       "end": 36,
+       "prefix": "",
+       "quote": "She said, ‘It’s time to start work.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "8b4d3d85af41",
+       "end": 62,
+       "prefix": "",
+       "quote": "The Prime Minister said, ‘I’m calling a half-Senate election.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "9f8c0bebab58",
+       "end": 36,
+       "prefix": "",
+       "quote": "‘It’s time to start work,’ she said.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "a02a67f80795",
+       "end": 85,
+       "prefix": "",
+       "quote": "‘I’m calling a half-Senate election for Saturday 15 August,’ the Prime Minister said.",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 18,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "The comma separating directly quoted speech from its attribution is missing or is on the wrong side of the quotation mark."
+   },
+   "when": [
+    "Directly quoted speech has an introductory or following attribution.",
+    "With an introductory attribution, the comma precedes the opening quotation mark.",
+    "With a following attribution, the comma is at the end of the quotation before the closing quotation mark."
+   ],
+   "why": "G-2 combines attribution-before and attribution-after positions as one quotation-boundary comma check."
+  },
+  {
+   "anchor": {
+    "block_id": "e35d7b521c0d",
+    "end": 103,
+    "prefix": "",
+    "quote": "If the quotation is broken into 2 parts, the second part should follow a full stop rather than a comma.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "77874cd04322",
+       "end": 59,
+       "prefix": "",
+       "quote": "‘It’s time to start work,’ she said. ‘We have a lot to do.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "0ab3911ad2cc",
+       "end": 103,
+       "prefix": "",
+       "quote": "‘I’m calling a half-Senate election,’ the Prime Minister said. ‘It will be held on Saturday 15 August.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 19,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The wording does not distinguish two complete quoted sentences from a single quoted sentence interrupted by an attribution. Both examples show the former; application to interrupted single sentences needs clarification.",
+    "unit": "paragraph",
+    "violation_condition": "A comma, rather than a full stop, separates the intervening attribution from the second quoted part."
+   },
+   "when": [
+    "A quotation is broken into two parts with an attribution between them."
+   ],
+   "why": "This checks the boundary before a second quoted part, not the comma between the first part and its attribution."
+  },
+  {
+   "anchor": {
+    "block_id": "5cba07877452",
+    "end": 90,
+    "prefix": "",
+    "quote": "If the quotation ends the sentence, end it with the original punctuation of the quotation.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "fd33d50d0d0d",
+       "end": 36,
+       "prefix": "",
+       "quote": "She said, ‘It’s time to start work.’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    },
+    {
+     "kind": "compliant",
+     "note": "",
+     "parts": [
+      {
+       "block_id": "b4a5a570eeaf",
+       "end": 38,
+       "prefix": "",
+       "quote": "She asked, ‘Is it time to start work?’",
+       "start": 0,
+       "suffix": ""
+      }
+     ]
+    }
+   ],
+   "n": 20,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "sentence",
+    "violation_condition": "A quotation at the end of a sentence has its original terminal punctuation omitted or replaced."
+   },
+   "when": [
+    "The quotation ends the containing sentence."
+   ],
+   "why": "The terminal punctuation of a sentence-ending quotation is distinct from attribution-boundary commas."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6-astra",
+ "stop_reason": "completed",
+ "usage": {
+  "cached_input_tokens": 3058,
+  "input_tokens": 8690,
+  "output_tokens": 20209,
+  "reasoning_tokens": 6616
+ }
+}

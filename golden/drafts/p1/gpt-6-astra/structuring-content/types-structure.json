@@ -1,0 +1,982 @@
+{
+ "effort": "high",
+ "input_sha256": "c582a3622f5cfa69eedc742004ba70b1fbd58c1c17381d8f30d7c67187fc171b",
+ "model": "gpt-6-astra",
+ "not_rules": [
+  {
+   "anchor": {
+    "block_id": "a0fec47df154",
+    "end": 148,
+    "prefix": "as they search for information. ",
+    "quote": "Use the type of structure that suits the content and how people will need to consume it.",
+    "start": 60,
+    "suffix": ""
+   },
+   "note": "General introduction to the specific structure choices below, not an additional overarching finding.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "429f842d2f10",
+    "end": 61,
+    "prefix": "",
+    "quote": "Structure content to help the user to navigate and understand",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the explanation of structure and the accessibility fundamentals.",
+   "reason": "section",
+   "seed_uid": "ff67f533941b793d"
+  },
+  {
+   "anchor": {
+    "block_id": "5b92be8107f0",
+    "end": 57,
+    "prefix": "",
+    "quote": "Organise content in a clear order using section headings.",
+    "start": 0,
+    "suffix": " Describe the topics or the foll"
+   },
+   "note": "G-4: consolidated into the more specific instruction to use a logical hierarchy or sequential steps for headings.",
+   "reason": "restatement",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b1bc9d00e50e",
+    "end": 119,
+    "prefix": "",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "start": 0,
+    "suffix": " Use the same navigation element"
+   },
+   "note": "Requires testing navigation and reading order across technologies, rather than assessing the words alone.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b1bc9d00e50e",
+    "end": 169,
+    "prefix": "f the technology they're using. ",
+    "quote": "Use the same navigation elements across services.",
+    "start": 120,
+    "suffix": ""
+   },
+   "note": "Concerns consistency of service navigation interfaces, not a standalone property of the text.",
+   "reason": "not_text",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "150cb276fa72",
+    "end": 50,
+    "prefix": "",
+    "quote": "Pick the type of structure that works for the user",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific hierarchical, sequential and narrative structure instructions.",
+   "reason": "section",
+   "seed_uid": "c2154eeed792a12c"
+  },
+  {
+   "anchor": {
+    "block_id": "5b31ad2704f7",
+    "end": 82,
+    "prefix": "",
+    "quote": "Use a structure that matches expectations for the type of content you're creating:",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: introduces the three specific structure choices rather than adding another structure-mismatch check.",
+   "reason": "section",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "10d332a68401",
+    "end": 199,
+    "prefix": "to find and understand content. ",
+    "quote": "Do user research to understand who will be using the content and their level of literacy.",
+    "start": 110,
+    "suffix": ""
+   },
+   "note": "G-5: describes a research activity; the text cannot establish whether the writer performed it.",
+   "reason": "advice",
+   "seed_uid": ""
+  },
+  {
+   "anchor": {
+    "block_id": "b8144d1df72e",
+    "end": 65,
+    "prefix": "",
+    "quote": "Design headings and other elements to help the user scan the page",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-1: groups the specific checks on headings, paragraphs, information presentation and idea organisation.",
+   "reason": "section",
+   "seed_uid": "5ef3130bd91d9cd7"
+  },
+  {
+   "anchor": {
+    "block_id": "ccd4e808283f",
+    "end": 93,
+    "prefix": "",
+    "quote": "Once you have decided on the type of structure you need to use, plan the structural elements.",
+    "start": 0,
+    "suffix": ""
+   },
+   "note": "G-5: instructs the writer to plan; the resulting textual properties are specified in the following items.",
+   "reason": "advice",
+   "seed_uid": ""
+  }
+ ],
+ "page_path": "structuring-content/types-structure.md",
+ "page_sha256": "3a9ba72333d629399ece4ca68a370017b7ab8c2a7f2665633b301dbe70a137d8",
+ "prompt_sha256": "cedc0382b5e520e095289965a6d4c4df383ec023dd299f399c64c7e63a2e41cd",
+ "prompt_version": "p1",
+ "raw": {
+  "not_rules": [
+   {
+    "block_id": "a0fec47df154",
+    "note": "General introduction to the specific structure choices below, not an additional overarching finding.",
+    "quote": "Use the type of structure that suits the content and how people will need to consume it.",
+    "reason": "section"
+   },
+   {
+    "block_id": "429f842d2f10",
+    "note": "G-1: groups the explanation of structure and the accessibility fundamentals.",
+    "quote": "Structure content to help the user to navigate and understand",
+    "reason": "section"
+   },
+   {
+    "block_id": "5b92be8107f0",
+    "note": "G-4: consolidated into the more specific instruction to use a logical hierarchy or sequential steps for headings.",
+    "quote": "Organise content in a clear order using section headings.",
+    "reason": "restatement"
+   },
+   {
+    "block_id": "b1bc9d00e50e",
+    "note": "Requires testing navigation and reading order across technologies, rather than assessing the words alone.",
+    "quote": "Make sure all users can navigate through all content in the intended order, regardless of the technology they're using.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "b1bc9d00e50e",
+    "note": "Concerns consistency of service navigation interfaces, not a standalone property of the text.",
+    "quote": "Use the same navigation elements across services.",
+    "reason": "not_text"
+   },
+   {
+    "block_id": "150cb276fa72",
+    "note": "G-1: groups the specific hierarchical, sequential and narrative structure instructions.",
+    "quote": "Pick the type of structure that works for the user",
+    "reason": "section"
+   },
+   {
+    "block_id": "5b31ad2704f7",
+    "note": "G-1: introduces the three specific structure choices rather than adding another structure-mismatch check.",
+    "quote": "Use a structure that matches expectations for the type of content you're creating:",
+    "reason": "section"
+   },
+   {
+    "block_id": "10d332a68401",
+    "note": "G-5: describes a research activity; the text cannot establish whether the writer performed it.",
+    "quote": "Do user research to understand who will be using the content and their level of literacy.",
+    "reason": "advice"
+   },
+   {
+    "block_id": "b8144d1df72e",
+    "note": "G-1: groups the specific checks on headings, paragraphs, information presentation and idea organisation.",
+    "quote": "Design headings and other elements to help the user scan the page",
+    "reason": "section"
+   },
+   {
+    "block_id": "ccd4e808283f",
+    "note": "G-5: instructs the writer to plan; the resulting textual properties are specified in the following items.",
+    "quote": "Once you have decided on the type of structure you need to use, plan the structural elements.",
+    "reason": "advice"
+   }
+  ],
+  "rules": [
+   {
+    "applies_to": [
+     "web_page"
+    ],
+    "block_id": "156541f0743a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write clear page titles.",
+    "specification": "Assess whether the title identifies the page's subject or purpose. The page supplies no title-length requirement.",
+    "unit": "document",
+    "violation_condition": "A page title is vague or misleading about the page's subject or purpose.",
+    "when": [
+     "When assessing a web page's title."
+    ],
+    "why": "G-1: this is a specific textual requirement within the accessibility section."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "5b92be8107f0",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Describe the topics or the following section in the headings.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not describe the topic or section it introduces.",
+    "when": [
+     "When a heading introduces a topic or section."
+    ],
+    "why": "G-1: descriptive heading wording is a distinct check from the organisation of headings."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "18c83da15a72",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "To group content into topics or connected ideas, prioritised by level of importance, use a hierarchical structure.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Content intended to group and prioritise topics or connected ideas lacks a hierarchy representing those relationships.",
+    "when": [
+     "When grouping content into topics or connected ideas prioritised by importance."
+    ],
+    "why": "G-1: retain the specific hierarchy requirement rather than an additional parent-level structure rule."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "68a06bd13dae",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "To present a sequence of steps or events, use a sequential structure.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Steps or events are arranged in a way that does not preserve the sequence needed to follow the process or progression.",
+    "when": [
+     "When presenting a sequence of steps or events."
+    ],
+    "why": "G-1: the required ordering of steps or events is a specific structural check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "3f179bf747e3",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "To guide people from beginning to end, use a narrative structure.",
+    "specification": "This applies to content intended to tell an entire story, as explained by the following sentences. Assess narrative progression, not a mandatory chronological ordering.",
+    "unit": "document",
+    "violation_condition": "Content intended to tell an entire story lacks a narrative progression carrying the reader through it.",
+    "when": [
+     "When the content is intended to guide people through an entire story from beginning to end."
+    ],
+    "why": "G-1: retain the specific narrative requirement; the following explanation establishes its storytelling context."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "10d332a68401",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD_NOT",
+    "quote": "Avoid unconventional or inconsistent structures.",
+    "specification": "Assess convention against the content type and consistency against the organisation established in the document. The page provides no exhaustive list of acceptable structures.",
+    "unit": "document",
+    "violation_condition": "Content has an unconventional structure or inconsistent organisation that makes its arrangement unpredictable.",
+    "when": [],
+    "why": "The instruction identifies a predictability check, distinct from choosing a structure for a particular content purpose."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "916de5f539bc",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [
+     {
+      "block_id": "5b92be8107f0",
+      "quote": "Organise content in a clear order using section headings."
+     }
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a logical hierarchy or sequential steps for headings.",
+    "specification": "Assess the conceptual hierarchy or sequence expressed by the headings. This does not establish a separate rule about HTML heading-level syntax.",
+    "unit": "section",
+    "violation_condition": "The headings express an illogical hierarchy or place sequential steps in an illogical order.",
+    "when": [
+     "When organising content with headings.",
+     "Either a logical hierarchy or sequential steps can satisfy the instruction."
+    ],
+    "why": "G-4: consolidate the earlier clear-order instruction here; heading wording and topical grouping remain separate checks."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "9854979b8fb3",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Write a topic sentence for each paragraph.",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph has no topic sentence identifying its main idea.",
+    "when": [
+     "When assessing prose paragraphs."
+    ],
+    "why": "G-1: this is a specific paragraph-level check under the broader scanning section."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "c4f189ad3654",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Display important information in lists, callout boxes, tables and illustrations.",
+    "specification": "Treat the named formats as available ways to display important information, not a requirement to repeat every important point in all four formats. Importance depends on the content and user purpose.",
+    "unit": "section",
+    "violation_condition": "Important information is left only in ordinary running prose rather than displayed in a list, callout box, table or illustration.",
+    "when": [
+     "When presenting important information."
+    ],
+    "why": "G-2: the named presentation forms are alternatives within one information-presentation check."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "832f97d39480",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Structure your content by writing about one idea at a time:",
+    "specification": "Interpret this as developing ideas in turn rather than repeatedly switching between unfinished ideas. It does not specify one idea per sentence or per paragraph.",
+    "unit": "section",
+    "violation_condition": "The development of separate ideas is interleaved, with the text repeatedly leaving an unfinished idea to develop another and then returning to it.",
+    "when": [
+     "When developing multiple ideas in content."
+    ],
+    "why": "The lead-in states a textual property distinct from the following checks on priority, grouping, length and order."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "1c8cf24e1f24",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Start with the most important idea first.",
+    "specification": "Assess the opening idea of the content being structured. Importance is judged against the user's purpose; the page gives no mechanical ranking or instruction to apply this separately to every paragraph.",
+    "unit": "document",
+    "violation_condition": "Less important ideas precede the most important idea at the start of the content.",
+    "when": [
+     "When arranging the ideas in content."
+    ],
+    "why": "This checks the placement of the leading idea, rather than the existence of a hierarchy or topical grouping."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "4cb62e80bb54",
+    "clarity_suggestion": "unambiguous",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Group related ideas under headings.",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Related ideas are not collected into a topical group under a heading.",
+    "when": [
+     "When organising related ideas in content."
+    ],
+    "why": "This checks topical grouping under headings, separately from heading wording and hierarchy."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "11f6ec5c357c",
+    "clarity_suggestion": "ambiguous_deferred",
+    "covers": [],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Organise ideas into short paragraphs.",
+    "specification": "The page does not define short. A paragraph-length criterion needs reviewer agreement; no word or sentence threshold is inferred here.",
+    "unit": "paragraph",
+    "violation_condition": "Ideas are packed into an overlong paragraph rather than divided into short paragraphs.",
+    "when": [
+     "When presenting ideas in prose paragraphs."
+    ],
+    "why": "E-4: retain the paragraph-length requirement without inventing a numerical definition of short."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "7c52f56752ef",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Make sure ideas flow from one paragraph to the next.",
+    "specification": "Assess whether successive paragraphs have an intelligible progression of ideas. Explicit transition words are not required when the relationship is already clear.",
+    "unit": "section",
+    "violation_condition": "Successive paragraphs have an incoherent progression or an abrupt, unexplained jump between ideas.",
+    "when": [
+     "When content contains successive paragraphs."
+    ],
+    "why": "This checks progression between paragraphs, distinct from the order of sentences within a paragraph."
+   },
+   {
+    "applies_to": [
+     "any"
+    ],
+    "block_id": "10d741264d1a",
+    "clarity_suggestion": "ambiguous_resolvable",
+    "covers": [],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "examples": [],
+    "modality": "SHOULD",
+    "quote": "Use a logical order for sentences.",
+    "specification": "Assess whether sentence order supports the progression and dependencies of the ideas. Several different orders may be logical.",
+    "unit": "paragraph",
+    "violation_condition": "The order of sentences disrupts the logical progression of the ideas.",
+    "when": [
+     "When arranging multiple sentences in prose."
+    ],
+    "why": "This is the sentence-order check, not a second finding for paragraph-to-paragraph flow."
+   }
+  ]
+ },
+ "refused": [],
+ "render_version": "1.0.0",
+ "rules": [
+  {
+   "anchor": {
+    "block_id": "156541f0743a",
+    "end": 24,
+    "prefix": "",
+    "quote": "Write clear page titles.",
+    "start": 0,
+    "suffix": " The title is the first thing a "
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 0,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "web_page"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess whether the title identifies the page's subject or purpose. The page supplies no title-length requirement.",
+    "unit": "document",
+    "violation_condition": "A page title is vague or misleading about the page's subject or purpose."
+   },
+   "when": [
+    "When assessing a web page's title."
+   ],
+   "why": "G-1: this is a specific textual requirement within the accessibility section."
+  },
+  {
+   "anchor": {
+    "block_id": "5b92be8107f0",
+    "end": 119,
+    "prefix": "r order using section headings. ",
+    "quote": "Describe the topics or the following section in the headings.",
+    "start": 58,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 1,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "A heading does not describe the topic or section it introduces."
+   },
+   "when": [
+    "When a heading introduces a topic or section."
+   ],
+   "why": "G-1: descriptive heading wording is a distinct check from the organisation of headings."
+  },
+  {
+   "anchor": {
+    "block_id": "18c83da15a72",
+    "end": 114,
+    "prefix": "",
+    "quote": "To group content into topics or connected ideas, prioritised by level of importance, use a hierarchical structure.",
+    "start": 0,
+    "suffix": " People will scan content for re"
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 2,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Content intended to group and prioritise topics or connected ideas lacks a hierarchy representing those relationships."
+   },
+   "when": [
+    "When grouping content into topics or connected ideas prioritised by importance."
+   ],
+   "why": "G-1: retain the specific hierarchy requirement rather than an additional parent-level structure rule."
+  },
+  {
+   "anchor": {
+    "block_id": "68a06bd13dae",
+    "end": 69,
+    "prefix": "",
+    "quote": "To present a sequence of steps or events, use a sequential structure.",
+    "start": 0,
+    "suffix": " People will need to know or do "
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 3,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Steps or events are arranged in a way that does not preserve the sequence needed to follow the process or progression."
+   },
+   "when": [
+    "When presenting a sequence of steps or events."
+   ],
+   "why": "G-1: the required ordering of steps or events is a specific structural check."
+  },
+  {
+   "anchor": {
+    "block_id": "3f179bf747e3",
+    "end": 65,
+    "prefix": "",
+    "quote": "To guide people from beginning to end, use a narrative structure.",
+    "start": 0,
+    "suffix": " People will be interested in kn"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 4,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "This applies to content intended to tell an entire story, as explained by the following sentences. Assess narrative progression, not a mandatory chronological ordering.",
+    "unit": "document",
+    "violation_condition": "Content intended to tell an entire story lacks a narrative progression carrying the reader through it."
+   },
+   "when": [
+    "When the content is intended to guide people through an entire story from beginning to end."
+   ],
+   "why": "G-1: retain the specific narrative requirement; the following explanation establishes its storytelling context."
+  },
+  {
+   "anchor": {
+    "block_id": "10d332a68401",
+    "end": 48,
+    "prefix": "",
+    "quote": "Avoid unconventional or inconsistent structures.",
+    "start": 0,
+    "suffix": " They make people work harder to"
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 5,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD_NOT",
+    "specification": "Assess convention against the content type and consistency against the organisation established in the document. The page provides no exhaustive list of acceptable structures.",
+    "unit": "document",
+    "violation_condition": "Content has an unconventional structure or inconsistent organisation that makes its arrangement unpredictable."
+   },
+   "when": [],
+   "why": "The instruction identifies a predictability check, distinct from choosing a structure for a particular content purpose."
+  },
+  {
+   "anchor": {
+    "block_id": "916de5f539bc",
+    "end": 57,
+    "prefix": "",
+    "quote": "Use a logical hierarchy or sequential steps for headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [
+    {
+     "block_id": "5b92be8107f0",
+     "end": 57,
+     "prefix": "",
+     "quote": "Organise content in a clear order using section headings.",
+     "start": 0,
+     "suffix": " Describe the topics or the foll"
+    }
+   ],
+   "examples": [],
+   "n": 6,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess the conceptual hierarchy or sequence expressed by the headings. This does not establish a separate rule about HTML heading-level syntax.",
+    "unit": "section",
+    "violation_condition": "The headings express an illogical hierarchy or place sequential steps in an illogical order."
+   },
+   "when": [
+    "When organising content with headings.",
+    "Either a logical hierarchy or sequential steps can satisfy the instruction."
+   ],
+   "why": "G-4: consolidate the earlier clear-order instruction here; heading wording and topical grouping remain separate checks."
+  },
+  {
+   "anchor": {
+    "block_id": "9854979b8fb3",
+    "end": 42,
+    "prefix": "",
+    "quote": "Write a topic sentence for each paragraph.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 7,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "paragraph",
+    "violation_condition": "A paragraph has no topic sentence identifying its main idea."
+   },
+   "when": [
+    "When assessing prose paragraphs."
+   ],
+   "why": "G-1: this is a specific paragraph-level check under the broader scanning section."
+  },
+  {
+   "anchor": {
+    "block_id": "c4f189ad3654",
+    "end": 80,
+    "prefix": "",
+    "quote": "Display important information in lists, callout boxes, tables and illustrations.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 8,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "Treat the named formats as available ways to display important information, not a requirement to repeat every important point in all four formats. Importance depends on the content and user purpose.",
+    "unit": "section",
+    "violation_condition": "Important information is left only in ordinary running prose rather than displayed in a list, callout box, table or illustration."
+   },
+   "when": [
+    "When presenting important information."
+   ],
+   "why": "G-2: the named presentation forms are alternatives within one information-presentation check."
+  },
+  {
+   "anchor": {
+    "block_id": "832f97d39480",
+    "end": 59,
+    "prefix": "",
+    "quote": "Structure your content by writing about one idea at a time:",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 9,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Interpret this as developing ideas in turn rather than repeatedly switching between unfinished ideas. It does not specify one idea per sentence or per paragraph.",
+    "unit": "section",
+    "violation_condition": "The development of separate ideas is interleaved, with the text repeatedly leaving an unfinished idea to develop another and then returning to it."
+   },
+   "when": [
+    "When developing multiple ideas in content."
+   ],
+   "why": "The lead-in states a textual property distinct from the following checks on priority, grouping, length and order."
+  },
+  {
+   "anchor": {
+    "block_id": "1c8cf24e1f24",
+    "end": 41,
+    "prefix": "",
+    "quote": "Start with the most important idea first.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 10,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess the opening idea of the content being structured. Importance is judged against the user's purpose; the page gives no mechanical ranking or instruction to apply this separately to every paragraph.",
+    "unit": "document",
+    "violation_condition": "Less important ideas precede the most important idea at the start of the content."
+   },
+   "when": [
+    "When arranging the ideas in content."
+   ],
+   "why": "This checks the placement of the leading idea, rather than the existence of a hierarchy or topical grouping."
+  },
+  {
+   "anchor": {
+    "block_id": "4cb62e80bb54",
+    "end": 35,
+    "prefix": "",
+    "quote": "Group related ideas under headings.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "unambiguous",
+   "covers": [],
+   "examples": [],
+   "n": 11,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "absence",
+    "modality": "SHOULD",
+    "specification": "",
+    "unit": "section",
+    "violation_condition": "Related ideas are not collected into a topical group under a heading."
+   },
+   "when": [
+    "When organising related ideas in content."
+   ],
+   "why": "This checks topical grouping under headings, separately from heading wording and hierarchy."
+  },
+  {
+   "anchor": {
+    "block_id": "11f6ec5c357c",
+    "end": 37,
+    "prefix": "",
+    "quote": "Organise ideas into short paragraphs.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_deferred",
+   "covers": [],
+   "examples": [],
+   "n": 12,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "hybrid",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "The page does not define short. A paragraph-length criterion needs reviewer agreement; no word or sentence threshold is inferred here.",
+    "unit": "paragraph",
+    "violation_condition": "Ideas are packed into an overlong paragraph rather than divided into short paragraphs."
+   },
+   "when": [
+    "When presenting ideas in prose paragraphs."
+   ],
+   "why": "E-4: retain the paragraph-length requirement without inventing a numerical definition of short."
+  },
+  {
+   "anchor": {
+    "block_id": "7c52f56752ef",
+    "end": 52,
+    "prefix": "",
+    "quote": "Make sure ideas flow from one paragraph to the next.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 13,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess whether successive paragraphs have an intelligible progression of ideas. Explicit transition words are not required when the relationship is already clear.",
+    "unit": "section",
+    "violation_condition": "Successive paragraphs have an incoherent progression or an abrupt, unexplained jump between ideas."
+   },
+   "when": [
+    "When content contains successive paragraphs."
+   ],
+   "why": "This checks progression between paragraphs, distinct from the order of sentences within a paragraph."
+  },
+  {
+   "anchor": {
+    "block_id": "10d741264d1a",
+    "end": 34,
+    "prefix": "",
+    "quote": "Use a logical order for sentences.",
+    "start": 0,
+    "suffix": ""
+   },
+   "clarity_suggestion": "ambiguous_resolvable",
+   "covers": [],
+   "examples": [],
+   "n": 14,
+   "seed_uid": "",
+   "tags": {
+    "applies_to": [
+     "any"
+    ],
+    "detection_hint": "classifier",
+    "direction": "presence",
+    "modality": "SHOULD",
+    "specification": "Assess whether sentence order supports the progression and dependencies of the ideas. Several different orders may be logical.",
+    "unit": "paragraph",
+    "violation_condition": "The order of sentences disrupts the logical progression of the ideas."
+   },
+   "when": [
+    "When arranging multiple sentences in prose."
+   ],
+   "why": "This is the sentence-order check, not a second finding for paragraph-to-paragraph flow."
+  }
+ ],
+ "schema_version": 1,
+ "served_model": "gpt-6-astra",
+ "stop_reason": "completed",
+ "usage": {
+  "cached_input_tokens": 3058,
+  "input_tokens": 4161,
+  "output_tokens": 9273,
+  "reasoning_tokens": 5696
+ }
+}

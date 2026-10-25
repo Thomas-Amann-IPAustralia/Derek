@@ -35,6 +35,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
 | [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
 | [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
+| [027](#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand) | Two-model consensus, adjudicated, replaces marking by hand | Accepted (owner), 2026-10-25; supersedes ADR-025's "a human marks them" |
 
 ---
 
@@ -1286,3 +1287,105 @@ telling a 4-digit count from a year or a postcode is meaning, not pattern.
 **What this does not do.** It does not let a proposal change a review verdict, run a
 rule that is not accepted, or execute anything from the ledger.
 
+
+---
+
+## ADR-027 — Two-model consensus, adjudicated, replaces marking by hand
+
+**Decision (owner).** Rules are identified by two models from different families,
+`gpt-6-astra` and `gemini-3.1-pro-preview` (`tools/draft/providers.py:PAIR`), drafting
+every eligible page independently with ADR-025's pinned prompt and pointer check.
+`tools/draft/consensus.py` lines the two drafts up. What both found the same way is
+taken. Every difference becomes an item with a stable id in
+`golden/consensus/queue.jsonl`. The items are decided by a third family (Claude, in a
+working session), with a reason, in `golden/consensus/adjudications.jsonl`. A page is
+exported only when every item on it is decided. The export uses the annotator's own op
+format, so it reaches `golden/spans.jsonl` and the ledger through
+`tools/annotate/apply_spans.py` and `server._apply`, with every refusal they already
+make. A human then checks a uniform random sample of 50 consensus rules
+(`consensus.py sample`), and that verdict gates the batch.
+
+**Reason.** The owner's call, made because marking by hand had stopped the project. Three
+pages in a month, at about 23 words a minute, against 162,000 words. The annotator also
+asked its user for judgements its interface did not explain. A process nobody can run
+protects nothing.
+
+**What was measured first** (the sample: the ten pages in `golden/blind.json`, 2026-10-25):
+
+| | |
+|---|---|
+| Spend | $8.44 recorded ($6.23 `gpt-6-astra`, $2.21 Gemini), plus up to about $3.20 for one Astra call on `treaties.md` that used its whole 64,000-token output on reasoning and was not written, so about $11.60 in all |
+| Against the human's marks (`commas.md`, `pronouns.md`; `consensus.py score`) | rules found by both models 61% (17/28), by either 79% (22/28). Four of the six misses are what `docs/08` says not to mark: two permissions (G-3), a section (G-1), a cross-page duplicate (G-6). |
+| Examples with opposite polarity to the human's | **0** of 54 compared |
+| The heading walk, same pages | 52% |
+| Gemini alone, three human pages | 73% recall, 0 inversions |
+| Seven consensus pages | 40 rules agreed outright; 105 items adjudicated: 68 single-model rules (26 kept, 42 dropped as restatements, conditions, advice or not text), 35 tag disputes, 2 dropped candidates |
+| `golden_lint` on consensus pages | no `fix`-level finding (the human pages carry 29: rules with no violation condition) |
+
+**Does this break D-7?** Yes, in its second clause, and it is the owner's decision to do
+so. No model runs at extraction time: `derek/extract/` still reads only declared
+inputs, and `build --check` still reproduces the ledger byte for byte. But a model, checked
+by a model of another family and adjudicated by a third, now decides that a rule
+exists. ADR-025's other safeguards stay, because they answer the Octavius failure itself:
+
+1. **It only points.** Every statement and every example is a block id plus a quote that
+   `drafting.resolve` finds in the manual or refuses. No text a model wrote becomes a rule
+   or a test of one (D-1, D-5, postmortem F4). The violation condition and the tags are a
+   model's words, as they were before.
+2. **Two families, then a third.** One model's blind spot is unlikely to be the other's.
+   Where they agree, the polarity of an example is two independent readings. Where they
+   disagree, nothing is taken without a recorded reason.
+3. **Polarity is never settled by rule.** An example the two models attach with opposite
+   polarity, or that only one attached with no *Correct*/*Incorrect* label to agree with,
+   always goes to the adjudicator. That is the Octavius inversion.
+4. **Human pages are left alone.** Consensus never writes to a page a human marked, so
+   those pages stay a measurement of the models, not of the models against themselves.
+5. **D-10 holds where it bites.** A consensus rule is `accepted`, but nothing fires
+   without a matcher, and a matcher is adopted only by a named human (ADR-026). The
+   sample gates the batch.
+
+**Disagreements settled by rule, not by hand.** On the sample these were the commonest
+disputes. Each is a reading of written policy, so `consensus.SETTLE` decides it the same
+way every time:
+
+* *Modality* SHOULD against MUST (or the `_NOT` pair): MUST only if the statement says
+  *must*, *never*, *always*, *required*, *illegal* or *mandatory* (ADR-016, and the prompt's
+  own instruction). Gemini read bare instructions as MUST far more often than Astra.
+* *Unit*: the larger. A checker given more text than it needs can still decide.
+* *Clarity*: the more cautious reading. Two readers disagreeing about whether a rule is
+  operational is evidence that it is not clearly so.
+* *Detection hint*: a definite answer over `unsure`, otherwise the primary drafter's.
+  It is a routing guess that ADR-026 refines.
+
+Direction (ADR-006), `applies_to`, rule existence and example polarity always go to the
+adjudicator.
+
+**How the adjudicator decided** (so the next session decides the same way). The test is
+`docs/08`'s: one rule is one thing a checker would flag and cite. Restatements fold into
+the rule they restate (G-4), and conditions go under its **When** (G-2). Advice that
+depends on the writer's intent is dropped (G-5). So is guidance about print or
+publication format (dust jackets, spines, page sides, HTML as a format), as `not_text`
+(D-6). A property of the finished text is kept even when no checker exists for it yet,
+with `clarity: ambiguous_deferred`, rather than lost.
+
+**Costs, all of them real.**
+
+*A yardstick with a model's fingerprints on it.* ADR-025 warned of this for seeded pages.
+It is now true of every consensus page. `span_recall` and any future heuristic measured
+against them is partly measured against the models. Only the human pages are clean.
+
+*The adjudicator is a model.* Its decisions are data with reasons, and the 50-rule sample
+is how a human finds out whether they hold.
+
+*Formatting rules are kept and not yet checkable.* Italics, page numbering and report
+structure are real rules, but Derek's `Document` is plain text by design (D-13). They are in
+the ledger with no route to a finding until a format-aware adapter exists.
+
+*Cross-page duplicates.* A per-page reader cannot see G-6. `golden_lint` reports the
+candidates (six on the sample), and they are deduplicated after the full batch.
+
+*Money.* About $0.91 a page at standard prices for the pair, so about $105–120 for the
+remaining 118 pages, or about half that through the providers' batch APIs.
+
+**What this does not do.** It does not let a model run at extraction time or in CI, write
+to the ledger except through `apply_spans.py`, adopt a matcher, or mark a human page.

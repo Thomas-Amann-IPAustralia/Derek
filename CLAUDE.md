@@ -30,10 +30,10 @@ Violating any of these reintroduces a known failure. Each links to its rationale
 | D-4 | Corpus eligibility is declared in `corpus/eligibility.yaml`, never inferred per rule | [ADR-005](docs/02-decisions.md#adr-005--corpus-eligibility-is-declared-not-inferred) |
 | D-5 | A rule's examples are never drawn from the sentence that states the rule | [postmortem §4](docs/00-postmortem-octavius.md#4-what-is-worth-keeping) |
 | D-6 | `applies_to` and `unit` are mandatory; `unit: artifact` never loads | [ADR-007](docs/02-decisions.md#adr-007--scope-and-unit-are-mandatory) |
-| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time, and no model decides a rule exists** | [ADR-002](docs/02-decisions.md#adr-002--deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive), [ADR-025](docs/02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them) |
+| D-7 | Candidate identity is deterministic and structural — **no model runs at extraction time**. A model decides a rule exists only through two-family consensus with recorded adjudication, and only by pointing at the manual's own words | [ADR-002](docs/02-decisions.md#adr-002--deterministic-candidate-identity), [ADR-021](docs/02-decisions.md#adr-021--the-pos-tagger-is-an-offline-authoring-step-and-it-is-additive), [ADR-025](docs/02-decisions.md#adr-025--a-model-may-draft-spans-a-human-marks-them), [ADR-027](docs/02-decisions.md#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand) |
 | D-8 | Change detection uses content hashes, not the site's `lastmod` | [ADR-001](docs/02-decisions.md#adr-001--snapshot-integrity-over-site-metadata) |
 | D-9 | Model calls are a content-addressed cache; re-running is a no-op | [ADR-003](docs/02-decisions.md#adr-003--model-calls-are-a-cache-not-a-step) |
-| D-10 | Only `accepted`/`amended` rules load. A human gates the runtime | [ADR-008](docs/02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue) |
+| D-10 | Only `accepted`/`amended` rules load. A human gates the runtime: a named human adopts every matcher, and a human sample gates each consensus batch | [ADR-008](docs/02-decisions.md#adr-008--human-acceptance-is-a-gate-not-a-review-queue), [ADR-026](docs/02-decisions.md#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human), [ADR-027](docs/02-decisions.md#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand) |
 | D-11 | **Never `exec()` anything from the ledger.** Matchers are declarative data | [ADR-009](docs/02-decisions.md#adr-009--no-generated-code-in-the-runtime) |
 | D-12 | Confidence is calibrated; `null` when unvalidated, never an invented number | [ADR-013](docs/02-decisions.md#adr-013--confidence-is-calibrated-not-raw) |
 | D-13 | Training inputs carry **no format markup** — that is what keeps Word deferral cheap | [ADR-019](docs/02-decisions.md#adr-019--training-inputs-carry-no-format-markup) |
@@ -80,6 +80,17 @@ python tools/draft/draft_spans.py --blind --dry-run   # what would run; free
 python tools/draft/draft_spans.py --next 5            # draft five new pages
 python -m derek.eval.draft_score        # drafts vs human marks: quality on blind pages only
 python -m derek.eval.annotation_pace    # words a minute per page, blind vs seeded
+
+# Two-model consensus (ADR-027) — how rules are identified now. Both drafters,
+# then line them up: agreement is taken, every difference is an item that needs
+# a recorded decision (golden/consensus/adjudications.jsonl) before its page exports.
+python tools/draft/draft_spans.py --all --model gpt-6-astra --jobs 5
+python tools/draft/draft_spans.py --all --model gemini-3.1-pro-preview --jobs 5
+python tools/draft/consensus.py status --all   # agreed, single-model, undecided per page
+python tools/draft/consensus.py queue --all    # the items -> golden/consensus/queue.jsonl
+python tools/draft/consensus.py export --all   # decided pages -> golden/inbox/, then apply_spans.py
+python tools/draft/consensus.py score --blind  # consensus vs the human-marked pages
+python tools/draft/consensus.py sample --n 50  # the human check that gates the batch
 
 # Tier 0 detection (ADR-026). Matchers are proposed as data in ledger/proposals/
 # and adopted by a named human, only if the rule's own examples agree and the
@@ -155,6 +166,9 @@ Each layer must be reproducible from the one below it. Full detail:
 | `derek/eval/golden_lint.py` | The golden set checked against D-2, ADR-006, E-1 and the grain policy |
 | `tools/draft/drafting.py` | Drafting prompt (hash-pinned), the pointer check, the draft cache (ADR-025) |
 | `tools/draft/draft_spans.py` | The only code that calls a model; imports the SDK lazily |
+| `tools/draft/providers.py` | OpenAI and Gemini transports (stdlib), the pinned `PAIR`, prices for reporting |
+| `tools/draft/consensus.py` | Two drafts → agreed rules + adjudication items → annotator ops (ADR-027) |
+| `golden/consensus/` | The item queue and the adjudicator's decisions, each with a reason |
 | `golden/drafts/` | **Cached model output.** Proposals, never an extraction input |
 | `golden/blind.json` | Pages whose drafts are never shown — the only pages a draft is measured on |
 | `derek/eval/draft_score.py` | Draft recall/precision on blind pages; acceptance on seeded pages, separately |
@@ -216,9 +230,14 @@ would flag and cite. The annotator's *Checks* card shows `golden_lint`'s finding
 
 **Model drafts** (ADR-025) appear in the annotator as dashed violet text. A draft is a set
 of pointers into the manual, so its quotes are the manual's own words; its tags are a
-model's guesses. Never widen what a draft can do: it may not write to `golden/` or the
-ledger, it is not an extraction input, and it is never shown on a page in
-`golden/blind.json`.
+model's guesses. A draft itself never writes to `golden/` or the ledger and is not an
+extraction input.
+
+**Consensus** (ADR-027) is how rules are identified now. Two drafts from different
+model families are lined up by `tools/draft/consensus.py`. Agreement is taken, and every
+difference is an item that needs a decision with a reason. Polarity and direction are
+never settled by rule, and a page a human marked is never written to. Adjudicate by
+`docs/08`'s test, as recorded in ADR-027, so that every session decides the same way.
 
 **Before accepting any rule, confirm:**
 
