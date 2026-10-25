@@ -34,7 +34,10 @@ class DraftError(RuntimeError):
 PROVIDERS = {
     "claude-opus-5": "anthropic",
     "gpt-6-astra": "openai",
+    "gpt-6.1-sol": "openai",
+    "gpt-6-luna": "openai",
     "gemini-3.1-pro-preview": "gemini",
+    "gemini-3.8-flash": "gemini",
 }
 
 # The two drafters ADR-027 runs side by side. Different families, so one's
@@ -200,13 +203,16 @@ def call_gemini(model: str, system: str, user: str, schema: dict, *,
 # Used only to report what a run cost, never to decide anything.
 PRICES = {
     "gpt-6-astra": {"input": 10.0, "cached_input": 1.0, "output": 50.0},
+    "gpt-6.1-sol": {"input": 2.0, "cached_input": 0.2, "output": 10.0},
+    "gpt-6-luna": {"input": 0.10, "cached_input": 0.01, "output": 0.50},
     "gemini-3.1-pro-preview": {"input": 2.0, "cached_input": 0.2, "output": 12.0},
+    "gemini-3.8-flash": {"input": 0.75, "cached_input": 0.075, "output": 3.75},
 }
 
 
 def cost(model: str, usage: dict) -> float:
     """What one call cost in USD. Reasoning is billed as output by both."""
-    p = PRICES.get(model)
+    p = PRICES.get(model.partition("@")[0])
     if not p:
         return 0.0
     cached = usage.get("cached_input_tokens", 0)

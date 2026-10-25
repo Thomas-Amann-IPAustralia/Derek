@@ -706,11 +706,79 @@ def score(pages: list[str]) -> int:
     return 0
 
 
+def compare(pages: list[str]) -> int:
+    """Every cached (model, effort) on human-marked pages: quality beside cost.
+
+    For choosing drafters (ADR-027). Free to re-run: it reads the cache.
+    """
+    from derek.eval.draft_score import score_page
+    from derek.extract.golden import load_golden
+    from providers import cost
+
+    golden = load_golden()
+    marked = sorted(p for p in pages if p in human_pages())
+    base = REPO / "golden" / "drafts" / PROMPT_VERSION
+    drafters = sorted(d.name for d in base.iterdir() if d.is_dir()) if base.exists() else []
+    print("| drafter | page | recall | examples | inverted | proposed | refused | out tokens | cost |")
+    print("|---|---|---|---|---|---|---|---|---|")
+    for drafter in drafters:
+        drafts = load_drafts(prompt_version=PROMPT_VERSION, model=drafter)
+        for rel in marked:
+            if rel not in drafts:
+                continue
+            d = drafts[rel]
+            sc = score_page(rel, d, golden, blind=True)
+            u = d.get("usage", {})
+            out = u.get("output_tokens", 0) + (u.get("reasoning_tokens", 0)
+                                               if drafter.startswith("gemini") else 0)
+            print(f"| {drafter} | {rel.rsplit('/', 1)[-1]} | {sc.matched}/{sc.golden} "
+                  f"| {sc.examples_found}/{sc.examples_golden} | {len(sc.polarity_conflicts)} "
+                  f"| {sc.drafted} | {sc.refused} | {out:,} | ${cost(drafter, u):.2f} |")
+
+    # Pairs from different families: what consensus would make of them, and how
+    # much it would leave for the adjudicator.
+    global PAIR, PRIMARY
+    saved = PAIR, PRIMARY
+    family = lambda d: "openai" if d.startswith("gpt") else d.split("-")[0]
+    print("\n| pair | agreed recall | either recall | inverted | single-model | tag items | cost |")
+    print("|---|---|---|---|---|---|---|")
+    try:
+        for a in drafters:
+            for b in drafters:
+                if family(a) != "openai" or family(b) == "openai":
+                    continue
+                PAIR, PRIMARY = (a, b), a
+                for rel in marked:
+                    da = load_drafts(prompt_version=PROMPT_VERSION, model=a).get(rel)
+                    db = load_drafts(prompt_version=PROMPT_VERSION, model=b).get(rel)
+                    if not (da and db):
+                        continue
+                    plan = page_plan(rel, {a: da, b: db})
+                    got = {}
+                    for name, keep in (("agreed", lambda r: not r.get("single")),
+                                       ("either", lambda r: True)):
+                        draft = {"rules": [{"anchor": r["anchor"], "tags": r["tags"],
+                                            "examples": r["examples"]}
+                                           for r in plan["rules"] if keep(r)]}
+                        got[name] = score_page(rel, draft, golden, blind=True)
+                    singles = sum(1 for it in plan["items"] if it["kind"] == "single")
+                    tagged = sum(1 for it in plan["items"] if it["kind"] == "tags")
+                    c = cost(a, da.get("usage", {})) + cost(b, db.get("usage", {}))
+                    print(f"| {a} + {b} | {got['agreed'].matched}/{got['agreed'].golden} "
+                          f"| {got['either'].matched}/{got['either'].golden} "
+                          f"| {len(got['either'].polarity_conflicts)} | {singles} | {tagged} "
+                          f"| ${c:.2f} |")
+    finally:
+        PAIR, PRIMARY = saved
+    return 0
+
+
 # ---------------------------------------------------------------------------
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("command", choices=["queue", "status", "export", "sample", "score"])
+    ap.add_argument("command", choices=["queue", "status", "export", "sample", "score",
+                                            "compare"])
     ap.add_argument("pages", nargs="*")
     ap.add_argument("--blind", action="store_true")
     ap.add_argument("--all", action="store_true")
@@ -725,6 +793,8 @@ def main(argv: list[str] | None = None) -> int:
     pages = _pages(args)
     if args.command == "score":
         return score(pages)
+    if args.command == "compare":
+        return compare(pages)
     items, missing = build_queue(pages)
     if missing:
         print(f"{len(missing)} page(s) lack a draft from both of {', '.join(PAIR)}:",

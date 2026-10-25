@@ -1389,3 +1389,39 @@ remaining 118 pages, or about half that through the providers' batch APIs.
 
 **What this does not do.** It does not let a model run at extraction time or in CI, write
 to the ledger except through `apply_spans.py`, adopt a matcher, or mark a human page.
+
+**Cheaper drafters (a recommendation; the owner decides adoption).** The owner judged the
+batch estimate too high and asked for cheaper models and lower efforts, one complex page
+each. The page was `commas.md`: 18,000 characters, 23 human-marked rules (four of them
+ones `docs/08` says not to mark), and 47–53 of the human's examples in reach. Each
+result is cached under `golden/drafts/p1/<model>@<effort>/`, and
+`consensus.py compare PAGE` reprints the table for free.
+
+| drafter | rules found | human examples attached | inverted | cost |
+|---|---|---|---|---|
+| `gpt-6-astra`, high (the sample's) | 16/23 | 40/53 | 0 | $1.07 |
+| `gpt-6-astra`, low | 15/23 | **0** | 0 | $0.36 |
+| **`gpt-6.1-sol`, high** | **17/23** | **40/53** | 0 | **$0.22** |
+| `gpt-6.1-sol`, medium | 16/23 | **0** | 0 | $0.11 |
+| `gpt-6.1-sol`, low | 15/23 | **0** | 0 | $0.08 |
+| `gpt-6-luna`, high | 16/23 | **0** | 0 | $0.01, with 3 pointers refused |
+| `gemini-3.1-pro-preview`, high (the sample's) | 15/23 | 41/47 | 0 | $0.32 |
+
+*Below high effort the OpenAI models return no examples at all*, and Luna returns none even
+at high effort. The schema allows an empty list, and they take that option. A drafter with
+no examples cannot be used: the examples are what tests a rule (D-1) and what Phase 5
+trains on. Finding rules is not the hard part, since every setting found 15–17.
+Attaching the manual's examples is, and only high effort does it.
+
+*`gpt-6.1-sol` at high effort is Astra's equal at a fifth of the price.* Paired with Gemini
+Pro, consensus on this page finds 14 of 23 rules agreed and 18 either way (Astra's pair:
+13 and 18), leaves 5 single-model rules instead of 7, and costs $0.55 instead of $1.39.
+
+*The Gemini side is untested.* Gemini 3.8 Flash and Gemini Pro at low effort were in the
+test, but the Gemini project's prepaid credits ran out (HTTP 402) before any of them ran.
+
+*Not tried.* A prompt that requires at least one example wherever the manual labels one
+might rescue the cheaper settings. It is a new prompt version, so every cached draft
+would be re-drawn under it.
+
+Spend on the comparison: $0.78, all OpenAI.
