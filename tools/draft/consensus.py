@@ -73,8 +73,14 @@ BY_ADJUDICATOR = "CLAUDE"
 
 TAGS = ("direction", "modality", "unit", "detection_hint", "clarity", "applies_to")
 
-_COMPLIANT_LABELS = {"write this", "correct", "example", "examples"}
-_VIOLATING_LABELS = {"not this", "incorrect"}
+# Every label heading the manual uses, from a census of the eligible pages
+# (example 992, not this 146, write this 98, correct and incorrect 55 each, like
+# this 49, avoid this 3), plus the one page that writes "Write" / "Don’t write".
+# Local to consensus: drafting.LABELS shapes what the drafters were shown, and
+# changing it would change every cached draft's input.
+_COMPLIANT_LABELS = {"write this", "write", "like this", "correct", "example", "examples"}
+_VIOLATING_LABELS = {"not this", "incorrect", "avoid this", "don't write", "don’t write",
+                     "don't do this", "don’t do this"}
 
 
 # ---------------------------------------------------------------------------
@@ -136,6 +142,8 @@ def _tags(rule: dict) -> dict:
 
 _HARD = re.compile(r"\b(must|never|always|required|requires|illegal|mandatory)\b", re.I)
 _STRENGTH = {"SHOULD": "MUST", "SHOULD_NOT": "MUST_NOT"}
+_NEGATIVE = re.compile(r"(?:avoid|don[’']t|do not|never|not\b|no\b|limit|minimise|restrict)",
+                       re.I)
 
 
 def settle_modality(statement: str, a: str, b: str) -> str:
@@ -152,6 +160,12 @@ def settle_modality(statement: str, a: str, b: str) -> str:
     for soft, hard in _STRENGTH.items():
         if pair == {soft, hard}:
             return hard if _HARD.search(statement) else soft
+    # The same strength, opposite form: a prohibition or an instruction. That is
+    # the statement's grammar ("Avoid…", "Don't…", "Never…" against "Use…"),
+    # so it is read off the words rather than adjudicated.
+    for positive in ("SHOULD", "MUST"):
+        if pair == {positive, positive + "_NOT"}:
+            return positive + "_NOT" if _NEGATIVE.match(statement.strip()) else positive
     return ""
 
 
@@ -193,15 +207,27 @@ SETTLE = {"modality": lambda s, a, b: settle_modality(s, a, b),
 
 
 def _label_polarity(page, block_id: str) -> str:
-    """What the manual's own label says an example is, if it says anything."""
-    block = next((b for b in page.blocks if b.id == block_id), None)
-    if block is None or not block.heading_path:
-        return ""
-    label = block.heading_path[-1].strip().lower()
-    if label in _VIOLATING_LABELS:
-        return "violating"
-    if label in _COMPLIANT_LABELS:
-        return "compliant"
+    """What the manual's own label says an example is, if it says anything.
+
+    The nearest label before the block, within its section: a label heading,
+    or a paragraph that is nothing but a label. The second matters. On
+    currency.md "Not this" is a paragraph under a "Write this" heading, so
+    reading headings alone called "£9 8s 7d", the manual's wrong example,
+    compliant. A non-label heading ends a label's reach.
+    """
+    label = None
+    for b in page.blocks:
+        text = b.plain.strip().lower()
+        if b.kind == "heading":
+            label = text if text in _COMPLIANT_LABELS | _VIOLATING_LABELS else None
+        elif text in _COMPLIANT_LABELS | _VIOLATING_LABELS:
+            label = text
+        if b.id == block_id:
+            if label in _VIOLATING_LABELS:
+                return "violating"
+            if label in _COMPLIANT_LABELS:
+                return "compliant"
+            return ""
     return ""
 
 
@@ -647,6 +673,10 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
                                        f"the adjudicator: {single_dec[rule['rid']].get('reason', '')}"
         if rule["rid"] in tag_dec:
             d = tag_dec[rule["rid"]].get("decision", {})
+            if d.get("drop"):
+                # Both models agreed on it, but the adjudicator found it is not a
+                # rule after all, typically an anchor on an example label.
+                continue
             by = BY_ADJUDICATOR
             note += f"; tags adjudicated: {tag_dec[rule['rid']].get('reason', '')}"
         else:

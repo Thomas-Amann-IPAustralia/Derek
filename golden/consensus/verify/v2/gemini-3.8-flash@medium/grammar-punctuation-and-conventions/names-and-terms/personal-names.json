@@ -1,0 +1,60 @@
+{
+ "effort": "medium",
+ "input_sha256": "9065a3a92fe5d70580f0eeb5ac1fd6012b9d2e3bc4e271b124c8a6e15ed271ed",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/names-and-terms/personal-names.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 6892,
+  "output_tokens": 419,
+  "reasoning_tokens": 11657
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "A distinct terminology check flagging 'Christian name' and recommending 'given name'.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C2",
+   "note": "A distinct terminology check flagging 'surname' and recommending 'family name'.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C3",
+   "note": "A distinct terminology check flagging 'maiden name' and recommending 'previous names'.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "G-2: Capitalising initials is a specific case of the rule requiring personal names to be initial-capitalised.",
+   "restates": "A2",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C5",
+   "note": "A distinct punctuation and spacing check requiring given-name initials to be unspaced and without full stops.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C6",
+   "note": "G-2: Capitalising nicknames is a specific case of the rule requiring personal names to be initial-capitalised.",
+   "restates": "A2",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C7",
+   "note": "G-2: Sets out a condition and subsequent-mention exception to the rule of keeping compound family names.",
+   "restates": "A8",
+   "verdict": "restatement"
+  }
+ ],
+ "version": "v2"
+}

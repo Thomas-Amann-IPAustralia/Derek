@@ -1,0 +1,144 @@
+{
+ "effort": "medium",
+ "input_sha256": "3b19f1dbe9a9aa85d45c4a6944af807d7bf7c3e42876917a9af5d88c49504d77",
+ "model": "gemini-3.8-flash",
+ "page_path": "content-types/images/alt-text-captions-and-titles-images.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 7976,
+  "output_tokens": 1183,
+  "reasoning_tokens": 14742
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "G-5: Editorial advice to the writer on composing alt text content, not a checkable textual property.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C2",
+   "note": "Actionable check flagging alt text that duplicates information provided in the caption.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C3",
+   "note": "Actionable rule prohibiting the use of the deprecated HTML <longdesc> attribute.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "G-1: Section heading that groups child rules; A1 marks the child rule.",
+   "restates": "",
+   "verdict": "section"
+  },
+  {
+   "id": "C5",
+   "note": "G-5: High-level accessibility guidance summarizing WCAG fundamentals, not an automated text check.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C6",
+   "note": "Specific rule dictating placement of copyright attribution (in the caption or following the material).",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C7",
+   "note": "G-5: Advice to the writer to follow an external/organisational style guide.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C8",
+   "note": "Specific rule requiring null alt text (alt=\"\") for decorative images, distinct from informative images (A1).",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C9",
+   "note": "G-5: General SEO advice to the writer.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C10",
+   "note": "G-4: Restatement of C8 under decorative images, prohibiting keyword text in place of null alt text.",
+   "restates": "C8",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C11",
+   "note": "G-5: Vague editorial advice to provide context, already covered formally by A2.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C12",
+   "note": "Specific rule for hyperlinked logos, modifying general logo alt text rule A5.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C13",
+   "note": "G-5: Authoring guidance on how to present data for complex images.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C14",
+   "note": "G-5: Subjective advice left to author discretion ('only if it helps the user').",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C15",
+   "note": "G-5: Editorial advice giving layout options for extended descriptions based on subjective length.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C16",
+   "note": "G-5: Advice to the writer on where to place analytical interpretation.",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C17",
+   "note": "Actionable rule requiring parallel grammatical structure across titles and captions.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C18",
+   "note": "Rule requiring consistent terminology and acronym forms between titles/captions and surrounding text.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C19",
+   "note": "G-4: Restates the title numbering format specified in A9 (using a colon after the number to separate it from title text).",
+   "restates": "A9",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C20",
+   "note": "Rule requiring figure numbering sequences to commence at the beginning of the document.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C21",
+   "note": "G-5: Procedural software instructions for Microsoft Word's cross-reference dialog.",
+   "restates": "",
+   "verdict": "advice"
+  }
+ ],
+ "version": "v2"
+}

@@ -1,0 +1,60 @@
+{
+ "effort": "medium",
+ "input_sha256": "e721425327b67cb1d4e2ffa19254cea4678ea8907b485ac05624d3ed24f97223",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/punctuation/full-stops.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 3723,
+  "output_tokens": 411,
+  "reasoning_tokens": 9243
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "The test: actionable check requiring full stops rather than commas as decimal points in numbers and currency.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C2",
+   "note": "The test: actionable check requiring full stops between subsection and paragraph numbering components.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C3",
+   "note": "The test: actionable check requiring full stops in Latin shortened forms and referencing abbreviations.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "Description: describes standard address notation (retaining dots inside URLs/emails) rather than a checkable text constraint.",
+   "restates": "",
+   "verdict": "description"
+  },
+  {
+   "id": "C5",
+   "note": "The test: actionable rule prohibiting full stops in headings, stand-alone lists, and page headers or footers.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C6",
+   "note": "The test: distinct check prohibiting full stops after symbols or units of measurement.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C7",
+   "note": "G-3: the body specifies 'You don't need a full stop...', which is a permission relaxing A1.",
+   "restates": "A1",
+   "verdict": "permission"
+  }
+ ],
+ "version": "v2"
+}

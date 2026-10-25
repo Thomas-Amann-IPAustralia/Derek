@@ -1,0 +1,60 @@
+{
+ "effort": "medium",
+ "input_sha256": "c767a1cae355d349b4342d16cd0dc0779fcdb305fa8e3fc1ec5bafe0475a13a0",
+ "model": "gemini-3.8-flash",
+ "page_path": "grammar-punctuation-and-conventions/shortened-words-and-phrases/acronyms-and-initialisms.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5495,
+  "output_tokens": 404,
+  "reasoning_tokens": 3801
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "Heading that groups background information and definitions (G-1).",
+   "restates": "",
+   "verdict": "section"
+  },
+  {
+   "id": "C2",
+   "note": "Restates the requirement to provide a glossary for specialised acronyms (G-4).",
+   "restates": "A2",
+   "verdict": "restatement"
+  },
+  {
+   "id": "C3",
+   "note": "Distinct actionable check requiring subsequent mentions to use the shortened form once defined.",
+   "restates": "",
+   "verdict": "rule"
+  },
+  {
+   "id": "C4",
+   "note": "Framed as an optional suggestion ('it can be easier for people if you...'), not a mandatory text rule (G-5).",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C5",
+   "note": "Specifies placement and layout of the glossary rather than text rules (not_text).",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C6",
+   "note": "Relates to website navigation and hyperlinking, not text rules (not_text).",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C7",
+   "note": "Instruction to the writer to preserve spoken wording; not verifiable from the text alone (G-5).",
+   "restates": "",
+   "verdict": "advice"
+  }
+ ],
+ "version": "v2"
+}

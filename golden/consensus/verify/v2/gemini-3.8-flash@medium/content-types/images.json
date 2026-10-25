@@ -1,0 +1,54 @@
+{
+ "effort": "medium",
+ "input_sha256": "b06a8d25b4f27d1065c691dbc1bb20b19dee7ac08d15e1458d9da866de145da0",
+ "model": "gemini-3.8-flash",
+ "page_path": "content-types/images.md",
+ "prompt_sha256": "e185c99edfd872570ba718a74ee49e250c2e70d90f09df6c067f76029d3c6dca",
+ "served_model": "gemini-3.8-flash",
+ "usage": {
+  "batch": 1,
+  "cached_input_tokens": 0,
+  "input_tokens": 5647,
+  "output_tokens": 357,
+  "reasoning_tokens": 14282
+ },
+ "verdicts": [
+  {
+   "id": "C1",
+   "note": "Advice to the writer on using titles to support scanning, not an enforceable rule (G-5).",
+   "restates": "",
+   "verdict": "advice"
+  },
+  {
+   "id": "C2",
+   "note": "Applies to graphical elements inside images (charts, maps), not text (not_text).",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C3",
+   "note": "Applies to labels and units inside image visualisations, not document text (not_text).",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C4",
+   "note": "Applies to scale units in image labels, not document text (not_text).",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C5",
+   "note": "Applies to decimal precision on chart/image labels, not document text (not_text).",
+   "restates": "",
+   "verdict": "not_text"
+  },
+  {
+   "id": "C6",
+   "note": "Summary lead-in sentence grouping the specific image-referencing rules below it (G-1).",
+   "restates": "",
+   "verdict": "section"
+  }
+ ],
+ "version": "v2"
+}

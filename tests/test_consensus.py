@@ -221,3 +221,17 @@ def test_a_single_model_rule_is_not_cover(page, tmp_path, monkeypatch):
     body = _block(page, "Use full stops at the end of sentences with link text")
     plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(body)), B: _draft()})
     assert "7aefaa812fe9f887" in {it.get("uid") for it in plan["items"] if it["kind"] == "dropped"}
+
+
+def test_a_prohibition_and_an_instruction_settle_by_the_statements_form():
+    assert consensus.settle_modality("Avoid questions in the text", "SHOULD", "SHOULD_NOT") == "SHOULD_NOT"
+    assert consensus.settle_modality("Use the word as an uncountable noun.", "SHOULD_NOT", "SHOULD") == "SHOULD"
+
+
+def test_a_label_written_as_a_paragraph_counts():
+    """currency.md: 'Not this' is a paragraph under a 'Write this' heading."""
+    p = drafting.load_page("grammar-punctuation-and-conventions/numbers-and-measurements/currency.md")
+    right = next(b for b in p.blocks if b.plain == "9 pounds, 8 shillings and 7 pence")
+    wrong = next(b for b in p.blocks if b.plain == "£9 8s 7d")
+    assert consensus._label_polarity(p, right.id) == "compliant"
+    assert consensus._label_polarity(p, wrong.id) == "violating"
