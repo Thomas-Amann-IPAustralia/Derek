@@ -71,7 +71,8 @@ def _draft(*rules, not_rules=()):
 
 def test_the_pair_is_two_families():
     """SOP §14.3: the second drafter checks the first only if it is not the same family."""
-    assert providers.PROVIDERS[A] != providers.PROVIDERS[B]
+    family = lambda drafter: providers.PROVIDERS[drafter.partition("@")[0]]
+    assert family(A) != family(B)
 
 
 def test_agreement_is_taken_without_a_decision(page):
@@ -188,3 +189,35 @@ def test_a_rule_in_the_page_introduction_is_not_exported(page, capsys):
     ops, _ = consensus.export_page(plan, {}, "t")
     assert not [o for o in ops if o["op"] == "span"]
     assert "page introduction" in capsys.readouterr().err
+
+
+def test_a_heading_restated_by_an_agreed_rule_below_it_is_not_an_item(page, tmp_path, monkeypatch):
+    """Both models marking the sentence under a heading is the rule kept, not
+    the heading dropped: it goes into the sweep's `dropped` with the reason,
+    and nobody is asked about it."""
+    import shutil
+    ledger = tmp_path / "real.jsonl"
+    shutil.copy(REPO / "ledger" / "rules.jsonl", ledger)
+    monkeypatch.setattr(consensus, "LEDGER", ledger)
+    # 'Ensure link text doesn't include a full stop' carries the manual's paired
+    # examples, so a sweep would refuse to drop it silently.
+    body = _block(page, "Use full stops at the end of sentences with link text")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(body)), B: _draft(_rule(body))})
+    assert "7aefaa812fe9f887" not in {it.get("uid") for it in plan["items"]}
+    [restated] = [r for r in plan["restated"] if r["uid"] == "7aefaa812fe9f887"]
+    assert restated["reason"].startswith("G-4")
+    ops, _ = consensus.export_page(plan, {it["item_id"]: {"decision": {"keep": False}, "reason": "r"}
+                                          for it in plan["items"]}, "t")
+    assert "7aefaa812fe9f887" in {d["uid"] for d in ops[-1]["dropped"]}
+
+
+def test_a_single_model_rule_is_not_cover(page, tmp_path, monkeypatch):
+    """The adjudicator may drop a single-model rule, so it cannot stand in for
+    the candidate it sits under."""
+    import shutil
+    ledger = tmp_path / "real.jsonl"
+    shutil.copy(REPO / "ledger" / "rules.jsonl", ledger)
+    monkeypatch.setattr(consensus, "LEDGER", ledger)
+    body = _block(page, "Use full stops at the end of sentences with link text")
+    plan = consensus.page_plan(FULL_STOPS, {A: _draft(_rule(body)), B: _draft()})
+    assert "7aefaa812fe9f887" in {it.get("uid") for it in plan["items"] if it["kind"] == "dropped"}

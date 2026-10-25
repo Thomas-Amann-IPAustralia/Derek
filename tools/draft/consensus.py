@@ -295,8 +295,10 @@ def page_plan(rel: str, drafts: dict[str, dict]) -> dict:
                 "single": True,
             })
 
-    items.extend(_dropped_candidates(page, rel, rules, drafts))
-    return {"page_path": rel, "page_sha256": page.sha256, "rules": rules, "items": items}
+    dropped_items, restated = _dropped_candidates(page, rel, rules, drafts)
+    items.extend(dropped_items)
+    return {"page_path": rel, "page_sha256": page.sha256, "rules": rules, "items": items,
+            "restated": restated}
 
 
 def _heading_path(page, block_id: str) -> tuple[str, ...]:
@@ -384,21 +386,32 @@ def _not_rule_verdict(draft: dict, anchor: dict) -> str:
     return "nothing"
 
 
-def _dropped_candidates(page, rel: str, rules: list[dict], drafts) -> list[dict]:
+def _dropped_candidates(page, rel: str, rules: list[dict],
+                        drafts) -> tuple[list[dict], list[dict]]:
     """Heading candidates the sweep would refuse to drop silently.
 
     ``apply_spans._check_sweeps`` holds back a candidate already accepted or
     amended, or carrying the manual's paired examples, unless the sweep lists it
-    in ``dropped`` with a reason. Those are exactly the ones worth a decision.
+    in ``dropped`` with a reason.
+
+    Returns ``(items, restated)``. A candidate whose heading is restated by a
+    rule both models agreed on, usually the sentence directly under it, is not
+    a decision: the rule was kept, on the sentence the manual states it with
+    (G-4). Those go straight into ``dropped`` with that reason. On the sample's
+    commas page they were 16 of the 17 items this used to raise. Only a
+    candidate nothing agreed covers is put to the adjudicator. A single-model
+    rule does not count as cover, because the adjudicator may yet drop it.
     """
     if not LEDGER.exists():
-        return []
+        return [], []
     from derek.ledger.store import load_ledger
 
     covered = {r["anchor"]["block_id"] for r in rules
                if r["anchor"]["start"] == 0 and r.get("seed_uid")}
     seeds_by_uid = {uid: bid for bid, uid in page.seeds.items()}
-    items = []
+    by_id = {b.id: b for b in page.blocks}
+    agreed = [r for r in rules if not r.get("single")]
+    items, restated = [], []
     for rule in sorted(load_ledger(LEDGER).values(), key=lambda r: r.uid):
         if rule.source.page_path != rel or rule.review.status in ("rejected", "deferred"):
             continue
@@ -410,6 +423,14 @@ def _dropped_candidates(page, rel: str, rules: list[dict], drafts) -> list[dict]
         if bid in covered:
             continue
         if any(r.get("seed_uid") == rule.uid for r in rules):
+            continue
+        cover = _covering_rule(by_id, _candidate_side(page, bid, rule.source.statement), agreed)
+        if cover is not None:
+            restated.append({
+                "uid": rule.uid,
+                "reason": f"G-4: restated by the kept rule «{cover['anchor']['quote'][:120]}», "
+                          f"which both models marked instead of this heading",
+            })
             continue
         said = {name: _not_rule_verdict(drafts[name], {"block_id": bid or "", "start": 0,
                                                         "end": 10 ** 6})
@@ -424,7 +445,39 @@ def _dropped_candidates(page, rel: str, rules: list[dict], drafts) -> list[dict]
                    + ("already accepted" if accepted else "carrying the manual's paired "
                       "examples") + ". Keep it as a rule, or let it go with a reason.",
         })
-    return items
+    return items, restated
+
+
+def _candidate_side(page, heading_id: str | None, statement: str) -> tuple | None:
+    """Where a ledger candidate sits on the page, as ``pair_score`` takes it.
+
+    A heading candidate is its heading block. A rule marked on a body sentence
+    has no heading block, so its statement is found in the page's text instead.
+    """
+    by_id = {b.id: b for b in page.blocks}
+    if heading_id in by_id:
+        b = by_id[heading_id]
+        return (b.id, 0, len(b.plain)), b.plain, set()
+    from drafting import _FOLD   # the same typographic folding the pointer check uses
+
+    want = statement.translate(_FOLD)
+    for b in page.blocks:
+        at = b.plain.translate(_FOLD).find(want)
+        if want and at != -1:
+            return (b.id, at, at + len(want)), statement, set()
+    return None
+
+
+def _covering_rule(by_id: dict, side: tuple | None, rules: list[dict]) -> dict | None:
+    """The kept rule that states this candidate's rule, in its words or others."""
+    if side is None:
+        return None
+    best, best_score = None, 0.0
+    for r in rules:
+        sc = pair_score(by_id, side, (_key(r["anchor"]), r["anchor"]["quote"], _example_keys(r)))
+        if sc > best_score:
+            best, best_score = r, sc
+    return best
 
 
 # ---------------------------------------------------------------------------
@@ -591,7 +644,7 @@ def export_page(plan: dict, adj: dict[str, dict], at: str) -> tuple[list[dict], 
                     span["group"] = group
                 ops.append(op(span, by))
 
-    dropped = []
+    dropped = list(plan.get("restated", []))
     for it, d in decided.values():
         if it["kind"] != "dropped":
             continue

@@ -84,8 +84,13 @@ python -m derek.eval.annotation_pace    # words a minute per page, blind vs seed
 # Two-model consensus (ADR-027) — how rules are identified now. Both drafters,
 # then line them up: agreement is taken, every difference is an item that needs
 # a recorded decision (golden/consensus/adjudications.jsonl) before its page exports.
-python tools/draft/draft_spans.py --all --model gpt-6-astra --jobs 5
-python tools/draft/draft_spans.py --all --model gemini-3.1-pro-preview --jobs 5
+# The pair is providers.PAIR: gpt-6.1-sol (high) + gemini-3.8-flash@low. Batched,
+# at half price; submit is idempotent, collect is safe to repeat.
+python tools/draft/batch.py submit --model gpt-6.1-sol --all [--dry-run]
+python tools/draft/batch.py submit --model gemini-3.8-flash --effort low --all
+python tools/draft/batch.py collect            # poll open batches; write what finished
+python tools/draft/batch.py status
+python tools/draft/consensus.py compare PAGE   # every cached drafter vs a human page
 python tools/draft/consensus.py status --all   # agreed, single-model, undecided per page
 python tools/draft/consensus.py queue --all    # the items -> golden/consensus/queue.jsonl
 python tools/draft/consensus.py export --all   # decided pages -> golden/inbox/, then apply_spans.py
@@ -167,6 +172,7 @@ Each layer must be reproducible from the one below it. Full detail:
 | `tools/draft/drafting.py` | Drafting prompt (hash-pinned), the pointer check, the draft cache (ADR-025) |
 | `tools/draft/draft_spans.py` | The only code that calls a model; imports the SDK lazily |
 | `tools/draft/providers.py` | OpenAI and Gemini transports (stdlib), the pinned `PAIR`, prices for reporting |
+| `tools/draft/batch.py` | The same requests through the batch APIs; manifests in `golden/drafts/batches/` |
 | `tools/draft/consensus.py` | Two drafts → agreed rules + adjudication items → annotator ops (ADR-027) |
 | `golden/consensus/` | The item queue and the adjudicator's decisions, each with a reason |
 | `golden/drafts/` | **Cached model output.** Proposals, never an extraction input |

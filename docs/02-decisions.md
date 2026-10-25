@@ -35,7 +35,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [024](#adr-024--the-corpus-is-frozen-while-the-golden-set-is-drawn) | The corpus is frozen while the golden set is drawn | Accepted |
 | [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
 | [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
-| [027](#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand) | Two-model consensus, adjudicated, replaces marking by hand | Accepted (owner), 2026-10-25; supersedes ADR-025's "a human marks them" |
+| [027](#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand) | Two-model consensus, adjudicated, replaces marking by hand | Accepted (owner), 2026-10-25; supersedes ADR-025's "a human marks them". Pair: GPT-6.1 Sol (high) + Gemini 3.8 Flash (low), batched |
 
 ---
 
@@ -1425,3 +1425,33 @@ might rescue the cheaper settings. It is a new prompt version, so every cached d
 would be re-drawn under it.
 
 Spend on the comparison: $0.78, all OpenAI.
+
+**Gemini Flash, after the top-up.** Same page, same yardstick:
+
+| drafter | rules found | human examples attached | inverted | cost |
+|---|---|---|---|---|
+| `gemini-3.8-flash`, low | 13/23 | 25/45 | 0 | $0.04 |
+| `gemini-3.8-flash`, medium | 14/23 | 32/45 | 0 | $0.17 |
+| `gemini-3.8-flash`, high | spent its whole 65,536-token output on reasoning; nothing written | | | about $0.25 |
+
+*Over-extraction was looked for and not found.* Every rule any drafter proposed that the
+human did not mark is a sentence that does state a rule on the page: non-essential
+clauses, the 25-word limit on joined clauses, no comma ending a bullet item, adjective
+order, appositive commas. On this page each model proposed fewer rules than the human
+marked (Flash 14–15, Sol 21, human 23), so the risk is missing rules, not inventing them.
+
+| pair | taken without review | of those, the human's | items left | cost |
+|---|---|---|---|---|
+| Sol + Flash low | 14 | 13 (the other a real rule) | 7 | $0.26 |
+| Sol + Flash medium | 15 | 14 (the other a real rule) | 7 | $0.39 |
+| Sol + Gemini Pro | 17 | 14 (the other 3 real rules) | 6 | $0.54 |
+
+**Decision (owner), 2026-10-25: `gpt-6.1-sol` at high effort and `gemini-3.8-flash` at low
+effort, through both providers' batch APIs** (`tools/draft/batch.py`, half price). The full
+batch was estimated at $8–9. `providers.PAIR` holds the pair. The seven sample pages keep
+their Astra and Gemini Pro consensus as applied.
+
+At the same time, `consensus._dropped_candidates` stopped raising an item for a heading
+candidate that a rule both models agreed on restates, usually the sentence directly under
+it. Those go into the sweep's `dropped` with a G-4 reason. A single-model rule does not
+count as cover, because the adjudicator may yet drop it.

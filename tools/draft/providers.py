@@ -40,9 +40,14 @@ PROVIDERS = {
     "gemini-3.8-flash": "gemini",
 }
 
-# The two drafters ADR-027 runs side by side. Different families, so one's
-# blind spots are not the other's (SOP §14.3); a third family adjudicates.
-PAIR = ("gpt-6-astra", "gemini-3.1-pro-preview")
+# The two drafters ADR-027 runs side by side, as drafter ids (`model` or
+# `model@effort`, the cache directory each writes to). Different families, so
+# one's blind spots are not the other's (SOP §14.3); a third family adjudicates.
+# Adopted by the owner on 2026-10-25 after the commas.md comparison: Sol at high
+# effort (below it, no model returned examples), Flash at low (at high it spent
+# its whole output on reasoning). The sample's seven pages were drawn by
+# ("gpt-6-astra", "gemini-3.1-pro-preview") and stay as applied.
+PAIR = ("gpt-6.1-sol", "gemini-3.8-flash@low")
 
 TIMEOUT_S = 900
 RETRIES = 4
@@ -97,12 +102,28 @@ def _parse(text: str) -> dict:
         raise DraftError(f"the model's output is not the JSON asked for: {exc}") from exc
 
 
-def call_openai(model: str, system: str, user: str, schema: dict, *,
-                effort: str, max_tokens: int) -> tuple[dict, str, dict, str]:
+def _openai_headers() -> dict:
     headers = {}
     if key := os.environ.get("OPENAI_API_KEY"):
         headers["Authorization"] = f"Bearer {key}"
-    out = _post("https://api.openai.com/v1/responses", {
+    return headers
+
+
+def _gemini_headers() -> dict:
+    headers = {}
+    if key := os.environ.get("GEMINI_API_KEY"):
+        headers["x-goog-api-key"] = key
+    return headers
+
+
+# The request bodies and the answer parsers are shared by the live calls here
+# and the batch path in batch.py, so a page drafted either way is the same
+# request and is read the same way: the cache key (drafting.input_sha256) does
+# not record the transport, and must not need to.
+
+def openai_body(model: str, system: str, user: str, schema: dict, *,
+                effort: str, max_tokens: int) -> dict:
+    return {
         "model": model,
         "instructions": system,
         "input": user,
@@ -110,21 +131,10 @@ def call_openai(model: str, system: str, user: str, schema: dict, *,
         "max_output_tokens": max_tokens,
         "text": {"format": {"type": "json_schema", "name": "draft",
                             "schema": schema, "strict": True}},
-        # Background mode needs the response stored provider-side until it is
-        # fetched. The input is the published Style Manual, so nothing private
-        # is kept; the cache under golden/drafts/ is still the only record we
-        # read (ADR-003).
-        "background": True,
-        "store": True,
-    }, headers)
-    started = time.monotonic()
-    while out.get("status") in ("queued", "in_progress"):
-        if time.monotonic() - started > TIMEOUT_S * 2:
-            raise DraftError(f"still {out.get('status')} after {TIMEOUT_S * 2}s")
-        time.sleep(POLL_S)
-        out = _post(f"https://api.openai.com/v1/responses/{out['id']}", None, headers,
-                    method="GET")
+    }
 
+
+def parse_openai(out: dict, model: str) -> tuple[dict, str, dict, str]:
     status = out.get("status", "")
     if status in ("failed", "cancelled"):
         raise DraftError(f"{status}: {(out.get('error') or {}).get('message', '')[:300]}")
@@ -152,31 +162,52 @@ def call_openai(model: str, system: str, user: str, schema: dict, *,
     return _parse(text), out.get("model", model), usage, status or "completed"
 
 
-def call_gemini(model: str, system: str, user: str, schema: dict, *,
+def call_openai(model: str, system: str, user: str, schema: dict, *,
                 effort: str, max_tokens: int) -> tuple[dict, str, dict, str]:
-    headers = {}
-    if key := os.environ.get("GEMINI_API_KEY"):
-        headers["x-goog-api-key"] = key
-    events = _post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/{model}"
-        f":streamGenerateContent?alt=sse",
-        {
-            "systemInstruction": {"parts": [{"text": system}]},
-            "contents": [{"role": "user", "parts": [{"text": user}]}],
-            "generationConfig": {
-                "responseMimeType": "application/json",
-                "responseJsonSchema": schema,
-                "maxOutputTokens": max_tokens,
-                # Thought summaries are asked for only so the stream keeps
-                # moving while the model thinks; they are dropped below.
-                "thinkingConfig": {"thinkingLevel": effort, "includeThoughts": True},
-            },
-        }, headers, sse=True)
+    headers = _openai_headers()
+    body = openai_body(model, system, user, schema, effort=effort, max_tokens=max_tokens)
+    # Background mode needs the response stored provider-side until it is
+    # fetched. The input is the published Style Manual, so nothing private is
+    # kept; the cache under golden/drafts/ is still the only record we read
+    # (ADR-003).
+    out = _post("https://api.openai.com/v1/responses",
+                body | {"background": True, "store": True}, headers)
+    started = time.monotonic()
+    while out.get("status") in ("queued", "in_progress"):
+        if time.monotonic() - started > TIMEOUT_S * 2:
+            raise DraftError(f"still {out.get('status')} after {TIMEOUT_S * 2}s")
+        time.sleep(POLL_S)
+        out = _post(f"https://api.openai.com/v1/responses/{out['id']}", None, headers,
+                    method="GET")
+    return parse_openai(out, model)
 
-    if not events:
+
+def gemini_body(system: str, user: str, schema: dict, *, effort: str, max_tokens: int,
+                stream: bool) -> dict:
+    thinking = {"thinkingLevel": effort}
+    if stream:
+        # Thought summaries are asked for only so a live stream keeps moving
+        # while the model thinks; they are dropped by parse_gemini. A batch
+        # request has no connection to keep alive.
+        thinking["includeThoughts"] = True
+    return {
+        "systemInstruction": {"parts": [{"text": system}]},
+        "contents": [{"role": "user", "parts": [{"text": user}]}],
+        "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseJsonSchema": schema,
+            "maxOutputTokens": max_tokens,
+            "thinkingConfig": thinking,
+        },
+    }
+
+
+def parse_gemini(chunks: list[dict], model: str, max_tokens: int) -> tuple[dict, str, dict, str]:
+    """One answer, from a stream's chunks or from a single (batch) response."""
+    if not chunks:
         raise DraftError("the stream ended with no events")
-    parts, finish, out = [], "", events[-1]
-    for ev in events:
+    parts, finish, out = [], "", chunks[-1]
+    for ev in chunks:
         for cand in ev.get("candidates") or []:
             parts.extend((cand.get("content") or {}).get("parts", []))
             finish = cand.get("finishReason", finish)
@@ -198,6 +229,16 @@ def call_gemini(model: str, system: str, user: str, schema: dict, *,
     return _parse(text), out.get("modelVersion", model), usage, finish or "STOP"
 
 
+def call_gemini(model: str, system: str, user: str, schema: dict, *,
+                effort: str, max_tokens: int) -> tuple[dict, str, dict, str]:
+    events = _post(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}"
+        f":streamGenerateContent?alt=sse",
+        gemini_body(system, user, schema, effort=effort, max_tokens=max_tokens, stream=True),
+        _gemini_headers(), sse=True)
+    return parse_gemini(events, model, max_tokens)
+
+
 # Dollars per million tokens, from the providers' published prices as found on
 # 2026-10-25 (third-party listings agreed; recheck before trusting a total).
 # Used only to report what a run cost, never to decide anything.
@@ -208,6 +249,11 @@ PRICES = {
     "gemini-3.1-pro-preview": {"input": 2.0, "cached_input": 0.2, "output": 12.0},
     "gemini-3.8-flash": {"input": 0.75, "cached_input": 0.075, "output": 3.75},
 }
+
+
+# Both providers bill a batch request at half the standard rate. A record
+# drafted through batch.py says so in its usage, so cost() reports what was paid.
+BATCH_DISCOUNT = 0.5
 
 
 def cost(model: str, usage: dict) -> float:
@@ -222,4 +268,5 @@ def cost(model: str, usage: dict) -> float:
         # Gemini reports thinking separately from the answer; OpenAI counts it
         # inside output_tokens already.
         out += usage.get("reasoning_tokens", 0)
-    return (fresh * p["input"] + cached * p["cached_input"] + out * p["output"]) / 1e6
+    total = (fresh * p["input"] + cached * p["cached_input"] + out * p["output"]) / 1e6
+    return total * BATCH_DISCOUNT if usage.get("batch") else total
