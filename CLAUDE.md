@@ -100,6 +100,11 @@ python tools/draft/consensus.py export --all   # decided pages -> golden/inbox/,
 python tools/draft/consensus.py score --blind  # consensus vs the human-marked pages
 python tools/draft/consensus.py sample --n 50  # the human check that gates the batch
 
+# Alpha selection (docs/10). The owner's verdicts on a random sample are the
+# yardstick every automated selection stage is checked against.
+python tools/select/yardstick.py draw --n 200      # golden/selection/yardstick.json
+python tools/select/yardstick.py record FILE.json  # verdicts -> golden/selection/verdicts.jsonl
+
 # Tier 0 detection (ADR-026). Matchers are proposed as data in ledger/proposals/
 # and adopted by a named human, only if the rule's own examples agree and the
 # manual's prose stays within budget. adopt-matchers.yml does the same from Actions.
@@ -173,6 +178,8 @@ Each layer must be reproducible from the one below it. Full detail:
 | `docs/08-rule-grain.md` | What counts as one rule. The lint checks it; the drafting prompt embeds it verbatim |
 | `docs/09-rule-review-2026-10.md` | The full-ledger rule review: what was corrected and why, the readings it settled (ADR-028), what is left |
 | `docs/10-alpha-rule-selection.md` | Proposed: how the alpha's rule cohort is chosen — gates, closed questions, a learnability probe, a findings budget |
+| `tools/select/yardstick.py` | Draws the owner's random yardstick sample for alpha selection and records the verdicts on it |
+| `golden/selection/` | The yardstick sample and the owner's verdicts — what every automated selection stage is checked against |
 | `derek/eval/golden_lint.py` | The golden set checked against D-2, ADR-006, E-1 and the grain policy |
 | `tools/draft/drafting.py` | Drafting prompt (hash-pinned), the pointer check, the draft cache (ADR-025) |
 | `tools/draft/draft_spans.py` | The only code that calls a model; imports the SDK lazily |
