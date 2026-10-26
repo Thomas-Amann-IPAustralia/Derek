@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Derek Inspect</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111f36'/%3E%3Ccircle cx='28' cy='28' r='13' fill='none' stroke='%23f0bc55' stroke-width='6'/%3E%3Cpath d='M38 38l12 12' stroke='%23f0bc55' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+/* ---------------------------------------------------------------------------
+   Tokens, shared with tools/annotate/ and tools/review/ so the three apps read
+   as one system. Dark mode is the same palette re-pointed.
+   --------------------------------------------------------------------------- */
+:root{
+  --bg:#f4f6fa; --panel:#fff; --panel-2:#f8fafc; --ink:#152033; --ink-2:#44536b;
+  --muted:#75839a; --line:#e2e7f0; --line-2:#cdd6e4;
+  --keep:#12a07e; --keep-bg:#e6f7f2; --bin:#e2526a; --bin-bg:#fdeef1;
+  --defer:#7a63e8; --defer-bg:#eeebfd; --gold:#d99a1e; --gold-bg:#fdf4e2;
+  --accent:#2f6bd0; --accent-bg:#e9f1fd; --navy:#111f36;
+  --hl:#ffe6a6; --hl-edge:#d99a1e;
+  --shadow:0 10px 30px rgba(17,31,54,.10); --shadow-lg:0 22px 55px rgba(17,31,54,.18);
+  --gutter:11px; --head:49px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1319; --panel:#171c24; --panel-2:#1d232d; --ink:#e9ecf1; --ink-2:#b8c2d1;
+    --muted:#8b97a9; --line:#2a323e; --line-2:#3a4453;
+    --keep:#3ecfa8; --keep-bg:#102b25; --bin:#ff8195; --bin-bg:#2e1a20;
+    --defer:#a596ff; --defer-bg:#211d36; --gold:#f0bc55; --gold-bg:#2c2416;
+    --accent:#77adf5; --accent-bg:#16243a; --navy:#e9ecf1;
+    --hl:#5a4514; --hl-edge:#f0bc55;
+    --shadow:0 10px 30px rgba(0,0,0,.4); --shadow-lg:0 22px 55px rgba(0,0,0,.55);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1319; --panel:#171c24; --panel-2:#1d232d; --ink:#e9ecf1; --ink-2:#b8c2d1;
+  --muted:#8b97a9; --line:#2a323e; --line-2:#3a4453;
+  --keep:#3ecfa8; --keep-bg:#102b25; --bin:#ff8195; --bin-bg:#2e1a20;
+  --defer:#a596ff; --defer-bg:#211d36; --gold:#f0bc55; --gold-bg:#2c2416;
+  --accent:#77adf5; --accent-bg:#16243a; --navy:#e9ecf1;
+  --hl:#5a4514; --hl-edge:#f0bc55;
+  --shadow:0 10px 30px rgba(0,0,0,.4); --shadow-lg:0 22px 55px rgba(0,0,0,.55);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);overflow:hidden;
+     font:15.5px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:-.015em}
+a{color:var(--accent)}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}
+kbd{font:600 11px ui-monospace,Menlo,Consolas,monospace;background:var(--panel-2);
+    border:1px solid var(--line-2);border-bottom-width:2px;border-radius:4px;padding:1px 4px}
+
+/* header ------------------------------------------------------------------ */
+header{height:var(--head);background:var(--panel);border-bottom:1px solid var(--line);
+       padding:0 12px;display:flex;align-items:center;gap:8px;position:relative;z-index:40}
+.brand{font-weight:700;letter-spacing:-.02em;white-space:nowrap;margin-right:4px}
+.brand span{color:var(--gold)}
+.spacer{flex:1}
+.btn{padding:5px 11px;border-radius:9px;border:1px solid var(--line-2);background:var(--panel);
+     cursor:pointer;font-size:13px;white-space:nowrap;text-decoration:none;color:var(--ink);
+     display:inline-flex;align-items:center;gap:5px}
+.btn:hover{background:var(--panel-2)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.sm{padding:2px 8px;font-size:12px;border-radius:7px}
+.btn.on{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+.btn:focus-visible,.gutter:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:9px;overflow:hidden}
+.seg .btn{border:0;border-radius:0;padding:5px 9px}
+.seg .btn+.btn{border-left:1px solid var(--line-2)}
+#find{position:relative;flex:0 1 380px;min-width:150px}
+#q{width:100%;padding:6px 10px 6px 30px;border-radius:9px;border:1px solid var(--line-2);
+   background:var(--panel-2)}
+#find::before{content:"⌕";position:absolute;left:10px;top:50%;transform:translateY(-52%);
+              color:var(--muted);font-size:16px;pointer-events:none}
+select{padding:5px 8px;border-radius:9px;border:1px solid var(--line-2);background:var(--panel-2);
+       font-size:13px;max-width:190px}
+#pos{font-size:12.5px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+#results{position:absolute;top:calc(100% + 6px);left:0;width:min(560px,92vw);max-height:min(70vh,560px);
+         overflow-y:auto;background:var(--panel);border:1px solid var(--line-2);border-radius:12px;
+         box-shadow:var(--shadow-lg);display:none;z-index:60;padding:4px 0}
+#results.on{display:block}
+#results .grp{padding:8px 12px 2px;font-size:11px;font-weight:700;text-transform:uppercase;
+              letter-spacing:.08em;color:var(--muted)}
+#results .hit{display:block;width:100%;text-align:left;padding:6px 12px;border:0;background:none;
+              cursor:pointer;line-height:1.35;border-left:3px solid transparent}
+#results .hit:hover,#results .hit.on{background:var(--accent-bg);border-left-color:var(--accent)}
+#results .hit.cur .t{font-weight:700}
+#results .t{font-size:13.5px}
+#results .m{font-size:11.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+#results .more{padding:8px 12px;font-size:12px;color:var(--muted)}
+
+/* the split --------------------------------------------------------------- */
+.split{display:grid;height:calc(100dvh - var(--head));
+       grid-template-columns:minmax(0,42fr) var(--gutter) minmax(0,58fr)}
+.pane{overflow-y:auto;min-width:0;min-height:0;position:relative}
+#left{background:var(--panel);container-type:inline-size}
+#right{background:var(--bg)}
+.gutter{background:var(--panel-2);border-left:1px solid var(--line);border-right:1px solid var(--line);
+        cursor:col-resize;position:relative;touch-action:none;user-select:none}
+.gutter::after{content:"";position:absolute;left:50%;top:50%;width:3px;height:38px;
+               transform:translate(-50%,-50%);border-radius:3px;
+               background:repeating-linear-gradient(var(--line-2) 0 3px,transparent 3px 6px)}
+.gutter:hover,.gutter.drag{background:var(--accent-bg)}
+.gutter:hover::after,.gutter.drag::after{background:repeating-linear-gradient(var(--accent) 0 3px,transparent 3px 6px)}
+body.dragging{cursor:col-resize;user-select:none}
+body.dragging.stacked{cursor:row-resize}
+body.dragging .pane{pointer-events:none}
+.stacked .split{grid-template-columns:minmax(0,1fr)}
+.stacked .gutter{cursor:row-resize;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stacked .gutter::after{width:38px;height:3px;
+               background:repeating-linear-gradient(90deg,var(--line-2) 0 3px,transparent 3px 6px)}
+.stacked .gutter:hover::after,.stacked .gutter.drag::after{
+               background:repeating-linear-gradient(90deg,var(--accent) 0 3px,transparent 3px 6px)}
+
+/* left: the rule ---------------------------------------------------------- */
+.rule{padding:20px 22px 80px;max-width:820px}
+.kick{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:1px 9px;border-radius:999px;font-size:12px;
+      font-weight:600;background:var(--panel-2);border:1px solid var(--line);color:var(--ink-2);
+      white-space:nowrap}
+.pill.good{background:var(--keep-bg);border-color:var(--keep);color:var(--keep)}
+.pill.bad{background:var(--bin-bg);border-color:var(--bin);color:var(--bin)}
+.pill.mid{background:var(--gold-bg);border-color:var(--gold);color:var(--ink)}
+.pill.vio{background:var(--defer-bg);border-color:var(--defer);color:var(--defer)}
+.pill.acc{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+.statement{font-size:22px;font-weight:700;letter-spacing:-.02em;line-height:1.35;margin:2px 0 8px}
+.crumbs{font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.crumbs b{color:var(--ink-2);font-weight:600}
+.ids{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--muted)}
+.ids code{background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+
+.card{border:1px solid var(--line);border-radius:13px;background:var(--panel);margin:16px 0 0;
+      overflow:hidden}
+.card>h2{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);
+         padding:11px 15px 9px;border-bottom:1px solid var(--line);background:var(--panel-2);
+         display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card>.in{padding:12px 15px 14px}
+.lede{font-size:14.5px;margin:0 0 10px}
+.lede b{font-weight:650}
+.quote{border-left:4px solid var(--hl-edge);background:var(--hl);padding:9px 12px;border-radius:0 9px 9px 0;
+       margin:4px 0 10px;white-space:pre-wrap;font-size:15px}
+.note{font-size:13px;color:var(--ink-2);background:var(--panel-2);border:1px solid var(--line);
+      border-radius:9px;padding:8px 11px;margin:8px 0 0}
+.note.warn{background:var(--gold-bg);border-color:var(--gold)}
+.note.bad{background:var(--bin-bg);border-color:var(--bin)}
+dl.kv{display:grid;grid-template-columns:minmax(110px,max-content) minmax(0,1fr);gap:5px 14px;margin:6px 0 0;
+      font-size:13.5px}
+dl.kv dt{color:var(--muted);font-size:12.5px;padding-top:1px}
+dl.kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.field{margin:0 0 12px}
+.field:last-child{margin-bottom:0}
+.flabel{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;
+        margin-bottom:2px}
+.fval{font-size:14.5px;white-space:pre-wrap}
+.empty{color:var(--muted);font-style:italic;font-size:13.5px}
+details.tag{border-top:1px solid var(--line)}
+details.tag:first-of-type{border-top:0}
+details.tag summary{list-style:none;cursor:pointer;display:grid;
+                    grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) auto;gap:10px;
+                    padding:7px 0;align-items:baseline}
+details.tag summary::-webkit-details-marker{display:none}
+details.tag summary .k{color:var(--muted);font-size:12.5px}
+details.tag summary .v{font-weight:600;font-size:14px}
+details.tag summary .v small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+details.tag summary::after{content:"?";color:var(--muted);font-size:11px;border:1px solid var(--line-2);
+                           border-radius:999px;width:17px;height:17px;display:inline-grid;place-items:center}
+details.tag[open] summary::after{content:"–"}
+details.tag .why{font-size:13px;color:var(--ink-2);margin:0 0 9px;padding:8px 11px;background:var(--panel-2);
+                 border-radius:9px}
+details.tag .why p{margin:0 0 4px}
+details.tag .why p:last-child{margin:0}
+
+.ex{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line)}
+.ex:first-child{border-top:0;padding-top:2px}
+.ex .bar{width:4px;align-self:stretch;border-radius:3px;flex:none}
+.ex.compliant .bar{background:var(--keep)}
+.ex.violating .bar{background:var(--bin)}
+.ex.when .bar{background:var(--defer)}
+.ex .body{flex:1;min-width:0}
+.ex .txt{white-space:pre-wrap;font-size:14px;overflow-wrap:anywhere}
+.ex .src{font-size:11.5px;color:var(--muted);margin-top:2px;display:flex;gap:8px;flex-wrap:wrap;
+         align-items:center}
+.ex.flash{animation:exflash 1.4s ease-out}
+@keyframes exflash{0%{background:var(--accent-bg)}100%{background:transparent}}
+h3.sub{font-size:13px;margin:12px 0 2px;color:var(--ink-2)}
+h3.sub:first-child{margin-top:0}
+
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl li{position:relative;padding:0 0 12px 20px;font-size:13.5px}
+.tl li::before{content:"";position:absolute;left:4px;top:7px;width:8px;height:8px;border-radius:50%;
+               background:var(--line-2)}
+.tl li::after{content:"";position:absolute;left:7.5px;top:17px;bottom:-1px;width:1px;background:var(--line)}
+.tl li:last-child::after{display:none}
+.tl li.status::before{background:var(--accent)}
+.tl li.span::before{background:var(--hl-edge)}
+.tl li.adj::before{background:var(--defer)}
+.tl .when{font-size:11.5px;color:var(--muted)}
+.tl .what{font-weight:600}
+.tl .why{color:var(--ink-2);white-space:pre-wrap}
+
+.cons{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px;background:var(--panel-2)}
+.cons:last-child{margin-bottom:0}
+.cons .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.cons .ask{font-size:13.5px;margin:3px 0 6px}
+.cons table{border-collapse:collapse;font-size:12.5px;width:100%;margin:4px 0}
+.cons td,.cons th{border:1px solid var(--line);padding:3px 7px;text-align:left;vertical-align:top}
+.cons th{color:var(--muted);font-weight:600}
+.dec{border-left:3px solid var(--defer);padding:5px 10px;margin-top:6px;background:var(--panel);
+     border-radius:0 8px 8px 0;font-size:13.5px}
+.dec .who{font-size:11.5px;color:var(--muted)}
+
+.lint{display:flex;gap:9px;align-items:baseline;padding:6px 0;border-top:1px solid var(--line);font-size:13.5px}
+.lint:first-child{border-top:0;padding-top:0}
+pre.raw{margin:0;padding:12px;background:var(--panel-2);border-radius:9px;overflow:auto;max-height:480px;
+        font:12px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+details.rawd summary{cursor:pointer;font-size:13px;color:var(--ink-2);padding:5px 0}
+
+/* right: the page --------------------------------------------------------- */
+.pagehead{position:sticky;top:0;z-index:20;background:var(--panel);border-bottom:1px solid var(--line);
+          padding:9px 16px 8px}
+.pagehead .row1{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pagehead .ttl{font-weight:700;font-size:14.5px;margin-right:auto;min-width:0}
+.pagehead .path{font-size:11.5px;color:var(--muted);overflow-wrap:anywhere}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:6px;
+        align-items:center}
+.legend label{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
+.sw{display:inline-block;width:18px;height:11px;border-radius:3px;vertical-align:-1px}
+.sw-rule{background:var(--hl);box-shadow:inset 0 0 0 2px var(--hl-edge)}
+.sw-compliant{background:var(--keep-bg);border-bottom:2px solid var(--keep)}
+.sw-violating{background:var(--bin-bg);border-bottom:2px solid var(--bin)}
+.sw-when{border-bottom:2px dotted var(--defer)}
+.sw-other{border-bottom:2px dashed var(--accent)}
+.sw-sec{background:var(--gold);opacity:.5;width:4px}
+
+.doc{max-width:780px;margin:0 auto;padding:26px 34px 55vh}
+.blk{position:relative;margin:0 0 13px;white-space:pre-wrap;overflow-wrap:anywhere}
+.blk.h1{font-size:28px;font-weight:700;margin:0 0 8px;letter-spacing:-.025em}
+.blk.h2{font-size:21px;font-weight:700;margin:30px 0 10px;letter-spacing:-.02em}
+.blk.h3{font-size:17.5px;font-weight:650;margin:22px 0 8px}
+.blk.h4,.blk.h5,.blk.h6{font-size:15.5px;font-weight:650;margin:18px 0 6px;color:var(--ink-2)}
+.blk.li{margin:0 0 5px;padding-left:22px}
+.blk.li::before{content:"•";position:absolute;left:6px;color:var(--muted)}
+.blk.li[data-ord="1"]::before{content:attr(data-n) ".";left:0;width:18px;text-align:right;
+                              font-variant-numeric:tabular-nums;font-size:13.5px}
+.blk.li[data-depth="1"]{padding-left:44px}
+.blk.li[data-depth="1"]::before{left:28px}
+.blk.quote{border-left:3px solid var(--line-2);padding-left:13px;color:var(--ink-2);font-style:italic}
+.blk.cell{display:inline-block;vertical-align:top;padding:6px 11px;margin:0;border:1px solid var(--line);
+          min-width:110px}
+.row{margin:0 0 -1px;display:flex;flex-wrap:wrap;position:relative}
+.row+.row .blk.cell{border-top:0}
+.blk.insec::after,.row.insec::after{content:"";position:absolute;left:-17px;top:3px;bottom:3px;width:4px;
+          border-radius:3px;background:var(--gold);opacity:.45}
+.doc.nosec .insec::after{display:none}
+.m-link{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.m-em{font-style:italic}
+.m-strong{font-weight:700}
+.m-code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background:var(--panel-2);
+        padding:1px 4px;border-radius:4px}
+
+.hl-other{border-bottom:2px dashed var(--accent);cursor:pointer}
+.hl-other:hover{background:var(--accent-bg)}
+.doc.noothers .hl-other{border-bottom:0;cursor:auto;background:none}
+.hl-when{border-bottom:2px dotted var(--defer)}
+.hl-compliant{background:var(--keep-bg);border-bottom:2px solid var(--keep);cursor:pointer}
+.hl-violating{background:var(--bin-bg);border-bottom:2px solid var(--bin);cursor:pointer}
+.hl-rule{background:var(--hl);box-shadow:0 0 0 2px var(--hl-edge);border-radius:2px;cursor:auto}
+.hl-rule.hl-other{border-bottom:0}
+.blk.flash,.row.flash{animation:flash 1.6s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 6px var(--hl-edge)}100%{box-shadow:0 0 0 14px transparent}}
+.mark-start{display:inline-block;font:700 10px ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;
+            text-transform:uppercase;color:var(--navy);background:var(--hl-edge);border-radius:4px;
+            padding:0 5px;margin-right:5px;vertical-align:2px;user-select:none;white-space:nowrap}
+:root[data-theme="dark"] .mark-start{color:#0f1319}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mark-start{color:#0f1319}}
+
+#jump{position:sticky;bottom:18px;margin-left:auto;margin-right:18px;display:none;z-index:15;
+      box-shadow:var(--shadow-lg);background:var(--panel);width:max-content}
+#jump.on{display:flex}
+.endnote{font-size:12px;color:var(--muted);margin-top:34px;border-top:1px solid var(--line);padding-top:12px}
+
+/* sheet & toast ----------------------------------------------------------- */
+#scrim{position:fixed;inset:0;background:rgba(10,16,26,.45);z-index:70;display:none}
+#scrim.on{display:block}
+#sheet{position:fixed;top:0;right:0;bottom:0;width:min(470px,100vw);background:var(--panel);z-index:80;
+       box-shadow:var(--shadow-lg);overflow-y:auto;display:none;padding:18px 22px 40px}
+#sheet.on{display:block}
+#sheet h2{font-size:18px;margin:0 0 10px}
+#sheet h3{font-size:14px;margin:18px 0 6px}
+#sheet p,#sheet li{font-size:13.5px;color:var(--ink-2)}
+#sheet .k{display:grid;grid-template-columns:90px 1fr;gap:5px 10px;font-size:13.5px}
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(14px);background:var(--navy);
+       color:var(--bg);padding:9px 15px;border-radius:10px;font-size:13.5px;opacity:0;pointer-events:none;
+       transition:.16s;z-index:95;max-width:min(560px,92vw)}
+#toast.on{opacity:1;transform:translateX(-50%)}
+
+@media (max-width:1100px){
+  .hide-md{display:none !important}
+}
+/* The details pane is as wide as the reviewer drags it, so it answers to its
+   own width rather than the window's. */
+@container (max-width:460px){
+  .rule{padding:16px 14px 60px}
+  dl.kv{grid-template-columns:minmax(0,1fr);gap:0}
+  dl.kv dt{margin-top:7px}
+  details.tag summary{grid-template-columns:minmax(0,1fr) auto}
+  details.tag summary .k{grid-column:1 / -1;margin-bottom:-8px}
+  .statement{font-size:19px}
+}
+@media (max-width:820px){
+  :root{--head:auto}
+  header{height:auto;flex-wrap:wrap;padding:8px 12px;row-gap:6px}
+  #find{order:5;flex:1 1 100%}
+  .split{height:calc(100dvh - var(--hh, 96px))}
+  .hide-sm{display:none !important}
+  .rule{padding:16px 16px 60px}
+  .doc{padding:20px 22px 40vh}
+  .blk.insec::after,.row.insec::after{left:-12px}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="brand">Derek <span>Inspect</span></div>
+  <div id="find">
+    <input id="q" type="search" autocomplete="off" spellcheck="false"
+           placeholder="Find a rule — words, uid or page" aria-label="Find a rule"
+           aria-controls="results" aria-expanded="false">
+    <div id="results" role="listbox" aria-label="Rules"></div>
+  </div>
+  <select id="status" title="Which rules Previous / Next step through" aria-label="Status filter"></select>
+  <select id="method" class="hide-md" title="How the rule was found" aria-label="Derivation filter">
+    <option value="">Any derivation</option>
+    <option value="human_span">Marked on the manual</option>
+    <option value="heading_structure">Heading walk</option>
+  </select>
+  <div class="seg" role="group" aria-label="Step through rules">
+    <button class="btn" id="prev" title="Previous rule (K)" aria-label="Previous rule">‹</button>
+    <button class="btn" id="next" title="Next rule (J)" aria-label="Next rule">›</button>
+  </div>
+  <span id="pos"></span>
+  <div class="spacer"></div>
+  <div class="seg hide-sm" role="group" aria-label="Pane ratio">
+    <button class="btn" data-ratio="0.3333" title="Details take a third">⅓</button>
+    <button class="btn" data-ratio="0.5" title="Half and half (\)">½</button>
+    <button class="btn" data-ratio="0.6667" title="Details take two thirds">⅔</button>
+  </div>
+  <button class="btn" id="themeBtn" title="Light / dark (T)" aria-label="Toggle theme">◐</button>
+  <button class="btn" id="helpBtn" title="What am I looking at? (?)" aria-label="Help">?</button>
+  <a class="btn hide-md" href="../annotate/" title="The span annotator">Annotate →</a>
+  <a class="btn hide-md" href="../" title="The card-by-card triage app">Triage →</a>
+</header>
+
+<div class="split" id="split">
+  <section class="pane" id="left" aria-label="Rule details" tabindex="-1">
+    <div class="rule" id="rule"><p class="empty" style="padding:20px">Loading…</p></div>
+  </section>
+  <div class="gutter" id="gutter" role="separator" tabindex="0" aria-controls="left right"
+       aria-orientation="vertical" aria-valuemin="20" aria-valuemax="80" aria-valuenow="42"
+       aria-label="Resize the two panes" title="Drag to resize · arrow keys nudge · double-click for half and half"></div>
+  <section class="pane" id="right" aria-label="Source page" tabindex="-1">
+    <div class="pagehead" id="pagehead"></div>
+    <div class="doc" id="doc"></div>
+    <button class="btn" id="jump" title="Back to the span (S)">↥ Back to the span</button>
+  </section>
+</div>
+
+<div id="scrim"></div>
+<div id="sheet" role="dialog" aria-modal="true" aria-label="Help"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+/* ===========================================================================
+   Derek Inspect — one rule, everything known about it, beside the page it came
+   from.
+
+   Read-only by design. Nothing here writes to the ledger, the golden set or an
+   op log: a rule is changed in the annotator or the triage app, through their
+   one gate (ADR-022, ADR-023). This is where a reviewer looks before deciding to.
+
+   It also computes nothing about provenance. Which span a rule came from, and
+   how sure that placement is, was decided in Python by the same function that
+   mints the rule's uid (tools/inspect/build_static.py). The page draws what it
+   was given and says how it was placed; it never matches text to guess.
+   =========================================================================== */
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g,
+  (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+/* Only per-viewer conveniences are stored, and every access survives a browser
+   that refuses storage. The theme key is shared with the other two apps on
+   purpose; the annotator's page key is written only to open it on this page. */
+const K_THEME = "derek.theme";
+const K_SPLIT = "derek.inspect.split";
+const K_RULE = "derek.inspect.rule";
+const K_FILTER = "derek.inspect.filter";
+const K_VIEW = "derek.inspect.view";
+const K_ANNOTATE_PAGE = "derek.annotate.page";
+
+const store = {
+  get(k, d = null) { try { const v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private window */ } },
+};
+
+const LIVE = new Set(["accepted", "amended"]);       // ReviewStatus.LOADABLE
+const RATIO = { min: 0.2, max: 0.8, base: 0.42 };
+
+const S = {
+  index: null,
+  byUid: new Map(),      // uid -> index row
+  list: [],              // index rows under the current filters, in corpus order
+  cache: new Map(),      // slug -> page payload
+  uid: null,             // the rule on screen
+  page: null,            // its page payload
+  entry: null,           // its payload entry {rule, origin, ...}
+  ratio: RATIO.base,
+  view: { others: true, section: true },
+  hits: [],              // search results on screen
+  hit: -1,
+};
+
+/* --- vocabulary ------------------------------------------------------------ */
+
+const WHO = {
+  MODELS: "two-model consensus",
+  CLAUDE: "Claude",
+  "derek.extract.build": "the build",
+};
+const who = (by) => WHO[by] || by || "unknown";
+
+const HOW = {
+  golden_span: {
+    label: "Exact", cls: "good",
+    says: "This is the span in <code>golden/spans.jsonl</code> that produces this rule's uid. "
+      + "The rule is rebuilt from it on every <code>derek.extract.build</code>, so the highlighted "
+      + "text <em>is</em> the rule's wording (ADR-023).",
+  },
+  heading: {
+    label: "Exact", cls: "good",
+    says: "The heading at the rule's source line. The heading walk read this heading as an "
+      + "instruction and took it as the statement; the section beneath it is the body it read "
+      + "alongside (ADR-002).",
+  },
+  statement: {
+    label: "Located by text", cls: "mid",
+    says: "No span in the golden set produces this uid any more, so the rule's statement was found "
+      + "in the block at its source line. The text is the same; it is no longer what the rule is "
+      + "rebuilt from.",
+  },
+  unplaced: {
+    label: "Not found", cls: "bad",
+    says: "The statement could not be found on the page, so nothing is highlighted rather than "
+      + "something wrong.",
+  },
+};
+
+const METHOD = {
+  human_span: "Marked on the manual",
+  heading_structure: "Heading walk",
+  manual: "Hand-written entry",
+};
+
+const EX_SRC = {
+  span: "an example span on the page",
+  text: "found in the page text",
+  none: "not on this page",
+  span_only: "an example span the ledger no longer carries",
+};
+const COND_SRC = {
+  span: "a “When” span on the page",
+  text: "found in the page text",
+  typed: "written, not quoted from the page",
+};
+
+function gloss(bucket, value) {
+  const b = (S.index.glossary || {})[bucket];
+  return b && b.options ? b.options[value] : null;
+}
+function label(bucket, value) {
+  const g = gloss(bucket, value);
+  return g && g.label ? g.label : value;
+}
+
+/* The triage glossary labels `orphaned` "Source page gone", which was its only
+   cause before ADR-023. Since then the reconciler also orphans a rule whose span
+   the golden set no longer marks, and that is most of them, so the inspector
+   says what the status means rather than what it first meant. */
+const STATUS_MEANS = {
+  orphaned: "Nothing the build reads reproduces this rule's uid any more: the golden set no longer "
+    + "marks it, or its page left the corpus. Retired, never deleted, and it does not load.",
+};
+function statusMeans(st) {
+  return STATUS_MEANS[st] || (gloss("review_status", st) || {}).means || "";
+}
+
+function statusCls(st) {
+  if (LIVE.has(st)) return "good";
+  if (st === "rejected" || st === "quarantined") return "bad";
+  if (st === "orphaned" || st === "superseded") return "mid";
+  return "";
+}
+
+function fmtAt(at) {
+  if (!at) return "";
+  const d = new Date(at);
+  if (isNaN(d)) return esc(at);
+  return d.toLocaleString("en-AU", { day: "numeric", month: "short", year: "numeric",
+    hour: "2-digit", minute: "2-digit" });
+}
+
+/* --- boot ------------------------------------------------------------------ */
+
+async function getJSON(path) {
+  const r = await fetch(path, { cache: "no-store" });
+  if (!r.ok) throw new Error(`${path}: ${r.status}`);
+  return r.json();
+}
+
+async function boot() {
+  const theme = store.get(K_THEME);
+  if (theme) document.documentElement.dataset.theme = theme;
+  try { Object.assign(S.view, JSON.parse(store.get(K_VIEW, "{}"))); } catch (e) { /* default */ }
+  S.ratio = clampRatio(parseFloat(store.get(K_SPLIT, RATIO.base)));
+  wireSplit();
+  applyRatio();
+
+  try {
+    S.index = await getJSON("data/index.json");
+  } catch (e) {
+    $("rule").innerHTML = `<p class="empty">Could not load <code>data/index.json</code>
+      (${esc(e.message)}). Build the site first:
+      <code>python tools/inspect/build_static.py</code>.</p>`;
+    return;
+  }
+  for (const r of S.index.rules) S.byUid.set(r.uid, r);
+
+  const st = S.index.totals.status;
+  const n = (x) => x.toLocaleString();
+  const opts = [["live", `Live rules (${n((st.accepted || 0) + (st.amended || 0))})`],
+                ["all", `All rules (${n(S.index.totals.rules)})`],
+                ...Object.keys(st).map((k) => [k, `${k} (${n(st[k])})`])];
+  $("status").innerHTML = opts.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join("");
+  const f = (() => { try { return JSON.parse(store.get(K_FILTER, "{}")); } catch (e) { return {}; } })();
+  $("status").value = opts.some(([v]) => v === f.status) ? f.status : "live";
+  $("method").value = f.method || "";
+  refilter();
+
+  wireSearch();
+  wireKeys();
+  $("prev").onclick = () => step(-1);
+  $("next").onclick = () => step(1);
+  $("status").onchange = $("method").onchange = () => { saveFilter(); refilter(); paintPos(); };
+  $("themeBtn").onclick = toggleTheme;
+  $("helpBtn").onclick = help;
+  $("scrim").onclick = closeSheet;
+  $("jump").onclick = () => showAnchor(true);
+  window.addEventListener("hashchange", () => openFromHash());
+  window.addEventListener("resize", sizeStack);
+  sizeStack();
+
+  if (!openFromHash()) {
+    const last = store.get(K_RULE);
+    const first = (last && S.byUid.get(last)) || S.list[0] || S.index.rules[0];
+    if (first) go(first.uid, true);
+  }
+}
+
+function saveFilter() {
+  store.set(K_FILTER, JSON.stringify({ status: $("status").value, method: $("method").value }));
+}
+
+function refilter() {
+  const st = $("status").value, m = $("method").value;
+  S.list = S.index.rules.filter((r) =>
+    (st === "all" || (st === "live" ? LIVE.has(r.status) : r.status === st))
+    && (!m || r.method === m));
+}
+
+/* --- navigation -------------------------------------------------------------
+   The URL hash is the rule's uid, so a link to one rule can be pasted into a
+   review thread and opens on exactly that rule.                               */
+
+function openFromHash() {
+  const uid = decodeURIComponent(location.hash.replace(/^#/, "")).trim();
+  if (!uid) return false;
+  if (!S.byUid.has(uid)) { toast(`No rule ${uid} in this build.`); return false; }
+  if (uid !== S.uid) openRule(uid);
+  return true;
+}
+
+function go(uid, replace = false) {
+  if (replace) history.replaceState(null, "", "#" + uid);
+  else if (location.hash !== "#" + uid) { location.hash = uid; return; }
+  openRule(uid);
+}
+
+function step(delta) {
+  if (!S.list.length) return;
+  let i = S.list.findIndex((r) => r.uid === S.uid);
+  if (i < 0) {
+    // The rule on screen is outside the filter: step from where it would sit.
+    const at = S.index.rules.findIndex((r) => r.uid === S.uid);
+    i = S.list.findIndex((r) => S.index.rules.indexOf(r) > at);
+    i = i < 0 ? (delta > 0 ? 0 : S.list.length) : (delta > 0 ? i - 1 : i);
+  }
+  const n = (i + delta + S.list.length) % S.list.length;
+  go(S.list[n].uid);
+}
+
+function paintPos() {
+  const i = S.list.findIndex((r) => r.uid === S.uid);
+  $("pos").textContent = i >= 0
+    ? `${(i + 1).toLocaleString()} of ${S.list.length.toLocaleString()}`
+    : `outside filter · ${S.list.length.toLocaleString()}`;
+}
+
+async function openRule(uid) {
+  const row = S.byUid.get(uid);
+  if (!row) return;
+  const meta = S.index.pages[row.page];
+  let page = null;
+  if (meta.slug) {
+    if (!S.cache.has(meta.slug)) {
+      try { S.cache.set(meta.slug, await getJSON(`data/pages/${meta.slug}.json`)); }
+      catch (e) { toast(`Could not load ${meta.path}`); return; }
+    }
+    page = S.cache.get(meta.slug);
+  }
+  S.uid = uid;
+  S.page = page;
+  S.entry = page ? page.rules.find((e) => e.rule.uid === uid) : null;
+  store.set(K_RULE, uid);
+  document.title = `${row.statement.slice(0, 60)} — Derek Inspect`;
+  paintPos();
+  renderLeft(row, meta);
+  renderRight(meta);
+  $("left").scrollTop = 0;
+  requestAnimationFrame(() => showAnchor(false));
+}
+
+/* --- the split --------------------------------------------------------------
+   One ratio, the share the details pane takes. Side by side it is a width; on
+   a narrow screen the panes stack and the same ratio is a height. Dragging,
+   the arrow keys and the presets all go through setRatio.                     */
+
+function clampRatio(r) {
+  return isFinite(r) ? Math.min(RATIO.max, Math.max(RATIO.min, r)) : RATIO.base;
+}
+const stacked = () => document.body.classList.contains("stacked");
+
+function applyRatio() {
+  const a = `minmax(0,${(S.ratio * 100).toFixed(2)}fr)`;
+  const b = `minmax(0,${((1 - S.ratio) * 100).toFixed(2)}fr)`;
+  const split = $("split");
+  if (stacked()) {
+    split.style.gridTemplateColumns = "";
+    split.style.gridTemplateRows = `${a} var(--gutter) ${b}`;
+  } else {
+    split.style.gridTemplateRows = "";
+    split.style.gridTemplateColumns = `${a} var(--gutter) ${b}`;
+  }
+  const g = $("gutter");
+  g.setAttribute("aria-valuenow", String(Math.round(S.ratio * 100)));
+  g.setAttribute("aria-valuetext", `Details ${Math.round(S.ratio * 100)}%, page ${Math.round((1 - S.ratio) * 100)}%`);
+  g.setAttribute("aria-orientation", stacked() ? "horizontal" : "vertical");
+  for (const b of document.querySelectorAll("[data-ratio]")) {
+    b.classList.toggle("on", Math.abs(parseFloat(b.dataset.ratio) - S.ratio) < 0.01);
+  }
+}
+
+function setRatio(r, save = true) {
+  S.ratio = clampRatio(r);
+  applyRatio();
+  if (save) store.set(K_SPLIT, String(S.ratio.toFixed(4)));
+}
+
+function sizeStack() {
+  const narrow = window.matchMedia("(max-width: 820px)").matches;
+  document.body.classList.toggle("stacked", narrow);
+  if (narrow) document.documentElement.style.setProperty("--hh", $("top").offsetHeight + "px");
+  applyRatio();
+}
+
+function wireSplit() {
+  const g = $("gutter");
+  let dragging = false;
+
+  const ratioAt = (e) => {
+    const box = $("split").getBoundingClientRect();
+    const gw = g.getBoundingClientRect();
+    return stacked()
+      ? (e.clientY - box.top - gw.height / 2) / (box.height - gw.height)
+      : (e.clientX - box.left - gw.width / 2) / (box.width - gw.width);
+  };
+  g.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    dragging = true;
+    g.setPointerCapture(e.pointerId);
+    g.classList.add("drag");
+    document.body.classList.add("dragging");
+    e.preventDefault();
+  });
+  g.addEventListener("pointermove", (e) => { if (dragging) setRatio(ratioAt(e), false); });
+  const stop = (e) => {
+    if (!dragging) return;
+    dragging = false;
+    g.classList.remove("drag");
+    document.body.classList.remove("dragging");
+    try { g.releasePointerCapture(e.pointerId); } catch (x) { /* already released */ }
+    setRatio(S.ratio);
+  };
+  g.addEventListener("pointerup", stop);
+  g.addEventListener("pointercancel", stop);
+  g.addEventListener("dblclick", () => setRatio(0.5));
+  g.addEventListener("keydown", (e) => {
+    const big = e.shiftKey ? 0.1 : 0.02;
+    const less = stacked() ? "ArrowUp" : "ArrowLeft", more = stacked() ? "ArrowDown" : "ArrowRight";
+    if (e.key === less) setRatio(S.ratio - big);
+    else if (e.key === more) setRatio(S.ratio + big);
+    else if (e.key === "Home") setRatio(RATIO.min);
+    else if (e.key === "End") setRatio(RATIO.max);
+    else if (e.key === "Enter") setRatio(0.5);
+    else return;
+    e.preventDefault();
+  });
+  for (const b of document.querySelectorAll("[data-ratio]")) {
+    b.onclick = () => setRatio(parseFloat(b.dataset.ratio));
+  }
+}
+
+/* --- left: everything about the rule --------------------------------------- */
+
+function renderLeft(row, meta) {
+  const e = S.entry;
+  if (!e) {
+    $("rule").innerHTML = `<div class="statement">${esc(row.statement)}</div>
+      <div class="note bad">The page this rule came from, <code>${esc(meta.path)}</code>, is not in
+      the corpus, so there is nothing to show it in (ADR-001). Its ledger entry is unchanged.</div>`;
+    return;
+  }
+  const r = e.rule, o = e.origin, src = r.source;
+  const kick = [
+    `<span class="pill ${statusCls(r.review.status)}" title="${esc(statusMeans(r.review.status))}">${esc(r.review.status)}</span>`,
+    LIVE.has(r.review.status) && r.unit !== "artifact"
+      ? `<span class="pill acc" title="Accepted or amended, and not unit: artifact (D-6, D-10)">loads at runtime</span>` : "",
+    `<span class="pill">${esc(r.modality)}</span>`,
+    `<span class="pill">${esc(METHOD[r.derivation.method] || r.derivation.method)}</span>`,
+    e.sampled ? `<span class="pill vio" title="Drawn into the human check that gates the consensus batch (ADR-027)">in the ${esc(S.index.sample.size)}-rule human check</span>` : "",
+    e.lint.length ? `<span class="pill ${e.lint.some((f) => f.level === "fix") ? "bad" : "mid"}">${e.lint.length} lint finding${e.lint.length === 1 ? "" : "s"}</span>` : "",
+  ].join("");
+
+  const crumbs = [S.page.title, ...src.heading_path.slice(1)].map((h, i, a) =>
+    i === a.length - 1 ? `<b>${esc(h)}</b>` : esc(h)).join(" › ");
+
+  $("rule").innerHTML = `
+    <div class="kick">${kick}</div>
+    <div class="statement">${esc(src.statement)}</div>
+    <div class="crumbs">${crumbs}</div>
+    <div class="ids">
+      <code title="Rule uid">${esc(r.uid)}</code>
+      <button class="btn sm" onclick="copy('${esc(r.uid)}', 'uid')" title="Copy the uid (C)">Copy uid</button>
+      <button class="btn sm" onclick="copy(location.href, 'link')" title="A link that opens this rule">Copy link</button>
+    </div>
+    ${originCard(e)}
+    ${checksCard(e)}
+    ${examplesCard(e)}
+    ${reviewCard(e)}
+    ${consensusCard(e)}
+    ${detectionCard(e)}
+    ${lintCard(e)}
+    ${rawCard(e)}`;
+}
+
+function sourceLinks(e) {
+  const p = S.page, src = e.rule.source, o = e.origin;
+  const repo = (S.index.build && S.index.build.repo) || "Thomas-Amann-IPAustralia/Derek";
+  const ref = (S.index.build && S.index.build.commit) || "main";
+  const line = (o.anchor ? blockOf(o.anchor.block_id)?.line : src.line_start) ?? src.line_start;
+  const gh = `https://github.com/${repo}/blob/${ref}/corpus/pages/${p.path}#L${line + 1}`;
+  const live = p.url || src.url;
+  const out = [];
+  if (live) out.push(`<a href="${esc(live + textFragment(o.anchor && o.anchor.quote))}" target="_blank" rel="noopener"
+      title="The live Style Manual page, scrolled to this text where the browser supports it">stylemanual.gov.au ↗</a>`);
+  out.push(`<a href="${esc(gh)}" target="_blank" rel="noopener" title="The frozen corpus file, at this line">corpus file, line ${line + 1} ↗</a>`);
+  out.push(`<a href="../annotate/" onclick="return openInAnnotator()" title="Open this page in the span annotator">annotator ↗</a>`);
+  return out.join(" · ");
+}
+
+/* A link to the live page that asks the browser to scroll to and highlight the
+   same words (a URL text fragment). Browsers without support ignore it. */
+function textFragment(quote) {
+  const q = (quote || "").replace(/\s+/g, " ").trim();
+  if (!q) return "";
+  const enc = (s) => encodeURIComponent(s).replace(/-/g, "%2D");
+  if (q.length <= 90) return `#:~:text=${enc(q)}`;
+  const w = q.split(" ");
+  if (w.length < 10) return `#:~:text=${enc(q)}`;
+  return `#:~:text=${enc(w.slice(0, 5).join(" "))},${enc(w.slice(-5).join(" "))}`;
+}
+
+function originCard(e) {
+  const r = e.rule, o = e.origin, d = r.derivation, src = r.source;
+  const how = HOW[o.how] || HOW.unplaced;
+  const span = o.span;
+  let lede;
+  if (o.how === "golden_span") {
+    lede = `<b>Marked on the manual.</b> This text on <em>${esc(S.page.title)}</em> is the rule's
+      statement, recorded in the golden set by <b>${esc(who(span.by))}</b>${span.at ? ` on ${fmtAt(span.at)}` : ""}.
+      ${drafted(span)}`;
+  } else if (o.how === "heading") {
+    lede = `<b>Read off the heading structure.</b> The extractor classified this heading as
+      <b>${esc(label("statement_form", d.statement_form))}</b> and took it as a rule, with the section
+      beneath as its body. No model was involved (ADR-002).`;
+  } else if (o.how === "statement") {
+    lede = `<b>${esc(METHOD[d.method] || d.method)}, no longer reproduced.</b> The span this rule was
+      built from has left the golden set, so the rule is <b>${esc(r.review.status)}</b>.
+      Its statement is shown where it sits on the page.`;
+  } else {
+    lede = `<b>${esc(METHOD[d.method] || d.method)}.</b> The statement could not be placed on the page.`;
+  }
+
+  const notes = [];
+  if (e.dropped_by_sweep != null) {
+    notes.push(`<div class="note warn"><b>Dropped when the page was swept.</b> ${esc(e.dropped_by_sweep || "No reason recorded.")}</div>`);
+  }
+  if (o.how === "golden_span" && o.anchor && normalise(o.anchor.quote) !== normalise(src.statement)) {
+    notes.push(`<div class="note">The ledger statement differs from the span's text: it is the span in
+      canonical form (quotes straightened, whitespace collapsed), which is what the uid is minted from.</div>`);
+  }
+  if (o.rebased) notes.push(`<div class="note warn">This span no longer sits at its recorded offsets; it was
+    re-found by its quote and the text around it (ADR-024).</div>`);
+  if (!e.snapshot_matches) notes.push(`<div class="note">The rule was derived from an earlier snapshot of
+    this page (<code>${esc(src.snapshot_sha256.slice(0, 12))}</code>; now <code>${esc(S.page.sha256.slice(0, 12))}</code>).
+    The highlight is placed on the current, frozen text.</div>`);
+  if (S.page.golden_error) notes.push(`<div class="note bad"><b>The golden set refuses this page:</b>
+    ${esc(S.page.golden_error)}</div>`);
+  if (!S.page.eligible) notes.push(`<div class="note warn">This page is not a rule source:
+    <code>corpus/eligibility.yaml</code> excludes it (${esc(S.page.eligibility_reason)}), ADR-005.</div>`);
+
+  const blk = o.anchor ? blockOf(o.anchor.block_id) : null;
+  const rows = [
+    ["Placement", `<span class="pill ${how.cls}">${how.label}</span>`],
+    ["Page", `<code>${esc(S.page.path)}</code>`],
+    ["Open", sourceLinks(e)],
+    ["Section", esc(o.section.slice(1).join(" › ") || S.page.title)],
+    blk ? ["Block", `<code>${esc(blk.id)}</code> · ${esc(blockKind(blk))} · characters ${o.anchor.start}–${o.anchor.end} of ${blk.plain.length}`] : null,
+    ["Derivation", `${esc(METHOD[d.method] || d.method)} · statement form <b>${esc(label("statement_form", d.statement_form))}</b>
+       · extractor ${esc(d.extractor_version)}`],
+    ["First derived", fmtAt(d.derived_at)],
+    span ? ["Span", `<code>${esc(span.span_id)}</code>, marked by ${esc(who(span.by))}${span.at ? ", " + fmtAt(span.at) : ""}`] : null,
+    span && span.seed_draft ? ["Drafted by", `<code>${esc(span.seed_draft)}</code> <span class="empty">(prompt version / model${span.seed_draft.includes("+") ? "s" : ""})</span>`] : null,
+    span && span.seed_uid ? ["Confirms", ruleLink(span.seed_uid, "the heading candidate it was marked on")] : null,
+    span && span.disambiguator ? ["Disambiguator", esc(span.disambiguator)] : null,
+    d.supersedes ? ["Supersedes", ruleLink(d.supersedes)] : null,
+    (d.uid_history || []).length ? ["Earlier uids", d.uid_history.map((u) => ruleLink(u)).join(", ")] : null,
+    ["Snapshot", e.snapshot_matches ? "matches the frozen page ✓" : "an earlier snapshot"],
+  ].filter(Boolean);
+
+  return `<section class="card"><h2>Where it came from
+      <button class="btn sm" onclick="showAnchor(true)" ${o.anchor ? "" : "disabled"}>Show in page</button></h2>
+    <div class="in">
+      <p class="lede">${lede}</p>
+      ${o.anchor ? `<div class="quote">${esc(o.anchor.quote)}</div>` : ""}
+      <p class="lede" style="font-size:13px;color:var(--ink-2)">${how.says}</p>
+      <dl class="kv">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
+      ${notes.join("")}
+    </div></section>`;
+}
+
+/* Which of the ways a span reaches the golden set this one took. `seed_draft`
+   is "<prompt version>/<model>[+<model>]" (ADR-025); `by` says who recorded it. */
+function drafted(span) {
+  const sd = span.seed_draft || "";
+  if (!sd) {
+    return span.by === "MODELS" || span.by === "CLAUDE" ? ""
+      : "No model draft was involved: a person selected this text.";
+  }
+  const models = sd.slice(sd.indexOf("/") + 1).split("+").filter(Boolean).map((m) => `<code>${esc(m)}</code>`);
+  if (models.length > 1) {
+    return `Both drafting models proposed this span (${models.join(" and ")})`
+      + (span.by === "CLAUDE" ? "; the adjudicator settled what they disagreed on (ADR-027)." : ", so it was taken as agreed (ADR-027).");
+  }
+  if (span.by === "MODELS") return `Only ${models[0]} proposed it; a model from the other family confirmed it on a second reading (ADR-027).`;
+  if (span.by === "CLAUDE") return `Only ${models[0]} proposed it; the adjudicator kept it (ADR-027).`;
+  return `Accepted by hand from ${models[0]}'s draft (ADR-025).`;
+}
+
+/* normalise_statement's canonical form, for a display note only. Nothing is
+   decided by it: placement was settled at build time. */
+function normalise(s) {
+  return (s || "").normalize("NFC").replace(/[‘’]/g, "'").replace(/[“”]/g, '"')
+    .replace(/[‑‐]/g, "-").replace(/\s+/g, " ").trim();
+}
+
+function ruleLink(uid, title = "") {
+  const r = S.byUid.get(uid);
+  if (!r) return `<code title="${esc(title || "not in this build's ledger")}">${esc(uid)}</code>`;
+  return `<a href="#${esc(uid)}" title="${esc(r.statement)}"><code>${esc(uid)}</code></a>
+    <span class="empty">${esc(r.status)}</span>`;
+}
+
+function blockKind(b) {
+  return { heading: `heading (h${b.level})`, para: "paragraph", li: "list item", cell: "table cell",
+           quote: "quotation" }[b.kind] || b.kind;
+}
+
+function tagRow(bucket, key, value, extra = "") {
+  const g = gloss(bucket, value);
+  const b = (S.index.glossary || {})[bucket] || {};
+  // The friendly label, and the ledger's own value beside it when they differ,
+  // because the value is what a reviewer greps for and writes in a note.
+  const one = (v) => label(bucket, v) === v ? esc(v)
+    : `${esc(label(bucket, v))} <code style="font-weight:400">${esc(v)}</code>`;
+  const shown = Array.isArray(value) ? value.map(one).join(", ") : one(value);
+  const why = Array.isArray(value)
+    ? value.map((v) => { const x = gloss(bucket, v); return x ? `<p><b>${esc(x.label || v)}:</b> ${esc(x.means || "")}</p>` : ""; }).join("")
+    : g ? `<p>${esc(g.means || "")}</p>${g.effect ? `<p>${esc(g.effect)}</p>` : ""}` : "";
+  return `<details class="tag"><summary><span class="k">${esc(b.title || key)}</span>
+      <span class="v">${shown}${extra ? `<small>${extra}</small>` : ""}</span></summary>
+    <div class="why">${b.one_liner ? `<p><i>${esc(b.one_liner)}</i></p>` : ""}${why || "<p>No explanation in the glossary.</p>"}</div></details>`;
+}
+
+function checksCard(e) {
+  const r = e.rule, o = e.origin;
+  const vc = r.violation_condition.trim();
+  const conds = o.preconditions.map((c, i) => exampleRow(c, "when", i, COND_SRC[c.how] || c.how)).join("");
+  const log = (r.disambiguation_log || []).map((x) => `<div class="ex when"><span class="bar"></span><div class="body">
+      <div class="txt">${esc(x.assumption || JSON.stringify(x))}</div>
+      <div class="src">${esc(who(x.by))}${x.at ? " · " + fmtAt(x.at) : ""}</div></div></div>`).join("");
+  const unit = r.unit === "artifact" ? "never loads (D-6)" : "";
+  return `<section class="card"><h2>What it checks</h2><div class="in">
+    <div class="field"><div class="flabel">Text is wrong when</div>
+      ${vc ? `<div class="fval">${esc(vc)}</div>`
+           : `<div class="note warn">No violation condition. Nothing says what makes text <em>wrong</em>
+              under this rule (D-2; CLAUDE.md, check 1).</div>`}</div>
+    ${r.specification.trim() ? `<div class="field"><div class="flabel">Specification</div><div class="fval">${esc(r.specification)}</div></div>` : ""}
+    <div class="field">
+      ${tagRow("modality", "Modality", r.modality, esc(r.modality_basis))}
+      ${tagRow("unit", "Unit", r.unit, unit)}
+      ${tagRow("direction", "Direction", r.direction)}
+      ${tagRow("clarity", "Clarity", r.clarity)}
+      ${tagRow("applies_to", "Applies to", r.applies_to)}
+    </div>
+    ${conds ? `<div class="field"><div class="flabel">Only when</div>${conds}</div>` : ""}
+    ${log ? `<div class="field"><div class="flabel">Interpretation written down</div>${log}</div>` : ""}
+    ${r.clarity === "ambiguous_resolvable" && !log && !r.specification.trim()
+      ? `<div class="note warn">Marked <b>ambiguous, resolvable</b> but no interpretation is written down (CLAUDE.md, check 4).</div>` : ""}
+  </div></section>`;
+}
+
+/* `kind` is compliant, violating or when; `i` indexes origin.examples or
+   origin.preconditions, and matches the data-ref the page draws for it. */
+function exampleRow(x, kind, i, srcText) {
+  const can = x.parts && x.parts.length;
+  return `<div class="ex ${kind}" id="ex-${kind}-${i}"><span class="bar"></span><div class="body">
+    <div class="txt">${esc(x.text)}</div>
+    <div class="src"><span>${esc(srcText)}</span>
+      ${can ? `<button class="btn sm" onclick="showPart('${kind}', ${i})">Show in page</button>` : ""}</div>
+  </div></div>`;
+}
+
+function examplesCard(e) {
+  const ex = e.origin.examples;
+  const comp = ex.map((x, i) => [x, i]).filter(([x]) => x.polarity === "compliant");
+  const vio = ex.map((x, i) => [x, i]).filter(([x]) => x.polarity === "violating");
+  const list = (rows, kind) => rows.length
+    ? rows.map(([x, i]) => exampleRow(x, kind, i, EX_SRC[x.how] || x.how)).join("")
+    : `<p class="empty">None.</p>`;
+  const warn = !comp.length || !vio.length
+    ? `<div class="note">${!comp.length && !vio.length ? "No examples either way" : !comp.length ? "No compliant example" : "No violating example"}.
+       Polarity is only checkable with both (D-2).</div>` : "";
+  return `<section class="card"><h2>Examples <span>${comp.length} ✓ · ${vio.length} ✗</span></h2><div class="in">
+    <h3 class="sub">Write this — complies</h3>${list(comp, "compliant")}
+    <h3 class="sub">Not this — violates</h3>${list(vio, "violating")}
+    ${warn}
+  </div></section>`;
+}
+
+function reviewCard(e) {
+  const r = e.rule, rv = r.review, span = e.origin.span;
+  const events = [];
+  if (r.derivation.derived_at) events.push({ at: r.derivation.derived_at, cls: "",
+    what: `Derived by the extractor (${esc(METHOD[r.derivation.method] || r.derivation.method)})`, by: "" });
+  if (span && span.at) events.push({ at: span.at, cls: "span", what: "Span marked", by: who(span.by) });
+  for (const c of e.consensus) {
+    if (c.decision) events.push({ at: c.decision.at, cls: "adj", by: who(c.decision.by),
+      what: `Adjudicated: ${esc(CONS_KIND[c.item.kind] || c.item.kind)}`, why: c.decision.reason });
+  }
+  for (const h of rv.history || []) {
+    events.push({ at: h.at, cls: "status", by: who(h.by),
+      what: `${esc(h.from)} → <b>${esc(h.to)}</b>`, why: h.note });
+  }
+  if (r.validation.last_run) events.push({ at: r.validation.last_run, cls: "", what: "Validated", by: "",
+    why: r.validation.notes });
+  events.sort((a, b) => (Date.parse(a.at) || 0) - (Date.parse(b.at) || 0));
+  return `<section class="card"><h2>Review</h2><div class="in">
+    <p class="lede"><span class="pill ${statusCls(rv.status)}">${esc(rv.status)}</span>
+      ${esc(statusMeans(rv.status))}</p>
+    <dl class="kv">
+      <dt>Decided by</dt><dd>${esc(who(rv.decided_by))}${rv.decided_at ? ", " + fmtAt(rv.decided_at) : ""}</dd>
+      ${rv.note ? `<dt>Note</dt><dd style="white-space:pre-wrap">${esc(rv.note)}</dd>` : ""}
+    </dl>
+    <h3 class="sub" style="margin-top:14px">History</h3>
+    <ul class="tl">${events.map((v) => `<li class="${v.cls}"><div class="when">${fmtAt(v.at)}${v.by ? " · " + esc(v.by) : ""}</div>
+      <div class="what">${v.what}</div>${v.why ? `<div class="why">${esc(v.why)}</div>` : ""}</li>`).join("")}</ul>
+  </div></section>`;
+}
+
+const CONS_KIND = {
+  single: "only one model proposed it",
+  tags: "the models disagreed on its tags",
+  example: "an example's polarity",
+  dropped: "neither model kept this heading candidate",
+};
+
+function consensusCard(e) {
+  const span = e.origin.span;
+  if (!e.consensus.length) {
+    if (span && (span.seed_draft || "").includes("+")) {
+      return `<section class="card"><h2>Consensus</h2><div class="in"><p class="lede" style="margin:0">
+        Both drafting models proposed this span and agreed on its tags, so nothing needed adjudicating
+        (ADR-027).</p></div></section>`;
+    }
+    return "";
+  }
+  const items = e.consensus.map(({ item, decision }) => {
+    const rows = [];
+    if (item.found_by) rows.push(["Found by", esc(item.found_by)]);
+    if (item.other_said) rows.push(["The other model", esc(item.other_said)]);
+    if (item.second_reading) {
+      const s = item.second_reading;
+      rows.push(["Second reading", `<b>${esc(s.verdict)}</b> by ${esc(s.by)}${s.note ? ` — ${esc(s.note)}` : ""}`]);
+    }
+    if (item.models_said) {
+      for (const [m, said] of Object.entries(item.models_said)) rows.push([esc(m), esc(said)]);
+    }
+    if (item.proposed) rows.push(["Proposed", `${esc(item.proposed)} by ${esc(item.proposed_by || "")}`]);
+    let table = "";
+    if (item.conflicts) {
+      const models = [...new Set(Object.values(item.conflicts).flatMap((v) => Object.keys(v)))];
+      table = `<table><tr><th>Tag</th>${models.map((m) => `<th>${esc(m)}</th>`).join("")}</tr>
+        ${Object.entries(item.conflicts).map(([k, v]) => `<tr><td>${esc(k)}</td>${models.map((m) =>
+          `<td>${esc(Array.isArray(v[m]) ? v[m].join(", ") : v[m])}</td>`).join("")}</tr>`).join("")}</table>`;
+    }
+    if (item.example) {
+      table += `<div class="quote" style="font-size:13px">${esc(item.example.join("\n"))}</div>`;
+    }
+    const dec = decision
+      ? `<div class="dec"><div class="who">${esc(who(decision.by))} · ${fmtAt(decision.at)}</div>
+          <div><b>${esc(decisionSummary(decision.decision))}</b></div>
+          ${decision.reason ? `<div style="white-space:pre-wrap">${esc(decision.reason)}</div>` : ""}</div>`
+      : `<div class="note warn">Undecided.</div>`;
+    return `<div class="cons"><div class="k">${esc(CONS_KIND[item.kind] || item.kind)} · <code>${esc(item.item_id)}</code></div>
+      <div class="ask">${esc(item.ask || "")}</div>
+      ${rows.length ? `<dl class="kv">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>` : ""}
+      ${table}${dec}</div>`;
+  }).join("");
+  return `<section class="card"><h2>Consensus <span>${e.consensus.length} item${e.consensus.length === 1 ? "" : "s"}</span></h2>
+    <div class="in">${items}</div></section>`;
+}
+
+function decisionSummary(d) {
+  if (!d) return "";
+  const out = [];
+  if ("keep" in d) out.push(d.keep ? "Kept" : "Dropped");
+  if (d.drop) out.push("Dropped");
+  if (d.kind) out.push(`Example: ${d.kind}`);
+  if (d.tags) out.push("Tags: " + Object.entries(d.tags).map(([k, v]) =>
+    `${k} ${Array.isArray(v) ? v.join(", ") : v}`).join(" · "));
+  if (d.violation_condition) out.push("violation condition rewritten");
+  if (d.specification) out.push("specification rewritten");
+  if (d.when) out.push("conditions rewritten");
+  return out.join(" · ") || JSON.stringify(d);
+}
+
+function detectionCard(e) {
+  const r = e.rule, dt = r.detection, v = r.validation;
+  const matcher = dt.matcher && Object.keys(dt.matcher).length
+    ? `<pre class="raw">${esc(JSON.stringify(dt.matcher, null, 2))}</pre>` : "";
+  const props = e.proposals.map((p) => `<div class="cons"><div class="k">Proposed matcher · ${esc(p.method)} · <code>${esc(p.file)}</code></div>
+      <pre class="raw" style="margin-top:6px">${esc(JSON.stringify(p.matcher, null, 2))}</pre>
+      ${p.limits ? `<div class="ask" style="margin-top:6px">${esc(p.limits)}</div>` : ""}
+      <div class="src" style="font-size:12px;color:var(--muted)">${esc(p.proposed_by || "")}</div></div>`).join("");
+  const conf = r.confidence == null
+    ? `<span class="empty">none — not yet validated, so no number is claimed (D-12)</span>`
+    : `${esc(r.confidence)}${r.confidence_basis ? ` · ${esc(r.confidence_basis)}` : ""}`;
+  return `<section class="card"><h2>Detection &amp; validation</h2><div class="in">
+    <dl class="kv">
+      <dt>Detectable</dt><dd>${dt.detectable ? "yes" : "no"}${dt.not_detectable_reason ? ` — ${esc(dt.not_detectable_reason)}` : ""}</dd>
+      <dt>Method</dt><dd>${esc(dt.method)}${dt.tier != null ? ` · Tier ${esc(dt.tier)}` : ""}</dd>
+      <dt>Validation</dt><dd>${esc(v.status)}${v.examples_pass != null ? ` · examples ${v.examples_pass ? "pass" : "fail"}` : ""}
+        ${v.dogfood_density != null ? ` · ${esc(v.dogfood_density)} per 1,000 words on the manual` : ""}
+        · expected ${esc(v.expected_density)}</dd>
+      <dt>Confidence</dt><dd>${conf}</dd>
+    </dl>
+    ${matcher}
+    ${props ? `<h3 class="sub" style="margin-top:12px">Proposals awaiting adoption</h3>${props}` : ""}
+  </div></section>`;
+}
+
+function lintCard(e) {
+  if (!e.lint.length) return "";
+  const cls = { fix: "bad", check: "mid", look: "" };
+  return `<section class="card"><h2>Golden-set lint <span>as of this build</span></h2><div class="in">
+    ${e.lint.map((f) => `<div class="lint"><span class="pill ${cls[f.level] || ""}">${esc(f.level)}</span>
+      <div><code>${esc(f.code)}</code> <span class="empty">${esc(f.ref)}</span><div>${esc(f.message)}</div></div></div>`).join("")}
+  </div></section>`;
+}
+
+function rawCard(e) {
+  const parts = [["The ledger entry — ledger/rules.jsonl", e.rule]];
+  if (e.origin.span) parts.push(["The span — golden/spans.jsonl", e.origin.span]);
+  if (e.consensus.length) parts.push(["The consensus items — golden/consensus/", e.consensus]);
+  return `<section class="card"><h2>Raw records</h2><div class="in">
+    ${parts.map(([t, v]) => `<details class="rawd"><summary>${esc(t)}</summary>
+      <pre class="raw">${esc(JSON.stringify(v, null, 2))}</pre></details>`).join("")}
+  </div></section>`;
+}
+
+/* --- right: the page, with the rule in it -----------------------------------
+   Built the way the annotator builds it: every text node is a slice of a
+   block's `plain`, cut at every mark and highlight boundary, so overlapping
+   highlights flatten into segments without a character moving.               */
+
+function blockOf(id) {
+  return S.page ? S.page.blocks.find((b) => b.id === id) : null;
+}
+
+function highlights() {
+  const by = new Map();
+  const add = (part, h) => {
+    const list = by.get(part.block_id) || [];
+    list.push({ start: part.start, end: part.end, ...h });
+    by.set(part.block_id, list);
+  };
+  const e = S.entry;
+  for (const other of S.page.rules) {
+    if (other.rule.uid === S.uid || !other.origin.anchor) continue;
+    add(other.origin.anchor, { cls: "hl-other", uid: other.rule.uid,
+      title: `${other.rule.source.statement} · ${other.rule.review.status}` });
+  }
+  if (e) {
+    e.origin.preconditions.forEach((c, i) => (c.parts || []).forEach((p) =>
+      add(p, { cls: "hl-when", ref: `when:${i}`, title: "When: " + c.text })));
+    e.origin.examples.forEach((x, i) => (x.parts || []).forEach((p) =>
+      add(p, { cls: "hl-" + x.polarity, ref: `${x.polarity}:${i}`,
+               title: (x.polarity === "compliant" ? "Write this" : "Not this") + " — " + EX_SRC[x.how] })));
+    if (e.origin.anchor) add(e.origin.anchor, { cls: "hl-rule", rule: true, title: "This rule's span" });
+  }
+  return by;
+}
+
+function segments(block, hs) {
+  const cuts = new Set([0, block.plain.length]);
+  for (const m of block.marks || []) { cuts.add(m.start); cuts.add(m.end); }
+  for (const h of hs) { cuts.add(h.start); cuts.add(h.end); }
+  const bounds = [...cuts].filter((n) => n >= 0 && n <= block.plain.length).sort((a, b) => a - b);
+  const out = [];
+  for (let i = 0; i < bounds.length - 1; i++) {
+    const a = bounds[i], z = bounds[i + 1];
+    if (a >= z) continue;
+    out.push({ a, z, text: block.plain.slice(a, z),
+      marks: (block.marks || []).filter((m) => m.start <= a && m.end >= z),
+      hs: hs.filter((h) => h.start <= a && h.end >= z) });
+  }
+  return out;
+}
+
+function blockInner(block, hs) {
+  if (!hs.length && !(block.marks || []).length) return esc(block.plain);
+  let html = "";
+  let opened = false;
+  for (const s of segments(block, hs)) {
+    const cls = [...s.marks.map((m) => "m-" + m.kind), ...new Set(s.hs.map((h) => h.cls))];
+    const href = (s.marks.find((m) => m.kind === "link") || {}).href;
+    // The narrowest other rule under a segment is the one a click opens.
+    const others = s.hs.filter((h) => h.uid).sort((x, y) => (x.end - x.start) - (y.end - y.start));
+    const ref = s.hs.find((h) => h.ref);
+    const isRule = s.hs.some((h) => h.rule);
+    const attrs = [
+      others.length && !isRule ? `data-uid="${esc(others[0].uid)}"` : "",
+      ref && !isRule ? `data-ref="${esc(ref.ref)}"` : "",
+      isRule ? `data-anchor="1"` : "",
+    ].filter(Boolean).join(" ");
+    const title = [href, ...s.hs.map((h) => h.title)].filter(Boolean).join("\n");
+    const flag = isRule && !opened ? `<span class="mark-start" aria-hidden="true">rule</span>` : "";
+    if (isRule) opened = true;
+    html += `${flag}<span class="${cls.join(" ")}"${title ? ` title="${esc(title)}"` : ""}${attrs ? " " + attrs : ""}>${esc(s.text)}</span>`;
+  }
+  return html;
+}
+
+function renderRight(meta) {
+  const p = S.page, e = S.entry;
+  if (!p) {
+    $("pagehead").innerHTML = `<div class="ttl">${esc(meta.path)}</div>`;
+    $("doc").innerHTML = `<p class="empty">This page is not in the corpus.</p>`;
+    return;
+  }
+  const others = p.rules.length - 1;
+  const sweep = p.sweep;
+  $("pagehead").innerHTML = `
+    <div class="row1">
+      <div class="ttl">${esc(p.title)}</div>
+      ${p.eligible ? "" : `<span class="pill mid" title="${esc(p.eligibility_reason)}">not a rule source</span>`}
+      ${sweep ? `<span class="pill ${sweep.status === "complete" ? "good" : ""}" title="${esc(sweep.note || "")}">${sweep.status === "complete" ? "swept" : esc(sweep.status)} · ${esc(who(sweep.by))}</span>` : `<span class="pill">not swept</span>`}
+      ${S.index.freeze && S.index.freeze.frozen ? `<span class="pill" title="${esc(S.index.freeze.reason || "")}">corpus frozen ${esc((S.index.freeze.frozen_at || "").slice(0, 10))}</span>` : ""}
+      <button class="btn sm" onclick="showAnchor(true)" ${e && e.origin.anchor ? "" : "disabled"}>Show span</button>
+      ${p.url ? `<a class="btn sm" href="${esc(p.url)}" target="_blank" rel="noopener">Live ↗</a>` : ""}
+    </div>
+    <div class="path">${esc(p.path)}</div>
+    <div class="legend">
+      <span><i class="sw sw-rule"></i> this rule</span>
+      <span><i class="sw sw-compliant"></i> write this</span>
+      <span><i class="sw sw-violating"></i> not this</span>
+      <span><i class="sw sw-when"></i> when</span>
+      <label title="The other rules this page states (O)"><input type="checkbox" id="vOthers" ${S.view.others ? "checked" : ""}>
+        <i class="sw sw-other"></i> other rules (${others})</label>
+      <label title="The section the rule sits in"><input type="checkbox" id="vSection" ${S.view.section ? "checked" : ""}>
+        <i class="sw sw-sec"></i> its section</label>
+    </div>`;
+  $("vOthers").onchange = (ev) => setView("others", ev.target.checked);
+  $("vSection").onchange = (ev) => setView("section", ev.target.checked);
+
+  const hs = highlights();
+  const sec = e ? e.origin.section : [];
+  const inSection = (b) => sec.length > 1 && b.heading_path.length >= sec.length
+    && sec.every((h, i) => b.heading_path[i] === h);
+
+  const body = [];
+  let row = null, ordinal = 0;
+  for (const b of p.blocks) {
+    const inner = blockInner(b, hs.get(b.id) || []);
+    const insec = inSection(b) ? " insec" : "";
+    if (b.kind === "cell") {
+      const r = b.cell ? b.cell[0] : 0;
+      if (!row || row.r !== r) {
+        if (row) body.push("</div>");
+        row = { r };
+        body.push(`<div class="row${insec}">`);
+      }
+      body.push(`<div class="blk cell" data-bid="${b.id}">${inner}</div>`);
+      continue;
+    }
+    if (row) { body.push("</div>"); row = null; }
+    if (b.kind === "li") {
+      ordinal = b.ordered ? ordinal + 1 : 0;
+      body.push(`<div class="blk li${insec}" data-bid="${b.id}" data-depth="${b.list_depth || 0}"`
+        + (b.ordered ? ` data-ord="1" data-n="${ordinal}"` : "") + `>${inner}</div>`);
+      continue;
+    }
+    ordinal = 0;
+    if (b.kind === "heading") {
+      body.push(`<div class="blk h${Math.min(b.level, 6)}${insec}" data-bid="${b.id}">${inner}</div>`);
+      continue;
+    }
+    body.push(`<div class="blk ${b.kind}${insec}" data-bid="${b.id}">${inner}</div>`);
+  }
+  if (row) body.push("</div>");
+
+  const doc = $("doc");
+  doc.className = "doc" + (S.view.others ? "" : " noothers") + (S.view.section ? "" : " nosec");
+  doc.innerHTML = body.join("") + `<div class="endnote">
+    ${p.blocks.length} blocks · ${p.rules.length} rule${p.rules.length === 1 ? "" : "s"} in the ledger from this page ·
+    reconstructed from the frozen corpus by <code>derek/extract/blocks.py</code> (render ${esc(S.index.build.render_version)})
+    </div>`;
+  watchAnchor();
+}
+
+function setView(k, v) {
+  S.view[k] = v;
+  store.set(K_VIEW, JSON.stringify(S.view));
+  $("doc").classList.toggle("noothers", !S.view.others);
+  $("doc").classList.toggle("nosec", !S.view.section);
+}
+
+function anchorEl() {
+  return $("doc").querySelector("[data-anchor]");
+}
+
+/* Scroll one pane, not the window: both panes are their own scroll containers,
+   and scrollIntoView would also move whichever ancestors it could. */
+function scrollPaneTo(pane, el, smooth) {
+  const top = el.getBoundingClientRect().top - pane.getBoundingClientRect().top + pane.scrollTop;
+  const head = pane === $("right") ? $("pagehead").offsetHeight : 0;
+  const target = Math.max(0, top - head - (pane.clientHeight - head) * 0.33);
+  pane.scrollTo({ top: target, behavior: smooth ? "smooth" : "auto" });
+}
+
+function flash(el) {
+  const box = el.closest(".row") || el.closest(".blk");
+  if (!box) return;
+  box.classList.remove("flash");
+  void box.offsetWidth;
+  box.classList.add("flash");
+}
+
+function showAnchor(smooth) {
+  const el = anchorEl();
+  if (!el) { $("right").scrollTop = 0; return; }
+  scrollPaneTo($("right"), el, smooth);
+  flash(el);
+}
+
+function showPart(kind, i) {
+  const el = $("doc").querySelector(`[data-ref="${CSS.escape(`${kind}:${i}`)}"]`);
+  if (!el) { toast("That text sits inside the rule's own span."); showAnchor(true); return; }
+  scrollPaneTo($("right"), el, true);
+  flash(el);
+}
+
+let observer = null;
+function watchAnchor() {
+  if (observer) observer.disconnect();
+  const el = anchorEl();
+  $("jump").classList.remove("on");
+  if (!el || !("IntersectionObserver" in window)) return;
+  observer = new IntersectionObserver((entries) => {
+    for (const en of entries) $("jump").classList.toggle("on", !en.isIntersecting);
+  }, { root: $("right"), rootMargin: `-${$("pagehead").offsetHeight}px 0px 0px 0px` });
+  observer.observe(el);
+}
+
+/* Clicking text in the page: another rule opens it; an example or condition
+   finds its entry on the left. */
+$("doc").addEventListener("click", (ev) => {
+  if (window.getSelection && String(window.getSelection()).length) return;
+  const t = ev.target.closest("[data-uid],[data-ref]");
+  if (!t) return;
+  if (t.dataset.uid && S.view.others && !t.dataset.ref) { go(t.dataset.uid); return; }
+  if (t.dataset.ref) {
+    const [kind, i] = t.dataset.ref.split(":");
+    const row = $(`ex-${kind}-${i}`);
+    if (!row) return;
+    scrollPaneTo($("left"), row, true);
+    row.classList.remove("flash");
+    void row.offsetWidth;
+    row.classList.add("flash");
+  }
+});
+
+/* --- the annotator, opened on this page ------------------------------------
+   The annotator remembers its page under one localStorage key and opens it on
+   load. Same origin on GitHub Pages, so writing that key is how to land there;
+   tests/test_inspect_offline.py asserts both files still name the same key. */
+function openInAnnotator() {
+  if (S.page) store.set(K_ANNOTATE_PAGE, S.page.path);
+  return true;
+}
+
+/* --- search ---------------------------------------------------------------- */
+
+function wireSearch() {
+  const q = $("q");
+  q.addEventListener("focus", () => searchNow());
+  q.addEventListener("input", () => { S.hit = 0; searchNow(); });
+  q.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") { S.hit = Math.min(S.hits.length - 1, S.hit + 1); paintHits(); e.preventDefault(); }
+    else if (e.key === "ArrowUp") { S.hit = Math.max(0, S.hit - 1); paintHits(); e.preventDefault(); }
+    else if (e.key === "Enter") { const h = S.hits[S.hit] || S.hits[0]; if (h) pick(h.uid); e.preventDefault(); }
+    else if (e.key === "Escape") { closeResults(); q.blur(); }
+  });
+  document.addEventListener("pointerdown", (e) => {
+    if (!$("find").contains(e.target)) closeResults();
+  });
+  $("results").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-pick]");
+    if (b) pick(b.dataset.pick);
+  });
+}
+
+const LIMIT = 150;
+
+function searchNow() {
+  const raw = $("q").value.trim().toLowerCase();
+  const words = raw.split(/\s+/).filter(Boolean);
+  const pages = S.index.pages;
+  const pool = words.length ? S.index.rules : S.list;
+  const hits = [];
+  for (const r of pool) {
+    if (words.length) {
+      const hay = `${r.statement} ${r.uid} ${r.heading} ${pages[r.page].title} ${pages[r.page].path}`.toLowerCase();
+      if (!words.every((w) => hay.includes(w))) continue;
+    }
+    hits.push(r);
+    if (hits.length > LIMIT) break;
+  }
+  S.hits = hits.slice(0, LIMIT);
+  if (S.hit < 0 || S.hit >= S.hits.length) S.hit = Math.max(0, S.hits.findIndex((h) => h.uid === S.uid));
+  paintHits(hits.length > LIMIT, words.length > 0);
+}
+
+function paintHits(more = false, searching = true) {
+  const box = $("results");
+  let html = searching ? "" : `<div class="more">Rules under the current filter, in page order. Type to search every rule.</div>`;
+  let page = -1;
+  S.hits.forEach((r, i) => {
+    if (r.page !== page) {
+      page = r.page;
+      html += `<div class="grp">${esc(S.index.pages[page].title)}</div>`;
+    }
+    html += `<button class="hit${i === S.hit ? " on" : ""}${r.uid === S.uid ? " cur" : ""}" role="option"
+        aria-selected="${i === S.hit}" data-pick="${esc(r.uid)}">
+      <div class="t">${esc(r.statement)}</div>
+      <div class="m"><span>${esc(r.status)}</span><span>${esc(r.modality)}</span>
+        <span>${esc(METHOD[r.method] || r.method)}</span>${r.heading ? `<span>${esc(r.heading)}</span>` : ""}</div>
+    </button>`;
+  });
+  if (!S.hits.length) html += `<div class="more">No rules match.</div>`;
+  if (more) html += `<div class="more">Showing the first ${LIMIT}. Add words to narrow it.</div>`;
+  box.innerHTML = html;
+  box.scrollTop = 0;
+  box.classList.add("on");
+  $("q").setAttribute("aria-expanded", "true");
+  const on = box.querySelector(".hit.on");
+  if (on) on.scrollIntoView({ block: "nearest" });
+}
+
+function closeResults() {
+  $("results").classList.remove("on");
+  $("q").setAttribute("aria-expanded", "false");
+}
+
+function pick(uid) {
+  closeResults();
+  $("q").blur();
+  go(uid);
+}
+
+/* --- keys, sheet, odds and ends --------------------------------------------- */
+
+function wireKeys() {
+  document.addEventListener("keydown", (e) => {
+    const tag = (e.target.tagName || "").toLowerCase();
+    if (tag === "input" || tag === "select" || tag === "textarea" || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.target === $("gutter") && e.key.startsWith("Arrow")) return;
+    if ($("sheet").classList.contains("on")) { if (e.key === "Escape") closeSheet(); return; }
+    const k = e.key;
+    if (k === "j") step(1);
+    else if (k === "k") step(-1);
+    else if (k === "/") { $("q").focus(); $("q").select(); }
+    else if (k === "s") showAnchor(true);
+    else if (k === "o") { setView("others", !S.view.others); const c = $("vOthers"); if (c) c.checked = S.view.others; }
+    else if (k === "[") setRatio(S.ratio - 0.05);
+    else if (k === "]") setRatio(S.ratio + 0.05);
+    else if (k === "\\") setRatio(0.5);
+    else if (k === "c" && S.uid) copy(S.uid, "uid");
+    else if (k === "t") toggleTheme();
+    else if (k === "?") help();
+    else return;
+    e.preventDefault();
+  });
+}
+
+function copy(text, what) {
+  const done = () => toast(`Copied the ${what}.`);
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, () => toast(text));
+  } else toast(text);
+}
+
+function toggleTheme() {
+  const root = document.documentElement;
+  const dark = root.dataset.theme
+    ? root.dataset.theme === "dark"
+    : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  store.set(K_THEME, root.dataset.theme);
+}
+
+function help() {
+  const t = S.index ? S.index.totals : null;
+  const row = (k, what) => `<kbd>${k}</kbd><span>${what}</span>`;
+  $("sheet").innerHTML = `
+    <h2>Rule inspector</h2>
+    <p>One rule at a time. On the left, everything the repository records about it: what it
+      checks, its examples, its review history, any model disagreement and how it was settled, and
+      its detection state. On the right, the page it came from, rebuilt from the frozen corpus, with
+      the text that states the rule highlighted where it sits.</p>
+    <p>This page is <b>read-only</b>. To change a rule, use the
+      <a href="../annotate/">annotator</a> (its span, tags and examples) or the
+      <a href="../">triage app</a>. Both go through the one gate that writes the ledger.</p>
+    <h3>How the highlight was placed</h3>
+    <ul>
+      <li><b>Exact (span).</b> The golden span that mints this rule's uid on every rebuild.</li>
+      <li><b>Exact (heading).</b> The heading the heading walk read as the rule.</li>
+      <li><b>Located by text.</b> The rule's span has left the golden set; its statement was found at
+        its source line.</li>
+      <li><b>Not found.</b> Nothing is drawn rather than something wrong.</li>
+    </ul>
+    ${t ? `<p>This build: ${t.rules.toLocaleString()} rules on ${t.pages} pages —
+      ${Object.entries(t.how).map(([k, n]) => `${n.toLocaleString()} ${esc((HOW[k] || {}).label || k).toLowerCase()} (${esc(k.replace("_", " "))})`).join(", ")}.
+      Built ${fmtAt(S.index.build.generated_at)} from <code>${esc(S.index.build.commit || "unknown")}</code>.</p>` : ""}
+    <h3>Keys</h3>
+    <div class="k">
+      ${row("J / K", "next / previous rule under the filter")}
+      ${row("/", "find a rule")}
+      ${row("S", "scroll the page back to the span")}
+      ${row("O", "show or hide the page's other rules")}
+      ${row("[ / ]", "narrow / widen the details pane")}
+      ${row("\\", "half and half")}
+      ${row("C", "copy the uid")}
+      ${row("T", "light / dark")}
+    </div>
+    <h3>Resizing</h3>
+    <p>Drag the bar between the panes, or focus it and use the arrow keys (Shift for bigger steps).
+      Double-click it for half and half. The ratio is remembered in this browser.</p>
+    <p style="margin-top:20px"><button class="btn" onclick="closeSheet()">Close</button></p>`;
+  $("sheet").classList.add("on");
+  $("scrim").classList.add("on");
+}
+
+function closeSheet() {
+  $("sheet").classList.remove("on");
+  $("scrim").classList.remove("on");
+}
+
+let toastTimer = null;
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("on"), 2400);
+}
+
+boot();
+</script>
+</body>
+</html>

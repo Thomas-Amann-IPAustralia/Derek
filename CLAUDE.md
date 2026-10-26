@@ -67,6 +67,7 @@ python tools/review/build_static.py --out site
 python tools/annotate/build_static.py --out site/annotate
 python tools/annotate/apply_spans.py golden/inbox/*.jsonl              # spans → ledger
 python tools/annotate/apply_spans.py golden/inbox/*.jsonl --dry-run
+python tools/inspect/build_static.py --out site/inspect   # one rule beside its source page; read-only
 python -m derek.extract.blocks --check  # CI: the block projection matches its lock
 python -m derek.eval.span_recall        # the heuristic, measured on swept pages
 python -m derek.eval.golden_lint        # the golden set vs the invariants and docs/08
@@ -207,6 +208,8 @@ Each layer must be reproducible from the one below it. Full detail:
 | `tools/annotate/index.html` | The span annotator — the manual, reconstructed and selectable |
 | `tools/annotate/build_static.py` | Ships the blocks, the seeded candidates and the golden set as files |
 | `tools/annotate/apply_spans.py` | The return leg: spans → `golden/` → ledger → `server._apply` |
+| `tools/inspect/index.html` | The rule inspector — one rule's whole record beside its page, the span highlighted in place |
+| `tools/inspect/build_static.py` | Places each rule on its page with `golden_rules`, the function that mints its uid, and says how |
 | `derek/eval/span_recall.py` | The heading heuristic measured against the golden set |
 | `reference/octavius-v1/` | **NON-AUTHORITATIVE.** Recall checklist and negative test set only |
 
@@ -248,6 +251,10 @@ model families are lined up by `tools/draft/consensus.py`. Agreement is taken, a
 difference is an item that needs a decision with a reason. Polarity and direction are
 never settled by rule, and a page a human marked is never written to. Adjudicate by
 `docs/08`'s test, as recorded in ADR-027, so that every session decides the same way.
+
+**To see a rule in its context**, open it in the inspector
+(<https://thomas-amann-ipaustralia.github.io/Derek/inspect/#UID>): its whole record on the
+left, and its source page on the right with the span highlighted in place. Read-only.
 
 **Before accepting any rule, confirm:**
 

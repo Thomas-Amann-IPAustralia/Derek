@@ -199,6 +199,10 @@ rules, which is what Phase 2b is for.
       same `server._apply` the triage app uses
 - [x] `derek/eval/span_recall.py` — the heading heuristic measured against what a human
       actually marked, on swept pages only
+- [x] `tools/inspect/` — one rule's whole record beside its source page, the span
+      highlighted in place, published at
+      <https://thomas-amann-ipaustralia.github.io/Derek/inspect/>. Read-only; placement
+      comes from `golden_rules`, the function that mints the uid
 - [x] First three pages annotated (`commas.md`, `pronouns.md`, `treaties.md`), at about
       23 words a minute, or at least 116 hours for the whole manual at that pace
       (`python -m derek.eval.annotation_pace`).
