@@ -49,6 +49,7 @@ CI_ENTRY_POINTS = (
     "derek/eval/dogfood.py",
     "tools/review/build_static.py",
     "tools/annotate/build_static.py",
+    "tools/inspect/build_static.py",
     # Loaded by path from tools/annotate/build_static.py, so an import chain
     # would not reach it: the annotator ships its drafts (ADR-025).
     "tools/draft/drafting.py",

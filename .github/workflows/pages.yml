@@ -1,9 +1,10 @@
 name: Reviewer dashboard
 
-# Publishes both reviewer apps as a static site to GitHub Pages:
+# Publishes the three reviewer apps as a static site to GitHub Pages:
 #
 #   /           tools/review/    — card-by-card triage of the extractor's output
 #   /annotate/  tools/annotate/  — mark the spans of text that state each rule
+#   /inspect/   tools/inspect/   — one rule beside the page it came from (read-only)
 #
 # Round 1 is 736 decisions a human has to make, and the reviewer's machine may
 # not be able to run Python at all. A dashboard nobody can open is a review
@@ -45,19 +46,22 @@ jobs:
         with:
           python-version: '3.11'
 
-      # No `pip install`: both build_static.py files, server.py and everything
+      # No `pip install`: the build_static.py files, server.py and everything
       # they import from derek/ledger/ and derek/extract/ are stdlib-only by
       # invariant (see CLAUDE.md, "Dependencies are tiered deliberately").
       #
       # Order matters. The triage build owns `site/` and clears it; the annotator
-      # owns `site/annotate/` and clears only that. Running them the other way
-      # round would delete the annotator, so the triage build goes first and
-      # `--no-clean` exists for anyone who needs the other order.
+      # and the inspector own `site/annotate/` and `site/inspect/` and clear only
+      # those. Running the triage build last would delete both, so it goes first
+      # and `--no-clean` exists for anyone who needs another order.
       - name: Build the triage dashboard
         run: python tools/review/build_static.py --out site
 
       - name: Build the span annotator
         run: python tools/annotate/build_static.py --out site/annotate
+
+      - name: Build the rule inspector
+        run: python tools/inspect/build_static.py --out site/inspect
 
       - uses: actions/configure-pages@v5
         with:
@@ -80,6 +84,10 @@ jobs:
             echo "### Span annotator"
             echo '```json'
             python -m json.tool < site/annotate/data/manifest.json
+            echo '```'
+            echo "### Rule inspector"
+            echo '```json'
+            python -m json.tool < site/inspect/data/manifest.json
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
