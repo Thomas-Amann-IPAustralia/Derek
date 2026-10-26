@@ -222,3 +222,49 @@ def test_a_blocked_proposal_cannot_be_adopted(tmp_path):
     c = _one(rule)
     assert props.adopt([LATIN], "TA", ledger=ledger, checks=[c]) == 0
     assert not load_ledger(ledger)[LATIN].detection.detectable
+
+
+def test_a_matcher_for_a_rule_that_never_says_what_is_wrong_is_blocked():
+    """D-2: four matchers reached 'ready' on rules with an empty violation condition."""
+    rule = _latin()
+    rule.violation_condition = ""
+    c = _one(rule)
+    assert not c.ready and any("no violation condition" in b for b in c.blockers)
+
+
+def test_a_matcher_with_nothing_it_must_leave_alone_is_blocked():
+    rule = _latin()
+    rule.compliant_examples = []
+    c = _one(rule)
+    assert not c.ready and any("no compliant example" in b for b in c.blockers)
+
+
+@pytest.mark.parametrize("clarity", ["ambiguous_deferred", "not_automatable", "unreviewed"])
+def test_a_matcher_for_a_rule_nobody_could_implement_is_blocked(clarity):
+    """ADR-017: a deferred rule is retained, not detectable."""
+    rule = _latin()
+    rule.clarity = clarity
+    c = _one(rule)
+    assert not c.ready and any("clarity is" in b for b in c.blockers)
+
+
+def test_the_engine_will_not_run_a_matcher_its_gate_would_refuse():
+    """Defence in depth: a hand-edited ledger still cannot run such a rule."""
+    rule = _with_matcher(_latin())
+    rule.violation_condition = ""
+    loaded = load([rule])
+    assert not loaded.rules and "violation condition" in loaded.skipped[0][1]
+
+    rule = _with_matcher(_latin())
+    rule.clarity = "ambiguous_deferred"
+    loaded = load([rule])
+    assert not loaded.rules and "clarity" in loaded.skipped[0][1]
+
+
+def test_every_label_in_the_census_marks_a_wrong_example_including_a_paragraph_label():
+    """R11: 'Avoid this' and a bare 'Not this' paragraph also open the manual's wrong examples."""
+    text = ("# T\n\n## Rule\n\nUse x.\n\n### Avoid this\n\nBad sentence.\n\nProse after.\n\n"
+            "## Other\n\nNot this\n\nAnother bad one.\n\nMore prose.\n")
+    doc = Document.from_page("x/y.md", text)
+    off = {b.text for b in doc.blocks if not b.lintable}
+    assert off == {"Bad sentence.", "Another bad one."}

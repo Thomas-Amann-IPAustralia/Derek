@@ -10,10 +10,11 @@ ledger only through ``adopt``, which a person runs with their initials (D-10),
 and only when three things hold, each the answer to a documented Octavius
 failure:
 
-1. **The rule's own examples agree** (ADR-004). Every violating example fires,
-   no compliant one does, and there is *at least one* violating example. A
-   matcher with nothing it must catch passes any harness vacuously, which is
-   postmortem F4 in its purest form.
+1. **The rule says what is wrong, and its own examples agree** (D-2, ADR-004).
+   It has a violation condition and a clarity a matcher can implement; every
+   violating example fires, no compliant one does, and there is *at least one*
+   of each. A matcher with nothing it must catch passes any harness
+   vacuously, which is postmortem F4 in its purest form.
 2. **The manual does not trip it** (ADR-011). Its density on the Style Manual's
    own prose, raw and un-suppressed (D-14), is within the proposal's budget, and
    any budget above zero carries a written justification.
@@ -38,12 +39,17 @@ from pathlib import Path
 
 from derek.detect.engine import check_examples
 from derek.detect.matchers import MatcherError, compile_matcher
-from derek.ledger.model import Detection, ReviewStatus
+from derek.ledger.model import Clarity, Detection, ReviewStatus
 from derek.ledger.store import load_ledger, write_ledger
 
 REPO = Path(__file__).resolve().parents[2]
 LEDGER = REPO / "ledger" / "rules.jsonl"
 PROPOSALS = REPO / "ledger" / "proposals"
+
+
+# ADR-017: a deferred rule is "retained, not detectable", and an unreviewed or
+# not-automatable one has no operational form to implement.
+UNDETECTABLE = frozenset({Clarity.UNREVIEWED, Clarity.AMBIGUOUS_DEFERRED, Clarity.NOT_AUTOMATABLE})
 
 
 @dataclass
@@ -89,6 +95,17 @@ def check(proposals: list[dict], rules, docs=None, words: int | None = None) -> 
             continue
         if rule.review.status not in ReviewStatus.LOADABLE:
             c.blockers.append(f"the rule is {rule.review.status}, and only accepted rules load (D-10)")
+        # D-2, and the schema's contract for a detectable rule. Without a
+        # violation condition the matcher is the only statement of what is
+        # wrong: what fires would define the violation, instead of the
+        # violation defining what may fire. Four matchers reached "ready" on
+        # rules with an empty condition before this check existed.
+        if not (rule.violation_condition or "").strip():
+            c.blockers.append("no violation condition: the rule never says what makes text "
+                              "wrong (D-2)")
+        if rule.clarity in UNDETECTABLE:
+            c.blockers.append(f"clarity is {rule.clarity}: the rule needs a judgement nobody "
+                              f"has made, so no matcher can implement it (ADR-017)")
         try:
             m = compile_matcher(p["method"], p["matcher"])
         except (MatcherError, KeyError) as exc:
@@ -102,6 +119,10 @@ def check(proposals: list[dict], rules, docs=None, words: int | None = None) -> 
             c.blockers.append("no violating example, so nothing shows the matcher catches "
                               "anything (ADR-004). The manual gives none for this rule; one "
                               "has to come from a reviewed source, not from the proposal (D-1)")
+        if not rule.compliant_examples:
+            c.blockers.append("no compliant example, so nothing shows the matcher leaves correct "
+                              "text alone (ADR-004; the schema requires both kinds for a "
+                              "detectable rule)")
         if ex.missed:
             c.blockers.append(f"{len(ex.missed)} violating example(s) do not fire")
         if ex.false_alarms:

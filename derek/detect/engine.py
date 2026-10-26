@@ -18,7 +18,7 @@ from dataclasses import dataclass
 from derek.detect.document import Document
 from derek.detect.matchers import SUPPORTED, Matcher, MatcherError, compile_matcher
 from derek.extract.modality import default_severity
-from derek.ledger.model import ReviewStatus, Rule, Unit
+from derek.ledger.model import Clarity, ReviewStatus, Rule, Unit
 
 __all__ = ["Finding", "Loaded", "load", "detect", "check_examples", "ExampleCheck"]
 
@@ -53,6 +53,18 @@ def load(rules: dict[str, Rule] | list[Rule]) -> Loaded:
         if not det.detectable or det.method not in SUPPORTED:
             out.skipped.append((rule.uid, det.not_detectable_reason
                                 or f"method {det.method!r} is not Tier 0"))
+            continue
+        # The adoption gate checks these too; checking again here means a
+        # ledger edited by hand, or adopted before the gate existed, still
+        # cannot run a matcher for a rule that does not say what is wrong.
+        if not (rule.violation_condition or "").strip() or not rule.compliant_examples \
+                or not rule.violating_examples:
+            out.skipped.append((rule.uid, "no violation condition, or examples of only one "
+                                "kind: the contract for a detectable rule (D-2, ADR-004)"))
+            continue
+        if rule.clarity in (Clarity.UNREVIEWED, Clarity.AMBIGUOUS_DEFERRED, Clarity.NOT_AUTOMATABLE):
+            out.skipped.append((rule.uid, f"clarity is {rule.clarity}: retained, not "
+                                "detectable (ADR-017)"))
             continue
         try:
             out.rules.append((rule, compile_matcher(det.method, det.matcher)))

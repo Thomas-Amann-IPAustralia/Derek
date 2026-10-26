@@ -280,7 +280,18 @@ def build(ledger_path: Path, check: bool) -> int:
         merged[old.uid] = old
         merged[fresh.uid] = fresh
     for cand in rec.added:
-        merged[cand.uid] = candidate_to_rule(cand, url_index, page_hashes, now)
+        fresh = candidate_to_rule(cand, url_index, page_hashes, now)
+        prior = existing.get(cand.uid)
+        if prior is not None and prior.review.status == ReviewStatus.ORPHANED:
+            # A retired rule marked again: the same uid is the same rule. The
+            # reconciler leaves orphans out of matching, so it arrives here as
+            # new, and writing a fresh record over the orphan would erase the
+            # decisions in its history, a reviewer's acceptance among them.
+            # It restarts as `proposed`, so a human still decides it again.
+            fresh.review = prior.review
+            fresh.review.transition(ReviewStatus.PROPOSED, "derek.extract.build", now,
+                                    "marked as a rule again in the golden set")
+        merged[cand.uid] = fresh
     for rule in rec.orphaned:
         swept = rule.source.page_path in authoritative
         already_judged = swept and rule.review.status == ReviewStatus.REJECTED

@@ -726,6 +726,32 @@ def test_terminal_rules_survive_every_rebuild(tmp_path):
     assert after[uid].review.history, "its history must survive too"
 
 
+def test_a_rule_marked_again_keeps_its_history(tmp_path):
+    """An orphan whose uid a candidate reproduces again is the same rule back.
+
+    The reconciler leaves orphans out of matching, so the candidate arrives as
+    new. Writing a fresh record over the orphan erased every decision in its
+    history, a reviewer's acceptance among them; it must restart as
+    `proposed` with that history intact.
+    """
+    from derek.extract.build import build
+
+    ledger = tmp_path / "rules.jsonl"
+    build(ledger, check=False)
+    rules = load_ledger(ledger)
+    uid = sorted(rules)[0]
+    rules[uid].review.transition(ReviewStatus.ACCEPTED, "tester", "2026-01-01T00:00:00Z", "kept")
+    rules[uid].review.transition(ReviewStatus.ORPHANED, "tester", "2026-01-02T00:00:00Z",
+                                 "not marked in the golden set")
+    write_ledger(ledger, rules.values())
+
+    build(ledger, check=False)
+    back = load_ledger(ledger)[uid]
+    assert back.review.status == ReviewStatus.PROPOSED
+    assert [h["to"] for h in back.review.history][-3:] == [
+        ReviewStatus.ACCEPTED, ReviewStatus.ORPHANED, ReviewStatus.PROPOSED]
+
+
 # ---------------------------------------------------------------------------
 # Recall regression guard (docs/06-extraction-audit.md §3)
 # ---------------------------------------------------------------------------
