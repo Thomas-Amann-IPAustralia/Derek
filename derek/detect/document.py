@@ -19,11 +19,17 @@ from dataclasses import dataclass
 from derek.extract.blocks import Block, parse_blocks
 
 __all__ = ["DocBlock", "Document", "example_block_ids", "NEGATIVE_LABELS",
-           "POSITIVE_LABELS", "LABELS"]
+           "POSITIVE_LABELS", "NEUTRAL_LABELS", "LABELS"]
 
-POSITIVE_LABELS = frozenset({"correct", "write this"})
-NEGATIVE_LABELS = frozenset({"incorrect", "not this", "don't do this", "don’t do this"})
-LABELS = POSITIVE_LABELS | NEGATIVE_LABELS | frozenset({"example", "examples"})
+# How the manual labels its example blocks: ADR-027's census of the corpus.
+# These were narrower than the census, so the manual's wrong examples under
+# 'Avoid this' and 'Don't write' counted as clean prose in the dogfood budget
+# (R11 in the 2026-10 review). golden_lint reads the same sets from here.
+POSITIVE_LABELS = frozenset({"correct", "write this", "write", "like this", "do this"})
+NEGATIVE_LABELS = frozenset({"incorrect", "not this", "avoid this", "don't do this",
+                             "don’t do this", "don't write", "don’t write"})
+NEUTRAL_LABELS = frozenset({"example", "examples"})
+LABELS = POSITIVE_LABELS | NEGATIVE_LABELS | NEUTRAL_LABELS
 
 _SEP = "\n\n"
 
@@ -89,13 +95,18 @@ def example_block_ids(blocks: list[Block], labels: frozenset[str] = LABELS) -> s
     nothing after. Treating the whole section as the example is how 212 lines of
     ordinary prose were harvested as gold examples (docs/05-open-questions.md,
     Q9).
+
+    A label can also be a paragraph on its own ('Not this' with no heading
+    marker). ADR-027 found the census reads those and this function did not;
+    such a paragraph opens an example exactly as a label heading does.
     """
     out: set[str] = set()
     current: tuple[str, ...] | None = None
     seen_li = seen_para = False
     for b in blocks:
-        if b.kind == "heading":
-            current = tuple(b.heading_path) if b.plain.strip().lower() in labels else None
+        label = b.plain.strip().lower().rstrip(":")
+        if b.kind == "heading" or (b.kind == "para" and label in labels):
+            current = tuple(b.heading_path) if label in labels else None
             seen_li = seen_para = False
             continue
         if current is None or tuple(b.heading_path) != current:

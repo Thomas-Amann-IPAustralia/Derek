@@ -35,7 +35,8 @@ from pathlib import Path
 
 from derek.corpus.eligibility import load_eligibility
 from derek.corpus.normalise import NormalisedPage
-from derek.detect.document import example_block_ids
+from derek.detect.document import (LABELS, NEGATIVE_LABELS, NEUTRAL_LABELS, POSITIVE_LABELS,
+                                   example_block_ids)
 from derek.eval.directives import classify, directive_sentences, sentences
 from derek.extract.blocks import Block, parse_blocks
 from derek.extract.candidates import normalise_statement
@@ -52,13 +53,9 @@ LEDGER = REPO / "ledger" / "rules.jsonl"
 
 LEVELS = ("fix", "check", "look")
 
-# How the manual labels its example blocks. `Example` is neutral: it shows usage,
-# and a sentence under it is not a mistake unless the text says so (E-1).
-POSITIVE_LABELS = frozenset({"correct", "write this", "write", "like this"})
-NEGATIVE_LABELS = frozenset({"incorrect", "not this", "avoid this", "don't write",
-                             "don’t write"})
-NEUTRAL_LABELS = frozenset({"example", "examples"})
-LABELS = POSITIVE_LABELS | NEGATIVE_LABELS | NEUTRAL_LABELS
+# How the manual labels its example blocks, from derek.detect.document so the
+# lint and the dogfood gate cannot drift apart. `Example` is neutral: it shows
+# usage, and a sentence under it is not a mistake unless the text says so (E-1).
 
 _PROHIBITION = re.compile(r"^(don[’']t|do not|never|avoid)\b", re.I)
 _NUMBER = re.compile(r"\b\d+\b")

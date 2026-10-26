@@ -36,6 +36,7 @@ relevant — the **Octavius failure** it exists to prevent.
 | [025](#adr-025--a-model-may-draft-spans-a-human-marks-them) | A model may draft spans; a human marks them | Proposed: stands or falls on the first blind score |
 | [026](#adr-026--a-matcher-is-proposed-as-data-and-adopted-by-a-named-human) | A matcher is proposed as data and adopted by a named human | Accepted |
 | [027](#adr-027--two-model-consensus-adjudicated-replaces-marking-by-hand) | Two-model consensus, adjudicated, replaces marking by hand | Accepted (owner), 2026-10-25; supersedes ADR-025's "a human marks them". Pair: GPT-6.1 Sol (high) + Gemini 3.8 Flash (low), batched |
+| [028](#adr-028--the-tag-readings-settle-every-rule-not-only-disputed-ones) | The tag readings settle every rule, not only disputed ones | Proposed (rule review, 2026-10-25), for the owner |
 
 ---
 
@@ -1545,3 +1546,47 @@ Two repeats are on `commas.md`, a page the owner marked: the rounded-numbers rul
 `docs/08` itself uses as the G-6 example, and commas in 4-digit numbers. They are left
 for the owner, because a page a human marked is not written to. 1,228 rules load after
 the cleanup, 174 of them with pairs.
+
+---
+
+## ADR-028 — The tag readings settle every rule, not only disputed ones
+
+**Context.** ADR-027 fixed how modality and direction are read, but only for items the
+two drafters disagreed on. Where they agreed, their reading stood, so the ledger held
+both readings: 13 hyphenation rules and 18 italics rules with `absence` beside the
+adjudicator's `presence` for the same kind of fault, and MUST on statements with no hard
+word. The full review (`docs/09-rule-review-2026-10.md`) found the same split on almost
+every page.
+
+**Decision.** These readings apply to every accepted rule, whoever marked it:
+
+1. *Modality.* MUST only when the statement, or the lead-in it completes, says *must,
+   never, always, required, illegal* or *mandatory*. PREFER only when the text leaves the
+   alternative acceptable (the glossary's "both are acceptable"); an unhedged "X, not Y",
+   "instead of" or "rather than" is SHOULD, and an unhedged "Avoid" is SHOULD_NOT. A
+   permission is a precondition of the rule it relaxes (G-3), never a MAY rule.
+2. *Direction.* ADR-027's rule, unchanged: a wrong form present (hyphenation,
+   capitalisation, italics, spelling) is `presence`; a missing separate element is
+   `absence`.
+3. *One defect, one finding.* When two accepted rules would flag the same characters for
+   the same fault, one is dropped (G-6: kept on the page whose subject it is; an overview
+   page never wins over a subject page; with no other tie-break, the copy with the
+   manual's Write this / Not this pair is kept). When both are needed because each also
+   covers cases the other does not, the general rule names the specific one in a
+   precondition.
+4. *Formatting the corpus drops.* A violating example whose only fault is a non-breaking
+   space, superscript, a link boundary, a list marker or italics is removed: flattened,
+   it is correct text. The compliant side stays.
+5. *Pages a human marked* are corrected through review decisions (`decide` ops), not by
+   rewriting the human's spans, so they stay the measurement ADR-025 and ADR-027 rely on.
+   A rule `docs/08` itself names as not a rule is rejected, not deleted.
+
+**Reason.** A reading that depends on whether two models happened to disagree is not a
+reading of the manual. The defects it left are the ones the external review found (R01,
+R02, R05, R15), and every one of them is a rule a checker would get wrong.
+
+**Cost.** 313 rules changed in one batch, and 53 dropped, each with its reason in the
+rule's history. Six of the owner's rules on `commas.md` and `pronouns.md` are rejected
+by this review rather than by the owner; that is the decision this ADR asks the owner to
+confirm or reverse.
+
